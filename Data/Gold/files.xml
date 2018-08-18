@@ -1,0 +1,27 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML/UI.xsd">
+	<Script file="us_area-52.lua"/>
+	<Script file="us_area-52_h.lua"/>
+	<Script file="us_bleeding-hollow.lua"/>
+	<Script file="us_bleeding-hollow_h.lua"/>
+	<Script file="us_dawnbringer.lua"/>
+	<Script file="us_dawnbringer_h.lua"/>
+	<Script file="us_echo-isles.lua"/>
+	<Script file="us_echo-isles_h.lua"/>
+	<Script file="us_kul-tiras.lua"/>
+	<Script file="us_kul-tiras_h.lua"/>
+	<Script file="us_lightbringer.lua"/>
+	<Script file="us_lightbringer_h.lua"/>
+	<Script file="us_proudmoore.lua"/>
+	<Script file="us_proudmoore_h.lua"/>
+	<Script file="us_sargeras.lua"/>
+	<Script file="us_sargeras_h.lua"/>
+	<Script file="us_shandris.lua"/>
+	<Script file="us_shandris_h.lua"/>
+	<Script file="us_stormrage.lua"/>
+	<Script file="us_stormrage_h.lua"/>
+	<Script file="us_whisperwind.lua"/>
+	<Script file="us_whisperwind_h.lua"/>
+	<Script file="us_zuljin.lua"/>
+	<Script file="us_zuljin_h.lua"/>
+	<Script file="xx_global.lua"/>
+</Ui>
