@@ -6892,49 +6892,38 @@ ZygorGuidesViewer:RegisterInclude("BFA_Choose_World_Quests",[[
 		'|confirm |next "Tortollan_Seekers_WQ" |condition readyq(50604)
 		'|confirm |next "Alliance_War_Effort_WQ" |condition readyq(50605)
 		'|confirm |next "Order_of_Embers_WQ" |condition readyq(50600)
-		'|confirm |next "Proudmoore_Admirality__WQ" |condition readyq(50599)
-		'|confirm |next "Storm's_Wake_WQ" |condition readyq(50601)
+		'|confirm |next "Proudmoore_Admiralty_WQ" |condition readyq(50599)
+		'|confirm |next "Storms_Wake_WQ" |condition readyq(50601)
 		'|confirm |next "Champions_of_Azeroth_WQ" |condition readyq(50562)
 ]])
 
 ZygorGuidesViewer:RegisterInclude("BFA_World_Quest_Emissaries",[[
-		Follow the path |goto Stormsong Valley/0 40.46,36.95 < 7 |only if walking 
 		talk Collector Kojo##135793
 		turnin Tortollan Seekers##50604 |goto Stormsong Valley/0 40.54,36.41
 		|only if readyq(50604)
 	step
-		Jump down here |goto Boralus/0 70.56,17.65 < 5 |only if walking
-		Run up the stairs |goto 69.21,21.28 < 5 |only if walking
-		Enter the building |goto 68.70,21.11 < 5 |only if walking
-		Follow the path |goto 67.54,20.67 < 7 |only if walking
-		Leave the building |goto 67.07,23.46 < 5 |only if walking
-		Run up the ramp |goto 67.40,25.18 < 5 |only if walking
-		Follow the path |goto 68.09,25.29 < 5 |only if walking
+	label "Alliance_War_Effort_WQ"
 		talk Vindicator Jaelaana##135446
 		turnin Alliance War Effort##50605 |goto Boralus/0 69.32,24.94
 		|only if readyq(50605)
 	step
-		Follow the path |goto Drustvar/0 38.31,51.71 < 5 |only if walking
-		Continue following the path |goto 37.82,50.10 < 7 |only if walking
+	label "Order_of_Embers_WQ"
 		talk Quartermaster Alcorn##135815
 		turnin Order of Embers##50600 |goto Drustvar/0 37.91,48.94
 		|only if readyq(50600)
 	step
-		Jump down here |goto Boralus/0 70.56,17.65 < 5 |only if walking
-		Run up the stairs |goto 69.21,21.28 < 5 |only if walking
-		Enter the building |goto Tiragarde Sound/0 73.97,24.87 < 5 |walk
-		Follow the path |goto 73.68,24.80 < 7 |walk
-		Run down the stairs |goto 73.64,25.31 < 5 |walk
-		Follow the path |goto 73.77,25.25 < 5 |walk
+	label "Proudmoore_Admiralty_WQ"
 		talk Provisioner Fray##135808
+		|tip Inside the building.
 		turnin Proudmoore Admiralty##50599 |goto Tiragarde Sound/0 73.68,24.99
 		|only if readyq(50599)
 	step
+	label "Storms_Wake_WQ"
 		talk Sister Lilyana##135800
 		turnin Storm's Wake##50601 |goto Stormsong Valley/0 59.29,69.33
 		|only if readyq(50601)
 	step
-		Enter the building |goto Boralus/0 70.38,17.72 < 3 |walk
+	label "Champions_of_Azeroth_WQ"
 		talk Magni Bronzebeard##130216
 		turnin Champions of Azeroth##50562 |goto Silithus/0 42.22,44.27
 		|only if readyq(50562)

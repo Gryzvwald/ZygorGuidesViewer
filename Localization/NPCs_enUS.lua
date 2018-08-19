@@ -29875,5 +29875,18 @@ ZygorGuidesViewer_L("NPCs", "enUS", function() return {
 [128368]="Captured Vulpera|",
 [133527]="Juba the Scarred|",
 [141931]="Warlord Dagu|",
+[127444]="Gonk|",
+[127576]="Wardruid Loti|",
+[140348]="Magister Umbric|",
+[140477]="Magister Umbric|",
+[140543]="Bilgewater Fracker|",
+[140510]="Boss Blastmouth|",
+[140712]="Magister Umbric|",
+[140770]="Trade Prince Gallywix|",
+[127001]="Gwugnug the Cursed|",
+[131749]="Carefully Calibrated Sweeper|",
+[124185]="Golrakahn|",
+[136338]="Sirokar|",
+[132086]="Black-Eyed Bart|",
 
 } end)

@@ -29,6 +29,7 @@
 		<Script file="Includes\General\A_General_Includes.lua"/>
 		<Script file="Includes\General\A_Quest_Includes.lua"/>
 		<Script file="Includes\Leveling\A_Garrisons_Includes.lua"/>
+		<Script file="Includes\Leveling\A_War_Campaign_Footholds_BFA.lua"/>
 		<Script file="Includes\PetsMounts\A_Mounts_Includes.lua"/>
 		<Script file="Includes\PetsMounts\A_Pets_Includes.lua"/>
 		<Script file="Includes\Professions\A_Professions_Includes.lua"/>
@@ -42,6 +43,7 @@
 		<Script file="Includes\General\H_General_Includes.lua"/>
 		<Script file="Includes\General\H_Quest_Includes.lua"/>
 		<Script file="Includes\Leveling\H_Garrisons_Includes.lua"/>
+		<Script file="Includes\Leveling\H_War_Campaign_Footholds_BFA.lua"/>
 		<Script file="Includes\PetsMounts\H_Mounts_Includes.lua"/>
 		<Script file="Includes\PetsMounts\H_Pets_Includes.lua"/>
 		<Script file="Includes\Professions\H_Professions_Includes.lua"/>

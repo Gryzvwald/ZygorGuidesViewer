@@ -33,32 +33,6 @@ data.basenodes.FloorCrossings = {
 		},
 
 		["Dazar'Alor"] = {
-			-- Bottom Floor Entrance to The Great Seal
-				"Dazar'alor/0 49.94,41.85 <radius:5> -x- Dazar'alor/1 48.51,28.89 <radius:5> {fac:H} {template:building}",
-
-			-- Top Floor Entrance to The Great Seal #1
-				"Dazar'alor/0 51.21,44.97 <radius:3> -x- Dazar'alor/2 74.92,71.79 <radius:5> {fac:H} {title_atob:Enter the Building and Take the Elevator Down} {title_btoa:Take the Elevator Up and Leave the Building}",
-
-			-- Top Floor Entrance to The Great Seal #2
-				"Dazar'alor/0 48.71,44.91 <radius:3> -x- Dazar'alor/2 22.81,72.00 <radius:5> {fac:H} {title_atob:Enter the Building and Take the Elevator Down} {title_btoa:Take the Elevator Up and Leave the Building}",
-
-			-- The Great Seal Bottom Floor Stairs #1
-				"Dazar'alor/2 40.24,82.53 <radius:5> -x- Dazar'alor/1 46.81,82.42 <radius:5> {fac:H} {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- The Great Seal Bottom Floor Stairs #2
-				"Dazar'alor/2 40.93,58.74 <radius:5> -x- Dazar'alor/1 42.35,44.97 <radius:5> {fac:H} {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- The Great Seal Bottom Floor Stairs #3
-				"Dazar'alor/2 57.14,82.80 <radius:5> -x- Dazar'alor/1 51.13,82.32 <radius:5> {fac:H} {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- The Great Seal Bottom Floor Stairs #4
-				"Dazar'alor/2 56.45,58.97 <radius:5> -x- Dazar'alor/1 55.37,45.04 <radius:5> {fac:H} {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- The Great Seal Bottom Floor Stairs #5
-				"Dazar'alor/2 76.24,42.63 <radius:5> -x- Dazar'alor/1 76.67,30.58 <radius:5> {fac:H} {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- The Great Seal Bottom Floor Stairs #6
-				"Dazar'alor/2 20.85,41.86 <radius:5> -x- Dazar'alor/1 21.00,30.58 <radius:5> {fac:H} {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
 				
 			-- Zanchul Bottom Floor Entrance
 				"Dazar'alor/0 40.95,11.28 <radius:5> -x- Dazar'alor/4 39.25,58.20 <radius:5> {fac:H} {template:building}",

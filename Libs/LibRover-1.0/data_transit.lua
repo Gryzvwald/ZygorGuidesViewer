@@ -13,25 +13,25 @@ data.basenodes.transit = {
 --------------------------------------------------
 
 	-- Boralus to Zuldazar (Boat)
-		"Boralus/0 67.95,26.69 -to- Zuldazar/0 80.22,55.23 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth, tell her \"Set sail for Zuldazar.\"} {cond:PlayerCompletedQuest(51308)}",
+		"Boralus/0 67.95,26.69 -to- Zuldazar/0 40.68,70.86 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth,|ntell her \"Set sail for Zuldazar.\"} {cond:PlayerCompletedQuest(51308)}",
 
 	-- Zuldazar to Boralus
-		"Zuldazar/0 40.46,71.03 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Daria Smithson, tell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51418)}",
+		"Zuldazar/0 40.46,71.03 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Daria Smithson,|ntell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51418)}",
 
 	-- Boralus to Nazmir (Boat)
-		"Boralus/0 67.95,26.69 -to- Nazmir/0 61.95,39.92 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth, tell her \"Set sail for Nazmir.\"} {cond:PlayerCompletedQuest(51571)}",
+		"Boralus/0 67.95,26.69 -to- Nazmir/0 61.95,39.92 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth,|ntell her \"Set sail for Nazmir.\"} {cond:PlayerCompletedQuest(51571)}",
 	
 	-- Nazmir to Boralus
-		"Nazmir/0 62.06,40.08 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Desha Stormwallow, tell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51571)}",
+		"Nazmir/0 62.06,40.08 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Desha Stormwallow,|ntell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51571)}",
 
 	-- Boralus to Vol'dun (Boat)
-		"Boralus/0 67.95,26.69 -to- Vol'dun/0 35.60,33.17 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth, tell her \"Set sail for Vol'dun.\"} {cond:PlayerCompletedQuest(51572)}",
+		"Boralus/0 67.95,26.69 -to- Vol'dun/0 35.60,33.17 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth,|ntell her \"Set sail for Vol'dun.\"} {cond:PlayerCompletedQuest(51572)}",
 
 	-- Boralus to Vol'dun (Boat)
-		"Vol'dun/0 34.91,33.76 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth, tell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51229)}",
+		"Vol'dun/0 34.91,33.76 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Grand Admiral Jes-Tereth,|ntell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51229)}",
 
 	-- Boralus to Vol'dun (Flight Master)
-		"Vol'dun/0 36.69,34.28 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Barnard \"The Smasher\" Baysworth, tell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51229)}",
+		"Vol'dun/0 36.69,34.28 -to- Boralus/0 70.22,27.06 {fac:A} {mode:SHIP} {cost:30} {title:Talk to Barnard \"The Smasher\" Baysworth,|ntell her \"Take us back to Boralus.\"} {cond:PlayerCompletedQuest(51229)}",
 
 
 

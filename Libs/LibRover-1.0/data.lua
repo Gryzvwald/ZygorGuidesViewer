@@ -4,7 +4,7 @@ addon.LibRoverData = addon.LibRoverData or {}
 local data=addon.LibRoverData
 
 data.version={
-	nodes_version = 185,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
+	nodes_version = 187,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
 }
 
 -- These are kept strictly unique. Make up bogus names if you need to.
@@ -788,6 +788,9 @@ data.greenborders = {
 
 	{"Tiragarde Sound","Boralus"},
 	{"Zuldazar","Dazar'alor"},
+	{"Dazar'alor/0","Dazar'alor/1"},
+	{"Dazar'alor/0","Dazar'alor/2"},
+	{"Dazar'alor/1","Dazar'alor/2"},
 }
 
 data.walls = {
@@ -808,8 +811,6 @@ data.walls = {
 		{ 53.62,23.21, 56.12,11.49, },
 
 		{ 46.53,61.06, 53.53,61.10 },
-
-		{ 47.50,44.47, 48.05,44.12, 51.79,44.12, 52.37,44.47 }, -- lower/upper terrace separation
 	},
 	["Zuldazar"] = {
 		{ 56.12,28.53, 57.21,60.00 }, -- no running across Dazar
