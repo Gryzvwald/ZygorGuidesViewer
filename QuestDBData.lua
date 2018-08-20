@@ -11186,6 +11186,7 @@ ZGV.Quest_Cache_Horde = {
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\War Campaign"] = {
 	{ids="53050",goal_onlyif=function() return havequest(53050) or completedq(53050) end},
+	{ids="53056",goal_onlyif=function() return havequest(53056) or completedq(53056) end},
 	{ids="53444,53446,51371,51789,53454,53456,53458,53208,53462,53212,51788,51787,51786,51771,53348,53602,51785,51590,51592,51594,51596,51598,51222,51784,51352,53065,51545,53210,52746,50417,53443,53445,53207,51343,53451,51221,53455,53079,53333,53461,53463,51386,51220,51427,51770,50386,53097,51339,51589,51591,51593,51595,51597,51599,51916,51540,51353,53330,51240,51601,53459,52749,53439"},
 	includes = {"Stormsong_Valley_Foothold_Quests","Tiragarde_Sound_Foothold_Quests","Choose_Foothold_3","Choose_Foothold_2","Drustvar_Foothold_Quests","Choose_Foothold_1"},
 },

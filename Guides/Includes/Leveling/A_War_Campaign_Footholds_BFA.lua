@@ -18,8 +18,9 @@ ZygorGuidesViewer:RegisterInclude("Choose_Foothold_1",[[
 		Zuldazar |confirm |or |next "Zuldazar_Foothold_1"
 		Nazmir |confirm |or |next "Nazmir_Foothold_1"
 		Vol'dun |confirm |or |next "Voldun_Foothold_1"
-		|only if not completedq(51569)
+		|only if not completedq(51961)
 ]])
+
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_2",[[
@@ -32,8 +33,9 @@ ZygorGuidesViewer:RegisterInclude("Choose_Foothold_2",[[
 		Zuldazar |confirm |or |next "Zuldazar_Foothold_2" |only if not completedq(51968)
 		Nazmir |confirm |or |next "Nazmir_Foothold_2" |only if not completedq(51967)
 		Vol'dun |confirm |or |next "Voldun_Foothold_2" |only if not completedq(51969)
-		|only if not completedq(51961)
+		|only if not completedq(52443)
 ]])
+
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_3",[[
@@ -46,7 +48,6 @@ ZygorGuidesViewer:RegisterInclude("Choose_Foothold_3",[[
 		Zuldazar |confirm |or |next "Zuldazar_Foothold_3" |only if not completedq(51968)
 		Nazmir |confirm |or |next "Nazmir_Foothold_3" |only if not completedq(51967)
 		Vol'dun |confirm |or |next "Voldun_Foothold_3" |only if not completedq(51969)
-		|only if not completedq(52443)
 ]])
 
 

@@ -4825,44 +4825,36 @@ Fly into Vol'dun |q 47315/2 |goto Vol'dun/0 66.08,36.43 |notravel
 step
 Watch the dialogue
 talk Nisha##130455
+|tip Inside the cave.
 turnin Into the Dunes##47315 |goto 65.98,36.65
 accept Armed and Ready##51357 |goto 65.98,36.65
 step
 click Sethrak Scythe
+|tip Inside the cave.
 Choose a Weapon |q 51357/1 |goto 65.95,36.65
 step
 talk Nisha##130455
+|tip Inside the cave.
 turnin Armed and Ready##51357 |goto 65.98,36.65
 step
 _Next to you:_
-talk Nisha##130474
+talk Nisha
 accept Answering Their Attacks##47327
 accept Dressed for Battle##49676
 stickystart "Slay_Sethraks"
 step
-Follow the path up |goto Vol'dun/0 65.90,37.06 < 7 |walk
-Follow the path up |goto 65.49,37.28 < 7 |walk
-Continue up the path |goto 65.10,37.13 < 7 |walk
-Leave the cave |goto 64.90,36.23 < 5 |walk
-Follow the path |goto 64.59,35.29 < 7 |only if walking
+Leave the cave |goto 64.90,36.23 < 10 |walk
 click Stolen Vulpera Banner##278686
 Find the Banner |q 49676/1 |goto 64.67,33.91
 step
-Follow the path |goto 64.36,33.71 < 7 |only if walking
-Follow the path down |goto 63.99,33.19 < 7 |only if walking
-Follow the path |goto 63.62,32.87 < 5 |only if walking
 click Sethrak Skull##278685
 Find the Helmet |q 49676/2 |goto 63.63,32.70
 step
-Follow the path down |goto 63.12,32.99 < 7 |only if walking
-Follow the path down |goto 62.87,33.12 < 7 |only if walking
-Continue down the path |goto 62.13,32.92 < 7 |only if walking
-Follow the path |goto 61.90,33.17 < 7 |only if walking
 click Explosives
 Find the Explosives |q 49676/3 |goto 61.88,33.78
 step
 _Next to you:_
-talk Nisha##130474
+talk Nisha
 turnin Dressed for Battle##49676
 accept Plans for Attack##49677
 step
@@ -4871,23 +4863,18 @@ Kill Sethrak enemies around this area
 Slay #12# Sethrak |q 47327/1 |goto 61.72,33.41
 step
 _Next to you:_
-talk Nisha##130474
+talk Nisha
 turnin Answering Their Attacks##47327
 step
-Follow the path |goto 61.52,33.17 < 7 |only if walking
-Follow the path |goto 61.11,32.71 < 7 |only if walking
 kill Fangcaller Sraka##130466
 collect Nisha's Attack Plans##158651 |q 49677/1 |goto 60.88,32.66
 step
 _Next to you:_
-talk Nisha##130474
+talk Nisha
 turnin Plans for Attack##49677
 accept An Explosive Exit##51364
 step
-Follow the path |goto 61.14,32.72 < 7 |only if walking
-Follow the path down |goto 61.13,33.05 < 7 |only if walking
-Follow the path down |goto 60.73,33.44 < 7 |only if walking
-Follow the path |goto 60.45,34.23 < 7 |only if walking
+Watch the dialogue
 Find Nisha's Wagon |q 51364/1 |goto 60.06,34.58
 step
 clicknpc Nisha's Wagon##137492
@@ -4898,9 +4885,9 @@ Watch the dialogue
 |tip It appears as a button on the screen.
 Defend Nisha's Wagon |q 51364/3 |goto 58.23,40.55
 step
+Watch the dialogue
 Ride to Vulpera Hideaway |q 51364/4 |goto 57.08,50.38 |notravel
 step
-Follow the path |goto 57.07,50.39 < 5 |only if walking
 talk Kiro##123586
 turnin An Explosive Exit##51364 |goto 56.79,50.54
 accept Restorative Venom##47319 |goto 56.79,50.54
@@ -4911,23 +4898,14 @@ step
 talk Hagashi##124108
 home Vulpera Hideaway |goto 56.78,49.81 |q 48895 |future
 step
-Follow the path up |goto 56.90,49.82 < 5 |only if walking
-Follow the path |goto 56.99,49.62 < 5 |only if walking
 talk Narishi##124107
 fpath Vulpera Hideaway |goto 56.96,49.25
 step
-Follow the path |goto 56.76,49.02 < 5 |only if walking
-Jump down here |goto 56.45,48.90 < 5 |only if walking
-Follow the path up |goto 55.72,48.37 < 7 |only if walking
 talk Vivi##135012
 accept Missing Business##50739 |goto 55.20,48.38
 stickystart "Revive_Sable_Polecats"
 stickystart "Collect_Sandstinger_Venom_Glands"
 step
-Follow the path |goto 54.98,48.63 < 7 |only if walking
-Follow the path |goto 54.66,48.73 < 7 |only if walking
-Follow the path up |goto 54.35,49.31 < 7 |only if walking
-Follow the path up |goto 54.29,49.71 < 7 |only if walking
 clicknpc Vibrant Pricklevine##138107+
 |tip They look like small red plants with teeth and green leaves on the ground around this area.
 collect 8 Pricklevine Juice##160448 |q 51574/1 |goto 53.92,50.35
@@ -4941,13 +4919,9 @@ label "Collect_Sandstinger_Venom_Glands"
 Kill Sandstinger enemies around this area
 collect 15 Sandstinger Venom Gland##160441 |q 47319/1 |goto 53.92,50.35
 step
-Follow the path up |goto 54.52,48.80 < 7 |only if walking
-Follow the path |goto 54.96,48.64 < 7 |only if walking
 talk Vivi##135012
 turnin Missing Business##50739 |goto 55.20,48.38
 step
-Follow the path up |goto 55.99,49.31 < 7 |only if walking
-Follow the path |goto 56.37,49.82 < 7 |only if walking
 talk Meerah##122583
 turnin Freshly Squeezed##51574 |goto 56.76,50.52
 step
@@ -4970,25 +4944,18 @@ step
 talk Meerah##122583
 accept Secrets in the Sand##47316 |goto 56.76,50.53
 step
-Follow the path down |goto 56.30,49.74 < 7 |only if walking
 click Rakera's Journal Page##271844
 Recover the Journal Page |q 47316/1 |goto 55.78,48.68 |count 1
 step
-Follow the path |goto 56.25,46.94 < 7 |only if walking
 click Rakera's Journal Page##271844
 Recover the Journal Page |q 47316/1 |goto 56.33,43.90 |count 2
 step
-Follow the path |goto 54.63,45.28 < 15 |only if walking
 click Rakera's Journal Page##271844
 Recover the Journal Page |q 47316/1 |goto 52.80,46.41 |count 3
 step
-Follow the path |goto 51.63,43.07 < 7 |only if walking
-Follow the path |goto 51.74,42.63 < 7 |only if walking
 click Rakera's Journal Page##271844
 Recover the Journal Page |q 47316/1 |goto 52.78,41.80 |count 4
 step
-Follow the path down |goto 53.38,41.77 < 7 |only if walking
-Follow the path |goto 54.19,42.34 < 7 |only if walking
 talk Neri##137631
 accept Aided Escape##47322 |goto 54.69,42.49
 step
@@ -5002,31 +4969,20 @@ clicknpc Bladeguard Jorana##122729
 Find Jorana |q 47317/2 |goto 57.42,40.62
 stickystart "Collect_Knickknacks"
 step
-Follow the path |goto 56.98,39.74 < 7 |only if walking
 click Sethrak Cage##277876
 Rescue Hakasi |q 47322/1 |goto 56.41,39.31
 step
-Follow the path |goto 56.52,39.64 < 7 |only if walking
-Follow the path |goto 56.14,40.23 < 7 |only if walking
-Follow the path up |goto 55.81,40.23 < 7 |only if walking
-Follow the path |goto 55.42,40.02 < 7 |only if walking
 Rescue Kipp |q 47322/2 |goto 54.77,40.29
 step
-Follow the path |goto 54.92,40.19 < 7 |only if walking
-Follow the path |goto 54.93,39.82 < 5 |only if walking
-Enter the cave |goto 54.84,39.66 < 3 |walk
+Enter the cave |goto 54.84,39.66 < 10 |walk
 click Tarkaj's Warblade##271014
 |tip Inside the cave.
 Find Tarkaj |q 47317/1 |goto 54.61,39.38
-step
-Leave the cave |goto 54.80,39.62 < 3 |c |q 47321
 step
 label "Collect_Knickknacks"
 Kill enemies around this area
 Collect #6# Knickknacks |q 47321/1 |goto 55.11,40.05
 step
-Follow the path down |goto 55.15,40.32 < 7 |only if walking
-Follow the path |goto 55.15,41.67 < 7 |only if walking
 talk Mekaru##137629
 turnin A Meal for Birds##50755 |goto 54.75,42.40
 step
@@ -5054,13 +5010,9 @@ accept Grozztok the Blackheart##48549 |goto 52.97,66.53
 accept Stolen Satchels##48550 |goto 52.97,66.53
 stickystart "Collect_Weathered_Satchels"
 step
-Follow the path up |goto 51.71,65.20 < 7 |only if walking
 click Ranah's Wrench##291143
 accept Ranah's Wrench##51829 |goto 50.70,64.66
 step
-Run up the stairs |goto 50.42,64.90 < 5 |only if walking
-Run up the stairs |goto 50.20,65.29 < 5 |only if walking
-Follow the path |goto 49.64,65.34 < 5 |only if walking
 Watch the dialogue
 kill Grozztok the Blackheart##126697 |q 48549/1 |goto 49.19,64.74
 step
@@ -5068,12 +5020,6 @@ label "Collect_Weathered_Satchels"
 Kill Sandfury enemies around this area
 collect 5 Weathered Satchel##152660 |q 48550/1 |goto 49.45,65.34
 step
-Run down the stairs |goto 49.65,65.34 < 5 |only if walking
-Follow the path |goto 50.18,65.30 < 5 |only if walking
-Run down the stairs |goto 50.32,65.13 < 5 |only if walking
-Follow the path |goto 50.41,64.83 < 5 |only if walking
-Follow the path down |goto 50.74,64.54 < 5 |only if walking
-Follow the path down |goto 51.55,65.19 < 7 |only if walking
 talk Bladeguard Kaja##122289
 turnin Grozztok the Blackheart##48549 |goto 53.19,66.05
 step
@@ -5083,8 +5029,7 @@ step
 talk Bladeguard Kaja##122289
 accept On the Move##48684 |goto 53.19,66.06
 step
-Follow the path |goto 52.51,67.29 < 7 |only if walking
-Follow the path |goto 52.63,67.63 < 7 |only if walking
+Follow the path up |goto 53.53,66.96 < 20 |only if walking
 talk Ranah##126814
 turnin Ranah's Wrench##51829 |goto 53.87,69.39
 accept We Can Salvage the Seeds##48555 |goto 53.87,69.39
@@ -5093,7 +5038,6 @@ accept Let it Flow##48553 |goto 53.87,69.39
 stickystart "Plant_Thistlevine_Seeds"
 stickystart "Water_Withered_Thistlevines"
 step
-Follow the path |goto 53.45,68.58 < 7 |only if walking
 click Terrace Fountain##291008
 Fix the North Fountain |q 48553/1 |goto 53.45,67.84
 step
@@ -5120,26 +5064,16 @@ turnin Wither Without Water##48551 |goto 53.87,69.39
 turnin Let it Flow##48553 |goto 53.87,69.39
 accept The Source of the Problem##48554 |goto 53.87,69.39
 step
-Follow the path up |goto 53.70,68.95 < 5 |only if walking
-Continue up the path |goto 53.98,67.78 < 5 |only if walking
-Follow the path |goto 54.27,66.95 < 5 |only if walking
-Follow the path |goto 54.73,66.91 < 5 |only if walking
-Continue following the path |goto 54.95,67.26 < 5 |only if walking
-Continue following the path |goto 55.03,68.15 < 5 |only if walking
-Follow the path down |goto 55.02,68.88 < 5 |only if walking
+Follow the path up |goto 53.74,68.76 < 15 |only if walking
+Follow the path |goto 54.38,66.85 < 15 |only if walking
 click Loose Boulder##273995
 Inspect the Reservoir |q 48554/1 |goto 55.38,69.36
 step
 kill Colossal Water Cobra##127169 |q 48554/2 |goto 55.38,69.36
 step
-Jump down here |goto 54.96,69.37 < 5 |only if walking
-Jump down here |goto 54.09,69.37 < 5 |only if walking
 talk Ranah##126814
 turnin The Source of the Problem##48554 |goto 53.87,69.39
 step
-Follow the path |goto 53.50,68.65 < 7 |only if walking
-Jump down here |goto 52.95,67.34 < 5 |only if walking
-Follow the path |goto 53.02,66.90 < 7 |only if walking
 talk Meerah##126235
 Tell her _"We're ready to leave."_
 Speak to Meerah |q 48684/1 |goto 53.22,66.04
@@ -5151,49 +5085,30 @@ talk Jorak##127691
 turnin On the Move##48684 |goto 52.83,89.23
 accept The Perfect Offering##48895 |goto 52.83,89.23
 step
-Follow the path |goto 53.19,89.62 < 10 |only if walking
 talk Akunda the Exalted##127992
 turnin The Perfect Offering##48895 |goto 53.18,90.29
 accept Powerful Conductors##48993 |goto 53.18,90.29
 accept Sacred Remains##48992 |goto 53.18,90.29
 accept Vile Infestation##48991 |goto 53.18,90.29
 step
-Follow the path |goto 53.06,89.64 < 5 |only if walking
 talk Jorak##127691
 accept Fond Farewells##49040 |goto 52.83,89.23
 step
-Run up the stairs |goto 52.41,89.74 < 5 |only if walking
-Enter the building |goto 52.23,89.73 < 3 |walk
 talk Akunda the Bountiful##127431
 |tip Inside the building.
 home Temple of Akunda |goto 51.92,89.83 |q 50561 |future
 step
-Leave the building |goto 52.24,89.73 < 3 |walk
-Follow the path |goto 52.43,89.71 < 5 |only if walking
 talk Akunda the Tamer##127427
 fpath Temple of Akunda |goto 53.72,89.17
 stickystart "Collect_Sacred_Remains"
 stickystart "Kill_Ranishu_Gorgers"
 step
-Follow the path |goto 53.98,89.20 < 7 |only if walking
-Follow the path up |goto 54.52,88.82 < 7 |only if walking
-Follow the path up |goto 54.77,88.24 < 7 |only if walking
-Follow the path down |goto 54.87,87.55 < 5 |only if walking
-Follow the path down |goto 54.89,87.27 < 5 |only if walking
-Follow the path |goto 54.82,86.71 < 7 |only if walking
-Enter the cave |goto 55.01,86.20 < 5 |walk
-Follow the path down |goto 55.60,86.17 < 5 |walk
-Follow the path down |goto 55.75,85.99 < 5 |walk
-Follow the path down |goto 55.83,85.71 < 5 |walk
-Follow the path |goto 55.86,85.02 < 5 |walk
+Enter the cave |goto 55.01,86.20 < 10 |walk
 kill Rorgog the Devourer##134052
 |tip Inside the cave.
 collect Rorgog's Antennae##153029 |q 48993/1 |goto 56.12,83.45
 step
-Follow the path up |goto 55.85,84.99 < 5 |walk
-Follow the path up |goto 55.79,85.83 < 5 |walk
-Follow the path up |goto 55.61,86.19 < 5 |walk
-Leave the cave |goto 55.04,86.20 < 5 |c |q 48992
+Leave the cave |goto 55.04,86.20 < 10 |c |q 48992
 step
 label "Collect_Sacred_Remains"
 click Sacred Remains##277285+
@@ -5203,43 +5118,23 @@ step
 label "Kill_Ranishu_Gorgers"
 kill 12 Ranishu Gorger##133565 |q 48991/1 |goto 54.60,86.07
 step
-Follow the path |goto 54.21,85.89 < 7 |only if walking
-Follow the path |goto 53.80,86.02 < 7 |only if walking
-Continue following the path |goto 53.56,86.43 < 7 |only if walking
-Jump down here |goto 53.36,87.26 < 7 |only if walking
-Follow the path up |goto 53.21,88.60 < 7 |only if walking
-Follow the path |goto 53.20,89.10 < 7 |only if walking
-Run up the stairs |goto 53.19,89.93 < 5 |only if walking
 talk Akunda the Exalted##127992
-turnin Vile Infestation##48991 |goto 53.18,90.29
-turnin Sacred Remains##48992 |goto 53.18,90.29
 turnin Powerful Conductors##48993 |goto 53.18,90.29
+turnin Sacred Remains##48992 |goto 53.18,90.29
+turnin Vile Infestation##48991 |goto 53.18,90.29
 accept Cleanse the Mind##48887 |goto 53.18,90.29
 accept It Springs Eternal##48888 |goto 53.18,90.29
 stickystart "Slay_Redrock_Scavenger"
 step
-Follow the path |goto 53.18,89.05 < 7 |only if walking
-Follow the path |goto 52.85,86.45 < 7 |only if walking
-Follow the path down |goto 53.12,84.99 < 5 |only if walking
-Follow the path down |goto 53.84,83.74 < 5 |only if walking
-Follow the path |goto 53.65,83.55 < 7 |only if walking
-Follow the path |goto 52.36,83.97 < 7 |only if walking
-Enter the cave |goto 52.16,83.78 < 5 |walk
+Enter the cave |goto 52.16,83.78 < 10 |walk
 click Shrine of Thunder##276460
 |tip Inside the cave.
-kill Inner Demon##138292
 Meditate at the Shrine of Thunder |q 48887/1 |goto 52.17,83.36
 step
 label "Slay_Redrock_Scavenger"
-Leave the cave |goto 52.16,83.86 < 5 |walk
 Kill Redrock enemies around this area
 Slay #8# Redrock Scavenger |q 48888/1 |goto 52.13,84.48
 step
-Follow the path up |goto 51.94,86.36 < 7 |only if walking
-Follow the path up |goto 52.45,88.31 < 7 |only if walking
-Follow the path up |goto 52.89,88.34 < 5 |only if walking
-Follow the path up |goto 53.13,88.59 < 7 |only if walking
-Run up the stairs |goto 53.19,89.94 < 5 |only if walking
 talk Akunda the Exalted##127992
 turnin Cleanse the Mind##48887 |goto 53.18,90.30
 turnin It Springs Eternal##48888 |goto 53.18,90.30
@@ -5257,11 +5152,11 @@ step
 talk Bladeguard Kaja##127570
 accept Akunda Awaits##48715 |goto 53.16,90.20
 step
-Enter the building |goto 53.18,90.58 < 5 |walk
 Watch the dialogue
 |tip Inside the building.
 Investigate the Temple of Akunda |q 48715/1 |goto 53.18,91.26
 step
+Watch the dialogue
 talk Bladeguard Kaja##135066
 |tip Inside the building.
 turnin Akunda Awaits##48715 |goto 53.58,91.65
@@ -5270,16 +5165,7 @@ talk Akunda the Sensible##127980
 |tip Inside the building.
 accept Valley of Sorrows##48987 |goto 53.58,91.34
 step
-Follow the path |goto 53.20,91.22 < 5 |walk
-Leave the building |goto 53.18,90.56 < 5 |walk
-Follow the path |goto 53.17,89.07 < 7 |only if walking
-Continue following the path |goto 52.83,86.47 < 7 |only if walking
-Follow the path down |goto 53.12,85.00 < 7 |only if walking
-Follow the path down |goto 53.83,83.78 < 7 |only if walking
-Follow the path up |goto 53.52,82.42 < 7 |only if walking
-Follow the path down |goto 53.78,80.14 < 7 |only if walking
-Follow the path |goto 53.34,78.92 < 7 |only if walking
-Follow the path |goto 53.14,78.92 < 7 |only if walking
+Follow the path down |goto 53.80,80.18 < 20 |only if walking
 talk Meijani##127989
 turnin Valley of Sorrows##48987 |goto 53.01,78.77
 accept Memory Breach##48988 |goto 53.01,78.77
@@ -5289,7 +5175,8 @@ stickystart "Kill_Fractured_Memories"
 step
 clicknpc Unwanted Memory##122683+
 |tip They look like grey vases on the ground around this area.
-Search #8# Unwanted Memories |q 48988/1 |goto 53.49,76.85
+Search #8# Unwanted Memories |q 48988/1 |goto 52.71,76.94
+You can find more around [54.43,76.24]
 step
 label "Kill_Distorted_Memories"
 kill 4 Distorted Memory##138198 |q 49005/1 |goto 53.49,76.85
@@ -5302,8 +5189,7 @@ turnin Memory Breach##48988 |goto 53.01,78.77
 turnin Shattered and Broken##49005 |goto 53.01,78.77
 accept Repairing the Past##48889 |goto 53.01,78.77
 step
-Follow the path up |goto 52.77,78.77 < 5 |only if walking
-Enter the cave |goto 52.60,79.18 < 3 |walk
+Enter the cave |goto 52.60,79.18 < 10 |walk
 Kill the enemies that attack in waves
 |tip Inside the cave.
 Watch the dialogue
@@ -5314,17 +5200,10 @@ talk Akunda##138382
 turnin Repairing the Past##48889 |goto 52.22,79.89
 accept Ending the Madness##48996 |goto 52.22,79.89
 step
-Leave the building |goto 52.25,89.73 < 3 |walk
-Follow the path |goto 52.78,89.49 < 7 |only if walking
-Follow the path |goto 53.08,89.60 < 5 |only if walking
-Run up the stairs |goto 53.18,89.94 < 5 |only if walking
-Enter the building |goto 53.18,90.56 < 5 |walk
-kill Akunda the Exalted##128147
+kill Akunda the Exalted##128147 |q 48996/1 |goto 53.18,91.25
 |tip Inside the building.
 |tip Use the "Tempest" ability.
 |tip It appears as a button on the screen.
-Watch the dialogue
-Slay Akunda the Exalted |q 48996/1 |goto 53.18,91.25
 step
 Watch the dialogue
 talk Akunda##128152
@@ -5332,8 +5211,6 @@ talk Akunda##128152
 turnin Ending the Madness##48996 |goto 53.19,91.65
 accept Akunda's Blessing##50913 |goto 53.19,91.65
 step
-Run up the stairs |goto 53.07,91.98 < 3 |walk
-Follow the path |goto 53.10,92.10 < 3 |walk
 click Altar of Akunda##290773
 |tip Inside the building.
 Visit the Altar of Akunda |q 50913/1 |goto 53.18,92.12
@@ -5346,10 +5223,6 @@ talk Warguard Rakera##130660
 |tip Inside the building.
 accept Clearing the Fog##47874 |goto 53.61,91.66
 step
-Follow the path |goto 53.35,91.64 < 5 |walk
-Follow the path |goto 53.18,91.20 < 5 |walk
-Leave the building |goto 53.18,90.55 < 5 |walk
-Follow the path |goto 53.09,89.62 < 7 |only if walking
 Watch the dialogue
 talk Warguard Rakera##130667
 turnin Clearing the Fog##47874 |goto 52.81,89.24
@@ -5369,15 +5242,9 @@ talk Warguard Rakera
 turnin Knowledge of the Past##48896
 accept Searching the Ruins##47716
 step
-Follow the path down |goto 47.37,81.31 < 7 |only if walking
-Follow the path |goto 47.06,80.23 < 7 |only if walking
-Follow the path up |goto 46.99,78.94 < 7 |only if walking
-Follow the path |goto 46.82,77.54 < 7 |only if walking
-Follow the path |goto 46.59,77.12 < 7 |only if walking
 Watch the dialogue
 Search for Julwaba |q 47716/1 |goto 46.68,75.80
 step
-Enter the building |goto 46.77,75.73 < 5 |walk
 Watch the dialogue
 talk Julwaba##134162
 |tip Inside the building.
@@ -5389,9 +5256,6 @@ accept Creeping Death##48314 |goto 47.05,75.60
 accept Nature's Remedy##48313 |goto 47.05,75.60
 stickystart "Collect_Scorpashi_Stingers"
 step
-Leave the building |goto 46.75,75.55 < 5 |walk
-Follow the path down |goto 46.36,75.45 < 7 |only if walking
-Follow the path |goto 46.16,75.20 < 7 |only if walking
 click Prickly Plum##273193
 |tip They look like green spiky plants on the ground around this area.
 collect 6 Prickly Plum Cactus##152393 |q 48313/1 |goto 46.00,73.43
@@ -5400,12 +5264,6 @@ label "Collect_Scorpashi_Stingers"
 Kill Scorpashi enemies around this area
 collect 7 Scorpashi Stinger##152397 |q 48314/1 |goto 46.00,73.43
 step
-Follow the path |goto 46.24,73.22 < 7 |only if walking
-Run up the stairs |goto 46.45,73.35 < 5 |only if walking
-Follow the path |goto 46.68,73.44 < 5 |only if walking
-Follow the path |goto 46.56,74.19 < 7 |only if walking
-Follow the path |goto 46.56,75.12 < 7 |only if walking
-Enter the building |goto 46.76,75.48 < 5 |walk
 talk Kiro##135154
 |tip Inside the building.
 turnin Creeping Death##48314 |goto 47.06,75.60
@@ -5423,14 +5281,6 @@ talk Serrik##134533
 turnin Effective Antivenom##50770 |goto 47.06,75.71
 accept The Secrets of Zul'Ahjin##50539 |goto 47.06,75.71
 step
-Leave the building |goto 46.75,75.52 < 5 |walk
-Follow the path |goto 46.55,75.14 < 7 |only if walking
-Follow the path |goto 46.71,74.05 < 5 |only if walking
-Run up the stairs |goto 46.85,74.16 < 5 |only if walking
-Follow the path |goto 46.93,75.09 < 5 |only if walking
-Follow the path |goto 47.07,75.05 < 5 |only if walking
-Run up the stairs |goto 47.33,73.33 < 5 |only if walking
-Enter the building |goto 47.34,73.08 < 3 |walk
 talk Maaz##134148
 |tip Inside the building.
 accept Magic Decoder Device##50536 |goto 47.32,72.73
@@ -5439,46 +5289,25 @@ clicknpc Scepter of Prescience##134245
 |tip Inside the building.
 Test the Device |q 50536/1 |goto 47.36,72.66
 step
-Leave the building |goto 47.34,73.08 < 3 |walk
-Follow the path |goto 47.39,73.44 < 5 |only if walking
-Continue following the path |goto 48.33,74.17 < 7 |only if walking
-Run up the stairs |goto 48.21,74.87 < 5 |walk
 clicknpc Keeper Korthek##134089
 Inspect the Statue of Korthek  |q 50536/2 |goto 48.05,74.97
 step
-Follow the path |goto 48.21,74.99 < 5 |walk
-Run up the stairs |goto 48.88,76.09 < 5 |walk
 clicknpc Keeper Vorrik##134067
 Inspect the Statue of Vorrik |q 50536/3 |goto 48.89,76.34
 step
-Follow the path |goto 48.96,76.06 < 5 |walk
-Run up the stairs |goto 49.58,75.03 < 5 |walk
 clicknpc Keeper Sulthis##134090
 Inspect the Statue of Sulthis |q 50536/4 |goto 49.74,74.98
 step
-Run up the stairs |goto 49.23,74.67 < 5 |only if walking
-Follow the path |goto 49.01,74.42 < 5 |only if walking
 click Crumbling Statue##281639
 turnin The Secrets of Zul'Ahjin##50539 |goto 48.90,74.49
 accept Hollow, Empty Eyes##48315 |goto 48.90,74.49
 step
-Follow the path |goto 49.29,74.36 < 7 |only if walking
-Follow the path |goto 49.52,74.09 < 7 |only if walking
-Continue following the path |goto 49.95,73.47 < 5 |only if walking
-Continue following the path |goto 49.92,73.24 < 5 |only if walking
 click Glittering Sapphire##281558
 collect Glittering Sapphire##157864 |q 48315/1 |goto 49.85,73.19 |count 1
 step
-Follow the path |goto 50.08,72.95 < 7 |only if walking
-Follow the path |goto 50.24,71.91 < 7 |only if walking
-Run up the stairs |goto 50.45,71.83 < 5 |only if walking
-Follow the path |goto 50.77,71.90 < 5 |only if walking
 click Glittering Sapphire##281558
 collect Glittering Sapphire##157864 |q 48315/1 |goto 51.05,72.34 |count 2
 step
-Jump down here |goto 50.68,72.98 < 5 |only if walking
-Follow the path |goto 49.88,73.66 < 7 |only if walking
-Run up the stairs |goto 49.05,74.02 < 5 |only if walking
 click Crumbling Statue##281639
 turnin Hollow, Empty Eyes##48315 |goto 48.90,74.49
 step
@@ -7802,7 +7631,8 @@ Reach Level 118 |ding 118
 |tip Use the Leveling guides to accomplish this.
 step
 talk Nathanos Blightcaller##135691
-accept The Final Foothold##52444 |goto 58.44,62.67
+turnin Pushing Our Influence##53056 |goto Zuldazar/0 58.44,62.67 |only if havequest(53056) or completedq(53056)
+accept The Final Foothold##52444 |goto Zuldazar/0 58.44,62.67
 step
 click Kul Tiras Campaign
 |tip Pick the last available quest.
@@ -7826,7 +7656,7 @@ Reach Level 120 |ding 120
 |tip Use the Leveling guides to accomplish this.
 step
 talk Nathanos Blightcaller##135691
-accept Uniting Zandalar##51916 |goto 58.44,62.67
+accept Uniting Zandalar##51916 |goto Zuldazar/0 58.44,62.67
 step
 Reach Friendly Reputation with the Zandalari Empire in Zuldazar |q 51916/1
 |tip Use the "Zuldazar" leveling guide to accomplish this.
@@ -7843,52 +7673,21 @@ step
 talk Nathanos Blightcaller##135691
 accept Breaking Kul Tiran Will##51589 |goto 58.44,62.67
 step
-Run up the stairs |goto 58.37,62.74 < 3 |only if walking
-Follow the path |goto 58.38,62.80 < 3 |only if walking
 talk Dread-Admiral Tattersail##135690
+|tip At the top of the ship.
 Tell her _"Set sail for Tiragarde Sound."_
 Speak with Tattersail to Sail to Tiragarde Sound |q 51589/1 |goto 58.46,62.98
 step
 Travel to Tirigarde Sound |goto Tiragarde Sound/0 88.20,51.16 < 7 |noway |c |q 51589
 step
-Run up the stairs |goto 88.11,50.71 < 5 |only if walking
-Run up the stairs |goto 87.97,50.60 < 5 |only if walking
-Follow the path |goto 87.85,50.70 < 5 |only if walking
 talk Nathanos Blightcaller##138285
 turnin Breaking Kul Tiran Will##51589 |goto 87.37,50.51
 accept Into the Heart of Tiragarde##51590 |goto 87.37,50.51
 step
-Run up the stairs |goto 87.60,50.97 < 5 |only if walking
-Follow the path |goto 87.56,51.08 < 5 |only if walking
-Cross the bridge |goto 87.40,51.34 < 5 |only if walking
-Follow the path |goto 87.15,51.76 < 5 |only if walking
-Follow the path up |goto 86.90,51.75 < 5 |only if walking
-Follow the path up |goto 86.31,51.23 < 7 |only if walking
-Follow the path up |goto 85.65,51.82 < 7 |only if walking
-Cross the bridge |goto 85.21,51.75 < 5 |only if walking
-Follow the path up |goto 84.80,51.67 < 5 |only if walking
-Follow the path |goto 84.09,50.64 < 7 |only if walking
-Follow the path down |goto 83.47,50.03 < 7 |only if walking
-Continue down the path |goto 82.69,51.27 < 7 |only if walking
-Continue down the path |goto 81.80,51.53 < 7 |only if walking
-Follow the path |goto 80.59,51.63 < 7 |only if walking
-Follow the path down |goto 79.12,51.81 < 7 |only if walking
-Follow the path down |goto 78.35,51.92 < 7 |only if walking
-Jump down here |goto 76.78,52.91 < 7 |only if walking
-Follow the path |goto 75.63,53.93 < 7 |only if walking
-Continue following the path |goto 74.95,54.12 < 7 |only if walking
-Follow the road |goto 74.18,53.08 < 7 |only if walking
-Continue following the road |goto 73.02,49.66 < 7 |only if walking
-Continue following the road |goto 72.86,48.53 < 7 |only if walking
-Continue following the road |goto 72.13,48.27 < 7 |only if walking
-Follow the path up |goto 70.97,48.46 < 7 |only if walking
-Follow the path up |goto 70.61,49.08 < 7 |only if walking
-Follow the path |goto 70.90,50.04 < 7 |only if walking
 talk Nathanos Blightcaller##138285
 turnin Into the Heart of Tiragarde##51590 |goto 71.19,50.91
 accept Our Mountain Now##51591 |goto 71.19,50.91
 step
-Follow the path |goto 71.26,51.42 < 7 |only if walking
 Kill Roughneck enemies around this area
 Slay #10# Roughneck Goons |q 51591/1 |goto 71.95,51.67
 step
@@ -7905,30 +7704,13 @@ fpath Timberfell Outpost |goto 72.18,51.91
 stickystart "Collect_Lenghts_of_Chain"
 stickystart "Collect_Sail_Canvas"
 step
-Follow the path |goto 71.97,51.24 < 7 |only if walking
-Follow the path down |goto 72.06,50.61 < 7 |only if walking
-Jump down here |goto 72.26,49.94 < 7 |only if walking
-Follow the path |goto 72.91,48.94 < 7 |only if walking
-Follow the path |goto 72.98,48.75 < |only if walking
-Enter the building |goto 73.37,48.53 < 3 |walk
 Watch the dialogue
 |tip Inside the building.
 Investigate the Watchpost Cabin |q 51593/2 |goto 73.45,48.26
 step
-Leave the building |goto 73.38,48.53 < 3 |walk
-Cross the bridge |goto 73.52,48.89 < 7 |only if walking
-Jump down here |goto 74.28,49.38 < 5 |only if walking
-Follow the path up |goto 74.62,49.42 < 3 |only if walking
-Jump up here |goto 74.63,49.60 < 3 |only if walking
 Watch the dialogue
 Investigate the Harbor Terrace |q 51593/1 |goto 74.63,49.68
 step
-Follow the path |goto 74.53,49.71 < 3 |only if walking
-Follow the path |goto 74.45,50.18 < 3 |only if walking
-Jump down here |goto 74.81,50.36 < 5 |only if walking
-Follow the path |goto 74.94,51.12 < 7 |only if walking
-Jump up here |goto 75.17,51.15 < 3 |only if walking
-Jump up here |goto 75.27,51.11 < 3 |only if walking
 Watch the dialogue
 |tip Watch out for the Bridgeport Guards that patrol around this area.
 Investigate the Outdoor Workshop |q 51593/3 |goto 75.31,51.13
@@ -7954,14 +7736,6 @@ talk Lilian Voss##138287
 turnin Bridgeport Investigation##51593 |goto 72.05,51.77
 accept Explosives in the Foundry##51594 |goto 72.05,51.77
 step
-Follow the path |goto 71.91,52.14 < 7 |only if walking
-Follow the path |goto 71.85,52.66 < 7 |only if walking
-Jump down here |goto 72.60,54.18 < 7 |only if walking
-Jump down here |goto 74.36,54.88 < 7 |only if walking
-Follow the path |goto 75.68,53.93 < 7 |only if walking
-Follow the path |goto 76.18,53.06 < 7 |only if walking
-Follow the path up |goto 76.23,52.17 < 7 |only if walking
-Follow the path |goto 76.85,51.37 < 7 |only if walking
 talk Lilian Voss##138287
 turnin Explosives in the Foundry##51594 |goto 77.50,49.93
 accept Explosivity##51595 |goto 77.50,49.93
@@ -7978,23 +7752,10 @@ accept A Bit of Chaos##51598 |goto 77.50,49.93
 stickystart "Slay_Ashvane_Workers"
 stickystart "Collect_Ashvane_Explosives"
 step
-Follow the path |goto 77.73,49.61 < 7 |only if walking
-Continue following the path |goto 78.27,49.43 < 7 |only if walking
-Continue following the path |goto 79.34,48.14 < 7 |only if walking
-Jump down here |goto 79.29,47.87 < 5 |only if walking
-Enter the building |goto 79.19,47.02 < 3 |walk
 kill Taskmaster Williams##123264
 |tip He walks around this area inside the building.
 collect Gunpowder Manufacturing Guide##160552 |q 51597/2 |goto 79.11,46.94
 step
-Leave the building |goto 79.19,47.01 < 5 |walk
-Follow the path up |goto 80.15,47.49 < 7 |only if walking
-Follow the path |goto 80.41,47.76 < 7 |only if walking
-Run up the stairs |goto 80.37,49.02 < 5 |only if walking
-Run up the stairs |goto 80.47,49.30 < 5 |only if walking
-Follow the path |goto 80.72,49.37 < 5 |only if walking
-Continue following the path |goto 81.20,49.71 < 7 |only if walking
-Continue following the path |goto 81.79,49.22 < 10 |only if walking
 kill Forgemaster Farthing##134328
 |tip He walks around this area.
 collect Ashvane Explosives Formula##160553 |q 51597/1 |goto 82.18,48.63
@@ -8008,33 +7769,15 @@ click Gunpowder Crate##290776+
 |tip They look like open brown crates with bombs in them on the ground around this area.
 collect 8 Ashvane Explosives##160555 |q 51596/1 |goto 81.78,49.02
 step
-Follow the path |goto 81.66,49.45 < 10 |only if walking
-Follow the path up |goto 80.95,50.47 < 7 |only if walking
-Follow the path |goto 80.71,51.59 < 7 |only if walking
-Follow the path down |goto 78.85,51.81 < 7 |only if walking
-Follow the path down |goto 78.38,51.83 < 7 |only if walking
-Follow the path |goto 77.75,51.24 < 7 |only if walking
 talk Lilian Voss##138287
 turnin Ammunition Acquisition##51596 |goto 77.50,49.92
 turnin Gunpowder Research##51597 |goto 77.50,49.92
 turnin A Bit of Chaos##51598 |goto 77.50,49.92
 accept Death Trap##51599 |goto 77.50,49.92
 step
-Follow the path |goto 77.19,50.43 < 7 |only if walking
-Follow the path down |goto 76.90,51.50 < 7 |only if walking
-Follow the path |goto 76.33,52.01 < 7 |only if walking
-Continue following the path |goto 76.06,53.34 < 7 |only if walking
-Continue following the path |goto 75.67,53.86 < 7 |only if walking
-Continue following the path |goto 74.95,54.11 < 7 |only if walking
 click Gunpowder Crate##290776+
 Place #8# Gunpowder Crates |q 51599/1 |goto 74.24,52.93
 step
-Follow the path |goto 75.02,54.11 < 7 |only if walking
-Follow the path |goto 75.66,53.91 < 7 |only if walking
-Continue following the path |goto 76.15,53.19 7 |only if walking
-Follow the path up |goto 76.26,52.22 < 7 |only if walking
-Follow the road |goto 76.85,51.28 < 7 |only if walking
-Follow the path down |goto 76.96,50.08 < 7 |only if walking
 talk Lilian Voss##138287
 turnin Death Trap##51599 |goto 77.01,49.19
 accept The Bridgeport Ride##51601 |goto 77.01,49.19
@@ -8043,13 +7786,6 @@ clicknpc Stolen Horse##138552
 Ride the Stolen Horse |invehicle |goto 76.99,49.22 |q 51601
 stickystart "Ride_Past_Captain_Amalia_Stone"
 step
-Follow the path |goto 76.45,48.95 < 7 |only if walking
-Continue following the path |goto 76.18,49.10 < 7 |only if walking
-Continue following the path |goto 75.59,49.66 < 7 |only if walking
-Continue following the path |goto 75.21,49.11 < 7 |only if walking
-Continue following the path |goto 74.97,49.49 < 7 |only if walking
-Continue following the path |goto 74.98,49.94 < 7 |only if walking
-Continue following the path |goto 75.31,50.14 < 7 |only if walking
 Ride Past #10# Bridgeport Guards |q 51601/1 |goto 75.66,50.99
 |tip You will ride past the guards as you follow the path.
 step

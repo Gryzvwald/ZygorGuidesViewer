@@ -1089,10 +1089,10 @@ function ZGV:Options_DefineOptionTables()
 		AddOptionSep()
 		AddOption('autotaxi',        { type = 'toggle', width = 200, disabled=function() return not self.db.profile.pathfinding end, set=Setter_Travel, _default=false, })
 
-		--[[ hidden --]] AddOption('pathfinding_speed',{
-			type = 'select', values={ [0.001]=L["opt_pathfinding_speed_slow"], [15]=L["opt_pathfinding_speed_medium"], [50]=L["opt_pathfinding_speed_fast"] },
+		AddOption('pathfinding_speed',{
+			type = 'select', values={ [1]=L["opt_pathfinding_speed_slow"], [15]=L["opt_pathfinding_speed_medium"], [50]=L["opt_pathfinding_speed_fast"] },
 			style = "slider",
-			hidden=true,
+			--hidden=true,
 			_default = 15
 		})
 

@@ -18,8 +18,9 @@ ZygorGuidesViewer:RegisterInclude("Choose_Foothold_1",[[
 		Tiragarde Sound |confirm |or |next "Tiragarde_Sound_Foothold_1"
 		Drustvar |confirm |or |next "Drustvar_Foothold_1"
 		Stormsong Valley |confirm |or |next "Stormsong_Valley_Foothold_1"
-		|only if not completedq(51803)
+		|only if not completedq(51979)
 ]])
+
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_2",[[
@@ -32,8 +33,9 @@ ZygorGuidesViewer:RegisterInclude("Choose_Foothold_2",[[
 		Tiragarde Sound |confirm |or |next "Tiragarde_Sound_Foothold_2" |only if not completedq(51984)
 		Drustvar |confirm |or |next "Drustvar_Foothold_2" |only if not completedq(51985)
 		Stormsong Valley |confirm |or |next "Stormsong_Valley_Foothold_2" |only if not completedq(51986)
-		|only if not completedq(51979)
+		|only if not completedq(52444)
 ]])
+
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_3",[[
@@ -46,7 +48,6 @@ ZygorGuidesViewer:RegisterInclude("Choose_Foothold_3",[[
 		Tiragarde Sound |confirm |or |next "Tiragarde_Sound_Foothold_3" |only if not completedq(51984)
 		Drustvar |confirm |or |next "Drustvar_Foothold_3" |only if not completedq(51985)
 		Stormsong Valley |confirm |or |next "Stormsong_Valley_Foothold_3" |only if not completedq(51986)
-		|only if not completedq(52444)
 ]])
 
 
@@ -377,9 +378,8 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 		turnin The Warlord's Call##51526 |goto 58.44,62.46
 		accept Storming In##51532 |goto 58.44,62.46
 	step
-		Run up the stairs |goto 58.37,62.74 < 3 |only if walking
-		Follow the path |goto 58.38,62.81 3 |only if walking
 		talk Dread-Admiral Tattersail##135690
+		|tip At the top of the ship.
 		Tell her _"Set sail for Stormsong Valley."_
 		Speak with Tattersail to Sail to Stormsong Valley |q 51532/1 |goto 58.46,62.99
 	step
@@ -389,12 +389,6 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 		turnin Storming In##51532 |goto 51.10,21.15
 		accept A Wall of Iron##51643 |goto 51.10,21.15
 	step
-		Run down the stairs |goto 51.11,20.79 < 3 |only if walking
-		Follow the path |goto 51.20,20.74 < 3 |only if walking
-		Run down the stairs |goto 51.39,20.86 < 3 |walk
-		Run down the stairs |goto 51.50,20.72 < 5 |c |q 51643
-	step
-		Follow the path |goto 51.36,20.76 < 5 |walk
 		clicknpc Banshee's Wail Cannon##138312
 		|tip Downstairs inside the ship.
 		Man the Cannon |q 51643/1 |goto 51.18,21.12
@@ -403,25 +397,16 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 		|tip Use the ability on your action bar.
 		Slay #40# Kul Tiran Forces |q 51643/2 |goto 51.18,21.12
 	step
-		Run up the stairs |goto 51.35,20.75 < 3 |walk
-		Run up the stairs |goto 51.52,20.80 < 5 |c |q 51643
-	step
-		Follow the path |goto 51.39,20.85 < 3 |walk
-		Run up the stairs |goto 51.20,20.76 < 3 |only if walking
-		Follow the path |goto 51.10,20.82 < 3 |only if walking
 		talk High Warlord Cromush##138365
+		|tip Upstairs on the deck of the ship.
 		turnin A Wall of Iron##51643 |goto 51.10,21.15
 		accept On the Hunt##51536 |goto 51.10,21.15
 	step
 		click Rope Coil
 		Board the Landing Craft |q 51536/1 |goto 51.00,21.24
 	step
-		Ride the Boat to Shore |goto 51.66,24.42 < 7 |c |q 51536
+		Ride the Boat to Shore |goto 51.66,24.42 < 10 |c |q 51536
 	step
-		Follow the path up |goto 51.38,25.55 < 7 |only if walking
-		Follow the path |goto 51.06,26.58 < 5 |only if walking
-		Run up the stairs |goto 50.90,26.68 < 5 |only if walking
-		Follow the path |goto 50.80,26.67 < 5 |only if walking
 		clicknpc Huelo##138137
 		Choose _Pull the harpoon free._
 		Investigate Seawatch Point |q 51536/2 |goto 50.38,26.19
@@ -431,11 +416,6 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 		turnin On the Hunt##51536 |goto 50.41,26.17
 		accept Onward!##51587 |goto 50.41,26.17
 	step
-		Run down the stairs |goto 50.78,26.66 < 7 |only if walking
-		Follow the path up |goto 51.35,27.27 < 7 |only if walking
-		Follow the path up |goto 51.58,28.45 < 7 |only if walking
-		Continue up the path |goto 52.41,29.25 < 7 |only if walking
-		Continue up the path |goto 52.27,30.04 < 7 |only if walking
 		Watch the dialogue
 		|tip Follow Rexxar as he runs.
 		Travel with Rexxar |q 51587/1 |goto 51.99,30.20
@@ -451,16 +431,9 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 	stickystart "Rescue_Frightened_Peons"
 	stickystart "Kill_Storms_Wake_Footmen"
 	step
-		Follow the path up |goto 51.53,30.36 < 7 |only if walking
-		Follow the path |goto 50.96,31.27 < 7 |only if walking
-		Follow the path |goto 50.96,31.89 < 7 |only if walking
-		Follow the path up |goto 51.28,32.61 < 7 |only if walking
-		Follow the path up |goto 51.54,33.02 < 7 |only if walking
-		Run up the stairs |goto 51.57,33.45 < 5 |only if walking
 		kill Captain Ara##137910 |q 51675/1 |goto 51.75,33.54
 	step
 	label "Douse_Flames"
-		Follow the path down |goto 51.54,32.89 < 7 |only if walking
 		kill Storm's Wake Tidesage##137894+
 		collect Fading Umbral Wand##160565 |n
 		use Fading Umbral Wand##160565+
@@ -475,10 +448,7 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 	label "Kill_Storms_Wake_Footmen"
 		kill 12 Storm's Wake Footman##137893 |q 51675/2 |goto 50.74,32.16
 	step
-		Follow the path up |goto 49.96,32.50 < 7 |only if walking
-		Follow the path up |goto 49.52,32.55 < 7 |only if walking
-		Cross the bridge |goto 49.29,32.99 < 7 |only if walking
-		Follow the path |goto 49.21,33.91 < 7 |only if walking
+		Follow the path up |goto 49.30,32.91 < 20 |only if walking
 		talk Centurion Kaga Warmstone##138869
 		turnin Hunt Them Down##51675 |goto 49.19,34.21
 		turnin Almost Worth Saving##51691 |goto 49.19,34.21
@@ -487,8 +457,6 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 		turnin Douse the Flames##51674 |goto 49.25,34.26
 		accept Reclaiming What's Ours##51696 |goto 49.25,34.26
 	step
-		Enter the building |goto 49.40,34.60 < 3 |walk
-		Run up the stairs |goto 49.33,34.71 < 3 |walk
 		click Warhorn of the Hold
 		|tip At the top of the tower.
 		Sound the Warhorn of the Hold |q 51696/1 |goto 49.59,34.78
@@ -500,8 +468,6 @@ ZygorGuidesViewer:RegisterInclude("Stormsong_Valley_Foothold_Quests",[[
 		accept Champion: Rexxar##51753 |goto 52.12,33.66 |instant
 		accept Return to Zuldazar##51986 |goto 52.12,33.66
 	step
-		Leave the building |goto 51.80,33.57 < 3 |walk
-		Follow the path |goto 51.54,33.52 < 5 |only if walking
 		talk Muka Stormbreaker##138097
 		fpath Warfang Hold |goto 51.43,33.74
 	step
