@@ -382,11 +382,11 @@ do
 		return taxidata,taxidata_by_slot
 	end
 
-	function Lib:ClearAllKnowledge()
+	function Lib:ClearAllKnowledge(status)
 		for c,cont in pairs(Lib.taxipoints) do
-			Lib:ClearContinentKnowledge(c,"all")
+			Lib:ClearContinentKnowledge(c,"all",status)
 		end
-		table.wipe(Lib.master)
+		if status~=true then table.wipe(Lib.master) end
 	end
 
 	function Lib:ClearContinentKnowledge(cont,operator,status)

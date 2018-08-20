@@ -267,8 +267,10 @@
 		<Script file="Achievements\ZygorAchievementsHordeLEGIONTrial.lua"/>
 	
 		<!-- BFA -->
+		<Script file="Achievements\ZygorAchievementsAllianceBFA.lua"/>
 		<Script file="Achievements\ZygorAchievementsAllianceBFATrial.lua"/>
 
+		<Script file="Achievements\ZygorAchievementsHordeBFA.lua"/>
 		<Script file="Achievements\ZygorAchievementsHordeBFATrial.lua"/>
 	
 	<!-- PETS AND MOUNTS -->

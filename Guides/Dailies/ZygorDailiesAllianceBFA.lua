@@ -260,8 +260,6 @@ Slay #10# Witch Forces |q 51576/2 |goto 24.09,50.74
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51541
-Follow the path |goto Drustvar/0 27.20,71.37 < 7 |only if walking
-Follow the path |goto 27.47,69.94 < 7 |only if walking
 accept Arclight##51541 |goto Drustvar/0 29.21,69.01
 |tip You will accept this quest automatically.
 step
@@ -353,8 +351,9 @@ Continue following the road |goto 41.01,46.17 < 10 |only if walking
 accept Azerite Madness##51608 |goto Drustvar/0 40.92,38.91
 |tip You will accept this quest automatically.
 step
-Kill Azerite-Infused enemies around this area
-|tip Use the special action button on-screen after killing enemies.
+Kill enemies around this area
+|tip Use the "Heart of Azeroth" ability near their corpses.
+|tip It appears as a button on the screen.
 Absorb Azerite from Defeated Elementals |q 51608/1 |goto 40.92,38.91
 |next "Tortollan_Seekers_WQ"
 step
@@ -387,17 +386,13 @@ Recover Azerite |q 51615/1 |goto 40.49,38.21
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51609
-Follow the road |goto Drustvar/0 38.47,51.03 < 7 |only if walking
-Continue following the road |goto 39.67,48.47 < 10 |only if walking
-Continue following the road |goto 40.65,47.66 < 10 |only if walking
-Continue following the road |goto 41.30,43.69 < 10 |only if walking
-Follow the path up |goto 41.62,41.02 < 10 |only if walking
-accept Azerite Wounds##51609 |goto Drustvar/0 40.58,37.85
+Follow the road |goto Drustvar/0 40.96,46.60 < 30 |only if walking
+accept Azerite Wounds##51609 |goto Drustvar/0 41.36,40.34
 |tip You will accept this quest automatically.
 step
 Heal #5# Azeroth Wounds |q 51609/1 |goto 40.58,37.85
 |tip Use the "Heart of Azeroth" ability.
-|tip Use it while standing in the blue glowing spots with sparks flying out of them on the ground around this area.
+|tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
@@ -444,21 +439,22 @@ Reclaim Fletcher's Hollow |q 51681/1 |goto 70.31,62.65
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51637
-Follow the road |goto Drustvar/0 32.29,31.32 < 10 |only if walking
-Continue following the road |goto 31.36,32.39 < 10 |only if walking
-Follow the path |goto 24.99,30.21 < 10 |only if walking
-Follow the path down |goto 25.01,28.49 < 10 |only if walking
-Continue down the path |goto 24.44,27.85 < 7 |only if walking
-Continue down the path |goto 23.64,28.17 < 7 |only if walking
-Continue down the path |goto 22.49,27.35 < 10 |only if walking
 accept Beachhead##51637 |goto Drustvar/0 21.61,26.54
 |tip You will accept this quest automatically.
 step
-kill Vicious Albatross##138186
-kill Armored Claw##138242
-|tip Use the "Shoot" ability on your action bar.
-|tip Armored Claws are in the water.
-Help #15# Juvenile Turtles Reach the Ocean |q 51637/1 |goto 21.61,26.54
+talk Scrollsage Nola##138478
+Tell her _"I am ready."_
+Speak to Scrollsage Nola |q 51637/1 |goto 21.63,26.68
+step
+kill Vicious Albatross##138186+
+|tip They look like birds flying in the air around this area.
+|tip Use the ability on your action bar.
+kill Armored Claw##138242+
+|tip They look like small crabs in the water.
+|tip Use the ability on your action bar.
+Help #12# Juvenile Turtles Reach the Ocean |q 51637/2 |goto 21.61,26.54
+|tip The turtles will slowly walk into the water.
+|tip You must protect them from the birds and crabs.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50000
@@ -747,7 +743,7 @@ label quest-51658
 Follow the path |goto Drustvar/0 32.36,30.15 < 7 |only if walking
 accept Fly the Coop!##51658 |goto Drustvar/0 31.86,24.43
 |tip You will accept this quest automatically.
-stickystart "Kill_Hexthralled_Falconers"
+stickystart "Kill_Hexthralled_Falconers_1"
 stickystart "Kill_Cursed_Falcons"
 step
 kill Hexthralled Falconer##133736+
@@ -757,7 +753,7 @@ click Falcon Cage##290746+
 |tip They look like small bird cages on the ground around this area.
 Open #5# Falcon Cages |q 51658/1 |goto 31.86,24.43
 step
-label "Kill_Hexthralled_Falconers"
+label "Kill_Hexthralled_Falconers_1"
 kill Hexthralled Falconer##133736 |q 51658/2 |goto 31.86,24.43
 step
 label "Kill_Cursed_Falcons"
@@ -1180,18 +1176,17 @@ Kill Spiders and Egg Sacs |q 51672/1 |goto 80.17,47.85
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51667
-Follow the path |goto Drustvar/0 32.42,28.92 < 10 |only if walking
 accept This Bird You Cannot Change##51667 |goto Drustvar/0 31.85,24.67
 |tip You will accept this quest automatically.
-step
-kill 5 Hexthralled Falconer##131519 |q 51667/2 |goto 31.85,24.67
+stickystart "Kill_Hexthralled_Falconers_2"
 step
 use the Falconer's Whistle##157845
-|tip Use the "Launch Falcon" ability on your action bar to destroy Wicker Charms.
-|tip They look like small dreamcatchers hanging from trees and structures around this area.
+|tip Use the ability on your action bar on Wicker Charms around this area.
+|tip They look like dreamcatcher objects hanging from the buildings around this area.
 Destroy #7# Wicker Charms |q 51667/1 |goto 31.85,24.67
 step
-Click the "Exit" Button on Your Action Bar |outvehicle
+label "Kill_Hexthralled_Falconers_2"
+kill 5 Hexthralled Falconer##131519 |q 51667/2 |goto 31.85,24.67
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51619
@@ -1452,8 +1447,9 @@ label quest-51415
 accept Azerite Madness##51415 |goto Nazmir/0 23.04,63.83
 |tip You will accept this quest automatically.
 step
-Kill Azerite-Infused enemies around this area
-|tip Use the special action button on-screen after killing enemies.
+Kill enemies around this area
+|tip Use the "Heart of Azeroth" ability near their corpses.
+|tip It appears as a button on the screen.
 Absorb Azerite from Defeated Elementals |q 51415/1 |goto 23.09,64.00
 |next "Tortollan_Seekers_WQ"
 step
@@ -1474,7 +1470,7 @@ accept Azerite Wounds##52884 |goto Nazmir/0 26.64,80.19
 |tip You will accept this quest automatically.
 step
 Heal #5# Azeroth Wounds |q 52884/1 |goto 26.64,80.19|tip Use the "Heart of Azeroth" ability.
-|tip Use it while standing in the blue glowing spots with sparks flying out of them on the ground around this area.
+|tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
@@ -1537,7 +1533,10 @@ label quest-50568
 accept Chag's Challenge##50568 |goto Nazmir/0 68.92,20.06
 |tip You will accept this quest automatically.
 step
-kill Lucille##134296 |q 50568/1 |goto 68.12,20.21
+talk Chag##134297
+Tell him _"I'll fight your summoned creature."_
+Watch the dialogue
+kill Lucille##134296 |q 50568/1 |goto 67.99,19.81
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52779
@@ -1594,6 +1593,14 @@ click Gemcaller Matrix##136001
 Restore the Skycaller Gem |q 51172/2 |goto 27.25,39.41
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50496
+accept Glompmaw##50496 |goto Nazmir/0 68.68,57.45
+|tip You will accept this quest automatically.
+step
+kill Glompmaw##121242 |q 50496/1 |goto 68.68,57.45
+|tip He swims underwater around this area.
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50499
 Follow the path up |goto Nazmir/0 33.39,82.74 < 15 |only if walking
 accept Gwugnug##50499 |goto Nazmir/0 33.16,84.16
@@ -1606,7 +1613,6 @@ kill Gwugnug the Cursed##127001 |q 50499/1 |goto 33.80,85.99
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51127
-Follow the path |goto Nazmir/0 55.01,20.60 < 15 |only if walking
 accept Getting Out of Hand##51127 |goto Nazmir/0 59.11,14.78
 |tip You will accept this quest automatically.
 step
@@ -1755,6 +1761,22 @@ click Ancient Texts##287161+
 |tip They look like brown stone tablets on the ground around this area.
 |tip They can also be inside the buildings around this area.
 Examine #8# Ancient Text |q 51154/1 |goto 68.45,35.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51109
+accept Scorched Earth##51109 |goto Nazmir/0 31.69,75.18
+|tip You will accept this quest automatically.
+stickystart "Kill_Dreadtick_Latchers_1"
+step
+use the X-P100D##159745
+|tip Use it on Dreadtick Latcher Nests around this area.
+|tip They look like white pods with red bumps on them on the ground around this area.
+Destroy #8# Dreadtick Latcher Nests |q 51109/1 |goto 30.59,75.28
+step
+label "Kill_Dreadtick_Latchers_1"
+use the X-P100D##159745
+|tip Use it on Dreadtick Latchers around this area.
+kill 25 Dreadtick Latcher##126749 |q 51109/2 |goto 30.59,75.28
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50961
@@ -1988,39 +2010,28 @@ Continue up the path |goto 67.63,81.84 < 7 |only if walking
 accept Azerite Madness##51618 |goto Stormsong Valley/0 68.15,83.06
 |tip You will accept this quest automatically.
 step
-Kill Azerite-Infused enemies around this area
-|tip Use the special action button on-screen after killing enemies.
+Kill enemies around this area
+|tip Use the "Heart of Azeroth" ability near their corpses.
+|tip It appears as a button on the screen.
 Absorb Azerite from Defeated Elementals |q 51618/1 |goto 70.23,85.41
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52873
-Follow the road |goto Stormsong Valley/0 32.22,64.97 < 10 |only if walking
-Follow the path |goto 34.57,65.48 < 10 |only if walking
 accept Azerite Mining##52873 |goto Stormsong Valley/0 36.22,67.50
 |tip You will accept this quest automatically.
 step
 Enter the cave |goto 36.22,67.50 < 5 |only if walking
-Follow the path down |goto 36.91,69.03 < 7 |only if walking
 Kill enemies around this area
 |tip Inside the cave.
 click Azerite Chunk##290611+
-|tip They look like large multicolored veins on the ground around this area.
+|tip They look like large multicolored veins on the ground around this area inside the cave.
 click Azerite Node##290723+
-|tip They look like small multicolored veins on the ground around this area.
+|tip They look like small multicolored veins on the ground around this area inside the cave.
 Recover Azerite |q 52873/1 |goto 35.99,69.93
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51644
-Follow the path |goto Stormsong Valley/0 68.94,66.60 < 7 |only if walking
-Continue following the path |goto 70.66,66.53 < 10 |only if walking
-Continue following the path |goto 71.33,68.13 < 10 |only if walking
-Continue up the path |goto 72.14,70.63 < 10 |only if walking
-Continue up the path |goto 72.34,73.76 < 10 |only if walking
-Continue up the path |goto 72.67,75.38 < 7 |only if walking
-Continue up the path |goto 73.38,76.85 < 10 |only if walking
-Continue up the path |goto 73.29,78.93 < 7 |only if walking
-Continue up the path |goto 73.77,79.67 < 7 |only if walking
-Continue up the path |goto 73.14,82.44 < 10 |only if walking
+Follow the path up |goto Stormsong Valley/0 72.89,75.93 < 20 |only if walking
 accept Azerite Mining##51644 |goto Stormsong Valley/0 71.17,85.40
 |tip You will accept this quest automatically.
 step
@@ -2033,15 +2044,13 @@ Recover Azerite |q 51644/1 |goto 71.17,85.40
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51623
-Follow the path up |goto Stormsong Valley/0 68.92,66.64 < 15 |only if walking
-Follow the path up |goto Stormsong Valley/0 72.65,75.21 < 15 |only if walking
-Continue up the path |goto Stormsong Valley/0 73.70,80.32 < 15 |only if walking
+Follow the path up |goto Stormsong Valley/0 72.89,75.93 < 20 |only if walking
 accept Azerite Wounds##51623 |goto Stormsong Valley/0 73.04,82.52
 |tip You will accept this quest automatically.
 step
 Heal #5# Azeroth Wounds |q 51623/1 |goto 70.77,85.33
 |tip Use the "Heart of Azeroth" ability.
-|tip Use it while standing in the blue glowing spots with sparks flying out of them on the ground around this area.
+|tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
@@ -3399,8 +3408,9 @@ Continue following the path |goto 61.73,47.35 < 10 |only if walking
 accept Azerite Madness##51584 |goto Tiragarde Sound/0 60.89,47.75
 |tip You will accept this quest automatically.
 step
-Kill Azerite-Infused enemies around this area
-|tip Use the special action button on-screen after killing enemies.
+Kill enemies around this area
+|tip Use the "Heart of Azeroth" ability near their corpses.
+|tip It appears as a button on the screen.
 Absorb Azerite from Defeated Elementals |q 51584/1 |goto 60.89,47.75
 |next "Tortollan_Seekers_WQ"
 step
@@ -3454,7 +3464,7 @@ accept Azerite Empowerment##51583 |goto Tiragarde Sound/0 60.57,47.28
 step
 Heal #5# Azeroth Wounds |q 51583/1 |goto 60.57,47.28
 |tip Use the "Heart of Azeroth" ability.
-|tip Use it while standing in the blue glowing spots with sparks flying out of them on the ground around this area.
+|tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
@@ -5064,8 +5074,9 @@ Continue following the path |goto 52.92,64.50 < 10 |only if walking
 accept Azerite Madness##51422 |goto Vol'dun/0 57.47,60.95
 |tip You will accept this quest automatically.
 step
-Kill Azerite-Infused enemies around this area
-|tip Use the special action button on-screen after killing enemies.
+Kill enemies around this area
+|tip Use the "Heart of Azeroth" ability near their corpses.
+|tip It appears as a button on the screen.
 Absorb Azerite from Defeated Elementals |q 51422/1 |goto 59.34,61.24
 |next "Tortollan_Seekers_WQ"
 step
@@ -5083,7 +5094,8 @@ You can find more in the cave at [34.27,62.77]
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52875
-accept Azerite Mining##52875 |goto Vol'dun/0 34.65,63.00
+Cross the bridge |goto Vol'dun/0 30.71,55.01 < 20 |only if walking
+accept Azerite Mining##52875 |goto Vol'dun/0 35.09,60.22
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
@@ -5216,16 +5228,12 @@ Collect #10# Fertilizer |q 51564/1 |goto 53.22,15.75
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51157
-Jump down carefully here |goto Vol'dun/0 62.33,19.00 < 7 |only if walking
-Jump down here |goto 62.24,18.58 < 7 |only if walking
-Follow the path |goto 62.35,13.93 < 10 |only if walking
-Continue following the path |goto 60.43,9.97 < 10 |only if walking
+Jump down carefully here |goto Vol'dun/0 62.20,19.38 < 15 |only if walking
 accept Golanar##51157 |goto Vol'dun/0 59.51,8.49
 |tip You will accept this quest automatically.
 step
-kill Golanar##129027
+kill Golanar##129027 |q 51157/1 |goto 59.51,8.49
 |tip It walks around this area.
-Slay Golanar |q 51157/1 |goto 59.51,8.49
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51099
@@ -5265,6 +5273,16 @@ accept Instructions Not Included##51928 |goto Vol'dun/0 58.85,41.67
 step
 Kill enemies around this area
 Slay #8# Brine Basin Wildlife |q 51928/1 |goto 58.85,41.67
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51931
+accept Instructions Not Included##51931 |goto Vol'dun/0 58.85,41.67
+|tip You will accept this quest automatically.
+step
+Kill enemies around this area
+|tip Use the "Stormstrike" ability.
+|tip It appears as a button on the screen.
+Slay #8# Brine Basin Wildlife |q 51931/1 |goto 58.85,41.67
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51100
@@ -5308,8 +5326,6 @@ Defeat Keeyo |q 52850/1 |goto 57.13,48.96
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51635
-Jump down carefully here |goto Vol'dun/0 62.05,22.52 < 7 |only if walking
-Jump down carefully here |goto 62.42,22.81 < 7 |only if walking
 accept Make Loh Go##51635 |goto Vol'dun/0 63.36,23.51
 |tip You will accept this quest automatically.
 step
@@ -5317,9 +5333,9 @@ talk Toki##138480
 Tell him _"I am ready."_
 Speak to Toki |q 51635/1 |goto 63.36,23.51
 step
-|tip Use the arrows to guide Loh to the flags.
-|tip You cannot cross your own path or you will have to start over.
 Guide Loh to the Goal |q 51635/2 |goto 63.36,23.51
+|tip Move Loh to the flags without crossing your own path.
+|tip Use the abilities on your action bar.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51153
@@ -5333,18 +5349,15 @@ kill Mor'fani the Exile##134694 |q 51153/1 |goto 37.44,89.10
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51834
-Follow the path up |goto Vol'dun/0 38.73,83.51 < 7 |only if walking
-Continue up the path |goto 38.39,81.59 < 10 |only if walking
-Run up the stairs |goto 39.21,77.94 < 7 |only if walking
 accept No Negotiations##51834 |goto Vol'dun/0 40.29,76.22
 |tip You will accept this quest automatically.
-stickystart "Kill_Zandalari_Exiles"
+stickystart "Kill_Zandalari_Exiles_1"
 step
 click Prisoner Cage##228536+
 |tip They look like thin wooden cages on the ground around this area.
 Free #5# 7th Legion Soldiers |q 51834/1 |goto 40.19,75.95
 step
-label "Kill_Zandalari_Exiles"
+label "Kill_Zandalari_Exiles_1"
 kill 8 Zandalari Exile##135311 |q 51834/2 |goto 40.19,75.95
 |next "Tortollan_Seekers_WQ"
 step
@@ -5382,6 +5395,15 @@ step
 kill Relic Hunter Hazaak##136340
 |tip Inside the building.
 Slay Sethrak Relic Hunter |q 51124/1 |goto 48.88,72.11
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51116
+Follow the path up |goto Vol'dun/0 54.92,36.78 < 20 |only if walking
+Follow the path up |goto Vol'dun/0 53.32,35.48 < 20 |only if walking
+accept Skycarver Krakit##51116 |goto Vol'dun/0 52.23,36.20
+|tip You will accept this quest automatically.
+step
+kill Skycarver Krakit##134745 |q 51116/1 |goto 51.29,36.46
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51123
@@ -5505,6 +5527,16 @@ clicknpc Rakjan the Unbroken##139454
 Mount Rakjan the Unbroken |q 51995/1 |goto 47.16,39.38
 step
 Slay #50# Faithless |q 51995/2 |goto 47.76,32.25
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51114
+Follow the path up |goto Vol'dun/0 54.93,36.55 < 15 |only if walking
+Follow the path up |goto Vol'dun/0 53.34,35.46 < 20 |only if walking
+Cross the bridge |goto Vol'dun/0 51.88,34.41 < 20 |only if walking
+accept Warmother Captive##51114 |goto Vol'dun/0 51.92,32.15
+|tip You will accept this quest automatically.
+step
+kill Warmother Captive##134625 |q 51114/1 |goto 50.71,30.88
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51112
@@ -5641,12 +5673,13 @@ kill Zu'shin the Infused##136702 |q 51444/1 |goto 56.81,23.10
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51179
-accept Azerite Madness##51179 |goto Zuldazar/0 54.28,24.99
+accept Azerite Madness##51179 |goto Zuldazar/0 57.94,24.21
 |tip You will accept this quest automatically.
 step
-Kill Azerite-Infused enemies around this area
-|tip Use the special action button on-screen after killing enemies.
-Absorb Azerite from Defeated Elementals |q 51179/1 |goto 55.88,23.39
+Kill enemies around this area
+|tip Use the "Heart of Azeroth" ability near their corpses.
+|tip It appears as a button on the screen.
+Absorb Azerite from Defeated Elementals |q 51179/1 |goto 57.94,24.21
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52877
@@ -5688,17 +5721,12 @@ accept Azerite Wounds##51175 |goto Zuldazar/0 57.16,23.85
 step
 Heal #5# Azeroth Wounds |q 51175/1 |goto 56.15,22.96
 |tip Use the "Heart of Azeroth" ability.
-|tip Use it while standing in the blue glowing spots with sparks flying out of them on the ground around this area.
+|tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51642
-Follow the path |goto Zuldazar/0 69.79,65.88 < 10 |only if walking
-Continue following the path |goto 68.71,68.42 < 10 |only if walking
-Continue following the path |goto 67.44,69.74 < 10 |only if walking
-Continue following the path |goto 66.16,69.49 < 7 |only if walking
-Continue following the path |goto 64.96,68.55 < 10 |only if walking
-Continue following the path |goto 63.77,69.46 < 10 |only if walking
+Follow the path |goto Zuldazar/0 66.94,69.76 < 30 |only if walking
 accept Beachhead##51642 |goto Zuldazar/0 63.61,68.69
 |tip You will accept this quest automatically.
 step
@@ -5706,11 +5734,13 @@ talk Scrollsage Nola##144359
 Tell her _"I am ready."_
 Speak to Scrollsage Nola |q 51642/1 |goto 63.61,68.68
 step
-kill Vicious Albatross##138186
-kill Armored Claw##138242
-|tip Use the "Shoot" ability on your action bar.
-|tip Armored Claws are in the water.
-Help #15# Juvenile Turtles Reach the Ocean |q 51642/2 |goto 63.61,68.69
+kill Vicious Albatross##138186+
+|tip They look like birds flying in the air around this area.
+|tip Use the ability on your action bar.
+kill Armored Claw##138242+
+|tip They look like small crabs in the water.
+|tip Use the ability on your action bar.
+Help #12# Juvenile Turtles Reach the Ocean |q 51642/2 |goto 63.61,68.69
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50862
@@ -5755,11 +5785,6 @@ kill Golrakahn##124185 |q 50857/1 |goto 74.12,28.49
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50870
-Follow the path down |goto Zuldazar/0 79.65,40.66 < 10 |only if walking
-Continue following the path |goto 79.11,39.83 < 10 |only if walking
-Cross the water |goto 78.95,39.09 < 7 |only if walking
-Follow the path |goto 78.85,38.20 < 10 |only if walking
-Cross the water |goto 79.49,36.13 < 7 |only if walking
 accept G'Naat##50870 |goto Zuldazar/0 79.98,35.96
 |tip You will accept this quest automatically.
 step
@@ -5856,6 +5881,16 @@ kill Ji'arak##132253
 Slay Ji'arak |q 52169/1 |goto 69.61,34.13
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50855
+Cross the bridge |goto Zuldazar/0 53.20,49.14 < 20 |only if walking
+Run up the stairs |goto Dazar'alor/0 45.90,63.09 < 15 |only if walking
+Run up the stairs |goto Dazar'alor/0 47.20,60.32 < 15 |only if walking
+accept Old R'gal##50855 |goto Dazar'alor/0 47.17,60.34
+|tip You will accept this quest automatically.
+step
+kill Old R'gal##122639 |q 50855/1 |goto 49.91,59.59
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51816
 accept Pterrible Ingredients##51816 |goto Zuldazar/0 67.75,34.30
 |tip You will accept this quest automatically.
@@ -5911,13 +5946,17 @@ Slay #50# Horde Forces |q 52250/2 |goto 35.73,74.58
 |next "Tortollan_Seekers_WQ"
 step
 label quest-49413
-accept Scamps With Scrolls##49413 |goto Dazar'alor/0 52.76,89.04
+Follow the path |goto Zuldazar/0 66.44,69.77 < 30 |only if walking
+Continue following the path |goto Zuldazar/0 62.49,68.15 < 30 |only if walking
+Enter the tunnel |goto Zuldazar/0 61.93,62.73 < 15 |only if walking
+Leave the tunnel |goto Dazar'alor/0 58.03,92.79 < 15 |only if walking
+accept Scamps With Scrolls##49413 |goto Dazar'alor/0 54.62,90.71
 |tip You will accept this quest automatically.
 step
-clicknpc Scheming Street Scamp##129394
-|tip They look like large stomping Brutosaurs and raptors around this area.
-|tip You can find them all over the Grand Bazaar.
-Dispel #5# Scheming Street Scamps |q 49413/1 |goto 52.76,89.04
+clicknpc Scheming Street Scamp##129394+
+|tip They look like green long neck dinosaurs and raptors on the ground around this area.
+|tip They will appear on your minimap as yellow dots.
+Dispel #5# Scheming Street Scamps |q 49413/1 |goto 54.62,90.71
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51822
@@ -5948,10 +5987,11 @@ Complete Collector Kojo's Shell Game |q 51630/2 |goto 37.84,78.83
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52249
+Follow the path |goto Zuldazar/0 44.26,69.93 < 30 |only if walking
 accept The Shores of Xibala##52249 |goto Zuldazar/0 46.49,71.14
 |tip You will accept this quest automatically.
 step
-Kill Nightborne and Zandalari enemies around this area
+Kill enemies around this area
 Slay #12# Nightborne or Zandalari |q 52249/1 |goto 46.49,71.14
 |next "Tortollan_Seekers_WQ"
 step
@@ -6030,14 +6070,22 @@ kill Twisted Child of Rezan##130643
 Slay the Twisted Child of Rezan |q 50847/1 |goto 76.90,27.91
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50853
+Follow the path |goto Zuldazar/0 48.28,27.52 < 30 |only if walking
+accept Umbra'rix##50853 |goto Zuldazar/0 48.58,29.02
+|tip You will accept this quest automatically.
+step
+kill Umbra'rix##134717 |q 50853/1 |goto 49.18,29.39
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51374
 accept Unending Gorilla Warfare##51374 |goto Zuldazar/0 49.01,54.17
 |tip You will accept this quest automatically.
 step
-click Gorilla Totem
-|tip They look like totems made of sticks on the ground around this area.
 Kill Da'kani enemies around this area
-Disrupt Da'kani Gorillas |q 51374/1 |goto 49.01,54.17
+click Gorilla Totem+
+|tip They look like clusters of sticks on the ground around this area.
+Disrupt the Da'kani Gorillas |q 51374/1 |goto 49.01,54.17
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51824

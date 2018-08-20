@@ -9,24 +9,44 @@ if not ZygorGuidesViewer then return end
 --------------------------------------------
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_1",[[
-		accept Foothold: Tiragarde Sound##51800 |goto Zuldazar/0 58.44,62.62 |or |next "Tiragarde_Sound_Foothold_1" |only if havequest(51800) or not completedq(51800) and not completedq(51803)
-		accept Foothold: Drustvar##51801 |goto Zuldazar/0 58.44,62.62 |or |next "Drustvar_Foothold_1" |only if havequest(51801) or not completedq(51801) and not completedq(51803)
-		accept Foothold: Stormsong Valley##51802 |goto Zuldazar/0 58.44,62.62 |or |next "Stormsong_Valley_Foothold_1" |only if havequest(51802) or not completedq(51802) and not completedq(51803)
-		|next "Reach_Level_114"
+		accept Foothold: Tiragarde Sound##51800 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51800) and not completedq(51803)
+		accept Foothold: Drustvar##51801 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51801) and not completedq(51803)
+		accept Foothold: Stormsong Valley##51802 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51802) and not completedq(51803)
+	step
+		_Which Zone Did You Choose?_
+		|tip Click the line with the name of the zone you chose.
+		Tiragarde Sound |confirm |or |next "Tiragarde_Sound_Foothold_1"
+		Drustvar |confirm |or |next "Drustvar_Foothold_1"
+		Stormsong Valley |confirm |or |next "Stormsong_Valley_Foothold_1"
+		|only if not completedq(51803)
 ]])
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_2",[[
-		accept Foothold: Tiragarde Sound##51800 |goto Zuldazar/0 58.44,62.62 |or |next "Tiragarde_Sound_Foothold_2" |only if havequest(51800) or not completedq(51800) and not completedq(51979)
-		accept Foothold: Drustvar##51801 |goto Zuldazar/0 58.44,62.62 |or |next "Drustvar_Foothold_2" |only if havequest(51801) or not completedq(51801) and not completedq(51979)
-		accept Foothold: Stormsong Valley##51802 |goto Zuldazar/0 58.44,62.62 |or |next "Stormsong_Valley_Foothold_2" |only if havequest(51802) or not completedq(51802) and not completedq(51979)
+		accept Foothold: Tiragarde Sound##51800 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51800) and not completedq(51979)
+		accept Foothold: Drustvar##51801 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51801) and not completedq(51979)
+		accept Foothold: Stormsong Valley##51802 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51802) and not completedq(51979)
+	step
+		_Which Zone Did You Choose?_
+		|tip Click the line with the name of the zone you chose.
+		Tiragarde Sound |confirm |or |next "Tiragarde_Sound_Foothold_2" |only if not completedq(51984)
+		Drustvar |confirm |or |next "Drustvar_Foothold_2" |only if not completedq(51985)
+		Stormsong Valley |confirm |or |next "Stormsong_Valley_Foothold_2" |only if not completedq(51986)
+		|only if not completedq(51979)
 ]])
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_3",[[
-		accept Foothold: Tiragarde Sound##51800 |goto Zuldazar/0 58.44,62.62 |or |next "Tiragarde_Sound_Foothold_3" |only if havequest(51800) or not completedq(51800)
-		accept Foothold: Drustvar##51801 |goto Zuldazar/0 58.44,62.62 |or |next "Drustvar_Foothold_3" |only if havequest(51801) or not completedq(51801)
-		accept Foothold: Stormsong Valley##51802 |goto Zuldazar/0 58.44,62.62 |or |next "Stormsong_Valley_Foothold_3" |only if havequest(51802) or not completedq(51802)
+		accept Foothold: Tiragarde Sound##51800 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51800)
+		accept Foothold: Drustvar##51801 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51801)
+		accept Foothold: Stormsong Valley##51802 |goto Zuldazar/0 58.44,62.62 |or |only if not completedq(51802)
+	step
+		_Which Zone Did You Choose?_
+		|tip Click the line with the name of the zone you chose.
+		Tiragarde Sound |confirm |or |next "Tiragarde_Sound_Foothold_3" |only if not completedq(51984)
+		Drustvar |confirm |or |next "Drustvar_Foothold_3" |only if not completedq(51985)
+		Stormsong Valley |confirm |or |next "Stormsong_Valley_Foothold_3" |only if not completedq(51986)
+		|only if not completedq(52444)
 ]])
 
 

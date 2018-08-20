@@ -29888,5 +29888,14 @@ ZygorGuidesViewer_L("NPCs", "enUS", function() return {
 [124185]="Golrakahn|",
 [136338]="Sirokar|",
 [132086]="Black-Eyed Bart|",
+[121242]="Glompmaw|",
+[122639]="Old R'gal|",
+[141356]="Shandris Feathermoon|",
+[141361]="Swiftwing|",
+[141567]="Shandris Feathermoon|",
+[141541]="Falstad Wildhammer|",
+[142228]="Shandris Feathermoon|",
+[142232]="Shandris Feathermoon|",
+[142285]="San'layn Neophyte|",
 
 } end)

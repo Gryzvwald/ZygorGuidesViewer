@@ -3189,18 +3189,25 @@ do
 				local prevnode
 				for i=2,#results do
 					local node=results[i]
-					if node.type=="taxi" then --These don't connect like most taxi nodes.
-						if not first_taxi then first_taxi=i end
-					else
+					if node.type=="taxi" and not first_taxi then --These don't connect like most taxi nodes.
+						first_taxi=i
+					elseif node.link.mode~="taxi" and node.link.mode~="ferry" then -- we've reached this node NOT by taxi. It could be another taxi, but we don't care.
 						-- Assuming a path will NEVER end on a taxi.
 						if first_taxi then
 							prevnode.taxiFinal=true
+							local assigned
 							for j=i-2,first_taxi,-1 do  -- walk backwards, assigning destination
 								if results[j].type=="taxi" then -- sanity
 									results[j].taxiDestination=prevnode
+									assigned=true
 								end
 							end
-							Lib:Debug("&lr_taxifinal Detected taxi from %d to %d, destination %s, operator %s.",first_taxi,i-1,prevnode:tostring(),prevnode.taxioperator)
+							if not assigned then
+								Lib:Debug("&lr_taxifinal WTF? No taxi destination assigned? Was at #%d, first_taxi was #%s of results, destination was %s. Bad results stored in LibRover.BADRESULTS",i,first_taxi,tostring(prevnode))
+								Lib.BADRESULTS=RESULTS
+							else
+								Lib:Debug("&lr_taxifinal Detected taxi from %d to %d, destination %s, operator %s.",first_taxi,i-1,prevnode:tostring(),prevnode.taxioperator)
+							end
 						end
 						first_taxi=nil
 					end
@@ -4765,7 +4772,9 @@ do
 						z=LibRover.data.MapIDsByName[z] or z
 						if type(z)=="table" then z=z[1] end
 						for n,node in ipairs(zone) do
-							if node.faction~=enemyfac then
+							if node.faction~=enemyfac  -- obviously
+							and not node.taxioperator  -- only normal taxis apply
+							then
 								local dist = Mdist(node.m,node.x,node.y,m,x,y)
 								if dist then tinsert(taxidists,{node,dist}) end
 							end

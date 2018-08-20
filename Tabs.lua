@@ -58,6 +58,7 @@ function Tabs:Initialize()
 		:SetScript("OnLeave",function() 
 			GameTooltip:Hide()
 		end)
+		:SetPoint("BOTTOMLEFT",ZGV.Frame.Border.Guides,"TOPLEFT",0,-1)
 		:Show()
 	.__END
 

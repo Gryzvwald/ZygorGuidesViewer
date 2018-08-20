@@ -11258,6 +11258,161 @@ Reach #7500# Reputation into Honored with the 7th Legion |condition repval('7th 
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
+talk Halford Wyrmbane##135612
+turnin Operation: Gryphon's Claw##53071 |goto 69.27,27.00 |only if havequest(53071) or completedq(53071)
+accept Intercepted Orders##52308 |goto 69.27,27.00
+step
+Watch the dialogue
+Listen to Halford's Report |q 52308/1 |goto 69.27,27.00
+step
+talk Halford Wyrmbane##135612
+turnin Intercepted Orders##52308 |goto 69.27,27.00
+step
+talk Shandris Feathermoon##141356
+accept Hunting Blood Prince Dreven##52489 |goto 69.30,27.17
+step
+clicknpc Swiftwing##141361
+Mount Swiftwing |q 52489/1 |goto 69.70,27.63
+step
+Watch the dialogue
+Locate the Horde Ships |q 52489/2
+step
+_Next to you:_
+|tip As you fly.
+talk Shandris Feathermoon##141567
+turnin Hunting Blood Prince Dreven##52489
+accept Behind Enemy Boats##52490
+step
+Reach the Banshee's Wail |goto 1156 36.56,52.17 < 10 |q 52490
+|tip Use the ability on your action bar.
+step
+click Rope Ladder
+Climb in the Banshee's Wail Gunport |q 52490/1 |goto 36.64,52.23
+stickystart "Slay_Sailors_On_The_Banshees_Wail"
+step
+click The Banshee's Wail Cannon
+|tip Inside the ship.
+accept Broadside Bedlam##52491 |goto 36.91,52.46
+step
+click Azerite-Infused Cannonballs
+|tip Inside the ship.
+collect Azerite-Infused Cannonballs##162528 |q 52491/1 |goto 36.97,52.01
+step
+click Azerite-Infused Gunpowder
+|tip Inside the ship.
+collect Azerite-Infused Gunpowder##162529 |q 52491/2 |goto 36.82,52.84
+step
+click Blazing Torch
+|tip Inside the ship.
+collect Banshee's Wail Torch##162537 |q 52491/3 |goto 36.64,53.30
+step
+click The Banshee's Wail Cannon
+|tip Inside the ship.
+Fire the Cannon |q 52491/4 |goto 36.76,52.93 |count 1
+step
+click The Banshee's Wail Cannon
+|tip Inside the ship.
+Fire the Cannon |q 52491/4 |goto 36.84,52.69 |count 2
+step
+click The Banshee's Wail Cannon
+|tip Inside the ship.
+Fire the Cannon |q 52491/4 |goto 36.91,52.46 |count 3
+step
+label "Slay_Sailors_On_The_Banshees_Wail"
+Kill enemies around this area
+Slay #10# Sailors on the Banshee's Wail |q 52490/2 |goto 36.71,52.79
+step
+click Battlechest of the Horde
+|tip Upstairs, on the deck of the ship.
+Open the Battlechest of the Horde |q 52490/3 |goto 36.61,53.02
+step
+Watch the dialogue
+Escape with Falstad Wildhammer |invehicle |goto 36.61,53.02 |q 52490
+step
+_As You Fly:_
+talk Falstad Wildhammer##141541
+turnin Behind Enemy Boats##52490
+turnin Broadside Bedlam##52491
+accept The Wildhammer Specialty##52492
+step
+Order Falstad to Start the Attack |q 52492/1
+|tip Use the ability on your action bar.
+stickystart "Burn_The_Sails_Of_The_Crimson_Squall"
+stickystart "Destroy_Horde_Rowboats"
+stickystart "Slay_Horde_Sailors"
+step
+Burn the Deck of The Crimson Squall |q 52492/4 |goto 42.69,54.74
+|tip Use the abilities on your action bar.
+|tip Aim at the deck of the large ship in the water.
+step
+label "Burn_The_Sails_Of_The_Crimson_Squall"
+Burn the Sails of The Crimson Squall |q 52492/5 |goto 42.69,54.74
+|tip Use the abilities on your action bar.
+|tip Aim at the wooden sail masts of the large ship in the water.
+step
+label "Destroy_Horde_Rowboats"
+Destroy #15# Horde Rowboats |q 52492/3 |goto 39.06,54.22
+|tip Use the abilities on your action bar.
+|tip They look like small wooden boats in the water around this area.
+step
+label "Slay_Horde_Sailors"
+Kill enemies around this area
+|tip Use the abilities on your action bar.
+Slay #60# Horde Sailors |q 52492/2 |goto 39.06,54.22
+step
+Watch the dialogue
+Board the Crimson Squall |goto 41.63,56.90 < 10 |q 52492 |notravel
+step
+talk Shandris Feathermoon##142228
+turnin The Wildhammer Specialty##52492 |goto 41.75,57.01
+accept An Unnatural Crew##52493 |goto 41.75,57.01
+accept Foul Crystals for Foul People##52494 |goto 41.75,57.01
+accept Kings' Rest##53131 |goto 41.75,57.01
+stickystart "Kill_Horde_On_The_Crimson_Squall"
+step
+click San'layn Crystal+
+|tip They look like large floating red crystals on the ship around this area.
+Destroy #5# San'layn Crystals |q 52494/1 |goto 41.58,56.18
+step
+label "Kill_Horde_On_The_Crimson_Squall"
+Kill enemies around this area
+|tip On the ship.
+Kill #12# Horde on The Crimson Squall |q 52493/1 |goto 41.58,56.18
+step
+talk Shandris Feathermoon##142232
+|tip Inside the ship.
+|tip On the middle floor, in the captain's room.
+turnin An Unnatural Crew##52493 |goto 41.64,55.43
+turnin Foul Crystals for Foul People##52494 |goto 41.64,55.43
+accept Ending the San'layn Threat##52495 |goto 41.64,55.43
+step
+Watch the dialogue
+|tip Follow Shandris Feathermoon as she runs.
+kill San'layn Neophyte##142285 |q 52495/1 |goto 41.58,55.67
+|tip Inside the ship.
+|tip On the bottom floor.
+step
+Escape the Ship and Signal Falstad |q 52495/2 |goto 42.11,55.79
+|tip Jump out of the window into the water.
+|tip Use the "Signal Falstad" ability.
+|tip It appears as a button on the screen.
+step
+_Next to you:_
+Watch the dialogue
+talk Shandris Feathermoon##141567
+turnin Ending the San'layn Threat##52495
+accept A Clean Escape##52496
+step
+Watch the dialogue
+Return to Boralus |goto Boralus/0 69.93,26.83 < 10 |noway |c |q 52496
+step
+talk Halford Wyrmbane##135612
+turnin A Clean Escape##52496 |goto Boralus/0 69.27,26.99
+step
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
 |confirm
 step
 _Under Construction!_

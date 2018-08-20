@@ -9,23 +9,44 @@ if not ZygorGuidesViewer then return end
 --------------------------------------------
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_1",[[
-		accept Foothold: Zuldazar##51570 |goto 69.38,26.98 |or |next "Zuldazar_Foothold_1" |only if havequest(51570) or not completedq(51570) and not completed(51569)
-		accept Foothold: Nazmir##51571 |goto 69.38,26.98 |or |next "Nazmir_Foothold_1" |only if havequest(51571) or not completedq(51571) and not completed(51569)
-		accept Foothold: Vol'dun##51572 |goto 69.38,26.98 |or |next "Voldun_Foothold_1" |only if havequest(51572) or not completedq(51572) and not completed(51569)
+		accept Foothold: Zuldazar##51570 |goto 69.38,26.98 |or |only if not completedq(51570) and not completedq(51569)
+		accept Foothold: Nazmir##51571 |goto 69.38,26.98 |or |only if not completedq(51571) and not completedq(51569)
+		accept Foothold: Vol'dun##51572 |goto 69.38,26.98 |or |only if not completedq(51572) and not completedq(51569)
+	step
+		_Which Zone Did You Choose?_
+		|tip Click the line with the name of the zone you chose.
+		Zuldazar |confirm |or |next "Zuldazar_Foothold_1"
+		Nazmir |confirm |or |next "Nazmir_Foothold_1"
+		Vol'dun |confirm |or |next "Voldun_Foothold_1"
+		|only if not completedq(51569)
 ]])
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_2",[[
-		accept Foothold: Zuldazar##51570 |goto 69.38,26.98 |or |next "Zuldazar_Foothold_2" |only if havequest(51570) or not completedq(51570) and not completed(51961)
-		accept Foothold: Nazmir##51571 |goto 69.38,26.98 |or |next "Nazmir_Foothold_2" |only if havequest(51571) or not completedq(51571) and not completed(51961)
-		accept Foothold: Vol'dun##51572 |goto 69.38,26.98 |or |next "Voldun_Foothold_2" |only if havequest(51572) or not completedq(51572) and not completed(51961)
+		accept Foothold: Zuldazar##51570 |goto 69.38,26.98 |or |only if not completedq(51570) and not completedq(51961)
+		accept Foothold: Nazmir##51571 |goto 69.38,26.98 |or |only if not completedq(51571) and not completedq(51961)
+		accept Foothold: Vol'dun##51572 |goto 69.38,26.98 |or |only if not completedq(51572) and not completedq(51961)
+	step
+		_Which Zone Did You Choose?_
+		|tip Click the line with the name of the zone you chose.
+		Zuldazar |confirm |or |next "Zuldazar_Foothold_2" |only if not completedq(51968)
+		Nazmir |confirm |or |next "Nazmir_Foothold_2" |only if not completedq(51967)
+		Vol'dun |confirm |or |next "Voldun_Foothold_2" |only if not completedq(51969)
+		|only if not completedq(51961)
 ]])
 
 
 ZygorGuidesViewer:RegisterInclude("Choose_Foothold_3",[[
-		accept Foothold: Zuldazar##51570 |goto 69.38,26.98 |or |next "Zuldazar_Foothold_3" |only if havequest(51570) or not completedq(51570)
-		accept Foothold: Nazmir##51571 |goto 69.38,26.98 |or |next "Nazmir_Foothold_3" |only if havequest(51571) or not completedq(51571)
-		accept Foothold: Vol'dun##51572 |goto 69.38,26.98 |or |next "Voldun_Foothold_3" |only if havequest(51572) or not completedq(51572)
+		accept Foothold: Zuldazar##51570 |goto 69.38,26.98 |or |only if not completedq(51570)
+		accept Foothold: Nazmir##51571 |goto 69.38,26.98 |or |only if not completedq(51571)
+		accept Foothold: Vol'dun##51572 |goto 69.38,26.98 |or |only if not completedq(51572)
+	step
+		_Which Zone Did You Choose?_
+		|tip Click the line with the name of the zone you chose.
+		Zuldazar |confirm |or |next "Zuldazar_Foothold_3" |only if not completedq(51968)
+		Nazmir |confirm |or |next "Nazmir_Foothold_3" |only if not completedq(51967)
+		Vol'dun |confirm |or |next "Voldun_Foothold_3" |only if not completedq(51969)
+		|only if not completedq(52443)
 ]])
 
 

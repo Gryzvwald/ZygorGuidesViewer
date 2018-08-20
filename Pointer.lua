@@ -255,9 +255,9 @@ end
 Pointer.iconScale = 1  -- updated by :RescaleMarkers
 Pointer.iconScaleBase = 0.8
 Pointer.Icons = {
-	greendot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=1,g=1,b=1}, size=30, minisize=25, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, onminimap="always" },
-	graydot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=0.7,g=0.7,b=0.7}, size=30, minisize=25, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, desat=1, onminimap="always" },
-	arrow = { tex={file="mapicons",coords={0.5,1,0.5,1},r=1,g=1,b=1}, size=35, minisize=30, rotates=true, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25 },
+	greendot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=1,g=1,b=1}, size=20, minisize=17, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, onminimap="always" },
+	graydot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=0.7,g=0.7,b=0.7}, size=20, minisize=17, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, desat=1, onminimap="always" },
+	arrow = { tex={file="mapicons",coords={0.5,1,0.5,1},r=1,g=1,b=1}, size=20, minisize=17, rotates=true, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25 },
 	
 	ant =	     { tex={file="mapicons",coords={0,0.5,0,0.5},r=1,g=1,b=1},     alpha=0.8, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
 	ant_taxi =   { tex={file="mapicons",coords={0,0.5,0,0.5},r=0.4,g=1,b=0},   alpha=0.8, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
@@ -266,16 +266,16 @@ Pointer.Icons = {
 	ant_flying = { tex={file="mapicons",coords={0,0.5,0,0.5},r=1,g=0.8,b=0},   alpha=0.8, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
 
 	-- Dynamic values are handled in RefreshDynamicValues()
-	treasure          = { tex={file="poi_icons",coords={0,   1/8, 0,   1/2} }, alpha=1, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1},
-	treasure_on       = { tex={file="poi_icons",coords={0,   1/8, 1/2, 1  } }, alpha=1, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1},
-	rare              = { tex={file="poi_icons",coords={1/8, 2/8, 0,   1/2} }, alpha=1, size=20, minimap_alpha=0.5, minisize=20, rotates=false, edgetex=nil, edgesize=1},
-	rare_on           = { tex={file="poi_icons",coords={1/8, 2/8, 1/2, 1  } }, alpha=1, size=20, minimap_alpha=0.5, minisize=20, rotates=false, edgetex=nil, edgesize=1},
-	battlepet         = { tex={file="poi_icons",coords={2/8, 3/8, 0,   1/2} }, alpha=1, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
-	battlepet_on      = { tex={file="poi_icons",coords={2/8, 3/8, 1/2, 1  } }, alpha=1, size=20, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
-	achievement       = { tex={file="poi_icons",coords={3/8, 4/8, 0,   1/2} }, alpha=1, size=20, minimap_alpha=0.5, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
-	achievement_on    = { tex={file="poi_icons",coords={3/8, 4/8, 1/2, 1  } }, alpha=1, size=20, minimap_alpha=0.5, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
-	questobjective    = { tex={file="poi_icons",coords={4/8, 5/8, 0,   1/2} }, alpha=1, size=20, minimap_alpha=0.5, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
-	questobjective_on = { tex={file="poi_icons",coords={4/8, 5/8, 1/2, 1  } }, alpha=1, size=20, minimap_alpha=0.5, minisize=20, rotates=false, edgetex=nil, edgesize=1 },
+	treasure          = { tex={file="poi_icons",coords={0,   1/8, 0,   1/2} }, alpha=1, size=20, minisize=17, rotates=false, edgetex=nil, edgesize=1},
+	treasure_on       = { tex={file="poi_icons",coords={0,   1/8, 1/2, 1  } }, alpha=1, size=20, minisize=17, rotates=false, edgetex=nil, edgesize=1},
+	rare              = { tex={file="poi_icons",coords={1/8, 2/8, 0,   1/2} }, alpha=1, size=20, minimap_alpha=0.5, minisize=17, rotates=false, edgetex=nil, edgesize=1},
+	rare_on           = { tex={file="poi_icons",coords={1/8, 2/8, 1/2, 1  } }, alpha=1, size=20, minimap_alpha=0.5, minisize=17, rotates=false, edgetex=nil, edgesize=1},
+	battlepet         = { tex={file="poi_icons",coords={2/8, 3/8, 0,   1/2} }, alpha=1, size=20, minisize=17, rotates=false, edgetex=nil, edgesize=1 },
+	battlepet_on      = { tex={file="poi_icons",coords={2/8, 3/8, 1/2, 1  } }, alpha=1, size=20, minisize=17, rotates=false, edgetex=nil, edgesize=1 },
+	achievement       = { tex={file="poi_icons",coords={3/8, 4/8, 0,   1/2} }, alpha=1, size=20, minimap_alpha=0.5, minisize=17, rotates=false, edgetex=nil, edgesize=1 },
+	achievement_on    = { tex={file="poi_icons",coords={3/8, 4/8, 1/2, 1  } }, alpha=1, size=20, minimap_alpha=0.5, minisize=17, rotates=false, edgetex=nil, edgesize=1 },
+	questobjective    = { tex={file="poi_icons",coords={4/8, 5/8, 0,   1/2} }, alpha=1, size=20, minimap_alpha=0.5, minisize=17, rotates=false, edgetex=nil, edgesize=1 },
+	questobjective_on = { tex={file="poi_icons",coords={4/8, 5/8, 1/2, 1  } }, alpha=1, size=20, minimap_alpha=0.5, minisize=17, rotates=false, edgetex=nil, edgesize=1 },
 
 	none = { tex={file=""}, alpha=0.0, size=1, minisize=1, rotates=false, edgetex=nil, edgesize=1 },
 
@@ -317,35 +317,35 @@ local full_coords={0,1,0,1}
 function Pointer:RefreshDynamicValues()
 	Pointer.Icons.treasure.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.treasure.size = ZGV.db.profile.poisize
-	Pointer.Icons.treasure.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.treasure.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.treasure_on.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.treasure_on.size = ZGV.db.profile.poisize
-	Pointer.Icons.treasure_on.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.treasure_on.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.rare.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.rare.size = ZGV.db.profile.poisize
-	Pointer.Icons.rare.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.rare.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.rare_on.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.rare_on.size = ZGV.db.profile.poisize
-	Pointer.Icons.rare_on.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.rare_on.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.battlepet.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.battlepet.size = ZGV.db.profile.poisize
-	Pointer.Icons.battlepet.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.battlepet.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.battlepet_on.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.battlepet_on.size = ZGV.db.profile.poisize
-	Pointer.Icons.battlepet_on.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.battlepet_on.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.achievement.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.achievement.size = ZGV.db.profile.poisize
-	Pointer.Icons.achievement.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.achievement.minisize = ZGV.db.profile.poisize - 3
 
 	Pointer.Icons.achievement_on.alpha = ZGV.db.profile.poialpha
 	Pointer.Icons.achievement_on.size = ZGV.db.profile.poisize
-	Pointer.Icons.achievement_on.minisize = ZGV.db.profile.poisize
+	Pointer.Icons.achievement_on.minisize = ZGV.db.profile.poisize - 3
 
 
 	for k,w in pairs(ZGV.Pointer.waypoints) do w:SetIcon() end
@@ -486,6 +486,9 @@ function Pointer:SetWaypoint_ant (m,x,y,num,icon, ant)  -- ant is here for one-t
 	waypoint.x=x
 	waypoint.y=y
 	waypoint.c = ZGV.GetMapContinent(m)
+
+	waypoint.curve_dist=nil
+	waypoint.curve_leftoverphase=nil
 
 	-- clone some data to make a smarter, more aware ant
 	waypoint.p0,waypoint.p1,waypoint.p2,waypoint.p3 = ant.p0,ant.p1,ant.p2,ant.p3
@@ -1141,7 +1144,7 @@ end
 
 if DEBUG_ROGUE_DATA_IN_WAYPOINTS then
 	-- THESE ARE JUST FOR DEBUGGING. Real "valid waypoint fields" are in copy_fields.
-	local valids={passive=1,hidden=1,minisize=1,size=1,alpha=1,OnUpdate=1,OnEvent=1,truesize=1,truesize_px=1,hideminimap=1,angle=1,radius=1, pathnode=1, icon=1,ant_icon=1,curve_accuracy=1,curve_dist=1,actionicon=1, goal=1,
+	local valids={passive=1,hidden=1,minisize=1,size=1,alpha=1,OnUpdate=1,OnEvent=1,truesize=1,truesize_px=1,hideminimap=1,angle=1,radius=1, pathnode=1, icon=1,ant_icon=1,curve_accuracy=1,curve_dist=1,curve_leftoverphase=1,actionicon=1, goal=1,
 	player=1,  -- important for ant start
 	waypoint_zone=1, waypoint_realzone=1, waypoint_subzone=1, waypoint_minizone=1, waypoint_region=1, waypoint_indoors=1, -- these are set in a goal, to pinpoint the waypoint location
 	poiNum=1, nearRange=1,OnNear=1,OnFar=1,isNear=1,
@@ -4327,12 +4330,9 @@ local function spawn_straight_ants_prev(points,loop,phase)
 	local np=#points
 	local breakall
 	for i=1,np do  while true do
-		local p0 = points[i-1]
 		local p1 = points[i]
 		local p2 = points[i+1]
-		local p3 = points[i+2]
 		if not p2 then  if loop then p2=points[1] else breakall=true break end  end
-		if not p3 and loop then p3=points[2] end
 
 		local base_t=0
 
@@ -4377,7 +4377,7 @@ local function spawn_straight_ants_prev(points,loop,phase)
 				ant.map,ant.x,ant.y=p1.gm,x,y
 				ant.sub=i+t
 				ant.icon = p2.ant_icon or def_ant_icon   -- ant_icon is contained in the DESTINATION waypoint of the pair.
-				ant.p0,ant.p1,ant.p2,ant.p3=p0,p1,p2,p3
+				ant.p1,ant.p2=p1,p2
 				ant.p1m,ant.p2m=p1.m,p2.m
 				ant.ant_dist=t
 				-- bobbly ants!
@@ -4397,7 +4397,6 @@ end
 
 local function spawn_straight_ants(points,loop,phase)
 	if #points<2 then return end
-	--print("curving!!")
 	local abs=abs
 	local ceil=ceil
 
@@ -4406,15 +4405,20 @@ local function spawn_straight_ants(points,loop,phase)
 	local np=#points
 	local breakall
 
+	if points[1].curve_leftoverphase then
+		--print("Ooo, leftover at start! ",points[1].curve_leftoverphase)
+		phase=phase-points[1].curve_leftoverphase
+		if phase<0 then phase=phase+1 end
+		if phase>1 then phase=phase-1 end
+	end
+
 	local leftover=phase*curve_spacing
 
-	for i=1,np do  while true do
-		local p0 = points[i-1]
+	local totaldist=0
+	for i=1,np do  repeat
 		local p1 = points[i]
 		local p2 = points[i+1]
-		local p3 = points[i+2]
 		if not p2 then  if loop then p2=points[1] else breakall=true break end  end
-		if not p3 and loop then p3=points[2] end
 
 		-- NEW CHECK. Points are supposedly on global maps. If points do NOT share a global map, NO ANTS BETWEEN THEM.
 		if not p1.gm or p1.gm~=p2.gm then break end --continue
@@ -4424,23 +4428,45 @@ local function spawn_straight_ants(points,loop,phase)
 			dist = Mdist(p1.gm,p1.gx,p1.gy,p2.gm,p2.gx,p2.gy)
 			if not dist or dist<1 then dist=2000*sqrt((p1.gx-p2.gx)*(p1.gx-p2.gx)+(p1.gy-p2.gy)*(p1.gy-p2.gy)) end  -- use costly global calculation when in need.
 			if dist<1 then dist=100 end
+
+			if p2.curve_leftoverphase then
+				local endphasenow = (points[1].curve_leftoverphase or 0) + ((totaldist+dist)%curve_spacing)/curve_spacing
+				local adjust = p2.curve_leftoverphase-endphasenow
+				if adjust<0 then adjust=adjust+1 end
+				--if adjust>0.5 then adjust=adjust-1 end
+
+				--dist=dist+adjust*curve_spacing
+	
+				-- go back and spread the load
+
+				local adjust_yd = adjust*curve_spacing
+				ZGV:Debug("&_WARN adjusting point %d of %d dist from %.2f by leftover %.2f = %.2f yd",i,#points,dist,adjust,adjust_yd)
+				
+				-- spreading the load: won't work yet; breaks totaldist
+				--[[
+				for j=i,2,-1 do
+					ZGV:Debug("&_WARN spread-adjusting point %d by %.2f yd (1/%d)",j,adjust_yd/(i-1),i-1)
+					points[j].curve_dist = points[j].curve_dist and points[j].curve_dist+(adjust_yd/(i-1))
+				end
+				]]
+				dist=dist+adjust_yd
+				--if dist<0 then dist=dist+curve_spacing end
+			end
 			p1.curve_dist=dist
 		else
 			dist=p1.curve_dist
 		end
 
+		totaldist=totaldist+dist
+
 		--print("acc",curve_accuracy)
-		local d=leftover
+		local d=leftover or 0
 		while d<dist do
 			-- straight line
 			local t = d/dist
 
 			local x = p1.gx + t*(p2.gx-p1.gx)
 			local y = p1.gy + t*(p2.gy-p1.gy)
-
-			-- swirly ants!
-			--x = x + math.sin((5*t-phase)*6.28)*0.001
-			--y = y + math.cos((5*t-phase)*6.28)*0.00066
 
 			antpoints_num = antpoints_num+1
 			local ant = antpoints[antpoints_num]
@@ -4452,21 +4478,21 @@ local function spawn_straight_ants(points,loop,phase)
 			ant.map,ant.x,ant.y=p1.gm,x,y
 			ant.sub=i+t
 			ant.icon = p2.ant_icon or def_ant_icon   -- ant_icon is contained in the DESTINATION waypoint of the pair.
-			ant.p0,ant.p1,ant.p2,ant.p3=p0,p1,p2,p3
+			ant.p1,ant.p2=p1,p2
 			ant.p1m,ant.p2m=p1.m,p2.m
 			ant.ant_dist=t
-			-- bobbly ants!
-			--ant.size=60+20*math.sin((5*t-phase)*6.28)
-
-			--base_t=t
 
 			--tinsert(antpoints,{map=0,floor=0,x=x,y=y,sub=i+t,icon=ZGV.Pointer.Icons.ant})
 			d=d+curve_spacing
 		end
 		leftover=d-dist
 
-		break
-	end  if breakall then break end  end
+	until true  if breakall then break end  end
+
+	points[#points].curve_leftoverphase=(totaldist/curve_spacing)%1
+
+	--print("path with",#points,"points ended with LOphase=",points[#points].curve_leftoverphase)
+
 	return antpoints,antpoints_num
 end
 Pointer.spawn_straight_ants = spawn_straight_ants
@@ -4646,7 +4672,7 @@ function Pointer:AnimateAnts()
 	local phase = (GetTime()*ant_speed)%1
 
 	-- Set ant spacing properly for overworld maps
-	local map = WorldMapFrame:GetMapID()
+	local map = WorldMapFrame:IsShown() and WorldMapFrame:GetMapID() or ZGV.CurrentMapID
 	local mastermap = ZGV.GetMapContinent(map)
 
 	--local overworld = (map==13 or map==14 or map==0 or map==689 or map==-1 or map==485 or map==466 or map==862 or map==962)
@@ -4658,6 +4684,13 @@ function Pointer:AnimateAnts()
 
 	local total_ants = 0
 
+	for name,pointset in pairs(self.pointsets) do
+		for pi,p in ipairs(pointset.points) do
+			p.curve_leftoverphase=nil
+		end
+	end
+
+	--print ("---animateants")
 	for name,pointset in pairs(self.pointsets) do
 		if pointset.ants and curve_spacing>0
 		--and only_type=="ant"
@@ -4711,6 +4744,18 @@ function Pointer:AnimateAnts()
 
 			if num then total_ants = total_ants + num end
 		end
+
+		-- check other pointsets for waypoint overlaps with this one; copy curve data.
+		for name2,pointset2 in pairs(self.pointsets) do  if name2~=name then
+			for pi1,point1 in ipairs(pointset.points) do
+				for pi2,point2 in ipairs(pointset2.points) do
+					if point1.x==point2.x and point1.y==point2.y and not point2.curve_leftoverphase then
+						--print("set",name,"point",pi1,"-> set",name2,"point",pi2)
+						point2.curve_leftoverphase=point1.curve_leftoverphase
+					end
+				end
+			end
+		end end
 	end
 
 	self:ClearWaypoints_ant(total_ants)
@@ -4948,6 +4993,8 @@ local function PathFoundHandler(state,path,ext,reason)
 		--FAILED_PATH = nil
 		Pointer:ShowSet(future_waypoints,"route") -- clear none, just refresh
 
+		Pointer:ResetAnts()
+		
 		Pointer:ShowArrow(Pointer.pointsets.route.points[2])  -- point 1 is player
 
 		Pointer.Provider:RefreshAllData()
@@ -4982,6 +5029,11 @@ Pointer.PathFoundHandler = PathFoundHandler
 
 function Pointer:ResetFollowing()
 	-- deprecated
+end
+
+
+function Pointer:ResetAnts()
+	for sn,set in pairs(self.pointsets) do for pi,p in ipairs(set.points) do p.curve_dist=nil end end -- reset ant sync
 end
 
 -- Finds an optimal travel route. Or, just a beeline, if options say so.
@@ -5086,6 +5138,8 @@ function Pointer:CycleWaypoint(delta,nocycle,step)
 		or (CW and CW.pathnode and CW.pathnode.waypoint and CW.pathnode.waypoint.goal and CW.pathnode.waypoint.goal.parentStep)
 		or ZGV:GetFocusedStep()
 
+
+
 	ZGV:Debug("Cycling waypoint "..(delta>0 and "forward" or "back").." ("..tostring(delta)..") from "..tostring(CS.current_waypoint_goal_num).." in step "..CS.num.." with "..#CS.goals.." goals")
 
 	if not CS then ZGV:Debug("CycleWaypoint: no step, sorry") return end
@@ -5119,6 +5173,8 @@ function Pointer:CycleWaypoint(delta,nocycle,step)
 	ZGV:Debug("CycleWaypoint: cycling to goal [%d]: %s, way at [%.1f %.1f]",goal.num,goal:GetText(),goal.x*100,goal.y*100) 
 
 	--ZGV:ShowWaypoints()
+
+	self:ResetAnts()
 
 	-- if we have existing waypoints (we should!!)...
 	if self.waypoints then

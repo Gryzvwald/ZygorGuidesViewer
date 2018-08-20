@@ -5,7 +5,7 @@ ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Pandaren (1-12)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\WanderingIsle",
-condition_suggested=function() return raceclass('Pandaren') and level<=5 end,
+condition_suggested=function() return raceclass('Pandaren') and level<=12 end,
 startlevel=1,
 endlevel=12,
 },[[
