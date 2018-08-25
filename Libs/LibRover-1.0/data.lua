@@ -4,7 +4,7 @@ addon.LibRoverData = addon.LibRoverData or {}
 local data=addon.LibRoverData
 
 data.version={
-	nodes_version = 187,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
+	nodes_version = 194,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
 }
 
 -- These are kept strictly unique. Make up bogus names if you need to.
@@ -35,7 +35,7 @@ data.MapIDsByName = {
 
 --Kul Tiras
 ["Boralus"] = {[0]=1161},
-["Drustvar"] = {[0]=896},
+["Drustvar"] = {[0]=896, [1]=1045},
 ["Stormsong Valley"] = {[0]=942, [1]=1179, [2]=1180, [3]=1183, [4]=1182},
 ["Kul Tiras"] = {[0]=1014},
 ["Tiragarde Sound"] = {[0]=895, [1]=1171, [2]=1172},
@@ -44,7 +44,7 @@ data.MapIDsByName = {
 ["Nazmir"] = {[0]=863},
 ["Vol'dun"] = {[0]=864,[1]=1009},
 ["Zandalar"] = {[0]=1011},
-["Zuldazar"] = {[0]=862, [1]=1173, [2]=1174, [3]=1176, [4]=1177},
+["Zuldazar"] = {[0]=862, [1]=1173, [2]=1174, [3]=1176, [4]=1177,[5]=1181},
 ["Dazar'alor"] = {[0]=1165, [1]=1163, [2]=1164, [3]=1166, [4]=1167},
 
 --BFA Dungeon
@@ -799,36 +799,6 @@ data.walls = {
 	},
 	["Eastern Plaguelands"] = {
 		{ 90.3,0.1, 84.7,38.2, 80.8,54.1, 84.3,71.8 }, -- wall off Scarlet Enclave
-	},
-	["Dazar'alor"] = {
-		{ 39.87,82.56, 40.69,98.45, }, -- canals in Dazar
-		{ 39.47,80.34, 39.80,62.64, },
-		{ 49.06,66.57, 43.60,69.16, 38.67,75.25, }, 
-		{ 50.74,66.62, 61.30,62.37, },
-		
-		{ 39.03,34.09, 42.29,29.21, }, -- N canal
-		{ 43.66,27.05, 52.52,23.92, },
-		{ 53.62,23.21, 56.12,11.49, },
-
-		{ 46.53,61.06, 53.53,61.10 },
-	},
-	["Zuldazar"] = {
-		{ 56.12,28.53, 57.21,60.00 }, -- no running across Dazar
-		{ 67,65, 64,55, 73,55, 73,43 },  -- SE mountains
-	},
-	["Tiragarde Sound"] = {
-		{ 44.48,32.59, 48.97,40.33, 58.22,39.02, 65.39,30.27 },
-		{ 75.07,47.51, 72.00,44.00, 53.78,41.16, 59.54,57.85 },
-		{ 63,38, 76,30 }, -- no running across Boralus
-
-		{ 44.86,26.59, 43.33,24.74, 39.28,24.93 }, -- no dragonball
-	},
-	["Boralus"] = {
-		{ 40.79,51.29, 56.63,54.36 },
-		{ 58.35,53.56, 79.60,41.68 },
-	},
-	["Drustvar"] = {
-		{ 61.50,35.50, 76.00,32.00 }, 
 	},
 }
 

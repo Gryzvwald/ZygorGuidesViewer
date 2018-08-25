@@ -1092,7 +1092,7 @@ function ZGV:Options_DefineOptionTables()
 		AddOption('pathfinding_speed',{
 			type = 'select', values={ [1]=L["opt_pathfinding_speed_slow"], [15]=L["opt_pathfinding_speed_medium"], [50]=L["opt_pathfinding_speed_fast"] },
 			style = "slider",
-			--hidden=true,
+			hidden=true,
 			_default = 15
 		})
 

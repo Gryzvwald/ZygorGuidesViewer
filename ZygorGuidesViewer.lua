@@ -1184,9 +1184,6 @@ function ZGV:SetGuide(name,step,hack,silent) --hack used for testing
 	self.db.char.guideTurnInsOnly = false
 
 	self:UpdateFrame(true)
-	
-	--ZGV.Pointer:SetWaypointToFirst()
-	ZGV.Pointer:SetArrowToFirstCompletableGoal()
 
 	--If needed, refresh POIs to show/hide guide specific points
 	if ZGV.Poi.Ready and (was_poi or (self.CurrentGuide and self.CurrentGuide.poi)) then
@@ -1306,7 +1303,6 @@ function ZGV:FocusStep(num,forcefocus)
 	local cg=self.CurrentGuide
 	self.CurrentStep:PrepareCompletion(true)
 	self.CurrentStep:OnEnter()
-	self.CurrentStep.current_waypoint_goal_num = nil
 
 	if (cs~=self.CurrentStep) or (cg~=self.CurrentGuide) then self:Debug("FocusStep: guide or step changed! bailing.") return end
 
@@ -1396,11 +1392,9 @@ function ZGV:FocusStep(num,forcefocus)
 		ZGV.PointerMap:ShowPreview()
 	end
 
-	--self:AnimateGears()
 	if ZGV.Gold.Appraiser and ZGV.Gold.Appraiser.Loaded and ZGV.Gold.Appraiser.AddGuideItemsToBuy then
 		ZGV.Gold.Appraiser:AddGuideItemsToBuy()
 	end
-
 
 	ZGV:SetActionButtons()
 	ZGV.Tabs:UpdateCurrentTab()
@@ -1472,6 +1466,7 @@ function ZGV:FocusStepUnquiet()
 
 	--self:UpdateCartographerExport()  -- moved to Waypoints where it belongs.
 	
+	self:GetFocusedStep():ResetCurrentWaypoint()
 	self:ShowWaypoints()
 
 	--[[
@@ -2885,9 +2880,11 @@ function ZGV:DoUpdateFrame(full,onupdate)
 								--else
 									r,g,b,a = 0,0,0,0
 								--end
+								--[[
 								if self.db.profile.highlight_goto and goal.x and ZGV.Pointer.DestinationWaypoint and ZGV.Pointer.DestinationWaypoint.goal==goal then
 									r,g,b,a = 1,1,1,0.1
 								end
+								--]]
 
 							elseif status=="incomplete" then
 
@@ -2982,19 +2979,25 @@ function ZGV:DoUpdateFrame(full,onupdate)
 					else
 						-- no goal? ah, subtitle.
 						icon:Hide()
+						back:SetBackdropColor(0,0,0,1)
+						back:SetBackdropBorderColor(0,0,0,1)
 						back:Hide()
 					end
 
 					-- Highlight for multi-waypoint cycling
 					--if ZGV.CurrentStep.current_waypoint_goal and ZGV.CurrentStep.goals[ZGV.CurrentStep.current_waypoint_goal].action=="goto" then
-					if ZGV:IsStepFocused(stepdata) and l==ZGV.CurrentStep.current_waypoint_goal
+					if ZGV.db.profile.highlight_goto and ZGV:IsStepFocused(stepdata) and goal and goal.num==stepdata.current_waypoint_goal_num
 					-- and ZGV.CurrentStep.numberMappedGoals and ZGV.CurrentStep.numberMappedGoals > 1
 					then
-						currentBackdropColor = {line.back:GetBackdropColor()}
-						currentBackdropColor[1] = min(1,currentBackdropColor[1] + 0.3)
-						currentBackdropColor[2] = min(1,currentBackdropColor[2] + 0.3)
-						currentBackdropColor[3] = min(1,currentBackdropColor[3] + 0.3)
-						currentBackdropColor[4] = ZGV.db.profile.opacitymain
+						local currentBackdropColor = {line.back:GetBackdropColor()}
+						if currentBackdropColor[1]+currentBackdropColor[2]+currentBackdropColor[3]+currentBackdropColor[4]==0 then currentBackdropColor={1,1,1,0.1}
+						else
+							currentBackdropColor[1] = min(1,currentBackdropColor[1] + 0.1)
+							currentBackdropColor[2] = min(1,currentBackdropColor[2] + 0.1)
+							currentBackdropColor[3] = min(1,currentBackdropColor[3] + 0.1)
+							--currentBackdropColor[4] = min(1,currentBackdropColor[4] + 0.2)
+						end
+						--currentBackdropColor[4] = ZGV.db.profile.opacitymain
 						line.back:SetBackdropColor(unpack(currentBackdropColor))
 					end
 			
@@ -3467,7 +3470,7 @@ function ZGV:ResizeFrame()
 		--if height < MIN_HEIGHT + tabh then height=MIN_HEIGHT + tabh end
 		if height < MIN_HEIGHT then height=MIN_HEIGHT end
 		if not InCombatLockdown() then
-			self.Frame:SetHeight(height+ZGV.CurrentSkinStyle:SkinData("ProgressBarSpaceHeight") + ZGV.CurrentSkinStyle:SkinData("TabsHeight") - 2)
+			self.Frame:SetHeight(height+ZGV.CurrentSkinStyle:SkinData("ProgressBarSpaceHeight") + ZGV.CurrentSkinStyle:SkinData("TabsHeight") + (ZGV.db.profile.resizeup and 10 or -2))
 		end
 	end
 

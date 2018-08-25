@@ -265,6 +265,7 @@ description="\nThis guide will assist you in completing the following:\n"..
 condition_suggested=function() return level >= 110 end,
 startlevel=110.0,
 endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\BfAIntro",
 },[[
 step
 Starting Guide |next "Fresh_Start_BFA" |only if not completedq(47189)
@@ -701,6 +702,7 @@ description="\nThis guide will assist you in completing the following Tiragarde 
 condition_suggested=function() return level >= 110 end,
 startlevel=110.0,
 endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\TiragardeSound",
 },[[
 step
 talk Flynn Fairwind##121239
@@ -3706,6 +3708,7 @@ description="\nThis guide will assist you in completing the following Drustvar s
 condition_suggested=function() return level >= 110 end,
 startlevel=110.0,
 endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\Drustvar",
 },[[
 step
 talk Taelia##121235
@@ -6554,6 +6557,7 @@ description="\nThis guide will assist you in completing the following Stormsong 
 condition_suggested=function() return level >= 110 end,
 startlevel=110.0,
 endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\StormsongValley",
 },[[
 step
 talk Taelia##121235
@@ -6635,11 +6639,11 @@ Follow Brother Alen into the Archives |q 51488/2 |goto Tiragarde Sound/0 73.72,3
 step
 Watch the dialogue
 |tip Downstairs inside the building.
-kill Lieutenant Wade##138318 |q 51488/3 |goto 67.64,81.69
+kill Lieutenant Wade##138318 |q 51488/3 |goto 73.65,39.49
 step
 Watch the dialogue
 |tip Downstairs inside the building.
-Learn the Secret |q 51488/4 |goto 67.64,81.69
+Learn the Secret |q 51488/4 |goto 73.71,39.54
 step
 _Next to you:_
 talk Taelia
@@ -9561,6 +9565,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (11
 author="support@zygorguides.com",
 description="This guide will walk you through the Alliance War Campaign for Battle for Azeroth.",
 condition_suggested=function() return level>=110 end,
+image=ZGV.DIR.."\\Guides\\Images\\WarCampaign",
 },[[
 step
 Unlock the War Campaign |condition completedq(47189)
@@ -11418,10 +11423,349 @@ step
 _Under Construction!_
 This guide will be updated to continue the War Campaign questline very soon.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Veiled Grotto (Zuldazar)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Veiled Grotto outpost in Zuldazar.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51918)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Honored Reputation with the 7th Legion |condition rep('7th Legion')==Honored
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
+talk Vindicator Jaelaana##135446
+buy Scouting Report: Veiled Grotto##163048 |goto Boralus/0 69.33,24.95 |q 52801 |future
+step
+use the Scouting Report: Veiled Grotto##163048
+|tip It will seem like nothing has happened after you use it.
+Click Here After Using The Scouting Report |confirm |q 52801 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Veiled Grotto" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Veiled Grotto##52801 |goto 70.56,27.19
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Halford Wyrmbane##135612
+turnin Mission Report: Veiled Grotto##52801 |goto 69.27,27.00
+accept Veiled Grotto##52802 |goto 69.27,27.00
+step
+Enter the tunnel |goto Zuldazar/0 45.50,61.55 < 20 |only if walking
+Leave the tunnel |goto Zuldazar/0 47.40,59.70 < 20 |only if walking
+Follow the road up |goto Zuldazar/0 52.63,54.67 < 30 |only if walking
+Follow the road up |goto Zuldazar/0 52.58,49.30 < 30 |only if walking
+Follow the road up |goto Zuldazar/0 52.36,39.96 < 30 |only if walking
+Follow the path up |goto Zuldazar/0 50.79,36.80 < 30 |only if walking
+Run up the stairs |goto Zuldazar/0 49.39,38.70 < 15 |only if walking
+Follow the road up |goto Zuldazar/0 48.19,39.42 < 20 |only if walking
+Follow the road up |goto Zuldazar/0 45.86,38.56 < 30 |only if walking
+click Alliance Banner
+Claim the Outpost |q 52802/1 |goto 44.48,36.69
+step
+talk Isaac "Lefteye" Bentham##139181
+fpath Veiled Grotto |goto 44.42,36.83
+step
+talk Kolton Garrick##141884
+|tip Inside the cave.
+turnin Veiled Grotto##52802 |goto 44.25,36.49
+step
+_Congratulations!_
+You unlocked the Veiled Grotto outpost in Zuldazar.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Grimwatt's Crash (Nazmir)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Grimwatt's Crash outpost in Nazmir.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51918)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Honored Reputation with the 7th Legion |condition rep('7th Legion')==Honored
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
+talk Vindicator Jaelaana##135446
+buy Scouting Report: Grimwatt's Crash##163043 |goto Boralus/0 69.33,24.95 |q 53006 |future
+step
+use the Scouting Report: Grimwatt's Crash##163043
+|tip It will seem like nothing has happened after you use it.
+Click Here After Using The Scouting Report |confirm |q 53006 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Grimwatt's Crash" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Grimwatt's Crash##53006 |goto 70.56,27.19
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Halford Wyrmbane##135612
+turnin Mission Report: Grimwatt's Crash##53006 |goto 69.27,27.00
+accept Grimwatt's Crash##53007 |goto 69.27,27.00
+step
+Follow the path |goto Nazmir/0 59.71,40.90 < 30 |only if walking
+Continue following the path |goto Nazmir/0 37.25,48.15 < 30 |only if walking
+click Alliance Banner
+Claim the Outpost |q 53007/1 |goto Nazmir/0 34.16,63.44
+step
+talk Noella Davenport##142478
+fpath Grimwatt's Crash |goto 34.31,63.21
+step
+talk Fellyia Wildsong##142360
+turnin Grimwatt's Crash##53007 |goto 33.88,63.22
+step
+_Congratulations!_
+You unlocked the Grimwatt's Crash outpost in Nazmir.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Mistvine Ledge (Zuldazar)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Mistvine Ledge outpost in Zuldazar.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51918)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
+talk Vindicator Jaelaana##135446
+buy Scouting Report: Mistvine Ledge##163044 |goto Boralus/0 69.33,24.95 |q 52962 |future
+step
+use the Scouting Report: Mistvine Ledge##163044
+|tip It will seem like nothing has happened after you use it.
+Click Here After Using The Scouting Report |confirm |q 52962 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Mistvine Ledge" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Mistvine Ledge##52962 |goto 70.56,27.19
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Halford Wyrmbane##135612
+turnin Mission Report: Mistvine Ledge##52962 |goto 69.28,27.00
+accept Mistvine Ledge##52963 |goto 69.28,27.00
+step
+Follow the road |goto Zuldazar/0 70.29,30.35 < 30 |only if walking
+Follow the road |goto Zuldazar/0 65.33,38.36 < 30 |only if walking
+Follow the road |goto Zuldazar/0 65.04,43.24 < 30 |only if walking
+Follow the path up |goto Zuldazar/0 63.42,46.68 < 20 |only if walking
+click Alliance Banner
+Claim the Outpost |q 52963/1 |goto Zuldazar/0 64.46,47.48
+step
+talk Sornoth Slagmane##139180
+fpath Mistvine Ledge |goto 64.33,47.33
+step
+talk Neva##142288
+turnin Mistvine Ledge##52963 |goto 64.46,47.29
+step
+_Congratulations!_
+You unlocked the Mistvine Ledge outpost in Zuldazar.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Mugamba Overlook (Zuldazar)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Mugamba Overlook outpost in Zuldazar.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51918)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
+talk Vindicator Jaelaana##135446
+buy Scouting Report: Mugamba Overlook##163047 |goto Boralus/0 69.33,24.95 |q 52851 |future
+step
+use the Scouting Report: Mugamba Overlook##163047
+|tip It will seem like nothing has happened after you use it.
+Click Here After Using The Scouting Report |confirm |q 52851 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Mugamba Overlook" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Mugamba Overlook##52851 |goto 70.56,27.19
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Halford Wyrmbane##135612
+turnin Mission Report: Mugamba Overlook##52851 |goto 69.27,27.00
+accept Mugamba Overlook##52852 |goto 69.27,27.00
+step
+Follow the path up |goto Zuldazar/0 45.46,28.74 < 20 |only if walking
+click Alliance Banner
+Claim the Outpost |q 52852/1 |goto Zuldazar/0 44.72,27.48
+step
+talk Drager Smokewing##139179
+fpath Mugamba Overlook |goto 44.84,27.07
+step
+talk Darchelle Hayes##141949
+turnin Mugamba Overlook##52852 |goto 44.86,27.40
+step
+_Congratulations!_
+You unlocked the Mugamba Overlook outpost in Zuldazar.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Verdant Hollow (Zuldazar)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Verdant Hollow outpost in Zuldazar.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51918)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
+talk Vindicator Jaelaana##135446
+buy Scouting Report: Verdant Hollow##163046 |goto Boralus/0 69.33,24.95 |q 52886 |future
+step
+use the Scouting Report: Verdant Hollow##163046
+|tip It will seem like nothing has happened after you use it.
+Click Here After Using The Scouting Report |confirm |q 52886 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Verdant Hollow" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Verdant Hollow##52886 |goto 70.56,27.19
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Halford Wyrmbane##135612
+turnin Mission Report: Verdant Hollow##52886 |goto 69.28,27.00
+accept Verdant Hollow##52888 |goto 69.28,27.00
+step
+|confirm
+step
+_Congratulations!_
+You unlocked the Verdant Hollow outpost in Zuldazar.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Vulture's Nest (Vol'dun)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Vulture's Nest outpost in Vol'dun.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51918)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+|tip Use the "World Quests" guides to complete "7th Legion" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
+step
+talk Vindicator Jaelaana##135446
+buy Scouting Report: Vulture's Nest##163041 |goto Boralus/0 69.33,24.95 |q 53043 |future
+step
+use the Scouting Report: Vulture's Nest##163041
+|tip It will seem like nothing has happened after you use it.
+Click Here After Using The Scouting Report |confirm |q 53043 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Vulture's Nest" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Vulture's Nest##53043 |goto 70.56,27.19
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Halford Wyrmbane##135612
+turnin Mission Report: Vulture's Nest##53043 |goto 69.27,27.00
+accept Vulture's Nest##53044 |goto 69.27,27.00
+step
+|confirm
+step
+_Congratulations!_
+You unlocked the Vulture's Nest outpost in Vol'dun.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment",{
+author="support@zygorguides.com",
+description="This guide will walk you through empowering your Heart of Azeroth necklace to increase its item level.",
+condition_suggested=function() return level>=120 end,
+image=ZGV.DIR.."\\Guides\\Images\\HeartofAzeroth",
+},[[
+step
+Reach Level 120 |ding 120
+|tip Use the "Intro & Quest Zone Choice" and Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(52450)
+|tip Use the War Campaign guide to accomplish this.
+step
+Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Friendly
+|tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
+|tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
+step
+talk Magni Bronzebeard##130216
+accept The Heart's Power##50973 |goto Silithus/0 42.22,44.27
+step
+talk Magni Bronzebeard##130216
+Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
+Watch the dialogue
+Empower the Heart of Azeroth |q 50973/1 |goto 42.22,44.27
+step
+talk Magni Bronzebeard##130216
+turnin The Heart's Power##50973 |goto 42.22,44.27
+step
+Reach Honored Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Honored
+|tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
+|tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
+step
+talk Magni Bronzebeard##130216
+accept Unlocking the Heart's Potential##53405 |goto 42.22,44.27
+step
+talk Magni Bronzebeard##130216
+Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
+Watch the dialogue
+Empower the Heart of Azeroth |q 53405/1 |goto 42.22,44.27
+step
+talk Magni Bronzebeard##130216
+turnin Unlocking the Heart's Potential##53405 |goto 42.22,44.27
+step
+Reach Revered Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Revered
+|tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
+|tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
+step
+talk Magni Bronzebeard##130216
+accept The Chamber of Heart##53406 |goto 42.22,44.27
+step
+|confirm
+|tip This guide is still under construction and will be updated further soon.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Void Elf Race Unlock",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the new Void Elf allied race.",
 condition_suggested=function() return level>=110 end,
+image=ZGV.DIR.."\\Guides\\Images\\VoidElfUnlock",
 },[[
 step
 Load the "World Quests Unlock Quest Line" Dailies Guide |confirm |next "Zygor's Dailies Guides\\Legion\\World Quests Unlock Quest Line"
@@ -11606,6 +11950,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (11
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the new Lightforged Draenei allied race.",
 condition_suggested=function() return level>=110 end,
+image=ZGV.DIR.."\\Guides\\Images\\LightforgedDraeneiUnlock",
 },[[
 step
 Load the "World Quests Unlock Quest Line" Dailies Guide |confirm |next "Zygor's Dailies Guides\\Legion\\World Quests Unlock Quest Line"
@@ -11810,6 +12155,7 @@ author="support@zygorguides.com",
 description="To unlock the new Dark Iron Dwarf allied race, you will need to earn exalted reputation with the 7th Legion and complete the Alliance War Campaign.",
 condition_suggested=function() return level >= 120 and not achieved(12515) end,
 condition_end=function() return achieved(12515) end,
+image=ZGV.DIR.."\\Guides\\Images\\DarkIronDwarfUnlock",
 },[[
 step
 Load the "BFA World Quest Unlock" Dailies Guide |confirm |next "Zygor's Dailies Guides\\Battle for Azeroth\\BFA World Quest Unlock"
@@ -11833,56 +12179,4 @@ Gain Exalted Reputation with the 7th Legion |achieve 12954
 step
 _Congratulations!_
 You Unlocked the "Dark Iron Dwarf" Allied Race.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment",{
-author="support@zygorguides.com",
-description="This guide will walk you through empowering your Heart of Azeroth necklace to increase its item level.",
-condition_suggested=function() return level>=120 end,
-},[[
-step
-Reach Level 120 |ding 120
-|tip Use the "Intro & Quest Zone Choice" and Leveling guides to accomplish this.
-step
-Unlock World Quests |condition completedq(52450)
-|tip Use the War Campaign guide to accomplish this.
-step
-Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Friendly
-|tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
-|tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
-step
-talk Magni Bronzebeard##130216
-accept The Heart's Power##50973 |goto Silithus/0 42.22,44.27
-step
-talk Magni Bronzebeard##130216
-Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
-Watch the dialogue
-Empower the Heart of Azeroth |q 50973/1 |goto 42.22,44.27
-step
-talk Magni Bronzebeard##130216
-turnin The Heart's Power##50973 |goto 42.22,44.27
-step
-Reach Honored Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Honored
-|tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
-|tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
-step
-talk Magni Bronzebeard##130216
-accept Unlocking the Heart's Potential##53405 |goto 42.22,44.27
-step
-talk Magni Bronzebeard##130216
-Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
-Watch the dialogue
-Empower the Heart of Azeroth |q 53405/1 |goto 42.22,44.27
-step
-talk Magni Bronzebeard##130216
-turnin Unlocking the Heart's Potential##53405 |goto 42.22,44.27
-step
-Reach Revered Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Revered
-|tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
-|tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
-step
-talk Magni Bronzebeard##130216
-accept The Chamber of Heart##53406 |goto 42.22,44.27
-step
-|confirm
-|tip This guide is still under construction and will be updated further soon.
 ]])

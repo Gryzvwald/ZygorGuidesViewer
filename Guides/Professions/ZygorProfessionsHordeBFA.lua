@@ -1802,7 +1802,7 @@ Use _<Mass Mill Akunda's Bite>_
 Reach Level 75 Inscription |skill Zandalari Inscription,75
 step
 talk Chronicler Grazzul##130901
-Train Contract: Order of Embers |learn Contract: Order of Embers##256278 |goto 42.33,39.72
+Train Contract: Zandalari Empire |learn Contract: Zandalari Empire##256284 |goto 42.33,39.72
 step
 talk Motla##141914
 buy Virtuoso Inking Set##39505 |n
@@ -1827,7 +1827,7 @@ _<Create 100 Crimson Ink>_
 collect 100 Crimson Ink##158188
 step
 Open Your Inscription Crafting Panel:
-_<Create 10 Contract: Order of Embers>_
+_<Create 10 Contract: Zandalari Empire>_
 Reach Level 85 Inscription |skill Zandalari Inscription,85
 step
 talk Chronicler Grazzul##130901

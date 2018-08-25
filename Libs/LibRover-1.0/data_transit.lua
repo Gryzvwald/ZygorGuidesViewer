@@ -1184,6 +1184,13 @@ data.basenodes.transit = {
 			"The Wandering Isle L/0 51.45,48.65 <spell:126892> <cond:PlayerCompletedQuest(40236)> <zone:1044>",
 
 
+		---------------------------------------
+		-- BATTLE FOR AZEROTH MAGE TELEPORTS --
+		---------------------------------------
+		"Boralus/0 69.80,15.75 <spell:281403>",		-- Alliance
+		"Dazar'alor/1 68.28,64.58 <spell:281404>",	-- Horde
+
+
 
 
 

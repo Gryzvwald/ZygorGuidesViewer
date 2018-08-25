@@ -396,6 +396,258 @@ step
 _Congratulations!_
 You Collected the "Nightborne Manasaber" Mount.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Dune Scavenger",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={237286},
+model={75324},
+description="This mount is acquired by a random world drop.",
+},[[
+step
+Kill enemies around this area
+collect Captured Dune Scavenger##163576 |n
+|tip This will drop randomly from the Snake enemies in the zone.
+You can find more around [63.4,31.6]
+You can find more around [55.6,41.2]
+use the Captured Dun Scavenger##163576
+Learn the "Dune Scavenger" Mount |learnmount Dune Scavenger##237286 |goto Vol'dun/0 49.4,75.8
+step
+_Congratulations!_
+You Collected the "Palehide Direhorn" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Leaping Veinseeker",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={243795},
+model={76706},
+description="This mount is acquired by a random world drop.",
+},[[
+step
+Kill Loa-Gutter enemies around this area
+collect Reins of a Tamed Bloodfeaster##163575 |n
+|tip This is a rare drop.
+|tip It drops from any Blood Trolls found in Nazmir.
+use the Reins of a Tamed Bloodfeaster##163575
+Learn the "Leaping Veinseeker" Mount |learnmount Terrified Pack Mule##243795 |goto Nazmir/0 60.67,20.67
+step
+_Congratulations!_
+You Collected the "Terrified Pack Mule" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Sharkbait",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, dungeon, drop"},
+mounts={254813},
+model={80449},
+condition_end=function() return hasmount(254813) end,
+description="This mount is acquired by obtaining a random drop from Harlan Sweete in the Freehold dungeon.",
+},[[
+step
+Enter the Freehold Dungeon |goto Freehold/0 0.00,0.00 < 1000
+step
+kill Harlan Sweete##129440
+collect 1 Sharkbait's Favorite Crackers##159842 |n
+|tip This is a rare drop.
+use Sharkbait's Favorite Crackers##159842
+Learn the Sharkbait Mount |learnmount Underrot Crawg##254813
+step
+_Congratulations!_
+You Earned the "Sharkbait" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Terrified Pack Mule",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={260174},
+model={81694},
+description="This mount is acquired by a random world drop.",
+},[[
+step
+Kill enemies around this area
+|tip Hexthralled Guardsman have a higher chance at the drop.
+collect Chewed-On Reins of the Terrified Pack Mule##163574 |n
+|tip This is a rare drop.
+use the Chewed-On Reins of the Terrified Pack Mule##163574
+Learn the "Terrified Pack Mule" Mount |learnmount Terrified Pack Mule##260174 |goto Drustvar/0 31,20
+You can find more around [34.03,17.24]
+step
+_Congratulations!_
+You Collected the "Terrified Pack Mule" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Tomb Stalker",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, dungeon, drop"},
+mounts={266058},
+model={84274},
+condition_end=function() return hasmount(266058) end,
+description="This mount is acquired by obtaining a random drop from Dazar, The First King in the King's Rest dungeon.",
+},[[
+step
+Enter the King's Rest Dungeon |goto King's Rest/0 0.00,0.00 < 1000
+step
+kill King Dazar##136160
+collect 1 Mummified Raptor Skull##159921 |n
+|tip This is a rare drop.
+use the Mummified Raptor Skull##159921
+Learn the Tomb Stalker Mount |learnmount Mummified Raptor Skull##266058
+step
+_Congratulations!_
+You Earned the "Tomb Stalker" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Underrot Crawg",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, dungeon, drop"},
+mounts={273541},
+model={78860},
+condition_end=function() return hasmount(273541) end,
+description="This mount is acquired by obtaining a random drop from the Unbound Abomination in The Underrot dungeon.",
+},[[
+step
+Enter The Underrot Dungeon |goto The Underrot/0 0.00,0.00 < 1000
+step
+kill Unbound Abomination##133007
+collect 1 Underrot Crawg Harness##160829 |n
+|tip This is a rare drop.
+use the Underrot Crawg Harness##160829
+Learn the Underrot Crawg Mount |learnmount Underrot Crawg##273541
+step
+_Congratulations!_
+You Earned the "Underrot Crawg" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Aquatic Mounts\\Island Expedition Mounts\\Surf Jelly",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, island, expeditions, drop"},
+mounts={278979},
+model={87747},
+condition_end=function() return hasmount(278979) end,
+description="This mount is acquired by completing an Island Expeditions.",
+},[[
+step
+Jump down here |goto Dazar'alor/0 50.75,88.47 < 10 |only if walking
+Run down the stairs |goto 49.63,90.91 < 7 |only if walking
+Follow the road |goto 48.82,93.55 < 10 |only if walking
+Continue following the road |goto 44.76,94.22 < 7 |only if walking
+click Expedition Map
+Queue for an Island Expedition |goto 44.55,95.27
+|tip You need to complete the Island Expedition for a chance at the mount.
+collect Surf Jelly##163585 |n
+|tip This can come from any Island Expedition.
+|tip The drop is completely random and shares a loot table with 4 other mounts.
+use the Surf Jelly##163585
+Learn the Surf Jelly Mount |learnmount Surf Jelly##278979
+step
+_Congratulations!_
+You Earned the "Surf Jelly" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Craghorn Chasm-Leaper",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
+mounts={279467},
+model={87776},
+condition_end=function() return hasmount(279467) end,
+description="This mount is acquired by completing an Island Expeditions.",
+},[[
+step
+Jump down here |goto Dazar'alor/0 50.75,88.47 < 10 |only if walking
+Run down the stairs |goto 49.63,90.91 < 7 |only if walking
+Follow the road |goto 48.82,93.55 < 10 |only if walking
+Continue following the road |goto 44.76,94.22 < 7 |only if walking
+click Expedition Map
+Queue for an Island Expedition |goto 44.55,95.27
+|tip You need to complete the Island Expedition for a chance at the mount.
+collect Craghorn Chasm-Leaper##163583 |n
+|tip This can come from any Island Expedition.
+|tip The drop is completely random and shares a loot table with 4 other mounts.
+use the Craghorn Chasm-Leaper##163583
+Learn the Craghorn Chasm-Leaper Mount |learnmount Craghorn Chasm-Leaper##279467
+step
+_Congratulations!_
+You Earned the "Craghorn Chasm-Leaper" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Qinsho's Eternal Hound",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
+mounts={279469},
+model={45836},
+condition_end=function() return hasmount(279469) end,
+description="This mount is acquired by completing an Island Expeditions.",
+},[[
+step
+Jump down here |goto Dazar'alor/0 50.75,88.47 < 10 |only if walking
+Run down the stairs |goto 49.63,90.91 < 7 |only if walking
+Follow the road |goto 48.82,93.55 < 10 |only if walking
+Continue following the road |goto 44.76,94.22 < 7 |only if walking
+click Expedition Map
+Queue for an Island Expedition |goto 44.55,95.27
+|tip You need to complete the Island Expedition for a chance at the mount.
+collect Qinsho's Eternal Hound##163582 |n
+|tip This can come from any Island Expedition.
+|tip The drop is completely random and shares a loot table with 4 other mounts.
+use Qinsho's Eternal Hound##163582
+Learn the Qinsho's Eternal Hound Mount |learnmount Qinsho's Eternal Hound##279469
+step
+_Congratulations!_
+You Earned the "Qinsho's Eternal Hound" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Squawks",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
+mounts={254811},
+model={79916},
+condition_end=function() return hasmount(254811) end,
+description="This mount is acquired by completing an Island Expeditions.",
+},[[
+step
+Jump down here |goto Dazar'alor/0 50.75,88.47 < 10 |only if walking
+Run down the stairs |goto 49.63,90.91 < 7 |only if walking
+Follow the road |goto 48.82,93.55 < 10 |only if walking
+Continue following the road |goto 44.76,94.22 < 7 |only if walking
+click Expedition Map
+Queue for an Island Expedition |goto 44.55,95.27
+|tip You need to complete the Island Expedition for a chance at the mount.
+collect Squawks##163586 |n
+|tip This can come from any Island Expedition.
+|tip The drop is completely random and shares a loot table with 4 other mounts.
+use Squawks##163586
+Learn the Squawks Mount |learnmount Squawks##254811
+step
+_Congratulations!_
+You Earned the "Squawks" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Twilight Avenger",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, of, azeroth, island, expeditions, drop"},
+mounts={279466},
+model={87775},
+condition_end=function() return hasmount(279466) end,
+description="This mount is acquired by completing an Island Expeditions.",
+},[[
+step
+Jump down here |goto Dazar'alor/0 50.75,88.47 < 10 |only if walking
+Run down the stairs |goto 49.63,90.91 < 7 |only if walking
+Follow the road |goto 48.82,93.55 < 10 |only if walking
+Continue following the road |goto 44.76,94.22 < 7 |only if walking
+click Expedition Map
+Queue for an Island Expedition |goto 44.55,95.27
+|tip You need to complete the Island Expedition for a chance at the mount.
+collect Twilight Avenger##163584 |n
+|tip This can come from any Island Expedition.
+|tip The drop is completely random and shares a loot table with 4 other mounts.
+use the Twilight Avenger##163584
+Learn the Twilight Avenger Mount |learnmount Twilight Avenger##279466
+step
+_Congratulations!_
+You Earned the "Twilight Avenger" Mount.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Miscellaneous Mounts\\Undercity Plaguebat",{
 author="support@zygorguides.com",
 startlevel=110.0,
@@ -659,4 +911,100 @@ learnmount Undercity Plaguebat##272472
 step
 _Congratulations!_
 You Collected the "Undercity Plaguebat" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Aquatic Mounts\\Profession Mounts\\Great Sea Ray",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={278803},
+model={73253},
+description="This mount is acquired by a random world drop.",
+},[[
+step
+Fish in any water on Kul Tiras or Zandalar
+collect Great Sea Ray##163131 |n
+|tip This comes from fishing in any water in BFA zones.
+use the Great Sea Ray##163131
+Learn the "Great Sea Ray" Mount |learnmount Great Sea Ray##278803 |goto Nazmir/0 60.67,20.67
+step
+_Congratulations!_
+You Collected the "TGreat Sea Ray" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Voldunai\\Alabaster Hyena",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={237287},
+model={75323},
+description="This mount is acquired by becoming Exalted with the Voldunai then buying the mount for 10,000 gold.",
+},[[
+step
+Load the "Voldunai" Reputation Guide |confirm |next "Zygor's Reputations Guides\\Battle for Azeroth\\Voldunai"
+|tip Click the line above to load the guide.
+Reach Exalted Reputation with the Voldunai |condition rep('Voldunai')==Exalted
+step
+talk Hoarder Jena##135804
+buy Reins of the Alabaster Hyena##161773 |n
+use the Reins of the Alabaster Hyena##161773
+Learn the "Alabaster Hyena" Mount |learnmount Alabaster Hyena##237287 |goto Vol'dun/0 56.69,49.74
+step
+_Congratulations!_
+You Collected the "Alabaster Hyena" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Voldunai\\Expedition Bloodswarmer",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={275841},
+model={76708},
+description="This mount is acquired by becoming Exalted with the Talanji's Expedition then buying the mount for 10,000 gold.",
+},[[
+step
+Load the "Talanji's Expedition" Reputation Guide |confirm |next "Zygor's Reputations Guides\\Battle for Azeroth\\Talanji's Expedition"
+|tip Click the line above to load the guide.
+Reach Exalted Reputation with the Talanji's Expedition |condition rep('Talanji\'s Expedition')==Exalted
+step
+talk Provisioner Lija##135459
+buy Reins of the Expedition Bloodswarmer##161774 |n
+use the Reins of the Expedition Bloodswarmer##161774
+Learn the "Expedition Bloodswarmer" Mount |learnmount Expedition Bloodswarmer##275841 |goto Nazmir/0 39.07,79.51
+step
+_Congratulations!_
+You Collected the "Expedition Bloodswarmer" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Vendor Mounts\\Mighty Caravan Brutosaur",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={264058},
+model={83632},
+description="This mount is acquired by purchasing the mount for 5,000,000 gold.",
+},[[
+step
+talk Talutu##125879
+buy Reins of the Mighty Caravan Brutosaur##163042 |n
+|tip You will need 5,000,000 gold.
+use the Reins of the Mighty Caravan Brutosaur##163042
+Learn the "Mighty Caravan Brutosaur" Mount |learnmount Mighty Caravan Brutosaur##264058 |goto Dazar'alor/0 48.58,87.09
+step
+_Congratulations!_
+You Collected the "Mighty Caravan Brutosaur" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Vendor Mounts\\Palehide Direhorn",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={279474},
+model={87779},
+description="This mount is acquired by purchasing the mount for 500,000 gold.",
+},[[
+step
+talk Talutu##125879
+buy Reins of the Palehide Direhorn##163589 |n
+|tip You will need 500,000 gold.
+use the Reins of the Palehide Direhorn##163589
+Learn the "Palehide Direhorn" Mount |learnmount Palehide Direhorn##279474 |goto Dazar'alor/0 48.58,87.09
+step
+_Congratulations!_
+You Collected the "Palehide Direhorn" Mount.
 ]])

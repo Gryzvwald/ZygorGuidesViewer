@@ -504,8 +504,21 @@ ZGV.Quest_Cache_Ally = {
 ["ACHIEVEMENTS\\Quests\\Legion\\What a Ripoff!"] = {
 	{ids="39787,39789,39793,42483,39792,39786"},
 },
+["LEVELING\\Rares"] = {
+	{ids="35820",goal_onlyif=function() return itemcount(113461) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="36502",goal_onlyif=function() return itemcount(116159) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35816",goal_onlyif=function() return itemcount(113457) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35808",goal_onlyif=function() return itemcount(113445) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35813",goal_onlyif=function() return itemcount(113453) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35812",goal_onlyif=function() return itemcount(113449) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35809",goal_onlyif=function() return itemcount(113446) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35817",goal_onlyif=function() return itemcount(113458) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+},
 ["DAILIES\\Mists of Pandaria Dailies\\The Anglers Dailies"] = {
 	includes = {"Anglers_Dailies"},
+},
+["LEVELING\\POI Legion Rares"] = {
+	{ids="49007",step_onlyif=function() return havequest(49007) end},
 },
 ["ACHIEVEMENTS\\Dungeons & Raids\\Pandaria Scenario\\Arena of Annihilation"] = {
 	{ids="31207"},
@@ -642,6 +655,16 @@ ZGV.Quest_Cache_Ally = {
 ["ACHIEVEMENTS\\World Events\\Brawler's Guild\\Collect Your Deck"] = {
 	includes = {"trainer_Engineering","Tillers_Quests","Darkmoon_Faire_Dailies"},
 },
+["LEVELING\\Rares"] = {
+	{ids="35820",goal_onlyif=function() return itemcount(113461) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="36502",goal_onlyif=function() return itemcount(116159) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35816",goal_onlyif=function() return itemcount(113457) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35808",goal_onlyif=function() return itemcount(113445) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35813",goal_onlyif=function() return itemcount(113453) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35812",goal_onlyif=function() return itemcount(113449) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35809",goal_onlyif=function() return itemcount(113446) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35817",goal_onlyif=function() return itemcount(113458) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+},
 ["DAILIES\\Legion\\World Quests Unlock Quest Line"] = {
 	{ids="44720,44721,43341,44771"},
 },
@@ -710,16 +733,6 @@ ZGV.Quest_Cache_Ally = {
 ["DAILIES\\Legion\\The Originals"] = {
 	{ids="47252,47253"},
 },
-["LEVELING\\Rares"] = {
-	{ids="35820",goal_onlyif=function() return itemcount(113461) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="36502",goal_onlyif=function() return itemcount(116159) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35816",goal_onlyif=function() return itemcount(113457) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35808",goal_onlyif=function() return itemcount(113445) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35813",goal_onlyif=function() return itemcount(113453) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35812",goal_onlyif=function() return itemcount(113449) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35809",goal_onlyif=function() return itemcount(113446) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35817",goal_onlyif=function() return itemcount(113458) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-},
 ["DUNGEONS\\Pandaria Scenarios\\A Brewing Storm"] = {
 	{ids="30567"},
 },
@@ -734,6 +747,55 @@ ZGV.Quest_Cache_Ally = {
 },
 ["DUNGEONS\\Pandaria Scenarios\\Unga Ingoo"] = {
 	{ids="31058"},
+},
+["GOLD\\Farming\\Peacebloom/Silverleaf/Earthroot (Alliance)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Rain Poppy (Alliance)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Alabaster Pigment (Alliance)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Abyssal Gulper Eel Flesh/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Blackwater Whiptail Flesh/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Blind Lake Sturgeon Flesh/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Crescent Saberfish Flesh"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Fat Sleeper Flesh/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Fire Ammonite Tentacle/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Jawless Skulker Flesh/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Sea Scorpion Segment/Crescent Saberfish Flesh (Garrison)"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Light Leather/Medium Leather/Light Hide/Medium Hide"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Clam Meat, Small Lustrous Pearl"] = {
+	includes = {"auctioneer"},
+},
+["GOLD\\Farming\\Raw Elekk Meat"] = {
+	includes = {"auctioneer"},
+},
+["timeless_isle_prequests"] = {
+	{ids="33332,33340,33228,33161,33333,33160,33335,33341,33231,33336"},
+	{ids="33229",goal_onlyif=function() return havequest(33229) end},
 },
 ["the_cake_is_not_a_lie"] = {
 	{ids="11379,11381,11380,11377"},
@@ -860,45 +922,6 @@ ZGV.Quest_Cache_Ally = {
 	{ids="11669",goal_onlyif=function() return havequest(11669) end},
 	{ids="32435,32436,13103,13088,9361,11377,8193,12634,13107,11379,13100,11380,24803,13101,12644,11381,12645,13102,9349"},
 },
-["GOLD\\Farming\\Peacebloom/Silverleaf/Earthroot (Alliance)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Rain Poppy (Alliance)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Alabaster Pigment (Alliance)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Abyssal Gulper Eel Flesh/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Blackwater Whiptail Flesh/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Blind Lake Sturgeon Flesh/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Crescent Saberfish Flesh"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Fat Sleeper Flesh/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Fire Ammonite Tentacle/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Jawless Skulker Flesh/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Sea Scorpion Segment/Crescent Saberfish Flesh (Garrison)"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Light Leather/Medium Leather/Light Hide/Medium Hide"] = {
-	includes = {"auctioneer"},
-},
 ["Alliance_Battlepet_Quests"] = {
 	{ids="31973,31974,31972",step_onlyif=function() return completedq(31970) end},
 	{ids="31955,31991,31957,31953,31954,31956",step_onlyif=function() return completedq(31951) end},
@@ -933,12 +956,6 @@ ZGV.Quest_Cache_Ally = {
 	{ids="31931,31932,31933,31934",step_onlyif=function() return completedq(31928) end},
 	{ids="31985",step_onlyif=function() return not completedq(31985) and not completedq(31986) end},
 	{ids="31970,31724,31725,31927,31726,31928,31728,31930,31915,31591,31917,31592,31919,31966,31889,31316,32603,31951,31729,31902,31920,32008"},
-},
-["GOLD\\Farming\\Clam Meat, Small Lustrous Pearl"] = {
-	includes = {"auctioneer"},
-},
-["GOLD\\Farming\\Raw Elekk Meat"] = {
-	includes = {"auctioneer"},
 },
 ["PETSMOUNTS\\Mounts\\Ground Mounts\\Miscellaneous\\Bone-White Primal Raptor"] = {
 	{ids="32617"},
@@ -988,9 +1005,27 @@ ZGV.Quest_Cache_Ally = {
 ["PETSMOUNTS\\Mounts\\Flying Mounts\\Reputation Mounts\\Thundering August Cloud Serpent"] = {
 	includes = {"August_Celestials"},
 },
-["timeless_isle_prequests"] = {
-	{ids="33332,33340,33228,33161,33333,33160,33335,33341,33231,33336"},
-	{ids="33229",goal_onlyif=function() return havequest(33229) end},
+["TITLES\\Legion Titles\\General\\The Gullible"] = {
+	{ids="43331"},
+},
+["TITLES\\Legion Titles\\General\\Postmaster"] = {
+	{ids="41411",goal_onlyif=function() return havequest(41411) end},
+	{ids="41368",goal_onlyif=function() return havequest(41368) end},
+	{ids="41397,46278,41394,50247,41367,41395"},
+},
+["TITLES\\Mists of Pandaria Titles\\Professions\\Seeker of Knowledge"] = {
+	{ids="31800,31801,31786,31802,31787,31803,31788,31804,31789,31805,31790,31791,31792,31793,31794,31795,31796,31797,31798,31799"},
+},
+["TITLES\\Legion Titles\\Archaeology\\Headmaster"] = {
+	{ids="41183,41185,41184"},
+},
+["TITLES\\Mists of Pandaria Titles\\Raid\\the Tranquil Master"] = {
+	{ids="30133",goal_onlyif=function() return Horde end},
+	{ids="30178",goal_onlyif=function() return Alliance end},
+	{ids="30884,30887,30888,30889,30890,30891,30892,30893,30894,30895,30960,30268,30899,30900,30271,30272,30273,30968,31032,30970,30971,30972,30973,30975,30976,30977,30978,30979,30980,30981,31063,31064,31065,30901,30269,30270,30898,30694,30695"},
+},
+["TITLES\\Legion Titles\\PVP\\Talon's Vengeance"] = {
+	{ids="45002,45004,45006,45008,45010,45012,45016,45018,45020,44959,44961,44967,44969,44971,44973,44975,44977,44979,44981,44983,44985,44987,44989,44993,44995,44997,44999,45001,45003,45005,45007,45009,44948,44950,45015,45017,45019,44958,44960,44962,44953,44968,44954,44956,44957,44976,44978,44980,44982,44984,44986,44988,44990,45011,44994,44996,44998,45000,45013"},
 },
 ["REPUTATIONS\\Warlords of Draenor\\Arakkoa Outcasts"] = {
 	includes = {"AOutcasts_Rep"},
@@ -1088,33 +1123,6 @@ ZGV.Quest_Cache_Ally = {
 },
 ["REPUTATIONS\\Mists of Pandaria Reputations\\The Tillers"] = {
 	includes = {"Tillers_Dailies"},
-},
-["DAILIES\\Battle for Azeroth\\Darkshore World Quests"] = {
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\BFA World Quest Unlock"] = {
-	{ids="51918"},
-},
-["DAILIES\\Battle for Azeroth\\Drustvar World Quests"] = {
-	{ids="50987,52357,52381"},
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Nazmir World Quests"] = {
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Stormsong Valley World Quests"] = {
-	{ids="50989,52344,52380"},
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Tiragarde Sound World Quests"] = {
-	{ids="52377,52378,52379,51017,51021,51023,51024,51025,51026,51027,51028,51029,51030,51031,51032,51033,51034,51035,50984,52375,50983"},
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Vol'dun World Quests"] = {
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Zuldazar World Quests"] = {
-	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["REPUTATIONS\\Classic Reputations\\Argent Dawn"] = {
 	includes = {"Argent_Dawn_Rep"},
@@ -1293,6 +1301,18 @@ ZGV.Quest_Cache_Ally = {
 },
 ["REPUTATIONS\\Cataclysm Reputations\\Wildhammer Clan"] = {
 	{ids="28861,28862,28863,28864,28860"},
+},
+["PROFESSIONS\\Herbalism\\Quest Guides\\Kul Tiran Herbalism Quest Line"] = {
+	{ids="48753,48754,48755,48756,48757,48758,51365,48762,51398,51399,48769,51312,51313,51376,51408,48763,51404,51361,51360,51016"},
+},
+["PROFESSIONS\\Mining\\Quest Guides\\Kul Tiran Mining Quest Line"] = {
+	{ids="48764,52050,52044,48752,48768,48761,51889,48770,51568,52049,48767"},
+},
+["PROFESSIONS\\Skinning\\Quest Guides\\Kul Tiran Skinning Quest Guide"] = {
+	{ids="52226,52228,52223,52225,52227,52224"},
+},
+["DAILIES\\Battle for Azeroth\\BFA World Quest Unlock"] = {
+	{ids="51918"},
 },
 ["LEVELING\\Draenor (90-100)\\Garrisons\\Garrison Leveling Guide"] = {
 	{ids="34582,34583,34646,34616,34586,33905,33813,33070,33072,33075,33076,34692,33081,36615,33765,36592,33814,33080,35174,34019,35166,33059,35176,34584,34585,34587"},
@@ -1906,60 +1926,52 @@ ZGV.Quest_Cache_Ally = {
 ["PETSMOUNTS\\Hunter Pets\\Beast Mastery Exotic Pets\\Shale Spiders\\Green Shale Spider (Rare Spawn)"] = {
 	includes = {"A_Therazane_PreQuest"},
 },
-["TITLES\\Legion Titles\\General\\The Gullible"] = {
-	{ids="43331"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Architect"] = {
+	includes = {"Garrison_ArchitectTable"},
 },
-["TITLES\\Legion Titles\\General\\Postmaster"] = {
-	{ids="41411",goal_onlyif=function() return havequest(41411) end},
-	{ids="41368",goal_onlyif=function() return havequest(41368) end},
-	{ids="41397,46278,41394,50247,41367,41395"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\The Butcher"] = {
+	{ids="36962"},
+	includes = {"Garrison_Medium_Building"},
 },
-["TITLES\\Mists of Pandaria Titles\\Professions\\Seeker of Knowledge"] = {
-	{ids="31800,31801,31786,31802,31787,31803,31788,31804,31789,31805,31790,31791,31792,31793,31794,31795,31796,31797,31798,31799"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\The Commandojack"] = {
+	includes = {"Garrison_Medium_Building"},
 },
-["TITLES\\Legion Titles\\Archaeology\\Headmaster"] = {
-	{ids="41183,41185,41184"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\The Death Stalker"] = {
+	{ids="36960"},
+	includes = {"Garrison_Medium_Building"},
 },
-["TITLES\\Mists of Pandaria Titles\\Raid\\the Tranquil Master"] = {
-	{ids="30133",goal_onlyif=function() return Horde end},
-	{ids="30178",goal_onlyif=function() return Alliance end},
-	{ids="30884,30887,30888,30889,30890,30891,30892,30893,30894,30895,30960,30268,30899,30900,30271,30272,30273,30968,31032,30970,30971,30972,30973,30975,30976,30977,30978,30979,30980,30981,31063,31064,31065,30901,30269,30270,30898,30694,30695"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Huojin's Fall"] = {
+	{ids="36968"},
+	includes = {"Garrison_Medium_Building"},
 },
-["TITLES\\Legion Titles\\PVP\\Talon's Vengeance"] = {
-	{ids="45002,45004,45006,45008,45010,45012,45016,45018,45020,44959,44961,44967,44969,44971,44973,44975,44977,44979,44981,44983,44985,44987,44989,44993,44995,44997,44999,45001,45003,45005,45007,45009,44948,44950,45015,45017,45019,44958,44960,44962,44953,44968,44954,44956,44957,44976,44978,44980,44982,44984,44986,44988,44990,45011,44994,44996,44998,45000,45013"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Killer of Kezan"] = {
+	{ids="36970"},
+	includes = {"Garrison_Medium_Building"},
 },
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Slithershock Elver"] = {
-	{ids="38299"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lord/Lady of War"] = {
+	{ids="37082,37083"},
+	includes = {"Garrison_Medium_Building"},
 },
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Cinder Pup"] = {
-	includes = {"Garrison_CommandTable"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lumberjack"] = {
+	includes = {"Garrison_Medium_Building"},
 },
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Meadowstomper Calf"] = {
-	{ids="34819,34869,34900"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Orcslayer"] = {
+	{ids="36964"},
+	includes = {"Garrison_Medium_Building"},
 },
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Young Talbuk"] = {
-	{ids="38299"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Slayer of Sin'dorei"] = {
+	{ids="36958"},
+	includes = {"Garrison_Medium_Building"},
 },
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Everbloom Peachick"] = {
-	{ids="37150"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Troll Hunter"] = {
+	{ids="36966"},
+	includes = {"Garrison_Medium_Building"},
 },
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Ikky"] = {
-	{ids="34838"},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Warlord of Draenor"] = {
+	{ids="37082,37083"},
 },
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Sentinel's Companion"] = {
-	{ids="37164"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Syd the Squid"] = {
-	{ids="36471"},
-},
-["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Iron Starlette"] = {
-	{ids="36941"},
-},
-["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Sky-Bo"] = {
-	{ids="34774"},
-},
-["PETSMOUNTS\\Battle Pets\\Undead Pets\\Bone Serpent"] = {
-	{ids="38299"},
+["TITLES\\Warlords of Draenor Titles\\Reputations\\Conservationist"] = {
+	includes = {"SteamPS_Rep"},
 },
 ["GOLD\\Alliance Daily Runs\\The Anglers Dailies Run"] = {
 	includes = {"Anglers_Dailies"},
@@ -2012,55 +2024,52 @@ ZGV.Quest_Cache_Ally = {
 ["GOLD\\Farming\\Cocoa Beans (Alliance)"] = {
 	includes = {"SW_Cooking_Dailies","auctioneer"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Architect"] = {
-	includes = {"Garrison_ArchitectTable"},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Fishy"] = {
+	{ids="29903,29904,29905"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\The Butcher"] = {
-	{ids="36962"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Tiny Goldfish"] = {
+	{ids="30701,30585,30754,30698,30586,30763,30613,30753,30658,30700,30584,30588,30598,30678"},
+	{ids="31369",step_onlyif=function() return not completedq(31369) end},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\The Commandojack"] = {
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Air Spirit"] = {
+	{ids="32440"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\The Death Stalker"] = {
-	{ids="36960"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Earth Spirit"] = {
+	{ids="32441"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Huojin's Fall"] = {
-	{ids="36968"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Fire Spirit"] = {
+	{ids="32434"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Killer of Kezan"] = {
-	{ids="36970"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Water Spirit"] = {
+	{ids="32439"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lord/Lady of War"] = {
-	{ids="37082,37083"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Chi-ji Kite"] = {
+	includes = {"follow_path_herbs"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lumberjack"] = {
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Yu'lon Kite"] = {
+	includes = {"follow_path_herbs"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Orcslayer"] = {
-	{ids="36964"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Mountain Panda"] = {
+	includes = {"A_Beasts_of_Fable_D","Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Slayer of Sin'dorei"] = {
-	{ids="36958"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Red Panda"] = {
+	includes = {"Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Troll Hunter"] = {
-	{ids="36966"},
-	includes = {"Garrison_Medium_Building"},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Snowy Panda"] = {
+	includes = {"A_Beasts_of_Fable_D","Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Warlord of Draenor"] = {
-	{ids="37082,37083"},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Sunfur Panda"] = {
+	includes = {"A_Beasts_of_Fable_D","Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
 },
-["TITLES\\Warlords of Draenor Titles\\Reputations\\Conservationist"] = {
-	includes = {"SteamPS_Rep"},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Jade Owl"] = {
+	includes = {"Golden_Lotus_PreQuests"},
 },
 ["ACHIEVEMENTS\\Quests\\Battle for Azeroth\\The Pride of Kul Tiras"] = {
-	{ids="49223,52762,52246,52311,52194,52252,52253"},
+	{ids="52252,52253,52194,52445,52508,52509,52510,52511,52512,52513,52762,52453,52485,52486,52487,52488,52481,52246,52483,52484,52311,52482,51445,52449"},
 },
 ["August_Celestials"] = {
 	{ids="30879",goal_onlyif=function() return havequest(30879) end},
@@ -5264,6 +5273,87 @@ ZGV.Quest_Cache_Ally = {
 	{ids="37644",goal_onlyif=function() return havequest(37644) end},
 	{ids="37206,37201,37203,37205,37207,38299,37208"},
 },
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Icehoof"] = {
+	{ids="36990",goal_onlyif=function() return havequest(36990) end},
+	{ids="36992",goal_onlyif=function() return havequest(36992) end},
+	{ids="36985",goal_onlyif=function() return havequest(36985) end},
+	{ids="36991",goal_onlyif=function() return havequest(36991) end},
+	{ids="36993",goal_onlyif=function() return havequest(36993) end},
+	{ids="36987",goal_onlyif=function() return havequest(36987) end},
+	{ids="36984",goal_onlyif=function() return havequest(36984) end},
+	{ids="36989",goal_onlyif=function() return havequest(36989) end},
+	{ids="36983",goal_onlyif=function() return havequest(36983) end},
+	{ids="36994",goal_onlyif=function() return havequest(36994) end},
+	{ids="36986",goal_onlyif=function() return havequest(36986) end},
+	{ids="36988",goal_onlyif=function() return havequest(36988) end},
+	{ids="36916"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Meadowstomper"] = {
+	{ids="37018",goal_onlyif=function() return havequest(37018) end},
+	{ids="37020",goal_onlyif=function() return havequest(37020) end},
+	{ids="37021",goal_onlyif=function() return havequest(37021) end},
+	{ids="37017",goal_onlyif=function() return havequest(37017) end},
+	{ids="37016",goal_onlyif=function() return havequest(37016) end},
+	{ids="37015",goal_onlyif=function() return havequest(37015) end},
+	{ids="37019",goal_onlyif=function() return havequest(37019) end},
+	{ids="36915"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Riverwallow"] = {
+	{ids="37006",goal_onlyif=function() return havequest(37006) end},
+	{ids="37011",goal_onlyif=function() return havequest(37011) end},
+	{ids="37012",goal_onlyif=function() return havequest(37012) end},
+	{ids="37009",goal_onlyif=function() return havequest(37009) end},
+	{ids="37007",goal_onlyif=function() return havequest(37007) end},
+	{ids="37013",goal_onlyif=function() return havequest(37013) end},
+	{ids="37010",goal_onlyif=function() return havequest(37010) end},
+	{ids="37008",goal_onlyif=function() return havequest(37008) end},
+	{ids="37005",goal_onlyif=function() return havequest(37005) end},
+	{ids="36918"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Rocktusk"] = {
+	{ids="37000",goal_onlyif=function() return havequest(37000) end},
+	{ids="36999",goal_onlyif=function() return havequest(36999) end},
+	{ids="36997",goal_onlyif=function() return havequest(36997) end},
+	{ids="37004",goal_onlyif=function() return havequest(37004) end},
+	{ids="36998",goal_onlyif=function() return havequest(36998) end},
+	{ids="37003",goal_onlyif=function() return havequest(37003) end},
+	{ids="36995",goal_onlyif=function() return havequest(36995) end},
+	{ids="37002",goal_onlyif=function() return havequest(37002) end},
+	{ids="37001",goal_onlyif=function() return havequest(37001) end},
+	{ids="36996",goal_onlyif=function() return havequest(36996) end},
+	{ids="36913"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Silverpelt"] = {
+	{ids="36971",goal_onlyif=function() return havequest(36971) end},
+	{ids="36977",goal_onlyif=function() return havequest(36977) end},
+	{ids="36974",goal_onlyif=function() return havequest(36974) end},
+	{ids="36975",goal_onlyif=function() return havequest(36975) end},
+	{ids="36981",goal_onlyif=function() return havequest(36981) end},
+	{ids="36976",goal_onlyif=function() return havequest(36976) end},
+	{ids="36980",goal_onlyif=function() return havequest(36980) end},
+	{ids="36982",goal_onlyif=function() return havequest(36982) end},
+	{ids="36978",goal_onlyif=function() return havequest(36978) end},
+	{ids="36979",goal_onlyif=function() return havequest(36979) end},
+	{ids="36972",goal_onlyif=function() return havequest(36972) end},
+	{ids="36973",goal_onlyif=function() return havequest(36973) end},
+	{ids="36911"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Snarler"] = {
+	{ids="37027",goal_onlyif=function() return havequest(37027) end},
+	{ids="37024",goal_onlyif=function() return havequest(37024) end},
+	{ids="37022",goal_onlyif=function() return havequest(37022) end},
+	{ids="37023",goal_onlyif=function() return havequest(37023) end},
+	{ids="37025",goal_onlyif=function() return havequest(37025) end},
+	{ids="37028",goal_onlyif=function() return havequest(37028) end},
+	{ids="37026",goal_onlyif=function() return havequest(37026) end},
+	{ids="36914"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Event Mounts\\Minion of Grumpus"] = {
+	{ids="39668,39649,39648,39651"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Garrison Mounts\\Coalfist Gronnling"] = {
+	includes = {"Garrison_CommandTable"},
+},
 ["PETSMOUNTS\\Mounts\\Ground Mounts\\Battle Pet Mounts\\Brilliant Direbeak"] = {
 	{ids="44984,44977,44985,44978,44986,44979,44987,44980,44973,44981,44974,44982,44983,44976,44988"},
 },
@@ -5359,86 +5449,29 @@ ZGV.Quest_Cache_Ally = {
 ["PETSMOUNTS\\Mounts\\Ground Mounts\\Reputation Mounts\\Wild Dreamrunner"] = {
 	{ids="46747"},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Icehoof"] = {
-	{ids="36990",goal_onlyif=function() return havequest(36990) end},
-	{ids="36992",goal_onlyif=function() return havequest(36992) end},
-	{ids="36985",goal_onlyif=function() return havequest(36985) end},
-	{ids="36991",goal_onlyif=function() return havequest(36991) end},
-	{ids="36993",goal_onlyif=function() return havequest(36993) end},
-	{ids="36987",goal_onlyif=function() return havequest(36987) end},
-	{ids="36984",goal_onlyif=function() return havequest(36984) end},
-	{ids="36989",goal_onlyif=function() return havequest(36989) end},
-	{ids="36983",goal_onlyif=function() return havequest(36983) end},
-	{ids="36994",goal_onlyif=function() return havequest(36994) end},
-	{ids="36986",goal_onlyif=function() return havequest(36986) end},
-	{ids="36988",goal_onlyif=function() return havequest(36988) end},
-	{ids="36916"},
+["DUNGEONS\\Legion Dungeons\\Eye of Azshara"] = {
+	{ids="38286",step_onlyif=function() return havequest(38286) or completedq(38286) end},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Meadowstomper"] = {
-	{ids="37018",goal_onlyif=function() return havequest(37018) end},
-	{ids="37020",goal_onlyif=function() return havequest(37020) end},
-	{ids="37021",goal_onlyif=function() return havequest(37021) end},
-	{ids="37017",goal_onlyif=function() return havequest(37017) end},
-	{ids="37016",goal_onlyif=function() return havequest(37016) end},
-	{ids="37015",goal_onlyif=function() return havequest(37015) end},
-	{ids="37019",goal_onlyif=function() return havequest(37019) end},
-	{ids="36915"},
+["DUNGEONS\\Legion Dungeons\\Halls of Valor"] = {
+	{ids="43349",step_onlyif=function() return havequest(43349) or completedq(43349) end},
+	{ids="40072",step_onlyif=function() return havequest(40072) or completedq(40072) or havequest(43349) or completedq(43349) end},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Riverwallow"] = {
-	{ids="37006",goal_onlyif=function() return havequest(37006) end},
-	{ids="37011",goal_onlyif=function() return havequest(37011) end},
-	{ids="37012",goal_onlyif=function() return havequest(37012) end},
-	{ids="37009",goal_onlyif=function() return havequest(37009) end},
-	{ids="37007",goal_onlyif=function() return havequest(37007) end},
-	{ids="37013",goal_onlyif=function() return havequest(37013) end},
-	{ids="37010",goal_onlyif=function() return havequest(37010) end},
-	{ids="37008",goal_onlyif=function() return havequest(37008) end},
-	{ids="37005",goal_onlyif=function() return havequest(37005) end},
-	{ids="36918"},
+["DUNGEONS\\Legion Dungeons\\Vault of the Wardens"] = {
+	{ids="44486",step_onlyif=function() return havequest(44486) or completedq(44486) end},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Rocktusk"] = {
-	{ids="37000",goal_onlyif=function() return havequest(37000) end},
-	{ids="36999",goal_onlyif=function() return havequest(36999) end},
-	{ids="36997",goal_onlyif=function() return havequest(36997) end},
-	{ids="37004",goal_onlyif=function() return havequest(37004) end},
-	{ids="36998",goal_onlyif=function() return havequest(36998) end},
-	{ids="37003",goal_onlyif=function() return havequest(37003) end},
-	{ids="36995",goal_onlyif=function() return havequest(36995) end},
-	{ids="37002",goal_onlyif=function() return havequest(37002) end},
-	{ids="37001",goal_onlyif=function() return havequest(37001) end},
-	{ids="36996",goal_onlyif=function() return havequest(36996) end},
-	{ids="36913"},
+["DUNGEONS\\Legion Dungeons\\Karazhan\\Karazhan Attunement"] = {
+	{ids="44684,44557,44685,44686,45422,44733,44944,44764,44556,44683,44886,44887"},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Silverpelt"] = {
-	{ids="36971",goal_onlyif=function() return havequest(36971) end},
-	{ids="36977",goal_onlyif=function() return havequest(36977) end},
-	{ids="36974",goal_onlyif=function() return havequest(36974) end},
-	{ids="36975",goal_onlyif=function() return havequest(36975) end},
-	{ids="36981",goal_onlyif=function() return havequest(36981) end},
-	{ids="36976",goal_onlyif=function() return havequest(36976) end},
-	{ids="36980",goal_onlyif=function() return havequest(36980) end},
-	{ids="36982",goal_onlyif=function() return havequest(36982) end},
-	{ids="36978",goal_onlyif=function() return havequest(36978) end},
-	{ids="36979",goal_onlyif=function() return havequest(36979) end},
-	{ids="36972",goal_onlyif=function() return havequest(36972) end},
-	{ids="36973",goal_onlyif=function() return havequest(36973) end},
-	{ids="36911"},
+["DUNGEONS\\Legion Dungeons\\Karazhan\\Return to Karazhan"] = {
+	{ids="44735,44734",step_onlyif=function() return havequest(44734) end},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Snarler"] = {
-	{ids="37027",goal_onlyif=function() return havequest(37027) end},
-	{ids="37024",goal_onlyif=function() return havequest(37024) end},
-	{ids="37022",goal_onlyif=function() return havequest(37022) end},
-	{ids="37023",goal_onlyif=function() return havequest(37023) end},
-	{ids="37025",goal_onlyif=function() return havequest(37025) end},
-	{ids="37028",goal_onlyif=function() return havequest(37028) end},
-	{ids="37026",goal_onlyif=function() return havequest(37026) end},
-	{ids="36914"},
+["DUNGEONS\\Legion Dungeons\\Pet Battle\\Wailing Caverns"] = {
+	{ids="45540,45423",goal_onlyif=function() return not completedq(45423) end},
+	{ids="45539",goal_onlyif=function() return completedq(45423) end},
 },
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Event Mounts\\Minion of Grumpus"] = {
-	{ids="39668,39649,39648,39651"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Garrison Mounts\\Coalfist Gronnling"] = {
-	includes = {"Garrison_CommandTable"},
+["DUNGEONS\\Legion Dungeons\\Pet Battle\\Deadmines"] = {
+	{ids="46293,46291",goal_onlyif=function() return not completedq(46291) end},
+	{ids="46292",goal_onlyif=function() return completedq(46291) end},
 },
 ["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\White Polar Bear"] = {
 	{ids="13422,13424,13423,13425"},
@@ -5625,75 +5658,6 @@ ZGV.Quest_Cache_Ally = {
 },
 ["PETSMOUNTS\\Mounts\\Argent Tournament Guides\\Pre-Quests"] = {
 	{ids="13835,13667,13828,13837"},
-},
-["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide"] = {
-	includes = {"follow_path_herbs","vendor_Alchemy","trainer_Alchemy"},
-},
-["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 525-600 Leveling Guide"] = {
-	includes = {"trainer_Archaeology"},
-},
-["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 500-600 Leveling Guide"] = {
-	includes = {"maincity_anvil","trainer_Blacksmithing","follow_path_mine","trainer_Mining"},
-},
-["PROFESSIONS\\Cooking\\Daily Guides\\Pandaria Cooking Daily Guide"] = {
-	includes = {"MoP_Cooking_Dailies"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide"] = {
-	includes = {"Cooking_520-600"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Brew"] = {
-	{ids="31479,31302,31480,31281"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Grill"] = {
-	{ids="31467,31302,31311,31281"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Oven"] = {
-	{ids="31478,31302,31477,31281"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Pot"] = {
-	{ids="31472,31302,31474,31281"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Steamer"] = {
-	{ids="31475,31302,31476,31281"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Wok"] = {
-	{ids="31470,31302,31471,31281"},
-},
-["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide"] = {
-	includes = {"trainer_Enchanting"},
-},
-["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide"] = {
-	includes = {"maincity_anvil","trainer_Engineering","follow_path_mine"},
-},
-["PROFESSIONS\\First Aid\\Leveling Guides\\First Aid 525-600 Leveling Guide"] = {
-	includes = {"trainer_FirstAid"},
-},
-["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 525-600 Leveling Guide"] = {
-	includes = {"trainer_Fishing"},
-},
-["PROFESSIONS\\Herbalism\\Leveling Guides\\Herbalism 525-600 Leveling Guide"] = {
-	includes = {"follow_path_herbs","trainer_Herbalism"},
-},
-["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide"] = {
-	includes = {"vendor_Inscription","trainer_Inscription","GT_SW_Path","follow_path_herbs"},
-},
-["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 500-600 Leveling Guide"] = {
-	includes = {"trainer_Jewelcrafting","follow_path_mine","vendor_Jewelcrafting"},
-},
-["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 500-600 Leveling Guide"] = {
-	includes = {"trainer_Leatherworking"},
-},
-["PROFESSIONS\\Mining\\Leveling Guides\\Mining 525-600 Leveling Guide"] = {
-	includes = {"follow_path_mine","trainer_Mining"},
-},
-["PROFESSIONS\\Mining\\Leveling Guides\\Mining with Smelting 500-600 Leveling Guide"] = {
-	includes = {"follow_path_mine","trainer_Mining"},
-},
-["PROFESSIONS\\Skinning\\Leveling Guides\\Skinning 525-600 Leveling Guide"] = {
-	includes = {"trainer_Skinning"},
-},
-["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide"] = {
-	includes = {"trainer_Tailoring"},
 },
 ["Zuldazar_Foothold_Quests"] = {
 	{ids="52443",goal_onlyif=function() return havequest(52443) end},
@@ -6295,49 +6259,74 @@ ZGV.Quest_Cache_Ally = {
 	{ids="25105,25155,25156,25157,25154"},
 	includes = {"trainer_Jewelcrafting"},
 },
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Fishy"] = {
-	{ids="29903,29904,29905"},
+["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide"] = {
+	includes = {"follow_path_herbs","vendor_Alchemy","trainer_Alchemy"},
 },
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Tiny Goldfish"] = {
-	{ids="30701,30585,30754,30698,30586,30763,30613,30753,30658,30700,30584,30588,30598,30678"},
-	{ids="31369",step_onlyif=function() return not completedq(31369) end},
+["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 525-600 Leveling Guide"] = {
+	includes = {"trainer_Archaeology"},
 },
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Air Spirit"] = {
-	{ids="32440"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 500-600 Leveling Guide"] = {
+	includes = {"maincity_anvil","trainer_Blacksmithing","follow_path_mine","trainer_Mining"},
 },
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Earth Spirit"] = {
-	{ids="32441"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+["PROFESSIONS\\Cooking\\Daily Guides\\Pandaria Cooking Daily Guide"] = {
+	includes = {"MoP_Cooking_Dailies"},
 },
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Fire Spirit"] = {
-	{ids="32434"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide"] = {
+	includes = {"Cooking_520-600"},
 },
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Water Spirit"] = {
-	{ids="32439"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Brew"] = {
+	{ids="31479,31302,31480,31281"},
 },
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Chi-ji Kite"] = {
-	includes = {"follow_path_herbs"},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Grill"] = {
+	{ids="31467,31302,31311,31281"},
 },
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Yu'lon Kite"] = {
-	includes = {"follow_path_herbs"},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Oven"] = {
+	{ids="31478,31302,31477,31281"},
 },
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Mountain Panda"] = {
-	includes = {"A_Beasts_of_Fable_D","Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Pot"] = {
+	{ids="31472,31302,31474,31281"},
 },
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Red Panda"] = {
-	includes = {"Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Steamer"] = {
+	{ids="31475,31302,31476,31281"},
 },
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Snowy Panda"] = {
-	includes = {"A_Beasts_of_Fable_D","Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Wok"] = {
+	{ids="31470,31302,31471,31281"},
 },
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Sunfur Panda"] = {
-	includes = {"A_Beasts_of_Fable_D","Alliance_Battlepet_Quests","A_Beasts_of_Fable"},
+["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide"] = {
+	includes = {"trainer_Enchanting"},
 },
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Jade Owl"] = {
-	includes = {"Golden_Lotus_PreQuests"},
+["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide"] = {
+	includes = {"maincity_anvil","trainer_Engineering","follow_path_mine"},
+},
+["PROFESSIONS\\First Aid\\Leveling Guides\\First Aid 525-600 Leveling Guide"] = {
+	includes = {"trainer_FirstAid"},
+},
+["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 525-600 Leveling Guide"] = {
+	includes = {"trainer_Fishing"},
+},
+["PROFESSIONS\\Herbalism\\Leveling Guides\\Herbalism 525-600 Leveling Guide"] = {
+	includes = {"follow_path_herbs","trainer_Herbalism"},
+},
+["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide"] = {
+	includes = {"vendor_Inscription","trainer_Inscription","GT_SW_Path","follow_path_herbs"},
+},
+["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 500-600 Leveling Guide"] = {
+	includes = {"trainer_Jewelcrafting","follow_path_mine","vendor_Jewelcrafting"},
+},
+["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 500-600 Leveling Guide"] = {
+	includes = {"trainer_Leatherworking"},
+},
+["PROFESSIONS\\Mining\\Leveling Guides\\Mining 525-600 Leveling Guide"] = {
+	includes = {"follow_path_mine","trainer_Mining"},
+},
+["PROFESSIONS\\Mining\\Leveling Guides\\Mining with Smelting 500-600 Leveling Guide"] = {
+	includes = {"follow_path_mine","trainer_Mining"},
+},
+["PROFESSIONS\\Skinning\\Leveling Guides\\Skinning 525-600 Leveling Guide"] = {
+	includes = {"trainer_Skinning"},
+},
+["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide"] = {
+	includes = {"trainer_Tailoring"},
 },
 ["LEVELING\\Starter Guides\\Death Knight (55-58)"] = {
 	{ids="12746",goal_only="Draenei"},
@@ -6714,6 +6703,27 @@ ZGV.Quest_Cache_Ally = {
 	{ids="52028,52032,52544,52040,52171,53453,49274,49282,49286,52219,51715,49060,52493,47925,52247,49969,52259,52029,52041,51918,53450,52204,49287,48025,51085,50331,52494,50466,52260,52496,52495,51139,52491,52026,52030,51145,52038,52042,51538,52490,52308,53074,47998,52489,49276,52158,49284,49288,52154,48026,49427,52203,52205,52173,47919,52241,52208,47587,52172,52156,52261,49428,52146,52654,52150,52027,51142,52035,52039,52170,47586,47706,53452,53583,47585,50044,47584,48473,49285,49289,47583,48479,51714,52480,53332,51091,52492,47924,52031,48014,51407,48015,52034,48478,48480,52147,48468,52036"},
 	includes = {"Zuldazar_Foothold_Quests","Choose_Foothold_3","Choose_Foothold_2","Voldun_Foothold_Quests","Nazmir_Foothold_Quests","Choose_Foothold_1"},
 },
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Veiled Grotto (Zuldazar)"] = {
+	{ids="52801,52802"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Grimwatt's Crash (Nazmir)"] = {
+	{ids="53006,53007"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Mistvine Ledge (Zuldazar)"] = {
+	{ids="52962,52963"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Mugamba Overlook (Zuldazar)"] = {
+	{ids="52851,52852"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Verdant Hollow (Zuldazar)"] = {
+	{ids="52886"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Vulture's Nest (Vol'dun)"] = {
+	{ids="53043"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment"] = {
+	{ids="50973,53405"},
+},
 ["LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Void Elf Race Unlock"] = {
 	{ids="50248",step_onlyif=function() return completedq(50071) end},
 	{ids="49787,50239,49929,48962"},
@@ -6721,9 +6731,6 @@ ZGV.Quest_Cache_Ally = {
 ["LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Lightforged Draenei Race Unlock"] = {
 	{ids="50248",step_onlyif=function() return completedq(48962) end},
 	{ids="49698,50239,50071,49266,49929"},
-},
-["LEVELING\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment"] = {
-	{ids="50973,53405"},
 },
 ["LEVELING\\Legion (100-110)\\Death Knight Intro & Artifacts"] = {
 	{ids="43962",goal_onlyif=function() return havequest(43962) end},
@@ -7183,15 +7190,6 @@ ZGV.Quest_Cache_Ally = {
 	{ids="46816,47589,48107,46840,49143,47892,47653,48442,47685,47183,47223,47526,47287,50371,47853,46841,47104,40761,47654,48443,47686,47184,48483,47224,50372,46818,47854,46842,47416,50229,47687,48460,46938,47217,47990,46213,50046,48277,50373,47066,47855,46843,48668,48445,47688,48461,47967,47218,47991,50047,50374,47856,40238,47641,48446,47689,47203,47219,47992,48542,47554,47100,47889,48447,47690,46941,47220,47993,47754,48272,48280,48559,49077,48081,48344,47101,47627,47890,48345,50049,48199,48440,48448,48201,50228,47222,47988,48500,47986,50227,50226,47508,48273,47771,48544,49981,48560,49976,47221,48600,46297,46815,48203,46834,46839,47102,47989,47883,47891,47134,47652,47743,47882,48441,48654,48202,49224,47995,48200,48601,47987,49015,47238,47180,46732,47691,47431,48455,47541,47182"},
 	includes = {"Argus_Scouting_Map"},
 },
-["PROFESSIONS\\Herbalism\\Quest Guides\\Kul Tiran Herbalism Quest Line"] = {
-	{ids="48753,48754,48755,48756,48757,48758,51365,48762,51398,51399,48769,51312,51313,51376,51408,48763,51404,51361,51360,51016"},
-},
-["PROFESSIONS\\Mining\\Quest Guides\\Kul Tiran Mining Quest Line"] = {
-	{ids="48764,52050,52044,48752,48768,48761,51889,48770,51568,52049,48767"},
-},
-["PROFESSIONS\\Skinning\\Quest Guides\\Kul Tiran Skinning Quest Guide"] = {
-	{ids="52226,52228,52223,52225,52227,52224"},
-},
 ["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide"] = {
 	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","vendor_Alchemy","GB_Path","LR_SK_Path","GS_SM_Path","Sungrass_Path","GT_WS_Path","trainer_Alchemy","TJ_Path","Kingsblood_Path","SV_CB_Path","HB_Path","Whiptail_Path","IT_LB_Path","NB_DG_Path","FL_GT_KW_BW_Path","GC_DN_TL_Path","Terocone_Path","FW_DG_Path"},
 },
@@ -7242,6 +7240,168 @@ ZGV.Quest_Cache_Ally = {
 },
 ["PROFESSIONS\\Alchemy\\Leveling Guides\\Classic Alchemy 1-300 Leveling Guide"] = {
 	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","GB_Path","LR_SK_Path","GS_SM_Path","FL_GT_KW_BW_Path","GT_WS_Path","trainer_Alchemy","TJ_Path","Kingsblood_Path","SV_CB_Path","HB_Path","Whiptail_Path","IT_LB_Path","NB_DG_Path","Sungrass_Path","GC_DN_TL_Path","Terocone_Path","FW_DG_Path"},
+},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Slithershock Elver"] = {
+	{ids="38299"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Cinder Pup"] = {
+	includes = {"Garrison_CommandTable"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Meadowstomper Calf"] = {
+	{ids="34819,34869,34900"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Young Talbuk"] = {
+	{ids="38299"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Everbloom Peachick"] = {
+	{ids="37150"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Ikky"] = {
+	{ids="34838"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Sentinel's Companion"] = {
+	{ids="37164"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Syd the Squid"] = {
+	{ids="36471"},
+},
+["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Iron Starlette"] = {
+	{ids="36941"},
+},
+["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Sky-Bo"] = {
+	{ids="34774"},
+},
+["PETSMOUNTS\\Battle Pets\\Undead Pets\\Bone Serpent"] = {
+	{ids="38299"},
+},
+["TITLES\\Mists of Pandaria Titles\\Dungeons & Raids\\Delver of the Vaults"] = {
+	includes = {"DUNGEONS\\Pandaria Raids\\Mogu'shan Vaults"},
+},
+["TITLES\\Mists of Pandaria Titles\\Dungeons & Raids\\The Fearless"] = {
+	includes = {"DUNGEONS\\Pandaria Raids\\Terrace of Endless Spring"},
+},
+["TITLES\\Mists of Pandaria Titles\\General\\The Relic Hunter"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Pandaria\\Is Another Man's Treasure"},
+},
+["TITLES\\Mists of Pandaria Titles\\Pet Battles\\Crazy Cat Lady/Man"] = {
+	{ids="29115,29104,29213,29116,29105,29102,29121,29114,29103,29120"},
+	includes = {"celestial_tournament"},
+},
+["TITLES\\Mists of Pandaria Titles\\Reputations\\Farmer"] = {
+	includes = {"DAILIES\\Mists of Pandaria Dailies\\The Tillers Dailies"},
+},
+["TITLES\\Mists of Pandaria Titles\\Reputations\\The Wakener"] = {
+	{ids="31009",step_onlyif=function() return not completedq(31010) end},
+	{ids="31211,31354,31606,31085,31179,31026,31439,31398,31010,31006"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Lunarfall Inn Dungeon Dailies"] = {
+	{ids="37235,37227,37228,37229,37230,37231,37232,37233,37234,37142,37236,37237,37145,37146,37240,37241,37242,37243,37244,37245,37239,37238,37209"},
+	includes = {"Garrison_Medium_Building"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Fishing Dailies"] = {
+	{ids="36511",goal_onlyif=function() return havequest(36511) end},
+	{ids="36513",goal_onlyif=function() return havequest(36513) end},
+	{ids="36514",goal_onlyif=function() return havequest(36514) end},
+	{ids="36510",goal_onlyif=function() return havequest(36510) end},
+	{ids="36515",goal_onlyif=function() return havequest(36515) end},
+	{ids="36517",goal_onlyif=function() return havequest(36517) end},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Battle Pets Dailies"] = {
+	{ids="36483",goal_onlyif=function() return havequest(36483) or hasbuilding(167) end},
+	{ids="37644",goal_onlyif=function() return havequest(37644) end},
+	{ids="37206,37201,37203,37205,37207,38299,37208"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Harrison Jones Treasure Contracts"] = {
+	{ids="37852",goal_onlyif=function() return havequest(37852) end},
+	{ids="37919",goal_onlyif=function() return havequest(37919) end},
+	{ids="37811",goal_onlyif=function() return havequest(37811) end},
+	{ids="37885",goal_onlyif=function() return havequest(37885) end},
+	{ids="37979",goal_onlyif=function() return havequest(37979) end},
+	{ids="37945",goal_onlyif=function() return havequest(37945) end},
+	{ids="37944,37943,37942,37848,37849,37881,37851,37976,37977,37978,37917,37918,37941,37788,37797,37798,37799,37882,37973,37916,37884,37914,37883,37850"},
+	includes = {"Garrison_Harrison","Garrison_BGrey"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Muradin Bronzebeard Dailies"] = {
+	{ids="37795",goal_onlyif=function() return havequest(37795) end},
+	{ids="37792",goal_onlyif=function() return havequest(37792) end},
+	{ids="37772",goal_onlyif=function() return havequest(37772) end},
+	{ids="37791",goal_onlyif=function() return havequest(37791) end},
+	{ids="37767",goal_onlyif=function() return havequest(37767) end},
+	{ids="37766",goal_onlyif=function() return havequest(37766) end},
+	{ids="37789",goal_onlyif=function() return havequest(37789) end},
+	{ids="37769",goal_onlyif=function() return havequest(37769) end},
+	{ids="37793",goal_onlyif=function() return havequest(37793) end},
+	{ids="37768",goal_onlyif=function() return havequest(37768) end},
+	{ids="37770",goal_onlyif=function() return havequest(37770) end},
+	{ids="37794",goal_onlyif=function() return havequest(37794) end},
+	{ids="37790",goal_onlyif=function() return havequest(37790) end},
+	{ids="37771",goal_onlyif=function() return havequest(37771) end},
+	{ids="37796",goal_onlyif=function() return havequest(37796) end},
+	includes = {"Garrison_Muradin","Garrison_BGrey"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Renzik Daily Quests"] = {
+	{ids="37778",goal_onlyif=function() return havequest(37778) end},
+	{ids="37777",goal_onlyif=function() return havequest(37777) end},
+	{ids="37773",goal_onlyif=function() return havequest(37773) end},
+	{ids="37948",goal_onlyif=function() return havequest(37948) end},
+	{ids="37776",goal_onlyif=function() return havequest(37776) end},
+	{ids="37774",goal_onlyif=function() return havequest(37774) end},
+	{ids="37775",goal_onlyif=function() return havequest(37775) end},
+	includes = {"Garrison_BGrey","Garrison_Shiv"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Garrison Assault Daily Quests"] = {
+	{ids="36649",goal_onlyif=function() return havequest(36649) or completedq(36649) end},
+	{ids="36674",goal_onlyif=function() return havequest(36674) or completedq(36674) end},
+	{ids="38192",goal_onlyif=function() return havequest(38192) or completedq(38192) end},
+	{ids="38195",goal_onlyif=function() return havequest(38195) or completedq(38195) end},
+	{ids="38200",goal_onlyif=function() return havequest(38200) or completedq(38200) end},
+	{ids="38193",goal_onlyif=function() return havequest(38193) or completedq(38193) end},
+	{ids="36686",goal_onlyif=function() return havequest(36686) or completedq(36686) end},
+	{ids="36675",goal_onlyif=function() return havequest(36675) or completedq(36675) end},
+	{ids="38191",goal_onlyif=function() return havequest(38191) or completedq(38191) end},
+	{ids="38194",goal_onlyif=function() return havequest(38194) or completedq(38194) end},
+	{ids="36648",goal_onlyif=function() return havequest(36648) or completedq(36648) end},
+	{ids="38198",goal_onlyif=function() return havequest(38198) or completedq(38198) end},
+	{ids="36676",goal_onlyif=function() return havequest(36676) or completedq(36676) end},
+	{ids="36685",goal_onlyif=function() return havequest(36685) or completedq(36685) end},
+	{ids="36682",goal_onlyif=function() return havequest(36682) or completedq(36682) end},
+	{ids="38196",goal_onlyif=function() return havequest(38196) or completedq(38196) end},
+	{ids="38190",goal_onlyif=function() return havequest(38190) or completedq(38190) end},
+	{ids="36680",goal_onlyif=function() return havequest(36680) or completedq(36680) end},
+	{ids="38197",goal_onlyif=function() return havequest(38197) or completedq(38197) end},
+	{ids="38201",goal_onlyif=function() return havequest(38201) or completedq(38201) end},
+	{ids="36678",goal_onlyif=function() return havequest(36678) or completedq(36678) end},
+	{ids="36683",goal_onlyif=function() return havequest(36683) or completedq(36683) end},
+	{ids="38189",goal_onlyif=function() return havequest(38189) or completedq(38189) end},
+	{ids="36681",goal_onlyif=function() return havequest(36681) or completedq(36681) end},
+	{ids="38199",goal_onlyif=function() return havequest(38199) or completedq(38199) end},
+	{ids="36679",goal_onlyif=function() return havequest(36679) or completedq(36679) end},
+	{ids="36677",goal_onlyif=function() return havequest(36677) or completedq(36677) end},
+	includes = {"Garrison_ScoutValdez","Garrison_Crowler","Garrison_Warplans"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Garrison Building Dailies"] = {
+	{ids="36511",goal_onlyif=function() return havequest(36511) end},
+	{ids="37323",goal_onlyif=function() return havequest(37323) end},
+	{ids="36510",goal_onlyif=function() return havequest(36510) end},
+	{ids="36515",goal_onlyif=function() return havequest(36515) end},
+	{ids="36517",goal_onlyif=function() return havequest(36517) end},
+	{ids="37325",goal_onlyif=function() return havequest(37325) end},
+	{ids="36514",goal_onlyif=function() return havequest(36514) end},
+	{ids="36513",goal_onlyif=function() return havequest(36513) end},
+	{ids="37321",goal_onlyif=function() return havequest(37321) end},
+	{ids="37320",goal_onlyif=function() return havequest(37320) end},
+	{ids="37324",goal_onlyif=function() return havequest(37324) end},
+	{ids="37644,36483,38175,37092"},
+	includes = {"Garrison_Lioness","Garrison_Small_Building","Garrison_Large_Building","Garrison_RAshton","Garrison_Pagle"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\Hand of the Prophet Dailies"] = {
+	includes = {"A_Hand_of_Prophet_Dailies"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\Order of the Awakened Dailies"] = {
+	includes = {"OotA_Dailies"},
+},
+["DAILIES\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\The Saberstalkers"] = {
+	includes = {"SStalkers_Dailies"},
 },
 ["ACHIEVEMENTS\\Draenor Garrison\\Azeroth's Top Twenty Tunes"] = {
 	{ids="4603"},
@@ -7568,135 +7728,6 @@ ZGV.Quest_Cache_Ally = {
 	{ids="32599",goal_onlyif=function() return itemcount(94153) > 0 end},
 	{ids="29877,10657,30699,31083,30079,30080,30081,30082,30715,30088,30089,30090,30723,30724,30599,29907,29908,30602,30603,10674,30670,30991,10584,30616,30682,36477,30750,30751,30457,30690,30994,30592,29910,10675,29909"},
 	includes = {"Garrison_CommandTable"},
-},
-["TITLES\\Mists of Pandaria Titles\\Dungeons & Raids\\Delver of the Vaults"] = {
-	includes = {"DUNGEONS\\Pandaria Raids\\Mogu'shan Vaults"},
-},
-["TITLES\\Mists of Pandaria Titles\\Dungeons & Raids\\The Fearless"] = {
-	includes = {"DUNGEONS\\Pandaria Raids\\Terrace of Endless Spring"},
-},
-["TITLES\\Mists of Pandaria Titles\\General\\The Relic Hunter"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Pandaria\\Is Another Man's Treasure"},
-},
-["TITLES\\Mists of Pandaria Titles\\Pet Battles\\Crazy Cat Lady/Man"] = {
-	{ids="29115,29104,29213,29116,29105,29102,29121,29114,29103,29120"},
-	includes = {"celestial_tournament"},
-},
-["TITLES\\Mists of Pandaria Titles\\Reputations\\Farmer"] = {
-	includes = {"DAILIES\\Mists of Pandaria Dailies\\The Tillers Dailies"},
-},
-["TITLES\\Mists of Pandaria Titles\\Reputations\\The Wakener"] = {
-	{ids="31009",step_onlyif=function() return not completedq(31010) end},
-	{ids="31211,31354,31606,31085,31179,31026,31439,31398,31010,31006"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Lunarfall Inn Dungeon Dailies"] = {
-	{ids="37235,37227,37228,37229,37230,37231,37232,37233,37234,37142,37236,37237,37145,37146,37240,37241,37242,37243,37244,37245,37239,37238,37209"},
-	includes = {"Garrison_Medium_Building"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Fishing Dailies"] = {
-	{ids="36511",goal_onlyif=function() return havequest(36511) end},
-	{ids="36513",goal_onlyif=function() return havequest(36513) end},
-	{ids="36514",goal_onlyif=function() return havequest(36514) end},
-	{ids="36510",goal_onlyif=function() return havequest(36510) end},
-	{ids="36515",goal_onlyif=function() return havequest(36515) end},
-	{ids="36517",goal_onlyif=function() return havequest(36517) end},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Battle Pets Dailies"] = {
-	{ids="36483",goal_onlyif=function() return havequest(36483) or hasbuilding(167) end},
-	{ids="37644",goal_onlyif=function() return havequest(37644) end},
-	{ids="37206,37201,37203,37205,37207,38299,37208"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Harrison Jones Treasure Contracts"] = {
-	{ids="37852",goal_onlyif=function() return havequest(37852) end},
-	{ids="37919",goal_onlyif=function() return havequest(37919) end},
-	{ids="37811",goal_onlyif=function() return havequest(37811) end},
-	{ids="37885",goal_onlyif=function() return havequest(37885) end},
-	{ids="37979",goal_onlyif=function() return havequest(37979) end},
-	{ids="37945",goal_onlyif=function() return havequest(37945) end},
-	{ids="37944,37943,37942,37848,37849,37881,37851,37976,37977,37978,37917,37918,37941,37788,37797,37798,37799,37882,37973,37916,37884,37914,37883,37850"},
-	includes = {"Garrison_Harrison","Garrison_BGrey"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Muradin Bronzebeard Dailies"] = {
-	{ids="37795",goal_onlyif=function() return havequest(37795) end},
-	{ids="37792",goal_onlyif=function() return havequest(37792) end},
-	{ids="37772",goal_onlyif=function() return havequest(37772) end},
-	{ids="37791",goal_onlyif=function() return havequest(37791) end},
-	{ids="37767",goal_onlyif=function() return havequest(37767) end},
-	{ids="37766",goal_onlyif=function() return havequest(37766) end},
-	{ids="37789",goal_onlyif=function() return havequest(37789) end},
-	{ids="37769",goal_onlyif=function() return havequest(37769) end},
-	{ids="37793",goal_onlyif=function() return havequest(37793) end},
-	{ids="37768",goal_onlyif=function() return havequest(37768) end},
-	{ids="37770",goal_onlyif=function() return havequest(37770) end},
-	{ids="37794",goal_onlyif=function() return havequest(37794) end},
-	{ids="37790",goal_onlyif=function() return havequest(37790) end},
-	{ids="37771",goal_onlyif=function() return havequest(37771) end},
-	{ids="37796",goal_onlyif=function() return havequest(37796) end},
-	includes = {"Garrison_Muradin","Garrison_BGrey"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Renzik Daily Quests"] = {
-	{ids="37778",goal_onlyif=function() return havequest(37778) end},
-	{ids="37777",goal_onlyif=function() return havequest(37777) end},
-	{ids="37773",goal_onlyif=function() return havequest(37773) end},
-	{ids="37948",goal_onlyif=function() return havequest(37948) end},
-	{ids="37776",goal_onlyif=function() return havequest(37776) end},
-	{ids="37774",goal_onlyif=function() return havequest(37774) end},
-	{ids="37775",goal_onlyif=function() return havequest(37775) end},
-	includes = {"Garrison_BGrey","Garrison_Shiv"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Garrison Assault Daily Quests"] = {
-	{ids="36649",goal_onlyif=function() return havequest(36649) or completedq(36649) end},
-	{ids="36674",goal_onlyif=function() return havequest(36674) or completedq(36674) end},
-	{ids="38192",goal_onlyif=function() return havequest(38192) or completedq(38192) end},
-	{ids="38195",goal_onlyif=function() return havequest(38195) or completedq(38195) end},
-	{ids="38200",goal_onlyif=function() return havequest(38200) or completedq(38200) end},
-	{ids="38193",goal_onlyif=function() return havequest(38193) or completedq(38193) end},
-	{ids="36686",goal_onlyif=function() return havequest(36686) or completedq(36686) end},
-	{ids="36675",goal_onlyif=function() return havequest(36675) or completedq(36675) end},
-	{ids="38191",goal_onlyif=function() return havequest(38191) or completedq(38191) end},
-	{ids="38194",goal_onlyif=function() return havequest(38194) or completedq(38194) end},
-	{ids="36648",goal_onlyif=function() return havequest(36648) or completedq(36648) end},
-	{ids="38198",goal_onlyif=function() return havequest(38198) or completedq(38198) end},
-	{ids="36676",goal_onlyif=function() return havequest(36676) or completedq(36676) end},
-	{ids="36685",goal_onlyif=function() return havequest(36685) or completedq(36685) end},
-	{ids="36682",goal_onlyif=function() return havequest(36682) or completedq(36682) end},
-	{ids="38196",goal_onlyif=function() return havequest(38196) or completedq(38196) end},
-	{ids="38190",goal_onlyif=function() return havequest(38190) or completedq(38190) end},
-	{ids="36680",goal_onlyif=function() return havequest(36680) or completedq(36680) end},
-	{ids="38197",goal_onlyif=function() return havequest(38197) or completedq(38197) end},
-	{ids="38201",goal_onlyif=function() return havequest(38201) or completedq(38201) end},
-	{ids="36678",goal_onlyif=function() return havequest(36678) or completedq(36678) end},
-	{ids="36683",goal_onlyif=function() return havequest(36683) or completedq(36683) end},
-	{ids="38189",goal_onlyif=function() return havequest(38189) or completedq(38189) end},
-	{ids="36681",goal_onlyif=function() return havequest(36681) or completedq(36681) end},
-	{ids="38199",goal_onlyif=function() return havequest(38199) or completedq(38199) end},
-	{ids="36679",goal_onlyif=function() return havequest(36679) or completedq(36679) end},
-	{ids="36677",goal_onlyif=function() return havequest(36677) or completedq(36677) end},
-	includes = {"Garrison_ScoutValdez","Garrison_Crowler","Garrison_Warplans"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Garrison Building Dailies"] = {
-	{ids="36511",goal_onlyif=function() return havequest(36511) end},
-	{ids="37323",goal_onlyif=function() return havequest(37323) end},
-	{ids="36510",goal_onlyif=function() return havequest(36510) end},
-	{ids="36515",goal_onlyif=function() return havequest(36515) end},
-	{ids="36517",goal_onlyif=function() return havequest(36517) end},
-	{ids="37325",goal_onlyif=function() return havequest(37325) end},
-	{ids="36514",goal_onlyif=function() return havequest(36514) end},
-	{ids="36513",goal_onlyif=function() return havequest(36513) end},
-	{ids="37321",goal_onlyif=function() return havequest(37321) end},
-	{ids="37320",goal_onlyif=function() return havequest(37320) end},
-	{ids="37324",goal_onlyif=function() return havequest(37324) end},
-	{ids="37644,36483,38175,37092"},
-	includes = {"Garrison_Lioness","Garrison_Small_Building","Garrison_Large_Building","Garrison_RAshton","Garrison_Pagle"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\Hand of the Prophet Dailies"] = {
-	includes = {"A_Hand_of_Prophet_Dailies"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\Order of the Awakened Dailies"] = {
-	includes = {"OotA_Dailies"},
-},
-["DAILIES\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\The Saberstalkers"] = {
-	includes = {"SStalkers_Dailies"},
 },
 ["DUNGEONS\\Classic Dungeons\\Blackfathom Deeps"] = {
 	{ids="34672",step_onlyif=function() return not completedq(34672) end},
@@ -8155,30 +8186,6 @@ ZGV.Quest_Cache_Ally = {
 ["LEVELING\\Pandaria (80-90)\\Peak of Serenity\\Monk Quest 90"] = {
 	{ids="31889,31844"},
 },
-["DUNGEONS\\Legion Dungeons\\Eye of Azshara"] = {
-	{ids="38286",step_onlyif=function() return havequest(38286) or completedq(38286) end},
-},
-["DUNGEONS\\Legion Dungeons\\Halls of Valor"] = {
-	{ids="43349",step_onlyif=function() return havequest(43349) or completedq(43349) end},
-	{ids="40072",step_onlyif=function() return havequest(40072) or completedq(40072) or havequest(43349) or completedq(43349) end},
-},
-["DUNGEONS\\Legion Dungeons\\Vault of the Wardens"] = {
-	{ids="44486",step_onlyif=function() return havequest(44486) or completedq(44486) end},
-},
-["DUNGEONS\\Legion Dungeons\\Karazhan\\Karazhan Attunement"] = {
-	{ids="44684,44557,44685,44686,45422,44733,44944,44764,44556,44683,44886,44887"},
-},
-["DUNGEONS\\Legion Dungeons\\Karazhan\\Return to Karazhan"] = {
-	{ids="44735,44734",step_onlyif=function() return havequest(44734) end},
-},
-["DUNGEONS\\Legion Dungeons\\Pet Battle\\Wailing Caverns"] = {
-	{ids="45540,45423",goal_onlyif=function() return not completedq(45423) end},
-	{ids="45539",goal_onlyif=function() return completedq(45423) end},
-},
-["DUNGEONS\\Legion Dungeons\\Pet Battle\\Deadmines"] = {
-	{ids="46293,46291",goal_onlyif=function() return not completedq(46291) end},
-	{ids="46292",goal_onlyif=function() return completedq(46291) end},
-},
 ["Garrison_Campaign"] = {
 	{ids="36219,36282",goal_onlyif=function() return garrisonlvl(5) end},
 	{ids="36280,36161,36169,34026,34284,34288,35185,35189,36221,34455,34336,34340,34352,36134,36281,36289,34281,34285,34289,35190,35194,36341,35837,36222,35972,35861,34353,34365,36163,36167,34397,34028,34032,35945,35187,35191,35195,35838,35973,35985,34338,37517,34362,36160,36164,36168,37191,36162,34410,35839,34029,34287,34033,34337,35188,34027,35196,37511,36220,35970,34450,34048,34409,35841,34339,35840,34347,34031,34355,35679,35683,35685,34286,34030"},
@@ -8506,33 +8513,8 @@ ZGV.Quest_Cache_Horde = {
 	{ids="13959",goal_onlyif=function() return havequest(13959) or completedq(13959) end},
 	{ids="11357,8312,33756,32502,43162,6984,24636,14058,11923,14037,11922,14061,37868,14041,14060,14043,12139,11886,14044,14047,14040,24541,11891,14065,12012,13926,13927,29463,13929,13930,7061,14059,13933,13934,14062,11915,13937,13938,11971,32500,11010,8354,32497,11023,29036,11025,11407,11408,29167,13950,13951,29427,8873,13954,13955,13956,13957,24613,43259,32498,29191,29030,8883,32499,32501,29455,8868,8867,24635,12192,24615,11058,24612,44559,12155,24629,8360,24851,36481,24850,24536,29377,11062,29376,6961,29375,37910,5502,29374,10942,6964,8358,10945,29400,44546,11361,29431,11966,10951,11030,11080,29146,24576,29190,29425,37911,11975,29031,29415,29416,10963,8359,11219,10967,29426,29428,29176,10953,29434,29436,29438,24614,6962,172"},
 },
-["DAILIES\\Battle for Azeroth\\Darkshore World Quests"] = {
-	includes = {"BFA_World_Quest_Emissaries"},
-},
 ["DAILIES\\Battle for Azeroth\\BFA World Quest Unlock"] = {
 	{ids="51916"},
-},
-["DAILIES\\Battle for Azeroth\\Drustvar World Quests"] = {
-	includes = {"BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Nazmir World Quests"] = {
-	{ids="52385,52410"},
-	includes = {"BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Stormsong Valley World Quests"] = {
-	{ids="52394,52344"},
-	includes = {"BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Tiragarde Sound World Quests"] = {
-	includes = {"BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Vol'Dun World Quests"] = {
-	{ids="52397,52412"},
-	includes = {"BFA_World_Quest_Emissaries"},
-},
-["DAILIES\\Battle for Azeroth\\Zuldazar World Quests"] = {
-	{ids="51043,51044,51046,51048,51049,51050,51051,52387,52388,52394,52398,51036,51037,51038,51040,51013,51042,52383"},
-	includes = {"BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Classic Dailies\\Main Cities\\Main City Cooking Dailies"] = {
 	includes = {"Org_Cooking_Dailies","TB_Cooking_Dailies","UC_Cooking_Dailies"},
@@ -8976,6 +8958,9 @@ ZGV.Quest_Cache_Horde = {
 ["GOLD\\Farming\\Raw Elekk Meat"] = {
 	includes = {"auctioneer"},
 },
+["LEVELING\\POI Legion Rares"] = {
+	{ids="49007",step_onlyif=function() return havequest(49007) end},
+},
 ["LEVELING\\Starter Guides\\Blood Elf (1-5)"] = {
 	{ids="37440,37439",goal_only="BloodElf"},
 	{ids="37442,8334,8326,8327,37443,8338,8335,8325"},
@@ -9300,6 +9285,140 @@ ZGV.Quest_Cache_Horde = {
 ["DUNGEONS\\Legion Dungeons\\Pet Battle\\Deadmines"] = {
 	{ids="46293,46291",goal_onlyif=function() return not completedq(46291) end},
 	{ids="46292",goal_onlyif=function() return completedq(46291) end},
+},
+["ACHIEVEMENTS\\Dungeons & Raids\\Pandaria Scenario\\Arena of Annihilation"] = {
+	{ids="31207"},
+},
+["ACHIEVEMENTS\\Dungeons & Raids\\Tranquil Master"] = {
+	{ids="30133",goal_onlyif=function() return Horde end},
+	{ids="30178",goal_onlyif=function() return Alliance end},
+	{ids="30884,30887,30888,30889,30890,30891,30892,30893,30894,30895,30960,30268,30899,30900,30271,30272,30273,30968,31032,30970,30971,30972,30973,30975,30976,30977,30978,30979,30980,30981,31063,31064,31065,30901,30269,30270,30898,30694,30695"},
+},
+["ACHIEVEMENTS\\Exploration\\Pandaria\\Rolo's Riddle"] = {
+	{ids="32975,32974,32976"},
+},
+["ACHIEVEMENTS\\Feats of Strength\\Mounts\\I've Got 9999 Problems but a Bone-White Primal Raptor Ain't One"] = {
+	{ids="32617"},
+},
+["ACHIEVEMENTS\\General\\Pandaren Delicacies"] = {
+	{ids="31535"},
+	includes = {"auctioneer"},
+},
+["ACHIEVEMENTS\\Pet Battles\\Collect\\Crazy for Cats"] = {
+	{ids="29231,29220,29228,29232,29221,29222,29226,29230,29223,29227"},
+},
+["ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawler"] = {
+	includes = {"ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawlin' - Alliance","ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawlin' - Horde"},
+},
+["ACHIEVEMENTS\\Pet Battles\\Fabled Pandaren Tamer"] = {
+	includes = {"H_Beasts_of_Fable","H_Battlepet_quests"},
+},
+["ACHIEVEMENTS\\Pet Battles\\I Choose You"] = {
+	includes = {"H_Battlepet_quests"},
+},
+["ACHIEVEMENTS\\Pet Battles\\The Longest Day"] = {
+	{ids="31991,31954,31973,31955,31974,31971,31958,31957,31953,31972,31956",step_onlyif=function() return completedq(31970) end},
+	{ids="31916",step_onlyif=function() return completedq(31915) end},
+	{ids="31922,31923,31924,31925,31926",step_onlyif=function() return completedq(31920) end},
+	{ids="31934,31932,31931",step_onlyif=function() return completedq(31928) end},
+	{ids="31871,31905,31819,32439,31872,31906,32434,31854,32441,31862,31907,32440,31904,31818,31908,31909"},
+	includes = {"H_Beasts_of_Fable_D"},
+},
+["ACHIEVEMENTS\\Pet Battles\\Trainer Extraordinaire"] = {
+	includes = {"ACHIEVEMENTS\\Pet Battles\\Battle\\Master Pet Battler","ACHIEVEMENTS\\Pet Battles\\Collect\\He's Mine!","ACHIEVEMENTS\\Pet Battles\\Level\\Growing Up","ACHIEVEMENTS\\Pet Battles\\Battle\\Cat Fight!","ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawlin' - Horde","ACHIEVEMENTS\\Pet Battles\\Level\\Time for a Leash","ACHIEVEMENTS\\Pet Battles\\Battle\\Experienced Pet Battler","ACHIEVEMENTS\\Pet Battles\\Level\\Just a Pup","ACHIEVEMENTS\\Pet Battles\\Battle\\Local Pet Mauler","ACHIEVEMENTS\\Pet Battles\\Level\\Newbie"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Ironpaw Chef"] = {
+	includes = {"trainer_Cooking_MoP"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Master of Pandaren Cooking"] = {
+	includes = {"Cooking_520-600","Pandarian_Cooking_1-520","Cooking_PreMasteries"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Now I Am the Master"] = {
+	includes = {"Cooking_PreMasteries","Cooking_520-600","Pandarian_Cooking_1-520","Nomi_Dailies","MoP_Cooking_Dailies"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\The Pandaren Gourmet"] = {
+	{ids="31535"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\A Taste of Things to Come"] = {
+	includes = {"Tillers_Quests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Ain't Lost No More"] = {
+	{ids="31313,31314,31312,31315"},
+	includes = {"Tillers_Quests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Amber is the Color of My Energy"] = {
+	{ids="31009",step_onlyif=function() return not completedq(31010) end},
+	{ids="31211,31354,31606,31085,31179,31026,31439,31398,31010,31006"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Champion of Chi-Ji"] = {
+	{ids="31378",step_onlyif=function() return not completedq(31378) end},
+	{ids="30731,30735,30739,30728,30732,30736,30725,30729,30718,30737,30726,30730,30734,30738,30727,30733",step_onlyif=function() return not achieved(7287) end},
+	{ids="30718,30740",step_onlyif=function() return achieved(7287) end},
+	{ids="30716,30717"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Defender of Gods"] = {
+	{ids="31266,31277"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Every Day I'm Pand-a-ren"] = {
+	{ids="32246,32247,32109"},
+	includes = {"Golden_Lotus_PreQuests","Tillers_Quests","CS_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Finish Them!"] = {
+	{ids="31381",step_onlyif=function() return havequest(31381) end},
+	{ids="30881,30885,30882,30879,30883,31517,30880,31492,30907,30902"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Green Acres"] = {
+	includes = {"Tillers_Quests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Isle of Thunder"] = {
+	{ids="32277,32278,32678,32680,32212,32654,32279"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Listen to the Drunk Fish"] = {
+	includes = {"Tillers_Quests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\One Step at a Time"] = {
+	{ids="30277,30280"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Proven Strength"] = {
+	{ids="31038",step_onlyif=function() return havequest(31038) end},
+	{ids="31128",step_onlyif=function() return havequest(31128) end},
+	{ids="31104",step_onlyif=function() return havequest(31104) end},
+	{ids="31220",step_onlyif=function() return havequest(31220) end},
+	{ids="31221",step_onlyif=function() return havequest(31221) end},
+	{ids="31127",step_onlyif=function() return havequest(31127) end},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Ready for Raiding III"] = {
+	includes = {"Golden_Lotus_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Roll Club"] = {
+	includes = {"Golden_Lotus_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Savior of Stoneplow"] = {
+	includes = {"Marista_Hub"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Shadow Hopper"] = {
+	includes = {"CS_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Spreading the Warmth!"] = {
+	includes = {"Golden_Lotus_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Test Drive"] = {
+	{ids="31808"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Till the Break of Dawn"] = {
+	includes = {"Tillers_Quests"},
+},
+["ACHIEVEMENTS\\Reputation\\Pandaria\\Dominance Offensive"] = {
+	{ids="32249,32250,32108"},
+},
+["ACHIEVEMENTS\\Reputation\\Pandaria\\Sunreaver Onslaught"] = {
+	{ids="32678,32709,32680"},
+},
+["ACHIEVEMENTS\\Scenarios\\Mists of Pandaria\\Arena of Annihilation"] = {
+	{ids="31207"},
+},
+["ACHIEVEMENTS\\World Events\\Brawler's Guild\\Collect Your Deck"] = {
+	includes = {"trainer_Engineering","Tillers_Quests","Darkmoon_Faire_Dailies"},
 },
 ["LEVELING\\Legion (100-110)\\Death Knight Intro & Artifacts"] = {
 	{ids="44543",goal_onlyif=function() return havequest(44543) or completedq(44543) end},
@@ -9797,6 +9916,53 @@ ZGV.Quest_Cache_Horde = {
 ["PETSMOUNTS\\Mounts\\Flying Mounts\\Reputation Mounts\\Thundering August Cloud Serpent"] = {
 	includes = {"August_Celestials"},
 },
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Architect"] = {
+	includes = {"Garrison_ArchitectTable"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Draenei Destroyer"] = {
+	{ids="36930"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Dwarfstalker"] = {
+	{ids="36924"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Gnomebane"] = {
+	{ids="36926"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lord/Lady of War"] = {
+	{ids="37082,37083"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lumberjack"] = {
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Manslayer"] = {
+	{ids="36921"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Scourge of the Kaldorei"] = {
+	{ids="36932"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Terror of the Tushui"] = {
+	{ids="36934"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Timber Lord"] = {
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Warlord of Draenor"] = {
+	{ids="37082,37083"},
+},
+["TITLES\\Warlords of Draenor Titles\\Garrisons\\Worgen Hunter"] = {
+	{ids="36928"},
+	includes = {"Garrison_Medium_Building"},
+},
+["TITLES\\Warlords of Draenor Titles\\Reputations\\Conservationist"] = {
+	includes = {"SteamPS_Rep"},
+},
 ["PROFESSIONS\\Herbalism\\Quest Guides\\Zandalari Herbalism Quest Line"] = {
 	{ids="51446,51447,51448,51480,51481,51482,51452,51243,51399,51432,51464,51404,51498,51376,51408,51503,48763,51451,51478,51230"},
 },
@@ -9805,36 +9971,6 @@ ZGV.Quest_Cache_Horde = {
 },
 ["PROFESSIONS\\Skinning\\Quest Guides\\Zandalari Skinning Quest Guide"] = {
 	{ids="51575,52214,52216,52213,52215,52217"},
-},
-["DUNGEONS\\Legion Scenarios\\Whispers of a Frightened World"] = {
-	{ids="46206"},
-},
-["DUNGEONS\\Legion Scenarios\\The Deaths of Chromie Portals"] = {
-	{ids="47906",goal_onlyif=function() return havequest(47906) and completedq(47906,1) end},
-	{ids="47904",goal_onlyif=function() return havequest(47904) and completedq(47904,1) end},
-	{ids="47545",goal_onlyif=function() return not completedq(47545) end},
-	{ids="47557,47643,47645,47559,47642,47560,47558,47644",step_onlyif=function() return inscenario end},
-	{ids="47543,47550,48021"},
-},
-["DUNGEONS\\Legion Scenarios\\The Deaths of Chromie Speed Run"] = {
-	{ids="47807",goal_onlyif=function() return havequest(47807) end,step_onlyif=function() return inscenario end},
-	{ids="47906",goal_onlyif=function() return completedq(47904) end},
-	{ids="47809",goal_onlyif=function() return havequest(47809) end,step_onlyif=function() return inscenario end},
-	{ids="47904",goal_onlyif=function() return completedq(47550) and not completedq(47904) end},
-	{ids="47746,47750,47745,47747,47744,47773",step_onlyif=function() return inscenario end},
-	{ids="47810",goal_onlyif=function() return havequest(47810) end,step_onlyif=function() return inscenario end},
-	{ids="47808",goal_onlyif=function() return havequest(47808) end,step_onlyif=function() return inscenario end},
-},
-["DUNGEONS\\Legion Scenarios\\The Deaths of Chromie (Stratholme Intro)"] = {
-	{ids="47746,47750,47745,47747,47744",step_onlyif=function() return inscenario end},
-},
-["DUNGEONS\\Legion Scenarios\\Argus Invasions"] = {
-	{ids="48799",step_onlyif=function() return ZGV.questsbyid[48799] and ZGV.questsbyid[48799].complete end},
-	{ids="48461",goal_onlyif=function() return not completedq(48461) end},
-	{ids="49293",goal_onlyif=function() return ZGV.questsbyid[49293] and ZGV.questsbyid[49293].complete end},
-	{ids="48605",goal_onlyif=function() return completedq(48513) and not completedq(48605) end},
-	{ids="48513",goal_onlyif=function() return completedq(48461) and not completedq(48513) end},
-	includes = {"Argus_Invasion_Turalyon","Argus_Invasion_Illidan"},
 },
 ["LEVELING\\Rares"] = {
 	{ids="35819",goal_onlyif=function() return itemcount(113460) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
@@ -9846,74 +9982,100 @@ ZGV.Quest_Cache_Horde = {
 	{ids="35818",goal_onlyif=function() return itemcount(113459) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
 	{ids="35807",goal_onlyif=function() return itemcount(113444) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
 },
-["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide"] = {
-	includes = {"follow_path_herbs","vendor_Alchemy","trainer_Alchemy"},
+["GOLD\\Horde Daily Runs\\The Anglers Dailies Run"] = {
+	includes = {"Anglers_Dailies"},
 },
-["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 525-600 Leveling Guide"] = {
-	includes = {"trainer_Archaeology"},
+["GOLD\\Horde Daily Runs\\The August Celestials Dailies Run"] = {
+	includes = {"August_Celestials"},
 },
-["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 500-600 Leveling Guide"] = {
-	includes = {"maincity_anvil","trainer_Blacksmithing","follow_path_mine","trainer_Mining"},
+["GOLD\\Horde Daily Runs\\The Order of the Cloud Serpent Dailies Run"] = {
+	includes = {"CS_Dailies"},
 },
-["PROFESSIONS\\Cooking\\Daily Guides\\Pandaria Cooking Daily Guide"] = {
-	includes = {"MoP_Cooking_Dailies"},
+["GOLD\\Horde Daily Runs\\The Shado-Pan Dailies Run"] = {
+	includes = {"Shado_Pan_Dailies"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide"] = {
-	includes = {"Cooking_520-600"},
+["GOLD\\Horde Daily Runs\\The Tillers Dailies Run"] = {
+	includes = {"Tillers_Dailies"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Brew"] = {
-	{ids="31479,31302,31480,31281"},
+["GOLD\\Horde Daily Runs\\The Golden Lotus Dailies Run"] = {
+	includes = {"Golden_Lotus_PreQuests","Golden_Lotus"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Grill"] = {
-	{ids="31467,31302,31311,31281"},
+["GOLD\\Horde Daily Runs\\The Klaxxi Dailies Run"] = {
+	includes = {"Klaxxi_Dailies"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Oven"] = {
-	{ids="31478,31302,31477,31281"},
+["GOLD\\Horde Daily Runs\\Dominance Offensive Dailies Run"] = {
+	includes = {"Dominance_Offensive"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Pot"] = {
-	{ids="31472,31302,31474,31281"},
+["GOLD\\Horde Daily Runs\\Sunreaver Onslaught Dailies Run"] = {
+	includes = {"Sunreavers_dailies"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Steamer"] = {
-	{ids="31475,31302,31476,31281"},
+["GOLD\\Horde Daily Runs\\Kalimdor Battle Pet Dailies Run"] = {
+	{ids="31871,31905,31819,31872,31906,31854,31862,31907,31904,31818,31908,31909"},
 },
-["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Wok"] = {
-	{ids="31470,31302,31471,31281"},
+["GOLD\\Horde Daily Runs\\Outland Battle Pet Dailies Run"] = {
+	{ids="31922,31923,31924,31925,31926"},
 },
-["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide"] = {
-	includes = {"trainer_Enchanting"},
+["GOLD\\Horde Daily Runs\\Northrend Battle Pet Dailies Run"] = {
+	{ids="31934,31935,31931,31932,31933"},
 },
-["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide"] = {
-	includes = {"maincity_anvil","trainer_Engineering","follow_path_mine"},
+["GOLD\\Horde Daily Runs\\Cataclysm Battle Pet Dailies Run"] = {
+	{ids="31973,31974,31972,31971"},
 },
-["PROFESSIONS\\First Aid\\Leveling Guides\\First Aid 525-600 Leveling Guide"] = {
-	includes = {"trainer_FirstAid"},
+["GOLD\\Horde Daily Runs\\Pandaria Battle Pet Dailies Run"] = {
+	{ids="31955,31956,31957,31958,31953,31954,31991"},
 },
-["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 525-600 Leveling Guide"] = {
-	includes = {"trainer_Fishing"},
+["GOLD\\Horde Daily Runs\\Pandaren Spirits Battle Pet Dailies Run"] = {
+	{ids="32441,32439,32440,32434"},
 },
-["PROFESSIONS\\Herbalism\\Leveling Guides\\Herbalism 525-600 Leveling Guide"] = {
-	includes = {"follow_path_herbs","trainer_Herbalism"},
+["GOLD\\Horde Daily Runs\\Beasts of Fable Battle Pet Dailies Run"] = {
+	{ids="32604,32868,32869"},
 },
-["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide"] = {
-	includes = {"vendor_Inscription","trainer_Inscription","GT_SW_Path","follow_path_herbs"},
+["GOLD\\Horde Daily Runs\\Nagrand Soup Bones"] = {
+	{ids="36607,34808,34794,34795,34818,34826,34849,34850,34899,34866,34868"},
 },
-["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 500-600 Leveling Guide"] = {
-	includes = {"trainer_Jewelcrafting","follow_path_mine","vendor_Jewelcrafting"},
+["GOLD\\Farming\\Cocoa Beans (Horde)"] = {
+	includes = {"auctioneer","Org_Cooking_Dailies"},
 },
-["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 500-600 Leveling Guide"] = {
-	includes = {"trainer_Leatherworking"},
+["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 600-700 Leveling Guide"] = {
+	{ids="37568"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
 },
-["PROFESSIONS\\Mining\\Leveling Guides\\Mining 525-600 Leveling Guide"] = {
-	includes = {"follow_path_mine","trainer_Mining"},
+["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 600-700 Leveling Guide"] = {
+	{ids="37569"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
 },
-["PROFESSIONS\\Mining\\Leveling Guides\\Mining with Smelting 500-600 Leveling Guide"] = {
-	includes = {"follow_path_mine","trainer_Mining"},
+["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 600-700 Leveling Guide"] = {
+	{ids="37570"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
 },
-["PROFESSIONS\\Skinning\\Leveling Guides\\Skinning 525-600 Leveling Guide"] = {
-	includes = {"trainer_Skinning"},
+["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 600-700 Leveling Guide"] = {
+	{ids="37571"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
 },
-["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide"] = {
-	includes = {"trainer_Tailoring"},
+["PROFESSIONS\\First Aid\\Leveling Guides\\First Aid 600-700 Leveling Guide"] = {
+	includes = {"auctioneer"},
+},
+["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 600-700 Leveling Guide"] = {
+	{ids="36131,36132,36141,34758"},
+},
+["PROFESSIONS\\Herbalism\\Farming Guides\\Herbs (Pre-Legion)"] = {
+	includes = {"follow_path_herbs"},
+},
+["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 600-700 Leveling Guide"] = {
+	{ids="37572"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
+},
+["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 600-700 Leveling Guide"] = {
+	{ids="37573"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
+},
+["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 600-700 Leveling Guide"] = {
+	{ids="37574"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
+},
+["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 600-700 Leveling Guide"] = {
+	{ids="37575"},
+	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
 },
 ["DAILIES\\Mists of Pandaria Dailies\\The Anglers Dailies"] = {
 	includes = {"Anglers_Dailies"},
@@ -9994,47 +10156,6 @@ ZGV.Quest_Cache_Horde = {
 	{ids="31673",goal_onlyif=function() return havequest(31673) end},
 	{ids="31675",goal_onlyif=function() return havequest(31675) end},
 },
-["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 600-700 Leveling Guide"] = {
-	{ids="37568"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 600-700 Leveling Guide"] = {
-	{ids="37569"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 600-700 Leveling Guide"] = {
-	{ids="37570"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 600-700 Leveling Guide"] = {
-	{ids="37571"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\First Aid\\Leveling Guides\\First Aid 600-700 Leveling Guide"] = {
-	includes = {"auctioneer"},
-},
-["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 600-700 Leveling Guide"] = {
-	{ids="36131,36132,36141,34758"},
-},
-["PROFESSIONS\\Herbalism\\Farming Guides\\Herbs (Pre-Legion)"] = {
-	includes = {"follow_path_herbs"},
-},
-["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 600-700 Leveling Guide"] = {
-	{ids="37572"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 600-700 Leveling Guide"] = {
-	{ids="37573"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 600-700 Leveling Guide"] = {
-	{ids="37574"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
-["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 600-700 Leveling Guide"] = {
-	{ids="37575"},
-	includes = {"Garrison_Small_Building","Garrison_ArchitectTable"},
-},
 ["LEVELING\\Pandaria (80-90)\\The Jade Forest (80-90)"] = {
 	{ids="29580,31134,29612,29620,29879,29628,29632,29636,29927,29931,29935,29939,29943,31230,31999,29967,29971,30485,31768,31772,31776,29995,29999,29748,29752,30011,30015,29804,29824,29585,29629,29633,31167,29920,29924,29928,29932,29936,30466,31239,29968,29717,31765,31769,31773,31777,29745,29749,29753,29765,31303,31853,29821,29578,31112,29586,31132,29865,29618,31152,29626,29630,29634,29646,29925,29929,29933,29937,29941,29690,29694,31766,31770,30499,29993,29997,30001,30005,29754,29822,29579,29587,31121,29611,29619,29623,29882,29631,29635,29670,29926,29930,29624,29866,29942,30500,29966,29716,30648,30502,31241,30504,30484,29723,31767,31261,31775,31779,29743,29747,29751,29755,29730,31774,31778,29750,29881,29756,29637,30000,30004,30002,29998,30495,29622,29627,29815,29731,29823,29827,31771"},
 },
@@ -10081,64 +10202,6 @@ ZGV.Quest_Cache_Horde = {
 },
 ["LEVELING\\Pandaria (80-90)\\Peak of Serenity\\Monk Quest 90"] = {
 	{ids="31889,31844"},
-},
-["GOLD\\Horde Daily Runs\\The Anglers Dailies Run"] = {
-	includes = {"Anglers_Dailies"},
-},
-["GOLD\\Horde Daily Runs\\The August Celestials Dailies Run"] = {
-	includes = {"August_Celestials"},
-},
-["GOLD\\Horde Daily Runs\\The Order of the Cloud Serpent Dailies Run"] = {
-	includes = {"CS_Dailies"},
-},
-["GOLD\\Horde Daily Runs\\The Shado-Pan Dailies Run"] = {
-	includes = {"Shado_Pan_Dailies"},
-},
-["GOLD\\Horde Daily Runs\\The Tillers Dailies Run"] = {
-	includes = {"Tillers_Dailies"},
-},
-["GOLD\\Horde Daily Runs\\The Golden Lotus Dailies Run"] = {
-	includes = {"Golden_Lotus_PreQuests","Golden_Lotus"},
-},
-["GOLD\\Horde Daily Runs\\The Klaxxi Dailies Run"] = {
-	includes = {"Klaxxi_Dailies"},
-},
-["GOLD\\Horde Daily Runs\\Dominance Offensive Dailies Run"] = {
-	includes = {"Dominance_Offensive"},
-},
-["GOLD\\Horde Daily Runs\\Sunreaver Onslaught Dailies Run"] = {
-	includes = {"Sunreavers_dailies"},
-},
-["GOLD\\Horde Daily Runs\\Kalimdor Battle Pet Dailies Run"] = {
-	{ids="31871,31905,31819,31872,31906,31854,31862,31907,31904,31818,31908,31909"},
-},
-["GOLD\\Horde Daily Runs\\Outland Battle Pet Dailies Run"] = {
-	{ids="31922,31923,31924,31925,31926"},
-},
-["GOLD\\Horde Daily Runs\\Northrend Battle Pet Dailies Run"] = {
-	{ids="31934,31935,31931,31932,31933"},
-},
-["GOLD\\Horde Daily Runs\\Cataclysm Battle Pet Dailies Run"] = {
-	{ids="31973,31974,31972,31971"},
-},
-["GOLD\\Horde Daily Runs\\Pandaria Battle Pet Dailies Run"] = {
-	{ids="31955,31956,31957,31958,31953,31954,31991"},
-},
-["GOLD\\Horde Daily Runs\\Pandaren Spirits Battle Pet Dailies Run"] = {
-	{ids="32441,32439,32440,32434"},
-},
-["GOLD\\Horde Daily Runs\\Beasts of Fable Battle Pet Dailies Run"] = {
-	{ids="32604,32868,32869"},
-},
-["GOLD\\Horde Daily Runs\\Nagrand Soup Bones"] = {
-	{ids="36607,34808,34794,34795,34818,34826,34849,34850,34899,34866,34868"},
-},
-["GOLD\\Farming\\Cocoa Beans (Horde)"] = {
-	includes = {"auctioneer","Org_Cooking_Dailies"},
-},
-["timeless_isle_prequests"] = {
-	{ids="33232,33332,33340,33228,33161,33333,33335,33160,33336,33341"},
-	{ids="33230",goal_onlyif=function() return havequest(33230) end},
 },
 ["GOLD\\Farming\\Copper Ore/Rough Stone (Horde)"] = {
 	includes = {"auctioneer"},
@@ -10188,23 +10251,187 @@ ZGV.Quest_Cache_Horde = {
 ["GOLD\\Farming\\Light Leather/Medium Leather/Light Hide/Medium Hide (Hillsbrad Foothills)"] = {
 	includes = {"auctioneer"},
 },
-["Tiragarde_Sound_Foothold_Quests"] = {
-	{ids="51803",goal_onlyif=function() return havequest(51803) end},
-	{ids="52444",goal_onlyif=function() return havequest(52444) end},
-	{ids="51979",goal_onlyif=function() return havequest(51979) end},
-	{ids="51442,51435,51421,51984,51437,51438,51439,51440,51436,51441,51800"},
+["TITLES\\Burning Crusade Titles\\Reputations\\Of the Shattered Sun"] = {
+	includes = {"SSO_PreQuest_Dailies"},
 },
-["Drustvar_Foothold_Quests"] = {
-	{ids="51803",goal_onlyif=function() return havequest(51803) end},
-	{ids="52444",goal_onlyif=function() return havequest(52444) end},
-	{ids="51979",goal_onlyif=function() return havequest(51979) end},
-	{ids="51231,51233,51234,51421,51332,51984,51985,51800,51801,51340,51435,51436,51437,51438,51439,51440,51441,51442,51224"},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Eastern Kingdoms"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Eastern Kingdoms\\Eastern Kingdoms Explorer"},
 },
-["Stormsong_Valley_Foothold_Quests"] = {
-	{ids="51803",goal_onlyif=function() return havequest(51803) end},
-	{ids="52444",goal_onlyif=function() return havequest(52444) end},
-	{ids="51979",goal_onlyif=function() return havequest(51979) end},
-	{ids="51231,51986,51233,51234,51421,51696,51674,51691,51332,51984,51985,51800,51801,51802,51675,51587,51340,51643,51435,51436,51437,51438,51439,51440,51441,51442,51536,51532,51526,51224"},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Kalimdor"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Kalimdor\\Kalimdor Explorer"},
+},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Northrend"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Northrend\\Northrend Explorer"},
+},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Outland"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Outland\\Outland Explorer"},
+},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Pandaria"] = {
+	includes = {"Explorer_Pandaria"},
+},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Draenor"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Draenor Explorer"},
+},
+["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Broken Isles"] = {
+	includes = {"ACHIEVEMENTS\\Exploration\\Legion\\Broken Isles Explorer"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Professions\\Cooking\\Chef\\Achievements"] = {
+	includes = {"Our_Daily_Bread","Captain_Rumsey's_Lager","Dinner_Impossible","Critter_Gitter","second_that_emotion","Kickin'_It_Up_a_Notch","the_cake_is_not_a_lie","The_Outland_Gourmet","The_Northrend_Gourmet"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Professions\\Cooking\\Chef\\Dailies"] = {
+	includes = {"Kickin'_It_Up_a_Notch"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Professions\\Fishing\\Salty"] = {
+	includes = {"The_Scavenger","The_Lurker_Above","Fish_Don't_Leave_Footprints","Master_Angler_of_Azeroth","Outland_Angler","Master_Angler_of_Northrend","Old_Gnome_and_the_Sea","Old_Man_Barlowned","Mr_Pinchy","The_Coin_Master","The_Fishing_Diplomat"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Argent Champion\\Argent Crusade Reputation"] = {
+	includes = {"Argent_Crusade_Rep"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Argent Champion\\Argent Dawn Reputation"] = {
+	includes = {"Argent_Dawn_Rep"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Argent Tournament Grounds Aspirant Rank Dailies"] = {
+	includes = {"Argent Tourney_Aspirant"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Argent Tournament Grounds Valiant Rank Dailies"] = {
+	includes = {"Argent Tourney_Valiant"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Blood Elf Champion Rank"] = {
+	{ids="13785,13787,13731,13722,13784,13711,13859,13783,13786"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Orc Champion Rank"] = {
+	{ids="13697,13763,13765,13767,13726,13762,13764,13856,13707"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Tauren Champion Rank"] = {
+	{ids="13774,13776,13720,13709,13773,13775,13777,13858,13728"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Troll Champion Rank"] = {
+	{ids="13770,13772,13857,13769,13771,13719,13727,13768,13708"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Undead Champion Rank"] = {
+	{ids="13710,13729,13778,13780,13782,13779,13781,13860,13721"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Diplomat\\Mag'har Faction"] = {
+	{ids="10479,9849,9850,10107,9854,10109,9983,9857,9858,9861,9862,9863,9864,9865,9866,9867,9870,9999,10001,10004,9882,10010,10011,9888,9889,9890,9891,9900,9906,9907,9400,9401,9910,9913,9914,9916,9410,9797,9925,9800,9928,9804,9805,9934,9935,9937,9939,9815,9944,9945,9819,9932,9948,10009,9810,9405,9406,9991,9931,9946,9789,9821,9927,9855,9818"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Diplomat\\Sporeggar Faction"] = {
+	{ids="9739,9743",step_onlyif=function() return rep('Sporeggar')<=Neutral end},
+	{ids="9727",step_onlyif=function() return havequest(9727) end},
+	{ids="9726",step_onlyif=function() return havequest(9726) end},
+	{ids="9715",step_onlyif=function() return havequest(9715) end},
+	{ids="9714",step_onlyif=function() return havequest(9714) end},
+	{ids="29567,29691,9919"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Diplomat\\Timbermaw Hold Faction"] = {
+	{ids="8470",step_onlyif=function() return rep('Timbermaw Hold')>=Neutral end},
+	{ids="28530,28614,28469,28362,28366,28460,28524,28467,28470,28521,28615,28364,28338,28522,28464"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Guardian of Cenarius\\Cenarion Circle Faction"] = {
+	{ids="27420,27421,24719,27053,27057,24854,24855,26935,8304,27000,27001,27002,8306,27383,27384,8308,8277,8309,8278,8310,8279,8280,8281,24686,24687,8314,24689,8284,26956,8285,27386,27385,8318,8287,27392,9422,8320,26955,8321,26999,8282,26954,8323,8283,9415,27544,26953"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Guardian of Cenarius\\Cenarion Expedition Faction"] = {
+	{ids="10722,11866,11868,11869,11870,11871,11872,9968,10096,10351,9971,9718,11878,9720,9978,9979,29613,29615,9730,10112,10748,9990,10753,9994,9996,10255,10893,10005,9752,10896,9373,10771,10904,29691,9894,9895,29570,11570,11566,11569,11884,11865,11563,10159,11879,11571,11559,11560,11561,11562,9912,11564,11565,9788,11876,10044,29614,29616,10682,10810,10429,10812,10427,10426,10912,10911,10910,9802,10819,10820,10567,10821,10770,10719,9728,29564,10446,29565,29566,10894,29568,9716,9817,10607,9372,10349,9785,10132,9724,9951,10134,10713,9747,10717,29563,9957,29567,9731,9732"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Insane\\Bloodsail Buccaneers Solo"] = {
+	{ids="26663,26664,26665,26603,26604,26605,26606,26609,26610,26611,26612,26678,26679,26624,26629,26630,26631,26695,26633,26634,26635,26699,26700,26703,26644,26647,26648,26649,26650,26593,26594,26595,26697,26662,26698"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Insane\\The Steamwheedle Cartel"] = {
+	{ids="9267,9266,9268,9259"},
+	includes = {"vendor_Blacksmithing","auctioneer","vendor_Alchemy","vendor_Tailoring"},
+},
+["TITLES\\Wrath of the Lich King Titles\\Reputations\\Bloodsail Admiral"] = {
+	{ids="26663,26664,26665,26603,26604,26605,26606,26609,26610,26611,26612,26678,26679,26624,26629,26630,26631,26695,26633,26634,26635,26699,26700,1036,26644,26647,26648,26649,26650,26593,26594,26595,26703,26697,26698,26662,4621"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Achievements"] = {
+	{ids="12306"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Dailies"] = {
+	{ids="12192,11408,11407"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Quests"] = {
+	{ids="29396,11412,11431,11120,12492,11409,13931,12191,11446"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Achievements"] = {
+	includes = {"Lunar_Festival_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Main Questline"] = {
+	includes = {"Lunar_Festival_Main_Quests"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Optimized Elders Path"] = {
+	includes = {"Lunar_Festival_Elder_Paths"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Flame Keeper\\Midsummer Fire Festival Quests"] = {
+	includes = {"MFF_Main_Quests"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Achievements"] = {
+	includes = {"Hallow's_End_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Dailies"] = {
+	includes = {"Hallow's_End_Dailies"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Quests"] = {
+	includes = {"Hallow's_End_Quests"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Achievements"] = {
+	includes = {"LiitA_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Dailies"] = {
+	includes = {"LiitA_Dailies"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Main Questline"] = {
+	includes = {"LiitA_Main_Questline"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Achievements"] = {
+	includes = {"Children's_Week_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Dalaran Oracles Quests"] = {
+	includes = {"Children's_Week_Oracles_Quests"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Dalaran Wolvar Quests"] = {
+	includes = {"Children's_Week_Wolvar_Quests"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Orgrimmar Quests"] = {
+	includes = {"Children's_Week_Ogrimmar"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Shattrath Quests"] = {
+	includes = {"Children's_Week_Shattrath"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Merrymaker\\Feast of Winter Veil Achievements"] = {
+	includes = {"FoWV_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\Merrymaker\\Feast of Winter Veil Quests"] = {
+	includes = {"FoWV_Quests"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Noble"] = {
+	includes = {"Noblegarden_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Pilgrim\\Pilgrim's Bounty"] = {
+	includes = {"Pilgrim's_Bounty_Achievements"},
+},
+["TITLES\\Wrath of the Lich King Titles\\World Events\\The Pilgrim\\Pilgrim's Bounty Quests and Cooking 1-300 Guide"] = {
+	includes = {"Pilgrim's_Bounty_Quests"},
+},
+["TITLES\\Cataclysm Titles\\Quests\\The Flamebreaker"] = {
+	includes = {"H_Firelands_PreQuests"},
+},
+["TITLES\\Cataclysm Titles\\Dungeons & Raids\\Blessed Defender of Nordrassil"] = {
+	{ids="29134,29135,29193,29194,29132,29225"},
+},
+["Garrison_Campaign"] = {
+	{ids="36281",goal_onlyif=function() return havequest(36281) end},
+	{ids="36219",goal_onlyif=function() return havequest(36219) end},
+	{ids="36282",goal_onlyif=function() return havequest(36282) end},
+	{ids="36280",goal_onlyif=function() return havequest(36280) end},
+	{ids="34034,34042,35189,35197,36221,35844,34455,34078,37511,34340,35876,36261,32979,32983,34035,34039,35186,35190,35194,34309,36222,35845,33444,36242,37516,34353,34365,32980,32984,36290,34397,35687,34040,35187,35191,35195,36342,34314,34318,35973,34338,34469,36136,32985,34341,37192,34339,34337,35680,35684,35970,34041,35188,34336,35972,36220,34315,34319,34450,34316,34381,34335,36117,36248,34347,35945,34355,35842,34352,35846,35843,33427"},
+	includes = {"Garrison_Gazlowe","Garrison_Flightmaster","Garrison_WarmasterZog","Garrison_Rokhan"},
+},
+["Garrison_Inn_Quests"] = {
+	{ids="36281",goal_onlyif=function() return havequest(36281) end},
+	{ids="36219",goal_onlyif=function() return havequest(36219) end},
+	{ids="36282",goal_onlyif=function() return havequest(36282) end},
+	{ids="36280",goal_onlyif=function() return havequest(36280) end},
+	{ids="34034,34042,35189,35197,36221,35844,34455,34078,37511,34340,35876,36261,37154,37158,37162,37166,32979,32983,34035,34039,35186,35190,35194,34309,36222,35845,33444,36242,37516,34353,37151,37155,34365,37163,37167,32980,32984,36290,34397,35687,34040,35187,35191,35195,36342,34314,34318,35973,37179,35846,37149,34338,34469,37159,34352,37148,36136,37156,37160,37164,37150,35843,32985,35842,37152,34341,37192,34339,34337,35680,35684,35970,34041,35188,34336,35972,36220,34315,34319,34450,34316,34381,34335,36117,36248,34347,35945,34355,37153,37157,37161,37165,33427"},
+	includes = {"Garrison_Medium_Building"},
 },
 ["REPUTATIONS\\Warlords of Draenor\\Arakkoa Outcasts"] = {
 	includes = {"AOutcasts_Rep"},
@@ -10223,22 +10450,6 @@ ZGV.Quest_Cache_Horde = {
 },
 ["REPUTATIONS\\Warlords of Draenor\\Vol'jin's Spear"] = {
 	{ids="36196,36226,36228,36197,36227,36198"},
-},
-["Garrison_Campaign"] = {
-	{ids="36281",goal_onlyif=function() return havequest(36281) end},
-	{ids="36219",goal_onlyif=function() return havequest(36219) end},
-	{ids="36282",goal_onlyif=function() return havequest(36282) end},
-	{ids="36280",goal_onlyif=function() return havequest(36280) end},
-	{ids="34034,34042,35189,35197,36221,35844,34455,34078,37511,34340,35876,36261,32979,32983,34035,34039,35186,35190,35194,34309,36222,35845,33444,36242,37516,34353,34365,32980,32984,36290,34397,35687,34040,35187,35191,35195,36342,34314,34318,35973,34338,34469,36136,32985,34341,37192,34339,34337,35680,35684,35970,34041,35188,34336,35972,36220,34315,34319,34450,34316,34381,34335,36117,36248,34347,35945,34355,35842,34352,35846,35843,33427"},
-	includes = {"Garrison_Gazlowe","Garrison_Flightmaster","Garrison_WarmasterZog","Garrison_Rokhan"},
-},
-["Garrison_Inn_Quests"] = {
-	{ids="36281",goal_onlyif=function() return havequest(36281) end},
-	{ids="36219",goal_onlyif=function() return havequest(36219) end},
-	{ids="36282",goal_onlyif=function() return havequest(36282) end},
-	{ids="36280",goal_onlyif=function() return havequest(36280) end},
-	{ids="34034,34042,35189,35197,36221,35844,34455,34078,37511,34340,35876,36261,37154,37158,37162,37166,32979,32983,34035,34039,35186,35190,35194,34309,36222,35845,33444,36242,37516,34353,37151,37155,34365,37163,37167,32980,32984,36290,34397,35687,34040,35187,35191,35195,36342,34314,34318,35973,37179,35846,37149,34338,34469,37159,34352,37148,36136,37156,37160,37164,37150,35843,32985,35842,37152,34341,37192,34339,34337,35680,35684,35970,34041,35188,34336,35972,36220,34315,34319,34450,34316,34381,34335,36117,36248,34347,35945,34355,37153,37157,37161,37165,33427"},
-	includes = {"Garrison_Medium_Building"},
 },
 ["REPUTATIONS\\Mists of Pandaria Reputations\\Dominance Offensive\\Dominance Offensive\\Beastmaster Dailies"] = {
 	includes = {"Sturdy_Traps"},
@@ -10408,53 +10619,6 @@ ZGV.Quest_Cache_Horde = {
 ["LEVELING\\POI Legion Rares"] = {
 	{ids="49007",step_onlyif=function() return havequest(49007) end},
 },
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Architect"] = {
-	includes = {"Garrison_ArchitectTable"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Draenei Destroyer"] = {
-	{ids="36930"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Dwarfstalker"] = {
-	{ids="36924"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Gnomebane"] = {
-	{ids="36926"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lord/Lady of War"] = {
-	{ids="37082,37083"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Lumberjack"] = {
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Manslayer"] = {
-	{ids="36921"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Scourge of the Kaldorei"] = {
-	{ids="36932"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Terror of the Tushui"] = {
-	{ids="36934"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Timber Lord"] = {
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Warlord of Draenor"] = {
-	{ids="37082,37083"},
-},
-["TITLES\\Warlords of Draenor Titles\\Garrisons\\Worgen Hunter"] = {
-	{ids="36928"},
-	includes = {"Garrison_Medium_Building"},
-},
-["TITLES\\Warlords of Draenor Titles\\Reputations\\Conservationist"] = {
-	includes = {"SteamPS_Rep"},
-},
 ["TITLES\\Mists of Pandaria Titles\\Dungeons & Raids\\Delver of the Vaults"] = {
 	includes = {"DUNGEONS\\Pandaria Raids\\Mogu'shan Vaults"},
 },
@@ -10475,178 +10639,6 @@ ZGV.Quest_Cache_Horde = {
 	{ids="31009",step_onlyif=function() return not completedq(31010) end},
 	{ids="31211,31354,31606,31085,31179,31026,31439,31398,31010,31006"},
 },
-["TITLES\\Burning Crusade Titles\\Reputations\\Of the Shattered Sun"] = {
-	includes = {"SSO_PreQuest_Dailies"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Eastern Kingdoms"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Eastern Kingdoms\\Eastern Kingdoms Explorer"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Kalimdor"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Kalimdor\\Kalimdor Explorer"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Northrend"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Northrend\\Northrend Explorer"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Outland"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Outland\\Outland Explorer"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Pandaria"] = {
-	includes = {"Explorer_Pandaria"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Draenor"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Draenor Explorer"},
-},
-["TITLES\\Wrath of the Lich King Titles\\General\\The Explorer\\Broken Isles"] = {
-	includes = {"ACHIEVEMENTS\\Exploration\\Legion\\Broken Isles Explorer"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Professions\\Cooking\\Chef\\Achievements"] = {
-	includes = {"Our_Daily_Bread","Captain_Rumsey's_Lager","Dinner_Impossible","Critter_Gitter","second_that_emotion","Kickin'_It_Up_a_Notch","the_cake_is_not_a_lie","The_Outland_Gourmet","The_Northrend_Gourmet"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Professions\\Cooking\\Chef\\Dailies"] = {
-	includes = {"Kickin'_It_Up_a_Notch"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Professions\\Fishing\\Salty"] = {
-	includes = {"The_Scavenger","The_Lurker_Above","Fish_Don't_Leave_Footprints","Master_Angler_of_Azeroth","Outland_Angler","Master_Angler_of_Northrend","Old_Gnome_and_the_Sea","Old_Man_Barlowned","Mr_Pinchy","The_Coin_Master","The_Fishing_Diplomat"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Argent Champion\\Argent Crusade Reputation"] = {
-	includes = {"Argent_Crusade_Rep"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Argent Champion\\Argent Dawn Reputation"] = {
-	includes = {"Argent_Dawn_Rep"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Argent Tournament Grounds Aspirant Rank Dailies"] = {
-	includes = {"Argent Tourney_Aspirant"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Argent Tournament Grounds Valiant Rank Dailies"] = {
-	includes = {"Argent Tourney_Valiant"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Blood Elf Champion Rank"] = {
-	{ids="13785,13787,13731,13722,13784,13711,13859,13783,13786"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Orc Champion Rank"] = {
-	{ids="13697,13763,13765,13767,13726,13762,13764,13856,13707"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Tauren Champion Rank"] = {
-	{ids="13774,13776,13720,13709,13773,13775,13777,13858,13728"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Troll Champion Rank"] = {
-	{ids="13770,13772,13857,13769,13771,13719,13727,13768,13708"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Crusader\\Undead Champion Rank"] = {
-	{ids="13710,13729,13778,13780,13782,13779,13781,13860,13721"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Diplomat\\Mag'har Faction"] = {
-	{ids="10479,9849,9850,10107,9854,10109,9983,9857,9858,9861,9862,9863,9864,9865,9866,9867,9870,9999,10001,10004,9882,10010,10011,9888,9889,9890,9891,9900,9906,9907,9400,9401,9910,9913,9914,9916,9410,9797,9925,9800,9928,9804,9805,9934,9935,9937,9939,9815,9944,9945,9819,9932,9948,10009,9810,9405,9406,9991,9931,9946,9789,9821,9927,9855,9818"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Diplomat\\Sporeggar Faction"] = {
-	{ids="9739,9743",step_onlyif=function() return rep('Sporeggar')<=Neutral end},
-	{ids="9727",step_onlyif=function() return havequest(9727) end},
-	{ids="9726",step_onlyif=function() return havequest(9726) end},
-	{ids="9715",step_onlyif=function() return havequest(9715) end},
-	{ids="9714",step_onlyif=function() return havequest(9714) end},
-	{ids="29567,29691,9919"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Diplomat\\Timbermaw Hold Faction"] = {
-	{ids="8470",step_onlyif=function() return rep('Timbermaw Hold')>=Neutral end},
-	{ids="28530,28614,28469,28362,28366,28460,28524,28467,28470,28521,28615,28364,28338,28522,28464"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Guardian of Cenarius\\Cenarion Circle Faction"] = {
-	{ids="27420,27421,24719,27053,27057,24854,24855,26935,8304,27000,27001,27002,8306,27383,27384,8308,8277,8309,8278,8310,8279,8280,8281,24686,24687,8314,24689,8284,26956,8285,27386,27385,8318,8287,27392,9422,8320,26955,8321,26999,8282,26954,8323,8283,9415,27544,26953"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Guardian of Cenarius\\Cenarion Expedition Faction"] = {
-	{ids="10722,11866,11868,11869,11870,11871,11872,9968,10096,10351,9971,9718,11878,9720,9978,9979,29613,29615,9730,10112,10748,9990,10753,9994,9996,10255,10893,10005,9752,10896,9373,10771,10904,29691,9894,9895,29570,11570,11566,11569,11884,11865,11563,10159,11879,11571,11559,11560,11561,11562,9912,11564,11565,9788,11876,10044,29614,29616,10682,10810,10429,10812,10427,10426,10912,10911,10910,9802,10819,10820,10567,10821,10770,10719,9728,29564,10446,29565,29566,10894,29568,9716,9817,10607,9372,10349,9785,10132,9724,9951,10134,10713,9747,10717,29563,9957,29567,9731,9732"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Insane\\Bloodsail Buccaneers Solo"] = {
-	{ids="26663,26664,26665,26603,26604,26605,26606,26609,26610,26611,26612,26678,26679,26624,26629,26630,26631,26695,26633,26634,26635,26699,26700,26703,26644,26647,26648,26649,26650,26593,26594,26595,26697,26662,26698"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\The Insane\\The Steamwheedle Cartel"] = {
-	{ids="9267,9266,9268,9259"},
-	includes = {"vendor_Blacksmithing","auctioneer","vendor_Alchemy","vendor_Tailoring"},
-},
-["TITLES\\Wrath of the Lich King Titles\\Reputations\\Bloodsail Admiral"] = {
-	{ids="26663,26664,26665,26603,26604,26605,26606,26609,26610,26611,26612,26678,26679,26624,26629,26630,26631,26695,26633,26634,26635,26699,26700,1036,26644,26647,26648,26649,26650,26593,26594,26595,26703,26697,26698,26662,4621"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Achievements"] = {
-	{ids="12306"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Dailies"] = {
-	{ids="12192,11408,11407"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Quests"] = {
-	{ids="29396,11412,11431,11120,12492,11409,13931,12191,11446"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Achievements"] = {
-	includes = {"Lunar_Festival_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Main Questline"] = {
-	includes = {"Lunar_Festival_Main_Quests"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Optimized Elders Path"] = {
-	includes = {"Lunar_Festival_Elder_Paths"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Flame Keeper\\Midsummer Fire Festival Quests"] = {
-	includes = {"MFF_Main_Quests"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Achievements"] = {
-	includes = {"Hallow's_End_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Dailies"] = {
-	includes = {"Hallow's_End_Dailies"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Quests"] = {
-	includes = {"Hallow's_End_Quests"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Achievements"] = {
-	includes = {"LiitA_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Dailies"] = {
-	includes = {"LiitA_Dailies"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Main Questline"] = {
-	includes = {"LiitA_Main_Questline"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Achievements"] = {
-	includes = {"Children's_Week_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Dalaran Oracles Quests"] = {
-	includes = {"Children's_Week_Oracles_Quests"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Dalaran Wolvar Quests"] = {
-	includes = {"Children's_Week_Wolvar_Quests"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Orgrimmar Quests"] = {
-	includes = {"Children's_Week_Ogrimmar"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Shattrath Quests"] = {
-	includes = {"Children's_Week_Shattrath"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Merrymaker\\Feast of Winter Veil Achievements"] = {
-	includes = {"FoWV_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\Merrymaker\\Feast of Winter Veil Quests"] = {
-	includes = {"FoWV_Quests"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Noble"] = {
-	includes = {"Noblegarden_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Pilgrim\\Pilgrim's Bounty"] = {
-	includes = {"Pilgrim's_Bounty_Achievements"},
-},
-["TITLES\\Wrath of the Lich King Titles\\World Events\\The Pilgrim\\Pilgrim's Bounty Quests and Cooking 1-300 Guide"] = {
-	includes = {"Pilgrim's_Bounty_Quests"},
-},
-["TITLES\\Cataclysm Titles\\Quests\\The Flamebreaker"] = {
-	includes = {"H_Firelands_PreQuests"},
-},
-["TITLES\\Cataclysm Titles\\Dungeons & Raids\\Blessed Defender of Nordrassil"] = {
-	{ids="29134,29135,29193,29194,29132,29225"},
-},
-["PETSMOUNTS\\Hunter Pets\\Legion Pets\\Beast Mastery Exotic Pets\\Silithids\\Sandreavers\\Striped Purple Sandreaver"] = {
-	{ids="25067,25094"},
-},
-["PETSMOUNTS\\Hunter Pets\\Legion Pets\\Mechanical Pets\\Mechanostriders\\Blue-Purple Mechanostrider"] = {
-	{ids="4601"},
-},
 ["PETSMOUNTS\\Mounts\\Ground Mounts\\Achievement Mounts\\Highmountain Thunderhoof"] = {
 	{ids="50254",step_onlyif=function() return completedq(49614) end},
 	{ids="48067,49930,41840,50242,41815,48079,41882,41884,41764,48433,48403,41841,48185,41800,48434,49756,41799,48066,48190"},
@@ -10657,6 +10649,16 @@ ZGV.Quest_Cache_Horde = {
 },
 ["PETSMOUNTS\\Mounts\\Flying Mounts\\Miscellaneous Mounts\\Undercity Plaguebat"] = {
 	{ids="52438,50642,50800,50646,50740,50772,50879,50837,52971,50647,52970,52967,52981,53627,53608,53604,53605,50878,50476,50880,53609,53610,53606,52806,50823,52436,52437,50738"},
+},
+["LEVELING\\Rares"] = {
+	{ids="35819",goal_onlyif=function() return itemcount(113460) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35814",goal_onlyif=function() return itemcount(113454) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35811",goal_onlyif=function() return itemcount(113448) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35815",goal_onlyif=function() return itemcount(113456) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35810",goal_onlyif=function() return itemcount(113447) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="36503",goal_onlyif=function() return itemcount(116160) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35818",goal_onlyif=function() return itemcount(113459) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35807",goal_onlyif=function() return itemcount(113444) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
 },
 ["DAILIES\\Mists of Pandaria Dailies\\The Anglers Dailies"] = {
 	includes = {"Anglers_Dailies"},
@@ -10694,6 +10696,447 @@ ZGV.Quest_Cache_Horde = {
 ["DAILIES\\Mists of Pandaria Dailies\\Timeless Isle Dailies"] = {
 	{ids="33374,33211,33338,33334"},
 	includes = {"timeless_isle_prequests"},
+},
+["DUNGEONS\\Classic Dungeons\\Blackfathom Deeps"] = {
+	{ids="34673",step_onlyif=function() return not completedq(34673) end},
+},
+["DUNGEONS\\Classic Dungeons\\Blackrock Depths: Detention Block"] = {
+	{ids="27589",step_onlyif=function() return not completedq(27591) end},
+	{ids="27603",step_onlyif=function() return not completedq(27603) end},
+	{ids="27593",step_onlyif=function() return havequest(27593) end},
+	{ids="27579,27581",step_onlyif=function() return not completedq(27581) end},
+	{ids="27585",step_onlyif=function() return not completedq(27589) end},
+	{ids="27582",step_onlyif=function() return not completedq(27585) end},
+	{ids="27591",step_onlyif=function() return not completedq(27593) end},
+},
+["DUNGEONS\\Classic Dungeons\\Deadmines"] = {
+	{ids="27848",goal_onlyif=function() return havequest(27848) end,step_onlyif=function() return not completedq(27850) end},
+	{ids="27850",step_onlyif=function() return not completedq(27850) end},
+	{ids="27842",step_onlyif=function() return not completedq(27848) end},
+	{ids="27844",step_onlyif=function() return not completedq(27844) end},
+	{ids="27847",step_onlyif=function() return not completedq(27847) end},
+},
+["DUNGEONS\\Classic Dungeons\\Dire Maul: Capital Gardens"] = {
+	{ids="27109",step_onlyif=function() return not completedq(27109) end},
+	{ids="27110,27111,27113",step_onlyif=function() return not completedq(27111) end},
+	{ids="27112",step_onlyif=function() return not completedq(27112) end},
+},
+["DUNGEONS\\Classic Dungeons\\Dire Maul: Gordock Commons"] = {
+	{ids="27119",goal_onlyif=function() return havequest(27119) end},
+	{ids="27124"},
+	{ids="27128",step_onlyif=function() return not completedq(27128) end},
+},
+["DUNGEONS\\Classic Dungeons\\Dire Maul: Warpwood Quarter"] = {
+	{ids="27104",step_onlyif=function() return not completedq(27104) end},
+	{ids="27107",step_onlyif=function() return not completedq(27107) end},
+	{ids="27105",step_onlyif=function() return not completedq(27105) end},
+	{ids="27108",step_onlyif=function() return not completedq(27108) end},
+	{ids="27103",step_onlyif=function() return not completedq(27103) end},
+},
+["DUNGEONS\\Classic Dungeons\\Gnomeregan"] = {
+	{ids="26941",step_onlyif=function() return not completedq(26942) end},
+},
+["DUNGEONS\\Classic Dungeons\\Lower Blackrock Spire"] = {
+	{ids="27440",step_onlyif=function() return havequest(27440) end},
+},
+["DUNGEONS\\Classic Dungeons\\Maraudon: Earth Song Falls"] = {
+	{ids="27692",step_onlyif=function() return not completedq(27692) end},
+},
+["DUNGEONS\\Classic Dungeons\\Maraudon: Foulspore Cavern"] = {
+	{ids="27698",step_onlyif=function() return not completedq(27698) end},
+},
+["DUNGEONS\\Classic Dungeons\\Maraudon: The Wicked Grotto"] = {
+	{ids="27697",step_onlyif=function() return havequest(27697) end},
+},
+["DUNGEONS\\Classic Dungeons\\Ragefire Chasm"] = {
+	{ids="30984",step_onlyif=function() return not completedq(30984) end},
+	{ids="30969,30983",step_onlyif=function() return not completedq(30969) and not completedq(30983) end},
+},
+["DUNGEONS\\Classic Dungeons\\Razorfen Downs"] = {
+	{ids="33513,33514"},
+},
+["DUNGEONS\\Classic Dungeons\\Razorfen Kraul"] = {
+	{ids="26905",step_onlyif=function() return not completedq(26805) end},
+	{ids="26901,26907",step_onlyif=function() return not completedq(26901) or not completedq(26907) end},
+	{ids="26906",step_onlyif=function() return not completedq(26905) end},
+},
+["DUNGEONS\\Classic Dungeons\\Scarlet Halls"] = {
+	{ids="31490",goal_onlyif=function() return not completedq(31490) and not heroic_dung() end},
+	{ids="31497",goal_onlyif=function() return not completedq(31497) and heroic_dung() end},
+	{ids="31495",goal_onlyif=function() return not completedq(31495) and heroic_dung() end},
+	{ids="31493",goal_onlyif=function() return not completedq(31493) and not heroic_dung() end},
+},
+["DUNGEONS\\Classic Dungeons\\Scarlet Monastery"] = {
+	{ids="31516",goal_onlyif=function() return havequest(31516) and heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
+	{ids="31514",goal_onlyif=function() return havequest(31514) and not heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
+	{ids="31515",goal_onlyif=function() return havequest(31515) and heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
+	{ids="31513",goal_onlyif=function() return havequest(31513) and not heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
+},
+["DUNGEONS\\Classic Dungeons\\Scholomance"] = {
+	{ids="31448",step_onlyif=function() return not completedq(31448) and heroic_dung() end},
+	{ids="31447",step_onlyif=function() return not completedq(31447) and not heroic_dung() end},
+	{ids="31442",step_onlyif=function() return not completedq(31442) and heroic_dung() end},
+	{ids="31440",step_onlyif=function() return not completedq(31440) and not heroic_dung() end},
+},
+["DUNGEONS\\Classic Dungeons\\Shadowfang Keep"] = {
+	{ids="27974",step_onlyif=function() return not completedq(27988) end},
+	{ids="27996,27998",step_onlyif=function() return not completedq(27998) end},
+	{ids="27988",step_onlyif=function() return not completedq(27996) end},
+},
+["DUNGEONS\\Classic Dungeons\\Stratholme: Main Gate"] = {
+	{ids="27223",step_onlyif=function() return not completedq(27223) end},
+	{ids="27192",step_onlyif=function() return not completedq(27192) end},
+	{ids="27185",step_onlyif=function() return not completedq(27185) end},
+	{ids="27208",step_onlyif=function() return not completedq(27208) end},
+	{ids="27305",step_onlyif=function() return not completedq(27305) end},
+},
+["DUNGEONS\\Classic Dungeons\\Stratholme: Service Entrance"] = {
+	{ids="27230,27359,27227,27228,27352"},
+},
+["DUNGEONS\\Classic Dungeons\\Sunken Temple"] = {
+	{ids="27605,27633,27604"},
+},
+["DUNGEONS\\Classic Dungeons\\Uldaman"] = {
+	{ids="27679,27680",step_onlyif=function() return not completedq(27680) end},
+	{ids="27681",step_onlyif=function() return not completedq(27681) end},
+	{ids="2278,2280",step_onlyif=function() return not completedq(2280) end},
+	{ids="27682",step_onlyif=function() return not completedq(27682) end},
+},
+["DUNGEONS\\Classic Dungeons\\Wailing Caverns"] = {
+	{ids="26872,26873",step_onlyif=function() return not completedq(26872) or not completedq(26873) end},
+	{ids="26870",step_onlyif=function() return not completedq(26870) end},
+},
+["DUNGEONS\\Classic Dungeons\\Zul'Farrak"] = {
+	{ids="27071,27076,27070,27068"},
+},
+["DUNGEONS\\Classic Raids\\Blackwing Lair"] = {
+	{ids="7784",step_onlyif=function() return completedq(7784) end},
+	{ids="7783",step_onlyif=function() return not completedq(7783) end},
+},
+["DUNGEONS\\Classic Raids\\Ruins of Ahn'Qiraj"] = {
+	{ids="8692",step_onlyif=function() return havequest(8692) end},
+	{ids="8694",step_onlyif=function() return havequest(8694) end},
+	{ids="8706",step_onlyif=function() return havequest(8706) end},
+	{ids="8711",step_onlyif=function() return havequest(8711) end},
+	{ids="8700",step_onlyif=function() return havequest(8700) end},
+	{ids="8791",step_onlyif=function() return havequest(8791) end},
+	{ids="8710",step_onlyif=function() return havequest(8710) end},
+	{ids="8691",step_onlyif=function() return havequest(8691) end},
+	{ids="8704",step_onlyif=function() return havequest(8704) end},
+	{ids="8712",step_onlyif=function() return havequest(8712) end},
+	{ids="8702",step_onlyif=function() return havequest(8702) end},
+	{ids="8709",step_onlyif=function() return havequest(8709) end},
+	{ids="8703",step_onlyif=function() return havequest(8703) end},
+	{ids="8689",step_onlyif=function() return havequest(8689) end},
+	{ids="8697",step_onlyif=function() return havequest(8697) end},
+	{ids="8705",step_onlyif=function() return havequest(8705) end},
+	{ids="8699",step_onlyif=function() return havequest(8699) end},
+	{ids="8556",step_onlyif=function() return havequest(8556) end},
+	{ids="8690",step_onlyif=function() return havequest(8690) end},
+	{ids="8558",step_onlyif=function() return havequest(8558) end},
+	{ids="8701",step_onlyif=function() return havequest(8701) end},
+	{ids="8695",step_onlyif=function() return havequest(8695) end},
+	{ids="8708",step_onlyif=function() return havequest(8708) end},
+	{ids="8557",step_onlyif=function() return havequest(8557) end},
+	{ids="8696",step_onlyif=function() return havequest(8696) end},
+	{ids="8707",step_onlyif=function() return havequest(8707) end},
+	{ids="8698",step_onlyif=function() return havequest(8698) end},
+	{ids="8693",step_onlyif=function() return havequest(8693) end},
+},
+["DUNGEONS\\Classic Raids\\Temple of Ahn'Qiraj"] = {
+	{ids="8560,8561,8544,8562,8559",step_only="Warrior"},
+	{ids="8630,8627,8628,8629,8655",step_only="Paladin"},
+	{ids="8623,8624,8621,8622,8602",step_only="Shaman"},
+	{ids="8640,8637,8641,8638,8639",step_only="Rogue"},
+	{ids="8633,8634,8631,8632,8625",step_only="Mage"},
+	{ids="8661,8662,8663,8660,8664",step_only="Warlock"},
+	{ids="8592,8596,8593,8594,8603",step_only="Priest"},
+	{ids="8626,8658,8659,8656,8657",step_only="Hunter"},
+	{ids="8668,8665,8669,8666,8667",step_only="Druid"},
+	{ids="8801",step_onlyif=function() return not completedq(8801) end},
+	{ids="8784",step_onlyif=function() return havequest(8784) end},
+	{ids="8595,8579"},
+},
+["DUNGEONS\\Outland Dungeons\\Auchindoun: Auchenai Crypts"] = {
+	{ids="29591",step_onlyif=function() return havequest(29591) end},
+	{ids="29590,29596",step_onlyif=function() return not completedq(29590) or not completedq(29596) end},
+},
+["DUNGEONS\\Outland Dungeons\\Auchindoun: Mana-Tombs"] = {
+	{ids="29573,29575",step_onlyif=function() return not completedq(29573) or not completedq(29575) end},
+	{ids="29574",step_onlyif=function() return not completedq(29574) end},
+},
+["DUNGEONS\\Outland Dungeons\\Auchindoun: Sethekk Halls"] = {
+	{ids="29607",step_onlyif=function() return havequest(29607) end},
+	{ids="29605,29606",step_onlyif=function() return havequest(29605) or havequest(29606) end},
+},
+["DUNGEONS\\Outland Dungeons\\Auchindoun: Shadow Labyrinth"] = {
+	{ids="29641",step_onlyif=function() return havequest(29641) end},
+	{ids="29644,29645",step_onlyif=function() return havequest(29644) or havequest(29645) end},
+	{ids="29640",step_onlyif=function() return not completedq(29641) end},
+	{ids="29643",step_onlyif=function() return not completedq(29644) end},
+},
+["DUNGEONS\\Outland Dungeons\\Caverns of Time: The Black Morass"] = {
+	{ids="10297"},
+},
+["DUNGEONS\\Outland Dungeons\\Caverns of Time: Escape from Durnholde Keep"] = {
+	{ids="29599",step_onlyif=function() return havequest(29599) end},
+	{ids="29598",step_onlyif=function() return not completedq(29599) end},
+},
+["DUNGEONS\\Outland Dungeons\\Coilfang Reservoir: Slave Pens"] = {
+	{ids="29564",step_onlyif=function() return not completedq(29564) end},
+	{ids="29563,29565",step_onlyif=function() return not completedq(29563) or not completedq(29565) end},
+},
+["DUNGEONS\\Outland Dungeons\\Coilfang Reservoir: The Steamvault"] = {
+	{ids="29613",step_onlyif=function() return havequest(29613) end},
+	{ids="29615",step_onlyif=function() return havequest(29615) end},
+	{ids="29614",step_onlyif=function() return havequest(29614) end},
+},
+["DUNGEONS\\Outland Dungeons\\Coilfang Reservoir: Underbog"] = {
+	{ids="29570,29568,29691,29567"},
+},
+["DUNGEONS\\Outland Dungeons\\Hellfire Citadel: The Blood Furnace"] = {
+	{ids="29537,29535,29536",step_onlyif=function() return not completedq(29535) or not completedq(29536) or not completedq(29537) end},
+},
+["DUNGEONS\\Outland Dungeons\\Hellfire Citadel: Hellfire Ramparts"] = {
+	{ids="29528,29529,29594",step_onlyif=function() return not completedq(29528) or not completedq(29528) or not completedq(29594) end},
+},
+["DUNGEONS\\Outland Dungeons\\Hellfire Citadel: Shattered Halls"] = {
+	{ids="29654,29649,29656,29652",step_onlyif=function() return havequest(29652) or havequest(29649) or havequest(29656) or havequest(29654) end},
+},
+["DUNGEONS\\Outland Dungeons\\Magister's Terrace"] = {
+	{ids="29687,29685,29686",step_onlyif=function() return havequest(29686) or havequest(29687) or havequest(29685) end},
+	{ids="11490",step_onlyif=function() return not completedq(29685) end},
+	{ids="29684",step_onlyif=function() return not completedq(11490) end},
+},
+["DUNGEONS\\Outland Dungeons\\Tempest Keep: The Arcatraz"] = {
+	{ids="29675,29674,29681"},
+},
+["DUNGEONS\\Outland Dungeons\\Tempest Keep: Botanica"] = {
+	{ids="29660,29667,29669"},
+},
+["DUNGEONS\\Outland Dungeons\\Tempest Keep: The Mechanar"] = {
+	{ids="29658",goal_onlyif=function() return havequest(29658) end},
+	{ids="29657,29659"},
+},
+["DUNGEONS\\Outland Raids\\The Eye"] = {
+	{ids="11007",step_onlyif=function() return havequest(11007) end},
+},
+["DUNGEONS\\Outland Raids\\Hyjal Summit (Battle for Mount Hyjal)"] = {
+	{ids="10277",step_onlyif=function() return havequest(10277) end},
+},
+["DUNGEONS\\Outland Raids\\Magtheridon's Lair"] = {
+	{ids="11003",step_onlyif=function() return not completedq(11003) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Ahn'kahet: The Old Kingdom"] = {
+	{ids="29825,29826,13187"},
+},
+["DUNGEONS\\Northrend Dungeons\\Azjol-Nerub"] = {
+	{ids="29807,29808,29811"},
+},
+["DUNGEONS\\Northrend Dungeons\\Caverns of Time: The Culling of Stratholme"] = {
+	{ids="13149",step_onlyif=function() return havequest(13149) end},
+	{ids="13151",step_onlyif=function() return havequest(13151) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Drak'Tharon Keep"] = {
+	{ids="13129,29828",step_onlyif=function() return havequest(13129) or havequest(29828) end},
+	{ids="30120",step_onlyif=function() return havequest(30120) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Forge of Souls"] = {
+	{ids="24499",step_onlyif=function() return not completedq(24683) end},
+	{ids="24510",goal_onlyif=function() return havequest(24510) end,step_onlyif=function() return not completedq(24499) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Gundrak"] = {
+	{ids="29834,29844,29839",step_onlyif=function() return havequest(29834) or havequest(29839) or havequest(29844) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Halls of Lightning"] = {
+	{ids="29861,29862,29860",step_onlyif=function() return havequest(29860) or havequest(29861) or havequest(29862) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Halls of Reflection"] = {
+	{ids="24711",goal_onlyif=function() return havequest(24711) end,step_onlyif=function() return not completedq(24500) end},
+	{ids="24500",step_onlyif=function() return not completedq(24500) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Halls of Stone"] = {
+	{ids="29848,29850",step_onlyif=function() return havequest(29848) or havequest(29850) end},
+	{ids="13207",step_onlyif=function() return havequest(13207) end},
+},
+["DUNGEONS\\Northrend Dungeons\\The Nexus"] = {
+	{ids="11911",step_onlyif=function() return havequest(11911) end},
+	{ids="13094",step_onlyif=function() return havequest(13094) end},
+	{ids="11973",step_onlyif=function() return havequest(11973) end},
+	{ids="11905",step_onlyif=function() return havequest(11905) end},
+},
+["DUNGEONS\\Northrend Dungeons\\The Oculus"] = {
+	{ids="13126",step_onlyif=function() return not completedq(13127) end},
+	{ids="13128",step_onlyif=function() return havequest(13128) end},
+	{ids="13127",step_onlyif=function() return not completedq(13128) end},
+	{ids="13124",step_onlyif=function() return havequest(13124) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Pit of Saron"] = {
+	{ids="24710",step_onlyif=function() return not completedq(24711) end},
+	{ids="24498",step_onlyif=function() return not completedq(24710) end},
+	{ids="24683",goal_onlyif=function() return havequest(24683) end,step_onlyif=function() return not completedq(24498) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Trial of the Champion"] = {
+	{ids="29851",step_onlyif=function() return havequest(29851) end},
+},
+["DUNGEONS\\Northrend Dungeons\\Utgarde Keep"] = {
+	{ids="13206,30112,11262"},
+},
+["DUNGEONS\\Northrend Dungeons\\Utgarde Keep: Utgarde Pinnacle"] = {
+	{ids="29864",step_onlyif=function() return havequest(29864) end},
+	{ids="13131,13132",step_onlyif=function() return havequest(13131) or havequest(13132) end},
+},
+["DUNGEONS\\Northrend Dungeons\\The Violet Hold"] = {
+	{ids="29830",step_onlyif=function() return havequest(29830) end},
+},
+["DUNGEONS\\Northrend Raids\\Naxxramas"] = {
+	{ids="13375",step_onlyif=function() return havequest(13375) end},
+	{ids="13372",step_onlyif=function() return havequest(13372) end},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Blackrock Caverns"] = {
+	{ids="28741",step_onlyif=function() return havequest(28741) end},
+	{ids="28740,28737,28735,28738"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\End Time"] = {
+	{ids="30097,30096"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Grim Batol"] = {
+	{ids="28853,28854,28852"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Hour of Twilight"] = {
+	{ids="30102,30103,30105"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Lost City of the Tol'vir"] = {
+	{ids="28783,28781"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\The Stonecore"] = {
+	{ids="28815,28814"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Throne of the Tides"] = {
+	{ids="28836",step_onlyif=function() return havequest(28836) end},
+	{ids="28834"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Vortex Pinnacle"] = {
+	{ids="28779,28760"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Well of Eternity"] = {
+	{ids="30100,30101,30104,30098,30099"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Zul'Aman"] = {
+	{ids="29186,11196"},
+},
+["DUNGEONS\\Cataclysm Dungeons\\Zul Gurub"] = {
+	{ids="29241,29172,29173,29242,29175,29252"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Gate of the Setting Sun"] = {
+	{ids="31363,31364"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Mogu'shan Palace"] = {
+	{ids="31357,31360"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Scarlet Halls"] = {
+	{ids="31495,31497"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Scarlet Monastery"] = {
+	{ids="31515,31516"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Scholomance"] = {
+	{ids="31442,31448"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Shado-Pan Monastery"] = {
+	{ids="31342",step_onlyif=function() return havequest(31342) end},
+	{ids="30757",step_onlyif=function() return havequest(30757) end},
+},
+["DUNGEONS\\Pandaria Dungeons\\Siege of Niuzao Temple"] = {
+	{ids="31365,31366"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Stormstout Brewery"] = {
+	{ids="31324,31327"},
+},
+["DUNGEONS\\Pandaria Dungeons\\Temple of the Jade Serpent"] = {
+	{ids="31355,31356"},
+},
+["DUNGEONS\\Pandaria Raids\\Siege of Orgrimmar"] = {
+	{ids="33147,33138",step_onlyif=function() return not completedq(33138) end},
+},
+["PETSMOUNTS\\Hunter Pets\\Legion Pets\\Beast Mastery Exotic Pets\\Silithids\\Sandreavers\\Striped Purple Sandreaver"] = {
+	{ids="25067,25094"},
+},
+["PETSMOUNTS\\Hunter Pets\\Legion Pets\\Mechanical Pets\\Mechanostriders\\Blue-Purple Mechanostrider"] = {
+	{ids="4601"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Icehoof"] = {
+	{ids="37053",goal_onlyif=function() return havequest(37053) end},
+	{ids="37050",goal_onlyif=function() return havequest(37050) end},
+	{ids="37048",goal_onlyif=function() return havequest(37048) end},
+	{ids="37052",goal_onlyif=function() return havequest(37052) end},
+	{ids="37057",goal_onlyif=function() return havequest(37057) end},
+	{ids="37056",goal_onlyif=function() return havequest(37056) end},
+	{ids="37051",goal_onlyif=function() return havequest(37051) end},
+	{ids="37059",goal_onlyif=function() return havequest(37059) end},
+	{ids="37055",goal_onlyif=function() return havequest(37055) end},
+	{ids="37058",goal_onlyif=function() return havequest(37058) end},
+	{ids="37049",goal_onlyif=function() return havequest(37049) end},
+	{ids="37054",goal_onlyif=function() return havequest(37054) end},
+	{ids="36912"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Meadowstomper"] = {
+	{ids="37069",goal_onlyif=function() return havequest(37069) end},
+	{ids="37067",goal_onlyif=function() return havequest(37067) end},
+	{ids="37065",goal_onlyif=function() return havequest(37065) end},
+	{ids="37066",goal_onlyif=function() return havequest(37066) end},
+	{ids="37063",goal_onlyif=function() return havequest(37063) end},
+	{ids="37064",goal_onlyif=function() return havequest(37064) end},
+	{ids="37068",goal_onlyif=function() return havequest(37068) end},
+	{ids="36946"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Riverwallow"] = {
+	{ids="37079,37072,37073,37074,37075,37076,37077,37078,37071",goal_onlyif=function() return havequest(37049) end},
+	{ids="36945"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Rocktusk"] = {
+	{ids="37032",goal_onlyif=function() return havequest(37032) end},
+	{ids="37037",goal_onlyif=function() return havequest(37037) end},
+	{ids="37039",goal_onlyif=function() return havequest(37039) end},
+	{ids="37034",goal_onlyif=function() return havequest(37034) end},
+	{ids="37041",goal_onlyif=function() return havequest(37041) end},
+	{ids="37038",goal_onlyif=function() return havequest(37038) end},
+	{ids="37035",goal_onlyif=function() return havequest(37035) end},
+	{ids="37036",goal_onlyif=function() return havequest(37036) end},
+	{ids="37040",goal_onlyif=function() return havequest(37040) end},
+	{ids="37033",goal_onlyif=function() return havequest(37033) end},
+	{ids="36944"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Silverpelt"] = {
+	{ids="37094",goal_onlyif=function() return havequest(37094) end},
+	{ids="37103",goal_onlyif=function() return havequest(37103) end},
+	{ids="37098",goal_onlyif=function() return havequest(37098) end},
+	{ids="37093",goal_onlyif=function() return havequest(37093) end},
+	{ids="37104",goal_onlyif=function() return havequest(37104) end},
+	{ids="37102",goal_onlyif=function() return havequest(37102) end},
+	{ids="37100",goal_onlyif=function() return havequest(37100) end},
+	{ids="37099",goal_onlyif=function() return havequest(37099) end},
+	{ids="37101",goal_onlyif=function() return havequest(37101) end},
+	{ids="37097",goal_onlyif=function() return havequest(37097) end},
+	{ids="37096",goal_onlyif=function() return havequest(37096) end},
+	{ids="37095",goal_onlyif=function() return havequest(37095) end},
+	{ids="36917"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Snarler"] = {
+	{ids="37110",goal_onlyif=function() return havequest(37110) end},
+	{ids="37111",goal_onlyif=function() return havequest(37111) end},
+	{ids="37107",goal_onlyif=function() return havequest(37107) end},
+	{ids="37105",goal_onlyif=function() return havequest(37105) end},
+	{ids="37109",goal_onlyif=function() return havequest(37109) end},
+	{ids="37106",goal_onlyif=function() return havequest(37106) end},
+	{ids="37108",goal_onlyif=function() return havequest(37108) end},
+	{ids="36950"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Event Mounts\\Minion of Grumpus"] = {
+	{ids="39668,39649,39648,39651"},
+},
+["PETSMOUNTS\\Mounts\\Ground Mounts\\Garrison Mounts\\Coalfist Gronnling"] = {
+	includes = {"Garrison_CommandTable"},
 },
 ["PETSMOUNTS\\Mounts\\Ground Mounts\\Battle Pet Mounts\\Brilliant Direbeak"] = {
 	{ids="44984,44977,44985,44978,44986,44979,44987,44980,44973,44981,44982,44975,44983,44976,44988"},
@@ -11182,13 +11625,23 @@ ZGV.Quest_Cache_Horde = {
 	{ids="50703",goal_onlyif=function() return havequest(50703) or completedq(50703) end},
 	{ids="52023",goal_onlyif=function() return havequest(52023) or completedq(52023) end},
 	{ids="52024",goal_onlyif=function() return havequest(52024) or completedq(52024) end},
-	{ids="49334,50617,48585,47573,50641,50904,48872,48888,48896,49669,49677,50745,51773,48992,51056,51829,50817,48530,48554,49327,48315,48331,47319,47327,50913,48889,49662,51718,50746,50770,48993,49001,50539,51057,50818,48531,50834,48555,48324,48332,47320,51161,47870,50739,51775,50771,49002,48532,47313,47321,51162,49138,47871,49664,51991,50979,50748,47959,48987,49003,51059,50812,48533,48549,48326,47314,47322,49139,49665,50980,47928,50749,49227,48988,48996,51060,47498,48534,51602,48550,48327,47315,47578,49040,51164,48330,48335,47873,49666,48334,50702,48840,48322,48715,50755,48320,50750,47638,47501,47502,47503,50535,51053,51061,47499,51717,48790,50328,48551,51364,47497,49340,47570,48846,47324,48657,51165,47576,49141,48894,49667,48655,50656,47581,47574,47965,47571,47577,50751,47943,51772,50775,50757,49261,51054,51062,49335,50550,52129,50536,51357,48314,49333,48321,47564,47317,47580,51668,48871,49005,48887,48895,49668,49676,47874,49437,51810,48656,48684,47939,50752,48847,47716,48991,51574,49262,51055,51573,50561,48529,48850,47316,48553,48313,50794"},
+	{ids="49334,50617,48585,47573,50641,50904,48872,48888,48896,49669,48657,50745,51773,48992,51056,51829,50817,48530,48554,49327,48315,48331,47319,47327,50913,48889,49662,51718,50746,50770,48993,49001,50539,51057,50818,48531,50834,48555,48324,48332,47320,51161,47870,50739,51775,50771,49002,48532,50596,47313,47321,51162,49138,47871,49664,51991,50979,50748,47959,48987,49003,51059,50812,48533,48549,48326,47314,47322,49139,49665,50980,47928,50749,49227,48988,48996,51060,47498,48534,51602,48550,48327,47315,47578,49040,51164,48330,48335,47873,49666,48334,50702,48840,48322,48715,50755,48320,50750,47638,47501,47502,47503,50535,51053,51061,47499,51717,48790,50328,48551,51364,47497,49340,47577,48846,47324,51810,51165,47576,49141,48894,49667,48655,50656,47581,47574,47965,47571,47570,50751,47943,51772,50775,50757,49261,51054,51062,49335,50550,48684,50536,51357,48314,49333,48321,47564,47317,47580,51668,48871,49005,48887,48895,49668,48656,47874,49437,51574,49676,47316,47939,50752,52129,48847,48991,47716,49262,51055,51573,50561,48529,49677,48850,48553,48313,50794"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\War Campaign"] = {
+	{ids="53065",goal_onlyif=function() return havequest(53065) or completedq(53065) end},
 	{ids="53050",goal_onlyif=function() return havequest(53050) or completedq(53050) end},
 	{ids="53056",goal_onlyif=function() return havequest(53056) or completedq(53056) end},
-	{ids="53444,53446,51371,51789,53454,53456,53458,53208,53462,53212,51788,51787,51786,51771,53348,53602,51785,51590,51592,51594,51596,51598,51222,51784,51352,53065,51545,53210,52746,50417,53443,53445,53207,51343,53451,51221,53455,53079,53333,53461,53463,51386,51220,51427,51770,50386,53097,51339,51589,51591,51593,51595,51597,51599,51916,51540,51353,53330,51240,51601,53459,52749,53439"},
+	{ids="51601,52749,51789,51916,51788,51787,51597,51785,51770,51771,51784,53602,51599,51589,51590,53079,51592,51593,51594,51595,51596,53333,51598,52746,51786,51591"},
 	includes = {"Stormsong_Valley_Foothold_Quests","Tiragarde_Sound_Foothold_Quests","Choose_Foothold_3","Choose_Foothold_2","Drustvar_Foothold_Quests","Choose_Foothold_1"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Swiftwind Post (Drustvar)"] = {
+	{ids="52275,52276"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Wolf's Den (Tiragarde Sound)"] = {
+	{ids="52005,52127"},
+},
+["LEVELING\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment"] = {
+	{ids="50973,53405"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Nightborne Race Unlock"] = {
 	{ids="50254",step_onlyif=function() return completedq(48433) end},
@@ -11197,1374 +11650,6 @@ ZGV.Quest_Cache_Horde = {
 ["LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Highmountain Tauren Race Unlock"] = {
 	{ids="50254",step_onlyif=function() return completedq(49614) end},
 	{ids="48067,49930,41840,50242,41815,48079,41882,41884,41764,48433,48403,41841,48185,41800,48434,49756,41799,48066,48190"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Icehoof"] = {
-	{ids="37053",goal_onlyif=function() return havequest(37053) end},
-	{ids="37050",goal_onlyif=function() return havequest(37050) end},
-	{ids="37048",goal_onlyif=function() return havequest(37048) end},
-	{ids="37052",goal_onlyif=function() return havequest(37052) end},
-	{ids="37057",goal_onlyif=function() return havequest(37057) end},
-	{ids="37056",goal_onlyif=function() return havequest(37056) end},
-	{ids="37051",goal_onlyif=function() return havequest(37051) end},
-	{ids="37059",goal_onlyif=function() return havequest(37059) end},
-	{ids="37055",goal_onlyif=function() return havequest(37055) end},
-	{ids="37058",goal_onlyif=function() return havequest(37058) end},
-	{ids="37049",goal_onlyif=function() return havequest(37049) end},
-	{ids="37054",goal_onlyif=function() return havequest(37054) end},
-	{ids="36912"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Meadowstomper"] = {
-	{ids="37069",goal_onlyif=function() return havequest(37069) end},
-	{ids="37067",goal_onlyif=function() return havequest(37067) end},
-	{ids="37065",goal_onlyif=function() return havequest(37065) end},
-	{ids="37066",goal_onlyif=function() return havequest(37066) end},
-	{ids="37063",goal_onlyif=function() return havequest(37063) end},
-	{ids="37064",goal_onlyif=function() return havequest(37064) end},
-	{ids="37068",goal_onlyif=function() return havequest(37068) end},
-	{ids="36946"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Riverwallow"] = {
-	{ids="37079,37072,37073,37074,37075,37076,37077,37078,37071",goal_onlyif=function() return havequest(37049) end},
-	{ids="36945"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Rocktusk"] = {
-	{ids="37032",goal_onlyif=function() return havequest(37032) end},
-	{ids="37037",goal_onlyif=function() return havequest(37037) end},
-	{ids="37039",goal_onlyif=function() return havequest(37039) end},
-	{ids="37034",goal_onlyif=function() return havequest(37034) end},
-	{ids="37041",goal_onlyif=function() return havequest(37041) end},
-	{ids="37038",goal_onlyif=function() return havequest(37038) end},
-	{ids="37035",goal_onlyif=function() return havequest(37035) end},
-	{ids="37036",goal_onlyif=function() return havequest(37036) end},
-	{ids="37040",goal_onlyif=function() return havequest(37040) end},
-	{ids="37033",goal_onlyif=function() return havequest(37033) end},
-	{ids="36944"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Silverpelt"] = {
-	{ids="37094",goal_onlyif=function() return havequest(37094) end},
-	{ids="37103",goal_onlyif=function() return havequest(37103) end},
-	{ids="37098",goal_onlyif=function() return havequest(37098) end},
-	{ids="37093",goal_onlyif=function() return havequest(37093) end},
-	{ids="37104",goal_onlyif=function() return havequest(37104) end},
-	{ids="37102",goal_onlyif=function() return havequest(37102) end},
-	{ids="37100",goal_onlyif=function() return havequest(37100) end},
-	{ids="37099",goal_onlyif=function() return havequest(37099) end},
-	{ids="37101",goal_onlyif=function() return havequest(37101) end},
-	{ids="37097",goal_onlyif=function() return havequest(37097) end},
-	{ids="37096",goal_onlyif=function() return havequest(37096) end},
-	{ids="37095",goal_onlyif=function() return havequest(37095) end},
-	{ids="36917"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Dailies Mounts\\Trained Snarler"] = {
-	{ids="37110",goal_onlyif=function() return havequest(37110) end},
-	{ids="37111",goal_onlyif=function() return havequest(37111) end},
-	{ids="37107",goal_onlyif=function() return havequest(37107) end},
-	{ids="37105",goal_onlyif=function() return havequest(37105) end},
-	{ids="37109",goal_onlyif=function() return havequest(37109) end},
-	{ids="37106",goal_onlyif=function() return havequest(37106) end},
-	{ids="37108",goal_onlyif=function() return havequest(37108) end},
-	{ids="36950"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Event Mounts\\Minion of Grumpus"] = {
-	{ids="39668,39649,39648,39651"},
-},
-["PETSMOUNTS\\Mounts\\Ground Mounts\\Garrison Mounts\\Coalfist Gronnling"] = {
-	includes = {"Garrison_CommandTable"},
-},
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Slithershock Elver"] = {
-	{ids="38300"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Cinder Pup"] = {
-	includes = {"Garrison_CommandTable"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Meadowstomper Calf"] = {
-	{ids="34819,34869,34900"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Young Talbuk"] = {
-	{ids="38300"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Everbloom Peachick"] = {
-	{ids="37150"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Ikky"] = {
-	{ids="34838"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Syd the Squid"] = {
-	{ids="36471"},
-},
-["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Iron Starlette"] = {
-	{ids="36940"},
-},
-["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Sky-Bo"] = {
-	{ids="34774"},
-},
-["PETSMOUNTS\\Battle Pets\\Undead Pets\\Bone Serpent"] = {
-	{ids="38300"},
-},
-["PETSMOUNTS\\Hunter Pets\\Beast Mastery Exotic Pets\\Shale Spiders\\Green Shale Spider (Rare Spawn)"] = {
-	includes = {"H_Therazane_PreQuest"},
-},
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Magical Crawdad"] = {
-	includes = {"Mr_Pinchy"},
-},
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Pengu"] = {
-	includes = {"Kaluak_Rep","dailies_rep_mount"},
-},
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Strand Crawler"] = {
-	{ids="29317",step_onlyif=function() return havequest(29317) end},
-	{ids="29319,29361,29320,29322",step_onlyif=function() return havequest(29320) or havequest(29361) or havequest(29319) or havequest(29322) end},
-	{ids="13834,13832,13836,13833,13830"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Bombay Cat"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Cornish Rex Cat"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Dun Morogh Cub"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Durotar Scorpion"] = {
-	{ids="13697,13763,13765,13707,13829,13726,13668,13767,13762,13839,13856,13764,13838"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Hyjal Bear Cub"] = {
-	{ids="29283"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Lashtail Hatchling"] = {
-	{ids="26321,26325,26359,26278,26386,26330,26334,26323,26362,26360,26350,26351,29208,26332,26317"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Orange Tabby Cat"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Panther Cub"] = {
-	{ids="29231,29220,29228,29232,29221,29222,29226,29230,29223,29227"},
-},
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Silver Tabby Cat"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\Elwynn Lamb"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\Mulgore Hatchling"] = {
-	{ids="13774,13776,13838,13720,13829,13728,13668,13775,13777,13839,13773,13858,13709"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\Porcupette"] = {
-	{ids="31926",step_onlyif=function() return completedq(31920) end},
-	{ids="31955,31956,31971,31958,31957,31953,31954,31991",step_onlyif=function() return completedq(31970) end},
-	{ids="31909"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\Snowshoe Rabbit"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\White Kitten"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\Wolpertinger"] = {
-	includes = {"Brewfest_Dailies"},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Ammen Vale Lashling"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Dark Phoenix Hatchling"] = {
-	includes = {"misc_rep_mount"},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Lumpy"] = {
-	{ids="6983"},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pebble"] = {
-	{ids="26656,26658,27041,27932,26410,27938,27059,27442,26436,26438,26313,26315,26710,26827,26575,26577,27722,26835,28869,26585,26709,26792,26591,27101,27007,26833,26832,26829,26857,26831,26861,26328,26484,27043,27123,26871,27008,26875,26750,26625,26500,27010,26250,26752,26254,26256,26766,26768,26770,26411,26583,26582,26326,26579,26581,26657,26659,27931,26409,27935,27937,26580,26314,27135,26441,26440,26439,26427,26437,26869,26426,26377,26564,26312,27203,26376,26375,26828,26576,26578,26834,26836,26584,26762,26413,26971,27100,27102,26501,26502,27934,26791,26537,26755,27061,26632,26244,26246,26247,27126,26248,26876,27005,26245,27136,26249,26251,26507,26255,26258,26259,26261,26771,26260,26499,27933"},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Searing Scorchling"] = {
-	includes = {"H_Firelands_PreQuests"},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Teldrassil Sproutling"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Blue Mini Jouster"] = {
-	{ids="25761,25255,25392,25269,25525,25656,25277,25279,25408,25664,25412,25795,25424,25807,25301,25430,25940,25317,25319,25321,25323,25325,25460,25462,25464,25599,25355,25740,25234,25617,25492,29177,25758,25381,29066,25385,25776,25270,25272,25655,25663,25411,25544,25298,25300,25810,25560,27721,25523,25312,25764,25316,25746,25574,25576,25578,25763,25328,25584,25332,27874,25575,25303,25665,28805,25404,25600,25472,25731,25490,25354,25297,25612,25233,25428,25491,25493,25382,25370,25577,25320,25630,25324,28790"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Blue Moth"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Gold Mini Jouster"] = {
-	{ids="25761,25255,25392,25269,25525,25656,25277,25279,25408,25664,25412,25795,25424,25807,25301,25430,25940,25317,25319,25321,25323,25325,25460,25462,25464,25599,25355,25740,25234,25617,25492,29177,25758,25381,29066,25385,25776,25270,25272,25655,25663,25411,25544,25298,25300,25810,25560,27721,25523,25312,25764,25316,25746,25574,25576,25578,25763,25328,25584,25332,27874,25575,25303,25665,28805,25404,25600,25472,25731,25490,25354,25297,25612,25233,25428,25491,25493,25382,25370,25577,25320,25630,25324,28790"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Great Horned Owl"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Hawk Owl"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Plump Turkey"] = {
-	includes = {"Pilgrim's_Bounty_Dailies","Pilgrim's_Bounty_Achievements","Pilgrim's_Bounty_Quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Rustberg Gull"] = {
-	{ids="28679,28680,28681,28682,28683,28684,28685,28686,28687,28689,28690,28691,28692,28693,28694,28695,28696,28697,28698,28700,28657,28721,28659,28660,28661,28662,28663,28664,28665,28668,28669,28670,28678,28658"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Tiny Flamefly"] = {
-	{ids="28436,28421,28437,28422,28438,28423,28439,28424,28440,28425,28441,28426,28225,28427,28226,28428,28227,28429,28430,28491,28431,28442,28432,28417,28433,28418,28434,28419,28435,28420,28515"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Tirisfal Batling"] = {
-	{ids="13710,13729,13838,13780,13782,13829,13668,13721,13860,13839,13781,13778,13779"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Westfall Chicken"] = {
-	{ids="3861"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\White Moth"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Yellow Moth"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Argent Gruntling"] = {
-	{ids="13668,13829,13838,13839"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Enchanted Broom"] = {
-	{ids="13785,13787,13731,13838,13722,13784,13711,13668,13859,13839,13786,13783,13829"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Festival Lantern"] = {
-	includes = {"Lunar_Festival_Elder_Paths","Lunar_Festival_Main_Quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Lunar Lantern"] = {
-	includes = {"Lunar_Festival_Elder_Paths","Lunar_Festival_Main_Quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Magic Lamp"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Shimmering Wyrmling"] = {
-	{ids="13668,13829,13838,13839"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Willy"] = {
-	{ids="10967"},
-},
-["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Clockwork Rocket Bot"] = {
-	{ids="6983,6984"},
-},
-["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Mechanopeep"] = {
-	includes = {"auctioneer"},
-},
-["PETSMOUNTS\\Battle Pets\\Undead Pets\\Creepy Crate"] = {
-	includes = {"Hallow's_End_Quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Undead Pets\\Macabre Marionette"] = {
-	{ids="14166"},
-	includes = {"cooking_fire"},
-},
-["PETSMOUNTS\\Battle Pets\\Undead Pets\\Sen'jin Fetish"] = {
-	{ids="13770,13772,13838,13857,13769,13771,13668,13727,13719,13839,13708,13768,13829"},
-},
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Fishy"] = {
-	{ids="31239"},
-},
-["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Tiny Goldfish"] = {
-	{ids="30701,30585,30754,30698,30586,30763,30613,30753,30658,30700,30584,30588,30598,30678"},
-	{ids="31370",step_onlyif=function() return not completedq(31370) end},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Air Spirit"] = {
-	{ids="32440"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Earth Spirit"] = {
-	{ids="32441"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Fire Spirit"] = {
-	{ids="32434"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
-},
-["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Water Spirit"] = {
-	{ids="32439"},
-	{ids="32428",step_onlyif=function() return not completedq(32428) end},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Chi-ji Kite"] = {
-	includes = {"follow_path_herbs"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Yu'lon Kite"] = {
-	includes = {"follow_path_herbs"},
-},
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Mountain Panda"] = {
-	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Red Panda"] = {
-	includes = {"H_Beasts_of_Fable","H_Battlepet_quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Snowy Panda"] = {
-	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
-},
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Sunfur Panda"] = {
-	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
-},
-["ACHIEVEMENTS\\Dungeons & Raids\\Classic\\King of Dire Maul"] = {
-	{ids="27128",step_onlyif=function() return not completedq(27128) end},
-	{ids="27112",step_onlyif=function() return not completedq(27112) end},
-	{ids="27108",step_onlyif=function() return not completedq(27108) end},
-	{ids="27104",step_onlyif=function() return not completedq(27104) end},
-	{ids="27103",step_onlyif=function() return not completedq(27103) end},
-	{ids="27109",step_onlyif=function() return not completedq(27109) end},
-	{ids="27107",step_onlyif=function() return not completedq(27107) end},
-	{ids="27110,27111,27113",step_onlyif=function() return not completedq(27111) end},
-	{ids="27105",step_onlyif=function() return not completedq(27105) end},
-},
-["ACHIEVEMENTS\\Dungeons & Raids\\Cataclysm Dungeon\\Bear-ly Made It"] = {
-	{ids="29217"},
-},
-["ACHIEVEMENTS\\General\\Cataclysmically Delicious"] = {
-	includes = {"auctioneer"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\100 Cooking Awards"] = {
-	{ids="13089",step_onlyif=function() return not completedq(13089) end},
-	includes = {"H_Dalaran_Cooking_Dailies","Org_Cooking_Dailies"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\The Cake Is Not A Lie"] = {
-	includes = {"the_cake_is_not_a_lie"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Captain Rumsey's Lager"] = {
-	{ids="13089",step_onlyif=function() return not completedq(13089) end},
-	{ids="13830,13832,13834,26543,11380,13836,26572,13833,26556,11377,11379,11381,26557,26588"},
-	includes = {"H_Dalaran_Cooking_Dailies"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Cooking With Style"] = {
-	{ids="13089",step_onlyif=function() return not completedq(13089) end},
-	includes = {"H_Dalaran_Cooking_Dailies"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Dinner Impossible"] = {
-	includes = {"trainer_Cooking"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Iron Chef"] = {
-	{ids="6610,9356,13090,9349,9361,8307,8313"},
-	includes = {"trainer_Cooking"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Kickin' It Up a Notch"] = {
-	{ids="11377",goal_onlyif=function() return havequest(11377) end},
-	{ids="11381",goal_onlyif=function() return havequest(11381) end},
-	{ids="11380",goal_onlyif=function() return havequest(11380) end},
-	{ids="11379",goal_onlyif=function() return havequest(11379) end},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Let's Do Lunch: Orgrimmar"] = {
-	{ids="26234",goal_only="Troll",goal_onlyif=function() return havequest(26234) end},
-	{ids="26233",goal_only="Orc,Scourge,Tauren,BloodElf,Goblin",goal_onlyif=function() return havequest(26233) end},
-	{ids="26226",goal_onlyif=function() return havequest(26226) end},
-	{ids="26235",goal_onlyif=function() return havequest(26235) end},
-	{ids="26227",goal_onlyif=function() return havequest(26227) end},
-	{ids="26220",goal_onlyif=function() return havequest(26220) end},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Let's Do Lunch: Thunder Bluff"] = {
-	{ids="29365",goal_onlyif=function() return havequest(29365) end},
-	{ids="29364",goal_onlyif=function() return havequest(29364) end},
-	{ids="29363",goal_onlyif=function() return havequest(29363) end},
-	{ids="29362",goal_onlyif=function() return havequest(29362) end},
-	{ids="29358",goal_onlyif=function() return havequest(29358) end},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Let's Do Lunch: Undercity"] = {
-	{ids="29360",goal_onlyif=function() return havequest(29360) end},
-	{ids="29334",goal_onlyif=function() return havequest(29334) end},
-	{ids="29333",goal_onlyif=function() return havequest(29333) end},
-	{ids="29315",goal_onlyif=function() return havequest(29315) end},
-	{ids="29332",goal_onlyif=function() return havequest(29332) end},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\The Northrend Gourmet"] = {
-	{ids="12645,12644,12634,13090"},
-	includes = {"trainer_Cooking","vendor_Cooking"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\Our Daily Bread"] = {
-	includes = {"Our_Daily_Bread"},
-},
-["ACHIEVEMENTS\\Professions\\Cooking\\The Outland Gourmet"] = {
-	{ids="9356,9361,9349"},
-	includes = {"trainer_Cooking"},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Accomplished Angler"] = {
-	includes = {"The_Scavenger","The_Lurker_Above","Fish_Don't_Leave_Footprints","One_That_Didn't_Get_Away","Master_Angler_of_Azeroth","Grand_Master_Fisherman","Outland_Angler","Master_Angler_of_Northrend","Old_Gnome_and_the_Sea","Old_Man_Barlowned","Mr_Pinchy","Thousand_Fish","The_Coin_Master","The_Fishing_Diplomat"},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Chasing Marcia"] = {
-	{ids="13833",goal_onlyif=function() return havequest(13833) end},
-	{ids="13834",goal_onlyif=function() return havequest(13834) end},
-	{ids="13832",goal_onlyif=function() return havequest(13832) end},
-	{ids="13830",goal_onlyif=function() return havequest(13830) end},
-	{ids="13836",goal_onlyif=function() return havequest(13836) end},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Fish or Cut Bait: Orgrimmar"] = {
-	{ids="26543",goal_onlyif=function() return havequest(26543) end},
-	{ids="26556",goal_onlyif=function() return havequest(26556) end},
-	{ids="26557",goal_onlyif=function() return havequest(26557) end},
-	{ids="26572",goal_onlyif=function() return havequest(26572) end},
-	{ids="26588",goal_onlyif=function() return havequest(26588) end},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Fish or Cut Bait: Thunder Bluff"] = {
-	{ids="29354",goal_onlyif=function() return havequest(29354) end},
-	{ids="29345",goal_onlyif=function() return havequest(29345) end},
-	{ids="29346",goal_onlyif=function() return havequest(29346) end},
-	{ids="29348",goal_onlyif=function() return havequest(29348) end},
-	{ids="29349",goal_onlyif=function() return havequest(29349) end},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Fish or Cut Bait: Undercity"] = {
-	{ids="29361",goal_onlyif=function() return havequest(29361) end},
-	{ids="29322",goal_onlyif=function() return havequest(29322) end},
-	{ids="29319",goal_onlyif=function() return havequest(29319) end},
-	{ids="29317",goal_onlyif=function() return havequest(29317) end},
-	{ids="29320",goal_onlyif=function() return havequest(29320) end},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Master Angler of Azeroth"] = {
-	{ids="32435,32436,8193"},
-},
-["ACHIEVEMENTS\\Professions\\Fishing\\Old Man Barlowned"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-},
-["ACHIEVEMENTS\\Quests\\Eastern Kingdoms\\Full Caravan"] = {
-	{ids="27487,27488,27489,27367,27368,27432,27370,27371,27372,27373,27381,27382,27383,27384,27385,27449,27387,27388,27389,27390,27455,27456,27457,27522,27524,27525,27463,27464,27465,27466,27527,27526,27551,27369,27386,27392"},
-},
-["ACHIEVEMENTS\\Quests\\Eastern Kingdoms\\Ready, Set, Goat!"] = {
-	{ids="27775",step_onlyif=function() return not completedq(27776) end},
-},
-["ACHIEVEMENTS\\Quests\\Outland\\Blade's Edge Bomberman"] = {
-	{ids="11102",goal_only="Druid"},
-	{ids="11010",goal_onlyif=function() return not Druid end},
-	{ids="11025,11030,11062,11023"},
-},
-["ACHIEVEMENTS\\Quests\\Outland\\Bombs Away"] = {
-	{ids="11098,11008"},
-},
-["ACHIEVEMENTS\\Quests\\Northrend\\D.E.H.T.A's Little P.I.T.A."] = {
-	{ids="11865,11884,11871,11892,11879,11866,11870,11872,11876,11878,11869"},
-},
-["ACHIEVEMENTS\\Quests\\Northrend\\Guru of Drakuru"] = {
-	{ids="12713"},
-	includes = {"BetrayalDrakuru","CleansingDrakTharon"},
-},
-["ACHIEVEMENTS\\Quests\\Northrend\\Rapid Defense"] = {
-	{ids="12372"},
-},
-["ACHIEVEMENTS\\Quests\\Northrend\\Savior of the Oracles"] = {
-	includes = {"Oracles_PreQuests","Oracles_Dailies"},
-},
-["ACHIEVEMENTS\\Quests\\Northrend\\Veteran of the Wrathgate"] = {
-	{ids="12064,12072,12189,12221,12036,12500,12498,12497,11983,12053,12200,12069,12224,12218,12496,12008,12140,12034,12063,12071,11978,12188"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\The 'Unbeatable?' Pterodactyl: BEATEN."] = {
-	{ids="29177"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\And the Meek Shall Inherit Kalimdor"] = {
-	{ids="29147",step_onlyif=function() return havequest(29147) or completedq(29147) end},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Beware of the 'Unbeatable?' Pterodactyl"] = {
-	{ids="25761,25255,25392,25269,25525,25656,25277,25279,25408,25664,25412,25795,25424,25807,25301,25430,25940,25317,25319,25321,25323,25325,25460,25462,25464,25599,25355,25740,25234,25617,25492,25758,25381,29066,25385,25776,25270,25272,25655,25663,25411,25544,25298,25300,25810,25560,27721,25523,25312,25764,25316,25746,25574,25576,25578,25763,25328,25584,25332,27874,25575,25303,25665,28805,25404,25600,25472,25731,25490,25354,25297,25612,25233,25428,25491,25493,25382,25370,25577,25320,25630,25324,28790"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Fireside Chat"] = {
-	{ids="29141,29205,29299,29138,29142,29206,29255,29139,29143,29304,29179,29137,29264,29278,29257,29263"},
-	includes = {"H_Firelands_PreQuests"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Fungal Frenzy"] = {
-	includes = {"H_Therazane_PreQuest"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Fungalophobia"] = {
-	{ids="28390"},
-	includes = {"H_Therazane_PreQuest","Therazane_Dailies"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\The Glop Family Line"] = {
-	{ids="28390",goal_onlyif=function() return rep ('Therazane') >= Revered end},
-	includes = {"H_Therazane_PreQuest"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Infernal Ambassadors"] = {
-	includes = {"H_Firelands_PreQuests"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Legacy of Leyara"] = {
-	includes = {"H_Firelands_PreQuests"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\The Molten Front Offensive"] = {
-	includes = {"H_Firelands_PreQuests"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\My Very Own Broodmother"] = {
-	{ids="28391",step_onlyif=function() return rep("Therazane")>=Revered end},
-	includes = {"H_Therazane_PreQuest","Therazane_Dailies"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Ready for Raiding II"] = {
-	includes = {"H_Firelands_PreQuests"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Rock Lover"] = {
-	{ids="26710"},
-	includes = {"H_Therazane_PreQuest","Therazane_Dailies"},
-},
-["ACHIEVEMENTS\\Quests\\Cataclysm\\Round Three, Fight!"] = {
-	{ids="27861",goal_onlyif=function() return havequest(27861) or completedq(27861) end},
-	{ids="27863",goal_onlyif=function() return havequest(27863) or completedq(27863) end},
-	{ids="27862",goal_onlyif=function() return havequest(27862) or completedq(27862) end},
-	{ids="27866,27867,27865,27868"},
-},
-["ACHIEVEMENTS\\Quests\\5 Dungeon Quests Complete"] = {
-	{ids="27790,27756,27785,27758,27781"},
-},
-["ACHIEVEMENTS\\Quests\\Of Blood And Anguish"] = {
-	{ids="9977,12934,12936,9970,9972,12933,12935,9967,12954,12948,9973,9962"},
-},
-["ACHIEVEMENTS\\Quests\\The First Rule of Ring of Blood is You Don't Talk About Ring of Blood"] = {
-	{ids="27862",goal_onlyif=function() return havequest(27862) or completedq(27862) end},
-	{ids="27863",goal_onlyif=function() return havequest(27863) or completedq(27863) end},
-	{ids="27861",goal_onlyif=function() return havequest(27861) or completedq(27861) end},
-	{ids="27866,9977,12934,12936,27867,9970,9972,27865,27868,12933,12935,9967,12954,12948,9973,9962"},
-},
-["ACHIEVEMENTS\\Quests\\Hemet Nesingwary: The Collected Quests"] = {
-	{ids="12549,12550,12551,12520,12489,185,12522,187,188,12556,12525,190,12558,191,9850,192,9851,193,9789,194,12688,195,9854,196,9855,583,9856,9857,9858,12614,9859,12607,12569,26269,12592,12560,12595,12603,12544,197,12526,12605,12589,12543,12521,208,12524,186,12523,9852"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Dailies"] = {
-	includes = {"H_Battlepet_dailies"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Cataclysm"] = {
-	{ids="31986",step_onlyif=function() return not completedq(31985) and not completedq(31986) end},
-	{ids="31973,31974,31972",step_onlyif=function() return completedq(31970) end},
-	{ids="31967,31970"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Eastern Kingdoms"] = {
-	{ids="31902"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Kalimdor"] = {
-	{ids="31977",step_onlyif=function() return not completedq(31977) and not completedq(31976) end},
-	{ids="31590,31812,31827,31891,31918,31814,31588,31817,31815,31870,32009,31813,31897,31589"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Northrend"] = {
-	{ids="31984",step_onlyif=function() return not completedq(31929) and not completedq(31927) end},
-	{ids="31931,31933,31934",step_onlyif=function() return completedq(31928) end},
-	{ids="31929,31928"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Outland"] = {
-	{ids="31922,31923,31924,31925",step_onlyif=function() return completedq(31920) end},
-	{ids="31982",step_onlyif=function() return not completedq(31981) and not completedq(31982) end},
-	{ids="31921,31920"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Pandaria"] = {
-	{ids="31952,31951"},
-	{ids="31955,31991,31957,31953,31954,31956",step_onlyif=function() return completedq(31951) end},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Beasts of Fable"] = {
-	includes = {"H_Beasts_of_Fable"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Beasts of Fable Dailies"] = {
-	includes = {"H_Beasts_of_Fable_D"},
-},
-["PETSMOUNTS\\Battle Pet Quests\\Pandaren Spirit Tamer"] = {
-	{ids="32428"},
-},
-["DUNGEONS\\Classic Dungeons\\Blackfathom Deeps"] = {
-	{ids="34673",step_onlyif=function() return not completedq(34673) end},
-},
-["DUNGEONS\\Classic Dungeons\\Blackrock Depths: Detention Block"] = {
-	{ids="27589",step_onlyif=function() return not completedq(27591) end},
-	{ids="27603",step_onlyif=function() return not completedq(27603) end},
-	{ids="27593",step_onlyif=function() return havequest(27593) end},
-	{ids="27579,27581",step_onlyif=function() return not completedq(27581) end},
-	{ids="27585",step_onlyif=function() return not completedq(27589) end},
-	{ids="27582",step_onlyif=function() return not completedq(27585) end},
-	{ids="27591",step_onlyif=function() return not completedq(27593) end},
-},
-["DUNGEONS\\Classic Dungeons\\Deadmines"] = {
-	{ids="27848",goal_onlyif=function() return havequest(27848) end,step_onlyif=function() return not completedq(27850) end},
-	{ids="27850",step_onlyif=function() return not completedq(27850) end},
-	{ids="27842",step_onlyif=function() return not completedq(27848) end},
-	{ids="27844",step_onlyif=function() return not completedq(27844) end},
-	{ids="27847",step_onlyif=function() return not completedq(27847) end},
-},
-["DUNGEONS\\Classic Dungeons\\Dire Maul: Capital Gardens"] = {
-	{ids="27109",step_onlyif=function() return not completedq(27109) end},
-	{ids="27110,27111,27113",step_onlyif=function() return not completedq(27111) end},
-	{ids="27112",step_onlyif=function() return not completedq(27112) end},
-},
-["DUNGEONS\\Classic Dungeons\\Dire Maul: Gordock Commons"] = {
-	{ids="27119",goal_onlyif=function() return havequest(27119) end},
-	{ids="27124"},
-	{ids="27128",step_onlyif=function() return not completedq(27128) end},
-},
-["DUNGEONS\\Classic Dungeons\\Dire Maul: Warpwood Quarter"] = {
-	{ids="27104",step_onlyif=function() return not completedq(27104) end},
-	{ids="27107",step_onlyif=function() return not completedq(27107) end},
-	{ids="27105",step_onlyif=function() return not completedq(27105) end},
-	{ids="27108",step_onlyif=function() return not completedq(27108) end},
-	{ids="27103",step_onlyif=function() return not completedq(27103) end},
-},
-["DUNGEONS\\Classic Dungeons\\Gnomeregan"] = {
-	{ids="26941",step_onlyif=function() return not completedq(26942) end},
-},
-["DUNGEONS\\Classic Dungeons\\Lower Blackrock Spire"] = {
-	{ids="27440",step_onlyif=function() return havequest(27440) end},
-},
-["DUNGEONS\\Classic Dungeons\\Maraudon: Earth Song Falls"] = {
-	{ids="27692",step_onlyif=function() return not completedq(27692) end},
-},
-["DUNGEONS\\Classic Dungeons\\Maraudon: Foulspore Cavern"] = {
-	{ids="27698",step_onlyif=function() return not completedq(27698) end},
-},
-["DUNGEONS\\Classic Dungeons\\Maraudon: The Wicked Grotto"] = {
-	{ids="27697",step_onlyif=function() return havequest(27697) end},
-},
-["DUNGEONS\\Classic Dungeons\\Ragefire Chasm"] = {
-	{ids="30984",step_onlyif=function() return not completedq(30984) end},
-	{ids="30969,30983",step_onlyif=function() return not completedq(30969) and not completedq(30983) end},
-},
-["DUNGEONS\\Classic Dungeons\\Razorfen Downs"] = {
-	{ids="33513,33514"},
-},
-["DUNGEONS\\Classic Dungeons\\Razorfen Kraul"] = {
-	{ids="26905",step_onlyif=function() return not completedq(26805) end},
-	{ids="26901,26907",step_onlyif=function() return not completedq(26901) or not completedq(26907) end},
-	{ids="26906",step_onlyif=function() return not completedq(26905) end},
-},
-["DUNGEONS\\Classic Dungeons\\Scarlet Halls"] = {
-	{ids="31490",goal_onlyif=function() return not completedq(31490) and not heroic_dung() end},
-	{ids="31497",goal_onlyif=function() return not completedq(31497) and heroic_dung() end},
-	{ids="31495",goal_onlyif=function() return not completedq(31495) and heroic_dung() end},
-	{ids="31493",goal_onlyif=function() return not completedq(31493) and not heroic_dung() end},
-},
-["DUNGEONS\\Classic Dungeons\\Scarlet Monastery"] = {
-	{ids="31516",goal_onlyif=function() return havequest(31516) and heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
-	{ids="31514",goal_onlyif=function() return havequest(31514) and not heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
-	{ids="31515",goal_onlyif=function() return havequest(31515) and heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
-	{ids="31513",goal_onlyif=function() return havequest(31513) and not heroic_dung() end,step_onlyif=function() return not completedq(31514) and not completedq(31516) end},
-},
-["DUNGEONS\\Classic Dungeons\\Scholomance"] = {
-	{ids="31448",step_onlyif=function() return not completedq(31448) and heroic_dung() end},
-	{ids="31447",step_onlyif=function() return not completedq(31447) and not heroic_dung() end},
-	{ids="31442",step_onlyif=function() return not completedq(31442) and heroic_dung() end},
-	{ids="31440",step_onlyif=function() return not completedq(31440) and not heroic_dung() end},
-},
-["DUNGEONS\\Classic Dungeons\\Shadowfang Keep"] = {
-	{ids="27974",step_onlyif=function() return not completedq(27988) end},
-	{ids="27996,27998",step_onlyif=function() return not completedq(27998) end},
-	{ids="27988",step_onlyif=function() return not completedq(27996) end},
-},
-["DUNGEONS\\Classic Dungeons\\Stratholme: Main Gate"] = {
-	{ids="27223",step_onlyif=function() return not completedq(27223) end},
-	{ids="27192",step_onlyif=function() return not completedq(27192) end},
-	{ids="27185",step_onlyif=function() return not completedq(27185) end},
-	{ids="27208",step_onlyif=function() return not completedq(27208) end},
-	{ids="27305",step_onlyif=function() return not completedq(27305) end},
-},
-["DUNGEONS\\Classic Dungeons\\Stratholme: Service Entrance"] = {
-	{ids="27230,27359,27227,27228,27352"},
-},
-["DUNGEONS\\Classic Dungeons\\Sunken Temple"] = {
-	{ids="27605,27633,27604"},
-},
-["DUNGEONS\\Classic Dungeons\\Uldaman"] = {
-	{ids="27679,27680",step_onlyif=function() return not completedq(27680) end},
-	{ids="27681",step_onlyif=function() return not completedq(27681) end},
-	{ids="2278,2280",step_onlyif=function() return not completedq(2280) end},
-	{ids="27682",step_onlyif=function() return not completedq(27682) end},
-},
-["DUNGEONS\\Classic Dungeons\\Wailing Caverns"] = {
-	{ids="26872,26873",step_onlyif=function() return not completedq(26872) or not completedq(26873) end},
-	{ids="26870",step_onlyif=function() return not completedq(26870) end},
-},
-["DUNGEONS\\Classic Dungeons\\Zul'Farrak"] = {
-	{ids="27071,27076,27070,27068"},
-},
-["DUNGEONS\\Classic Raids\\Blackwing Lair"] = {
-	{ids="7784",step_onlyif=function() return completedq(7784) end},
-	{ids="7783",step_onlyif=function() return not completedq(7783) end},
-},
-["DUNGEONS\\Classic Raids\\Ruins of Ahn'Qiraj"] = {
-	{ids="8692",step_onlyif=function() return havequest(8692) end},
-	{ids="8694",step_onlyif=function() return havequest(8694) end},
-	{ids="8706",step_onlyif=function() return havequest(8706) end},
-	{ids="8711",step_onlyif=function() return havequest(8711) end},
-	{ids="8700",step_onlyif=function() return havequest(8700) end},
-	{ids="8791",step_onlyif=function() return havequest(8791) end},
-	{ids="8710",step_onlyif=function() return havequest(8710) end},
-	{ids="8691",step_onlyif=function() return havequest(8691) end},
-	{ids="8704",step_onlyif=function() return havequest(8704) end},
-	{ids="8712",step_onlyif=function() return havequest(8712) end},
-	{ids="8702",step_onlyif=function() return havequest(8702) end},
-	{ids="8709",step_onlyif=function() return havequest(8709) end},
-	{ids="8703",step_onlyif=function() return havequest(8703) end},
-	{ids="8689",step_onlyif=function() return havequest(8689) end},
-	{ids="8697",step_onlyif=function() return havequest(8697) end},
-	{ids="8705",step_onlyif=function() return havequest(8705) end},
-	{ids="8699",step_onlyif=function() return havequest(8699) end},
-	{ids="8556",step_onlyif=function() return havequest(8556) end},
-	{ids="8690",step_onlyif=function() return havequest(8690) end},
-	{ids="8558",step_onlyif=function() return havequest(8558) end},
-	{ids="8701",step_onlyif=function() return havequest(8701) end},
-	{ids="8695",step_onlyif=function() return havequest(8695) end},
-	{ids="8708",step_onlyif=function() return havequest(8708) end},
-	{ids="8557",step_onlyif=function() return havequest(8557) end},
-	{ids="8696",step_onlyif=function() return havequest(8696) end},
-	{ids="8707",step_onlyif=function() return havequest(8707) end},
-	{ids="8698",step_onlyif=function() return havequest(8698) end},
-	{ids="8693",step_onlyif=function() return havequest(8693) end},
-},
-["DUNGEONS\\Classic Raids\\Temple of Ahn'Qiraj"] = {
-	{ids="8560,8561,8544,8562,8559",step_only="Warrior"},
-	{ids="8630,8627,8628,8629,8655",step_only="Paladin"},
-	{ids="8623,8624,8621,8622,8602",step_only="Shaman"},
-	{ids="8640,8637,8641,8638,8639",step_only="Rogue"},
-	{ids="8633,8634,8631,8632,8625",step_only="Mage"},
-	{ids="8661,8662,8663,8660,8664",step_only="Warlock"},
-	{ids="8592,8596,8593,8594,8603",step_only="Priest"},
-	{ids="8626,8658,8659,8656,8657",step_only="Hunter"},
-	{ids="8668,8665,8669,8666,8667",step_only="Druid"},
-	{ids="8801",step_onlyif=function() return not completedq(8801) end},
-	{ids="8784",step_onlyif=function() return havequest(8784) end},
-	{ids="8595,8579"},
-},
-["DUNGEONS\\Outland Dungeons\\Auchindoun: Auchenai Crypts"] = {
-	{ids="29591",step_onlyif=function() return havequest(29591) end},
-	{ids="29590,29596",step_onlyif=function() return not completedq(29590) or not completedq(29596) end},
-},
-["DUNGEONS\\Outland Dungeons\\Auchindoun: Mana-Tombs"] = {
-	{ids="29573,29575",step_onlyif=function() return not completedq(29573) or not completedq(29575) end},
-	{ids="29574",step_onlyif=function() return not completedq(29574) end},
-},
-["DUNGEONS\\Outland Dungeons\\Auchindoun: Sethekk Halls"] = {
-	{ids="29607",step_onlyif=function() return havequest(29607) end},
-	{ids="29605,29606",step_onlyif=function() return havequest(29605) or havequest(29606) end},
-},
-["DUNGEONS\\Outland Dungeons\\Auchindoun: Shadow Labyrinth"] = {
-	{ids="29641",step_onlyif=function() return havequest(29641) end},
-	{ids="29644,29645",step_onlyif=function() return havequest(29644) or havequest(29645) end},
-	{ids="29640",step_onlyif=function() return not completedq(29641) end},
-	{ids="29643",step_onlyif=function() return not completedq(29644) end},
-},
-["DUNGEONS\\Outland Dungeons\\Caverns of Time: The Black Morass"] = {
-	{ids="10297"},
-},
-["DUNGEONS\\Outland Dungeons\\Caverns of Time: Escape from Durnholde Keep"] = {
-	{ids="29599",step_onlyif=function() return havequest(29599) end},
-	{ids="29598",step_onlyif=function() return not completedq(29599) end},
-},
-["DUNGEONS\\Outland Dungeons\\Coilfang Reservoir: Slave Pens"] = {
-	{ids="29564",step_onlyif=function() return not completedq(29564) end},
-	{ids="29563,29565",step_onlyif=function() return not completedq(29563) or not completedq(29565) end},
-},
-["DUNGEONS\\Outland Dungeons\\Coilfang Reservoir: The Steamvault"] = {
-	{ids="29613",step_onlyif=function() return havequest(29613) end},
-	{ids="29615",step_onlyif=function() return havequest(29615) end},
-	{ids="29614",step_onlyif=function() return havequest(29614) end},
-},
-["DUNGEONS\\Outland Dungeons\\Coilfang Reservoir: Underbog"] = {
-	{ids="29570,29568,29691,29567"},
-},
-["DUNGEONS\\Outland Dungeons\\Hellfire Citadel: The Blood Furnace"] = {
-	{ids="29537,29535,29536",step_onlyif=function() return not completedq(29535) or not completedq(29536) or not completedq(29537) end},
-},
-["DUNGEONS\\Outland Dungeons\\Hellfire Citadel: Hellfire Ramparts"] = {
-	{ids="29528,29529,29594",step_onlyif=function() return not completedq(29528) or not completedq(29528) or not completedq(29594) end},
-},
-["DUNGEONS\\Outland Dungeons\\Hellfire Citadel: Shattered Halls"] = {
-	{ids="29654,29649,29656,29652",step_onlyif=function() return havequest(29652) or havequest(29649) or havequest(29656) or havequest(29654) end},
-},
-["DUNGEONS\\Outland Dungeons\\Magister's Terrace"] = {
-	{ids="29687,29685,29686",step_onlyif=function() return havequest(29686) or havequest(29687) or havequest(29685) end},
-	{ids="11490",step_onlyif=function() return not completedq(29685) end},
-	{ids="29684",step_onlyif=function() return not completedq(11490) end},
-},
-["DUNGEONS\\Outland Dungeons\\Tempest Keep: The Arcatraz"] = {
-	{ids="29675,29674,29681"},
-},
-["DUNGEONS\\Outland Dungeons\\Tempest Keep: Botanica"] = {
-	{ids="29660,29667,29669"},
-},
-["DUNGEONS\\Outland Dungeons\\Tempest Keep: The Mechanar"] = {
-	{ids="29658",goal_onlyif=function() return havequest(29658) end},
-	{ids="29657,29659"},
-},
-["DUNGEONS\\Outland Raids\\The Eye"] = {
-	{ids="11007",step_onlyif=function() return havequest(11007) end},
-},
-["DUNGEONS\\Outland Raids\\Hyjal Summit (Battle for Mount Hyjal)"] = {
-	{ids="10277",step_onlyif=function() return havequest(10277) end},
-},
-["DUNGEONS\\Outland Raids\\Magtheridon's Lair"] = {
-	{ids="11003",step_onlyif=function() return not completedq(11003) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Ahn'kahet: The Old Kingdom"] = {
-	{ids="29825,29826,13187"},
-},
-["DUNGEONS\\Northrend Dungeons\\Azjol-Nerub"] = {
-	{ids="29807,29808,29811"},
-},
-["DUNGEONS\\Northrend Dungeons\\Caverns of Time: The Culling of Stratholme"] = {
-	{ids="13149",step_onlyif=function() return havequest(13149) end},
-	{ids="13151",step_onlyif=function() return havequest(13151) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Drak'Tharon Keep"] = {
-	{ids="13129,29828",step_onlyif=function() return havequest(13129) or havequest(29828) end},
-	{ids="30120",step_onlyif=function() return havequest(30120) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Forge of Souls"] = {
-	{ids="24499",step_onlyif=function() return not completedq(24683) end},
-	{ids="24510",goal_onlyif=function() return havequest(24510) end,step_onlyif=function() return not completedq(24499) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Gundrak"] = {
-	{ids="29834,29844,29839",step_onlyif=function() return havequest(29834) or havequest(29839) or havequest(29844) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Halls of Lightning"] = {
-	{ids="29861,29862,29860",step_onlyif=function() return havequest(29860) or havequest(29861) or havequest(29862) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Halls of Reflection"] = {
-	{ids="24711",goal_onlyif=function() return havequest(24711) end,step_onlyif=function() return not completedq(24500) end},
-	{ids="24500",step_onlyif=function() return not completedq(24500) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Halls of Stone"] = {
-	{ids="29848,29850",step_onlyif=function() return havequest(29848) or havequest(29850) end},
-	{ids="13207",step_onlyif=function() return havequest(13207) end},
-},
-["DUNGEONS\\Northrend Dungeons\\The Nexus"] = {
-	{ids="11911",step_onlyif=function() return havequest(11911) end},
-	{ids="13094",step_onlyif=function() return havequest(13094) end},
-	{ids="11973",step_onlyif=function() return havequest(11973) end},
-	{ids="11905",step_onlyif=function() return havequest(11905) end},
-},
-["DUNGEONS\\Northrend Dungeons\\The Oculus"] = {
-	{ids="13126",step_onlyif=function() return not completedq(13127) end},
-	{ids="13128",step_onlyif=function() return havequest(13128) end},
-	{ids="13127",step_onlyif=function() return not completedq(13128) end},
-	{ids="13124",step_onlyif=function() return havequest(13124) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Pit of Saron"] = {
-	{ids="24710",step_onlyif=function() return not completedq(24711) end},
-	{ids="24498",step_onlyif=function() return not completedq(24710) end},
-	{ids="24683",goal_onlyif=function() return havequest(24683) end,step_onlyif=function() return not completedq(24498) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Trial of the Champion"] = {
-	{ids="29851",step_onlyif=function() return havequest(29851) end},
-},
-["DUNGEONS\\Northrend Dungeons\\Utgarde Keep"] = {
-	{ids="13206,30112,11262"},
-},
-["DUNGEONS\\Northrend Dungeons\\Utgarde Keep: Utgarde Pinnacle"] = {
-	{ids="29864",step_onlyif=function() return havequest(29864) end},
-	{ids="13131,13132",step_onlyif=function() return havequest(13131) or havequest(13132) end},
-},
-["DUNGEONS\\Northrend Dungeons\\The Violet Hold"] = {
-	{ids="29830",step_onlyif=function() return havequest(29830) end},
-},
-["DUNGEONS\\Northrend Raids\\Naxxramas"] = {
-	{ids="13375",step_onlyif=function() return havequest(13375) end},
-	{ids="13372",step_onlyif=function() return havequest(13372) end},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Blackrock Caverns"] = {
-	{ids="28741",step_onlyif=function() return havequest(28741) end},
-	{ids="28740,28737,28735,28738"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\End Time"] = {
-	{ids="30097,30096"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Grim Batol"] = {
-	{ids="28853,28854,28852"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Hour of Twilight"] = {
-	{ids="30102,30103,30105"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Lost City of the Tol'vir"] = {
-	{ids="28783,28781"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\The Stonecore"] = {
-	{ids="28815,28814"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Throne of the Tides"] = {
-	{ids="28836",step_onlyif=function() return havequest(28836) end},
-	{ids="28834"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Vortex Pinnacle"] = {
-	{ids="28779,28760"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Well of Eternity"] = {
-	{ids="30100,30101,30104,30098,30099"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Zul'Aman"] = {
-	{ids="29186,11196"},
-},
-["DUNGEONS\\Cataclysm Dungeons\\Zul Gurub"] = {
-	{ids="29241,29172,29173,29242,29175,29252"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Gate of the Setting Sun"] = {
-	{ids="31363,31364"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Mogu'shan Palace"] = {
-	{ids="31357,31360"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Scarlet Halls"] = {
-	{ids="31495,31497"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Scarlet Monastery"] = {
-	{ids="31515,31516"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Scholomance"] = {
-	{ids="31442,31448"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Shado-Pan Monastery"] = {
-	{ids="31342",step_onlyif=function() return havequest(31342) end},
-	{ids="30757",step_onlyif=function() return havequest(30757) end},
-},
-["DUNGEONS\\Pandaria Dungeons\\Siege of Niuzao Temple"] = {
-	{ids="31365,31366"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Stormstout Brewery"] = {
-	{ids="31324,31327"},
-},
-["DUNGEONS\\Pandaria Dungeons\\Temple of the Jade Serpent"] = {
-	{ids="31355,31356"},
-},
-["DUNGEONS\\Pandaria Raids\\Siege of Orgrimmar"] = {
-	{ids="33147,33138",step_onlyif=function() return not completedq(33138) end},
-},
-["REPUTATIONS\\Classic Reputations\\Argent Dawn"] = {
-	includes = {"Argent_Dawn_Rep"},
-},
-["REPUTATIONS\\Classic Reputations\\Bloodsail Buccaneers"] = {
-	{ids="26624,26609,26594,26610,26595,26611,26612,26678,26644,26629,26665,26630,26664,26631,26647,26663,26648,26633,26649,26603,26650,26604,26662,26605,26634,26606,26635,26593"},
-},
-["REPUTATIONS\\Classic Reputations\\Brood of Nozdormu"] = {
-	{ids="8579",goal_onlyif=function() return not completedq(8579) end},
-	{ids="8595",goal_onlyif=function() return completedq(8579) end},
-	{ids="8784"},
-},
-["REPUTATIONS\\Classic Reputations\\Cenarion Circle"] = {
-	{ids="27420,27421,24719,27053,27057,24854,24855,26935,8304,27000,27001,27002,8306,27383,27384,8308,8277,8309,8278,8310,8279,8280,8281,24686,24687,8314,24689,8284,9416,8285,27386,27385,8318,8287,27392,9422,8320,26955,8321,26999,8282,26954,8323,8283,26956,27544,26953"},
-},
-["REPUTATIONS\\Classic Reputations\\Darkmoon Faire"] = {
-	includes = {"Darkmoon_Faire_Dailies"},
-},
-["REPUTATIONS\\Classic Reputations\\The Defilers"] = {
-	{ids="8105,8121"},
-},
-["REPUTATIONS\\Classic Reputations\\Frostwolf Clan"] = {
-	{ids="7142,7124,7101,7082,7161,7224"},
-},
-["REPUTATIONS\\Classic Reputations\\The Steamwheedle Cartel"] = {
-	{ids="9267,9266,9268,9259"},
-	includes = {"vendor_Blacksmithing","vendor_Alchemy","vendor_Tailoring"},
-},
-["REPUTATIONS\\Classic Reputations\\Thorium Brotherhood"] = {
-	{ids="28515",goal_onlyif=function() return havequest(28515) end},
-	{ids="27986,28428,28429,28052,28431,28054,28055,28056,28057,28060,28061,28062,28064,28512,28430,28427,28426,28425,28424,28423,28422,27956,28420,27958,27959,27960,27961,27962,27963,27964,28028,28029,28030,28418,28032,28033,28034,28035,28099,28421,28417,27976,27977,28419,27979,27980,27981,27982,27983,27984,27985,27965"},
-},
-["REPUTATIONS\\Classic Reputations\\Timbermaw Hold"] = {
-	{ids="8470",step_onlyif=function() return rep('Timbermaw Hold')>=Neutral end},
-	{ids="28530,28614,28469,28362,28366,28460,28524,28467,28470,28521,28615,28364,28338,28522,28464"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Neutral)"] = {
-	{ids="11020,11017,11035,11018,11015,11016"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Neutral) - Pre-Quests"] = {
-	{ids="10804,10836,10870,10814,11049,11013,11014,10837,10854,10811,10858,10866"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Friendly)"] = {
-	{ids="11055,11016,11018,11035,11015,11077,11020,11017,11076"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Friendly) - Pre-Quests"] = {
-	{ids="11083,11053,11054,11075,11082,11081"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Honored)"] = {
-	{ids="11055,11016,11018,11035,11086,11015,11077,11020,11017,11076"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Honored) - Pre-Quests"] = {
-	{ids="11069,11084,11067,11064,11068,11071,11070"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Revered)"] = {
-	{ids="11097",goal_onlyif=function() return rep ('The Scryers') >= Friendly end},
-	{ids="11101",goal_onlyif=function() return rep ('The Aldor') >= Friendly end},
-	{ids="11055,11016,11018,11035,11086,11015,11077,11020,11017,11076"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Revered) - Pre-Quests"] = {
-	{ids="11094,11095",step_onlyif=function() return rep ('The Scryers') >= Friendly end},
-	{ids="11099,11100",step_onlyif=function() return rep ('The Aldor') >= Friendly end},
-	{ids="11092,11041"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Exalted) - Getting Your Netherdrake!"] = {
-	{ids="11107,11108"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\The Aldor"] = {
-	{ids="10816,10407,10313,11038,10409,10410,10568,10380,10381,10571,10321,10668,10574,10669,10323,10325,10420,10641,10328,10299,10646,10650,10575,10640,10554,10649,10210,10020,10241,10021,10431,10211,10243,10653,10322,10619,10245,10637,10246,10587"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Cenarion Expedition"] = {
-	{ids="10722,11866,11868,11869,11870,11871,11872,9968,10096,10351,9971,10607,11878,9720,9978,9979,29613,29615,9730,10112,10748,9990,10753,9995,9997,10255,10893,10894,10006,10896,9373,10771,10904,29691,9894,9895,29570,11570,11566,11569,11865,11879,10159,11563,11571,11559,11560,11561,11562,9912,11564,11565,9788,11884,11876,29614,29616,10682,10810,10429,10812,10427,10426,10912,10911,10910,9802,10819,10820,10567,10821,10770,10719,9728,29564,29566,10447,10448,10713,29568,9716,9817,9747,9718,9372,10349,9752,9785,9951,10132,9724,10134,10717,29563,9957,29567,9731,9732"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\The Consortium"] = {
-	{ids="9900,10436,10405,10311,10406,10438,10439,10345,10440,10850,10411,10855,10856,10384,10353,10385,10417,9882,10418,10262,9913,10972,10971,10422,10265,10423,10266,10424,10267,10425,10268,9914,10269,10276,10270,10857,9893,9925,10335,10430,10336,10437,10290,10408,10275,10205,10339,10308,10970,10348,10310"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Keepers of Time"] = {
-	{ids="10277,29599,10296,11378,11382,10297,10282,29598,11383,10279"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Lower City"] = {
-	{ids="10878,10917,10840,10848,10887,11375,10880,11374,10849,10842,10881,10889,10879,10874,10913,10898,10030,10031,10914,10922,10930,11372,10915,10861,10929,11373,10847,10180,10839,10852"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Mag'har"] = {
-	{ids="10479,9849,9850,10107,9854,10109,9983,9857,9858,9861,9862,9863,9864,9865,9866,9867,9870,9999,10001,10004,9882,10010,10011,9888,9889,9890,9891,9900,9906,9907,9400,9401,9910,9913,9914,9916,9410,9797,9925,9800,9928,9804,9805,9934,9935,9937,9939,9815,9944,9945,9819,9932,9948,10009,9810,9405,9406,9991,9931,9946,9789,9821,9927,9855,9818"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Ogri'la"] = {
-	{ids="11102",goal_only="Druid"},
-	{ids="11010",goal_onlyif=function() return not Druid end},
-	{ids="11051",step_onlyif=function() return completedq(11026) end},
-	{ids="11026",step_onlyif=function() return rep("Ogri'la")>=Honored and not completedq(11026) end},
-	{ids="11080,11119,11065,11058,11066,11059,10998,10983,10996,11030,11091,10984,11023,11062,11061,11078,10995,10997,11009,11079,11025,11000"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\The Scryers"] = {
-	{ids="10341,10338,10202,10189,10432",step_onlyif=function() return rep ('The Scryers') >= Friendly end},
-	{ids="10656,10688,10691,10692,11039,10412,10507,10508,10194,10668,10669,10197,10198,10640,10200,10329,10330,10646,10553,10416,10649,10807,10204,10193,10210,10683,10211,10684,10641,10685,10509,10686,10824,10687,10652"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\The Sha'tar"] = {
-	{ids="10683,10685,10684,10686",step_onlyif=function() return rep ('The Scryers') >= Neutral end},
-	{ids="10575,10571,10574,10568",step_onlyif=function() return rep ('The Aldor') >= Friendly end},
-	{ids="10480,10481,10228,10102,10231,10107,9983,10622,10877,9991,10628,10883,9868,10885,10251,10252,10253,10001,10004,10513,10514,10515,10262,10009,10010,10011,10266,10521,10522,9888,9889,9890,9891,10527,10528,10275,10276,10280,10537,10920,10921,10541,10923,11052,10546,10547,10167,10168,10550,10044,10680,10781,10793,10884,10706,9927,9928,10705,10704,9931,9932,10269,9934,10570,10268,10267,9907,10265,10886,10576,10577,10578,10579,10707,10540,10227,9999,9906,10458,10205,10523,10588,10081,10082,10210,10519,10085,10101,10045"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Sha'tari Skyguard"] = {
-	{ids="11085,11029,11093,11005,11008,11024,11056,11028,11885,11073,11004,11096,11098,11021"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Shattered Sun Offensive"] = {
-	includes = {"SSO_PreQuest_Dailies"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Sporeggar"] = {
-	{ids="9739,9743",step_onlyif=function() return rep('Sporeggar')<=Neutral end},
-	{ids="9715",step_onlyif=function() return havequest(9715) end},
-	{ids="9714",step_onlyif=function() return havequest(9714) end},
-	{ids="9726,9919,29691,29567,9727"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Thrallmar"] = {
-	{ids="13411",goal_only="DeathKnight"},
-	{ids="13409",goal_onlyif=function() return not DeathKnight end},
-	{ids="10087,10220,29593,10864,10230,9345,10236,10110,10238,10875,10876,10242,9356,10627,10120,10629,10630,9361,10124,29651,29653,10129,10258,29536,10388,10389,10390,10391,10392,10393,10278,10663,10664,10792,10666,10161,10162,9401,10291,10294,10295,9410,10809,10813,10670,10121,29655,10665,29650,10623,29527,10123,10250,10449,10450,29537,9400,10834,10835,29535,10538,10838,10136,10289,9406,28705,10208,10229,9349,9351,9405,10213,10086"},
-	includes = {"shatt_auctioneer"},
-},
-["REPUTATIONS\\Burning Crusade Reputations\\Tranquillien"] = {
-	{ids="9207,9176,9145,9146,9147,9148,9149,9276,9151,9152,9877,9216,9155,9157,9315,9158,9159,9758,9160,9192,9161,9193,9162,9215,9163,9329,9164,9218,9220,9281,9166,9212,9277,9199,9275,9214,9169,9327,9170,9139,9171,9140,9172,9150,9173,9274,9174,9143,9175,9138"},
-	{ids="9144",step_onlyif=function() return havequest(16183) end},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\Argent Tournament\\Aspirant Rank Dailies"] = {
-	includes = {"Argent Tourney_Aspirant"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\Argent Tournament\\Valiant Rank Dailies"] = {
-	includes = {"Argent Tourney_Valiant"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\Argent Crusade"] = {
-	includes = {"Argent_Crusade_Rep"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\The Frenzyheart Tribe"] = {
-	{ids="12578,12579,12580,12581,12741,12528,12529,12530,12531,12532,12533,12534,12692,12535,12536,12576,12537,12758,12538,12759,12539,12571,12540,12572,12570,12573,12760,12574,12732,12575,12577,12702,12734,12703,12654"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\Kalu'ak"] = {
-	includes = {"Kaluak_Rep"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\Kirin Tor"] = {
-	{ids="11582,11646,12728,11590,11682,11681,11671,11733,11680,11587,11679,11576,11648,11663"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\Knights of the Ebon Blade"] = {
-	{ids="12949,12891,12893,12955,12897,12899,13085,12892,12939,12951,12943,12938"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\The Oracles"] = {
-	{ids="12705,12737,12726,12762,12704,12736,12695,12761,12581,12735"},
-	includes = {"Oracles_Dailies"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\The Sons of Hodir"] = {
-	{ids="13001",step_onlyif=function() return rep ('The Sons of Hodir')>=Honored end},
-	{ids="13009,13010,13011,12886,13273,13274,12895,12900,13285,12905,12906,12907,12908,12909,12910,12913,12915,12917,13046,13047,12921,12922,13050,13051,12925,12926,13054,13055,13056,13057,12931,13060,13061,13062,13063,13064,12841,12927,12942,12956,12971,12818,12819,12820,12821,12822,12823,12824,13416,12826,12827,12828,12829,12830,12831,12832,12833,12937,12929,12836,12964,12965,12966,12967,12968,12969,12843,12844,12972,12846,12978,12975,12976,12977,12851,12979,12853,12981,12980,12983,12984,12985,12957,12987,12988,12989,12930,12991,12928,12993,12994,12920,12996,12997,12998,13035,13000,12924,12970,13003,12953,13005,13006,13007,12856"},
-},
-["REPUTATIONS\\Wrath of the Lich King Reputations\\The Wyrmrest Accord"] = {
-	{ids="12767,12106,12264,11918,12769,11919,11951,12267,12110,12458,12459,12461,12084,13124,12148,12149,13126,12150,13127,12151,13128,13412,12059,13413,12122,12456,12454,12470,12061,11967,11999,12266,12265,11969,12263,12261,11936,12447,12066,12147,11941,11973,12372,12435,11943,12124,12448,11946,12449,11957,12450,12419,12262,11931"},
-},
-["REPUTATIONS\\Cataclysm Reputations\\Dragonmaw Clan"] = {
-	{ids="27301,26540,27564,26293,28592,27576,28090,27584,28871,28875,26337,26608,27377,26361,28166,27660,27947,27951,27955,27712,27744,27493,27497,27501,27505,27509,28043,26784,26788,27302,26294,28593,28091,28872,26840,28123,27378,28147,28151,26374,27653,28171,28175,28191,27689,28717,27701,28247,27486,27745,27506,27299,26538,28586,28590,28594,28092,27586,28873,27606,27610,27622,27375,27379,27638,26622,27658,27662,28176,27929,27945,28758,27742,27491,27495,27499,27503,27507,28041,27798,26786,27300,26539,26798,28591,28595,28093,28097,26830,26324,27607,27611,28133,28874,27376,27380,28149,27788,26372,27786,27655,27659,26388,28885,27303,28849,27690,26549,28583,28712,28589,27954,27703,26311,27583,27696,28094,28170,26335,27750,26619,28249,27743,27747,27751,26621,27504,27508,28038,27661,28173,28584,27783,28588,26358"},
-},
-["REPUTATIONS\\Cataclysm Reputations\\The Earthen Ring"] = {
-	{ids="26140,25637,25222,26260,26827,26835,25334,26875,25861,25358,27937,25390,27442,26436,25941,25949,25957,25965,25973,25989,27043,27059,26564,26580,27123,25598,26133,26141,26149,25670,27722,26221,25215,26245,26261,26828,26836,26876,25862,25359,27938,26413,26437,25942,25439,25958,25966,25974,25471,25990,26006,26581,27100,26086,26126,26142,27699,26182,25216,26246,25743,26829,26326,26861,26869,25863,25360,27931,26438,25943,25951,25959,25456,27005,26502,26007,27061,26071,27101,26087,25592,26111,26135,26143,27708,25217,26247,26766,26375,25377,25896,26439,25936,25944,25952,25960,25968,25976,25984,25992,26000,26008,26040,26575,26072,26591,26088,26096,25593,27685,25657,27717,25218,26248,26256,26791,26312,26831,26328,26871,26376,27933,26440,25953,25969,27007,25993,26057,26065,26584,26089,25594,27135,26632,26656,25658,27718,25219,26249,26768,26792,25794,26313,26832,25858,26377,25371,25890,26409,26441,25946,25954,25962,25970,27008,25994,26537,26577,26585,26090,25587,25595,27136,26122,25619,26657,26154,25651,25659,25164,26194,25220,26250,26258,28869,26833,26857,25859,25883,27935,25388,25907,26426,25947,25955,25963,25971,25995,27041,26578,26091,26971,26244,26576,25620,26752,26658,27102,26750,26410,27126,26583,26582,25887,25389,27932,26411,25441,25221,26762,26770,25967,26659,25477,25991,26254,26507,26315,26834,25629,25442,26314,26755,27934,25860,26625,25988,25884,27203,25900,25908,26427,25924,26259,26255,25948,25956,25964,25972,25980,27010,25996,26501,26499,26500,26484,26251,25602,26771,25638,26579,25982,25929,26092,25459,26130,25732,25440"},
-},
-["REPUTATIONS\\Cataclysm Reputations\\Guardians of Hyjal"] = {
-	{ids="25761,25255,25644,25519,25269,25525,25910,25531,25279,25795,25291,25928,25549,25424,25807,25301,25303,25309,25311,25315,25317,25319,25321,25323,25325,25460,25843,25464,25597,25472,25601,25224,25740,25234,25492,25494,25496,25881,25502,25758,25764,25514,27399,25899,25520,25776,25270,25272,25274,25276,25551,25915,25553,25550,25548,25923,25544,25555,25294,25296,25552,25300,25810,25554,25560,27721,25310,25763,25314,25316,25308,25574,25830,25578,25299,25328,25584,25499,25842,25509,25430,25330,25653,25906,25324,25901,25223,25507,25608,25510,25297,25233,25746,25491,25493,25832,25370,25372,25523,25320,25886,25904"},
-},
-["REPUTATIONS\\Cataclysm Reputations\\Hellscream's Reach"] = {
-	{ids="28679,28680,28681,28682,28683,28684,28685,28686,28687,28689,28690,28691,28692,28693,28694,28695,28696,28697,28698,28700,28657,28721,28659,28660,28661,28662,28663,28664,28665,28668,28669,28670,28678,28658"},
-},
-["REPUTATIONS\\Cataclysm Reputations\\Ramkahen"] = {
-	{ids="28293",step_onlyif=function() return havequest(28293) end},
-	{ids="27922,27924,28561,27928,27549,27176,27940,27942,28198,28200,27950,28210,27196,27706,27837,27839,28351,28480,28482,28611,28105,28363,28367,28623,28498,27738,28502,28250,28633,28002,27623,28135,27629,27631,28141,28145,28274,28276,27899,27901,27903,27905,28736,27939,28621,28193,27748,28613,27926,28404,27669,28403,27760,28272,27923,28187,28353,28350,27431,27179,27943,28195,28201,27187,28273,28269,27755,28520,28267,27707,27836,27838,28602,27969,28352,28194,28483,28612,27990,27941,27602,28112,28622,28497,28499,28501,28132,28486,28500,27778,27993,27624,28134,27628,27630,27632,27761,28271,27511,28402,28277,28533,27519,28557,27777,27779,27003,28291,27141,27520,27900,27595,27541"},
-},
-["REPUTATIONS\\Cataclysm Reputations\\Therazane"] = {
-	{ids="28390",goal_onlyif=function() return rep ('Therazane') >= Revered end},
-	{ids="28391",step_onlyif=function() return rep ('Therazane') >= Revered end},
-	{ids="26656,26658,27041,27932,26410,27047,27938,27051,27059,27442,26580,27049,26710,27046,26436,26438,26313,26315,28488,26827,26575,26577,27722,26835,26583,26585,27048,26709,26591,27101,26792,27008,26833,26832,26857,26829,26861,26831,26484,26328,27123,26871,27043,26875,26750,26625,26500,27010,26250,27007,26254,26256,26766,26768,26770,26752,26411,26582,26326,26579,26581,26657,26659,27931,26409,27935,27937,27050,26314,27135,26441,26440,26439,26427,26437,26869,26426,26377,26564,26312,27203,26376,26375,26828,26576,26578,26834,26836,26584,26762,26413,26971,27100,27102,26501,26502,27934,26791,26537,26755,27061,26632,26244,26246,26247,27126,26248,26876,27005,26245,27136,26249,26251,26507,26255,26258,26259,26261,26771,26260,26499,27933"},
-},
-["DAILIES\\Mists of Pandaria Dailies\\The Anglers Dailies"] = {
-	includes = {"Anglers_Dailies"},
-},
-["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide"] = {
-	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","vendor_Alchemy","GB_Path","LR_SK_Path","GS_SM_Path","Sungrass_Path","GT_WS_Path","HB_Path","trainer_Alchemy","IT_LB_Path","TJ_Path","Kingsblood_Path","SV_CB_Path","PB_SL_ER_Path","Whiptail_Path","GC_DN_TL_Path","NB_DG_Path","FL_GT_KW_BW_Path","GM_KB_LR_WS_Path","Terocone_Path","FW_DG_Path"},
-},
-["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 1-600 Leveling Guide"] = {
-	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Archaeology"},
-},
-["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 1-600 Leveling Guide"] = {
-	includes = {"Iron_Ore_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_mine","Thorium_Ore_Path","Saronite_Path","Adamantite_Path","shatt_anvil","Tin_Path","Obsidium_Path","trainer_Blacksmithing","trainer_Blacksmithing_Shatt","vendor_Blacksmithing","maincity_anvil","Cobalt_Path","Copper_Path","Fel_Iron_Path","maincity_forge2","Mithril_Ore_Path","trainer_Mining"},
-},
-["PROFESSIONS\\Cooking\\Leveling Guides\\Cooking 1-520 Leveling Guide"] = {
-	includes = {"Pandarian_Cooking_1-520"},
-},
-["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide"] = {
-	includes = {"--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Enchanting"},
-},
-["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide"] = {
-	includes = {"Iron_Ore_Path","--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Mining","Mithril_Ore_Path","Fel_Iron_Path","maincity_anvil","follow_path_mine","Copper_Path","Silver_Tin_Path","maincity_forge2","Adamantite_Path","trainer_Engineering"},
-},
-["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 1-600 Leveling Guide"] = {
-	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Fishing"},
-},
-["PROFESSIONS\\Herbalism\\Leveling Guides\\Herbalism 1-600 Leveling Guide"] = {
-	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","follow_path_herbs","trainer_HerbalismUC","trainer_Herbalism"},
-},
-["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 1-600 Leveling Guide"] = {
-	includes = {"FL_GT_KW_BW_Path","MR_BW_BT_SK_Path","vendor_Inscription","trainer_Inscription","--@@TRIALONLYLINE end_of_prof_trial_150","PB_SL_ER_Path","GC_TL_Path","GC_TL_AT_Path","SV_CB_Path","follow_path_herbs","GM_KB_LR_WS_Path","GS_SM_Path","FW_DG_Path"},
-},
-["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 1-600 Leveling Guide"] = {
-	includes = {"maincity_anvil","--@@TRIALONLYLINE end_of_prof_trial_150","Saronite_Path","Obsidium_Path","Cobalt_Path","Iron_Ore_Path","trainer_Mining","Thorium_Ore_Path","Fel_Iron_Path","trainer_Jewelcrafting","follow_path_mine","Copper_Path","Silver_Tin_Path","Mithril_Ore_Path","Adamantite_Path","maincity_forge2"},
-},
-["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 1-600 Leveling Guide"] = {
-	includes = {"Ruined_Light_Leather","--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Leatherworking","vendor_Leatherworking"},
-},
-["PROFESSIONS\\Mining\\Farming Guides\\Ore"] = {
-	includes = {"follow_path_mine"},
-},
-["PROFESSIONS\\Mining\\Leveling Guides\\Classic Mining 1-600 Leveling Guide"] = {
-	includes = {"maincity_anvil","vendor_Mining","Copper_Path","Silver_Tin_Path","trainer_Mining","follow_path_mine"},
-},
-["PROFESSIONS\\Mining\\Leveling Guides\\Mining 1-600 Leveling Guide"] = {
-	includes = {"follow_path_mine","--@@TRIALONLYLINE end_of_prof_trial_150"},
-},
-["PROFESSIONS\\Skinning\\Leveling Guides\\Skinning 1-600 Leveling Guide"] = {
-	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Skinning","vendor_Leatherworking"},
-},
-["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 1-600 Leveling Guide"] = {
-	includes = {"trainer_Tailoring","--@@TRIALONLYLINE end_of_prof_trial_150","vendor_Tailoring"},
-},
-["DAILIES\\Legion\\World Quests Unlock Quest Line"] = {
-	{ids="44720,44721,43341,44771"},
-},
-["DAILIES\\Legion\\Antoran Wastes World Quests"] = {
-	{ids="48359,48349,48358,48360,48374"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Azsuna World Quests"] = {
-	{ids="41639,41287,41663,41311,41669,41327,41326,41645,41651,41633,41657,41675,41267,41315,41288"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Broken Shore Rares"] = {
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Broken Shore World Quests"] = {
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Dalaran World Quests"] = {
-	{ids="41656,41644,41674,41662,41650,41680,41668,41638"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Highmountain World Quests"] = {
-	{ids="41677,41235,41641,41671,41237,41665,41223,41635,41659,41647,41240,41653,41206,41207"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Krokuun World Quests"] = {
-	{ids="48338,48337"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Mac'Aree World Quests"] = {
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Stormheim World Quests"] = {
-	{ids="41654,41317,41678,41672,41642,41297,41660,41298,41666,41344,41277,41345,41648,41313,41636"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Suramar World Quests"] = {
-	{ids="44176",goal_onlyif=function() return havequest(44176) end},
-	{ids="41673,41302,41655,41303,43943,41679,41282,41350,41643,41351,41314,41667,41649,41637,41661,41318"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\Val'sharah World Quests"] = {
-	{ids="41339,41272,41640,41670,41664,41312,41338,41658,41646,41676,41652,41292,41293,41316,41634"},
-	includes = {"Legion_World_Quest_Emissaries"},
-},
-["DAILIES\\Legion\\World Quests"] = {
-	{ids="42170",goal_onlyif=function() return ZGV.questsbyid[42170] and ZGV.questsbyid[42170].complete end},
-	{ids="46749",goal_onlyif=function() return havequest(46749) end},
-	{ids="44176",goal_onlyif=function() return havequest(44176) end},
-	{ids="42234",goal_onlyif=function() return ZGV.questsbyid[42234] and ZGV.questsbyid[42234].complete end},
-	{ids="46746",goal_onlyif=function() return havequest(46746) end},
-	{ids="42422",goal_onlyif=function() return ZGV.questsbyid[42422] and ZGV.questsbyid[42422].complete end},
-	{ids="42233",goal_onlyif=function() return ZGV.questsbyid[42233] and ZGV.questsbyid[42233].complete end},
-	{ids="42421",goal_onlyif=function() return ZGV.questsbyid[42421] and ZGV.questsbyid[42421].complete end},
-	{ids="48641",goal_onlyif=function() return ZGV.questsbyid[48641] and ZGV.questsbyid[48641].complete end},
-	{ids="46743",goal_onlyif=function() return havequest(46743) end},
-	{ids="46747",goal_onlyif=function() return havequest(46747) end},
-	{ids="42420",goal_onlyif=function() return ZGV.questsbyid[42420] and ZGV.questsbyid[42420].complete end},
-	{ids="46777",goal_onlyif=function() return havequest(46777) end},
-	{ids="46748",goal_onlyif=function() return havequest(46748) end},
-	{ids="43179",goal_onlyif=function() return ZGV.questsbyid[43179] and ZGV.questsbyid[43179].complete end},
-	{ids="46745",goal_onlyif=function() return havequest(46745) end},
-	{ids="41237,41634,41638,41642,41646,41650,41654,41277,41662,41666,41670,41293,41297,41313,41317,41206,41345,48338,48358,41635,41639,41643,41647,41651,41655,41659,41663,41667,41671,41675,41298,41302,41314,41318,41326,41207,41338,41223,41235,48359,41636,41640,41644,41267,41652,41656,41660,41664,41287,41672,41676,41680,41303,41311,41315,41327,41339,41351,41658,41240,48349,48360,41633,41637,41641,41645,41649,41653,41657,41661,41665,41288,41292,41677,48374,41674,41668,41312,41316,41673,41350,41282,41679,41669,43943,41344,41272,48337,41648,41678"},
-	includes = {"Toraan_the_Revered","Vindicator_Jaelaana_Paragon","Toraan_the_Revered_Paragon","Vindicator_Jaelaana"},
-},
-["DAILIES\\Legion\\The Originals"] = {
-	{ids="47251,47254"},
-},
-["ACHIEVEMENTS\\Collections\\Appearances\\Legion\\Accessor-Eyes"] = {
-	{ids="8560,8561,8544,8562,8559",step_only="Warrior"},
-	{ids="8630,8655,8628,8629,8627",step_only="Paladin"},
-	{ids="8623,8624,8621,8622,8602",step_only="Shaman"},
-	{ids="8640,8639,8641,8638",step_only="Rogue"},
-	{ids="8633,8634,8631,8632,8625",step_only="Mage"},
-	{ids="8668,8665,8669,8666,8667",step_only="Druid"},
-	{ids="8592,8596,8593,8594,8603",step_only="Priest"},
-	{ids="8626,8658,8659,8656,8657",step_only="Hunter"},
-	{ids="8661,8662,8663,8660,8664",step_only="Warlock"},
-},
-["ACHIEVEMENTS\\Collections\\Appearances\\Legion\\Can I Get A Helya"] = {
-	{ids="44729,45088,44721,44868,44720,44771"},
-},
-["ACHIEVEMENTS\\Collections\\Appearances\\Legion\\Fashionista: Tabard"] = {
-	{ids="10793,10781"},
-},
-["ACHIEVEMENTS\\Exploration\\Legion\\Adventurer of Argus"] = {
-	{ids="49007",step_onlyif=function() return havequest(49007) end},
-},
-["ACHIEVEMENTS\\Exploration\\Legion\\Commander of Argus"] = {
-	{ids="49007",step_onlyif=function() return havequest(49007) end},
-},
-["ACHIEVEMENTS\\Professions\\Archaeology\\The Dwarven Dream"] = {
-	{ids="41170"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\Harbinger"] = {
-	{ids="44486,44488,44487"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\Lock, Stock and Two Smoking Goblins"] = {
-	{ids="43331"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\Post Haste"] = {
-	{ids="41411",goal_onlyif=function() return havequest(41411) end},
-	{ids="41368",goal_onlyif=function() return havequest(41368) end},
-	{ids="41397,46278,41394,50247,41367,41395"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\Priority Mail"] = {
-	{ids="41411",goal_onlyif=function() return havequest(41411) end},
-	{ids="41368",goal_onlyif=function() return havequest(41368) end},
-	{ids="41397,46278,41394,50247,41367,41395"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\Tehd & Marius' Excellent Adventure"] = {
-	{ids="44055"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\The Total Package"] = {
-	{ids="41411",goal_onlyif=function() return havequest(41411) end},
-	{ids="41368",goal_onlyif=function() return havequest(41368) end},
-	{ids="41397,46278,41394,50247,41367,41395"},
-},
-["ACHIEVEMENTS\\Quests\\Legion\\What a Ripoff!"] = {
-	{ids="39787,39789,39793,42483,39792,39786"},
-},
-["the_cake_is_not_a_lie"] = {
-	includes = {"auctioneer","H_Dalaran_Cooking_Dailies"},
-},
-["Dinner_Impossible"] = {
-	includes = {"trainer_Cooking"},
-},
-["Kickin'_It_Up_a_Notch"] = {
-	{ids="11379,11381,11380,11377"},
-},
-["The_Northrend_Gourmet"] = {
-	{ids="11377,11381,12645,13090,11379,12644,11380,12634"},
-	includes = {"trainer_Cooking"},
-},
-["Our_Daily_Bread"] = {
-	{ids="12645,13112,12634,13116,11380,12644,13113,13115,11377,11379,11381,13114,13090"},
-},
-["The_Outland_Gourmet"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-	includes = {"trainer_Cooking"},
-},
-["second_that_emotion"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Old_Gnome_and_the_Sea"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["The_Scavenger"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["The_Fishing_Diplomat"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Mr_Pinchy"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["The_Lurker_Above"] = {
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Old_Man_Barlowned"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Outland_Angler"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Fish_Don't_Leave_Footprints"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["The_Coin_Master"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["One_That_Didn't_Get_Away"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Grand_Master_Fisherman"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Thousand_Fish"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
-},
-["Master_Angler_of_Azeroth"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="32435,32436,9361,11377,13090,13114,8193,12634,11379,9349,11380,12645,13112,12644,11381,13116,13113,13115"},
-},
-["Master_Angler_of_Northrend"] = {
-	{ids="11667",goal_onlyif=function() return havequest(11667) end},
-	{ids="11666",goal_onlyif=function() return havequest(11666) end},
-	{ids="11665",goal_onlyif=function() return havequest(11665) end},
-	{ids="11668",goal_onlyif=function() return havequest(11668) end},
-	{ids="11669",goal_onlyif=function() return havequest(11669) end},
-	{ids="32435,32436,9361,11377,13090,13114,8193,12634,24803,11379,9349,11380,12645,13112,12644,11381,13116,13113,13115"},
 },
 ["ACHIEVEMENTS\\Draenor Garrison\\Buildings\\Intro to Husbandry"] = {
 	{ids="36917,36912,36944,37093,36946,36950,36945"},
@@ -12832,139 +11917,826 @@ ZGV.Quest_Cache_Horde = {
 ["ACHIEVEMENTS\\Reputations\\Mantle of the Talon King"] = {
 	{ids="35895,35897,35733,35896,36059,35734"},
 },
-["ACHIEVEMENTS\\Dungeons & Raids\\Pandaria Scenario\\Arena of Annihilation"] = {
-	{ids="31207"},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Slithershock Elver"] = {
+	{ids="38300"},
 },
-["ACHIEVEMENTS\\Dungeons & Raids\\Tranquil Master"] = {
-	{ids="30133",goal_onlyif=function() return Horde end},
-	{ids="30178",goal_onlyif=function() return Alliance end},
-	{ids="30884,30887,30888,30889,30890,30891,30892,30893,30894,30895,30960,30268,30899,30900,30271,30272,30273,30968,31032,30970,30971,30972,30973,30975,30976,30977,30978,30979,30980,30981,31063,31064,31065,30901,30269,30270,30898,30694,30695"},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Cinder Pup"] = {
+	includes = {"Garrison_CommandTable"},
 },
-["ACHIEVEMENTS\\Exploration\\Pandaria\\Rolo's Riddle"] = {
-	{ids="32975,32974,32976"},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Meadowstomper Calf"] = {
+	{ids="34819,34869,34900"},
 },
-["ACHIEVEMENTS\\Feats of Strength\\Mounts\\I've Got 9999 Problems but a Bone-White Primal Raptor Ain't One"] = {
-	{ids="32617"},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Young Talbuk"] = {
+	{ids="38300"},
 },
-["ACHIEVEMENTS\\General\\Pandaren Delicacies"] = {
-	{ids="31535"},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Everbloom Peachick"] = {
+	{ids="37150"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Ikky"] = {
+	{ids="34838"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Syd the Squid"] = {
+	{ids="36471"},
+},
+["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Iron Starlette"] = {
+	{ids="36940"},
+},
+["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Sky-Bo"] = {
+	{ids="34774"},
+},
+["PETSMOUNTS\\Battle Pets\\Undead Pets\\Bone Serpent"] = {
+	{ids="38300"},
+},
+["PETSMOUNTS\\Hunter Pets\\Beast Mastery Exotic Pets\\Shale Spiders\\Green Shale Spider (Rare Spawn)"] = {
+	includes = {"H_Therazane_PreQuest"},
+},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Magical Crawdad"] = {
+	includes = {"Mr_Pinchy"},
+},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Pengu"] = {
+	includes = {"Kaluak_Rep","dailies_rep_mount"},
+},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Strand Crawler"] = {
+	{ids="29317",step_onlyif=function() return havequest(29317) end},
+	{ids="29319,29361,29320,29322",step_onlyif=function() return havequest(29320) or havequest(29361) or havequest(29319) or havequest(29322) end},
+	{ids="13834,13832,13836,13833,13830"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Bombay Cat"] = {
 	includes = {"auctioneer"},
 },
-["ACHIEVEMENTS\\Pet Battles\\Collect\\Crazy for Cats"] = {
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Cornish Rex Cat"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Dun Morogh Cub"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Durotar Scorpion"] = {
+	{ids="13697,13763,13765,13707,13829,13726,13668,13767,13762,13839,13856,13764,13838"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Hyjal Bear Cub"] = {
+	{ids="29283"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Lashtail Hatchling"] = {
+	{ids="26321,26325,26359,26278,26386,26330,26334,26323,26362,26360,26350,26351,29208,26332,26317"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Orange Tabby Cat"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Panther Cub"] = {
 	{ids="29231,29220,29228,29232,29221,29222,29226,29230,29223,29227"},
 },
-["ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawler"] = {
-	includes = {"ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawlin' - Alliance","ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawlin' - Horde"},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Silver Tabby Cat"] = {
+	includes = {"auctioneer"},
 },
-["ACHIEVEMENTS\\Pet Battles\\Fabled Pandaren Tamer"] = {
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\Elwynn Lamb"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\Mulgore Hatchling"] = {
+	{ids="13774,13776,13838,13720,13829,13728,13668,13775,13777,13839,13773,13858,13709"},
+},
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\Porcupette"] = {
+	{ids="31926",step_onlyif=function() return completedq(31920) end},
+	{ids="31955,31956,31971,31958,31957,31953,31954,31991",step_onlyif=function() return completedq(31970) end},
+	{ids="31909"},
+},
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\Snowshoe Rabbit"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\White Kitten"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\Wolpertinger"] = {
+	includes = {"Brewfest_Dailies"},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Ammen Vale Lashling"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Dark Phoenix Hatchling"] = {
+	includes = {"misc_rep_mount"},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Lumpy"] = {
+	{ids="6983"},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pebble"] = {
+	{ids="26656,26658,27041,27932,26410,27938,27059,27442,26436,26438,26313,26315,26710,26827,26575,26577,27722,26835,28869,26585,26709,26792,26591,27101,27007,26833,26832,26829,26857,26831,26861,26328,26484,27043,27123,26871,27008,26875,26750,26625,26500,27010,26250,26752,26254,26256,26766,26768,26770,26411,26583,26582,26326,26579,26581,26657,26659,27931,26409,27935,27937,26580,26314,27135,26441,26440,26439,26427,26437,26869,26426,26377,26564,26312,27203,26376,26375,26828,26576,26578,26834,26836,26584,26762,26413,26971,27100,27102,26501,26502,27934,26791,26537,26755,27061,26632,26244,26246,26247,27126,26248,26876,27005,26245,27136,26249,26251,26507,26255,26258,26259,26261,26771,26260,26499,27933"},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Searing Scorchling"] = {
+	includes = {"H_Firelands_PreQuests"},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Teldrassil Sproutling"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Blue Mini Jouster"] = {
+	{ids="25761,25255,25392,25269,25525,25656,25277,25279,25408,25664,25412,25795,25424,25807,25301,25430,25940,25317,25319,25321,25323,25325,25460,25462,25464,25599,25355,25740,25234,25617,25492,29177,25758,25381,29066,25385,25776,25270,25272,25655,25663,25411,25544,25298,25300,25810,25560,27721,25523,25312,25764,25316,25746,25574,25576,25578,25763,25328,25584,25332,27874,25575,25303,25665,28805,25404,25600,25472,25731,25490,25354,25297,25612,25233,25428,25491,25493,25382,25370,25577,25320,25630,25324,28790"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Blue Moth"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Gold Mini Jouster"] = {
+	{ids="25761,25255,25392,25269,25525,25656,25277,25279,25408,25664,25412,25795,25424,25807,25301,25430,25940,25317,25319,25321,25323,25325,25460,25462,25464,25599,25355,25740,25234,25617,25492,29177,25758,25381,29066,25385,25776,25270,25272,25655,25663,25411,25544,25298,25300,25810,25560,27721,25523,25312,25764,25316,25746,25574,25576,25578,25763,25328,25584,25332,27874,25575,25303,25665,28805,25404,25600,25472,25731,25490,25354,25297,25612,25233,25428,25491,25493,25382,25370,25577,25320,25630,25324,28790"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Great Horned Owl"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Hawk Owl"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Plump Turkey"] = {
+	includes = {"Pilgrim's_Bounty_Dailies","Pilgrim's_Bounty_Achievements","Pilgrim's_Bounty_Quests"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Rustberg Gull"] = {
+	{ids="28679,28680,28681,28682,28683,28684,28685,28686,28687,28689,28690,28691,28692,28693,28694,28695,28696,28697,28698,28700,28657,28721,28659,28660,28661,28662,28663,28664,28665,28668,28669,28670,28678,28658"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Tiny Flamefly"] = {
+	{ids="28436,28421,28437,28422,28438,28423,28439,28424,28440,28425,28441,28426,28225,28427,28226,28428,28227,28429,28430,28491,28431,28442,28432,28417,28433,28418,28434,28419,28435,28420,28515"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Tirisfal Batling"] = {
+	{ids="13710,13729,13838,13780,13782,13829,13668,13721,13860,13839,13781,13778,13779"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Westfall Chicken"] = {
+	{ids="3861"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\White Moth"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Yellow Moth"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Argent Gruntling"] = {
+	{ids="13668,13829,13838,13839"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Enchanted Broom"] = {
+	{ids="13785,13787,13731,13838,13722,13784,13711,13668,13859,13839,13786,13783,13829"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Festival Lantern"] = {
+	includes = {"Lunar_Festival_Elder_Paths","Lunar_Festival_Main_Quests"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Lunar Lantern"] = {
+	includes = {"Lunar_Festival_Elder_Paths","Lunar_Festival_Main_Quests"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Magic Lamp"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Shimmering Wyrmling"] = {
+	{ids="13668,13829,13838,13839"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Willy"] = {
+	{ids="10967"},
+},
+["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Clockwork Rocket Bot"] = {
+	{ids="6983,6984"},
+},
+["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Mechanopeep"] = {
+	includes = {"auctioneer"},
+},
+["PETSMOUNTS\\Battle Pets\\Undead Pets\\Creepy Crate"] = {
+	includes = {"Hallow's_End_Quests"},
+},
+["PETSMOUNTS\\Battle Pets\\Undead Pets\\Macabre Marionette"] = {
+	{ids="14166"},
+	includes = {"cooking_fire"},
+},
+["PETSMOUNTS\\Battle Pets\\Undead Pets\\Sen'jin Fetish"] = {
+	{ids="13770,13772,13838,13857,13769,13771,13668,13727,13719,13839,13708,13768,13829"},
+},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Fishy"] = {
+	{ids="31239"},
+},
+["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Tiny Goldfish"] = {
+	{ids="30701,30585,30754,30698,30586,30763,30613,30753,30658,30700,30584,30588,30598,30678"},
+	{ids="31370",step_onlyif=function() return not completedq(31370) end},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Air Spirit"] = {
+	{ids="32440"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Earth Spirit"] = {
+	{ids="32441"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Fire Spirit"] = {
+	{ids="32434"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+},
+["PETSMOUNTS\\Battle Pets\\Elemental Pets\\Pandaren Water Spirit"] = {
+	{ids="32439"},
+	{ids="32428",step_onlyif=function() return not completedq(32428) end},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Chi-ji Kite"] = {
+	includes = {"follow_path_herbs"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Yu'lon Kite"] = {
+	includes = {"follow_path_herbs"},
+},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Mountain Panda"] = {
+	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
+},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Red Panda"] = {
 	includes = {"H_Beasts_of_Fable","H_Battlepet_quests"},
 },
-["ACHIEVEMENTS\\Pet Battles\\I Choose You"] = {
-	includes = {"H_Battlepet_quests"},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Snowy Panda"] = {
+	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
 },
-["ACHIEVEMENTS\\Pet Battles\\The Longest Day"] = {
-	{ids="31991,31954,31973,31955,31974,31971,31958,31957,31953,31972,31956",step_onlyif=function() return completedq(31970) end},
-	{ids="31916",step_onlyif=function() return completedq(31915) end},
-	{ids="31922,31923,31924,31925,31926",step_onlyif=function() return completedq(31920) end},
-	{ids="31934,31932,31931",step_onlyif=function() return completedq(31928) end},
-	{ids="31871,31905,31819,32439,31872,31906,32434,31854,32441,31862,31907,32440,31904,31818,31908,31909"},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Sunfur Panda"] = {
+	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
+},
+["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide"] = {
+	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","vendor_Alchemy","GB_Path","LR_SK_Path","GS_SM_Path","Sungrass_Path","GT_WS_Path","HB_Path","trainer_Alchemy","IT_LB_Path","TJ_Path","Kingsblood_Path","SV_CB_Path","PB_SL_ER_Path","Whiptail_Path","GC_DN_TL_Path","NB_DG_Path","FL_GT_KW_BW_Path","GM_KB_LR_WS_Path","Terocone_Path","FW_DG_Path"},
+},
+["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 1-600 Leveling Guide"] = {
+	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Archaeology"},
+},
+["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 1-600 Leveling Guide"] = {
+	includes = {"Iron_Ore_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_mine","Thorium_Ore_Path","Saronite_Path","Adamantite_Path","shatt_anvil","Tin_Path","Obsidium_Path","trainer_Blacksmithing","trainer_Blacksmithing_Shatt","vendor_Blacksmithing","maincity_anvil","Cobalt_Path","Copper_Path","Fel_Iron_Path","maincity_forge2","Mithril_Ore_Path","trainer_Mining"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Cooking 1-520 Leveling Guide"] = {
+	includes = {"Pandarian_Cooking_1-520"},
+},
+["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide"] = {
+	includes = {"--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Enchanting"},
+},
+["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide"] = {
+	includes = {"Iron_Ore_Path","--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Mining","Mithril_Ore_Path","Fel_Iron_Path","maincity_anvil","follow_path_mine","Copper_Path","Silver_Tin_Path","maincity_forge2","Adamantite_Path","trainer_Engineering"},
+},
+["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 1-600 Leveling Guide"] = {
+	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Fishing"},
+},
+["PROFESSIONS\\Herbalism\\Leveling Guides\\Herbalism 1-600 Leveling Guide"] = {
+	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","follow_path_herbs","trainer_HerbalismUC","trainer_Herbalism"},
+},
+["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 1-600 Leveling Guide"] = {
+	includes = {"FL_GT_KW_BW_Path","MR_BW_BT_SK_Path","vendor_Inscription","trainer_Inscription","--@@TRIALONLYLINE end_of_prof_trial_150","PB_SL_ER_Path","GC_TL_Path","GC_TL_AT_Path","SV_CB_Path","follow_path_herbs","GM_KB_LR_WS_Path","GS_SM_Path","FW_DG_Path"},
+},
+["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 1-600 Leveling Guide"] = {
+	includes = {"maincity_anvil","--@@TRIALONLYLINE end_of_prof_trial_150","Saronite_Path","Obsidium_Path","Cobalt_Path","Iron_Ore_Path","trainer_Mining","Thorium_Ore_Path","Fel_Iron_Path","trainer_Jewelcrafting","follow_path_mine","Copper_Path","Silver_Tin_Path","Mithril_Ore_Path","Adamantite_Path","maincity_forge2"},
+},
+["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 1-600 Leveling Guide"] = {
+	includes = {"Ruined_Light_Leather","--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Leatherworking","vendor_Leatherworking"},
+},
+["PROFESSIONS\\Mining\\Farming Guides\\Ore"] = {
+	includes = {"follow_path_mine"},
+},
+["PROFESSIONS\\Mining\\Leveling Guides\\Classic Mining 1-600 Leveling Guide"] = {
+	includes = {"maincity_anvil","vendor_Mining","Copper_Path","Silver_Tin_Path","trainer_Mining","follow_path_mine"},
+},
+["PROFESSIONS\\Mining\\Leveling Guides\\Mining 1-600 Leveling Guide"] = {
+	includes = {"follow_path_mine","--@@TRIALONLYLINE end_of_prof_trial_150"},
+},
+["PROFESSIONS\\Skinning\\Leveling Guides\\Skinning 1-600 Leveling Guide"] = {
+	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Skinning","vendor_Leatherworking"},
+},
+["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 1-600 Leveling Guide"] = {
+	includes = {"trainer_Tailoring","--@@TRIALONLYLINE end_of_prof_trial_150","vendor_Tailoring"},
+},
+["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide"] = {
+	includes = {"follow_path_herbs","vendor_Alchemy","trainer_Alchemy"},
+},
+["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 525-600 Leveling Guide"] = {
+	includes = {"trainer_Archaeology"},
+},
+["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 500-600 Leveling Guide"] = {
+	includes = {"maincity_anvil","trainer_Blacksmithing","follow_path_mine","trainer_Mining"},
+},
+["PROFESSIONS\\Cooking\\Daily Guides\\Pandaria Cooking Daily Guide"] = {
+	includes = {"MoP_Cooking_Dailies"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide"] = {
+	includes = {"Cooking_520-600"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Brew"] = {
+	{ids="31479,31302,31480,31281"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Grill"] = {
+	{ids="31467,31302,31311,31281"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Oven"] = {
+	{ids="31478,31302,31477,31281"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Pot"] = {
+	{ids="31472,31302,31474,31281"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Steamer"] = {
+	{ids="31475,31302,31476,31281"},
+},
+["PROFESSIONS\\Cooking\\Leveling Guides\\Way of the Wok"] = {
+	{ids="31470,31302,31471,31281"},
+},
+["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide"] = {
+	includes = {"trainer_Enchanting"},
+},
+["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide"] = {
+	includes = {"maincity_anvil","trainer_Engineering","follow_path_mine"},
+},
+["PROFESSIONS\\First Aid\\Leveling Guides\\First Aid 525-600 Leveling Guide"] = {
+	includes = {"trainer_FirstAid"},
+},
+["PROFESSIONS\\Fishing\\Leveling Guides\\Fishing 525-600 Leveling Guide"] = {
+	includes = {"trainer_Fishing"},
+},
+["PROFESSIONS\\Herbalism\\Leveling Guides\\Herbalism 525-600 Leveling Guide"] = {
+	includes = {"follow_path_herbs","trainer_Herbalism"},
+},
+["PROFESSIONS\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide"] = {
+	includes = {"vendor_Inscription","trainer_Inscription","GT_SW_Path","follow_path_herbs"},
+},
+["PROFESSIONS\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 500-600 Leveling Guide"] = {
+	includes = {"trainer_Jewelcrafting","follow_path_mine","vendor_Jewelcrafting"},
+},
+["PROFESSIONS\\Leatherworking\\Leveling Guides\\Leatherworking 500-600 Leveling Guide"] = {
+	includes = {"trainer_Leatherworking"},
+},
+["PROFESSIONS\\Mining\\Leveling Guides\\Mining 525-600 Leveling Guide"] = {
+	includes = {"follow_path_mine","trainer_Mining"},
+},
+["PROFESSIONS\\Mining\\Leveling Guides\\Mining with Smelting 500-600 Leveling Guide"] = {
+	includes = {"follow_path_mine","trainer_Mining"},
+},
+["PROFESSIONS\\Skinning\\Leveling Guides\\Skinning 525-600 Leveling Guide"] = {
+	includes = {"trainer_Skinning"},
+},
+["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide"] = {
+	includes = {"trainer_Tailoring"},
+},
+["ACHIEVEMENTS\\Dungeons & Raids\\Classic\\King of Dire Maul"] = {
+	{ids="27128",step_onlyif=function() return not completedq(27128) end},
+	{ids="27112",step_onlyif=function() return not completedq(27112) end},
+	{ids="27108",step_onlyif=function() return not completedq(27108) end},
+	{ids="27104",step_onlyif=function() return not completedq(27104) end},
+	{ids="27103",step_onlyif=function() return not completedq(27103) end},
+	{ids="27109",step_onlyif=function() return not completedq(27109) end},
+	{ids="27107",step_onlyif=function() return not completedq(27107) end},
+	{ids="27110,27111,27113",step_onlyif=function() return not completedq(27111) end},
+	{ids="27105",step_onlyif=function() return not completedq(27105) end},
+},
+["ACHIEVEMENTS\\Dungeons & Raids\\Cataclysm Dungeon\\Bear-ly Made It"] = {
+	{ids="29217"},
+},
+["ACHIEVEMENTS\\General\\Cataclysmically Delicious"] = {
+	includes = {"auctioneer"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\100 Cooking Awards"] = {
+	{ids="13089",step_onlyif=function() return not completedq(13089) end},
+	includes = {"H_Dalaran_Cooking_Dailies","Org_Cooking_Dailies"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\The Cake Is Not A Lie"] = {
+	includes = {"the_cake_is_not_a_lie"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Captain Rumsey's Lager"] = {
+	{ids="13089",step_onlyif=function() return not completedq(13089) end},
+	{ids="13830,13832,13834,26543,11380,13836,26572,13833,26556,11377,11379,11381,26557,26588"},
+	includes = {"H_Dalaran_Cooking_Dailies"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Cooking With Style"] = {
+	{ids="13089",step_onlyif=function() return not completedq(13089) end},
+	includes = {"H_Dalaran_Cooking_Dailies"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Dinner Impossible"] = {
+	includes = {"trainer_Cooking"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Iron Chef"] = {
+	{ids="6610,9356,13090,9349,9361,8307,8313"},
+	includes = {"trainer_Cooking"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Kickin' It Up a Notch"] = {
+	{ids="11377",goal_onlyif=function() return havequest(11377) end},
+	{ids="11381",goal_onlyif=function() return havequest(11381) end},
+	{ids="11380",goal_onlyif=function() return havequest(11380) end},
+	{ids="11379",goal_onlyif=function() return havequest(11379) end},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Let's Do Lunch: Orgrimmar"] = {
+	{ids="26234",goal_only="Troll",goal_onlyif=function() return havequest(26234) end},
+	{ids="26233",goal_only="Orc,Scourge,Tauren,BloodElf,Goblin",goal_onlyif=function() return havequest(26233) end},
+	{ids="26226",goal_onlyif=function() return havequest(26226) end},
+	{ids="26235",goal_onlyif=function() return havequest(26235) end},
+	{ids="26227",goal_onlyif=function() return havequest(26227) end},
+	{ids="26220",goal_onlyif=function() return havequest(26220) end},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Let's Do Lunch: Thunder Bluff"] = {
+	{ids="29365",goal_onlyif=function() return havequest(29365) end},
+	{ids="29364",goal_onlyif=function() return havequest(29364) end},
+	{ids="29363",goal_onlyif=function() return havequest(29363) end},
+	{ids="29362",goal_onlyif=function() return havequest(29362) end},
+	{ids="29358",goal_onlyif=function() return havequest(29358) end},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Let's Do Lunch: Undercity"] = {
+	{ids="29360",goal_onlyif=function() return havequest(29360) end},
+	{ids="29334",goal_onlyif=function() return havequest(29334) end},
+	{ids="29333",goal_onlyif=function() return havequest(29333) end},
+	{ids="29315",goal_onlyif=function() return havequest(29315) end},
+	{ids="29332",goal_onlyif=function() return havequest(29332) end},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\The Northrend Gourmet"] = {
+	{ids="12645,12644,12634,13090"},
+	includes = {"trainer_Cooking","vendor_Cooking"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\Our Daily Bread"] = {
+	includes = {"Our_Daily_Bread"},
+},
+["ACHIEVEMENTS\\Professions\\Cooking\\The Outland Gourmet"] = {
+	{ids="9356,9361,9349"},
+	includes = {"trainer_Cooking"},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Accomplished Angler"] = {
+	includes = {"The_Scavenger","The_Lurker_Above","Fish_Don't_Leave_Footprints","One_That_Didn't_Get_Away","Master_Angler_of_Azeroth","Grand_Master_Fisherman","Outland_Angler","Master_Angler_of_Northrend","Old_Gnome_and_the_Sea","Old_Man_Barlowned","Mr_Pinchy","Thousand_Fish","The_Coin_Master","The_Fishing_Diplomat"},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Chasing Marcia"] = {
+	{ids="13833",goal_onlyif=function() return havequest(13833) end},
+	{ids="13834",goal_onlyif=function() return havequest(13834) end},
+	{ids="13832",goal_onlyif=function() return havequest(13832) end},
+	{ids="13830",goal_onlyif=function() return havequest(13830) end},
+	{ids="13836",goal_onlyif=function() return havequest(13836) end},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Fish or Cut Bait: Orgrimmar"] = {
+	{ids="26543",goal_onlyif=function() return havequest(26543) end},
+	{ids="26556",goal_onlyif=function() return havequest(26556) end},
+	{ids="26557",goal_onlyif=function() return havequest(26557) end},
+	{ids="26572",goal_onlyif=function() return havequest(26572) end},
+	{ids="26588",goal_onlyif=function() return havequest(26588) end},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Fish or Cut Bait: Thunder Bluff"] = {
+	{ids="29354",goal_onlyif=function() return havequest(29354) end},
+	{ids="29345",goal_onlyif=function() return havequest(29345) end},
+	{ids="29346",goal_onlyif=function() return havequest(29346) end},
+	{ids="29348",goal_onlyif=function() return havequest(29348) end},
+	{ids="29349",goal_onlyif=function() return havequest(29349) end},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Fish or Cut Bait: Undercity"] = {
+	{ids="29361",goal_onlyif=function() return havequest(29361) end},
+	{ids="29322",goal_onlyif=function() return havequest(29322) end},
+	{ids="29319",goal_onlyif=function() return havequest(29319) end},
+	{ids="29317",goal_onlyif=function() return havequest(29317) end},
+	{ids="29320",goal_onlyif=function() return havequest(29320) end},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Master Angler of Azeroth"] = {
+	{ids="32435,32436,8193"},
+},
+["ACHIEVEMENTS\\Professions\\Fishing\\Old Man Barlowned"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+},
+["ACHIEVEMENTS\\Quests\\Eastern Kingdoms\\Full Caravan"] = {
+	{ids="27487,27488,27489,27367,27368,27432,27370,27371,27372,27373,27381,27382,27383,27384,27385,27449,27387,27388,27389,27390,27455,27456,27457,27522,27524,27525,27463,27464,27465,27466,27527,27526,27551,27369,27386,27392"},
+},
+["ACHIEVEMENTS\\Quests\\Eastern Kingdoms\\Ready, Set, Goat!"] = {
+	{ids="27775",step_onlyif=function() return not completedq(27776) end},
+},
+["ACHIEVEMENTS\\Quests\\Outland\\Blade's Edge Bomberman"] = {
+	{ids="11102",goal_only="Druid"},
+	{ids="11010",goal_onlyif=function() return not Druid end},
+	{ids="11025,11030,11062,11023"},
+},
+["ACHIEVEMENTS\\Quests\\Outland\\Bombs Away"] = {
+	{ids="11098,11008"},
+},
+["ACHIEVEMENTS\\Quests\\Northrend\\D.E.H.T.A's Little P.I.T.A."] = {
+	{ids="11865,11884,11871,11892,11879,11866,11870,11872,11876,11878,11869"},
+},
+["ACHIEVEMENTS\\Quests\\Northrend\\Guru of Drakuru"] = {
+	{ids="12713"},
+	includes = {"BetrayalDrakuru","CleansingDrakTharon"},
+},
+["ACHIEVEMENTS\\Quests\\Northrend\\Rapid Defense"] = {
+	{ids="12372"},
+},
+["ACHIEVEMENTS\\Quests\\Northrend\\Savior of the Oracles"] = {
+	includes = {"Oracles_PreQuests","Oracles_Dailies"},
+},
+["ACHIEVEMENTS\\Quests\\Northrend\\Veteran of the Wrathgate"] = {
+	{ids="12064,12072,12189,12221,12036,12500,12498,12497,11983,12053,12200,12069,12224,12218,12496,12008,12140,12034,12063,12071,11978,12188"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\The 'Unbeatable?' Pterodactyl: BEATEN."] = {
+	{ids="29177"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\And the Meek Shall Inherit Kalimdor"] = {
+	{ids="29147",step_onlyif=function() return havequest(29147) or completedq(29147) end},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Beware of the 'Unbeatable?' Pterodactyl"] = {
+	{ids="25761,25255,25392,25269,25525,25656,25277,25279,25408,25664,25412,25795,25424,25807,25301,25430,25940,25317,25319,25321,25323,25325,25460,25462,25464,25599,25355,25740,25234,25617,25492,25758,25381,29066,25385,25776,25270,25272,25655,25663,25411,25544,25298,25300,25810,25560,27721,25523,25312,25764,25316,25746,25574,25576,25578,25763,25328,25584,25332,27874,25575,25303,25665,28805,25404,25600,25472,25731,25490,25354,25297,25612,25233,25428,25491,25493,25382,25370,25577,25320,25630,25324,28790"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Fireside Chat"] = {
+	{ids="29141,29205,29299,29138,29142,29206,29255,29139,29143,29304,29179,29137,29264,29278,29257,29263"},
+	includes = {"H_Firelands_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Fungal Frenzy"] = {
+	includes = {"H_Therazane_PreQuest"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Fungalophobia"] = {
+	{ids="28390"},
+	includes = {"H_Therazane_PreQuest","Therazane_Dailies"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\The Glop Family Line"] = {
+	{ids="28390",goal_onlyif=function() return rep ('Therazane') >= Revered end},
+	includes = {"H_Therazane_PreQuest"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Infernal Ambassadors"] = {
+	includes = {"H_Firelands_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Legacy of Leyara"] = {
+	includes = {"H_Firelands_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\The Molten Front Offensive"] = {
+	includes = {"H_Firelands_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\My Very Own Broodmother"] = {
+	{ids="28391",step_onlyif=function() return rep("Therazane")>=Revered end},
+	includes = {"H_Therazane_PreQuest","Therazane_Dailies"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Ready for Raiding II"] = {
+	includes = {"H_Firelands_PreQuests"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Rock Lover"] = {
+	{ids="26710"},
+	includes = {"H_Therazane_PreQuest","Therazane_Dailies"},
+},
+["ACHIEVEMENTS\\Quests\\Cataclysm\\Round Three, Fight!"] = {
+	{ids="27861",goal_onlyif=function() return havequest(27861) or completedq(27861) end},
+	{ids="27863",goal_onlyif=function() return havequest(27863) or completedq(27863) end},
+	{ids="27862",goal_onlyif=function() return havequest(27862) or completedq(27862) end},
+	{ids="27866,27867,27865,27868"},
+},
+["ACHIEVEMENTS\\Quests\\5 Dungeon Quests Complete"] = {
+	{ids="27790,27756,27785,27758,27781"},
+},
+["ACHIEVEMENTS\\Quests\\Of Blood And Anguish"] = {
+	{ids="9977,12934,12936,9970,9972,12933,12935,9967,12954,12948,9973,9962"},
+},
+["ACHIEVEMENTS\\Quests\\The First Rule of Ring of Blood is You Don't Talk About Ring of Blood"] = {
+	{ids="27862",goal_onlyif=function() return havequest(27862) or completedq(27862) end},
+	{ids="27863",goal_onlyif=function() return havequest(27863) or completedq(27863) end},
+	{ids="27861",goal_onlyif=function() return havequest(27861) or completedq(27861) end},
+	{ids="27866,9977,12934,12936,27867,9970,9972,27865,27868,12933,12935,9967,12954,12948,9973,9962"},
+},
+["ACHIEVEMENTS\\Quests\\Hemet Nesingwary: The Collected Quests"] = {
+	{ids="12549,12550,12551,12520,12489,185,12522,187,188,12556,12525,190,12558,191,9850,192,9851,193,9789,194,12688,195,9854,196,9855,583,9856,9857,9858,12614,9859,12607,12569,26269,12592,12560,12595,12603,12544,197,12526,12605,12589,12543,12521,208,12524,186,12523,9852"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Dailies"] = {
+	includes = {"H_Battlepet_dailies"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Cataclysm"] = {
+	{ids="31986",step_onlyif=function() return not completedq(31985) and not completedq(31986) end},
+	{ids="31973,31974,31972",step_onlyif=function() return completedq(31970) end},
+	{ids="31967,31970"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Eastern Kingdoms"] = {
+	{ids="31902"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Kalimdor"] = {
+	{ids="31977",step_onlyif=function() return not completedq(31977) and not completedq(31976) end},
+	{ids="31590,31812,31827,31891,31918,31814,31588,31817,31815,31870,32009,31813,31897,31589"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Northrend"] = {
+	{ids="31984",step_onlyif=function() return not completedq(31929) and not completedq(31927) end},
+	{ids="31931,31933,31934",step_onlyif=function() return completedq(31928) end},
+	{ids="31929,31928"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Outland"] = {
+	{ids="31922,31923,31924,31925",step_onlyif=function() return completedq(31920) end},
+	{ids="31982",step_onlyif=function() return not completedq(31981) and not completedq(31982) end},
+	{ids="31921,31920"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Battle Pet Tamers: Pandaria"] = {
+	{ids="31952,31951"},
+	{ids="31955,31991,31957,31953,31954,31956",step_onlyif=function() return completedq(31951) end},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Beasts of Fable"] = {
+	includes = {"H_Beasts_of_Fable"},
+},
+["PETSMOUNTS\\Battle Pet Quests\\Beasts of Fable Dailies"] = {
 	includes = {"H_Beasts_of_Fable_D"},
 },
-["ACHIEVEMENTS\\Pet Battles\\Trainer Extraordinaire"] = {
-	includes = {"ACHIEVEMENTS\\Pet Battles\\Battle\\Master Pet Battler","ACHIEVEMENTS\\Pet Battles\\Collect\\He's Mine!","ACHIEVEMENTS\\Pet Battles\\Level\\Growing Up","ACHIEVEMENTS\\Pet Battles\\Battle\\Cat Fight!","ACHIEVEMENTS\\Pet Battles\\Battle\\Big City Pet Brawlin' - Horde","ACHIEVEMENTS\\Pet Battles\\Level\\Time for a Leash","ACHIEVEMENTS\\Pet Battles\\Battle\\Experienced Pet Battler","ACHIEVEMENTS\\Pet Battles\\Level\\Just a Pup","ACHIEVEMENTS\\Pet Battles\\Battle\\Local Pet Mauler","ACHIEVEMENTS\\Pet Battles\\Level\\Newbie"},
+["PETSMOUNTS\\Battle Pet Quests\\Pandaren Spirit Tamer"] = {
+	{ids="32428"},
 },
-["ACHIEVEMENTS\\Professions\\Cooking\\Ironpaw Chef"] = {
-	includes = {"trainer_Cooking_MoP"},
+["REPUTATIONS\\Classic Reputations\\Argent Dawn"] = {
+	includes = {"Argent_Dawn_Rep"},
 },
-["ACHIEVEMENTS\\Professions\\Cooking\\Master of Pandaren Cooking"] = {
-	includes = {"Cooking_520-600","Pandarian_Cooking_1-520","Cooking_PreMasteries"},
+["REPUTATIONS\\Classic Reputations\\Bloodsail Buccaneers"] = {
+	{ids="26624,26609,26594,26610,26595,26611,26612,26678,26644,26629,26665,26630,26664,26631,26647,26663,26648,26633,26649,26603,26650,26604,26662,26605,26634,26606,26635,26593"},
 },
-["ACHIEVEMENTS\\Professions\\Cooking\\Now I Am the Master"] = {
-	includes = {"Cooking_PreMasteries","Cooking_520-600","Pandarian_Cooking_1-520","Nomi_Dailies","MoP_Cooking_Dailies"},
+["REPUTATIONS\\Classic Reputations\\Brood of Nozdormu"] = {
+	{ids="8579",goal_onlyif=function() return not completedq(8579) end},
+	{ids="8595",goal_onlyif=function() return completedq(8579) end},
+	{ids="8784"},
 },
-["ACHIEVEMENTS\\Professions\\Cooking\\The Pandaren Gourmet"] = {
-	{ids="31535"},
+["REPUTATIONS\\Classic Reputations\\Cenarion Circle"] = {
+	{ids="27420,27421,24719,27053,27057,24854,24855,26935,8304,27000,27001,27002,8306,27383,27384,8308,8277,8309,8278,8310,8279,8280,8281,24686,24687,8314,24689,8284,9416,8285,27386,27385,8318,8287,27392,9422,8320,26955,8321,26999,8282,26954,8323,8283,26956,27544,26953"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\A Taste of Things to Come"] = {
-	includes = {"Tillers_Quests"},
+["REPUTATIONS\\Classic Reputations\\Darkmoon Faire"] = {
+	includes = {"Darkmoon_Faire_Dailies"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Ain't Lost No More"] = {
-	{ids="31313,31314,31312,31315"},
-	includes = {"Tillers_Quests"},
+["REPUTATIONS\\Classic Reputations\\The Defilers"] = {
+	{ids="8105,8121"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Amber is the Color of My Energy"] = {
-	{ids="31009",step_onlyif=function() return not completedq(31010) end},
-	{ids="31211,31354,31606,31085,31179,31026,31439,31398,31010,31006"},
+["REPUTATIONS\\Classic Reputations\\Frostwolf Clan"] = {
+	{ids="7142,7124,7101,7082,7161,7224"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Champion of Chi-Ji"] = {
-	{ids="31378",step_onlyif=function() return not completedq(31378) end},
-	{ids="30731,30735,30739,30728,30732,30736,30725,30729,30718,30737,30726,30730,30734,30738,30727,30733",step_onlyif=function() return not achieved(7287) end},
-	{ids="30718,30740",step_onlyif=function() return achieved(7287) end},
-	{ids="30716,30717"},
+["REPUTATIONS\\Classic Reputations\\The Steamwheedle Cartel"] = {
+	{ids="9267,9266,9268,9259"},
+	includes = {"vendor_Blacksmithing","vendor_Alchemy","vendor_Tailoring"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Defender of Gods"] = {
-	{ids="31266,31277"},
+["REPUTATIONS\\Classic Reputations\\Thorium Brotherhood"] = {
+	{ids="28515",goal_onlyif=function() return havequest(28515) end},
+	{ids="27986,28428,28429,28052,28431,28054,28055,28056,28057,28060,28061,28062,28064,28512,28430,28427,28426,28425,28424,28423,28422,27956,28420,27958,27959,27960,27961,27962,27963,27964,28028,28029,28030,28418,28032,28033,28034,28035,28099,28421,28417,27976,27977,28419,27979,27980,27981,27982,27983,27984,27985,27965"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Every Day I'm Pand-a-ren"] = {
-	{ids="32246,32247,32109"},
-	includes = {"Golden_Lotus_PreQuests","Tillers_Quests","CS_PreQuests"},
+["REPUTATIONS\\Classic Reputations\\Timbermaw Hold"] = {
+	{ids="8470",step_onlyif=function() return rep('Timbermaw Hold')>=Neutral end},
+	{ids="28530,28614,28469,28362,28366,28460,28524,28467,28470,28521,28615,28364,28338,28522,28464"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Finish Them!"] = {
-	{ids="31381",step_onlyif=function() return havequest(31381) end},
-	{ids="30881,30885,30882,30879,30883,31517,30880,31492,30907,30902"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Neutral)"] = {
+	{ids="11020,11017,11035,11018,11015,11016"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Green Acres"] = {
-	includes = {"Tillers_Quests"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Neutral) - Pre-Quests"] = {
+	{ids="10804,10836,10870,10814,11049,11013,11014,10837,10854,10811,10858,10866"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Isle of Thunder"] = {
-	{ids="32277,32278,32678,32680,32212,32654,32279"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Friendly)"] = {
+	{ids="11055,11016,11018,11035,11015,11077,11020,11017,11076"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Listen to the Drunk Fish"] = {
-	includes = {"Tillers_Quests"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Friendly) - Pre-Quests"] = {
+	{ids="11083,11053,11054,11075,11082,11081"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\One Step at a Time"] = {
-	{ids="30277,30280"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Honored)"] = {
+	{ids="11055,11016,11018,11035,11086,11015,11077,11020,11017,11076"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Proven Strength"] = {
-	{ids="31038",step_onlyif=function() return havequest(31038) end},
-	{ids="31128",step_onlyif=function() return havequest(31128) end},
-	{ids="31104",step_onlyif=function() return havequest(31104) end},
-	{ids="31220",step_onlyif=function() return havequest(31220) end},
-	{ids="31221",step_onlyif=function() return havequest(31221) end},
-	{ids="31127",step_onlyif=function() return havequest(31127) end},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Honored) - Pre-Quests"] = {
+	{ids="11069,11084,11067,11064,11068,11071,11070"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Ready for Raiding III"] = {
-	includes = {"Golden_Lotus_PreQuests"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Revered)"] = {
+	{ids="11097",goal_onlyif=function() return rep ('The Scryers') >= Friendly end},
+	{ids="11101",goal_onlyif=function() return rep ('The Aldor') >= Friendly end},
+	{ids="11055,11016,11018,11035,11086,11015,11077,11020,11017,11076"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Roll Club"] = {
-	includes = {"Golden_Lotus_PreQuests"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Revered) - Pre-Quests"] = {
+	{ids="11094,11095",step_onlyif=function() return rep ('The Scryers') >= Friendly end},
+	{ids="11099,11100",step_onlyif=function() return rep ('The Aldor') >= Friendly end},
+	{ids="11092,11041"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Savior of Stoneplow"] = {
-	includes = {"Marista_Hub"},
+["REPUTATIONS\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Exalted) - Getting Your Netherdrake!"] = {
+	{ids="11107,11108"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Shadow Hopper"] = {
-	includes = {"CS_PreQuests"},
+["REPUTATIONS\\Burning Crusade Reputations\\The Aldor"] = {
+	{ids="10816,10407,10313,11038,10409,10410,10568,10380,10381,10571,10321,10668,10574,10669,10323,10325,10420,10641,10328,10299,10646,10650,10575,10640,10554,10649,10210,10020,10241,10021,10431,10211,10243,10653,10322,10619,10245,10637,10246,10587"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Spreading the Warmth!"] = {
-	includes = {"Golden_Lotus_PreQuests"},
+["REPUTATIONS\\Burning Crusade Reputations\\Cenarion Expedition"] = {
+	{ids="10722,11866,11868,11869,11870,11871,11872,9968,10096,10351,9971,10607,11878,9720,9978,9979,29613,29615,9730,10112,10748,9990,10753,9995,9997,10255,10893,10894,10006,10896,9373,10771,10904,29691,9894,9895,29570,11570,11566,11569,11865,11879,10159,11563,11571,11559,11560,11561,11562,9912,11564,11565,9788,11884,11876,29614,29616,10682,10810,10429,10812,10427,10426,10912,10911,10910,9802,10819,10820,10567,10821,10770,10719,9728,29564,29566,10447,10448,10713,29568,9716,9817,9747,9718,9372,10349,9752,9785,9951,10132,9724,10134,10717,29563,9957,29567,9731,9732"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Test Drive"] = {
-	{ids="31808"},
+["REPUTATIONS\\Burning Crusade Reputations\\The Consortium"] = {
+	{ids="9900,10436,10405,10311,10406,10438,10439,10345,10440,10850,10411,10855,10856,10384,10353,10385,10417,9882,10418,10262,9913,10972,10971,10422,10265,10423,10266,10424,10267,10425,10268,9914,10269,10276,10270,10857,9893,9925,10335,10430,10336,10437,10290,10408,10275,10205,10339,10308,10970,10348,10310"},
 },
-["ACHIEVEMENTS\\Quests\\Pandaria\\Till the Break of Dawn"] = {
-	includes = {"Tillers_Quests"},
+["REPUTATIONS\\Burning Crusade Reputations\\Keepers of Time"] = {
+	{ids="10277,29599,10296,11378,11382,10297,10282,29598,11383,10279"},
 },
-["ACHIEVEMENTS\\Reputation\\Pandaria\\Dominance Offensive"] = {
-	{ids="32249,32250,32108"},
+["REPUTATIONS\\Burning Crusade Reputations\\Lower City"] = {
+	{ids="10878,10917,10840,10848,10887,11375,10880,11374,10849,10842,10881,10889,10879,10874,10913,10898,10030,10031,10914,10922,10930,11372,10915,10861,10929,11373,10847,10180,10839,10852"},
 },
-["ACHIEVEMENTS\\Reputation\\Pandaria\\Sunreaver Onslaught"] = {
-	{ids="32678,32709,32680"},
+["REPUTATIONS\\Burning Crusade Reputations\\Mag'har"] = {
+	{ids="10479,9849,9850,10107,9854,10109,9983,9857,9858,9861,9862,9863,9864,9865,9866,9867,9870,9999,10001,10004,9882,10010,10011,9888,9889,9890,9891,9900,9906,9907,9400,9401,9910,9913,9914,9916,9410,9797,9925,9800,9928,9804,9805,9934,9935,9937,9939,9815,9944,9945,9819,9932,9948,10009,9810,9405,9406,9991,9931,9946,9789,9821,9927,9855,9818"},
 },
-["ACHIEVEMENTS\\Scenarios\\Mists of Pandaria\\Arena of Annihilation"] = {
-	{ids="31207"},
+["REPUTATIONS\\Burning Crusade Reputations\\Ogri'la"] = {
+	{ids="11102",goal_only="Druid"},
+	{ids="11010",goal_onlyif=function() return not Druid end},
+	{ids="11051",step_onlyif=function() return completedq(11026) end},
+	{ids="11026",step_onlyif=function() return rep("Ogri'la")>=Honored and not completedq(11026) end},
+	{ids="11080,11119,11065,11058,11066,11059,10998,10983,10996,11030,11091,10984,11023,11062,11061,11078,10995,10997,11009,11079,11025,11000"},
 },
-["ACHIEVEMENTS\\World Events\\Brawler's Guild\\Collect Your Deck"] = {
-	includes = {"trainer_Engineering","Tillers_Quests","Darkmoon_Faire_Dailies"},
+["REPUTATIONS\\Burning Crusade Reputations\\The Scryers"] = {
+	{ids="10341,10338,10202,10189,10432",step_onlyif=function() return rep ('The Scryers') >= Friendly end},
+	{ids="10656,10688,10691,10692,11039,10412,10507,10508,10194,10668,10669,10197,10198,10640,10200,10329,10330,10646,10553,10416,10649,10807,10204,10193,10210,10683,10211,10684,10641,10685,10509,10686,10824,10687,10652"},
+},
+["REPUTATIONS\\Burning Crusade Reputations\\The Sha'tar"] = {
+	{ids="10683,10685,10684,10686",step_onlyif=function() return rep ('The Scryers') >= Neutral end},
+	{ids="10575,10571,10574,10568",step_onlyif=function() return rep ('The Aldor') >= Friendly end},
+	{ids="10480,10481,10228,10102,10231,10107,9983,10622,10877,9991,10628,10883,9868,10885,10251,10252,10253,10001,10004,10513,10514,10515,10262,10009,10010,10011,10266,10521,10522,9888,9889,9890,9891,10527,10528,10275,10276,10280,10537,10920,10921,10541,10923,11052,10546,10547,10167,10168,10550,10044,10680,10781,10793,10884,10706,9927,9928,10705,10704,9931,9932,10269,9934,10570,10268,10267,9907,10265,10886,10576,10577,10578,10579,10707,10540,10227,9999,9906,10458,10205,10523,10588,10081,10082,10210,10519,10085,10101,10045"},
+},
+["REPUTATIONS\\Burning Crusade Reputations\\Sha'tari Skyguard"] = {
+	{ids="11085,11029,11093,11005,11008,11024,11056,11028,11885,11073,11004,11096,11098,11021"},
+},
+["REPUTATIONS\\Burning Crusade Reputations\\Shattered Sun Offensive"] = {
+	includes = {"SSO_PreQuest_Dailies"},
+},
+["REPUTATIONS\\Burning Crusade Reputations\\Sporeggar"] = {
+	{ids="9739,9743",step_onlyif=function() return rep('Sporeggar')<=Neutral end},
+	{ids="9715",step_onlyif=function() return havequest(9715) end},
+	{ids="9714",step_onlyif=function() return havequest(9714) end},
+	{ids="9726,9919,29691,29567,9727"},
+},
+["REPUTATIONS\\Burning Crusade Reputations\\Thrallmar"] = {
+	{ids="13411",goal_only="DeathKnight"},
+	{ids="13409",goal_onlyif=function() return not DeathKnight end},
+	{ids="10087,10220,29593,10864,10230,9345,10236,10110,10238,10875,10876,10242,9356,10627,10120,10629,10630,9361,10124,29651,29653,10129,10258,29536,10388,10389,10390,10391,10392,10393,10278,10663,10664,10792,10666,10161,10162,9401,10291,10294,10295,9410,10809,10813,10670,10121,29655,10665,29650,10623,29527,10123,10250,10449,10450,29537,9400,10834,10835,29535,10538,10838,10136,10289,9406,28705,10208,10229,9349,9351,9405,10213,10086"},
+	includes = {"shatt_auctioneer"},
+},
+["REPUTATIONS\\Burning Crusade Reputations\\Tranquillien"] = {
+	{ids="9207,9176,9145,9146,9147,9148,9149,9276,9151,9152,9877,9216,9155,9157,9315,9158,9159,9758,9160,9192,9161,9193,9162,9215,9163,9329,9164,9218,9220,9281,9166,9212,9277,9199,9275,9214,9169,9327,9170,9139,9171,9140,9172,9150,9173,9274,9174,9143,9175,9138"},
+	{ids="9144",step_onlyif=function() return havequest(16183) end},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\Argent Tournament\\Aspirant Rank Dailies"] = {
+	includes = {"Argent Tourney_Aspirant"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\Argent Tournament\\Valiant Rank Dailies"] = {
+	includes = {"Argent Tourney_Valiant"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\Argent Crusade"] = {
+	includes = {"Argent_Crusade_Rep"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\The Frenzyheart Tribe"] = {
+	{ids="12578,12579,12580,12581,12741,12528,12529,12530,12531,12532,12533,12534,12692,12535,12536,12576,12537,12758,12538,12759,12539,12571,12540,12572,12570,12573,12760,12574,12732,12575,12577,12702,12734,12703,12654"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\Kalu'ak"] = {
+	includes = {"Kaluak_Rep"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\Kirin Tor"] = {
+	{ids="11582,11646,12728,11590,11682,11681,11671,11733,11680,11587,11679,11576,11648,11663"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\Knights of the Ebon Blade"] = {
+	{ids="12949,12891,12893,12955,12897,12899,13085,12892,12939,12951,12943,12938"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\The Oracles"] = {
+	{ids="12705,12737,12726,12762,12704,12736,12695,12761,12581,12735"},
+	includes = {"Oracles_Dailies"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\The Sons of Hodir"] = {
+	{ids="13001",step_onlyif=function() return rep ('The Sons of Hodir')>=Honored end},
+	{ids="13009,13010,13011,12886,13273,13274,12895,12900,13285,12905,12906,12907,12908,12909,12910,12913,12915,12917,13046,13047,12921,12922,13050,13051,12925,12926,13054,13055,13056,13057,12931,13060,13061,13062,13063,13064,12841,12927,12942,12956,12971,12818,12819,12820,12821,12822,12823,12824,13416,12826,12827,12828,12829,12830,12831,12832,12833,12937,12929,12836,12964,12965,12966,12967,12968,12969,12843,12844,12972,12846,12978,12975,12976,12977,12851,12979,12853,12981,12980,12983,12984,12985,12957,12987,12988,12989,12930,12991,12928,12993,12994,12920,12996,12997,12998,13035,13000,12924,12970,13003,12953,13005,13006,13007,12856"},
+},
+["REPUTATIONS\\Wrath of the Lich King Reputations\\The Wyrmrest Accord"] = {
+	{ids="12767,12106,12264,11918,12769,11919,11951,12267,12110,12458,12459,12461,12084,13124,12148,12149,13126,12150,13127,12151,13128,13412,12059,13413,12122,12456,12454,12470,12061,11967,11999,12266,12265,11969,12263,12261,11936,12447,12066,12147,11941,11973,12372,12435,11943,12124,12448,11946,12449,11957,12450,12419,12262,11931"},
+},
+["REPUTATIONS\\Cataclysm Reputations\\Dragonmaw Clan"] = {
+	{ids="27301,26540,27564,26293,28592,27576,28090,27584,28871,28875,26337,26608,27377,26361,28166,27660,27947,27951,27955,27712,27744,27493,27497,27501,27505,27509,28043,26784,26788,27302,26294,28593,28091,28872,26840,28123,27378,28147,28151,26374,27653,28171,28175,28191,27689,28717,27701,28247,27486,27745,27506,27299,26538,28586,28590,28594,28092,27586,28873,27606,27610,27622,27375,27379,27638,26622,27658,27662,28176,27929,27945,28758,27742,27491,27495,27499,27503,27507,28041,27798,26786,27300,26539,26798,28591,28595,28093,28097,26830,26324,27607,27611,28133,28874,27376,27380,28149,27788,26372,27786,27655,27659,26388,28885,27303,28849,27690,26549,28583,28712,28589,27954,27703,26311,27583,27696,28094,28170,26335,27750,26619,28249,27743,27747,27751,26621,27504,27508,28038,27661,28173,28584,27783,28588,26358"},
+},
+["REPUTATIONS\\Cataclysm Reputations\\The Earthen Ring"] = {
+	{ids="26140,25637,25222,26260,26827,26835,25334,26875,25861,25358,27937,25390,27442,26436,25941,25949,25957,25965,25973,25989,27043,27059,26564,26580,27123,25598,26133,26141,26149,25670,27722,26221,25215,26245,26261,26828,26836,26876,25862,25359,27938,26413,26437,25942,25439,25958,25966,25974,25471,25990,26006,26581,27100,26086,26126,26142,27699,26182,25216,26246,25743,26829,26326,26861,26869,25863,25360,27931,26438,25943,25951,25959,25456,27005,26502,26007,27061,26071,27101,26087,25592,26111,26135,26143,27708,25217,26247,26766,26375,25377,25896,26439,25936,25944,25952,25960,25968,25976,25984,25992,26000,26008,26040,26575,26072,26591,26088,26096,25593,27685,25657,27717,25218,26248,26256,26791,26312,26831,26328,26871,26376,27933,26440,25953,25969,27007,25993,26057,26065,26584,26089,25594,27135,26632,26656,25658,27718,25219,26249,26768,26792,25794,26313,26832,25858,26377,25371,25890,26409,26441,25946,25954,25962,25970,27008,25994,26537,26577,26585,26090,25587,25595,27136,26122,25619,26657,26154,25651,25659,25164,26194,25220,26250,26258,28869,26833,26857,25859,25883,27935,25388,25907,26426,25947,25955,25963,25971,25995,27041,26578,26091,26971,26244,26576,25620,26752,26658,27102,26750,26410,27126,26583,26582,25887,25389,27932,26411,25441,25221,26762,26770,25967,26659,25477,25991,26254,26507,26315,26834,25629,25442,26314,26755,27934,25860,26625,25988,25884,27203,25900,25908,26427,25924,26259,26255,25948,25956,25964,25972,25980,27010,25996,26501,26499,26500,26484,26251,25602,26771,25638,26579,25982,25929,26092,25459,26130,25732,25440"},
+},
+["REPUTATIONS\\Cataclysm Reputations\\Guardians of Hyjal"] = {
+	{ids="25761,25255,25644,25519,25269,25525,25910,25531,25279,25795,25291,25928,25549,25424,25807,25301,25303,25309,25311,25315,25317,25319,25321,25323,25325,25460,25843,25464,25597,25472,25601,25224,25740,25234,25492,25494,25496,25881,25502,25758,25764,25514,27399,25899,25520,25776,25270,25272,25274,25276,25551,25915,25553,25550,25548,25923,25544,25555,25294,25296,25552,25300,25810,25554,25560,27721,25310,25763,25314,25316,25308,25574,25830,25578,25299,25328,25584,25499,25842,25509,25430,25330,25653,25906,25324,25901,25223,25507,25608,25510,25297,25233,25746,25491,25493,25832,25370,25372,25523,25320,25886,25904"},
+},
+["REPUTATIONS\\Cataclysm Reputations\\Hellscream's Reach"] = {
+	{ids="28679,28680,28681,28682,28683,28684,28685,28686,28687,28689,28690,28691,28692,28693,28694,28695,28696,28697,28698,28700,28657,28721,28659,28660,28661,28662,28663,28664,28665,28668,28669,28670,28678,28658"},
+},
+["REPUTATIONS\\Cataclysm Reputations\\Ramkahen"] = {
+	{ids="28293",step_onlyif=function() return havequest(28293) end},
+	{ids="27922,27924,28561,27928,27549,27176,27940,27942,28198,28200,27950,28210,27196,27706,27837,27839,28351,28480,28482,28611,28105,28363,28367,28623,28498,27738,28502,28250,28633,28002,27623,28135,27629,27631,28141,28145,28274,28276,27899,27901,27903,27905,28736,27939,28621,28193,27748,28613,27926,28404,27669,28403,27760,28272,27923,28187,28353,28350,27431,27179,27943,28195,28201,27187,28273,28269,27755,28520,28267,27707,27836,27838,28602,27969,28352,28194,28483,28612,27990,27941,27602,28112,28622,28497,28499,28501,28132,28486,28500,27778,27993,27624,28134,27628,27630,27632,27761,28271,27511,28402,28277,28533,27519,28557,27777,27779,27003,28291,27141,27520,27900,27595,27541"},
+},
+["REPUTATIONS\\Cataclysm Reputations\\Therazane"] = {
+	{ids="28390",goal_onlyif=function() return rep ('Therazane') >= Revered end},
+	{ids="28391",step_onlyif=function() return rep ('Therazane') >= Revered end},
+	{ids="26656,26658,27041,27932,26410,27047,27938,27051,27059,27442,26580,27049,26710,27046,26436,26438,26313,26315,28488,26827,26575,26577,27722,26835,26583,26585,27048,26709,26591,27101,26792,27008,26833,26832,26857,26829,26861,26831,26484,26328,27123,26871,27043,26875,26750,26625,26500,27010,26250,27007,26254,26256,26766,26768,26770,26752,26411,26582,26326,26579,26581,26657,26659,27931,26409,27935,27937,27050,26314,27135,26441,26440,26439,26427,26437,26869,26426,26377,26564,26312,27203,26376,26375,26828,26576,26578,26834,26836,26584,26762,26413,26971,27100,27102,26501,26502,27934,26791,26537,26755,27061,26632,26244,26246,26247,27126,26248,26876,27005,26245,27136,26249,26251,26507,26255,26258,26259,26261,26771,26260,26499,27933"},
+},
+["ACHIEVEMENTS\\Collections\\Appearances\\Legion\\Accessor-Eyes"] = {
+	{ids="8560,8561,8544,8562,8559",step_only="Warrior"},
+	{ids="8630,8655,8628,8629,8627",step_only="Paladin"},
+	{ids="8623,8624,8621,8622,8602",step_only="Shaman"},
+	{ids="8640,8639,8641,8638",step_only="Rogue"},
+	{ids="8633,8634,8631,8632,8625",step_only="Mage"},
+	{ids="8668,8665,8669,8666,8667",step_only="Druid"},
+	{ids="8592,8596,8593,8594,8603",step_only="Priest"},
+	{ids="8626,8658,8659,8656,8657",step_only="Hunter"},
+	{ids="8661,8662,8663,8660,8664",step_only="Warlock"},
+},
+["ACHIEVEMENTS\\Collections\\Appearances\\Legion\\Can I Get A Helya"] = {
+	{ids="44729,45088,44721,44868,44720,44771"},
+},
+["ACHIEVEMENTS\\Collections\\Appearances\\Legion\\Fashionista: Tabard"] = {
+	{ids="10793,10781"},
+},
+["ACHIEVEMENTS\\Exploration\\Legion\\Adventurer of Argus"] = {
+	{ids="49007",step_onlyif=function() return havequest(49007) end},
+},
+["ACHIEVEMENTS\\Exploration\\Legion\\Commander of Argus"] = {
+	{ids="49007",step_onlyif=function() return havequest(49007) end},
+},
+["ACHIEVEMENTS\\Professions\\Archaeology\\The Dwarven Dream"] = {
+	{ids="41170"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\Harbinger"] = {
+	{ids="44486,44488,44487"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\Lock, Stock and Two Smoking Goblins"] = {
+	{ids="43331"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\Post Haste"] = {
+	{ids="41411",goal_onlyif=function() return havequest(41411) end},
+	{ids="41368",goal_onlyif=function() return havequest(41368) end},
+	{ids="41397,46278,41394,50247,41367,41395"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\Priority Mail"] = {
+	{ids="41411",goal_onlyif=function() return havequest(41411) end},
+	{ids="41368",goal_onlyif=function() return havequest(41368) end},
+	{ids="41397,46278,41394,50247,41367,41395"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\Tehd & Marius' Excellent Adventure"] = {
+	{ids="44055"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\The Total Package"] = {
+	{ids="41411",goal_onlyif=function() return havequest(41411) end},
+	{ids="41368",goal_onlyif=function() return havequest(41368) end},
+	{ids="41397,46278,41394,50247,41367,41395"},
+},
+["ACHIEVEMENTS\\Quests\\Legion\\What a Ripoff!"] = {
+	{ids="39787,39789,39793,42483,39792,39786"},
 },
 ["Argent Tourney_Aspirant"] = {
 	{ids="13675",goal_onlyif=function() return not completedq(13675) end},
@@ -15550,7 +15322,7 @@ ZGV.Quest_Cache_Horde = {
 	{ids="39510",goal_onlyif=function() return havequest(39510) or completedq(39510) end},
 	includes = {"Toraan_the_Revered","Vindicator_Jaelaana_Paragon","Toraan_the_Revered_Paragon","Vindicator_Jaelaana"},
 },
-["BFA_World_Quest_Emissaries"] = {
+["BFA_Choose_World_Quests"] = {
 	{ids="26234",goal_only="Troll",goal_onlyif=function() return havequest(26234) end},
 	{ids="13737",goal_only="Troll"},
 	{ids="13740",goal_only="BloodElf"},
@@ -15579,7 +15351,6 @@ ZGV.Quest_Cache_Horde = {
 	{ids="13784",step_only="BloodElf",goal_onlyif=function() return not completedq(13784) end},
 	{ids="13785",step_only="BloodElf",goal_onlyif=function() return not completedq(13785) end},
 	{ids="13722,13859,13786,13696,13731,13787",step_only="BloodElf"},
-	{ids="50604",goal_onlyif=function() return ZGV.questsbyid[50604] and ZGV.questsbyid[50604].complete end},
 	{ids="32214",goal_onlyif=function() return havequest(32214) end,step_onlyif=function() return havequest(32214) or havequest(32221) end},
 	{ids="30065",goal_onlyif=function() return havequest(30065) end},
 	{ids="46746",goal_onlyif=function() return havequest(46746) end},
@@ -15593,7 +15364,6 @@ ZGV.Quest_Cache_Horde = {
 	{ids="32219",goal_onlyif=function() return havequest(32219) end,step_onlyif=function() return havequest(32224) or havequest(32517) or havequest(32219) end},
 	{ids="30883",goal_onlyif=function() return havequest(30883) end},
 	{ids="30953",goal_onlyif=function() return havequest(30953) end},
-	{ids="50602",goal_onlyif=function() return ZGV.questsbyid[50602] and ZGV.questsbyid[50602].complete end},
 	{ids="26235",goal_onlyif=function() return havequest(26235) end},
 	{ids="32201",goal_onlyif=function() return havequest(32201) end,step_onlyif=function() return havequest(32201) or havequest(32225) or havequest(32220) end},
 	{ids="39532",goal_onlyif=function() return havequest(39532) or completedq(39532) end},
@@ -15622,14 +15392,10 @@ ZGV.Quest_Cache_Horde = {
 	{ids="32224",goal_onlyif=function() return havequest(32224) end,step_onlyif=function() return havequest(32224) or havequest(32517) or havequest(32219) end},
 	{ids="32220",goal_onlyif=function() return havequest(32220) end,step_onlyif=function() return havequest(32201) or havequest(32225) or havequest(32220) end},
 	{ids="46777",goal_onlyif=function() return havequest(46777) end},
-	{ids="50562",goal_onlyif=function() return ZGV.questsbyid[50562] and ZGV.questsbyid[50562].complete end},
 	{ids="30475",goal_onlyif=function() return havequest(30475) end},
 	{ids="30006",goal_onlyif=function() return havequest(30006) end},
 	{ids="32222",goal_onlyif=function() return havequest(32222) end},
-	{ids="50603",goal_onlyif=function() return ZGV.questsbyid[50603] and ZGV.questsbyid[50603].complete end},
 	{ids="30476",goal_onlyif=function() return havequest(30476) end},
-	{ids="50598",goal_onlyif=function() return ZGV.questsbyid[50598] and ZGV.questsbyid[50598].complete end},
-	{ids="37940",goal_onlyif=function() return havequest(37940) or completedq(37940) end},
 	{ids="46748",goal_onlyif=function() return havequest(46748) end},
 	{ids="46743",goal_onlyif=function() return havequest(46743) end},
 	{ids="46747",goal_onlyif=function() return havequest(46747) end},
@@ -15655,7 +15421,7 @@ ZGV.Quest_Cache_Horde = {
 	{ids="29358",goal_onlyif=function() return havequest(29358) end},
 	{ids="39511",goal_onlyif=function() return havequest(39511) or completedq(39511) end},
 	{ids="39509",goal_onlyif=function() return havequest(39509) or completedq(39509) end},
-	{ids="50606",goal_onlyif=function() return ZGV.questsbyid[50606] and ZGV.questsbyid[50606].complete end},
+	{ids="37940",goal_onlyif=function() return havequest(37940) or completedq(37940) end},
 	{ids="42422",goal_onlyif=function() return ZGV.questsbyid[42422] and ZGV.questsbyid[42422].complete end},
 	{ids="29333",goal_onlyif=function() return havequest(29333) end},
 	{ids="30959",goal_onlyif=function() return havequest(30959) end},
@@ -15731,6 +15497,368 @@ ZGV.Quest_Cache_Horde = {
 	{ids="26227",goal_onlyif=function() return havequest(26227) end},
 	{ids="39510",goal_onlyif=function() return havequest(39510) or completedq(39510) end},
 },
+["BFA_World_Quest_Emissaries"] = {
+	{ids="26234",goal_only="Troll",goal_onlyif=function() return havequest(26234) end},
+	{ids="13737",goal_only="Troll"},
+	{ids="13740",goal_only="BloodElf"},
+	{ids="26233",goal_only="Orc,Scourge,Tauren,BloodElf,Goblin,Pandaren",goal_onlyif=function() return havequest(26233) end},
+	{ids="13739",goal_only="Scourge"},
+	{ids="13736",goal_only="Orc"},
+	{ids="13738",goal_only="Tauren"},
+	{ids="13770",step_only="Troll",goal_onlyif=function() return not completedq(13770) end},
+	{ids="13768",step_only="Troll",goal_onlyif=function() return not completedq(13768) end},
+	{ids="13769",step_only="Troll",goal_onlyif=function() return not completedq(13769) end},
+	{ids="13771,13719,13772,13727,13857,13693",step_only="Troll"},
+	{ids="13773",step_only="Tauren",goal_onlyif=function() return not completedq(13773) end},
+	{ids="13775",step_only="Tauren",goal_onlyif=function() return not completedq(13775) end},
+	{ids="13774",step_only="Tauren",goal_onlyif=function() return not completedq(13774) end},
+	{ids="13694,13776,13728,13777,13858,13720",step_only="Tauren"},
+	{ids="13795",step_only="DeathKnight"},
+	{ids="13780",step_only="Scourge",goal_onlyif=function() return not completedq(13780) end},
+	{ids="13779",step_only="Scourge",goal_onlyif=function() return not completedq(13779) end},
+	{ids="13778",step_only="Scourge",goal_onlyif=function() return not completedq(13778) end},
+	{ids="13729,13782,13695,13860,13721,13781",step_only="Scourge"},
+	{ids="13763",step_only="Orc",goal_onlyif=function() return not completedq(13763) end},
+	{ids="13762",step_only="Orc",goal_onlyif=function() return not completedq(13762) end},
+	{ids="13764",step_only="Orc",goal_onlyif=function() return not completedq(13764) end},
+	{ids="13691,13856,13726,13697,13767,13765",step_only="Orc"},
+	{ids="13783",step_only="BloodElf",goal_onlyif=function() return not completedq(13783) end},
+	{ids="13784",step_only="BloodElf",goal_onlyif=function() return not completedq(13784) end},
+	{ids="13785",step_only="BloodElf",goal_onlyif=function() return not completedq(13785) end},
+	{ids="13722,13859,13786,13696,13731,13787",step_only="BloodElf"},
+	{ids="32214",goal_onlyif=function() return havequest(32214) end,step_onlyif=function() return havequest(32214) or havequest(32221) end},
+	{ids="30065",goal_onlyif=function() return havequest(30065) end},
+	{ids="46746",goal_onlyif=function() return havequest(46746) end},
+	{ids="30063",goal_onlyif=function() return havequest(30063) end},
+	{ids="29364",goal_onlyif=function() return havequest(29364) end},
+	{ids="26220",goal_onlyif=function() return havequest(26220) end},
+	{ids="39512",goal_onlyif=function() return havequest(39512) or completedq(39512) end},
+	{ids="30472",goal_onlyif=function() return havequest(30472) end},
+	{ids="30473",goal_onlyif=function() return havequest(30473) end},
+	{ids="30479",goal_onlyif=function() return havequest(30479) end},
+	{ids="32219",goal_onlyif=function() return havequest(32219) end,step_onlyif=function() return havequest(32224) or havequest(32517) or havequest(32219) end},
+	{ids="30883",goal_onlyif=function() return havequest(30883) end},
+	{ids="30953",goal_onlyif=function() return havequest(30953) end},
+	{ids="26235",goal_onlyif=function() return havequest(26235) end},
+	{ids="32201",goal_onlyif=function() return havequest(32201) end,step_onlyif=function() return havequest(32201) or havequest(32225) or havequest(32220) end},
+	{ids="39532",goal_onlyif=function() return havequest(39532) or completedq(39532) end},
+	{ids="32221",goal_onlyif=function() return havequest(32221) end,step_onlyif=function() return havequest(32214) or havequest(32221) end},
+	{ids="46749",goal_onlyif=function() return havequest(46749) end},
+	{ids="38441",goal_onlyif=function() return havequest(38441) or completedq(38441) end},
+	{ids="31377",goal_onlyif=function() return havequest(31377) end},
+	{ids="30954",goal_onlyif=function() return havequest(30954) end},
+	{ids="32223",goal_onlyif=function() return havequest(32223) end},
+	{ids="30881",goal_onlyif=function() return havequest(30881) end},
+	{ids="13675",goal_onlyif=function() return not completedq(13675) end},
+	{ids="38044",goal_onlyif=function() return havequest(38044) or completedq(38044) end},
+	{ids="39519",goal_onlyif=function() return havequest(39519) or completedq(39519) end},
+	{ids="29365",goal_onlyif=function() return havequest(29365) end},
+	{ids="13673",goal_onlyif=function() return not completedq(13673) end},
+	{ids="13674",goal_onlyif=function() return not completedq(13674) end},
+	{ids="30478",goal_onlyif=function() return havequest(30478) end},
+	{ids="30958",goal_onlyif=function() return havequest(30958) end},
+	{ids="48641",goal_onlyif=function() return ZGV.questsbyid[48641] and ZGV.questsbyid[48641].complete end},
+	{ids="30885",goal_onlyif=function() return havequest(30885) end},
+	{ids="30474",goal_onlyif=function() return havequest(30474) end},
+	{ids="30470",goal_onlyif=function() return havequest(30470) end},
+	{ids="30471",goal_onlyif=function() return havequest(30471) end},
+	{ids="32197",goal_onlyif=function() return havequest(32197) end,step_onlyif=function() return havequest(32199) or havequest(32197) end},
+	{ids="30879",goal_onlyif=function() return havequest(30879) end},
+	{ids="32224",goal_onlyif=function() return havequest(32224) end,step_onlyif=function() return havequest(32224) or havequest(32517) or havequest(32219) end},
+	{ids="32220",goal_onlyif=function() return havequest(32220) end,step_onlyif=function() return havequest(32201) or havequest(32225) or havequest(32220) end},
+	{ids="46777",goal_onlyif=function() return havequest(46777) end},
+	{ids="30475",goal_onlyif=function() return havequest(30475) end},
+	{ids="30006",goal_onlyif=function() return havequest(30006) end},
+	{ids="32222",goal_onlyif=function() return havequest(32222) end},
+	{ids="30476",goal_onlyif=function() return havequest(30476) end},
+	{ids="46748",goal_onlyif=function() return havequest(46748) end},
+	{ids="46743",goal_onlyif=function() return havequest(46743) end},
+	{ids="46747",goal_onlyif=function() return havequest(46747) end},
+	{ids="46745",goal_onlyif=function() return havequest(46745) end},
+	{ids="32137",goal_onlyif=function() return havequest(32137) end,step_onlyif=function() return havequest(32137) or havequest(32141) end},
+	{ids="29315",goal_onlyif=function() return havequest(29315) end},
+	{ids="38252",goal_onlyif=function() return havequest(38252) or completedq(38252) end},
+	{ids="32141",goal_onlyif=function() return havequest(32141) end,step_onlyif=function() return havequest(32137) or havequest(32141) end},
+	{ids="30880",goal_onlyif=function() return havequest(30880) end},
+	{ids="32728",goal_onlyif=function() return havequest(32728) end,step_onlyif=function() return thunderstage()==1 end},
+	{ids="42421",goal_onlyif=function() return ZGV.questsbyid[42421] and ZGV.questsbyid[42421].complete end},
+	{ids="39513",goal_onlyif=function() return havequest(39513) or completedq(39513) end},
+	{ids="31517",goal_onlyif=function() return havequest(31517) end},
+	{ids="30477",goal_onlyif=function() return havequest(30477) end},
+	{ids="42233",goal_onlyif=function() return ZGV.questsbyid[42233] and ZGV.questsbyid[42233].complete end},
+	{ids="29360",goal_onlyif=function() return havequest(29360) end},
+	{ids="42170",goal_onlyif=function() return ZGV.questsbyid[42170] and ZGV.questsbyid[42170].complete end},
+	{ids="32199",goal_onlyif=function() return havequest(32199) end,step_onlyif=function() return havequest(32199) or havequest(32197) end},
+	{ids="42420",goal_onlyif=function() return ZGV.questsbyid[42420] and ZGV.questsbyid[42420].complete end},
+	{ids="30064",goal_onlyif=function() return havequest(30064) end},
+	{ids="38449",goal_onlyif=function() return havequest(38449) or completedq(38449) end},
+	{ids="42234",goal_onlyif=function() return ZGV.questsbyid[42234] and ZGV.questsbyid[42234].complete end},
+	{ids="29358",goal_onlyif=function() return havequest(29358) end},
+	{ids="39511",goal_onlyif=function() return havequest(39511) or completedq(39511) end},
+	{ids="39509",goal_onlyif=function() return havequest(39509) or completedq(39509) end},
+	{ids="37940",goal_onlyif=function() return havequest(37940) or completedq(37940) end},
+	{ids="42422",goal_onlyif=function() return ZGV.questsbyid[42422] and ZGV.questsbyid[42422].complete end},
+	{ids="29333",goal_onlyif=function() return havequest(29333) end},
+	{ids="30959",goal_onlyif=function() return havequest(30959) end},
+	{ids="29363",goal_onlyif=function() return havequest(29363) end},
+	{ids="38047",goal_onlyif=function() return havequest(38047) or completedq(38047) end},
+	{ids="39514",goal_onlyif=function() return havequest(39514) or completedq(39514) end},
+	{ids="38586",goal_onlyif=function() return havequest(38586) or completedq(38586) end},
+	{ids="30952",goal_onlyif=function() return havequest(30952) end},
+	{ids="29332",goal_onlyif=function() return havequest(29332) end},
+	{ids="30956",goal_onlyif=function() return havequest(30956) end},
+	{ids="31383",goal_onlyif=function() return havequest(31383) end},
+	{ids="29362",goal_onlyif=function() return havequest(29362) end},
+	{ids="50606",step_onlyif=function() return readyq(50606) end},
+	{ids="32209,32208",step_onlyif=function() return havequest(32209) or completedq(32208) or havequest(32208) or completedq(32209) end},
+	{ids="32138",step_onlyif=function() return havequest(32138) or completedq(32138) end},
+	{ids="32494,32493,32232,32233,32206,32234",step_onlyif=function() return completedq(32524) end},
+	{ids="31381",step_onlyif=function() return havequest(31381) end},
+	{ids="50562",step_onlyif=function() return readyq(50562) end},
+	{ids="32140",step_onlyif=function() return havequest(32140) or completedq(32140) end},
+	{ids="32238",step_onlyif=function() return havequest(32238) end},
+	{ids="13001",step_onlyif=function() return rep ('The Sons of Hodir')>=Honored end},
+	{ids="31379",step_onlyif=function() return not completedq(31379) end},
+	{ids="50602",step_onlyif=function() return readyq(50602) end},
+	{ids="32216,32227",step_onlyif=function() return havequest(32216) or havequest(32227) end},
+	{ids="13794",step_onlyif=function() return not DeathKnight end},
+	{ids="32285,32287",step_onlyif=function() return havequest(32285) or havequest(32287) end},
+	{ids="32605",step_onlyif=function() return havequest(32605) or havequest(32204) or havequest(32255) end},
+	{ids="50604",step_onlyif=function() return readyq(50604) end},
+	{ids="32682",step_onlyif=function() return rep('The Tillers')==Exalted and not completedq(32682) end},
+	{ids="50603",step_onlyif=function() return readyq(50603) end},
+	{ids="32139",step_onlyif=function() return havequest(32139) end},
+	{ids="30957",step_onlyif=function() return havequest(30957) end},
+	{ids="29354",step_onlyif=function() return havequest(29354) end},
+	{ids="32517,32224,32226,32219,32728",step_onlyif=function() return thunderstage()>=2 and completedq(32212) end},
+	{ids="50598",step_onlyif=function() return readyq(50598) end},
+	{ids="30718,30740",step_onlyif=function() return achieved(7287) end},
+	{ids="29334",step_onlyif=function() return havequest(29334) end},
+	{ids="32524",step_onlyif=function() return havequest(32524) or completedq(32524) end},
+	{ids="32255,32605,32254,32204",step_onlyif=function() return havequest(32489) or havequest(32605) or havequest(32254) or havequest(32255) or havequest(32204) end},
+	{ids="26438,26502,30626,30674,25575,25655,31937,11381,30067,32161,30163,27126,32257,30259,30323,26247,25272,32449,25320,26375,26439,25464,30627,25544,25560,25576,12820,12828,25656,12844,28805,26791,12900,12908,25832,26871,12956,12964,12972,12980,12988,30068,32130,32162,30164,32242,30260,13116,30324,26248,32402,31395,26312,26328,25321,26376,25385,30516,26440,26584,25577,26632,28790,26792,32131,32163,30229,30325,26249,32403,13676,25354,25370,26409,32563,26441,26537,26585,25578,12821,12829,12853,12909,12917,12925,12957,12965,12981,12989,12997,32132,13037,32212,13061,32276,32372,26250,32404,26314,25323,25355,26410,32564,30534,32676,13285,27721,26762,30902,32133,32181,32277,30327,26251,32405,26315,25324,25372,26411,26427,30535,26507,32677,25612,12822,12830,12846,25740,12886,12910,12926,26875,12942,12966,26971,12998,13006,32182,13038,13046,13054,13062,11024,32278,32294,32326,32342,32406,25277,25325,31511,32678,26556,26572,26588,26828,26876,27931,39526,32135,32167,32183,30169,32279,32327,32343,32391,13678,26413,30521,25502,26557,12823,12831,25758,12895,26829,26861,27932,12967,12975,12983,12991,32120,13007,32168,27101,13055,13063,32328,32344,11073,32376,26254,32408,25279,39433,39529,32680,30666,25599,25663,26750,26766,11377,27933,32169,27102,32249,32329,32345,26255,32409,25312,25328,25392,25408,25424,25472,26543,26575,26591,25584,25600,12824,12832,25664,12856,25776,30907,26831,12920,12928,27934,12968,12976,12984,27007,13048,13056,27135,32282,32298,32330,13112,32378,26256,11098,25297,30524,39565,26576,32730,30716,25617,26656,25665,26752,26768,25761,13416,26832,27935,27008,32235,27136,32363,32379,25234,32411,13680,32523,30525,25490,30653,26577,26625,26657,12833,12841,25746,12905,12913,12921,25842,12937,12953,12969,12977,12985,12993,13009,27041,13049,13057,32284,30254,13113,30318,26258,32412,25411,25491,13273,25523,26578,26658,25731,26770,25763,25795,26834,27937,27953,27010,30175,30255,30319,26259,30625,30622,25300,25316,25332,30252,32256,26659,27442,25412,25428,30174,25460,26499,25492,30623,32565,32352,26579,32368,32384,32392,12818,12826,12931,31945,13677,32118,30672,26755,26771,25764,30168,12906,26835,27874,12930,30675,32134,27938,30671,12970,25940,30691,12994,32126,13010,27043,27059,13034,30669,13050,13058,32244,11028,30668,30256,32318,26436,13114,27203,26244,32398,30667,25269,26582,25301,25317,31938,30527,30529,25381,12836,30528,32450,27123,26484,26500,25493,13274,25525,26564,26580,11379,25630,30522,12996,12851,27722,31949,31948,30317,30717,30519,26261,25255,11885,13064,11380,25303,12927,32190,31947,30518,30517,31946,12907,11096,25298,32127,26857,13003,25514,32191,30523,11008,25519,13035,13047,30241,30257,32319,13051,32351,30321,26245,32399,30230,25270,30326,13000,32410,26833,25807,25507,25382,26827,26437,25430,26583,25462,26501,32123,25510,26246,25520,26581,25574,27005,25233,12819,12827,12924,12843,26709,32108,29066,26426,26377,32250,11004,31936,12915,25830,26869,26313,11056,32348,26836,12971,12979,12987,27100,32128,13011,26260,27061,32192,13060,11005,25810,11021,11029,12929,30258,32320,32218,13115,30322,11085,11093,31393,13005,32448,26326,25319,25404,12922,12978"},
+	{ids="32227",step_onlyif=function() return havequest(32227) end},
+	{ids="29345,29349,29348",step_onlyif=function() return havequest(29349) or havequest(29345) or havequest(29348) end},
+	{ids="32292",step_onlyif=function() return havequest(32292) end},
+	{ids="32207,32283,32297",step_onlyif=function() return completedq(32523) end},
+	{ids="32230,32228",step_onlyif=function() return havequest(32230) or havequest(32228) or completedq(32230) or completedq(32228) end},
+	{ids="32549",step_onlyif=function() return not completedq(32507) end},
+	{ids="29319,29361,29320,29322",step_onlyif=function() return havequest(29320) or havequest(29361) or havequest(29319) or havequest(29322) end},
+	{ids="32208,32209,32292",step_onlyif=function() return completedq(32524) or completedq(32523) end},
+	{ids="32729",step_onlyif=function() return thunderstage()>=1 and havequest(32729) or completedq(32729) end},
+	{ids="32489,32299,32491",step_onlyif=function() return havequest(32299) or havequest(32489) or havequest(32491) end},
+	{ids="29346",step_onlyif=function() return havequest(29346) end},
+	{ids="32252,32293,32275,32200",step_onlyif=function() return havequest(32252) or havequest(32200) or havequest(32293) or havequest(32275) end},
+	{ids="32294",step_onlyif=function() return havequest(32294) end},
+	{ids="32215,32217",step_onlyif=function() return havequest(32215) or havequest(32217) end},
+	{ids="29317",step_onlyif=function() return havequest(29317) end},
+	{ids="32506",step_onlyif=function() return havequest(32506) end},
+	{ids="32676,32677,32520",step_onlyif=function() return thunderstage()>=5 end},
+	{ids="32522,32729,32562,32521,32520",step_onlyif=function() return thunderstage()>=2  and completedq(32212) or havequest(32729) or havequest(32521) or havequest(32520) or havequest(32562) end},
+	{ids="32218",step_onlyif=function() return havequest(32218) end},
+	{ids="30526",step_onlyif=function() return havequest(30526) end},
+	{ids="32136",step_onlyif=function() return havequest(32136) or completedq(32136) end},
+	{ids="32495,32220,32201,32225",step_onlyif=function() return thunderstage()>=2 and completedq(32212) and havequest(32201) or thunderstage()>=2 and completedq(32212) and completedq(32201) end},
+	{ids="32252,32275,32200",step_onlyif=function() return havequest(32252) or havequest(32275) or havequest(32200) or completedq(32252) or completedq(32275) or completedq(32200) end},
+	{ids="32201,32220,32224,32517,32521,32225,32218,32226,32219,32562,32561",step_onlyif=function() return thunderstage()==1 end},
+	{ids="30955",step_onlyif=function() return havequest(30955) end},
+	{ids="31492",step_onlyif=function() return havequest(31492) end},
+	{ids="32237",step_onlyif=function() return havequest(32237) end},
+	{ids="30731,30735,30739,30728,30732,30736,30725,30729,30718,30737,30726,30730,30734,30738,30727,30733",step_onlyif=function() return not achieved(7287) end},
+	{ids="32274",step_onlyif=function() return havequest(32274) end},
+	{ids="32217,32215",step_onlyif=function() return havequest(32217) or havequest(32215) end},
+	{ids="31672,30334,31673,31942,31941,30335,31674,31669,30336,31671,316,31670,30333,30337,31943",step_onlyif=function() return not completedq(32682) end},
+	{ids="32236",step_onlyif=function() return havequest(32236) end},
+	{ids="30066",goal_onlyif=function() return havequest(30066) end},
+	{ids="26226",goal_onlyif=function() return havequest(26226) end},
+	{ids="30882",goal_onlyif=function() return havequest(30882) end},
+	{ids="32517",goal_onlyif=function() return havequest(32517) end,step_onlyif=function() return havequest(32224) or havequest(32517) or havequest(32219) end},
+	{ids="32225",goal_onlyif=function() return havequest(32225) end,step_onlyif=function() return havequest(32201) or havequest(32225) or havequest(32220) end},
+	{ids="43179",goal_onlyif=function() return ZGV.questsbyid[43179] and ZGV.questsbyid[43179].complete end},
+	{ids="26227",goal_onlyif=function() return havequest(26227) end},
+	{ids="39510",goal_onlyif=function() return havequest(39510) or completedq(39510) end},
+},
+["DAILIES\\Legion\\World Quests Unlock Quest Line"] = {
+	{ids="44720,44721,43341,44771"},
+},
+["DAILIES\\Legion\\Antoran Wastes World Quests"] = {
+	{ids="48359,48349,48358,48360,48374"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Azsuna World Quests"] = {
+	{ids="41639,41287,41663,41311,41669,41327,41326,41645,41651,41633,41657,41675,41267,41315,41288"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Broken Shore Rares"] = {
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Broken Shore World Quests"] = {
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Dalaran World Quests"] = {
+	{ids="41656,41644,41674,41662,41650,41680,41668,41638"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Highmountain World Quests"] = {
+	{ids="41677,41235,41641,41671,41237,41665,41223,41635,41659,41647,41240,41653,41206,41207"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Krokuun World Quests"] = {
+	{ids="48338,48337"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Mac'Aree World Quests"] = {
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Stormheim World Quests"] = {
+	{ids="41654,41317,41678,41672,41642,41297,41660,41298,41666,41344,41277,41345,41648,41313,41636"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Suramar World Quests"] = {
+	{ids="44176",goal_onlyif=function() return havequest(44176) end},
+	{ids="41673,41302,41655,41303,43943,41679,41282,41350,41643,41351,41314,41667,41649,41637,41661,41318"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\Val'sharah World Quests"] = {
+	{ids="41339,41272,41640,41670,41664,41312,41338,41658,41646,41676,41652,41292,41293,41316,41634"},
+	includes = {"Legion_World_Quest_Emissaries"},
+},
+["DAILIES\\Legion\\World Quests"] = {
+	{ids="42170",goal_onlyif=function() return ZGV.questsbyid[42170] and ZGV.questsbyid[42170].complete end},
+	{ids="46749",goal_onlyif=function() return havequest(46749) end},
+	{ids="44176",goal_onlyif=function() return havequest(44176) end},
+	{ids="42234",goal_onlyif=function() return ZGV.questsbyid[42234] and ZGV.questsbyid[42234].complete end},
+	{ids="46746",goal_onlyif=function() return havequest(46746) end},
+	{ids="42422",goal_onlyif=function() return ZGV.questsbyid[42422] and ZGV.questsbyid[42422].complete end},
+	{ids="42233",goal_onlyif=function() return ZGV.questsbyid[42233] and ZGV.questsbyid[42233].complete end},
+	{ids="42421",goal_onlyif=function() return ZGV.questsbyid[42421] and ZGV.questsbyid[42421].complete end},
+	{ids="48641",goal_onlyif=function() return ZGV.questsbyid[48641] and ZGV.questsbyid[48641].complete end},
+	{ids="46743",goal_onlyif=function() return havequest(46743) end},
+	{ids="46747",goal_onlyif=function() return havequest(46747) end},
+	{ids="42420",goal_onlyif=function() return ZGV.questsbyid[42420] and ZGV.questsbyid[42420].complete end},
+	{ids="46777",goal_onlyif=function() return havequest(46777) end},
+	{ids="46748",goal_onlyif=function() return havequest(46748) end},
+	{ids="43179",goal_onlyif=function() return ZGV.questsbyid[43179] and ZGV.questsbyid[43179].complete end},
+	{ids="46745",goal_onlyif=function() return havequest(46745) end},
+	{ids="41237,41634,41638,41642,41646,41650,41654,41277,41662,41666,41670,41293,41297,41313,41317,41206,41345,48338,48358,41635,41639,41643,41647,41651,41655,41659,41663,41667,41671,41675,41298,41302,41314,41318,41326,41207,41338,41223,41235,48359,41636,41640,41644,41267,41652,41656,41660,41664,41287,41672,41676,41680,41303,41311,41315,41327,41339,41351,41658,41240,48349,48360,41633,41637,41641,41645,41649,41653,41657,41661,41665,41288,41292,41677,48374,41674,41668,41312,41316,41673,41350,41282,41679,41669,43943,41344,41272,48337,41648,41678"},
+	includes = {"Toraan_the_Revered","Vindicator_Jaelaana_Paragon","Toraan_the_Revered_Paragon","Vindicator_Jaelaana"},
+},
+["DAILIES\\Legion\\The Originals"] = {
+	{ids="47251,47254"},
+},
+["DAILIES\\Mists of Pandaria Dailies\\The Anglers Dailies"] = {
+	includes = {"Anglers_Dailies"},
+},
+["the_cake_is_not_a_lie"] = {
+	includes = {"auctioneer","H_Dalaran_Cooking_Dailies"},
+},
+["Dinner_Impossible"] = {
+	includes = {"trainer_Cooking"},
+},
+["Kickin'_It_Up_a_Notch"] = {
+	{ids="11379,11381,11380,11377"},
+},
+["The_Northrend_Gourmet"] = {
+	{ids="11377,11381,12645,13090,11379,12644,11380,12634"},
+	includes = {"trainer_Cooking"},
+},
+["Our_Daily_Bread"] = {
+	{ids="12645,13112,12634,13116,11380,12644,13113,13115,11377,11379,11381,13114,13090"},
+},
+["The_Outland_Gourmet"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+	includes = {"trainer_Cooking"},
+},
+["second_that_emotion"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Old_Gnome_and_the_Sea"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["The_Scavenger"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["The_Fishing_Diplomat"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Mr_Pinchy"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["The_Lurker_Above"] = {
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Old_Man_Barlowned"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Outland_Angler"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Fish_Don't_Leave_Footprints"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["The_Coin_Master"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["One_That_Didn't_Get_Away"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Grand_Master_Fisherman"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Thousand_Fish"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="12645,13112,12634,13116,11380,9349,12644,9361,13113,13115,11377,11379,11381,13114,13090"},
+},
+["Master_Angler_of_Azeroth"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="32435,32436,9361,11377,13090,13114,8193,12634,11379,9349,11380,12645,13112,12644,11381,13116,13113,13115"},
+},
+["Master_Angler_of_Northrend"] = {
+	{ids="11667",goal_onlyif=function() return havequest(11667) end},
+	{ids="11666",goal_onlyif=function() return havequest(11666) end},
+	{ids="11665",goal_onlyif=function() return havequest(11665) end},
+	{ids="11668",goal_onlyif=function() return havequest(11668) end},
+	{ids="11669",goal_onlyif=function() return havequest(11669) end},
+	{ids="32435,32436,9361,11377,13090,13114,8193,12634,24803,11379,9349,11380,12645,13112,12644,11381,13116,13113,13115"},
+},
 ["LEVELING\\Draenor (90-100)\\Tanaan Jungle (90-90)"] = {
 	{ids="34427,34429,34740,34741,35241,34437,34439,34958,34445,34442,35747,34925,35933,34446,35005,34987,34739,34737,34420,34421,34422,34392,34393,34425,34398,34423"},
 },
@@ -15771,6 +15899,58 @@ ZGV.Quest_Cache_Horde = {
 ["LEVELING\\Draenor (90-100)\\Tanaan Jungle (100)"] = {
 	{ids="39176,39177",step_onlyif=function() return skill("Jewelcrafting") >= 1 end},
 	{ids="37934,37935,39241,39242,39432,38567,38568,38570,38571,37890,38573,38574,37889,38001,38577,38578,38572,39236,39315"},
+},
+["Tiragarde_Sound_Foothold_Quests"] = {
+	{ids="51803",goal_onlyif=function() return havequest(51803) end},
+	{ids="52444",goal_onlyif=function() return havequest(52444) end},
+	{ids="51979",goal_onlyif=function() return havequest(51979) end},
+	{ids="51442,51435,51421,51984,51437,51438,51439,51440,51436,51441,51800"},
+},
+["Drustvar_Foothold_Quests"] = {
+	{ids="51803",goal_onlyif=function() return havequest(51803) end},
+	{ids="52444",goal_onlyif=function() return havequest(52444) end},
+	{ids="51979",goal_onlyif=function() return havequest(51979) end},
+	{ids="51231,51233,51234,51421,51332,51984,51985,51800,51801,51340,51435,51436,51437,51438,51439,51440,51441,51442,51224"},
+},
+["Stormsong_Valley_Foothold_Quests"] = {
+	{ids="51803",goal_onlyif=function() return havequest(51803) end},
+	{ids="52444",goal_onlyif=function() return havequest(52444) end},
+	{ids="51979",goal_onlyif=function() return havequest(51979) end},
+	{ids="51231,51986,51233,51234,51421,51696,51674,51691,51332,51984,51985,51800,51801,51802,51675,51587,51340,51643,51435,51436,51437,51438,51439,51440,51441,51442,51536,51532,51526,51224"},
+},
+["timeless_isle_prequests"] = {
+	{ids="33232,33332,33340,33228,33161,33333,33335,33160,33336,33341"},
+	{ids="33230",goal_onlyif=function() return havequest(33230) end},
+},
+["DUNGEONS\\Legion Scenarios\\Whispers of a Frightened World"] = {
+	{ids="46206"},
+},
+["DUNGEONS\\Legion Scenarios\\The Deaths of Chromie Portals"] = {
+	{ids="47906",goal_onlyif=function() return havequest(47906) and completedq(47906,1) end},
+	{ids="47904",goal_onlyif=function() return havequest(47904) and completedq(47904,1) end},
+	{ids="47545",goal_onlyif=function() return not completedq(47545) end},
+	{ids="47557,47643,47645,47559,47642,47560,47558,47644",step_onlyif=function() return inscenario end},
+	{ids="47543,47550,48021"},
+},
+["DUNGEONS\\Legion Scenarios\\The Deaths of Chromie Speed Run"] = {
+	{ids="47807",goal_onlyif=function() return havequest(47807) end,step_onlyif=function() return inscenario end},
+	{ids="47906",goal_onlyif=function() return completedq(47904) end},
+	{ids="47809",goal_onlyif=function() return havequest(47809) end,step_onlyif=function() return inscenario end},
+	{ids="47904",goal_onlyif=function() return completedq(47550) and not completedq(47904) end},
+	{ids="47746,47750,47745,47747,47744,47773",step_onlyif=function() return inscenario end},
+	{ids="47810",goal_onlyif=function() return havequest(47810) end,step_onlyif=function() return inscenario end},
+	{ids="47808",goal_onlyif=function() return havequest(47808) end,step_onlyif=function() return inscenario end},
+},
+["DUNGEONS\\Legion Scenarios\\The Deaths of Chromie (Stratholme Intro)"] = {
+	{ids="47746,47750,47745,47747,47744",step_onlyif=function() return inscenario end},
+},
+["DUNGEONS\\Legion Scenarios\\Argus Invasions"] = {
+	{ids="48799",step_onlyif=function() return ZGV.questsbyid[48799] and ZGV.questsbyid[48799].complete end},
+	{ids="48461",goal_onlyif=function() return not completedq(48461) end},
+	{ids="49293",goal_onlyif=function() return ZGV.questsbyid[49293] and ZGV.questsbyid[49293].complete end},
+	{ids="48605",goal_onlyif=function() return completedq(48513) and not completedq(48605) end},
+	{ids="48513",goal_onlyif=function() return completedq(48461) and not completedq(48513) end},
+	includes = {"Argus_Invasion_Turalyon","Argus_Invasion_Illidan"},
 },
 ["LEVELING\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Alchemy Lab"] = {
 	{ids="37568"},
@@ -16211,6 +16391,9 @@ ZGV.Quest_Cache_Horde = {
 },
 }
 ZGV.Quest_Cache = {
+["main_rep_mount"] = {
+	includes = {"%tabard%"},
+},
 ["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Chuck"] = {
 	{ids="11665"},
 },
@@ -16273,6 +16456,36 @@ ZGV.Quest_Cache = {
 },
 ["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Mechanical Chicken"] = {
 	{ids="3721,25475,25476,648,351,485,836"},
+},
+["DAILIES\\Battle for Azeroth\\Darkshore World Quests"] = {
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
+},
+["DAILIES\\Battle for Azeroth\\BFA World Quest Unlock"] = {
+	{ids="51918"},
+},
+["DAILIES\\Battle for Azeroth\\Drustvar World Quests"] = {
+	{ids="50987,52357,52381"},
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
+},
+["DAILIES\\Battle for Azeroth\\Nazmir World Quests"] = {
+	{ids="52410"},
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
+},
+["DAILIES\\Battle for Azeroth\\Stormsong Valley World Quests"] = {
+	{ids="52394,50989,52380,52344"},
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
+},
+["DAILIES\\Battle for Azeroth\\Tiragarde Sound World Quests"] = {
+	{ids="51050,52375,52377,52379,52383,52387,51017,51021,51023,51025,51027,51029,51031,51033,51035,51037,51043,50984,51049,51051,52378,52388,51024,51026,51028,51030,51032,51034,51036,51040,51042,51044,51046,51048,50983"},
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
+},
+["DAILIES\\Battle for Azeroth\\Vol'dun World Quests"] = {
+	{ids="52397,52412"},
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
+},
+["DAILIES\\Battle for Azeroth\\Zuldazar World Quests"] = {
+	{ids="52394,51013,52398,51038"},
+	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["GOLD\\Farming\\Gold Ore"] = {
 	includes = {"auctioneer"},
@@ -16681,6 +16894,55 @@ ZGV.Quest_Cache = {
 ["GOLD\\Farming\\Prismatic Scale"] = {
 	includes = {"auctioneer"},
 },
+["FrenzyheartPreQuests"] = {
+	{ids="12529,12537,12576,12530,12538,12577,12531,12570,12578,12532,12571,12579,12533,12572,12580,12534,12573,12581,12540,12535,12574,12654,12528,12536,12575,12539"},
+},
+["FrenzyheartDailies"] = {
+	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
+	{ids="12578,12579,12580,12581,12741,12528,12529,12530,12531,12532,12533,12534,12535,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
+},
+["OraclePreQuests"] = {
+	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
+	{ids="12578,12579,12580,12581,12741,12528,12529,12530,12531,12532,12533,12534,12535,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
+},
+["OracleDailies"] = {
+	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
+	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
+	{ids="12735,12578,12736,12579,12737,12580,12581,12741,12528,12529,12530,12531,12704,12532,12726,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
+},
+["CleansingDrakTharon"] = {
+	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
+	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
+	{ids="12735,12578,12736,12579,12737,12580,12581,12802,11984,12741,12238,11989,11990,11991,12528,12068,12529,12042,12530,12007,12531,12704,12532,12726,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
+},
+["BetrayalDrakuru"] = {
+	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
+	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
+	{ids="12735,12578,12736,12579,12737,12580,12676,12581,12802,12677,11984,12726,12741,12710,12238,12068,12669,12649,12673,12661,11989,112663,11990,12643,11991,12638,12633,12528,12686,12529,12042,12530,12007,12531,12704,12532,12690,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
+},
+["Explorer_Pandaria"] = {
+	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
+	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
+	{ids="12735,12578,12736,12579,12737,12580,12676,12581,12802,12677,11984,12726,12741,12710,12238,12068,12669,12649,12673,12661,11989,112663,11990,12643,11991,12638,12633,12528,12686,12529,12042,12530,12007,12531,12704,12532,12690,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter I: Trial of the Black Prince"] = {
+	{ids="31481,31473,31468,31482"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter II: Wrathion's War (Horde)"] = {
+	{ids="32431,32432,32476,32429,32430,32427"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter II: Wrathion's War (Alliance)"] = {
+	{ids="32389,32474,32390,32388,32374,32423"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter III: Two Princes"] = {
+	{ids="32592,32593,32594,32595,32596,32590,32591,32597"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter IV: Two Princes"] = {
+	{ids="32861,32598,32805"},
+},
+["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter V: Judgement of the Black Prince"] = {
+	{ids="33088,33104,32870,33098,33100,33105"},
+},
 ["GOLD\\Farming\\Linen Cloth/Wool Cloth"] = {
 	includes = {"auctioneer"},
 },
@@ -16991,120 +17253,6 @@ ZGV.Quest_Cache = {
 ["PETSMOUNTS\\Battle Pets\\Mechanical Pets\\Lil' Bling"] = {
 	includes = {"trainer_Engineering"},
 },
-["PETSMOUNTS\\Battle Pets\\Beast Pets\\Lurking Owl Kitten"] = {
-	{ids="41453,41452,41197"},
-},
-["PETSMOUNTS\\Battle Pets\\Critter Pets\\Sun Darter Hatchling"] = {
-	{ids="27120"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Albino Buzzard"] = {
-	{ids="45083"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Crackers"] = {
-	{ids="46322,46324,46323,45073",step_only="Rogue"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Orphaned Felbat"] = {
-	{ids="46777"},
-},
-["PETSMOUNTS\\Battle Pets\\Flying Pets\\Skyhorn Nestling"] = {
-	{ids="40069,40071,42425,39305,40070"},
-},
-["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Thistleleaf Adventurer"] = {
-	{ids="42170"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Mailemental"] = {
-	{ids="41411",goal_onlyif=function() return havequest(41411) end},
-	{ids="41368",goal_onlyif=function() return havequest(41368) end},
-	{ids="41397,46278,41394,50247,41367,41395"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Stardust"] = {
-	{ids="44767"},
-},
-["PETSMOUNTS\\Battle Pets\\Magic Pets\\Wonderous Wisdomball"] = {
-	{ids="141349,44412"},
-},
-["LEVELING\\Starter Guides\\Pandaren (1-12)"] = {
-	{ids="30034",step_only="Pandaren Hunter"},
-	{ids="30027",step_only="Pandaren Monk"},
-	{ids="30033",step_only="Pandaren Mage"},
-	{ids="30037",step_only="Pandaren Shaman"},
-	{ids="30038",step_only="Pandaren Warrior"},
-	{ids="30036",step_only="Pandaren Rogue"},
-	{ids="30035",step_only="Pandaren Priest"},
-	{ids="31450,30987",step_onlyif=function() return rep('Stormwind') >= Friendly end},
-	{ids="31013,31012,31450",step_onlyif=function() return rep('Orgrimmar') >= Friendly end},
-	{ids="29800,29799,30590,29798,29665,29797,29784,29796,29786,30767,30589,29795,30591,29792,29787,29790,29789,29788,29768,29769,29770,29771,29772,29521,29522,29523,29524,29777,29778,29779,29780,29781,29782,29783,29406,29785,29408,29409,29662,29663,29664,29791,29666,29793,29794,29417,29418,29419,29420,29421,29422,29423,29676,29677,29678,29679,29680,29776,29775,29774,29661,29414,29424,29410"},
-},
-["TEST\\Points of interest"] = {
-	{ids="35819",step_only="Horde",goal_onlyif=function() return itemcount(113460) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35814",step_only="Horde",goal_onlyif=function() return itemcount(113454) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35811",step_only="Horde",goal_onlyif=function() return itemcount(113448) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35815",step_only="Horde",goal_onlyif=function() return itemcount(113456) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35810",step_only="Horde",goal_onlyif=function() return itemcount(113447) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="36503",step_only="Horde",goal_onlyif=function() return itemcount(116160) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35818",step_only="Horde",goal_onlyif=function() return itemcount(113459) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35807",step_only="Horde",goal_onlyif=function() return itemcount(113444) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
-	{ids="35820",step_only="Alliance",goal_onlyif=function() return itemcount(113461) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="36502",step_only="Alliance",goal_onlyif=function() return itemcount(116159) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35816",step_only="Alliance",goal_onlyif=function() return itemcount(113457) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35808",step_only="Alliance",goal_onlyif=function() return itemcount(113445) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35813",step_only="Alliance",goal_onlyif=function() return itemcount(113453) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35812",step_only="Alliance",goal_onlyif=function() return itemcount(113449) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35809",step_only="Alliance",goal_onlyif=function() return itemcount(113446) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-	{ids="35817",step_only="Alliance",goal_onlyif=function() return itemcount(113458) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
-},
-["FrenzyheartPreQuests"] = {
-	{ids="12529,12537,12576,12530,12538,12577,12531,12570,12578,12532,12571,12579,12533,12572,12580,12534,12573,12581,12540,12535,12574,12654,12528,12536,12575,12539"},
-},
-["FrenzyheartDailies"] = {
-	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
-	{ids="12578,12579,12580,12581,12741,12528,12529,12530,12531,12532,12533,12534,12535,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
-},
-["OraclePreQuests"] = {
-	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
-	{ids="12578,12579,12580,12581,12741,12528,12529,12530,12531,12532,12533,12534,12535,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
-},
-["OracleDailies"] = {
-	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
-	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
-	{ids="12735,12578,12736,12579,12737,12580,12581,12741,12528,12529,12530,12531,12704,12532,12726,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
-},
-["CleansingDrakTharon"] = {
-	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
-	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
-	{ids="12735,12578,12736,12579,12737,12580,12581,12802,11984,12741,12238,11989,11990,11991,12528,12068,12529,12042,12530,12007,12531,12704,12532,12726,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
-},
-["BetrayalDrakuru"] = {
-	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
-	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
-	{ids="12735,12578,12736,12579,12737,12580,12676,12581,12802,12677,11984,12726,12741,12710,12238,12068,12669,12649,12673,12661,11989,112663,11990,12643,11991,12638,12633,12528,12686,12529,12042,12530,12007,12531,12704,12532,12690,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
-},
-["Explorer_Pandaria"] = {
-	{ids="12695",goal_onlyif=function() return not ZGV.completedQuests[12695] end},
-	{ids="12692",goal_onlyif=function() return not ZGV.completedQuests[12692] end},
-	{ids="12735,12578,12736,12579,12737,12580,12676,12581,12802,12677,11984,12726,12741,12710,12238,12068,12669,12649,12673,12661,11989,112663,11990,12643,11991,12638,12633,12528,12686,12529,12042,12530,12007,12531,12704,12532,12690,12533,12705,12534,12761,12535,12762,12536,12703,12537,12758,12538,12759,12539,12760,12540,12572,12570,12573,12576,12574,12732,12575,12571,12702,12734,12577,12654"},
-},
-["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter I: Trial of the Black Prince"] = {
-	{ids="31481,31473,31468,31482"},
-},
-["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter II: Wrathion's War (Horde)"] = {
-	{ids="32431,32432,32476,32429,32430,32427"},
-},
-["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter II: Wrathion's War (Alliance)"] = {
-	{ids="32389,32474,32390,32388,32374,32423"},
-},
-["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter III: Two Princes"] = {
-	{ids="32592,32593,32594,32595,32596,32590,32591,32597"},
-},
-["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter IV: Two Princes"] = {
-	{ids="32861,32598,32805"},
-},
-["ACHIEVEMENTS\\Quests\\Pandaria\\Chapter V: Judgement of the Black Prince"] = {
-	{ids="33088,33104,32870,33098,33100,33105"},
-},
-["main_rep_mount"] = {
-	includes = {"%tabard%"},
-},
 ["Pandarian_Cooking_1-520"] = {
 	{ids="31281"},
 	includes = {"cooking_fire"},
@@ -17228,23 +17376,67 @@ ZGV.Quest_Cache = {
 ["shatt_anvil"] = {
 	{ids="31470,31474,31478,31302,31471,31475,31479,31536,31472,31281,31480,31476,31311,31477,31467"},
 },
-["Toraan_the_Revered"] = {
-	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+["PETSMOUNTS\\Battle Pets\\Beast Pets\\Lurking Owl Kitten"] = {
+	{ids="41453,41452,41197"},
 },
-["Vindicator_Jaelaana"] = {
-	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
-	{ids="48639",goal_onlyif=function() return ZGV.questsbyid[48639] and ZGV.questsbyid[48639].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+["PETSMOUNTS\\Battle Pets\\Critter Pets\\Sun Darter Hatchling"] = {
+	{ids="27120"},
 },
-["Toraan_the_Revered_Paragon"] = {
-	{ids="48976",goal_onlyif=function() return havequest(48976) and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
-	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
-	{ids="48639",goal_onlyif=function() return ZGV.questsbyid[48639] and ZGV.questsbyid[48639].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Albino Buzzard"] = {
+	{ids="45083"},
 },
-["Vindicator_Jaelaana_Paragon"] = {
-	{ids="48977",goal_onlyif=function() return havequest(48977) and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
-	{ids="48976",goal_onlyif=function() return havequest(48976) and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
-	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
-	{ids="48639",goal_onlyif=function() return ZGV.questsbyid[48639] and ZGV.questsbyid[48639].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Crackers"] = {
+	{ids="46322,46324,46323,45073",step_only="Rogue"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Orphaned Felbat"] = {
+	{ids="46777"},
+},
+["PETSMOUNTS\\Battle Pets\\Flying Pets\\Skyhorn Nestling"] = {
+	{ids="40069,40071,42425,39305,40070"},
+},
+["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Thistleleaf Adventurer"] = {
+	{ids="42170"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Mailemental"] = {
+	{ids="41411",goal_onlyif=function() return havequest(41411) end},
+	{ids="41368",goal_onlyif=function() return havequest(41368) end},
+	{ids="41397,46278,41394,50247,41367,41395"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Stardust"] = {
+	{ids="44767"},
+},
+["PETSMOUNTS\\Battle Pets\\Magic Pets\\Wonderous Wisdomball"] = {
+	{ids="141349,44412"},
+},
+["LEVELING\\Starter Guides\\Pandaren (1-12)"] = {
+	{ids="30034",step_only="Pandaren Hunter"},
+	{ids="30027",step_only="Pandaren Monk"},
+	{ids="30033",step_only="Pandaren Mage"},
+	{ids="30037",step_only="Pandaren Shaman"},
+	{ids="30038",step_only="Pandaren Warrior"},
+	{ids="30036",step_only="Pandaren Rogue"},
+	{ids="30035",step_only="Pandaren Priest"},
+	{ids="31450,30987",step_onlyif=function() return rep('Stormwind') >= Friendly end},
+	{ids="31013,31012,31450",step_onlyif=function() return rep('Orgrimmar') >= Friendly end},
+	{ids="29800,29799,30590,29798,29665,29797,29784,29796,29786,30767,30589,29795,30591,29792,29787,29790,29789,29788,29768,29769,29770,29771,29772,29521,29522,29523,29524,29777,29778,29779,29780,29781,29782,29783,29406,29785,29408,29409,29662,29663,29664,29791,29666,29793,29794,29417,29418,29419,29420,29421,29422,29423,29676,29677,29678,29679,29680,29776,29775,29774,29661,29414,29424,29410"},
+},
+["TEST\\Points of interest"] = {
+	{ids="35819",step_only="Horde",goal_onlyif=function() return itemcount(113460) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35814",step_only="Horde",goal_onlyif=function() return itemcount(113454) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35811",step_only="Horde",goal_onlyif=function() return itemcount(113448) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35815",step_only="Horde",goal_onlyif=function() return itemcount(113456) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35810",step_only="Horde",goal_onlyif=function() return itemcount(113447) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="36503",step_only="Horde",goal_onlyif=function() return itemcount(116160) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35818",step_only="Horde",goal_onlyif=function() return itemcount(113459) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35807",step_only="Horde",goal_onlyif=function() return itemcount(113444) > 0 end,step_onlyif=function() return havequest(35818) or havequest(36503) or havequest(35815) or havequest(35811) or havequest(35810) or havequest(35807) or havequest(35814) or havequest(35819) end},
+	{ids="35820",step_only="Alliance",goal_onlyif=function() return itemcount(113461) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="36502",step_only="Alliance",goal_onlyif=function() return itemcount(116159) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35816",step_only="Alliance",goal_onlyif=function() return itemcount(113457) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35808",step_only="Alliance",goal_onlyif=function() return itemcount(113445) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35813",step_only="Alliance",goal_onlyif=function() return itemcount(113453) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35812",step_only="Alliance",goal_onlyif=function() return itemcount(113449) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35809",step_only="Alliance",goal_onlyif=function() return itemcount(113446) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
+	{ids="35817",step_only="Alliance",goal_onlyif=function() return itemcount(113458) > 0 end,step_onlyif=function() return havequest(35817) or havequest(36502) or havequest(35816) or havequest(35812) or havequest(35809) or havequest(35808) or havequest(35813) or havequest(35820) end},
 },
 ["Anglers_Dailies"] = {
 	{ids="30701,30585,30754,30698,30586,30763,30613,30753,30658,30700,30584,30588,30598,30678"},
@@ -17456,5 +17648,23 @@ ZGV.Quest_Cache = {
 	{ids="31106,31039,31043,31047,31040,31044,31048,31041,31105,31045,31042,31046",step_onlyif=function() return completedq(31104) end},
 	{ids="31128",step_onlyif=function() return havequest(31128) end},
 	{ids="12529,12531,12533,12535,12537,12539,11521,11523,11525,30134,30138,11533,30146,12557,30154,11541,11543,31441,11547,31959,12571,12573,12575,31210,12579,12581,31234,31238,12597,12599,30242,31270,30254,30266,31808,30306,31334,11880,30585,31609,31111,30613,27047,27051,30135,30139,30143,31677,30155,30159,12695,31705,31709,31458,31717,30701,31231,31235,31494,31502,31506,31510,30753,31267,31271,30255,31024,31335,30586,30598,12528,12530,12532,11514,12536,12538,12540,11526,30136,30140,30144,30658,30152,11540,31945,11544,30678,11548,12570,12572,12574,30698,12578,31216,31232,12534,27050,30535,12596,12598,30252,30240,30754,31268,31272,30256,31720,26710,27046,11537,27048,30280,31049,31203,31204,31061,31505,31120,30147,31332,31336,11877,31810,30328,30332,31211,30187,12654,31487,31117,31706,31721,27049,31194,30158,31718,31702,31701,31700,30137,30141,30145,30142,31714,30157,31698,31712,31699,31703,31707,31711,31715,31209,30331,31109,11875,12580,12577,31233,31237,31496,31465,31504,31508,30330,11515,11516,31269,31018,30257,12740,31439,11536,28488,30277,31811,11546,12576,31503,31062,31507,31509,30243,31333,30763,31208,30700,30329,30588,31612,30584"},
+},
+["Toraan_the_Revered"] = {
+	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+},
+["Vindicator_Jaelaana"] = {
+	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+	{ids="48639",goal_onlyif=function() return ZGV.questsbyid[48639] and ZGV.questsbyid[48639].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+},
+["Toraan_the_Revered_Paragon"] = {
+	{ids="48976",goal_onlyif=function() return havequest(48976) and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+	{ids="48639",goal_onlyif=function() return ZGV.questsbyid[48639] and ZGV.questsbyid[48639].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+},
+["Vindicator_Jaelaana_Paragon"] = {
+	{ids="48977",goal_onlyif=function() return havequest(48977) and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+	{ids="48976",goal_onlyif=function() return havequest(48976) and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+	{ids="48642",goal_onlyif=function() return ZGV.questsbyid[48642] and ZGV.questsbyid[48642].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
+	{ids="48639",goal_onlyif=function() return ZGV.questsbyid[48639] and ZGV.questsbyid[48639].complete and (ZGV.CurrentMapID==830 or ZGV.CurrentMapID==831 or ZGV.CurrentMapID==832 or ZGV.CurrentMapID==833) end},
 },
 }

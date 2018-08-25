@@ -1908,6 +1908,8 @@ GOALTYPES['poicurrency'] = {
 			elseif currency == "AM" then name,_,icon = GetCurrencyInfo(1155)
 			elseif currency == "VA" then name,_,icon = GetCurrencyInfo(1508)
 			elseif currency == "CC" then name,_,icon = GetCurrencyInfo(1275)
+			elseif currency == "AZ" then name,_,icon = GetCurrencyInfo(1553)
+			elseif currency == "WR" then name,_,icon = GetCurrencyInfo(1560)
 			 end
 			 
 			if name and name~="" then table.insert(step.poicurrencydata,{value=value, type=name, icon=icon}) end
@@ -2584,9 +2586,9 @@ function Goal:CheckVisited()
 end
 
 function Goal:OnVisited()
-	self.parentStep.current_waypoint_goal_num = self.num
 	ZGV:Debug("Goal OnVisited! %d, cycling.",self.num)
-	ZGV.Pointer:CycleWaypoint(1,"no cycle")
+	self.parentStep:CycleWaypointFrom(self.num,"no cycle")
+	ZGV:ShowWaypoints()
 end
 
 function Goal:OnDevisited()
@@ -2605,7 +2607,7 @@ function Goal:OnCompleted()
 	if self.oncompletefun then self.oncompletefun() end
 	if ZGV.Pointer.DestinationWaypoint and ZGV.Pointer.DestinationWaypoint.goal == self then  -- this waypoint is "complete", in whatever manner
 		ZGV:Debug("Goal: cycling waypoint from completed goal ".. self.num)
-		ZGV.Pointer:CycleWaypointFrom(self.num,self.parentStep)
+		self.parentStep:CycleWaypointFrom(self.num,"no cycle")
 	end
 end
 
@@ -3631,7 +3633,9 @@ function Goal:OnClick(button)
 
 		ZGV:Debug("Goal %d clicked.",self.num)
 		ZGV.Pointer:ClearWaypoints("manual")
-		ZGV.Pointer:SetWaypointToGoal(self)
+		self.parentStep:CycleWaypointTo(self.num)
+		if WorldMapFrame:IsShown() then OpenWorldMap(self.map) end
+		ZGV:ShowWaypoints()
 
 		--[[
 		if self.parentStep.is_sticky or self.parentStep.is_poi then 

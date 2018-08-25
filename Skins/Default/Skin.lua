@@ -206,25 +206,47 @@ function Skin:AlignFrame()
 	local UP_BOTTOMRIGHT = upsideup and "BOTTOMRIGHT" or "TOPRIGHT"
 	local UP = upsideup and 1 or -1
 
-	if upsideup then
-		framemaster:SetClampRectInsets(0,(width-40)*scale,(-43)*scale,(-height+55)*scale)
-	else
-		framemaster:SetClampRectInsets(0,(width-40)*scale,-height*scale,(42)*scale)
-	end
-
 	CHAIN(frame.Border.TitleBar)
 		:ClearAllPoints()
 		:SetPoint(UP_TOPLEFT,frame.Border,UP_TOPLEFT,0,0)
 		:SetPoint(UP_TOPRIGHT,frame.Border,UP_TOPRIGHT,0,0)
 
-	CHAIN(frame.Border.Guides)
-		:ClearAllPoints()
-		:SetPoint("BOTTOMLEFT",ZygorGuidesViewerFrame_ScrollChild,"TOPLEFT",0,-1)
-		:SetPoint("BOTTOMRIGHT",ZygorGuidesViewerFrame_ScrollChild,"TOPRIGHT",0,-1)
+	local tabadj =  ZGV.CurrentSkinStyle:SkinData("TabsHeight")
 
+	frame.Border.Guides:ClearAllPoints()
+	ZygorGuidesViewerFrame_Scroll:ClearAllPoints()
+
+	if upsideup then
+		CHAIN(ZygorGuidesViewerFrame_Scroll)
+			:ClearAllPoints()
+			:SetPoint("TOPLEFT",ZGV.Frame.Border,"TOPLEFT",10,-57-tabadj)
+			:SetPoint("BOTTOMRIGHT",ZGV.Frame.Border,"BOTTOMRIGHT",-10,8-tabadj)
+		CHAIN(frame.Border.Guides)
+			:ClearAllPoints()
+			:SetPoint("BOTTOMLEFT",ZygorGuidesViewerFrame_ScrollChild,"TOPLEFT",0,-1)
+			:SetPoint("BOTTOMRIGHT",ZygorGuidesViewerFrame_ScrollChild,"TOPRIGHT",0,-1)
+		CHAIN(ZGV.ProgressBar)
+			:SetPoint("TOPLEFT", ZygorGuidesViewerFrame_Scroll,"BOTTOMLEFT",0,25)
+			:SetPoint("TOPRIGHT", ZygorGuidesViewerFrame_ScrollChild , "BOTTOMRIGHT",0,25)
+		framemaster:SetClampRectInsets(0,(width-40)*scale,(-43)*scale,(-height+55)*scale)
+	else
+		CHAIN(ZygorGuidesViewerFrame_Scroll)
+			:ClearAllPoints()
+			:SetPoint("TOPLEFT",ZGV.Frame.Border,"TOPLEFT",10,-10)
+			ZygorGuidesViewerFrame_Scroll:SetPoint("BOTTOMRIGHT",ZGV.Frame.Border.Guides,"TOPRIGHT",0,8)
+		CHAIN(frame.Border.Guides)
+			:ClearAllPoints()
+			:SetPoint("BOTTOMLEFT",ZGV.Frame.Border.TitleBar,"TOPLEFT",10,0)
+			:SetPoint("BOTTOMRIGHT",ZGV.Frame.Border.TitleBar,"TOPRIGHT",-10,0)
+		CHAIN(ZGV.ProgressBar)
+			:SetPoint("TOPLEFT", ZygorGuidesViewerFrame_Scroll,"BOTTOMLEFT",0,35)
+			:SetPoint("TOPRIGHT", ZygorGuidesViewerFrame_ScrollChild , "BOTTOMRIGHT",0,35)
+		framemaster:SetClampRectInsets(0,(width-40)*scale,-height*scale,(42)*scale)
+	end
+
+	
 	ZygorGuidesViewerFrame_Border_Guides:Show()
 	ZygorGuidesViewerFrame_Border:Show()
-
 
 	ZygorGuidesViewerFrame_Border.TabBack:ClearAllPoints()
 	ZygorGuidesViewerFrame_Border.TabBack:SetPoint(UP_TOPLEFT,ZygorGuidesViewerFrame_Border,UP_TOPLEFT,2,-27*UP)
@@ -232,14 +254,11 @@ function Skin:AlignFrame()
 
 
 	-- first line according to up/down orientation, the rest follows
-	local tabadj =  not upsideup and ZGV.CurrentSkinStyle:SkinData("TabsHeight") or 0
-	CHAIN(ZygorGuidesViewerFrame_Scroll)
-		:ClearAllPoints()
-		:SetPoint(UP_TOPLEFT,frame.Border,UP_TOPLEFT,10,(-57)*UP-20-tabadj)
-		:SetPoint(UP_BOTTOMRIGHT,frame.Border,UP_BOTTOMRIGHT,-10,10*UP-20-tabadj)
 
 	-- resizers
 	CHAIN(ZygorGuidesViewerFrame_ResizerBottom) :ClearAllPoints() :SetPoint(UP_BOTTOMLEFT,10,0) :SetPoint(UP_TOPRIGHT,frame,UP_BOTTOMRIGHT,-10,10*UP)
 	CHAIN(ZygorGuidesViewerFrame_ResizerBottomLeft) :ClearAllPoints() :SetPoint(UP_BOTTOMLEFT,0,0)
 	CHAIN(ZygorGuidesViewerFrame_ResizerBottomRight) :ClearAllPoints() :SetPoint(UP_BOTTOMRIGHT,0,0)
+
+	ZGV:ResizeFrame()
 end

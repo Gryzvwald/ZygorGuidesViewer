@@ -124,12 +124,18 @@
 		<Script file="Dailies\ZygorDailiesHordeLEGION.lua"/>
 		<Script file="Dailies\ZygorDailiesHordeLEGIONTrial.lua"/>
 
+		<Script file="Dailies\ZygorDailiesCommonLEGION.lua"/>
+		<Script file="Dailies\ZygorDailiesCommonLEGIONTrial.lua"/>
+
 		<!-- BFA -->
 		<Script file="Dailies\ZygorDailiesAllianceBFA.lua"/>
 		<Script file="Dailies\ZygorDailiesAllianceBFATrial.lua"/>
 
 		<Script file="Dailies\ZygorDailiesHordeBFA.lua"/>
 		<Script file="Dailies\ZygorDailiesHordeBFATrial.lua"/>
+
+		<Script file="Dailies\ZygorDailiesCommonBFA.lua"/>
+		<Script file="Dailies\ZygorDailiesCommonBFATrial.lua"/>
 
 	<!-- DUNGEONS -->
 		<!-- MOP -->
@@ -514,6 +520,7 @@
 	
 	<!--
 	-->
+
 	<Script file="WOD_A_Rares.lua" />
 	<Script file="WOD_H_Rares.lua" />
 	<Script file="WOD_A_Treasures.lua" />

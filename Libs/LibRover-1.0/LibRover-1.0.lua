@@ -2889,7 +2889,7 @@ do
 						if neigh.type=="taxi"
 						and (mode=="walk" or mode=="fly")
 						and not neigh.known then
-							if (neigh.quest and not IsQuestFlaggedCompleted(neigh.quest))
+							if (neigh.quest and not IsQuestFlaggedCompleted(neigh.quest))  -- @001@
 							or (neigh.cond_fun and not neigh.cond_fun()) then
 								mycost=mycost+COST_FAILURE+20
 								if cost_debugging then costdesc = costdesc .. "no walk to missing-quest/failed-condition taxi; " end
@@ -2933,7 +2933,7 @@ do
 
 					-- Ban nodes by quest/faction.
 						if (neigh.factionid and select(3,GetFactionInfoByID(neigh.factionid))<neigh.factionstanding)
-						or (neigh.quest and not IsQuestFlaggedCompleted(neigh.quest))
+						or (neigh.type~="taxi" and neigh.quest and not IsQuestFlaggedCompleted(neigh.quest))  -- ignore quest locks on taxis, they're handled separately at @001@.
 						or (neigh.class and select(2,UnitClass("player"))~=neigh.class)
 						then -- Class only! woo
 							mycost = mycost+COST_FAILURE+100
@@ -4213,7 +4213,7 @@ do
 
 							if myTaxiNode==node.taxinodeID then 
 								local myTaxiIndex = pintaxiNodeData and pintaxiNodeData.slotIndex
-								mapicon=pin 
+								mapicon=pin
 								if ZGV.db.profile.autotaxi and myTaxiIndex and not IsAltKeyDown() then
 									Dismount()
 									--GetNumRoutes(index) -- dummy call! but needed in 6.1 for TakeTaxiNode to work. WTF Blizzard...

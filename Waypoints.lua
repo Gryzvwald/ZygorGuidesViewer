@@ -595,18 +595,27 @@ ZGV.WaypointFunctions['internal'] = {
 		
 		local goals_converted_to_path=false
 		--[[  -- DISABLED temporarily. TODO!!!  Or not; one can now "use goto" in paths to import gotos.
+			... or not. Needed to have gotos automatically converted after all.
+			--]]
+		
 		if not waypath then  -- improvise waypath from gotos. If this succeeds, DON'T show goto waypoints separately.
-			waypath = {coords={},loop=false,ants="straight",follow="strict" }  --,markers="none",follow="none",inline_travel=true
+			waypath = {coords={},loop=false,ants="straight",follow="none",markers="none",made_from_gotos=true }  --,markers="none",follow="none",inline_travel=true
+			for gi,goal in ipairs(step.goals) do goal.waypoint_moved_to_waypath=nil end
 			for gi,goal in ipairs(step.goals) do
 				if goal:IsInlineTravel() and goal:IsVisible() then
-					tinsert(waypath.coords,goal)
+					if gi>=(step.current_waypoint_goal_num or 0) then
+						tinsert(waypath.coords,goal) -- all travel points leading up to destination
+					end
+					goal.waypoint_moved_to_waypath=true
+				elseif goal.x then
+					tinsert(waypath.coords,goal) -- destination itself
+					break
 				end
 			end
 			if #waypath.coords<2 then waypath=nil end
-			step.waypath=waypath
+			--step.waypath=waypath
 			goals_converted_to_path = not not waypath
 		end
-		--]]
 
 		if waypath then
 			local pathtype = waypath.loop and "farm" or "path"
@@ -614,6 +623,26 @@ ZGV.WaypointFunctions['internal'] = {
 			local pointset = ZGV.Pointer:ShowSet(waypath,waypath.loop and "farm" or "path")
 			--if not waypath.loop then  arrowpoint = pointset.points[1]  end  -- Pointer defaults to points[1] in GetNextInPath anyway.  Miiight not play nice with Travel, but this is a band-aid...
 		end
+
+		-- moved from Pointer
+		--[[
+			-- if we have existing waypoints (we should!!)...
+			if self.waypoints then
+				for wi,way in ipairs(self.waypoints) do
+					if way.goal==goal then
+						self:FindTravelPath(way)
+						if WorldMapFrame:IsShown() then OpenWorldMap(way.m) end
+						break
+					end
+				end
+			else
+				local CG = CS.goals[CS.current_waypoint_goal_num] -- Current Goal
+				ZGV:Debug("CycleWaypoint: setting new waypoint, no waypoints were found.")
+				self:SetWaypoint(CG.map, CG.x, CG.y, {title=CG:GetText(),arrowtitle=CG:GetText(),arrow=true,findpath=true,type="way"}, true)
+				if WorldMapFrame:IsShown() then OpenWorldMap(way.m) end
+			end
+		--]]
+
 
 		--[[ -- POIs aren't special anymore
 			local poistep = ZGV.Poi.ActivePoiStepSet and ZGV.Poi.ActivePoiStep
@@ -645,17 +674,19 @@ ZGV.WaypointFunctions['internal'] = {
 		local points = {}  -- fill this with correct source material.
 
 		if step.goals and not only_type then
-			if goal then
-				if not goal.force_noway then
-					points={goal}
-					ZGV.CurrentStep.current_waypoint_goal_num = goal.num
-				end
+			if goal --[[ never true! --]] then
+				--[[
+					if not goal.force_noway then
+						points={goal}
+						ZGV.CurrentStep.current_waypoint_goal_num = goal.num
+					end
+				--]]
 				--print("goal: "..goal:GetText())
 			else
 				local canhidetravel=false
 				--if not self.db.profile.showinlinetravel then for i,goal in ipairs(step.goals) do if not goal:IsInlineTravel() then canhidetravel=true break end end end
 				for i,goal in ipairs(step.goals) do
-					if goal.x and goal:IsVisible() and not goal.force_noway and not (canhidetravel and goal:IsInlineTravel()) then
+					if goal.x and goal:IsVisible() and not goal.force_noway and not (canhidetravel and goal:IsInlineTravel()) and not goal.waypoint_moved_to_waypath then
 						if goal.parentStep.is_poi then
 							goal.waypoint_icon = ZGV.Pointer.Icons.graydot
 						end
@@ -673,6 +704,7 @@ ZGV.WaypointFunctions['internal'] = {
 		if points and #points>0 then
 			ZGV:Debug("&waypoints Showing %s: (#points=%d, waypath %s, Pointer.DestinationWaypoint=%s)", goal and "goal" or "step goals",  #points, waypath and "PRESENT" or "absent", tostring(ZGV.Pointer.DestinationWaypoint))
 			arrowpoint,farmpoint = ZGV.Pointer.set_waypoints(points,35,30,"way")
+			if step.current_waypoint_goal_num then arrowpoint=ZGV.Pointer:GetWaypointByGoal(step.goals[step.current_waypoint_goal_num]) end
 		else
 			ZGV:Debug("&waypoints No step points to show.")
 		end
@@ -754,6 +786,7 @@ ZGV.WaypointFunctions['internal'] = {
 		
 		ZGV:Debug("&waypoints Point the arrow! arrowpoint %s, farmpoint %s, waypath %s",ZGV.Pointer.waypoint_tostring(arrowpoint),ZGV.Pointer.waypoint_tostring(farmpoint),waypath and (#waypath.coords>0) and (#waypath.coords.." points") or "empty")
 
+		if arrowpoint and WorldMapFrame:IsShown() then OpenWorldMap(arrowpoint.m) end
 
 		if ZGV.db.profile.pathfinding then
 			if ZGV.Pointer.nummanual>0 then

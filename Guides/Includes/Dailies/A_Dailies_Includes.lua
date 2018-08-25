@@ -6884,6 +6884,8 @@ ZygorGuidesViewer:RegisterInclude("Legion_World_Quest_Emissaries",[[
 		|next "Choose_World_Quest"
 ]])
 
+
+
 ZygorGuidesViewer:RegisterInclude("BFA_Choose_World_Quests",[[
 		Choose a World Quest to Complete |confirm
 		|tip With the "World Quests" guide loaded, open your world map.
@@ -6896,6 +6898,8 @@ ZygorGuidesViewer:RegisterInclude("BFA_Choose_World_Quests",[[
 		'|confirm |next "Storms_Wake_WQ" |condition readyq(50601)
 		'|confirm |next "Champions_of_Azeroth_WQ" |condition readyq(50562)
 ]])
+
+
 
 ZygorGuidesViewer:RegisterInclude("BFA_World_Quest_Emissaries",[[
 		talk Collector Kojo##135793

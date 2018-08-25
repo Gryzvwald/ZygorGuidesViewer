@@ -804,7 +804,7 @@ step
 talk Layla Evenkeel##136059
 Learn the Recipe for Honorable Combatant's Discombobulator |learn Honorable Combatant's Discombobulator##269724 |goto 77.63,14.32
 step
-Load the "Platinum Ore" guide |confirm |next
+Load the "Platinum Ore" guide |confirm |next "Zygor's Profession Guides\\Mining\\Farming Guides\\Platinum"
 |tip Click the line above to load the guide.
 |tip You will need the "Mining" skill in order to utilize the guide.
 collect 270 Platinum Ore##152513
@@ -996,8 +996,8 @@ Continue following the path |goto 71.40,18.04 < 5 |only if walking
 Continue following the path |goto 74.58,18.92 < 7 |only if walking
 Continue following the path |goto 75.81,22.01 < 5 |only if walking
 Run down the stairs |goto 75.66,22.97 < 5 |only if walking
-use the Sand Shifter##152543
-use the Slimy Mackerel##152544
+use the Lane Snapper##152546
+use the Frenzied Fangtooth##152545
 collect Aromatic Fish Oil##160711 |n |goto 73.64,23.12
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Midnight Salmon",{

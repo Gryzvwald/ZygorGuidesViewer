@@ -637,3 +637,64 @@ function Step:ShareToChat(target,sharesource,brand)
 		SendChatMessage(g:GetTextForSharing("withtip"),target)
 	end
 end
+
+function Step:ResetCurrentWaypoint()
+	ZGV:Debug("Step: resetting current waypoint.")
+	self.current_waypoint_goal_num = nil
+	self:CycleWaypoint(1,true)
+end
+
+function Step:CycleWaypoint(delta,nocycle)
+	delta=delta or 1
+	ZGV:Debug("Cycling waypoint "..(delta>0 and "forward" or "back").." ("..tostring(delta)..") from "..tostring(self.current_waypoint_goal_num).." in step "..self.num.." with "..#self.goals.." goals")
+
+	
+	-- -- "numberMappedGoals" removed from here. Not needed. There's a cycles check later anyway.
+	local goal_num = self.current_waypoint_goal_num or (delta>0 and 0 or #self.goals+1)
+	ZGV:Debug("Cycling waypoint from "..tostring(goal_num))
+	local goal
+	local cycles=0
+	local do_cycle=not nocycle
+	repeat
+		goal_num = goal_num + delta
+
+		-- do cycle, or not
+		if do_cycle then
+			if goal_num>#self.goals then goal_num=1
+			elseif goal_num<1 then goal_num=#self.goals end
+		else
+			goal_num = min(max(goal_num,1),#self.goals)
+		end
+		
+		if goal_num==self.current_waypoint_goal_num then ZGV:Debug("CycleWaypoint: went full cycle or nowhere, aborting.") return end --full cycle or no change at all, abort
+		
+		goal=self.goals[goal_num]
+		if not goal then ZGV:Debug("CycleWaypoint: went out of goals!!!") return end
+
+		cycles=cycles+1
+		if cycles>50 then ZGV:Debug("CycleWaypoint: cycling forever, aborting.") return end
+
+	until goal and goal.x and not goal.force_noway and goal:IsVisible()
+
+	return self:CycleWaypointTo(goal_num)
+end
+
+function Step:CycleWaypointTo(goalnum)
+	if type(goalnum)=="table" and goalnum.parentStep then  self=goalnum.parentStep  goalnum=goalnum.num end  -- UGLY hack! never change self!!!! :(
+	local goal = self.goals[goalnum]
+	self.current_waypoint_goal_num=goalnum
+	if goal and goal.x and not goal.force_noway and goal:IsVisible() then
+		ZGV:Debug("CycleWaypointTo: cycling to goal [%d]: %s, way at [%.1f %.1f]",goal.num,goal:GetText(),goal.x*100,goal.y*100)
+		ZGV:SendMessage("ZGV_STEP_WAYPOINT_CHANGED",self,self.current_waypoint_goal_num)
+		ZGV:UpdateFrame(true)
+		return goalnum,goal
+	else
+		self:CycleWaypoint(1,"nocycle")
+	end
+end
+
+function Step:CycleWaypointFrom(goalnum)
+	self.current_waypoint_goal_num = goalnum
+	ZGV:Debug("CycleWaypointFrom %d",goalnum)
+	self:CycleWaypoint(1,"nocycle")
+end

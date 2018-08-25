@@ -255,7 +255,7 @@ end
 Pointer.iconScale = 1  -- updated by :RescaleMarkers
 Pointer.iconScaleBase = 0.8
 Pointer.Icons = {
-	greendot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=1,g=1,b=1}, size=40, alpha=0.5, minisize=35, minimap_alpha=0.3, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, onminimap="always" },
+	greendot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=1,g=1,b=1}, size=30, alpha=0.5, minisize=35, minimap_alpha=0.5, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, onminimap="always" },
 	graydot = { tex={file="mapicons",coords={0.5,1,0,0.5},r=0.7,g=0.7,b=0.7}, size=20, minisize=17, rotates=false, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25, spinner=true, desat=1, onminimap="always" },
 	arrow = { tex={file="mapicons",coords={0.5,1,0.5,1},r=1,g=1,b=1}, size=20, minisize=17, rotates=true, edgetex={file="mapicons",coords={0,0.5,0.5,1},r=1,g=1,b=1}, edgesize=25 },
 	
@@ -486,9 +486,6 @@ function Pointer:SetWaypoint_ant (m,x,y,num,icon, ant)  -- ant is here for one-t
 	waypoint.x=x
 	waypoint.y=y
 	waypoint.c = ZGV.GetMapContinent(m)
-
-	waypoint.curve_dist=nil
-	waypoint.curve_leftoverphase=nil
 
 	-- clone some data to make a smarter, more aware ant
 	waypoint.p0,waypoint.p1,waypoint.p2,waypoint.p3 = ant.p0,ant.p1,ant.p2,ant.p3
@@ -4406,10 +4403,10 @@ local function spawn_straight_ants(points,loop,phase)
 	local breakall
 
 	if points[1].curve_leftoverphase then
-		--print("Ooo, leftover at start! ",points[1].curve_leftoverphase)
 		phase=phase-points[1].curve_leftoverphase
 		if phase<0 then phase=phase+1 end
 		if phase>1 then phase=phase-1 end
+		--ZGV:Debug("&_WARN Ooo, leftover at start! %.2f so starting phase is %.2f",points[1].curve_leftoverphase,phase)
 	end
 
 	local leftover=phase*curve_spacing
@@ -4440,7 +4437,7 @@ local function spawn_straight_ants(points,loop,phase)
 				-- go back and spread the load
 
 				local adjust_yd = adjust*curve_spacing
-				ZGV:Debug("&_WARN adjusting point %d of %d dist from %.2f by leftover %.2f = %.2f yd",i,#points,dist,adjust,adjust_yd)
+				--ZGV:Debug("&_WARN adjusting point %d of %d dist from %.2f by leftover %.2f = %.2f yd",i,#points,dist,adjust,adjust_yd)
 				
 				-- spreading the load: won't work yet; breaks totaldist
 				--[[
@@ -4666,6 +4663,7 @@ end})
 Pointer.mapsizeratio = mapsizeratio
 
 local ants_optimized_which_isnt_implemented=false
+
 function Pointer:AnimateAnts()
 	local ant_speed = ant_speed
 	if (ant_interval>0.2) then ant_speed=0.3 end
@@ -4690,12 +4688,11 @@ function Pointer:AnimateAnts()
 		end
 	end
 
-	--print ("---animateants")
-	for name,pointset in pairs(self.pointsets) do
+	local function animate_set(name)
+		local pointset = self.pointsets[name]
 		if pointset.ants and curve_spacing>0
 		--and only_type=="ant"
-		then --and not step.waypath_curved
-			--step.waypath_curved = true
+		then
 			if pointset.antspacing then self:SetAntSpacing(pointset.antspacing) end
 
 			for pi,wp in ipairs(pointset.points) do
@@ -4746,17 +4743,23 @@ function Pointer:AnimateAnts()
 		end
 
 		-- check other pointsets for waypoint overlaps with this one; copy curve data.
-		for name2,pointset2 in pairs(self.pointsets) do  if name2~=name then
+		for name2,pointset2 in pairs(self.pointsets) do  if (name=="path" and name2=="route") or (name2=="path" and name=="route") then
 			for pi1,point1 in ipairs(pointset.points) do
 				for pi2,point2 in ipairs(pointset2.points) do
 					if point1.x==point2.x and point1.y==point2.y and not point2.curve_leftoverphase then
-						--print("set",name,"point",pi1,"-> set",name2,"point",pi2)
+						--ZGV:Debug("&_WARN set %s point %d -> set %s point %d",name,pi1,name2,pi2)
 						point2.curve_leftoverphase=point1.curve_leftoverphase
 					end
 				end
 			end
 		end end
 	end
+
+	if self.pointsets["route"] then animate_set("route") end
+	if self.pointsets["path"] then animate_set("path") end
+	for name,pointset in pairs(self.pointsets) do  if name~="route" and name~="path" then
+		animate_set(name)
+	end end
 
 	self:ClearWaypoints_ant(total_ants)
 
@@ -5033,7 +5036,7 @@ end
 
 
 function Pointer:ResetAnts()
-	for sn,set in pairs(self.pointsets) do for pi,p in ipairs(set.points) do p.curve_dist=nil end end -- reset ant sync
+	for sn,set in pairs(self.pointsets) do for pi,p in ipairs(set.points) do p.curve_dist=nil p.curve_leftoverphase=nil end end -- reset ant sync
 end
 
 -- Finds an optimal travel route. Or, just a beeline, if options say so.
@@ -5124,9 +5127,13 @@ function Pointer.QuestWatchPOI_PointToMe(poiBut,args)
 end
 --]]
 
+
 -- WAYPOINT CYCLING
+function Pointer:ResetCurrentWaypoint()
+	self.CurrentStepWaypoint = nil
+end
+
 function Pointer:CycleWaypoint(delta,nocycle,step)
-	delta=delta or 1
 	--if lastCycleMilli==GetFrameTimeMilliseconds() then lastCycles=lastCycles+1 end  if lastCycles>10 then return end
 	--lastCycleMilli=GetFrameTimeMilliseconds()  lastCycles=0
 
@@ -5138,59 +5145,11 @@ function Pointer:CycleWaypoint(delta,nocycle,step)
 		or (CW and CW.pathnode and CW.pathnode.waypoint and CW.pathnode.waypoint.goal and CW.pathnode.waypoint.goal.parentStep)
 		or ZGV:GetFocusedStep()
 
-
-
-	ZGV:Debug("Cycling waypoint "..(delta>0 and "forward" or "back").." ("..tostring(delta)..") from "..tostring(CS.current_waypoint_goal_num).." in step "..CS.num.." with "..#CS.goals.." goals")
-
-	if not CS then ZGV:Debug("CycleWaypoint: no step, sorry") return end
-	CS.current_waypoint_goal_num = CS.current_waypoint_goal_num or (delta>1 and 0 or #CS.goals)
-	ZGV:Debug("Cycling waypoint from "..tostring(CS.current_waypoint_goal_num))
-	
-	
-	-- -- "numberMappedGoals" removed from here. Not needed. There's a cycles check later anyway.
-
-	local old_goal_num = CS.current_waypoint_goal_num
-	local goal
-	local cycles=0
-	repeat
-		cycles=cycles+1
-		if cycles>50 then ZGV:Debug("CycleWaypoint: cycling forever, out.") return end  --cycling forever? out.
-		
-		CS.current_waypoint_goal_num = CS.current_waypoint_goal_num + delta
-
-		-- do cycle, or not
-		if nocycle then CS.current_waypoint_goal_num = min(max(CS.current_waypoint_goal_num,1),#CS.goals) end
-		if CS.current_waypoint_goal_num>#CS.goals then CS.current_waypoint_goal_num=1 end
-		if CS.current_waypoint_goal_num<1 then CS.current_waypoint_goal_num=#CS.goals end
-		
-		if CS.current_waypoint_goal_num==old_goal_num then ZGV:Debug("CycleWaypoint: went full cycle, out.") return end --full cycle or no change at all, abort
-		
-		goal=CS.goals[CS.current_waypoint_goal_num]
-		if not goal then ZGV:Debug("CycleWaypoint: went out of goals!!!") return end
-
-	until goal and goal.x and not goal.force_noway and goal:IsVisible()
-
-	ZGV:Debug("CycleWaypoint: cycling to goal [%d]: %s, way at [%.1f %.1f]",goal.num,goal:GetText(),goal.x*100,goal.y*100) 
-
-	--ZGV:ShowWaypoints()
+	CS:CycleWaypoint(delta,nocycle)
 
 	self:ResetAnts()
-
-	-- if we have existing waypoints (we should!!)...
-	if self.waypoints then
-		for wi,way in ipairs(self.waypoints) do
-			if way.goal==goal then
-				self:FindTravelPath(way)
-				if WorldMapFrame:IsShown() then OpenWorldMap(way.m) end
-				break
-			end
-		end
-	else
-		local CG = CS.goals[CS.current_waypoint_goal_num] -- Current Goal
-		ZGV:Debug("CycleWaypoint: setting new waypoint, no waypoints were found.")
-		self:SetWaypoint(CG.map, CG.x, CG.y, {title=CG:GetText(),arrowtitle=CG:GetText(),arrow=true,findpath=true,type="way"}, true)
-		if WorldMapFrame:IsShown() then OpenWorldMap(way.m) end
-	end
+	
+	ZGV:ShowWaypoints()
 
 	ZGV:UpdateFrame()
 	
@@ -5203,34 +5162,26 @@ function Pointer:CycleWaypoint(delta,nocycle,step)
 	--zo_callLater(function() ZGV.Viewer:Update() end,1)
 end
 
--- Cycle to given goal num... or past it, if there's no coords in it.
-function Pointer:CycleWaypointTo(goalnum)
-	local CS
-	if type(goalnum)=="table" and goalnum.parentStep then  local goal=goalnum  CS=goal.parentStep  goalnum=goal.num  end
-	CS = CS or (ZGV.Pointer.current_waypoint and ZGV.Pointer.current_waypoint.goal and ZGV.Pointer.current_waypoint.goal.parentStep) or ZGV.CurrentStep
-	self:Debug("CycleWaypointTo %d",goalnum or 0)
-	if not CS then return end
-	CS.current_waypoint_goal_num=goalnum and (goalnum-1) or 0
-	Pointer:CycleWaypoint(1,"nocycle",CS) -- Force waypoint to cycle to first one.
-end
-
-function Pointer:CycleWaypointFrom(goalnum,step)
-	step.current_waypoint_goal_num = goalnum
-	self:Debug("CycleWaypointFrom %d",goalnum)
-	self:CycleWaypoint(1,"nocycle",step)
+function Pointer:GetWaypointByGoal(goal)
+	if not self.waypoints then return end
+	for wi,way in ipairs(self.waypoints) do
+		if way.goal==goal then return way end
+	end
 end
 
 function Pointer:SetWaypointToGoal(goal)
+	local num,goal = goal.parentStep:CycleWaypointTo(goal.num)
+	--[[
 	-- try to use an existing waypoint
 	for wi,way in ipairs(self.waypoints) do  if way.goal and way.goal==goal then
 		self:Debug("SetWaypointToGoal %d found existing way %d",goal.num,wi)
 		self:CycleWaypointTo(goal)
 		return
 	end  end
-
-	-- otherwise, make a manual one.
 	self:Debug("SetWaypointToGoal %d had to make a new waypoint",goal.num)
 	self:SetWaypoint(goal.map,goal.x,goal.y, goal, true)
+	--]]
+	-- otherwise, make a manual one.
 end
 
 function Pointer:SetArrowToFirstCompletableGoal()
