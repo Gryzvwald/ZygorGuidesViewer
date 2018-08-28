@@ -1126,6 +1126,14 @@ function AutoEquip:ShowPopup(item)
 			end
 		end
 
+		if cur then
+			local new_ilvl = (select(4,ZGV:GetItemInfo(item.link)))
+			local cur_ilvl = (select(4,ZGV:GetItemInfo(cur.link)))
+			if new_ilvl < cur_ilvl then
+				st1 = st1.."\nThe new item is better, but has lower item level. Keep the old item in your bags for now, as it will help keep your player item level unchanged."
+			end
+		end
+
 		return st1
 	end
 

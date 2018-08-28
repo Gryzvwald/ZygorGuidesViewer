@@ -600,6 +600,7 @@ function DataProvider:RefreshAllData(fromOnShow)
 	local mapid = selfmap.GetMapID and selfmap:GetMapID()
 	if not mapid then return end
 
+	local t1=debugprofilestop()
 	local cdb = ZGV.db.char
 	for i,point in pairs(ZGV.Pointer.waypoints) do
 		if point.poiNum and point.storedData then
@@ -612,6 +613,7 @@ function DataProvider:RefreshAllData(fromOnShow)
 			end
 		end
 	end
+	ZGV:Debug("&poi Cleared POIs in %dms",debugprofilestop()-t1)
 
 	if not Poi.Waypoints[mapid] and not forceRefresh then return end
 

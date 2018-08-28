@@ -73,7 +73,7 @@ Speak with Havi |q 44721/4 |goto 60.14,50.74
 step
 talk Havi##92539
 turnin Helya's Conquest##44721 |goto 60.14,50.74
-|next "Zygor's Dailies Guides\\Legion\\World Quests"
+|next "Zygor's Dailies Guides\\Legion\\Stormheim World Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Legion\\Antoran Wastes World Quests",{
 author="support@zygorguides.com",

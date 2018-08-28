@@ -4,6 +4,136 @@ if UnitFactionGroup("player")~="Alliance" then return end
 if ZGV:DoMutex("AchievementsABFA") then return end
 ZygorGuidesViewer.GuideMenuTier = "BFA"
 ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Atal'Dazar",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Yazma in Atal'Dazar on Heroic difficulty or higher.",
+achieveid={12825},
+startlevel=120,
+endlevel=120,
+keywords={"Yazma, Dungeon, Heroic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Atal'Dazar on Heroic difficulty or higher
+Click here to load the "Atal'Dazar" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Atal'Dazar"
+Defeat Yazma in Atal'Dazar on Heroic difficulty or higher |achieve 12825
+step
+_Congratulations!_
+You Earned the "Heroic: Atal'Dazar" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Freehold",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Harlan Sweete in Freehold on Heroic difficulty or higher.",
+achieveid={12832},
+startlevel=120,
+endlevel=120,
+keywords={"Harlan, Dungeon, Heroic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Freehold on Heroic difficulty or higher
+Click here to load the "Freehold" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Freehold"
+Defeat Harlan Sweete in Freehold on Heroic difficulty or higher |achieve 12832
+step
+_Congratulations!_
+You Earned the "Heroic: Freehold" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Shrine of the Storm",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Vol'zith the Whisperer in Shrine of the Storm on Heroic difficulty or higher.",
+achieveid={12837},
+startlevel=120,
+endlevel=120,
+keywords={"Vol'zith, Dungeon, Heroic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Shrine of the Storm on Heroic difficulty or higher
+Click here to load the "Shrine of the Storm" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Shrine of the Storm"
+Defeat Vol'zith the Whisperer in Shrine of the Storm on Heroic difficulty or higher |achieve 12837
+step
+_Congratulations!_
+You Earned the "Heroic: Shrine of the Storm" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: The Temple of Sethraliss",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to restore the Avatar of Sethraliss in the Temple of Sethraliss on Heroic difficulty or higher.",
+achieveid={12505},
+startlevel=120,
+endlevel=120,
+keywords={"Avatar, Dungeon, Heroic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete the Temple of Sethraliss on Heroic difficulty or higher
+Click here to load the "Temple of Sethraliss" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Temple of Sethraliss"
+Complete the Avatar of Sethraliss encounter in the Temple of Sethraliss on Heroic difficulty or higher |achieve 12505
+step
+_Congratulations!_
+You Earned the "Heroic: The Temple of Sethraliss" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: The MOTHERLODE!!",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Mogul Razdunk in The MOTHERLODE!! on Heroic difficulty or higher.",
+achieveid={12845},
+startlevel=120,
+endlevel=120,
+keywords={"Razdunk, Dungeon, Heroic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete The MOTHERLODE!! on Heroic difficulty or higher
+Click here to load "The MOTHERLODE!!" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\The MOTHERLODE!!"
+Defeat Mogul Razdunk in The MOTHERLODE!! on Heroic difficulty or higher |achieve 12845
+step
+_Congratulations!_
+You Earned the "Heroic: The MOTHERLODE!!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Tol Dagor",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Overseer Korgus in Tol Dagor on Heroic difficulty or higher.",
+achieveid={12841},
+startlevel=120,
+endlevel=120,
+keywords={"Korgus, Dungeon, Heroic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Tol Dagor on Heroic difficulty or higher
+Click here to load the "Tol Dagor" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Tol Dagor"
+Defeat Overseer Korgus in Tol Dagor on Heroic difficulty or higher |achieve 12841
+step
+_Congratulations!_
+You Earned the "Heroic: Tol Dagor" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Underrot",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Unbound Abomination in Underrot on Heroic difficulty or higher.",
+achieveid={12501},
+startlevel=120,
+endlevel=120,
+keywords={"Unbound, Abomination, Heroic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete the Underrot on Heroic difficulty or higher
+Click here to load the "Underrot" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\The Underrot"
+Defeat the Unbound Abomination in the Underrot on Heroic difficulty or higher |achieve 12501
+step
+_Congratulations!_
+You Earned the "Heroic: Underrot" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Waycrest Manor",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Gorak Tul in Waycrest Manor on Heroic difficulty or higher.",
+achieveid={12484},
+startlevel=120,
+endlevel=120,
+keywords={"Gorak, Tul, Heroic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Waycrest Manor on Heroic difficulty or higher
+Click here to load the "Waycrest Manor" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Waycrest Manor"
+Defeat Gorak Tul in Waycrest Manor on Heroic difficulty or higher |achieve 12484
+step
+_Congratulations!_
+You Earned the "Heroic: Waycrest Manor" Achievement.
+]])
+ZGV.BETAEND()
+ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Exploration\\Battle for Azeroth\\Explore Tiragarde Sound",{
 achieveid={12556},
 author="support@zygorguides.com",

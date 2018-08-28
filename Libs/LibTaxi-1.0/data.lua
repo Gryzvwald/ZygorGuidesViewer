@@ -17,7 +17,7 @@ data.taxipoints = {
 		-- Alliance --
 		{name="Shatterstone Harbor",faction="A",npc="Barnard \"the Smasherr\" Baysworth",npcid=135383,x=36.68,y=34.28,quest=51229},
 		{name="Deadwood Cove",faction="A",npc="Explosioneer Zoidfuse",npcid=135388,x=39.79,y=83.82,quest=52041},
-		{name="Crankchug's Overlook",faction="A",npc="Placeholder Guy",npcid=135388,x=55,y=35,maybe__quest=52041},	-- FAKE INFO, FIX LATER
+		{name="Vulture's Nest",faction="A",npc="Buzz Crankchug",npcid=138256,x=53.60,y=37.67,quest=53044},
 
 
 		-- Neutral --
@@ -57,6 +57,7 @@ data.taxipoints = {
 		{name="Veiled Grotto",faction="A",npc="Isaac \"Lefteye\" Bentham",npcid=139181,x=44.42,y=36.83,quest=52802},
 		{name="Mistvine Ledge",faction="A",npc="Sornoth Slagmane",npcid=139180,x=64.33,y=47.33,quest=52963},
 		{name="Mugamba Overlook",faction="A",npc="Drager Smokewing",npcid=139179,x=44.84,y=27.07,quest=52852},
+		{name="Verdant Hollow",faction="A",npc="Kina Cobbleflame",npcid=136074,x=55.65,y=24.85},
 
 		-- Neutral --
 		{name="Nesingwary's Gameland",faction="B",npc="Lasa the Galerider",npcid=123006,x=66.19,y=17.60},
@@ -114,12 +115,13 @@ data.taxipoints = {
 		{name="Timberfell Outpost",faction="H",npc="Michaela Reed",npcid=133861,x=72.18,y=51.91,quest=51591},
 		{name="Waning Glacier",faction="H",npc="Kip Wingnut",npcid=142740,x=39.68,y=18.54},
 		{name="Wolf's Den",faction="H",npc="Narkalt",npcid=133331,x=62.11,y=13.57,quest=52127},
+		{name="Stonefist Watch",faction="H",npc="Placeholder Guy",npcid=135388,x=54,y=66,maybe__quest=52041},	-- FAKE INFO, FIX LATER
 	},
 
 	['Drustvar']={
 		-- Alliance --
 		{name="Hangman's Point",faction="A",npc="Aaron Ridgeley",npcid=128576,x=71.06,y=40.88},
-		{name="Fletcher's Hollow",faction="A",npc="Bridget Bran",npcid=126724,x=70.21,y=60.45},
+		{name="Fletcher's Hollow",faction="A",npc="Bridget Bran",npcid=126724,x=70.21,y=60.45,taxinodeID=2035},
 		{name="Falconhurst",faction="A",npc="Viviana Swailes",npcid=134866,x=26.98,y=72.38},
 		{name="Arom's Stand",faction="A",npc="Jess Albury",npcid=135023,x=38.14,y=52.53},
 		{name="Watchman's Rise",faction="A",npc="Ensign Wallace",npcid=135024,x=31.87,y=30.45,quest=50003},
@@ -156,12 +158,12 @@ data.taxipoints = {
 		
 		-- Horde --
 		{name="Warfang Hold",faction="H",npc="Muka Stormbreaker",npcid=138097,x=51.42,y=33.74,quest=51986},
-		{name="Hillcrest Pasture",faction="H",npc="Hosan Cloudhoof",npcid=134842,x=52.76,y=80.13},
+		{name="Hillcrest Pasture",faction="H",npc="Hosan Cloudhoof",npcid=134842,x=52.76,y=80.13,quest=99999},	-- FAKE INFO, FIX LATER
 		{name="Ironmaul Overlook",faction="H",npc="Chulani Cloudbreath",npcid=134850,x=75.88,y=64.14},
 		{name="Shrine of the Storm",faction="H",npc="Dark Ranger Allanah",npcid=134853,taxinodeID=2095,x=77.90,y=24.07},
 		{name="Diretusk Hollow",faction="H",npc="Kudra Windblade",npcid=134848,x=54.27,y=49.35},
-		{name="Windfall Cavern",faction="H",npc="Allabas",npcid=138251,x=60.8,y=27.0},		-- FIX WITH MORE ACCURATE COORDS AND QUEST TAG LATER
-		{name="Stonetusk Watch",faction="H",npc="Wyna Breezehorn",npcid=134844,x=38.87,y=66.68},	-- FIX WITH MORE ACCURATE COORDS AND QUEST TAG LATER
+		{name="Windfall Cavern",faction="H",npc="Allabas",npcid=138251,x=60.8,y=27.0,quest=99999},		-- FIX WITH MORE ACCURATE COORDS AND QUEST TAG LATER
+		{name="Stonetusk Watch",faction="H",npc="Wyna Breezehorn",npcid=134844,x=38.87,y=66.68,quest=99999},	-- FIX WITH MORE ACCURATE COORDS AND QUEST TAG LATER
 
 
 
@@ -7162,7 +7164,7 @@ data.flightcost = {
 		nodeID = 2110,
 		name = "Shatterstone Harbor, Vol'dun",
 		neighbors = {
-			[2112] = 0, -- Crankchug's Overlook, Vol'dun
+			[2112] = 0, -- Vulture's Nest, Vol'dun
 			[2114] = 0, -- Deadwood Cove, Vol'dun
 			[2119] = 46, -- Sanctuary of the Devoted, Vol'dun
 			["416:209"] = 0, -- Crankchug's Overlook, Vol'dun
@@ -7175,7 +7177,7 @@ data.flightcost = {
 		neighbors = {
 			[2080] = 0, -- Grimwatt's Crash, Nazmir
 			[2110] = 0, -- Shatterstone Harbor, Vol'dun
-			[2112] = 0, -- Crankchug's Overlook, Vol'dun
+			[2112] = 0, -- Vulture's Nest, Vol'dun
 			[2119] = 57, -- Sanctuary of the Devoted, Vol'dun
 			[2148] = 0, -- Mugamba Overlook, Zuldazar
 			["498:513"] = 0, -- Mugamba Overlook, Zuldazar
@@ -7215,7 +7217,7 @@ data.flightcost = {
 	{
 		tag = "416:209",
 		nodeID = 2112,
-		name = "Crankchug's Overlook, Vol'dun",
+		name = "Vulture's Nest, Vol'dun",
 		neighbors = {
 			[1965] = 0, -- Nesingwary's Gameland, Zuldazar
 			[2080] = 0, -- Grimwatt's Crash, Nazmir
@@ -7254,7 +7256,7 @@ data.flightcost = {
 		neighbors = {
 			[1954] = 0, -- Zo'bal Ruins, Nazmir
 			[2111] = 0, -- Vorrik's Sanctum, Vol'dun
-			[2112] = 0, -- Crankchug's Overlook, Vol'dun
+			[2112] = 0, -- Vulture's Nest, Vol'dun
 			[2161] = 0, -- Redfield's Watch, Nazmir
 			["416:209"] = 0, -- Crankchug's Overlook, Vol'dun
 		},
@@ -7326,7 +7328,7 @@ data.flightcost = {
 		name = "Grimwatt's Crash, Nazmir",
 		neighbors = {
 			[2078] = 0, -- Fort Victory - Nazmir (Alliance)
-			[2112] = 0, -- Crankchug's Overlook, Vol'dun
+			[2112] = 0, -- Vulture's Nest, Vol'dun
 			[2114] = 0, -- Deadwood Cove, Vol'dun
 			[2145] = 0, -- Verdant Hollow, Zuldazar
 			[2148] = 0, -- Mugamba Overlook, Zuldazar
@@ -7953,7 +7955,7 @@ data.flightcost = {
 			[2023] = 62, -- Freehold, Tiragarde Sound
 			[2034] = 28, -- Hangman's Point, Drustvar
 			[2035] = 26, -- Fletcher's Hollow, Drustvar
-			[2060] = 0, -- Hatherford, Tiragarde Sound
+			[2060] = 69, -- Hatherford, Tiragarde Sound
 			[2074] = 53, -- Bridgeport, Tiragarde Sound
 			[2079] = 41, -- Kennings Lodge, Tiragarde Sound
 			[2277] = 51, -- Proudmoore Keep, Tiragarde Sound
@@ -8039,7 +8041,7 @@ data.flightcost = {
 		name = "Hatherford, Tiragarde Sound",
 		neighbors = {
 			[2034] = 56, -- Hangman's Point, Drustvar
-			[2042] = 0, -- Vigil Hill, Tiragarde Sound
+			[2042] = 69, -- Vigil Hill, Tiragarde Sound
 			[2083] = 18, -- Tradewinds Market, Tiragarde Sound
 			[2084] = 40, -- Norwington Estate, Tiragarde Sound
 			[2086] = 0, -- Brennadam, Stormsong Valley
@@ -8155,6 +8157,7 @@ data.flightcost = {
 			[2079] = 28, -- Kennings Lodge, Tiragarde Sound
 			[2083] = 39, -- Tradewinds Market, Tiragarde Sound
 			[2084] = 58, -- Norwington Estate, Tiragarde Sound
+			[2096] = 0, -- Tol Dagor, Tiragarde Sound
 			[2277] = 0, -- Proudmoore Keep, Tiragarde Sound
 			[2278] = 22, -- Mariner's Row, Tiragarde Sound
 		},
@@ -8249,6 +8252,7 @@ data.flightcost = {
 		nodeID = 2096,
 		name = "Tol Dagor, Tiragarde Sound",
 		neighbors = {
+			[2074] = 0, -- Bridgeport, Tiragarde Sound
 			[2083] = 0, -- Tradewinds Market, Tiragarde Sound
 		},
 	},

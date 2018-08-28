@@ -15,91 +15,17 @@ talk Clever Kumali##122703
 Train Zandalari Alchemy |skillmax Zandalari Alchemy,150 |goto Dazar'alor/0 42.22,37.96
 step
 talk Clever Kumali##122703
-buy 200 Crystal Vial##3371 |n
-|tip They're cheap, so just stock up on a lot now, so you don't have to buy more constantly.
-collect 200 Crystal Vial##3371 |goto 42.22,37.96
+buy 160 Crystal Vial##3371 |goto 42.22,37.96
 step
-collect 175 Siren's Pollen##152509
+collect 1300 Siren's Pollen##152509
 |tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
-Open Your Alchemy Crafting Panel:
-_<Create 25 Coastal Healing Potion>_
-Reach Level 25 Alchemy |skill Zandalari Alchemy,25
-step
-talk Clever Kumali##122703
-Train Potion of Concealment (Rank 1) |learn Potion of Concealment##252400 |goto 42.22,37.96
-step
-collect 225 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 15 Potion of Concealment>_
-Reach Level 40 Alchemy |skill Zandalari Alchemy,40
-step
-talk Clever Kumali##122703
-Train Coastal Healing Potion (Rank 2) |learn Coastal Healing Potion##252383 |goto 42.22,37.96
-step
-collect 50 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 10 Coastal Healing Potion>_
-Reach Level 50 Alchemy |skill Zandalari Alchemy,50
-step
-talk Clever Kumali##122703
-Train Potion of Concealment (Rank 2) |learn Potion of Concealment##252401 |goto 42.22,37.96
-step
-collect 100 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 10 Potion of Concealment>_
-Reach Level 60 Alchemy |skill Zandalari Alchemy,60
-step
-talk Clever Kumali##122703
-Train Potion of Bursting Blood (Rank 1) |learn Potion of Bursting Blood##252341 |goto 42.22,37.96
-step
-talk Clever Kumali##122703
-Train Potion of Bursting Blood (Rank 2) |learn Potion of Bursting Blood##252342 |goto 42.22,37.96
-step
-collect 150 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 120 Riverbud##152505
+collect 240 Riverbud##152505
 |tip You get these by gathering from Riverbud flowers that grow on the ground along rivers, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
-Open Your Alchemy Crafting Panel:
-_<Create 15 Potion of Bursting Blood>_
-Reach Level 75 Alchemy |skill Zandalari Alchemy,75
-step
-talk Clever Kumali##122703
-Train Battle Potion of Agility (Rank 1) |learn Battle Potion of Agility##279159 |goto 42.22,37.96
-step
-talk Clever Kumali##122703
-Train Battle Potion of Agility (Rank 2) |learn Battle Potion of Agility##279160 |goto 42.22,37.96
-step
-collect 150 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 120 Riverbud##152505
-|tip You get these by gathering from Riverbud flowers that grow on the ground along rivers, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 15 Battle Potion of Agility>_
-Reach Level 90 Alchemy |skill Zandalari Alchemy,90
-step
-talk Clever Kumali##122703
-Train Flask of the Vast Horizon (Rank 1) |learn Flask of the Vast Horizon##252354 |goto 42.22,37.96
-step
-collect 150 Anchor Weed##152510
+collect 500 Anchor Weed##152510
 |tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
@@ -111,24 +37,68 @@ collect 300 Star Moss##152506
 |tip You get these by gathering from Star Moss plants that grow on the sides of walls and bridges, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
+collect 625 Akunda's Bite##152507
+|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+collect 450 Sea Stalk##152511
+|tip You get these by gathering from Sea Stalk plants that grow on ocean shores, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Alchemy Crafting Panel:
+_<Create 25 Coastal Healing Potion>_
+Reach Level 25 Alchemy |skill Zandalari Alchemy,25
+step
+talk Clever Kumali##122703
+Train Potion of Concealment (Rank 1) |learn Potion of Concealment##252400 |goto 42.22,37.96
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Potion of Concealment>_
+Reach Level 40 Alchemy |skill Zandalari Alchemy,40
+step
+talk Clever Kumali##122703
+Train Coastal Healing Potion (Rank 2) |learn Coastal Healing Potion##252383 |goto 42.22,37.96
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Coastal Healing Potion>_
+Reach Level 50 Alchemy |skill Zandalari Alchemy,50
+step
+talk Clever Kumali##122703
+Train Potion of Concealment (Rank 2) |learn Potion of Concealment##252401 |goto 42.22,37.96
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Potion of Concealment>_
+Reach Level 60 Alchemy |skill Zandalari Alchemy,60
+step
+talk Clever Kumali##122703
+Train Potion of Bursting Blood (Rank 1) |learn Potion of Bursting Blood##252341 |goto 42.22,37.96
+step
+talk Clever Kumali##122703
+Train Potion of Bursting Blood (Rank 2) |learn Potion of Bursting Blood##252342 |goto 42.22,37.96
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Potion of Bursting Blood>_
+Reach Level 75 Alchemy |skill Zandalari Alchemy,75
+step
+talk Clever Kumali##122703
+Train Battle Potion of Agility (Rank 1) |learn Battle Potion of Agility##279159 |goto 42.22,37.96
+step
+talk Clever Kumali##122703
+Train Battle Potion of Agility (Rank 2) |learn Battle Potion of Agility##279160 |goto 42.22,37.96
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Battle Potion of Agility>_
+Reach Level 90 Alchemy |skill Zandalari Alchemy,90
+step
+talk Clever Kumali##122703
+Train Flask of the Vast Horizon (Rank 1) |learn Flask of the Vast Horizon##252354 |goto 42.22,37.96
+step
 Open Your Alchemy Crafting Panel:
 _<Create 15 Flask of the Vast Horizon>_
 Reach Level 105 Alchemy |skill Zandalari Alchemy,105
 step
 talk Clever Kumali##122703
 Train Flask of the Currents (Rank 1) |learn Flask of the Currents##252348 |goto 42.22,37.96
-step
-collect 150 Anchor Weed##152510
-|tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 225 Akunda's Bite##152507
-|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 300 Sea Stalk##152511
-|tip You get these by gathering from Sea Stalk plants that grow on ocean shores, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Alchemy Crafting Panel:
 _<Create 15 Flask of the Currents>_
@@ -140,18 +110,6 @@ step
 talk Clever Kumali##122703
 Train Flask of the Undertow (Rank 2) |learn Flask of the Undertow##252358 |goto 42.22,37.96
 step
-collect 150 Anchor Weed##152510
-|tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 300 Akunda's Bite##152507
-|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 450 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Alchemy Crafting Panel:
 _<Create 30 Flask of the Undertow>_
 Reach Level 145 Alchemy |skill Zandalari Alchemy,145
@@ -159,61 +117,12 @@ step
 talk Clever Kumali##122703
 Train Flask of the Currents (Rank 2) |learn Flask of the Currents##252349 |goto 42.22,37.96
 step
-collect 50 Anchor Weeds##152510
-|tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 100 Akunda's Bite##152507
-|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 150 Sea Stalk##152511
-|tip You get these by gathering from Sea Stalk plants that grow on ocean shores, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Alchemy Crafting Panel:
 _<Create 10 Flask of the Currents>_
 Reach Level 150 Alchemy |skill Zandalari Alchemy,150
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 800-950 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Archaeology profession from 700-800.",
-startlevel=100.0,
-condition_end=function() return skill('Archaeology')>=800 end,
-condition_suggested=function() return skill('Archaeology')>0 and skill('Archaeology')<800 and level>=100 end,
-},[[
-step
-Enter the building |goto Dazar'alor/0 49.93,42.11 < 7 |walk
-Follow the path |goto Dazar'alor/1 48.52,34.95 < 7 |only if walking
-Continue following the path |goto 39.21,35.51 < 5 |only if walking
-talk Examiner Alerinda##122701
-|tip She walks around this area.
-Learn Zandalari Archaeology |skillmax Zandalari Archaeology,150 |goto 28.05,23.11
-step
-talk Dariness the Learned##93538
-|tip She walks around inside this building.
-Learn the Archaeology Profession |condition skill("Archaeology")>=1 |goto Dalaran L/10 40.85,26.28
-step
-Dig in Digsites in the Broken Isles:
-|tip The digsites are random, and are shown as small shovel icons on the map.
-Kill Angry Spirits
-|tip They have a chance to spawn when you dig.
-collect Excavator's Notebook##136419 |n
-Use the Excavator's Notebook |use Excavator's Notebook##136419
-Learn Legion Archaeology |skillmax Archaeology,800
-step
-Dig in Digsites in the Broken Isles:
-|tip The digsites are random, and are shown as small shovel icons on the map.
-Kill Angry Spirits
-|tip They have a chance to spawn when you dig.
-Collect Archaeology Fragments
-collect Ancient Suramar Scroll##130903 |n
-_Open Your Achaeology Crafting Panel:_
-Solve Artifacts
-Reach Level 800 Archaeology |skill Archaeology,800
 step
 _Congratulations!_
-You reached level 800 with the Achaeology profession.
+You Reached 150 Zandalari Blacksmithing Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Blacksmithing\\Leveling Guides\\Zandalari Blacksmithing 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -226,9 +135,23 @@ step
 talk Forgemaster Zak'aal##127112
 Train Zandalari Blacksmithing |skillmax Zandalari Blacksmithing,150 |goto Dazar'alor/0 43.66,38.30
 step
-collect 140 Monelite Ore##152512
+collect 1249 Monelite Ore##152512
 |tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
 |tip You can also purchase them from the Auction House.
+step
+collect 2150 Storm Silver Ore##152579
+|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 300 Platinum Ore##152513
+|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+talk Forgemaster Zak'aal##127112
+buy 7 Durable Flux##160298 |goto 43.66,38.30
+step
+talk Forgemaster Zak'aal##127112
+buy 750 Elemental Flux##18567 |goto 43.66,38.30
 step
 Open Your Blacksmithing Crafting Panel:
 _<Create 15 Monel-Hardened Armguards>_
@@ -237,79 +160,56 @@ step
 talk Forgemaster Zak'aal##127112
 Train Monel-Hardened Waistguard |learn Monel-Hardened Waistguard##253180 |goto 43.66,38.30
 step
-collect 140 Monelite Ore##152512
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 10 Monel-Hardened Waistguard>_
-Reach Level 25 Blacksmithing |skill Zandalari Blacksmithing,25 |goto 43.55,38.31
+_<Create 13 Monel-Hardened Waistguard>_
+Reach Level 28 Blacksmithing |skill Zandalari Blacksmithing,28 |goto 43.55,38.31
 step
 talk Forgemaster Zak'aal##127112
 Train Monel-Hardened Greaves |learn Monel-Hardened Greaves##253174 |goto 43.66,38.30
 step
-talk Forgemaster Zak'aal##127112
-buy 10 Durable Flux##160298 |n
-collect 10 Durable Flux##160298 |goto 43.66,38.30
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 10 Monel-Hardened Greaves>_
+_<Create 7 Monel-Hardened Greaves>_
 Reach Level 35 Blacksmithing |skill Zandalari Blacksmithing,35 |goto 43.55,38.31
 step
 talk Forgemaster Zak'aal##127112
 Train Monel-Hardened Breastplate |learn Monel-Hardened Breastplate##253162 |goto 43.66,38.30
 step
-collect 720 Monelite Ore##152512
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
+Open Your Blacksmithing Crafting Panel:
+_<Create 15 Monel-Hardened Breastplate>_
+Reach Level 50 Blacksmithing |skill Zandalari Blacksmithing,50 |goto 43.55,38.31
+step
+talk Forgemaster Zak'aal##127112
+Train Monelite Skeleton Key |learn Monelite Skeleton Key##269064 |goto 43.66,38.30
 step
 Open Your Blacksmithing Crafting Panel:
-_<Create 40 Monel-Hardened Breastplate>_
-Reach Level 75 Blacksmithing |skill Zandalari Blacksmithing,75 |goto 43.55,38.31
+_<Create 20 Monelite Skeleton Key>_
+|tip You may need to craft a few more to reach level 60.
+Reach Level 60 Blacksmithing |skill Zandalari Blacksmithing,60 |goto 43.66,38.30
+step
+Open Your Blacksmithing Crafting Panel:
+_<Create 25 Monel-Hardened Breastplate>_
+|tip You may need to craft a few more to reach level 85.
+Reach Level 85 Blacksmithing |skill Zandalari Blacksmithing,85 |goto 43.55,38.31
 step
 talk Forgemaster Zak'aal##127112
 Train Honorable Combatant's Plate Armguards |learn Honorable Combatant's Plate Armguards##269451 |goto 43.66,38.30
 step
-talk Forgemaster Zak'aal##127112
-buy 200 Elemental Flux##18567 |n
-collect 200 Elemental Flux##18567 |goto 43.66,38.30
-step
-collect 750 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 25 Honorable Combatant's Plate Armguards>_
+_<Create 15 Honorable Combatant's Plate Armguards>_
 Reach Level 100 Blacksmithing |skill Zandalari Blacksmithing,100 |goto 43.55,38.31
 step
 talk Forgemaster Zak'aal##127112
 Train Honorable Combatant's Plate Boots |learn Honorable Combatant's Plate Boots##269424 |goto 43.66,38.30
 step
-talk Forgemaster Zak'aal##127112
-buy 65 Elemental Flux##18567 |n
-collect 65 Elemental Flux##18567 |goto 43.66,38.30
-step
-collect 200 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 5 Honorable Combatant's Plate Boots>_
-Reach Level 105 Blacksmithing |skill Zandalari Blacksmithing,105 |goto 43.55,38.31
+_<Create 10 Honorable Combatant's Plate Boots>_
+Reach Level 110 Blacksmithing |skill Zandalari Blacksmithing,110 |goto 43.55,38.31
 step
 talk Forgemaster Zak'aal##127112
 Train Honorable Combatant's Plate Greaves |learn Honorable Combatant's Plate Greaves##269444 |goto 43.66,38.30
 step
-talk Forgemaster Zak'aal##127112
-buy 300 Elemental Flux##18567 |n
-collect 300 Elemental Flux##18567 |goto 43.66,38.30
-step
-collect 1000 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 15 Honorable Combatant's Plate Greaves>_
+_<Create 10 Honorable Combatant's Plate Greaves>_
 Reach Level 120 Blacksmithing |skill Zandalari Blacksmithing,120 |goto 43.55,38.31
 step
 talk Forgemaster Zak'aal##127112
@@ -318,57 +218,27 @@ step
 talk Forgemaster Zak'aal##127112
 Train Stormsteel Dagger (Rank 2) |learn Stormsteel Dagger##253157 |goto 43.66,38.30
 step
-talk Forgemaster Zak'aal##127112
-buy 50 Elemental Flux##18567 |n
-collect 50 Elemental Flux##18567 |goto 43.66,38.30
+Reach Revered with The Honorbound |condition rep("The Honorbound") >= Revered
+|tip Use our "The Honorbound" reputation guide to accomplish this.
 step
-collect 100 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
+talk Ransa Greyfeather##135447
+buy 1 Recipe: Stormsteel Dagger##162275 |goto 58.06,62.65
 step
-collect 45 Platinum Ore##152513
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
+use Recipe: Stormsteel Dagger##162275
+Train Stormsteel Dagger (Rank 3) |learn Stormsteel Dagger##253158
 step
 click Shred-Master Mk1##293983
 |tip Use this device to destroy old gear and turn it into Expulsom.
 |tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 10 Expulsom##152668 |goto 45.03,39.93
+collect 50 Expulsom##152668 |goto 45.03,39.93
 step
 Open Your Blacksmithing Crafting Panel:
-_<Create 5 Stormsteel Dagger>_
-Reach Level 125 Blacksmithing |skill Zandalari Blacksmithing,125 |goto 43.55,38.31
-step
-talk Forgemaster Zak'aal##127112
-Train Stormsteel Girdle |learn Stormsteel Girdle##253190 |goto 43.66,38.30
-step
-talk Forgemaster Zak'aal##127112
-buy 125 Elemental Flux##18567 |n
-collect 125 Elemental Flux##18567 |goto 43.66,38.30
-stickystart "Collect_Expulsom"
-stickystart "Collect_Hydrocore"
-step
-collect 1000 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
-collect 450 Platinum Ore##152513
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
-label "Collect_Expulsom"
-click Shred-Master Mk1##293983
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 750 Expulsom##152668 |goto 45.03,39.93
-step
-label "Collect_Hydrocore"
-collect 375 Hydrocore##162460
-|tip These are dropped by the last boss of Mythic dungeons.
-step
-Open Your Blacksmithing Crafting Panel:
-_<Create 25 Stormsteel Girdle>_
+_<Create 50 Stormsteel Dagger>_
+|tip You may need to craft more or less of these to reach 150.
 Reach Level 150 Blacksmithing |skill Zandalari Blacksmithing,150 |goto 43.55,38.31
+step
+_Congratulations!_
+You Reached 150 Zandalari Blacksmithing Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Zandalari Cooking 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -378,12 +248,8 @@ condition_end=function() return skill('Zandalari Cooking')>=150 end,
 condition_suggested=function() return skill('Zandalari Cooking')>0 and skill('Zandalari Cooking')<150 and level>=110 end,
 },[[
 step
-Enter the building |goto Dazar'alor/0 49.93,42.14 < 7 |walk
-Run up the stairs |goto Dazar'alor/1 41.94,45.81 < 5 |walk
-Follow the path |goto Dazar'alor/2 40.86,61.80 < 5 |walk
-Continue following the path |goto 33.75,54.34 < 5 |walk
 talk T'sarah the Royal Chef##141549
-Learn Zandalari Cooking |skillmax Zandalari Cooking,150 |goto 28.45,50.0
+Learn Zandalari Cooking |skillmax Zandalari Cooking,150 |goto Dazar'alor/2 28.45,50.0
 step
 Load the "Aromatic Fish Oil" guide |confirm |next "Zygor's Profession Guides\\Fishing\\Farming Guides\\Aromatic Fish Oil"
 |tip Click the line above to load the guide.
@@ -393,12 +259,8 @@ collect 98 Aromatic Fish Oil##160711
 |tip You can also purchase them from the Auction House.
 |only if skill("Zandalari Cooking") < 50
 step
-Follow the path |goto Dazar'alor/2 33.77,54.32 < 5 |walk
-Run down the stairs |goto 41.08,56.82 < 5 |walk
-Leave the building |goto Dazar'alor/1 48.63,16.65 < 7 |walk
-Enter the building |goto Dazar'alor/0 52.54,88.08 < 7 |walk
 talk Ka'ro the Chopper##142325
-buy 245 Foosaka##160400 |goto 52.62,86.00
+buy 245 Foosaka##160400 |goto Dazar'alor/0 52.62,86.00
 |only if skill("Zandalari Cooking") < 50
 step
 talk Ka'ro the Chopper##142325
@@ -415,13 +277,8 @@ _<Create 34 Mon'Dazi>_
 |tip Be sure to save any Mon'Dazi you craft.
 Reach Level 35 Zandalari Cooking |skill Zandalari Cooking,35
 step
-Leave the building |goto Dazar'alor/0 52.54,88.08 < 7 |walk
-Enter the building |goto Dazar'alor/0 49.93,42.14 < 7 |walk
-Run up the stairs |goto Dazar'alor/1 41.94,45.81 < 5 |walk
-Follow the path |goto Dazar'alor/2 40.86,61.80 < 5 |walk
-Continue following the path |goto 33.75,54.34 < 5 |walk
 talk T'sarah the Royal Chef##141549
-Learn the Rank 2 Recipe for Mon'Dazi |learn Mon'Dazi##259443 |goto 28.45,50.0
+Learn the Rank 2 Recipe for Mon'Dazi |learn Mon'Dazi##259443 |goto Dazar'alor/2 28.45,50.0
 step
 _<Create a Cooking Fire>_
 Open Your Cooking Crafting Panel:
@@ -438,12 +295,8 @@ collect 600 Meaty Haunch##154898
 |tip You can also purchase them from the Auction House.
 |only if skill("Zandalari Cooking") < 110
 step
-Follow the path |goto Dazar'alor/2 33.77,54.32 < 5 |walk
-Run down the stairs |goto 41.08,56.82 < 5 |walk
-Leave the building |goto Dazar'alor/1 48.63,16.65 < 7 |walk
-Enter the building |goto Dazar'alor/0 52.54,88.08 < 7 |walk
 talk Ka'ro the Chopper##142325
-buy 300 Choral Honey##160398 |goto 52.62,86.00
+buy 300 Choral Honey##160398 |goto Dazar'alor/0 52.62,86.00
 |only if skill("Zandalari Cooking") < 110
 step
 _<Create a Cooking Fire>_
@@ -451,13 +304,8 @@ Open Your Cooking Crafting Panel:
 _<Create 40 Honey-Glazed Haunches>_
 Reach Level 90 Zandalari Cooking |skill Zandalari Cooking,90
 step
-Leave the building |goto Dazar'alor/0 52.54,88.08 < 7 |walk
-Enter the building |goto Dazar'alor/0 49.93,42.14 < 7 |walk
-Run up the stairs |goto Dazar'alor/1 41.94,45.81 < 5 |walk
-Follow the path |goto Dazar'alor/2 40.86,61.80 < 5 |walk
-Continue following the path |goto 33.75,54.34 < 5 |walk
 talk T'sarah the Royal Chef##141549
-Learn the Rank 2 Recipe for Honey-Glazed Haunches |learn Honey-Glazed Haunches##259415 |goto 28.45,50.0
+Learn the Rank 2 Recipe for Honey-Glazed Haunches |learn Honey-Glazed Haunches##259415 |goto Dazar'alor/2 28.45,50.0
 step
 talk T'sarah the Royal Chef##141549
 Learn the Recipe for Kul Tiramisu |learn Kul Tiramisu##259411 |goto 28.45,50.0
@@ -533,7 +381,7 @@ _<Create 40 Bountiful Captain's Feasts>_
 Reach Level 150 Zandalari Cooking |skill Zandalari Cooking,150
 step
 _Congratulations!_
-You reached level 150 with the Zandalari Cooking profession.
+You Reached 150 Zandalari Cooking Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Thick Paleo Steak",{
 author="support@zygorguides.com",
@@ -595,8 +443,6 @@ condition_suggested=function() return skill('Zandalari Enchanting')>0 and skill(
 },[[
 step
 Enter the building |goto Dazar'alor/0 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
@@ -605,33 +451,37 @@ step
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
-buy 150 Enchanting Vellum##38682 |n
-collect 150 Enchanting Vellum##38682 |goto 46.95,35.85
+buy 150 Enchanting Vellum##38682 |goto 46.95,35.85
 step
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
-buy Copper Rod##6217 |n
-collect Copper Rod##6217 |condition itemcount(6217) >= 1 or itemcount (6218) >= 1 |goto 46.95,35.85
+buy Copper Rod##6217 |goto 46.95,35.85 |only if itemcount(6218) == 0
 step
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
-buy Strange Dust##10940 |n
-collect Strange Dust##10940 |condition itemcount(10940) >= 1 or itemcount (6218) >= 1 |goto 46.95,35.85
+buy Strange Dust##10940 |goto 46.95,35.85 |only if itemcount(6218) == 0
 step
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
-buy Lesser Magic Essence##10938 |n
-collect Lesser Magic Essence##10938 |condition itemcount(10938) >= 1 or itemcount (6218) >= 1 |goto 46.95,35.85
+buy Lesser Magic Essence##10938 |goto 46.95,35.85 |only if itemcount(6218) == 0
 step
 Open Your Enchanting Crafting Panel:
 _<Create 1 Runed Copper Rod>_
 collect Runed Copper Rod##6218
 step
-collect 225 Gloom Dust##152875
+collect 2425 Gloom Dust##152875
 |tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 605 Umbra Shard##152876
+|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 385 Veiled Crystal##152877
+|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
@@ -645,146 +495,67 @@ _<Create 15 Seal of Versatility>_
 Reach Level 25 Enchanting |skill Zandalari Enchanting,25
 step
 Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
 Train Safe Hearthing |learn Safe Hearthing##271366 |goto 46.95,35.85
 step
-collect 50 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 10 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Enchanting Crafting Panel:
 _<Create 10 Safe Hearthing>_
-|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip Click your bracers place the selected enchantment on them.
+|tip Keep doing this, overwriting the existing enchant.
 Reach Level 35 Enchanting |skill Zandalari Enchanting,35
 step
-Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
 Train Seal of Versatility (Rank 2) |learn Seal of Versatility##255089 |goto 46.95,35.85
-step
-collect 50 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 5 Seal of Versatility>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 40 Enchanting |skill Zandalari Enchanting,40
 step
-Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
 Train Weapon Enchant - Gale-Force Striking |learn Weapon Enchant - Gale-Force Striking##255141 |goto 46.95,35.85
-step
-collect 400 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 100 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 20 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 20 Weapon Enchant - Gale-Force Striking>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 60 Enchanting |skill Zandalari Enchanting,60
 step
-Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
 Train Weapon Enchant - Deadly Navigation |learn Weapon Enchant - Deadly Navigation##268907 |goto 46.95,35.85
-step
-collect 300 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 120 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 15 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 15 Weapon Enchant - Deadly Navigation>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 75 Enchanting |skill Zandalari Enchanting,75
 step
-Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
 Train Pact of Critical Strike |learn Pact of Critical Strike##255075 |goto 46.95,35.85
-step
-collect 500 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 125 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 200 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 25 Pact of Critical Strike>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 100 Enchanting |skill Zandalari Enchanting,100
 step
-Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
 Train Pact of Critical Strike (Rank 2) |learn Pact of Critical Strike##255090 |goto 46.95,35.85
-step
-collect 450 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 100 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 125 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 25 Pact of Critical Strike>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 125 Enchanting |skill Zandalari Enchanting,125
 step
-Enter the building |goto 44.50,36.95 < 5 |walk
-Run down the ramp |goto 44.98,36.95 < 5 |walk
-Follow the path |goto 46.23,36.96 < 5 |walk
 talk Enchantress Quinni##122702
 |tip Inside the building.
 |tip She walks around this area.
@@ -795,22 +566,13 @@ talk Enchantress Quinni##122702
 |tip She walks around this area.
 Train Weapon Enchant - Quick Navigation (Rank 2) |learn Weapon Enchant - Quick Navigation##268895 |goto 46.95,35.85
 step
-collect 450 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 150 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 25 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Enchanting Crafting Panel:
 _<Create 25 Weapon Enchant - Quick Navigation>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 150 Enchanting |skill Zandalari Enchanting,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Enchanting Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Leveling Guides\\Zandalari Engineering 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -923,7 +685,7 @@ _<Create 15 AZ3-R1-T3 Bionic Bifocals>_
 Reach Level 150 Zandalari Engineering |skill Zandalari Engineering,150
 step
 _Congratulations!_
-You reached level 150 with the Zandalari Engineering profession.
+You Reached 150 Zandalari Engineering Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Zandalari Fishing 150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -944,7 +706,7 @@ Fish in the open water
 Reach Level 150 Zandalari Fishing |skill Zandalari Fishing,150 |goto 50.42,23.43
 step
 _Congratulations!_
-You reached level 150 with the Zandalari Fishing profession.
+You Reached 150 Zandalari Fishing Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Redtail Loach",{
 author="support@zygorguides.com",
@@ -952,34 +714,32 @@ description="This guide will walk you through farming Redtail Loach for various 
 startlevel=110.0,
 },[[
 step
-label "loop"
+label "Start"
 map Nazmir/0
-path follow smart; loop off; ants curved; dist 20
+path follow smart; loop off; ants curved; dist 30
 path	39.12,84.85	40.75,87.50	44.45,87.52	46.38,86.58	47.92,82.26
-path	52.34,80.48	55.22,81.01	55.99,77.68	55.27,75.45	57.93,76.83
-path	57.99,75.50	58.95,74.33	60.40,71.18	60.81,70.35	64.07,68.70
-path	65.11,63.06 	65.93,60.32	67.41,57.61	65.46,55.63
-Fish in Redtail Loach Schools
+path	52.34,80.48	55.22,81.01	55.99,77.68	58.95,74.33	60.40,71.18
+path	60.81,70.35	64.07,68.70	65.11,63.06 	65.93,60.32
+Fish in Great Sea Catfish Schools
 |tip They share spawn points with Great Sea Catfish School.
 |tip You will need fishing to gather from this path.
 |tip You may need water walking in order to farm from some of the pools.
-|tip They look like small circular swirling spots in the water along the river.
-collect Redtail Loach##152549 |n
-Click here to continue |confirm
+|tip They look like small circular swirling spots in the water along the coast.
+collect Great Sea Catfish##152547 |n
+'|goto Nazmir/0 65.93,60.32 < 30 |c |noway
 step
 map Nazmir/0
-path follow smart; loop off; ants curved; dist 20
-path	65.46,55.63	67.41,57.61	65.93,60.32	65.11,63.06	64.07,68.70
-path	60.81,70.35	60.40,71.18	58.95,74.33	57.99,75.50	57.93,76.83
-path	55.27,75.45	55.99,77.68	55.22,81.01	52.34,80.48	47.92,82.26
+path follow smart; loop off; ants curved; dist 30
+path	65.93,60.32	65.11,63.06	64.07,68.70	60.81,70.35	60.40,71.18
+path	58.95,74.33	55.99,77.68	55.22,81.01	52.34,80.48	47.92,82.26
 path	46.38,86.58	44.45,87.52	40.75,87.50	39.12,84.85
-Fish in Redtail Loach Schools
+Fish in Great Sea Catfish Schools
 |tip They share spawn points with Great Sea Catfish School.
 |tip You will need fishing to gather from this path.
 |tip You may need water walking in order to farm from some of the pools.
-|tip They look like small circular swirling spots in the water along the river.
-collect Redtail Loach##152549 |n
-Click here to continue |confirm |next "loop"
+|tip They look like small circular swirling spots in the water along the coast.
+collect Great Sea Catfish##152547 |n
+'|goto Nazmir/0 39.12,84.85 < 30 |c |noway |next "Start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Sand Shifter",{
 author="support@zygorguides.com",
@@ -1027,26 +787,24 @@ description="This guide will walk you through farming Great Sea Catfish for vari
 startlevel=110.0,
 },[[
 step
-label "loop"
+label "Start"
 map Nazmir/0
-path follow smart; loop off; ants curved; dist 20
+path follow smart; loop off; ants curved; dist 30
 path	39.12,84.85	40.75,87.50	44.45,87.52	46.38,86.58	47.92,82.26
-path	52.34,80.48	55.22,81.01	55.99,77.68	55.27,75.45	57.93,76.83
-path	57.99,75.50	58.95,74.33	60.40,71.18	60.81,70.35	64.07,68.70
-path	65.11,63.06 	65.93,60.32
+path	52.34,80.48	55.22,81.01	55.99,77.68	58.95,74.33	60.40,71.18
+path	60.81,70.35	64.07,68.70	65.11,63.06 	65.93,60.32
 Fish in Great Sea Catfish Schools
 |tip They share spawn points with Redtail Loach School.
 |tip You will need fishing to gather from this path.
 |tip You may need water walking in order to farm from some of the pools.
 |tip They look like small circular swirling spots in the water along the coast.
 collect Great Sea Catfish##152547 |n
-Click here to continue |confirm
+'|goto Nazmir/0 65.93,60.32 < 30 |c |noway
 step
 map Nazmir/0
-path follow smart; loop off; ants curved; dist 20
-path	65.46,55.63	67.41,57.61	65.93,60.32	65.11,63.06	64.07,68.70
-path	60.81,70.35	60.40,71.18	58.95,74.33	57.99,75.50	57.93,76.83
-path	55.27,75.45	55.99,77.68	55.22,81.01	52.34,80.48	47.92,82.26
+path follow smart; loop off; ants curved; dist 30
+path	65.93,60.32	65.11,63.06	64.07,68.70	60.81,70.35	60.40,71.18
+path	58.95,74.33	55.99,77.68	55.22,81.01	52.34,80.48	47.92,82.26
 path	46.38,86.58	44.45,87.52	40.75,87.50	39.12,84.85
 Fish in Great Sea Catfish Schools
 |tip They share spawn points with Redtail Loach School.
@@ -1054,7 +812,7 @@ Fish in Great Sea Catfish Schools
 |tip You may need water walking in order to farm from some of the pools.
 |tip They look like small circular swirling spots in the water along the coast.
 collect Great Sea Catfish##152547 |n
-Click here to continue |confirm |next "loop"
+'|goto Nazmir/0 39.12,84.85 < 30 |c |noway |next "Start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Tiragarde Perch",{
 author="support@zygorguides.com",
@@ -1126,6 +884,9 @@ path	75.35,41.09	76.63,41.97	77.74,43.01	79.72,43.00
 Click herbs as you follow the path around this area
 |tip Track them on your minimap with "Find Herbs".
 Reach Level 150 Herbalism |skill Zandalari Herbalism,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Herbalism Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Quest Guides\\Zandalari Herbalism Quest Line",{
 author="support@zygorguides.com",
@@ -1614,8 +1375,8 @@ step
 map Zuldazar/0
 path	follow smart; loop on; ants curved; dist 20
 path	70.56,64.15	71.41,65.42	72.20,65.36	73.23,66.61	73.80,65.36
-path	74.88,66.24	76.25,66.34	77.44,66.50	77.35,63.75
-path	75.76,64.34	74.96,63.20	73.08,63.26	72.06,62.91
+path	74.88,66.24	76.25,66.34	77.44,66.50	77.35,63.75	75.76,64.34
+path	74.96,63.20	73.08,63.26	72.06,62.91
 click Sea Stalk##
 |tip Track them on your minimap with "Find Herbs".
 collect Sea Stalk##152511 |n
@@ -1711,15 +1472,14 @@ path	58.55,25.49	59.14,24.60	58.52,23.26	58.62,21.68	58.95,21.21
 path	59.48,20.31	60.41,20.27	61.04,20.56	61.05,21.94	61.03,24.10
 path	61.58,24.56	62.36,24.45	62.99,23.80	63.49,23.68	64.05,23.77
 path	64.54,24.42	65.70,25.12	66.63,25.18	67.37,23.75	67.83,23.40
-path	68.54,23.34	68.82,21.99
-path	68.24,20.37	68.12,19.31	67.49,18.36	66.46,18.11	65.94,17.30
-path	65.11,18.00	64.25,18.18	63.40,18.49	62.76,18.29
-path	62.50,17.18	62.44,15.74	61.50,16.16	60.83,17.04	60.82,17.52
-path	60.50,18.43	59.90,19.26	58.91,18.81	57.67,19.79	56.80,19.71
-path	56.11,19.16	55.91,19.37	55.51,19.52	55.33,19.92	54.74,20.13
-path	54.36,20.47	54.08,19.83	53.78,19.57	53.53,19.83	52.65,20.71
-path	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27	52.89,22.81
-path	53.57,23.70	54.35,25.18	54.43,26.35
+path	68.54,23.34	68.82,21.99	68.24,20.37	68.12,19.31	67.49,18.36
+path	66.46,18.11	65.94,17.30	65.11,18.00	64.25,18.18	63.40,18.49
+path	62.76,18.29	62.50,17.18	62.44,15.74	61.50,16.16	60.83,17.04
+path	60.82,17.52	60.50,18.43	59.90,19.26	58.91,18.81	57.67,19.79
+path	56.80,19.71	56.11,19.16	55.91,19.37	55.51,19.52	55.33,19.92
+path	54.74,20.13	54.36,20.47	54.08,19.83	53.78,19.57	53.53,19.83
+path	52.65,20.71	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27
+path	52.89,22.81	53.57,23.70	54.35,25.18	54.43,26.35
 click Siren's Pollen
 |tip Track them on your minimap with "Find Herbs".
 |tip They grow on trees.
@@ -1875,6 +1635,9 @@ step
 Open Your Inscription Crafting Panel:
 _<Create 50 Darkmoon Card of War>_
 Reach Level 150 Inscription |skill Zandalari Inscription,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Inscription Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Jewelcrafting\\Leveling Guides\\Zandalari Jewelcrafting 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -2030,6 +1793,9 @@ step
 Open Your Jewelcrafting Crafting Panel:
 _<Create 25 Kraken's Eye of Agility>_
 Reach Level 150 Jewelcrafting |skill Zandalari Jewelcrafting,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Jewelcrafting Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Leatherworking\\Leveling Guides\\Zandalari Leatherworking 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -2043,11 +1809,11 @@ talk Xanjo##122698
 Train Zandalari Leatherworking |skillmax Zandalari Leatherworking,150 |goto Dazar'alor/0 44.07,34.63
 step
 collect 150 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
+|tip Use the "Coarse Leather" farming guide to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 collect 100 Blood-Stained Bone##154164
-|tip Use the "Blood-Stained Bone" farming guides to collect them, if you have Skinning.
+|tip Use the "Blood-Stained Bone" farming guides to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Leatherworking Crafting Panel:
@@ -2058,11 +1824,11 @@ talk Xanjo##122698
 Train Coarse Leather Pauldrons |learn Coarse Leather Pauldrons##256754 |goto 44.07,34.63
 step
 collect 200 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
+|tip Use the "Coarse Leather" farming guides to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 collect 150 Blood-Stained Bone##154164
-|tip Use the "Blood-Stained Bone" farming guides to collect them, if you have Skinning.
+|tip Use the "Blood-Stained Bone" farming guides to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Leatherworking Crafting Panel:
@@ -2070,104 +1836,36 @@ _<Create 25 Coarse Leather Pauldrons>_
 Reach Level 50 Leatherworking |skill Zandalari Leatherworking,50
 step
 talk Xanjo##122698
-Train Shimmerscale Diving Helmet |learn Shimmerscale Diving Helmet##256793 |goto 44.07,34.63
+Train Hardened Tempest Hide |learn Hardened Tempest Hide##272278 |goto 44.07,34.63
 step
-collect 125 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
+collect 95 Tempest Hide##154722
+|tip Use the "Tempest Hide" farming guide to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
-collect 250 Shimmerscale##153050
-|tip Use the "Shimmerscale" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
+talk Aman de Child##141609
+buy 95 Amber Tanning Oil##160059 |goto 43.97,33.51
 step
 Open Your Leatherworking Crafting Panel:
-_<Create 25 Shimmerscale Diving Helmet>_
-Reach Level 75 Leatherworking |skill Zandalari Leatherworking,75
+_<Create 95 Hardened Tempest Hide>_
+Reach Level 145 Leatherworking |skill Zandalari Leatherworking,145
 step
 talk Xanjo##122698
 Train Drums of the Maelstrom |learn Drums of the Maelstrom##256791 |goto 44.07,34.63
 step
-collect 250 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
+collect 100 Coarse Leather##152541
+|tip Use the "Coarse Leather" farming guide to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
-collect 100 Blood-Stained Bone##154164
-|tip Use the "Blood-Stained Bone" farming guides to collect them, if you have Skinning.
+collect 50 Blood-Stained Bone##154164
+|tip Use the "Blood-Stained Bone" farming guide to collect them if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Leatherworking Crafting Panel:
-_<Create 10 Drums of the Maelstrom>_
-Reach Level 85 Leatherworking |skill Zandalari Leatherworking,85
-step
-talk Xanjo##122698
-Train Honorable Combatant's Mail Armguards |learn Honorable Combatant's Mail Armguards##269543 |goto 44.07,34.63
-step
-collect 300 Mistscale##153051
-|tip Use the "Mistscale" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 180 Calcified Bone##154165
-|tip Use the "Calcified Bone" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-click Shred-Master Mk1##293983
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 30 Expulsom##152668 |goto 45.03,39.93
-step
-Open Your Leatherworking Crafting Panel:
-_<Create 15 Honorable Combatant's Mail Armguards>_
-Reach Level 100 Leatherworking |skill Zandalari Leatherworking,100
-step
-talk Xanjo##122698
-Train Hardened Tempest Knuckles (Rank 1) |learn Hardened Tempest Knuckles##256782 |goto 44.07,34.63
-step
-talk Xanjo##122698
-Train Hardened Tempest Knuckles (Rank 2) |learn Hardened Tempest Knuckles##256783 |goto 44.07,34.63
-step
-collect 390 Tempest Hide##154722
-|tip Use the "Tempest Hide" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 270 Calcified Bone##154165
-|tip Use the "Calcified Bone" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-click Shred-Master Mk1##293983
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 45 Expulsom##152668 |goto 45.03,39.93
-step
-Open Your Leatherworking Crafting Panel:
-_<Create 15 Hardened Tempest Knuckles>_
-Reach Level 115 Leatherworking |skill Zandalari Leatherworking,115
-step
-talk Xanjo##122698
-Train Hardened Tempest Boots |learn Hardened Tempest Boots##256765 |goto 44.07,34.63
-stickystart "Collect_Expulsom"
-stickystart "Collect_Hydrocore"
-step
-collect 630 Hardened Tempest Hide##152542
-|tip Use the "Hardened Tempest Hide" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 1400 Calcified Bone##154165
-|tip Use the "Calcified Bone" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-label "Collect_Expulsom"
-click Shred-Master Mk1##293983
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 1050 Expulsom##152668 |goto 45.03,39.93
-step
-label "Collect_Hydrocore"
-collect 525 Hydrocore##162460
-|tip These are dropped by the last boss of Mythic dungeons.
-step
-Open Your Leatherworking Crafting Panel:
-_<Create 35 Hardened Tempest Boots>_
+_<Create 5 Drums of the Maelstrom>_
 Reach Level 150 Leatherworking |skill Zandalari Leatherworking,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Leatherworking Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Mining\\Quest Guides\\Zandalari Mining Quest Line",{
 author="support@zygorguides.com",
@@ -3126,6 +2824,9 @@ path	55.54,76.21	53.66,77.68
 kill Razorjaw Chomper##123083+
 |tip Loot and skin them.
 Reach Level 150 Skinning |skill Zandalari Skinning,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Skinning Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Quest Guides\\Zandalari Skinning Quest Guide",{
 author="support@zygorguides.com",
@@ -3317,7 +3018,7 @@ path	54.55,52.05	54.53,54.26	55.37,55.61	56.52,55.94	57.73,57.66
 path	58.45,58.57	59.24,56.75	59.23,54.33	59.03,52.62	56.67,51.10
 Kill Coldtooth enemies around this area
 |tip Make sure you loot them so you can skin them after.
-collect Tempest Hide##154722  |n
+collect Tempest Hide##154722 |n
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Leveling Guides\\Zandalari Tailoring 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -3404,6 +3105,9 @@ step
 Open Your Tailoring Crafting Panel:
 _<Create 50 Battle Flag: Phalanx Defense>_
 Reach Level 150 Tailoring |skill Zandalari Tailoring,150
+step
+_Congratulations!_
+You Reached 150 Zandalari Tailoring Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Farming Guides\\Tidespray Linen",{
 author="support@zygorguides.com",
@@ -3417,6 +3121,7 @@ path	51.94,29.15	52.47,28.79	52.63,27.89	52.53,26.28	51.49,26.15
 path	51.07,26.49	50.33,26.19	49.64,25.26	49.10,25.05	48.79,26.35
 path	49.21,27.05	49.95,27.53	50.61,28.29
 Kill enemies around this area
+|tip Only humanoid mobs drop cloth.
 collect Tidespray Linen##152576 |n
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Farming Guides\\Deep Sea Satin",{
@@ -3431,6 +3136,7 @@ path	51.94,29.15	52.47,28.79	52.63,27.89	52.53,26.28	51.49,26.15
 path	51.07,26.49	50.33,26.19	49.64,25.26	49.10,25.05	48.79,26.35
 path	49.21,27.05	49.95,27.53	50.61,28.29
 Kill enemies around this area
+|tip Only humanoid mobs drop cloth.
 |tip These are a rare drop.
 collect Deep Sea Satin##152577 |n
 ]])

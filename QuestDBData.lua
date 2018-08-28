@@ -710,26 +710,6 @@ ZGV.Quest_Cache_Ally = {
 	{ids="41339,41272,41640,41670,41664,41312,41338,41658,41646,41676,41652,41292,41293,41316,41634"},
 	includes = {"Legion_World_Quest_Emissaries"},
 },
-["DAILIES\\Legion\\World Quests"] = {
-	{ids="42170",goal_onlyif=function() return ZGV.questsbyid[42170] and ZGV.questsbyid[42170].complete end},
-	{ids="46749",goal_onlyif=function() return havequest(46749) end},
-	{ids="44176",goal_onlyif=function() return havequest(44176) end},
-	{ids="42234",goal_onlyif=function() return ZGV.questsbyid[42234] and ZGV.questsbyid[42234].complete end},
-	{ids="46746",goal_onlyif=function() return havequest(46746) end},
-	{ids="42422",goal_onlyif=function() return ZGV.questsbyid[42422] and ZGV.questsbyid[42422].complete end},
-	{ids="42233",goal_onlyif=function() return ZGV.questsbyid[42233] and ZGV.questsbyid[42233].complete end},
-	{ids="42421",goal_onlyif=function() return ZGV.questsbyid[42421] and ZGV.questsbyid[42421].complete end},
-	{ids="48641",goal_onlyif=function() return ZGV.questsbyid[48641] and ZGV.questsbyid[48641].complete end},
-	{ids="46743",goal_onlyif=function() return havequest(46743) end},
-	{ids="46747",goal_onlyif=function() return havequest(46747) end},
-	{ids="42420",goal_onlyif=function() return ZGV.questsbyid[42420] and ZGV.questsbyid[42420].complete end},
-	{ids="46777",goal_onlyif=function() return havequest(46777) end},
-	{ids="46748",goal_onlyif=function() return havequest(46748) end},
-	{ids="43179",goal_onlyif=function() return ZGV.questsbyid[43179] and ZGV.questsbyid[43179].complete end},
-	{ids="46745",goal_onlyif=function() return havequest(46745) end},
-	{ids="41237,41634,41638,41642,41646,41650,41654,41277,41662,41666,41670,41293,41297,41313,41317,41206,41345,48338,48358,41635,41639,41643,41647,41651,41655,41659,41663,41667,41671,41675,41298,41302,41314,41318,41326,41207,41338,41223,41235,48359,41636,41640,41644,41267,41652,41656,41660,41664,41287,41672,41676,41680,41303,41311,41315,41327,41339,41351,41658,41240,48349,48360,41633,41637,41641,41645,41649,41653,41657,41661,41665,41288,41292,41677,48374,41674,41668,41312,41316,41673,41350,41282,41679,41669,43943,41344,41272,48337,41648,41678"},
-	includes = {"Toraan_the_Revered","Vindicator_Jaelaana_Paragon","Toraan_the_Revered_Paragon","Vindicator_Jaelaana"},
-},
 ["DAILIES\\Legion\\The Originals"] = {
 	{ids="47252,47253"},
 },
@@ -6699,8 +6679,9 @@ ZGV.Quest_Cache_Ally = {
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\War Campaign"] = {
 	{ids="53071",goal_onlyif=function() return havequest(53071) or completedq(53071) end},
+	{ids="53072",goal_onlyif=function() return havequest(53072) or completedq(53072) end},
 	{ids="53070",goal_onlyif=function() return havequest(53070) or completedq(53070) end},
-	{ids="52028,52032,52544,52040,52171,53453,49274,49282,49286,52219,51715,49060,52493,47925,52247,49969,52259,52029,52041,51918,53450,52204,49287,48025,51085,50331,52494,50466,52260,52496,52495,51139,52491,52026,52030,51145,52038,52042,51538,52490,52308,53074,47998,52489,49276,52158,49284,49288,52154,48026,49427,52203,52205,52173,47919,52241,52208,47587,52172,52156,52261,49428,52146,52654,52150,52027,51142,52035,52039,52170,47586,47706,53452,53583,47585,50044,47584,48473,49285,49289,47583,48479,51714,52480,53332,51091,52492,47924,52031,48014,51407,48015,52034,48478,48480,52147,48468,52036"},
+	{ids="52028,52032,52544,52040,52171,53453,49274,49282,49286,52219,51715,49060,52493,47925,52247,49969,52259,52029,52287,52291,52041,51918,52790,53450,52789,52788,52289,52288,52286,52204,49287,52290,48025,52285,52284,51085,52283,50331,52494,50466,52281,52282,52473,52260,52496,52495,51139,52491,52026,52030,51145,52038,52042,51538,52490,52308,53074,47998,52489,49276,52158,49284,49288,52154,48026,49427,52203,52205,52173,47919,52241,52208,47587,52172,52156,52261,49428,52146,52654,52150,52027,51142,52035,52039,52170,47586,47706,53452,53583,47585,50044,47584,48473,49285,49289,47583,48479,51714,52480,53332,51091,52492,47924,52031,48014,51407,48015,52034,48478,48480,52147,48468,52036"},
 	includes = {"Zuldazar_Foothold_Quests","Choose_Foothold_3","Choose_Foothold_2","Voldun_Foothold_Quests","Nazmir_Foothold_Quests","Choose_Foothold_1"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Veiled Grotto (Zuldazar)"] = {
@@ -6716,10 +6697,10 @@ ZGV.Quest_Cache_Ally = {
 	{ids="52851,52852"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Verdant Hollow (Zuldazar)"] = {
-	{ids="52886"},
+	{ids="52886,52888"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Vulture's Nest (Vol'dun)"] = {
-	{ids="53043"},
+	{ids="53043,53044"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment"] = {
 	{ids="50973,53405"},
@@ -11628,10 +11609,12 @@ ZGV.Quest_Cache_Horde = {
 	{ids="49334,50617,48585,47573,50641,50904,48872,48888,48896,49669,48657,50745,51773,48992,51056,51829,50817,48530,48554,49327,48315,48331,47319,47327,50913,48889,49662,51718,50746,50770,48993,49001,50539,51057,50818,48531,50834,48555,48324,48332,47320,51161,47870,50739,51775,50771,49002,48532,50596,47313,47321,51162,49138,47871,49664,51991,50979,50748,47959,48987,49003,51059,50812,48533,48549,48326,47314,47322,49139,49665,50980,47928,50749,49227,48988,48996,51060,47498,48534,51602,48550,48327,47315,47578,49040,51164,48330,48335,47873,49666,48334,50702,48840,48322,48715,50755,48320,50750,47638,47501,47502,47503,50535,51053,51061,47499,51717,48790,50328,48551,51364,47497,49340,47577,48846,47324,51810,51165,47576,49141,48894,49667,48655,50656,47581,47574,47965,47571,47570,50751,47943,51772,50775,50757,49261,51054,51062,49335,50550,48684,50536,51357,48314,49333,48321,47564,47317,47580,51668,48871,49005,48887,48895,49668,48656,47874,49437,51574,49676,47316,47939,50752,52129,48847,48991,47716,49262,51055,51573,50561,48529,49677,48850,48553,48313,50794"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\War Campaign"] = {
+	{ids="53066",goal_onlyif=function() return havequest(53066) or completedq(53066) end},
 	{ids="53065",goal_onlyif=function() return havequest(53065) or completedq(53065) end},
+	{ids="53067",goal_onlyif=function() return havequest(53067) or completedq(53067) end},
 	{ids="53050",goal_onlyif=function() return havequest(53050) or completedq(53050) end},
 	{ids="53056",goal_onlyif=function() return havequest(53056) or completedq(53056) end},
-	{ids="51601,52749,51789,51916,51788,51787,51597,51785,51770,51771,51784,53602,51599,51589,51590,53079,51592,51593,51594,51595,51596,53333,51598,52746,51786,51591"},
+	{ids="51818,52765,52767,52769,52773,51830,51771,53602,51590,51592,51594,51596,51598,51789,51797,52746,51805,52122,52978,53079,53333,52768,52770,52772,52774,52766,51770,52764,51837,51601,51589,51591,51593,51595,51786,51788,51916,51785,51597,51599,51798,51819,51787,52749,51784"},
 	includes = {"Stormsong_Valley_Foothold_Quests","Tiragarde_Sound_Foothold_Quests","Choose_Foothold_3","Choose_Foothold_2","Drustvar_Foothold_Quests","Choose_Foothold_1"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Swiftwind Post (Drustvar)"] = {
@@ -12737,6 +12720,12 @@ ZGV.Quest_Cache_Horde = {
 },
 ["ACHIEVEMENTS\\Quests\\Legion\\What a Ripoff!"] = {
 	{ids="39787,39789,39793,42483,39792,39786"},
+},
+["ACHIEVEMENTS\\Quests\\Battle for Azeroth\\A Bargain of Blood"] = {
+	{ids="47200,47258,47204,47199,47201,47229,47198,47205"},
+},
+["ACHIEVEMENTS\\Quests\\Battle for Azeroth\\The Final Seal"] = {
+	{ids="50954"},
 },
 ["Argent Tourney_Aspirant"] = {
 	{ids="13675",goal_onlyif=function() return not completedq(13675) end},
@@ -15723,26 +15712,6 @@ ZGV.Quest_Cache_Horde = {
 	{ids="41339,41272,41640,41670,41664,41312,41338,41658,41646,41676,41652,41292,41293,41316,41634"},
 	includes = {"Legion_World_Quest_Emissaries"},
 },
-["DAILIES\\Legion\\World Quests"] = {
-	{ids="42170",goal_onlyif=function() return ZGV.questsbyid[42170] and ZGV.questsbyid[42170].complete end},
-	{ids="46749",goal_onlyif=function() return havequest(46749) end},
-	{ids="44176",goal_onlyif=function() return havequest(44176) end},
-	{ids="42234",goal_onlyif=function() return ZGV.questsbyid[42234] and ZGV.questsbyid[42234].complete end},
-	{ids="46746",goal_onlyif=function() return havequest(46746) end},
-	{ids="42422",goal_onlyif=function() return ZGV.questsbyid[42422] and ZGV.questsbyid[42422].complete end},
-	{ids="42233",goal_onlyif=function() return ZGV.questsbyid[42233] and ZGV.questsbyid[42233].complete end},
-	{ids="42421",goal_onlyif=function() return ZGV.questsbyid[42421] and ZGV.questsbyid[42421].complete end},
-	{ids="48641",goal_onlyif=function() return ZGV.questsbyid[48641] and ZGV.questsbyid[48641].complete end},
-	{ids="46743",goal_onlyif=function() return havequest(46743) end},
-	{ids="46747",goal_onlyif=function() return havequest(46747) end},
-	{ids="42420",goal_onlyif=function() return ZGV.questsbyid[42420] and ZGV.questsbyid[42420].complete end},
-	{ids="46777",goal_onlyif=function() return havequest(46777) end},
-	{ids="46748",goal_onlyif=function() return havequest(46748) end},
-	{ids="43179",goal_onlyif=function() return ZGV.questsbyid[43179] and ZGV.questsbyid[43179].complete end},
-	{ids="46745",goal_onlyif=function() return havequest(46745) end},
-	{ids="41237,41634,41638,41642,41646,41650,41654,41277,41662,41666,41670,41293,41297,41313,41317,41206,41345,48338,48358,41635,41639,41643,41647,41651,41655,41659,41663,41667,41671,41675,41298,41302,41314,41318,41326,41207,41338,41223,41235,48359,41636,41640,41644,41267,41652,41656,41660,41664,41287,41672,41676,41680,41303,41311,41315,41327,41339,41351,41658,41240,48349,48360,41633,41637,41641,41645,41649,41653,41657,41661,41665,41288,41292,41677,48374,41674,41668,41312,41316,41673,41350,41282,41679,41669,43943,41344,41272,48337,41648,41678"},
-	includes = {"Toraan_the_Revered","Vindicator_Jaelaana_Paragon","Toraan_the_Revered_Paragon","Vindicator_Jaelaana"},
-},
 ["DAILIES\\Legion\\The Originals"] = {
 	{ids="47251,47254"},
 },
@@ -16476,7 +16445,7 @@ ZGV.Quest_Cache = {
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Tiragarde Sound World Quests"] = {
-	{ids="51050,52375,52377,52379,52383,52387,51017,51021,51023,51025,51027,51029,51031,51033,51035,51037,51043,50984,51049,51051,52378,52388,51024,51026,51028,51030,51032,51034,51036,51040,51042,51044,51046,51048,50983"},
+	{ids="51050,52375,52377,52379,52383,52387,52389,51017,52405,51021,51023,51025,51027,51029,51031,51033,51035,51037,51043,52368,50984,51049,51051,52378,52417,50998,52356,52388,52416,52392,52331,52333,52363,52340,52339,52404,52355,50992,51024,51026,51028,51030,51032,51034,51036,52423,51040,51042,51044,51046,51048,50983"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Vol'dun World Quests"] = {
@@ -16484,7 +16453,7 @@ ZGV.Quest_Cache = {
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Zuldazar World Quests"] = {
-	{ids="52394,51013,52398,51038"},
+	{ids="52394,51010,52398,52395,52425,51013,51038"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["GOLD\\Farming\\Gold Ore"] = {

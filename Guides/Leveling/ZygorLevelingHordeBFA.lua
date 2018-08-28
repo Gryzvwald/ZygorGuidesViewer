@@ -7200,6 +7200,226 @@ Reach #3000# Reputation into Honored with The Honorbound |condition repval('The 
 |tip Use the "BFA World Quests Guide" to complete "The Honorbound" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
 step
+talk Nathanos Blightcaller##135691
+turnin Operation: Water Wise##53066 |goto Zuldazar/0 58.44,62.67 |only if havequest(53066) or completedq(53066)
+accept Tracking Tidesages##51797 |goto Zuldazar/0 58.44,62.67
+step
+talk Dread-Admiral Tattersail##135690
+|tip At the top of the ship.
+Tell her _"Set sail for Stormsong Valley."_
+Speak with Tattersail to Sail to Stormsong Valley |q 51797/1 |goto 58.46,62.99
+step
+Follow the path up |goto Stormsong Valley/0 51.44,27.77 < 20 |only if walking
+Enter the building |goto Stormsong Valley/0 51.78,33.56 < 10 |walk
+talk Rexxar##138876
+|tip Inside the building.
+turnin Tracking Tidesages##51797 |goto Stormsong Valley/0 52.13,33.65
+accept No Price Too High##51798 |goto Stormsong Valley/0 52.13,33.65
+step
+Follow the path |goto 52.52,32.85 < 20 |only if walking
+talk Rexxar##139102
+Ask him _"Any clues on where we can find a tidesage?"_
+Watch the dialogue
+Help Rexxar Locate a Tidesage |q 51798/1 |goto 59.30,30.18
+step
+talk Thomas Zelling##139098
+Tell him _"I'm here to ask for your help, not to kill you."_
+Watch the dialogue
+Locate the Tidesage |q 51798/2 |goto 62.64,31.87
+step
+talk Lilian Voss##139101
+turnin No Price Too High##51798 |goto 62.65,31.95
+accept They Will Know Fear##51805 |goto 62.65,31.95
+step
+talk Thomas Zelling##139098
+accept Commander and Captain##51818 |goto 62.64,31.88
+step
+talk Rexxar##139102
+accept Scattering Our Enemies##51819 |goto 62.69,31.81
+stickystart "Terrorize_Civilians"
+step
+Follow the path up |goto 59.50,36.39 < 15 |only if walking
+Enter the building |goto 58.71,36.14 < 10 |walk
+kill Commander Augustine##139143
+|tip Inside the building.
+collect Book of Forbidden Magics##160745 |q 51818/2 |goto 58.24,35.52
+step
+Leave the building |goto 58.72,36.16 < 10 |walk
+kill Captain Malia##139133 |q 51818/1 |goto 62.69,39.54
+step
+label "Terrorize_Civilians"
+use the Val'kyr Horn##160901
+|tip Use it next to NPCs around this area.
+|tip Only the non-hostile ones will count for this quest goal.
+Terrorize #20# Civilians |q 51805/1 |goto 60.94,39.67
+step
+label "Slay_Alliance_And_Kul_Tiran_Forces"
+Kill enemies around this area
+Slay #10# Alliance and Kul Tiran Forces |q 51819/1 |goto 60.94,39.67
+step
+talk Rexxar##139102
+turnin Scattering Our Enemies##51819 |goto 62.68,31.82
+step
+talk Thomas Zelling##139098
+turnin Commander and Captain##51818 |goto 62.65,31.88
+step
+talk Lilian Voss##139101
+turnin They Will Know Fear##51805 |goto 62.65,31.94
+step
+talk Thomas Zelling##139098
+accept Zelling's Potential##51830 |goto 62.64,31.88
+step
+Kill enemies around this area
+Fill the Void Font within Port Fogtide |q 51830/1 |goto 67.01,40.77
+|tip It will appear as a blue bar on the screen.
+step
+Activate the Empowered Essence within Port Fogtide |q 51830/2 |goto 66.93,41.49
+|tip Use the "Activate Void Essence" ability.
+|tip It appears as a button on the screen.
+step
+Return to the Tidebreak Foothills |goto 64.76,38.20 < 30 |c |q 51830
+step
+talk Thomas Zelling##139098
+turnin Zelling's Potential##51830 |goto 62.64,31.87
+step
+talk Lilian Voss##139101
+accept Whatever Will Be##51837 |goto 62.65,31.94
+step
+talk Thomas Zelling##139098
+Tell him _"Zelling, we need you to locate Marshal Valentine's corpse for us."_
+Watch the dialogue
+Speak to Thomas Zelling |q 51837/1 |goto 62.64,31.88
+step
+talk Lilian Voss##139101
+turnin Whatever Will Be##51837 |goto 62.65,31.94
+accept To Be Forsaken##52122 |goto 62.65,31.94
+step
+talk Lilian Voss##139991
+Tell her _"Watch the encounter between Zelling and his family."_
+Watch the dialogue
+Find Thomas Zelling |q 52122/1 |goto 59.93,30.42
+step
+talk Nathanos Blightcaller##135691
+turnin To Be Forsaken##52122 |goto Zuldazar/0 58.44,62.67
+step
+Reach #7500# Reputation into Honored with The Honorbound |condition repval('The Honorbound','Honored')>=7500
+|tip Use the "BFA World Quests Guide" to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
+talk Nathanos Blightcaller##135691
+turnin Operation: Bottom Feeder##53067 |goto Zuldazar/0 58.44,62.67 |only if havequest(53067) or completedq(53067)
+accept Journey to the Middle of Nowhere##52764 |goto Zuldazar/0 58.44,62.67
+step
+talk Dread-Admiral Tattersail##135690
+|tip At the top of the ship.
+Tell her _"Take us to Marshal Valentine's shipwreck, in the middle of the Great Sea."_
+Speak with Tattersail to Sail to the Great Sea |q 52764/1 |goto 58.46,62.99
+step
+talk Nathanos Blightcaller##141644
+turnin Journey to the Middle of Nowhere##52764 |goto The Great Sea/0 40.29,67.27
+accept Deep Dive##52765 |goto The Great Sea/0 40.29,67.27
+step
+talk Hobart Grapplehammer##141645
+Tell him _"Yes, I'm paying attention."_
+Speak with Hobart to Dive into the Great Sea |q 52765/1 |goto 41.63,67.62
+step
+Reach the Ocean Floor |q 52765/2 |goto 41.40,68.24
+step
+Test Your Headlamp |q 52765/3 |goto 41.40,68.24
+|tip Use the "Headlamp" ability.
+|tip It appears as a button on the screen.
+step
+Click the Completed Quest Box:
+turnin Deep Dive##52765
+accept Seafloor Shipwreck##52766
+step
+Find the Shipwreck |q 52766/1 |goto 47.02,69.07
+step
+Click the Completed Quest Box:
+turnin Seafloor Shipwreck##52766
+accept Checking Dog Tags##52767
+step
+clicknpc Drowned Sailor##141672
+|tip Underwater.
+Find the Ship's Captain |q 52767/1 |goto 48.66,70.79
+step
+Click the Completed Quest Box:
+turnin Checking Dog Tags##52767
+accept The Sunken Graveyard##52768
+step
+Find Another Shipwreck |q 52768/1 |goto 54.81,51.15
+step
+Click the Completed Quest Box:
+turnin The Sunken Graveyard##52768
+accept Captain By Captain##52769
+stickystart "Accept_Biolumi_Nuisance"
+stickystart "Slay_Bioluminescent_Creatures"
+step
+clicknpc Drowned Sailor##141673
+|tip Floating higher up, near the top of the sunken ship mast.
+Identify the First Sea Captain |q 52769/1 |goto 54.50,49.66
+step
+clicknpc Drowned Sailor##141674
+Identify the Second Sea Captain |q 52769/2 |goto 56.44,45.03
+step
+clicknpc Drowned Sailor##141795
+Identify the Third Sea Captain |q 52769/3 |goto 66.52,42.29
+step
+Click the Completed Quest Box:
+turnin Captain By Captain##52769
+step
+label "Accept_Biolumi_Nuisance"
+accept Biolumi-Nuisance##52770
+|tip You will eventually automatically accept this quest.
+step
+label "Slay_Bioluminescent_Creatures"
+Kill enemies around this area
+Slay #10# Bioluminescent Creatures |q 52770/1 |goto 59.93,50.68
+|only if havequest(52770) or completedq(52770)
+step
+Click the Completed Quest Box:
+turnin Biolumi-Nuisance##52770
+accept The Undersea Ledge##52772
+step
+Find the Shipwreck on the Ledge |q 52772/1 |goto 68.42,54.26
+step
+Click the Completed Quest Box:
+turnin The Undersea Ledge##52772
+accept Water-Breathing Dragon##52773
+step
+kill Daenistrasz##141677 |q 52773/1 |goto 68.38,55.07
+step
+Click the Completed Quest Box:
+turnin Water-Breathing Dragon##52773
+accept Grab and Go##52774
+step
+clicknpc Drowned Sailor##141686
+Choose _<Gather Marshal Valentine's body.>_
+Gather Marshal M. Valentine's Body |q 52774/1 |goto 68.25,55.58
+step
+clicknpc Drowned Sailor##141687
+Choose _<Gather Derek Proudmoore's Body>_
+Gather the Other Sailor's Body |q 52774/2 |goto 68.71,55.95
+step
+talk Lilian Voss##141654
+|tip On the deck of the ship.
+|tip Click the Rope Ladder on the side of the boat to board the ship.
+|tip The Rope Ladder is at the surface of the water.
+accept Siege of Boralus##53121 |goto 41.56,66.49
+step
+talk Nathanos Blightcaller##141644
+|tip Downstairs inside the ship.
+turnin Grab and Go##52774 |goto 40.12,68.00
+accept With Prince in Tow##52978 |goto 40.12,68.00
+step
+talk Dread-Admiral Tattersail##141651
+|tip At the top of the ship.
+Tell her _"Let's return to Zuldazar."_
+Speak with Dread-Admiral Tattersail to Return |q 52978/1 |goto 39.91,68.30
+step
+talk Nathanos Blightcaller##135691
+turnin With Prince in Tow##52978 |goto Zuldazar/0 58.44,62.67
+step
 _Under Construction!_
 This guide will be updated to continue the War Campaign questline very soon.
 ]])
@@ -7216,7 +7436,7 @@ step
 Unlock World Quests |condition completedq(51916)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Honored Reputation with The Honorbound |condition rep('The Honorbound')==Honored
+Reach Honored Reputation with The Honorbound |condition rep('The Honorbound')>=Honored
 |tip Use the "World Quests" guides to complete "The Honorbound" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
 step
@@ -7267,7 +7487,7 @@ step
 Unlock World Quests |condition completedq(51916)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Honored Reputation with The Honorbound |condition rep('The Honorbound')==Honored
+Reach Honored Reputation with The Honorbound |condition rep('The Honorbound')>=Honored
 |tip Use the "World Quests" guides to complete "The Honorbound" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
 step
@@ -7316,7 +7536,7 @@ step
 Unlock World Quests |condition completedq(52450)
 |tip Use the War Campaign guide to accomplish this.
 step
-Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Friendly
+Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Friendly
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
 |tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
 step
@@ -7331,7 +7551,7 @@ step
 talk Magni Bronzebeard##130216
 turnin The Heart's Power##50973 |goto 42.22,44.27
 step
-Reach Honored Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Honored
+Reach Honored Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Honored
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
 |tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
 step
@@ -7346,7 +7566,7 @@ step
 talk Magni Bronzebeard##130216
 turnin Unlocking the Heart's Potential##53405 |goto 42.22,44.27
 step
-Reach Revered Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Revered
+Reach Revered Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Revered
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
 |tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
 step

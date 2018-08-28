@@ -291,23 +291,16 @@ step
 label "Intro_Scenario"
 Find General Hammond Clay |goto Ruins of Lordaeron/0 51.55,18.80 < 10 |q 51795
 step
-Follow the path |goto 49.10,27.11 < 7 |walk
-Continue following the path |goto 48.46,32.39 < 7 |only if walking
-Follow the path |goto 48.06,37.86 < 7 |only if walking
-Follow the path |goto 48.15,44.06 < 7 |only if walking
-Follow the path |goto 48.45,47.84 < 7 |only if walking
 Watch the dialogue
 |tip Follow General Hammond Clay as we walks.
 Follow Hammond Clay to Brill |scenariogoal 1/37049 |goto Ruins of Lordaeron/0 47.50,50.40 |q 51795
 step
-Follow the path |goto 48.39,48.24 < 7 |only if walking
 Find Genn Greymane |goto 46.96,51.07 < 10 |q 51795
 step
 Watch the dialogue
 |tip Follow Genn Greymane as he walks.
 Charge the Battlefield with Genn |scenariostage 1 |goto 48.13,53.51 |q 51795
 step
-Follow the path |goto 48.27,54.06 < 7 |only if walking
 kill Goblin Shredder##134015 |goto 48.35,57.60 |scenariobonus 2/39783 |q 51795
 step
 Kill enemies around this area
@@ -334,8 +327,6 @@ step
 Watch the dialogue
 Fall Back with King Anduin Wrynn |scenariostage 6 |q 51795
 step
-Follow the path |goto 42.13,71.48 < 7 |only if walking
-Continue following the path |goto 42.88,72.40 < 7 |only if walking
 Watch the dialogue
 Kill enemies around this area
 Assist Jaina |scenariogoal 7/37297 |goto 43.19,73.53 |q 51795
@@ -349,7 +340,7 @@ step
 kill Windseeker Durja##126612
 Defeat Durja |scenariostage 8 |goto 42.09,81.08 |q 51795
 step
-Follow the path |goto 42.11,81.46 < 7 |only if walking
+Follow the path |goto 42.11,81.46 < 10 |only if walking
 Watch the dialogue
 |tip Follow Anduin Wrynn as he walks.
 Follow King Anduin |scenariostage 9 |goto 42.63,85.96 |q 51795
@@ -366,7 +357,7 @@ step
 Watch the dialogue
 clicknpc Gnomish Gyrocopter##126795
 |tip They look like metal helicopters hovering low to the ground around this area.
-Ride in the Gnomish Gyrocopter |invehicle |goto 48.69,89.11 |q 51795
+Ride in the Gnomish Gyrocopter |invehicle |goto 49.02,88.72 |q 51795
 step
 Watch the dialogue
 Use the Gyrocopter to Pursue Sylvanas |scenariostage 12 |goto 48.62,72.66 |q 51795
@@ -377,12 +368,8 @@ kill High Overlord Saurfang##129179
 Watch the dialogue
 Confront High Overlord Saurfang |scenariostage 13 |goto 48.11,74.23 |q 51795
 step
-Cross the bridge |goto 48.09,74.78 < 7 |only if walking
-Follow the path |goto 48.29,75.69 < 7 |only if walking
-Enter the building |goto 48.71,76.64 < 5 |walk
-Run down the stairs |goto 48.50,77.29 < 5 |walk
-Follow the path |goto 48.09,77.65 < 5 |walk
 Watch the dialogue
+|tip Inside the building.
 |tip Follow Anduin Wrynn as he walks.
 Confront Sylvanas Windrunner |scenarioend |goto 48.10,78.26 |q 51795
 step
@@ -396,7 +383,7 @@ step
 click Portal to Uldum
 Take the Portal to Uldum to Get Closer to Silithus |q 52946/1 |goto 75.24,20.49
 step
-Reach Silithus |q 52946/2 |goto Silithus/0 79.39,73.20
+Reach Silithus |q 52946/2 |goto Silithus/0 42.22,44.27
 step
 talk Magni Bronzebeard##142322
 turnin A Dying World##52946 |goto 42.22,44.27
@@ -407,8 +394,6 @@ Use the Device in Silithus to Travel to the Chamber of the Heart |q 51211/1 |got
 step
 Travel to the Chamber of Heart |goto Chamber Of Heart/0 50.12,30.35 < 10 |noway |c |q 51211
 step
-Run up the stairs |goto 50.28,43.78 < 5 |walk
-Follow the path |goto 50.25,48.90 < 5 |walk
 click Titan Console
 |tip Inside the building.
 Choose _(View events that led to Azeroth's wound)_
@@ -444,7 +429,6 @@ talk Magni Bronzebeard##136907
 turnin Infusing the Heart##52428 |goto 50.14,53.75
 accept To Matters at Hand##51403 |goto 50.14,53.75
 step
-Follow the path |goto 50.57,48.70 < 5 |walk
 click Teleport Pad
 |tip Inside the building.
 Return to Stormwind |q 51403/1 |goto goto 50.12,30.40
@@ -453,7 +437,7 @@ talk Halford Wyrmbane##142930
 turnin The Speaker's Imperative##51403 |goto Stormwind City/0 27.64,21.29
 accept Tides of War##46727 |goto Stormwind City/0 27.64,21.29
 step
-Enter the building |goto 80.62,37.86 < 5 |walk
+Enter the building |goto 80.62,37.86 < 10 |walk
 Watch the dialogue
 |tip Inside the building.
 Attend the War Council |q 46727/1 |goto 85.04,32.65
@@ -468,8 +452,7 @@ talk Anduin Wrynn##120756
 turnin Tides of War##46727 |goto 85.30,32.28
 accept The Nation of Kul Tiras##46728 |goto 85.30,32.28
 step
-Follow the path |goto 83.83,34.05 < 5 |walk
-Leave the building |goto 80.66,37.83 < 3 |walk
+Leave the building |goto 80.66,37.83 < 10 |walk
 talk Lady Jaina Proudmoore##120590 |goto 22.80,24.69
 Tell her _"I'm ready to set sail!"_
 Speak with Lady Jaina Proudmoore |goto Boralus/0 65.57,50.74 < 50 |noway |c |q 46728 |or |next "Kul_Tiras_Intro_Quests"
@@ -5077,7 +5060,7 @@ step
 label "Destroy_Heartsbane_Objects"
 click Heartsbane Object+
 |tip They look like various objects with Heartsbane names on the ground, and hanging from trees and buildings around this area.
-Destroy #12# Heartsbane Objects |q 49805/1 |goto 37.88,50.37
+Destroy #12# Heartsbane Objects |q 49805/2 |goto 37.88,50.37
 step
 Run up the stairs |goto 37.26,50.22 < 5 |only if walking
 Enter the building |goto 37.13,50.19 < 3 |walk
@@ -11414,14 +11397,218 @@ step
 talk Halford Wyrmbane##135612
 turnin A Clean Escape##52496 |goto Boralus/0 69.27,26.99
 step
-Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')>=Revered
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
-|confirm
+talk Halford Wyrmbane##135612
+turnin Operation: Heartstrike##53072 |goto Boralus/0 69.27,26.98 |only if havequest(53072) or completedq(53072)
+accept Bringing Down the Fleet##52473 |goto Boralus/0 69.27,26.98
 step
-_Under Construction!_
-This guide will be updated to continue the War Campaign questline very soon.
+talk Grand Admiral Jes-Tereth##135681
+|tip At the top of the ship.
+Tell her _"Set sail for Zuldazar."_
+Speak with Jes-Tereth to sail to Zuldazar |q 52473/1 |goto 67.95,26.70
+step
+talk Halford Wyrmbane##140257
+turnin Bringing Down the Fleet##52473 |goto Zuldazar/0 40.77,70.85
+accept How to Sink a Zandalari Battleship##52282 |goto Zuldazar/0 40.77,70.85
+step
+talk Halford Wyrmbane##140257
+Tell him _"Let's discuss our plan to weaken the Zandalari fleet."_
+Watch the dialogue
+Discuss the Plan |q 52282/1 |goto 40.77,70.85
+step
+talk Halford Wyrmbane##140257
+turnin How to Sink a Zandalari Battleship##52282 |goto 40.77,70.85
+step
+talk Falstad Wildhammer##141287
+accept Under the Cover of Swiftwing##52281 |goto 40.80,70.90
+step
+clicknpc Swiftwing##141301
+Begin Riding to the Isle of Fangs |invehicle |goto 40.85,70.92 |q 52281
+step
+Watch the dialogue
+Ride Swiftwing to Isle of Fangs |q 52281/1 |goto 57.68,87.50 |notravel
+step
+talk Kelsey Steelspark##141290
+turnin Under the Cover of Swiftwing##52281 |goto 57.64,87.59
+accept Ship Logs##52284 |goto 57.64,87.59
+step
+talk John J. Keeshan##141289
+accept Sabotaging the Pa'ku##52283 |goto 57.64,87.55
+stickystart "Collect_Naval_Records"
+step
+Follow the path |goto 54.93,85.70 < 30 |only if walking
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52283/1 |goto 51.56,86.74 |count 1
+step
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52283/1 |goto 51.94,86.86 |count 2
+step
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52283/1 |goto 51.90,87.46 |count 3
+step
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52283/1 |goto 51.51,86.98 |count 4
+step
+label "Collect_Naval_Records"
+use Kelsey's Jump Boots##162264
+|tip You can use them to jump up to help navigate this area.
+Kill enemies around this area
+collect 6 Naval Records##162253 |q 52284/1 |goto 53.15,87.10
+step
+Follow the path |goto 54.96,85.83 < 30 |only if walking
+talk John J. Keeshan##141289
+turnin Sabotaging the Pa'ku##52283 |goto 57.64,87.55
+step
+talk Kelsey Steelspark##141290
+turnin Ship Logs##52284 |goto 57.64,87.59
+accept The Enlarged Miniaturized Submarine##52285 |goto 57.64,87.59
+step
+click Enlarged Miniaturized Submarine
+Beginning Crossing the Bay of Kings |invehicle |goto 57.42,85.92 |q 52285
+step
+Watch the dialogue
+Cross the Bay of Kings in the Enlarged Miniaturized Submarine |q 52285/1 |goto 49.51,70.46 |notravel
+step
+talk Shandris Feathermoon##141291
+turnin The Enlarged Miniaturized Submarine##52285 |goto 48.89,68.55
+accept My Enemy's Enemy is My Disguise##52290 |goto 48.89,68.55
+step
+talk Magister Umbric##141288
+Tell him _"Umbric, I'm ready to become a blood troll."_
+Watch the dialogue
+Complete the Blood Troll Disguise |q 52290/1 |goto 48.90,68.58
+step
+talk Shandris Feathermoon##141291
+turnin My Enemy's Enemy is My Disguise##52290 |goto 48.88,68.55
+accept Right Beneath Their Nose##52286 |goto 48.88,68.55
+accept Intelligence Denial##52287 |goto 48.88,68.55
+step
+talk Magister Umbric##141288
+accept Void Vacation##52288 |goto 48.91,68.58
+step
+Become Invisible |havebuff 132320 |goto 48.91,68.58 |q 52286
+|tip Use the "Flask of Invisibility" ability.
+|tip It appears as a button on the screen.
+stickystart "Throw_Horde_Emissaries_In_Void_Rifts"
+step
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52286/1 |goto 50.31,65.81 |count 1
+step
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52286/1 |goto 50.63,65.05 |count 2
+step
+click Remote-Detonation Deathbomb
+|tip Underwater.
+Plant the Remote-Detonation Deathbomb |q 52286/1 |goto 49.96,65.02 |count 3
+step
+Run up the stairs |goto 48.63,66.31 < 15 |only if walking
+Run up the stairs |goto 47.88,66.65 < 15 |only if walking
+kill Spymaster Stormhorn##141530 |q 52287/1 |goto 47.56,66.86
+|tip Avoid Trained Sabertusks, they can see through your disguise.
+step
+Become Invisible |havebuff 132320 |goto 47.56,66.86 |q 52287
+|tip Use the "Flask of Invisibility" ability.
+|tip It appears as a button on the screen.
+step
+Run down the stairs |goto 47.87,67.25 < 15 |only if walking
+Run up the stairs |goto 46.86,62.60 < 15 |only if walking
+Enter the building |goto 45.96,62.12 < 10 |walk
+kill Spymaster Bloodsnarl##141533 |q 52287/2 |goto 45.83,62.11
+|tip Inside the building.
+|tip Avoid Trained Sabertusks, they can see through your disguise.
+step
+Become Invisible |havebuff 132320 |goto 45.83,62.11 |q 52287
+|tip Use the "Flask of Invisibility" ability.
+|tip It appears as a button on the screen.
+step
+Run up the stairs |goto 46.45,61.68 < 15 |only if walking
+Enter the building |goto 46.33,60.14 < 10 |walk
+kill Spymaster Bilespreader##141535 |q 52287/3 |goto 46.33,59.94
+|tip Inside the building.
+|tip Avoid Trained Sabertusks, they can see through your disguise.
+step
+Become Invisible |havebuff 132320 |goto 46.33,59.94 |q 52287
+|tip Use the "Flask of Invisibility" ability.
+|tip It appears as a button on the screen.
+step
+label "Throw_Horde_Emissaries_In_Void_Rifts"
+use the Portal Orb##162450
+|tip Use it on Horde Emissaries around this area.
+Throw #5# Horde Emissaries in Void Rifts |q 52288/1 |goto 47.40,64.08
+step
+talk Shandris Feathermoon##141291
+turnin Right Beneath Their Nose##52286 |goto 48.89,68.56
+turnin Intelligence Denial##52287 |goto 48.89,68.56
+step
+talk Magister Umbric##141288
+turnin Void Vacation##52288 |goto 48.90,68.58
+step
+talk Shandris Feathermoon##141291
+accept Victory is Assured##52289 |goto 48.88,68.55
+step
+talk Halford Wyrmbane##140257
+turnin Victory is Assured##52289 |goto 40.47,71.49
+accept Victory Was Assured##52291 |goto 40.47,71.49
+step
+clicknpc Swiftwing##141611
+Begin Riding to Gral's Call |invehicle |goto 40.52,71.33 |q 52291
+step
+Watch the dialogue
+Ride Swiftwing to Gral's Call |q 52291/1 |goto 35.10,77.32 |notravel
+step
+talk Halford Wyrmbane##141719
+turnin Victory Was Assured##52291 |goto 35.14,77.31
+accept Leave None Alive##52788 |goto 35.14,77.31
+step
+Kill Zandalari enemies around this area
+Slay #10# Zandalari |q 52788/1 |goto 34.70,76.51
+step
+_Next to you:_
+talk Halford Wyrmbane
+turnin Leave None Alive##52788
+accept Silencing the Advisor##52789
+step
+kill Advisor Ko'jan##141717 |q 52789/1 |goto 34.98,77.03
+|tip All the way downstairs inside the ship.
+step
+_Next to you:_
+talk Halford Wyrmbane
+turnin Silencing the Advisor##52789
+accept An End to the Killing##52790
+step
+Travel to Gral's Call Upper Deck |q 52790/1 |goto 34.70,76.77
+|tip Upstairs on the deck of the ship.
+step
+talk Shandris Feathermoon##141291
+Ask her _"Shandris, can you give me a status report?"_
+Watch the dialogue
+Assess the Situation with Shandris Feathermoon |q 52790/2 |goto 34.83,76.33
+step
+talk Halford Wyrmbane##140257
+Tell him _"Halford, let's behin the process to blow up this ship."_
+Watch the dialogue
+Tell Halford to Blow Up the Ship |q 52790/3 |goto 34.84,76.41
+step
+Enter the building |goto Stormwind City/0 80.65,37.84 < 15 |walk
+talk Anduin Wrynn##107574
+|tip Inside the building.
+turnin An End to the Killing##52790 |goto Stormwind City/0 85.92,31.57
+step
+talk Shandris Feathermoon##141291
+|tip Inside the building.
+accept Champion: Shandris Feathermoon##53098 |goto 85.51,31.87
+step
+_Congratulations!_
+You completed the War Campaign.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Veiled Grotto (Zuldazar)",{
 author="support@zygorguides.com",
@@ -11436,7 +11623,7 @@ step
 Unlock World Quests |condition completedq(51918)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Honored Reputation with the 7th Legion |condition rep('7th Legion')==Honored
+Reach Honored Reputation with the 7th Legion |condition rep('7th Legion')>=Honored
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
@@ -11493,7 +11680,7 @@ step
 Unlock World Quests |condition completedq(51918)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Honored Reputation with the 7th Legion |condition rep('7th Legion')==Honored
+Reach Honored Reputation with the 7th Legion |condition rep('7th Legion')>=Honored
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
@@ -11542,7 +11729,7 @@ step
 Unlock World Quests |condition completedq(51918)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')>=Revered
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
@@ -11593,7 +11780,7 @@ step
 Unlock World Quests |condition completedq(51918)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')>=Revered
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
@@ -11641,7 +11828,7 @@ step
 Unlock World Quests |condition completedq(51918)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')>=Revered
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
@@ -11663,7 +11850,18 @@ talk Halford Wyrmbane##135612
 turnin Mission Report: Verdant Hollow##52886 |goto 69.28,27.00
 accept Verdant Hollow##52888 |goto 69.28,27.00
 step
-|confirm
+Cross the bridge |goto Zuldazar/0 59.40,22.88 < 15 |only if walking
+Follow the road up |goto Zuldazar/0 59.06,24.75 < 20 |only if walking
+click Alliance Banner
+Claim the Outpost |q 52888/1 |goto Zuldazar/0 55.23,25.25
+step
+talk Kina Cobbleflame##136074
+fpath Verdant Hollow |goto 55.65,24.85
+step
+Enter the cave |goto 55.19,25.34 < 15 |walk
+talk Argrim Stonedeep##142101
+|tip Inside the cave.
+turnin Verdant Hollow##52888 |goto 54.87,25.56
 step
 _Congratulations!_
 You unlocked the Verdant Hollow outpost in Zuldazar.
@@ -11681,7 +11879,7 @@ step
 Unlock World Quests |condition completedq(51918)
 |tip Use the "War Campaign" guide to accomplish this.
 step
-Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')==Revered
+Reach Revered Reputation with the 7th Legion |condition rep('7th Legion')>=Revered
 |tip Use the "World Quests" guides to complete "7th Legion" world quests.
 |tip Complete the weekly Island Expeditions quest "Azerite for the Alliance".
 step
@@ -11703,7 +11901,19 @@ talk Halford Wyrmbane##135612
 turnin Mission Report: Vulture's Nest##53043 |goto 69.27,27.00
 accept Vulture's Nest##53044 |goto 69.27,27.00
 step
-|confirm
+Follow the path |goto Vol'dun/0 61.94,27.24 < 30 |only if walking
+Follow the path |goto Vol'dun/0 60.12,34.54 < 15 |only if walking
+Follow the path up |goto Vol'dun/0 54.91,36.69 < 20 |only if walking
+Follow the path up |goto Vol'dun/0 53.32,35.46 < 20 |only if walking
+Follow the path up |goto Vol'dun/0 52.69,36.25 < 15 |only if walking
+click Alliance Banner
+Claim the Outpost |q 53044/1 |goto Vol'dun/0 53.76,37.78
+step
+talk Buzz Crankchug##138256
+fpath Vulture's Nest |goto 53.60,37.67
+step
+talk Hilda Hammerfast##142555
+turnin Vulture's Nest##53044 |goto 53.71,37.72
 step
 _Congratulations!_
 You unlocked the Vulture's Nest outpost in Vol'dun.
@@ -11721,7 +11931,7 @@ step
 Unlock World Quests |condition completedq(52450)
 |tip Use the War Campaign guide to accomplish this.
 step
-Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Friendly
+Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Friendly
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
 |tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
 step
@@ -11736,7 +11946,7 @@ step
 talk Magni Bronzebeard##130216
 turnin The Heart's Power##50973 |goto 42.22,44.27
 step
-Reach Honored Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Honored
+Reach Honored Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Honored
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
 |tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
 step
@@ -11751,7 +11961,7 @@ step
 talk Magni Bronzebeard##130216
 turnin Unlocking the Heart's Potential##53405 |goto 42.22,44.27
 step
-Reach Revered Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')==Revered
+Reach Revered Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Revered
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
 |tip Complete Missions at your mission table that reward reputation with the Champions of Azeroth.
 step

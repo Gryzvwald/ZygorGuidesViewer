@@ -453,7 +453,7 @@ function Node:CanFlyTo(dest,debug)
 	-- is flight even possible for the player? check so late because it's costly.
 	-- or is it...
 	local flyspeed = flightinzone[m]
-	if not flyspeed then return false,debug and "player can't fly in "..m end
+	if not flyspeed then return false,debug and "player can't fly in here" end
 
 	local dest_c = dest.c
 

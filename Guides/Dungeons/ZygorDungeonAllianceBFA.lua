@@ -10,6 +10,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","priestess","alun'za","Vol'kaal","rezan","yazma","zuldazar","Atal'Dazar"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nPriestess Alun'za\nVol'kaal\nRezan\nYazma",
+image=ZGV.DIR.."\\Guides\\Images\\AtalDazar",
 },[[
 step
 Press _I_ and Queue for Atal'Dazar or Enter the Dungeon with your Group |goto Atal'Dazar/0 0.00,0.00 < 1000
@@ -74,6 +75,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle", "for", "azeroth", "skycap'n", "kragg", "captain", "eudora", "jolly", "raoul", "trothak", "harlan", "sweete", "tiragarde", "sound"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nSkycap'n Kragg\nCouncil o' Captains\nRing of Booty\nHarlan Sweete",
+image=ZGV.DIR.."\\Guides\\Images\\Freehold",
 },[[
 step
 Press _I_ and Queue for Freehold or Enter the Dungeon with your Group |goto Freehold/0 0.00,0.00 < 1000
@@ -128,6 +130,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","zuldazar","king's","rest","the","golden","serpent","mchimba","embalmer","council","of","tribes","dazar","first"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nThe Golden Serpent\nMchimba the Embalmer\nThe Council of Tribes\nKing Dazar",
+image=ZGV.DIR.."\\Guides\\Images\\KingsRest",
 },[[
 step
 Press _I_ and Queue for King's Rest or Enter the Dungeon with your Group |goto King's Rest/0 0.00,0.00 < 1000
@@ -202,6 +205,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","zuldazar","the","motherlode!!","coin","operated","crowd","pummeler","azerokk","rixxa","fluxflame","mogul","razdunk"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nCoin-Operated Crowd Pummeler\nAzerokk\nRixxa Fluxflame\nMogul Razdunk",
+image=ZGV.DIR.."\\Guides\\Images\\TheMotherlode",
 },[[
 step
 Press _I_ and Queue for The MOTHERLODE!! or Enter the Dungeon with your Group |goto King's Rest/0 0.00,0.00 < 1000
@@ -257,6 +261,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","stormsong","valley","aqu'sirr","tidesage","council","lord","vol'zith","whisperer"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nAqu'sirr\nTidesage Council\nLord Stormsong\nVol'zith the Whisperer",
+image=ZGV.DIR.."\\Guides\\Images\\ShrineoftheStorm",
 },[[
 step
 Press _I_ and Queue for Shrine of the Storm or Enter the Dungeon with your Group |goto Shrine of the Storm/0 45.50,7.97 < 1000
@@ -327,6 +332,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","tiragarde","sound","chopper","redhook","dread","captain","lockwood","hadal","darkfathom","viq'goth"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nChopper Redhook\nDread Captain Lockwood\nHadal Darkfathom\nViq'Goth",
+image=ZGV.DIR.."\\Guides\\Images\\SiegeofBoralus",
 },[[
 step
 Press _I_ and Queue for the Siege of Boralus or Enter the Dungeon with your Group |goto Tiragarde Sound/0 75.57,24.81 < 1000
@@ -384,6 +390,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","Adderis","and","Aspix","Merektha","Galvazzt","Avatar","Vol'dun"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nAdderis and Aspix\nMerektha\nGalvazzt\nAvatar of Sethraliss",
+image=ZGV.DIR.."\\Guides\\Images\\TempleofSethraliss",
 },[[
 step
 Press _I_ and Queue for the Temple of Sethraliss or Enter the Dungeon with your Group |goto Temple of Sethraliss/0 0.00,0.00 < 1000
@@ -455,6 +462,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","tiragarde","sound","The","Sand","Queen","Howlis","Jes","Valyri","Captain","Knight","Overseer","Korgus"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nThe Sand Queen\nJes Howlis\nKnight Captain Valyri\nOverseer Korgus",
+image=ZGV.DIR.."\\Guides\\Images\\TolDagor",
 },[[
 step
 Press _I_ and Queue for Tol Dagor or Enter the Dungeon with your Group |goto Tol Dagor/0 0.00,0.00 < 1000
@@ -505,6 +513,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","nazmir","Elder","Leaxa","Cragmaw","Infested","Sporecaller","Zancha","Abomination","Unbound"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nElder Leaxa\nCragmaw the Infested\nSporecaller Zancha\nUnbound Abomination",
+image=ZGV.DIR.."\\Guides\\Images\\TheUnderrot",
 },[[
 step
 Press _I_ and Queue for The Underrot or Enter the Dungeon with your Group |goto The Underrot/0 0.00,0.00 < 1000
@@ -562,6 +571,7 @@ condition_suggested=function() return level>=110 and level<=120 end,
 keywords={"battle","for","azeroth","heartsbane","triad","soulbound","goliath","raal","the","gluttonous","lady","lord","gorak","tul","drustvar"},
 author="support@zygorguides.com",
 description="To complete this dungeon, you will need to kill the following bosses:\n\nHeartsbane Triad\nSoulbound Goliath\nRaal the Gluttonous\nLord and Lady Waycrest\nGorak Tul",
+image=ZGV.DIR.."\\Guides\\Images\\WaycrestManor",
 },[[
 step
 Press _I_ and Queue for Waycrest Manor or Enter the Dungeon with your Group |goto Waycrest Manor/0 0.00,0.00 < 1000

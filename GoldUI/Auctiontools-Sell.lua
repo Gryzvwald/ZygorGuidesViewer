@@ -494,6 +494,7 @@ function Appraiser:UpdateStackFields()
 	self.Inventory_Frame.stacksize:SetText(self.ActiveSellingItem.stacksize)
 	self.Inventory_Frame.stackcount:SetText(self.ActiveSellingItem.stackcount)
 	self.needToRetooltip=true
+	Appraiser:UpdateAuctionCost(self.ActiveSellingItem.stacksize,self.ActiveSellingItem.stackcount)
 end
 
 function Appraiser:UpdateStackCountsFromFields()
@@ -501,6 +502,7 @@ function Appraiser:UpdateStackCountsFromFields()
 	Appraiser.ActiveSellingItem.stackcount = tonumber(Appraiser.Inventory_Frame.stackcount:GetText()) or 1
 	self.needToRetooltip=true
 	Appraiser:UpdateSellPriceFields()
+	Appraiser:UpdateAuctionCost(self.ActiveSellingItem.stacksize,self.ActiveSellingItem.stackcount)
 end
 
 function Appraiser:UpdateStackSize__()
@@ -812,7 +814,11 @@ function Appraiser:StartAuction()
 	local auction_time = Appraiser.Inventory_Frame.durationdropdown:GetCurrentSelectedItemValue()
 
 	ZGV:Print("Auction Posting: "..stack_count.." x "..stack_size.." x "..Appraiser.ActiveSellingItem.name.." for "..ZGV.GetMoneyString(selling_price_buy).." per stack.")
-	StartAuction(selling_price_bid, selling_price_buy, auction_time, stack_size, stack_count)
+	if PostAuction then
+		PostAuction(selling_price_bid, selling_price_buy, auction_time, stack_size, stack_count)
+	else
+		StartAuction(selling_price_bid, selling_price_buy, auction_time, stack_size, stack_count)
+	end		
 
 	ZGV.Gold.Appraiser.RawDataTable[Appraiser.ActiveSellingItem.itemid] = ZGV.Gold.Appraiser.RawDataTable[Appraiser.ActiveSellingItem.itemid] or {}
 
@@ -852,11 +858,20 @@ function Appraiser:UpdateAuctionCost(stacksize,stackcount)
 	if not stacksize then stacksize = tonumber(Appraiser.Inventory_Frame.stacksize:GetText()) end
 	if not stackcount then stackcount = tonumber(Appraiser.Inventory_Frame.stackcount:GetText()) end
 	local auction_time = Appraiser.Inventory_Frame.durationdropdown:GetCurrentSelectedItemValue()
+	local selling_price_buy,selling_price_bid = Appraiser:GetSellPriceForStacksize("stack")
 
 	AuctionsStackSizeEntry:SetText(stacksize or 0)
 	AuctionsNumStacksEntry:SetText(stackcount or 0)
 
-	local deposit = CalculateAuctionDeposit(auction_time)
+	local deposit
+	if GetAuctionDeposit then
+		deposit = GetAuctionDeposit(auction_time,selling_price_bid,selling_price_buy)
+	else
+		deposit = CalculateAuctionDeposit(auction_time)
+	end
+
+	deposit = deposit * stackcount
+
 	Appraiser.Inventory_Frame.aucpostfee:SetText("Deposit: "..ZGV.GetMoneyString(deposit or 0))
 
 	Appraiser.LastAuctionTime = auction_time

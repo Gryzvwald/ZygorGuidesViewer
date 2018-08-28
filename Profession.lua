@@ -397,10 +397,12 @@ end
 local pattern = "Skill (%d+) increased from (%d+) to (%d+)"
 local function UpdateSkillConsole(_,_,msg)
 	local id,from,to = msg:match(pattern)
-	for name,skill in pairs(ZGV.db.char.SkillsKnown) do
-		if skill.skillID==id then
-			skill.level = to
-			return
+	if id and to then
+		for name,skill in pairs(ZGV.db.char.SkillsKnown) do
+			if skill.skillID==id then
+				skill.level = to
+				return
+			end
 		end
 	end
 end

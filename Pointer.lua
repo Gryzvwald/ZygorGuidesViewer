@@ -622,7 +622,7 @@ function Pointer:SetWaypoint (m,x,y,data,arrow)
 		self:FindTravelPath(waypoint)
 	end
 
-	Pointer.Provider:RefreshAllData()
+	Pointer.Provider:SoilData()
 
 	return waypoint
 end
@@ -736,7 +736,7 @@ function Pointer:RemoveWaypoint(waypoint)
 		self:ClearSet("route")
 	end
 
-	Pointer.Provider:RefreshAllData()
+	Pointer.Provider:SoilData()
 
 end
 
@@ -1766,6 +1766,7 @@ end
 function Pointer.Overlay_OnEvent(self,event,...)
 	self=Pointer
 	if event == "WORLD_MAP_UPDATE" then -- NOT ANYMORE!   but our DataProvider fakes this. A lot.
+		ZGV:Debug("Pointer got W_M_U")
 		if ZGV.db.profile.waypointaddon=="internal" then
 			local m = ZGV.GetCurrentMapID()
 			local count=0
@@ -4854,7 +4855,12 @@ function Pointer:ShowSet(waypath,name)
 					icon=point.icon or self.Icons.greendot
 				end
 				point:SetIcon(icon)
-				if (k%50==0) and Pointer.showset_timer and coroutine.running() then coroutine.yield() end
+				if (k%50==0) and Pointer.showset_timer and coroutine.running() then
+					local tp1=debugprofilestop()
+					coroutine.yield()
+					local tp2=debugprofilestop()
+					t1 = t1+(tp2-tp1)
+				end
 			end
 		end
 
@@ -5000,7 +5006,7 @@ local function PathFoundHandler(state,path,ext,reason)
 		
 		Pointer:ShowArrow(Pointer.pointsets.route.points[2])  -- point 1 is player
 
-		Pointer.Provider:RefreshAllData()
+		Pointer.Provider:SoilData()
 
 	elseif state=="failure" then
 		Pointer:ClearSet("route")
@@ -5285,6 +5291,9 @@ end
 
 Pointer.Provider = CreateFromMixins(MapCanvasDataProviderMixin)
 
+Pointer.Provider.EventFrame = CreateFrame("FRAME","ZGVPointerProviderEventFrame")
+Pointer.Provider.EventFrame:SetScript("OnUpdate",function() Pointer.Provider:OnUpdate() end)
+
 function Pointer.Provider:RemoveAllData()
 	for i,way in ipairs(Pointer.waypoints) do
 		way.frame_worldmap:Hide()
@@ -5294,6 +5303,17 @@ end
 function Pointer.Provider:RefreshAllData(fromOnShow)
 	Pointer.Overlay_OnEvent(Pointer.OverlayFrame,"WORLD_MAP_UPDATE") -- FAAKE
 	Pointer:RescaleMarkers()
+end
+
+function Pointer.Provider:SoilData()
+	self.dirty=true
+end
+
+function Pointer.Provider:OnUpdate()
+	if self.dirty then
+		self.dirty=false
+		self:RefreshAllData()
+	end
 end
 
 function Pointer.Provider:OnShow()

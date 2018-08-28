@@ -420,17 +420,17 @@ label "Choose_World_Quest"
 #include "BFA_Choose_World_Quests"
 step
 label quest-51576
-accept Any Witch Way But Dead##51576 |goto Drustvar/0 24.09,50.74
+accept Any Witch Way But Dead##51576 |goto Drustvar/0 24.19,54.15
 |tip You will accept this quest automatically.
-stickystart "Slay_Witch_Forces"
+stickystart "Slay_Witch_Forces_51576"
 step
 click Cage##182094+
-|tip They look like cages made of branches on the ground around this area.
-Free #10# Imprisoned Villagers |q 51576/1 |goto 24.09,50.74
+|tip They look like wooden cages on the ground around this area.
+Free #10# Imprisoned Villagers |q 51576/1 |goto 24.19,54.15
 step
-label "Slay_Witch_Forces"
+label "Slay_Witch_Forces_51576"
 Kill enemies around this area
-Slay #10# Witch Forces |q 51576/2 |goto 24.09,50.74
+Slay #10# Witch Forces |q 51576/2 |goto 24.19,54.15
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51541
@@ -516,6 +516,7 @@ click Azerite Chunk##290611+
 click Azerite Node##290723+
 |tip They look like small multicolored veins on the ground around this area.
 Recover Azerite |q 52872/1 |goto 58.47,52.40
+You can find more inside the cave at [58.03,54.00]
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51615
@@ -531,7 +532,6 @@ Recover Azerite |q 51615/1 |goto 40.49,38.21
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51609
-Follow the road |goto Drustvar/0 40.96,46.60 < 30 |only if walking
 accept Azerite Wounds##51609 |goto Drustvar/0 41.36,40.34
 |tip You will accept this quest automatically.
 step
@@ -539,6 +539,13 @@ Heal #5# Azeroth Wounds |q 51609/1 |goto 40.58,37.85
 |tip Use the "Heart of Azeroth" ability.
 |tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51469
+accept Betsy##51469 |goto Drustvar/0 58.47,33.17
+|tip You will accept this quest automatically.
+step
+kill Betsy##124548 |q 51469/1 |goto 58.47,33.17
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51491
@@ -624,17 +631,21 @@ step
 Kill Barbthorn enemies around this area
 clicknpc Barbthorn Hive##127038+
 |tip They look like yellow bee hives hanging in trees around this area.
-Clear Out Barbthorn Ridge |q 51741/1 |goto 61.06,17.71
+Clear Out Barbthorn Ridge |q 51741/1 |goto 59.38,20.13
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51512
-accept Bilefang Mother##51512 |goto Drustvar/0 35.04,33.24
+accept Bilefang Mother##51512 |goto Drustvar/0 36.00,31.65
 |tip You will accept this quest automatically.
 step
-kill Bilefang Mother##132319 |q 51512/1 |goto 35.04,33.24
+Enter the mine |goto 36.00,31.65 < 10 |walk
+Run down the stairs |goto 36.36,30.61 < 15 |walk
+kill Bilefang Mother##132319 |q 51512/1 |goto 35.06,33.25
+|tip Inside the mine.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51699
+Follow the path |goto Drustvar/0 30.99,20.38 < 15 |only if walking and Alliance
 accept Blighted Monstrosity##51699 |goto Drustvar/0 36.01,11.10
 |tip You will accept this quest automatically.
 step
@@ -652,29 +663,22 @@ Gather Blooming Siren's Sting |q 53272/1 |goto 27.35,66.94
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51709
-Cross the bridge |goto Drustvar/0 62.73,23.26 < 7 |only if walking
-Follow the road |goto 62.54,22.40 < 7 |only if walking
-Continue following the road |goto 62.27,20.89 < 7 |only if walking
-Continue following the road |goto 61.95,19.61 < 7 |only if walking
 accept Bombarbment##51709 |goto Drustvar/0 61.06,17.71
 |tip You will accept this quest automatically.
 step
-Follow the path |goto Drustvar/0 61.86,19.94 < 10 |only if walking
 Kill Barbthorn enemies around this area
 clicknpc Barbthorn Hive##127038+
 |tip They look like yellow bee hives hanging in trees around this area.
-Clear Out Barbthorn Ridge |q 51709/1 |goto 61.06,17.71
+Clear Out Barbthorn Ridge |q 51709/1 |goto 59.38,20.13
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51468
-Follow the road |goto Drustvar/0 68.98,57.52 < 7 |only if walking
-Continue following the road |goto 69.15,54.86 < 7 |only if walking
-Follow the path up |goto 69.13,53.67 < 10 |only if walking
-Continue up the path |goto 67.58,52.05 < 7 |only if walking
 accept Bonesquall##51468 |goto Drustvar/0 66.77,50.81
 |tip You will accept this quest automatically.
+|tip He walks around this area.
 step
 kill Bonesquall##126621 |goto 66.77,50.81
+|tip He walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-53549
@@ -758,6 +762,14 @@ click Burnished Platinum Deposit##297472
 collect Burnished Platinum##163624 |q 53312/1 |goto 20.82,50.93
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51528
+accept Captain Leadfist##51528 |goto Drustvar/0 27.82,15.34
+|tip You will accept this quest automatically.
+step
+kill Captain Leadfist##135796 |q 51528/1 |goto 27.68,14.15
+|tip He will appear on your minimap as a yellow dot.
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51970
 accept The Caterer##51970 |goto Drustvar/0 25.70,16.54
 |tip You will accept this quest automatically.
@@ -790,6 +802,17 @@ step
 talk Captain Hermes##139489
 Tell him _"Begin pet battle."_
 Defeat Captain Hermes |q 52009/1 |goto 21.40,66.45
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51754
+accept Dogged Tenacity##51754 |goto Drustvar/0 66.42,27.42
+|tip You will accept this quest automatically.
+step
+click Alliance Banner
+Watch the dialogue
+Kill the enemies that attack in waves
+kill Marshal Layre##138874
+Overtake the Gilnean Camp |q 51754/1 |goto 66.42,27.42
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51706
@@ -922,6 +945,21 @@ label "Kill_Cursed_Falcons"
 kill 5 Cursed Falcon##131518 |q 51658/3 |goto 31.86,24.43
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51719
+accept A Glaive Mistake##51719 |goto Drustvar/0 50.80,36.36
+|tip She walks along this road around this area with 2 guards with her.
+|tip You will accept this quest automatically when you get near her.
+stickystart "Slay_Sentinel_Escorts_51719"
+step
+kill Kerie Shadeswift##138732 |q 51719/1 |goto 50.80,36.36
+|tip She walks along this road with 2 guards, between here and Arom's Stand.
+step
+label "Slay_Sentinel_Escorts_51719"
+kill Darnassus Sentinel##138752+
+|tip They walk with Kerie Shadeswift.
+Slay #2# Sentinel Escorts |q 51719/2 |goto 50.80,36.36
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51507
 Follow the road |goto Drustvar/0 54.51,35.57 < 7 |only if walking
 Cross the bridge |goto 54.55,36.57 < 7 |only if walking
@@ -954,25 +992,27 @@ kill Grozgore##127129 |q 51909/1 |goto 50.33,20.69
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51764
-accept Hunters Hunted##51764 |goto Drustvar/0 55.48,42.16
+accept Hunters Hunted##51764 |goto Drustvar/0 54.48,45.01
 |tip You will accept this quest automatically.
 step
-click Disturbing Charm##277193+
-click Bewitching Fetish##271176+
-Kill Hexcrazed enemies around this area
+Kill enemies around this area
+click Bewitching Fetish+
+|tip They look like statues with antlered skull heads on the ground around this area.
+click Disturbing Charm+
+|tip They look like wood and bone ornaments hanging from trees around this area.
 Purge the Woods |q 51764/1 |goto 54.48,45.01
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51740
 accept Hunting for Truffle Hunters##51740 |goto Drustvar/0 25.67,41.51
 |tip You will accept this quest automatically.
-stickystart "Slay_Funggarians"
+stickystart "Slay_Funggarians_51740"
 step
 clicknpc Lost Piglet##138610+
 |tip They look like tiny pigs on the ground around this area.
 Save #5# Lost Piglets |q 51740/2 |goto 25.67,41.51
 step
-label "Slay_Funggarians"
+label "Slay_Funggarians_51740"
 Kill Bloodbough enemies around this area
 Slay #8# Funggarians |q 51740/1 |goto 25.67,41.51
 |next "Tortollan_Seekers_WQ"
@@ -1007,21 +1047,15 @@ Purge the Woods |q 51604/1 |goto 54.48,45.01
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51697
-Follow the path |goto Drustvar/0 19.90,44.60 < 7 |only if walking
-Cross the bridge |goto 20.72,46.22 < 7 |only if walking
-Cross the bridge |goto 20.28,47.11 < 7 |only if walking
-Follow the path |goto 20.59,47.45 < 7 |only if walking
-Continue up the path |goto 21.69,45.85 < 7 |only if walking
-Continue up the path |goto 23.30,45.65 < 10 |only if walking
 accept Hunting for Truffle Hunters##51697 |goto Drustvar/0 25.67,41.51
 |tip You will accept this quest automatically.
-stickystart "Slay_Funggarians"
+stickystart "Slay_Funggarians_51697"
 step
 clicknpc Lost Piglet##138610+
 |tip They look like tiny pigs on the ground around this area.
 Save #5# Lost Piglets |q 51697/2 |goto 25.67,41.51
 step
-label "Slay_Funggarians"
+label "Slay_Funggarians_51697"
 Kill Bloodbough enemies around this area
 Slay #8# Funggarians |q 51697/1 |goto 25.67,41.51
 |next "Tortollan_Seekers_WQ"
@@ -1054,33 +1088,27 @@ Drive Back the Irontide |q 51693/1 |goto 28.38,14.07
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51972
-Follow the path up |goto Drustvar/0 67.22,55.64 < 10 |only if walking
-Continue up the path |goto 65.71,56.06 < 10 |only if walking
-Continue up the path |goto 63.97,57.43 < 10 |only if walking
-Continue up the path |goto 63.02,59.42 < 10 |only if walking
-Follow the path |goto 61.16,62.14 < 10 |only if walking
-Continue following the path |goto 59.97,64.34 < 10 |only if walking
-Continue following the path |goto 60.47,67.50 < 10 |only if walking
-Continue following the path |goto 61.76,69.22 < 7 |only if walking
-accept Lost Goat##51972 |goto Drustvar/0 63.07,69.67
+Follow the path up |goto Drustvar/0 61.79,68.11 < 20 |only if walking
+accept Lost Goat##51972 |goto Drustvar/0 63.03,69.65
 |tip You will accept this quest automatically.
 step
 talk Lost Goat##127979
 Tell it _"Dumb goat. Let's go before you get eaten by monsters."_
-kill Gluttonous Yeti##127844 |q 51972/1 |goto 63.07,69.67
+kill Gluttonous Yeti##127844 |q 51972/1 |goto 63.03,69.65
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51743
 accept More Valuable Than Gold##51743 |goto Drustvar/0 35.06,30.43
 |tip You will accept this quest automatically.
-stickystart "Slay_Bilefang_Hunters"
+stickystart "Slay_Bilefang_Hunters_51743"
 step
 click Silver Nugget##290975+
 |tip They look like small pieces of silver on the ground around this area.
 collect 6 Silver Nugget##160577 |q 51743/1 |goto 35.06,30.43
 step
-label "Slay_Bilefang_Hunters"
-kill 8 Bilefang Hunter##132317 |q 51743/2 |goto 35.06,30.43
+label "Slay_Bilefang_Hunters_51743"
+Kill Bliefang enemies around this area
+Slay #8# Bilefang Hunters |q 51743/2 |goto 35.06,30.43
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51433
@@ -1091,20 +1119,17 @@ kill Matron Morana##137704 |q 51433/1 |goto 34.84,19.87
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51707
-Follow the road |goto Drustvar/0 32.29,31.26 < 10 |only if walking
-Continue following the road |goto 33.02,30.69 < 7 |only if walking
-Continue following the road |goto 33.98,30.82 < 7 |only if walking
-Continue following the road |goto 34.37,29.89 < 7 |only if walking
 accept More Valuable Than Gold##51707 |goto Drustvar/0 35.06,30.43
 |tip You will accept this quest automatically.
-stickystart "Slay_Bilefang_Hunters"
+stickystart "Slay_Bilefang_Hunters_51707"
 step
 click Silver Nugget##290975+
 |tip They look like small pieces of silver on the ground around this area.
 collect 6 Silver Nugget##160577 |q 51707/1 |goto 35.06,30.43
 step
-label "Slay_Bilefang_Hunters"
-kill 8 Bilefang Hunter##132317 |q 51707/2 |goto 35.06,30.43
+label "Slay_Bilefang_Hunters_51707"
+Kill Bliefang enemies around this area
+Slay #8# Bilefang Hunters |q 51707/2 |goto 35.06,30.43
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51768
@@ -1164,17 +1189,15 @@ Defeat Dilbert McClint |q 52218/1 |goto 63.60,59.70
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51454
-Follow the path |goto Drustvar/0 38.52,52.53 < 7 |only if walking
-Continue following the path |goto 38.38,53.74 < 7 |only if walking
-Continue up the path |goto 37.60,55.04 < 7 |only if walking
+Follow the path up |goto Drustvar/0 39.91,53.00 < 20 |only if walking
 accept Once More Into Battle##51454 |goto Drustvar/0 38.55,56.80
 |tip You will accept this quest automatically.
 step
+Kill enemies around this area
 clicknpc Weary Spirit##137788+
 |tip They look like kneeling ghosts on the ground around this area.
-click Ancient Cairne##289662
+click Ancient Cairne##289662+
 |tip They look like big rocks on the ground around this area.
-Kill enemies around this area
 Join In the Endless Battle |q 51454/1 |goto 38.21,59.18
 |next "Tortollan_Seekers_WQ"
 step
@@ -1241,6 +1264,14 @@ label "Kill_Chillfur_Yetis_51710"
 kill 6 Chillfur Yeti##127682 |q 51710/1 |goto 44.41,32.47
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51906
+accept Sister Martha##51906 |goto Drustvar/0 33.00,57.16
+|tip You will accept this quest automatically.
+step
+kill Sister Martha##138863 |q 51906/1 |goto 33.00,57.16
+|tip Inside the building.
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51746
 accept The Shadows of Corlain##51746 |goto Drustvar/0 32.53,20.58
 |tip You will accept this quest automatically.
@@ -1269,23 +1300,21 @@ Hit #8# Cursed Gyrfalcons |q 51745/1 |goto 29.26,27.31
 |next "Tortollan_Seekers_WQ"
 step
 label quest-49397
-Follow the path |goto Drustvar/0 63.01,24.05 < 7 |only if walking
-Continue following the path |goto 63.83,25.71 < 7 |only if walking
 accept Sausage Party##49397 |goto Drustvar/0 64.20,29.34
 |tip You will accept this quest automatically.
-stickystart "Rescue_Transformed_Workers"
-stickystart "Kill_Hexed_Howler"
+stickystart "Rescue_Transformed_Workers_49397"
+stickystart "Kill_Hexed_Howler_49397"
 step
 click Witch Effigy##290810+
-|tip They look like burning banners with antlers atop them on the ground around this area.
+|tip They look like burning banners with antlers on top of them on the ground around this area.
 Destroy #5# Effigies |q 49397/3 |goto 64.20,29.34
 step
-label "Rescue_Transformed_Workers"
+label "Rescue_Transformed_Workers_49397"
 clicknpc Transformed Worker##137859
-|tip They look like white pigs on the ground around this area.
-Burn #5# Bloody Banners |q 49397/1 |goto 64.20,29.34
+|tip They look like white pigs tied to small posts on the ground around this area.
+Rescue #6# Transformed Workers |q 49397/1 |goto 64.20,29.34
 step
-label "Kill_Hexed_Howler"
+label "Kill_Hexed_Howler_49397"
 kill 8 Hexed Howler##124814 |q 49397/2 |goto 64.20,29.34
 |next "Tortollan_Seekers_WQ"
 step
@@ -1311,11 +1340,6 @@ Slay #8# Witches |q 51690/2 |goto 31.85,17.07
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51625
-Follow the path |goto Drustvar/0 25.41,17.08 < 7 |only if walking
-Continue following the path |goto 25.38,20.03 < 7 |only if walking
-Jump down here |goto 24.91,19.91 < 7 |only if walking
-Follow the path down |goto 23.45,20.07 < 10 |only if walking
-Cross the water |goto 22.24,21.91 < 10 |only if walking
 accept Shell Game##51625 |goto Drustvar/0 21.80,22.32
 |tip You will accept this quest automatically.
 step
@@ -1323,10 +1347,10 @@ talk Collector Kojo##138476
 Tell him _"I am ready."_
 Speak to Collector Kojo |q 51625/1 |goto 21.80,22.32
 step
-click Shell
-|tip Click the shells to reveal matching objects.
-|tip Shell objects will match in pairs.
-Complete Collector Kojo's Shell Game |q 51625/2 |goto 21.80,22.32
+click Shell+
+|tip Click the shells to reveal objects.
+|tip Match the objects in pairs.
+Complete Collector Kojo's Shell Game |q 51625/2
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51683
@@ -1581,41 +1605,38 @@ clicknpc Dormant Ravager##138532
 Control the Dormant Ravager |q 51686/1 |goto 69.93,60.39
 step
 Kill enemies around this area
-|tip Use the abilities on your hotbar.
+|tip Use the abilities on your action bar.
 Slay Heartsbane Minions |q 51686/2 |goto 69.49,62.81
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51694
-accept Which Witch?##51694 |goto Drustvar/0 38.15,50.97
+accept Which Witch?##51694 |goto Drustvar/0 37.88,50.37
 |tip You will accept this quest automatically.
-stickystart "Destroy_Heartsbane_Objects"
+stickystart "Destroy_Heartsbane_Objects_51694"
 step
-clicknpc Corlain Refugee##129641+
 use Lucille's Sewing Needle##160571
-|tip Use it on refugees around this area.
-Test #10# Corlain Refugees |q 51694/1 |goto 38.15,50.97
+|tip Use it on Corlain Refugees around this area.
+|tip Some of them will attack you.
+Test #10# Corlain Refugees |q 51694/1 |goto 37.88,50.37
 step
-label "Destroy_Heartsbane_Objects"
-click Heartsbane Grimoire##290896+
-|tip They look like small books around this area.
-click Heartsbane Scrolls##290898+
-|tip They look like bundles of scrolls around this area.
-click Heartsbane Focus##290897+
-|tip They look like hanging idols on buildings around this area.
-Destroy #10# Heartsbane Objects |q 51694/2 |goto 38.15,50.97
+label "Destroy_Heartsbane_Objects_51694"
+click Heartsbane Object+
+|tip They look like various objects with Heartsbane names on the ground, and hanging from trees and buildings around this area.
+Destroy #10# Heartsbane Objects |q 51694/2 |goto 37.88,50.37
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51738
-accept Witches by the Dozen##51738 |goto Drustvar/0 31.44,18.66
+accept Witches by the Dozen##51738 |goto Drustvar/0 31.10,19.11
 |tip You will accept this quest automatically.
-stickystart "Slay_Witches"
+stickystart "Slay_Witches_51738"
 step
-kill 4 Blighted Horror##137568 |q 51738/1 |goto 31.44,18.66
+kill Heartsbane Disciple##134237+
+|tip Attack the ones next to Blighted Horrors to be able to attack the Blighted Horrors.
+kill 4 Blighted Horror##137568 |q 51738/1 |goto 31.10,19.11
 step
-label "Slay_Witches"
+label "Slay_Witches_51738"
 Kill enemies around this area
-|tip Hexbane Disciples and Coven Hexcallers count for this objective.
-Slay #12# Witches |q 51738/2 |goto 31.44,18.66
+Slay #12# Witches |q 51738/2 |goto 31.10,19.11
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51988
@@ -1687,6 +1708,16 @@ worldquestzone=863,
 step
 label "Choose_World_Quest"
 #include "BFA_Choose_World_Quests"
+step
+label quest-51064
+accept Azerite Wounds##51064 |goto Nazmir/0 23.78,62.87
+|tip You will accept this quest automatically.
+step
+Heal #5# Azeroth Wounds |q 51064/1 |goto 23.78,62.87
+|tip Use the "Heart of Azeroth" ability.
+|tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
+|tip It appears as a button on the screen.
+|next "Tortollan_Seekers_WQ"
 step
 label quest-50718
 accept Agent of Death##50718 |goto Nazmir/0 39.58,38.74
@@ -1777,7 +1808,8 @@ label quest-52884
 accept Azerite Wounds##52884 |goto Nazmir/0 26.64,80.19
 |tip You will accept this quest automatically.
 step
-Heal #5# Azeroth Wounds |q 52884/1 |goto 26.64,80.19|tip Use the "Heart of Azeroth" ability.
+Heal #5# Azeroth Wounds |q 52884/1 |goto 26.64,80.19
+|tip Use the "Heart of Azeroth" ability.
 |tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
@@ -1830,8 +1862,12 @@ Slay #8# Craven Spirits |q 50735/2 |goto 45.85,47.39
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51640
-accept Beachhead##51640 |goto Nazmir/0 74.19,10.08
+accept Beachhead##51640 |goto Nazmir/0 74.04,10.70
 |tip You will accept this quest automatically.
+step
+talk Scrollsage Nola##144359
+Tell her _"I am ready."_
+Speak to Scrollsage Nola |q 51640/1 |goto 74.04,10.70
 step
 kill Vicious Albatross##138186+
 |tip They look like birds flying in the air around this area.
@@ -1839,7 +1875,7 @@ kill Vicious Albatross##138186+
 kill Armored Claw##138242+
 |tip They look like small crabs in the water.
 |tip Use the ability on your action bar.
-Help #15# Juvenile Turtles Reach the Ocean |q 51640/1 |goto 74.19,10.08
+Help #12# Juvenile Turtles Reach the Ocean |q 51640/2
 |tip The turtles will slowly walk into the water.
 |tip You must protect them from the birds and crabs.
 |next "Tortollan_Seekers_WQ"
@@ -1858,16 +1894,34 @@ label "Kill_Empowered_Worshippers"
 kill 12 Empowered Worshipper##127224 |q 51550/1 |goto 32.60,54.97
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50962
+accept Cargo Reclamation##50962 |goto Nazmir/0 60.16,67.71
+|tip You will accept this quest automatically.
+stickystart "Collect_Ransacked_Supplies_50962"
+step
+kill Xuxuga the Plunderer##135377 |q 50962/2 |goto 61.33,68.57
+|tip At the top of the ship.
+|tip Click the Rope Ladder on the side of the ship, in the water, to board the ship.
+step
+label "Collect_Ransacked_Supplies_50962"
+click Ransacked Supplies+
+|tip They look like wooden boxes on the ground around this area.
+collect 6 Ransacked Supplies##158878 |q 50962/1 |goto 59.71,68.61
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50813
 accept Cargo Reclamation##50813 |goto Nazmir/0 60.16,67.71
 |tip You will accept this quest automatically.
-stickystart "Collect_Ransacked_Supplies"
+stickystart "Collect_Ransacked_Supplies_50813"
 step
-click Rope Ladder##294168 |goto 60.77,69.12
-kill Xuxuga the Plunderer##135377 |q 50813/1 |goto 61.33,68.57
+kill Xuxuga the Plunderer##135377 |q 50813/2 |goto 61.33,68.57
+|tip At the top of the ship.
+|tip Click the Rope Ladder on the side of the ship, in the water, to board the ship.
 step
-label "Collect_Ransacked_Supplies"
-collect 6 Ransacked Supplies## |q 50813/2 |goto 59.71,68.61
+label "Collect_Ransacked_Supplies_50813"
+click Ransacked Supplies+
+|tip They look like wooden boxes on the ground around this area.
+collect 6 Ransacked Supplies##158878 |q 50813/1 |goto 59.71,68.61
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50665
@@ -1882,21 +1936,6 @@ step
 Kill Blood Troll enemies around this area
 |tip Use the abilities on your action bar.
 Slay #80# Blood Trolls |q 50665/2 |goto 46.79,78.05
-|next "Tortollan_Seekers_WQ"
-step
-label quest-50962
-accept Cargo Reclamation##50962 |goto Nazmir/0 60.16,67.71
-|tip You will accept this quest automatically.
-stickystart "Collect_Ransacked_Supplies"
-step
-kill Xuxuga the Plunderer##135377 |q 50962/2 |goto 61.33,68.57
-|tip At the top of the ship.
-|tip Click the Rope Ladder on the side of the ship, in the water, to board the ship.
-step
-label "Collect_Ransacked_Supplies"
-click Ransacked Supplies+
-|tip They look like wooden boxes on the ground around this area.
-collect 6 Ransacked Supplies##158878 |q 50962/1 |goto 59.71,68.61
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50568
@@ -1934,6 +1973,7 @@ use Talanji's Mojo##158324
 Use Talanji's Mojo Potion |q 50717/1 |goto 35.70,76.42
 step
 Kill Blood Troll enemies around this area
+|tip They will appear on your minimap as red dots.
 Slay #12# Blood Troll Invaders |q 50717/2 |goto 35.70,76.42
 |next "Tortollan_Seekers_WQ"
 step
@@ -2001,7 +2041,7 @@ Slay 7th Legion Forces |q 52007/1 |goto 72.12,15.44
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50545
-accept Forked Lightning##50545 |goto Nazmir/0 29.24,38.53
+accept Forked Lightning##50545 |goto Nazmir/0 27.14,39.10
 |tip You will accept this quest automatically.
 step
 Kill Sethrak enemies around this area
@@ -2025,14 +2065,15 @@ Restore the Skycaller Gem |q 51172/2 |goto 27.25,39.41
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50559
-accept Getting Out of Hand##50559 |goto Nazmir/0 62.67,13.99
+accept Getting Out of Hand##50559 |goto Nazmir/0 59.11,14.78
 |tip You will accept this quest automatically.
 step
-Use the special action button on-screen
-Become the Hand of Fate |invehicle |goto 62.67,13.99
+Become the Hand of Fate |invehicle |goto 59.11,14.78 |q 50559
+|tip Use the "Scroll of Fate's Hand" ability.
+|tip It appears as a button on the screen.
 step
 Kill enemies around this area
-|tip Use the abilities on your vehicle bar.
+|tip Use the abilities on your action bar.
 Destroy #40# Undead |q 50559/1 |goto 62.67,13.99
 |next "Tortollan_Seekers_WQ"
 step
@@ -2049,8 +2090,8 @@ Follow the path up |goto Nazmir/0 33.39,82.74 < 15 |only if walking
 accept Gwugnug##50499 |goto Nazmir/0 33.16,84.16
 |tip You will accept this quest automatically.
 step
-Follow the path |goto 32.94,86.03 < 10 |only if walking
-Enter the cave |goto 33.47,87.11 < 7 |only if walking
+Follow the path |goto 32.94,86.03 < 15 |only if walking
+Enter the cave |goto 33.47,87.11 < 10 |only if walking
 kill Gwugnug the Cursed##127001 |q 50499/1 |goto 33.80,85.99
 |tip Inside the cave.
 |next "Tortollan_Seekers_WQ"
@@ -2093,26 +2134,28 @@ step
 label quest-50689
 accept It's the Pits##50689 |goto Nazmir/0 24.68,47.71
 |tip You will accept this quest automatically.
-stickystart "Kill_Bone_Raptors"
+stickystart "Kill_Bone_Raptors_50689"
 step
 clicknpc Goblin Prospector##134759+
-|tip They look like tar-covered goblins in tar pits around this area.
+|tip They look like tar-covered goblins in tar pits on the ground around this area.
+|tip They will appear on your minimap as yellow dots.
 Rescue #4# Goblin Prospectors |q 50689/2 |goto 24.68,47.71
 step
-label "Kill_Bone_Raptors"
+label "Kill_Bone_Raptors_50689"
 kill 8 Bone Raptor##130735+ |q 50689/1 |goto 24.68,47.71
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51546
 accept It's the Pits##51546 |goto Nazmir/0 24.68,47.71
 |tip You will accept this quest automatically.
-stickystart "Kill_Bone_Raptors"
+stickystart "Kill_Bone_Raptors_51546"
 step
 clicknpc Goblin Prospector##134759+
-|tip They look like tar-covered goblins in tar pits around this area.
+|tip They look like tar-covered goblins in tar pits on the ground around this area.
+|tip They will appear on your minimap as yellow dots.
 Rescue #4# Surveyors |q 51546/2 |goto 24.68,47.71
 step
-label "Kill_Bone_Raptors"
+label "Kill_Bone_Raptors_51546"
 kill 8 Bone Raptor##130735+ |q 51546/1 |goto 24.68,47.71
 |next "Tortollan_Seekers_WQ"
 step
@@ -2178,7 +2221,8 @@ label quest-50517
 accept Mala'kili and Rohnkor##50517 |goto Nazmir/0 53.77,53.31
 |tip You will accept this quest automatically.
 step
-kill Mala'kili##128935 |q 50517/1 |goto 53.77,53.31
+Watch the dialogue
+kill Mala'kili##128935 |q 50517/1 |goto 52.62,53.66
 |tip He runs around this area.
 |next "Tortollan_Seekers_WQ"
 step
@@ -2194,28 +2238,30 @@ Defeat Lozu |q 52754/1 |goto 72.85,48.60
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50587
-accept Nagative Feedback##50587 |goto Nazmir/0 77.05,50.52
+accept Nagative Feedback##50587 |goto Nazmir/0 81.37,52.08
 |tip You will accept this quest automatically.
 step
-Kill enemies around this area
-click Infused Trident Rack##287159+
-|tip They look like large weapon racks on the ground around this area.
-click Empowering Totem##134372+
-|tip The look like small idols on the ground around this area.
-Disrupt the Naga Encampment |q 50587/1 |goto 75.29,46.26
-You can find more around [81.37,52.08]
-|next "Tortollan_Seekers_WQ"
-step
-label quest-51548
-accept Nagative Feedback##51548 |goto Nazmir/0 69.61,46.43
-|tip You will accept this quest automatically.
-step
-Follow the path up |goto 74.71,51.74 < 15 |only if walking
 Kill enemies around this area
 click Infused Trident Rack##287159+
 |tip They look like large weapon racks on the ground around this area.
 click Empowering Totem##134372+
 |tip The look like small blue-glowing metal cups on the ground around this area.
+click Infused Trident Rack+
+|tip They look like racks of golden weapons on the ground around this area.
+Disrupt the Naga Encampment |q 50587/1 |goto 81.37,52.08
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51548
+accept Nagative Feedback##51548 |goto Nazmir/0 81.37,52.08
+|tip You will accept this quest automatically.
+step
+Kill enemies around this area
+click Infused Trident Rack##287159+
+|tip They look like large weapon racks on the ground around this area.
+click Empowering Totem##134372+
+|tip The look like small blue-glowing metal cups on the ground around this area.
+click Infused Trident Rack+
+|tip They look like racks of golden weapons on the ground around this area.
 Disrupt the Naga Encampment |q 51548/1 |goto 81.37,52.08
 |next "Tortollan_Seekers_WQ"
 step
@@ -2224,10 +2270,9 @@ accept The Other Side##50474 |goto Nazmir/0 39.55,55.04
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
-collect 6 Spirit Essence##157833 |goto 39.55,55.04
-step
+collect Spirit Essence##157833+ |n
 clicknpc Fettered Spirit##133962+
-|tip They look like kneeling spirits on the ground around this area.
+|tip They look like trolls kneeling on the ground around this area.
 Liberate #6# Fettered Spirits |q 50474/1 |goto 39.55,55.04
 |next "Tortollan_Seekers_WQ"
 step
@@ -2255,19 +2300,18 @@ step
 label quest-52006
 accept Preemptive Assault##52006 |goto Nazmir/0 72.04,16.42
 |tip You will accept this quest automatically.
-stickystart "Burn_Barricades"
-stickystart "Slay_10_7th_Legion_Forces"
+stickystart "Burn_Barricades_52006"
+stickystart "Slay_10_7th_Legion_Forces_52006"
 step
-Follow the path |goto 71.02,16.75 < 10 |only if walking
 kill Houndmaster Leopold##139554 |q 52006/3 |goto 70.43,15.54
 step
-label "Burn_Barricades"
+label "Burn_Barricades_52006"
 click Barricade##281000+
 |tip They look like piles of wooden rubble on the ground around this area.
-|tip They appear on your minimap as a yellow dot.
+|tip They will appear on your minimap as yellow dots.
 Burn #5# Barricades |q 52006/2 |goto 71.01,15.51
 step
-label "Slay_10_7th_Legion_Forces"
+label "Slay_10_7th_Legion_Forces_52006"
 Kill 7th Legion enemies around this area
 Slay #10# 7th Legion Forces |q 52006/1 |goto 71.01,15.51
 |next "Tortollan_Seekers_WQ"
@@ -2318,6 +2362,40 @@ Kill Bloodhunter enemies around this area
 Slay #12# Bloodhunter Trolls |q 50676/1 |goto 68.30,49.82
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50521
+accept Scorched Earth##50521 |goto Nazmir/0 31.69,75.18
+|tip You will accept this quest automatically.
+stickystart "Kill_Dreadtick_Latchers_50521"
+step
+use the Firestick##157847
+|tip Use it on Dreadtick Latcher Nests around this area.
+|tip They look like white pods with red bumps on them on the ground around this area.
+Destroy #8# Dreadtick Latcher Nests |q 50521/1 |goto 30.59,75.28
+step
+label "Kill_Dreadtick_Latchers_50521"
+use the Firestick##157847
+|tip Use it on Dreadtick Latchers around this area.
+kill 25 Dreadtick Latcher##126749 |q 50521/2 |goto 30.59,75.28
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50660
+accept Survival Strategy##50660 |goto Nazmir/0 73.68,61.16
+|tip You will accept this quest automatically.
+stickystart "Collect_Diremaw_Hides_50660"
+stickystart "Collect_Pterrordax_Wingclaws_50660"
+step
+kill Shore Saurid##128585+
+collect 30 Saurid Feather##158191 |q 50660/1 |goto 73.68,61.16
+step
+label "Collect_Diremaw_Hides_50660"
+kill Diremaw##128620+
+collect 5 Diremaw Hide##158193 |q 50660/2 |goto 73.68,61.16
+step
+label "Collect_Pterrordax_Wingclaws_50660"
+Kill Seaspray enemies around this area
+collect 3 Pterrordax Wingclaw##158192 |q 50660/3 |goto 73.68,61.16
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50634
 accept Save Our Scrolls!##50634 |goto Nazmir/0 61.32,26.40
 |tip You will accept this quest automatically.
@@ -2330,14 +2408,14 @@ step
 label quest-51109
 accept Scorched Earth##51109 |goto Nazmir/0 31.69,75.18
 |tip You will accept this quest automatically.
-stickystart "Kill_Dreadtick_Latchers_1"
+stickystart "Kill_Dreadtick_Latchers_51109"
 step
 use the X-P100D##159745
 |tip Use it on Dreadtick Latcher Nests around this area.
 |tip They look like white pods with red bumps on them on the ground around this area.
 Destroy #8# Dreadtick Latcher Nests |q 51109/1 |goto 30.59,75.28
 step
-label "Kill_Dreadtick_Latchers_1"
+label "Kill_Dreadtick_Latchers_51109"
 use the X-P100D##159745
 |tip Use it on Dreadtick Latchers around this area.
 kill 25 Dreadtick Latcher##126749 |q 51109/2 |goto 30.59,75.28
@@ -2367,10 +2445,10 @@ talk Collector Kojo##144353
 Tell him _"I am ready."_
 Speak to Collector Kojo |q 51628/1 |goto 72.22,40.52
 step
-click Shell
+click Shell+
 |tip Click the shells to reveal objects.
 |tip Match the objects in pairs.
-Complete Collector Kojo's Shell Game |q 51628/2 |goto 72.22,40.52
+Complete Collector Kojo's Shell Game |q 51628/2
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50650
@@ -2411,36 +2489,40 @@ kill T'zane##132701 |q 52181/1 |goto 35.43,32.18
 |tip Do not stand near other players when affected by "Consuming Spirits." |grouprole DAMAGE
 |next "Tortollan_Seekers_WQ"
 step
-label quest-50936
-Follow the path |goto Nazmir/0 62.11,41.40 < 5 |only if walking
-Continue following the path |goto 61.96,42.36 < 7 |only if walking
-Continue following the path |goto 62.74,43.29 < 10 |only if walking
-Cross the water |goto 63.59,43.66 < 7 |only if walking
-Cross the water |goto 64.78,45.18 < 10 |only if walking
-Follow the path |goto 66.73,44.39 < 7 |only if walking
-Continue following the path |goto 68.20,44.95 < 7 |only if walking
-Continue following the path |goto 68.77,44.69 < 7 |only if walking
-Continue following the path |goto 71.78,45.98 < 7 |only if walking
-Continue following the path |goto 72.03,47.40 < 7 |only if walking
-Continue following the path |goto 71.78,49.36 < 10 |only if walking
-Continue following the path |goto 72.27,54.51 < 7 |only if walking
-Continue up the path |goto 72.37,56.66 < 7 |only if walking
-accept Survival Strategy##50936 |goto Nazmir/0 73.19,58.56
+label quest-50660
+accept Survival Strategy##50660 |goto Nazmir/0 73.68,61.16
 |tip You will accept this quest automatically.
-stickystart "Collect_Diremaw_Hides"
-stickystart "Collect_Pterrordax_Claws"
+stickystart "Collect_Diremaw_Hides_50660"
+stickystart "Collect_Pterrordax_Wingclaws_50660"
 step
-Kill Shore Saurid enemies around this area
-collect 30 Saurid Feather##158191 |q 50936/1 |goto 73.21,60.44
+kill Shore Saurid##128585+
+collect 30 Saurid Feather##158191 |q 50660/1 |goto 73.68,61.16
 step
-label "Collect_Diremaw_Hides"
+label "Collect_Diremaw_Hides_50660"
 kill Diremaw##128620+
-|tip You can find plenty of them in the water.
-collect 5 Diremaw Hide##158193 |q 50936/2 |goto 73.39,62.88
+collect 5 Diremaw Hide##158193 |q 50660/2 |goto 73.68,61.16
 step
-label "Collect_Pterrordax_Claws"
+label "Collect_Pterrordax_Wingclaws_50660"
 Kill Seaspray enemies around this area
-collect 3 Pterrordax Wingclaw##158192 |q 50936/3 |goto 73.21,60.44
+collect 3 Pterrordax Wingclaw##158192 |q 50660/3 |goto 73.68,61.16
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50936
+accept Survival Strategy##50936 |goto Nazmir/0 73.68,61.16
+|tip You will accept this quest automatically.
+stickystart "Collect_Diremaw_Hides_50936"
+stickystart "Collect_Pterrordax_Wingclaws_50936"
+step
+kill Shore Saurid##128585+
+collect 30 Saurid Feather##158191 |q 50936/1 |goto 73.68,61.16
+step
+label "Collect_Diremaw_Hides_50936"
+kill Diremaw##128620+
+collect 5 Diremaw Hide##158193 |q 50936/2 |goto 73.68,61.16
+step
+label "Collect_Pterrordax_Wingclaws_50936"
+Kill Seaspray enemies around this area
+collect 3 Pterrordax Wingclaw##158192 |q 50936/3 |goto 73.68,61.16
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50529
@@ -2584,6 +2666,22 @@ step
 label "Choose_World_Quest"
 #include "BFA_Choose_World_Quests"
 step
+label quest-52940
+accept Arms Deal##52940 |goto Stormsong Valley/0 69.34,51.41
+|tip You will accept this quest automatically.
+step
+Kill enemies around this area
+click Tidal Blade##280925+
+|tip They look like swords around this area.
+click Thundershot Rifle##280927
+|tip They look like double-barrel rifles around this area.
+click Harpoons##280545
+|tip They look like a rack of harpoons on the ground around this area.
+click Abyssal Spear##
+|tip They look like single barbed spears around this area.
+collect 20 Stormfused Weapon##162629 |q 52940/1 |goto 69.34,51.41
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51855
 Follow the path |goto Stormsong Valley/0 41.64,57.96 < 7 |only if walking
 accept A Pirate's Life For Me##51855 |goto Stormsong Valley/0 38.59,57.23
@@ -2607,7 +2705,7 @@ Defeat Eddie Fixit |q 52165/1 |goto 36.53,33.64
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51617
-Follow the path up |goto Stormsong Valley/0 72.89,75.93 < 20 |only if walking
+Follow the path up |goto Stormsong Valley/0 73.24,77.11 < 30 |only if walking
 accept Azerite Empowerment##51617 |goto Stormsong Valley/0 70.80,85.80
 |tip You will accept this quest automatically.
 step
@@ -2615,7 +2713,7 @@ kill Tidesage Morris##138332 |q 51617/1 |goto 70.80,85.80
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52871
-accept Azerite Empowerment##52871 |goto Stormsong Valley/0 72.36,52.49
+accept Azerite Empowerment##52871 |goto Stormsong Valley/0 72.85,51.09
 |tip You will accept this quest automatically.
 step
 Enter the cave |goto 72.85,51.09 < 10 |walk
@@ -2624,20 +2722,14 @@ kill Herald Zaxuthril##141985 |q 52871/1 |goto 72.19,52.10
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51618
-Follow the path |goto Stormsong Valley/0 59.94,71.33 < 10 |only if walking
-Continue following the path |goto 62.87,74.18 < 10 |only if walking
-Follow the path up |goto 64.36,78.41 < 7 |only if walking
-Continue up the path |goto 65.12,79.58 < 10 |only if walking
-Continue up the path |goto 64.78,80.91 < 10 |only if walking
-Continue up the path |goto 66.34,81.16 < 7 |only if walking
-Continue up the path |goto 67.63,81.84 < 7 |only if walking
-accept Azerite Madness##51618 |goto Stormsong Valley/0 68.15,83.06
+Follow the path up |goto Stormsong Valley/0 73.24,77.11 < 30 |only if walking
+accept Azerite Madness##51618 |goto Stormsong Valley/0 71.17,85.40
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
 |tip Use the "Heart of Azeroth" ability near their corpses.
 |tip It appears as a button on the screen.
-Absorb Azerite from Defeated Elementals |q 51618/1 |goto 70.23,85.41
+Absorb Azerite from Defeated Elementals |q 51618/1 |goto 70.77,85.33
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52873
@@ -2664,11 +2756,11 @@ click Azerite Chunk##290611+
 |tip They look like large multicolored veins on the ground around this area.
 click Azerite Node##290723+
 |tip They look like small multicolored veins on the ground around this area.
-Recover Azerite |q 51644/1 |goto 71.17,85.40
+Recover Azerite |q 51644/1 |goto 70.77,85.33
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51623
-Follow the path up |goto Stormsong Valley/0 72.89,75.93 < 20 |only if walking
+Follow the path up |goto Stormsong Valley/0 73.24,77.11 < 30 |only if walking
 accept Azerite Wounds##51623 |goto Stormsong Valley/0 73.04,82.52
 |tip You will accept this quest automatically.
 step
@@ -2692,7 +2784,7 @@ kill Vicious Albatross##138186+
 kill Armored Claw##138242+
 |tip They look like small crabs in the water.
 |tip Use the ability on your action bar.
-Help #15# Juvenile Turtles Reach the Ocean |q 51639/2 |goto 30.34,56.81
+Help #12# Juvenile Turtles Reach the Ocean |q 51639/2
 |tip The turtles will slowly walk into the water.
 |tip You must protect them from the birds and crabs.
 |next "Tortollan_Seekers_WQ"
@@ -2801,6 +2893,14 @@ label "Borrow_Battle_Piglets"
 clicknpc Rooting Battle-Piglet##139903+
 |tip They look like tiny pigs walking on the ground around this area.
 Borrow #8# Battle-Piglets |q 52071/2 |goto 45.85,76.75
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51901
+accept Crushtacean##51901 |goto Stormsong Valley/0 51.86,55.29
+|tip You will accept this quest automatically.
+step
+Enter the cave |goto 51.86,55.29 < 10 |walk
+kill Crushtacean##136183 |q 51901/1 |goto 51.25,55.52
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52325
@@ -3017,7 +3117,6 @@ Slay #8# Panicked Tunnelers |q 52133/1 |goto 52.88,69.38
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51779
-Follow the path |goto Stormsong Valley/0 60.00,71.45 < 10 |only if walking
 accept Grimscowl the Hairbrained##51779 |goto Stormsong Valley/0 62.07,73.89
 |tip You will accept this quest automatically.
 step
@@ -3027,9 +3126,10 @@ step
 label quest-52463
 accept Haegol the Hammer##52463 |goto Stormsong Valley/0 34.89,77.93
 |tip You will accept this quest automatically.
+|tip He walks around this area.
 step
 kill Haegol the Hammer##141226 |q 52463/1 |goto 35.25,77.76
-|tip It walks around.
+|tip He walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-53316
@@ -3071,24 +3171,17 @@ step
 talk Rikal##131014
 Talk with Rikal |q 51854/1 |goto 35.02,47.67
 step
-talk Rikal##131014
+talk Rikal##131014 |goto 35.02,47.67
 Tell him _"Start casting the spell, Rikal."_
-Begin Hunting Naga |havebuff 294472 |goto 35.02,47.67
+Become a Shark |goto 27.73,34.47 < 20 |noway |c |q 51854
 step
-kill Zeth'jir Deepfighter##135125+
-|tip They swim in schools underwater around this area.
-|tip Swim through them to kill them.
-Slay #25# Zeth'jir Deepfighters |q 51854/2 |goto 27.61,35.61
-step
-Click the "Cancel Shark Form" Button |outvehicle
+kill 25 Zeth'jir Deepfighter##135125 |q 51854/2 |goto 26.80,35.74
+|tip Underwater.
+|tip Swim into them to kill them.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52328
-Follow the path |goto Stormsong Valley/0 60.46,77.25 < 10 |only if walking
-Continue following the path |goto 62.00,78.43 < 7 |only if walking
-Continue up the path |goto 64.63,78.95 < 10 |only if walking
-Continue up the path |goto 65.18,79.57 < 10 |only if walking
-Continue up the path |goto 64.52,81.24 < 7 |only if walking
+Follow the path up |goto Stormsong Valley/0 64.29,81.57 < 20 |only if walking
 accept Ice Sickle##52328 |goto Stormsong Valley/0 63.42,82.19
 |tip You will accept this quest automatically.
 step
@@ -3329,8 +3422,6 @@ Clean the Coastline |q 51840/1 |goto 39.06,42.16
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52939
-Cross the bridge |goto Stormsong Valley/0 65.64,49.08 < 7 |only if walking
-Follow the path |goto 67.26,52.68 < 7 |only if walking
 accept Ordnance Orders##52939 |goto Stormsong Valley/0 69.34,51.41
 |tip You will accept this quest automatically.
 step
@@ -3363,6 +3454,14 @@ accept Overgrown Anchor Weed##53288 |goto Stormsong Valley/0 72.64,30.84
 step
 click Overgrown Anchor Weed
 collect Overgrown Anchor Weed##163601 |q 53288/1 |goto 72.64,30.84
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51886
+accept Pinku'shon##51886 |goto Stormsong Valley/0 38.22,51.09
+|tip You will accept this quest automatically.
+step
+kill Pinku'shon##139298 |q 51886/1 |goto 38.22,51.09
+|tip It walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52936
@@ -3446,15 +3545,15 @@ step
 label quest-52160
 accept Restocking##52160 |goto Stormsong Valley/0 49.80,72.24
 |tip You will accept this quest automatically.
-stickystart "Collect_Handfuls_of_Scrap"
+stickystart "Collect_Handfuls_of_Scrap_52160"
 step
 Kill enemies around this area
-|tip Click the corpses after looting to carve out the ammunition.
+|tip Click their corpses.
 collect 20 Salvaged Azerite Ammunition##156583 |q 52160/1 |goto 49.80,72.24
 step
-label "Collect_Handfuls_of_Scrap"
+label "Collect_Handfuls_of_Scrap_52160"
 click Discarded Toolbox##292765+
-|tip They look like small boxes on the ground around this area.
+|tip They look like small buckets of tools on the ground around this area.
 click Metal Scraps##292764+
 |tip They look like small pieces of scrap on the ground around this area.
 collect 15 Handful of Scraps##161216 |q 52160/2 |goto 49.80,72.24
@@ -3494,17 +3593,12 @@ kill 8 Forsaken Keenblade##136439 |q 52211/1 |goto 61.80,51.10
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51905
-Follow the path |goto Stormsong Valley/0 65.64,49.10 < 7 |only if walking
-Cross the bridge |goto 67.16,52.49 < 7 |only if walking
-Follow the path |goto 68.01,52.26 < 7 |only if walking
-Continue following the path |goto 69.65,50.85 < 7 |only if walking
 accept Reinforced Hullbreaker##51905 |goto Stormsong Valley/0 70.57,51.54
 |tip You will accept this quest automatically.
 step
-kill Reinforced Hullbreaker##132047
-|tip It walks around a the village.
+kill Reinforced Hullbreaker##132047 |q 51905/1 |goto 70.57,51.54
+|tip It walks around this area.
 |tip It will appear on your minimap as a yellow dot.
-Slay the Reinforced Hullbreaker |q 51905/1 |goto 70.57,51.54
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52142
@@ -3588,6 +3682,13 @@ step
 kill Sandfang##139988 |q 52309/1 |goto 73.52,60.65
 |next "Tortollan_Seekers_WQ"
 step
+label quest-52889
+accept Sandscour##52889 |goto Stormsong Valley/0 72.27,49.47
+|tip You will accept this quest automatically.
+step
+kill Sandscour##139515 |q 52889/1 |goto 72.27,49.47
+|next "Tortollan_Seekers_WQ"
+step
 label quest-52316
 accept Sea Creatures Are Weird##52316 |goto Stormsong Valley/0 65.02,50.82
 |tip You will accept this quest automatically.
@@ -3619,10 +3720,10 @@ talk Collector Kojo##144353
 Tell him _"I am ready."_
 Speak to Collector Kojo |q 51627/1 |goto 40.37,34.26
 step
-click Shell
+click Shell+
 |tip Click the shells to reveal objects.
 |tip Match the objects in pairs.
-Complete Collector Kojo's Shell Game |q 51627/2 |goto 40.37,34.26
+Complete Collector Kojo's Shell Game |q 51627/2
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52446
@@ -3755,6 +3856,18 @@ accept Supplies Needed: Frenzied Fangtooth##52380 |goto Stormsong Valley/0 59.28
 step
 talk Sister Lilyana##135800
 turnin Supplies Needed: Frenzied Fangtooth##52380 |goto 59.28,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52229
+accept Too Much To Bear##52229 |goto Stormsong Valley/0 38.50,63.37
+|tip You will accept this quest automatically.
+stickystart "Kill_Stormsong_Hunters"
+step
+kill Barbedclaw Grizzly##139793+
+collect 5 Barbedclaw Flank##161114 |q 52229/1 |goto 38.50,63.37
+step
+label "Kill_Stormsong_Hunters"
+kill 5 Stormsong Hunter##140595 |q 52229/2 |goto 38.50,63.37
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52236
@@ -3945,23 +4058,11 @@ Slay Whiplash |q 52299/1 |goto 47.29,65.96
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52459
-Follow the path up |goto Stormsong Valley/0 40.59,38.18 < 10 |only if walking
-Continue following the path |goto 41.58,40.27 < 10 |only if walking
-Continue up the path |goto 41.58,42.06 < 7 |only if walking
-Continue up the path |goto 42.06,42.13 < 7 |only if walking
-Continue up the path |goto 42.39,41.24 < 7 |only if walking
-Continue up the path |goto 43.02,40.41 < 7 |only if walking
-Continue up the path |goto 43.06,38.36 < 7 |only if walking
-Continue up the path |goto 43.35,38.37 < 5 |only if walking
-Continue up the path |goto 44.56,38.27 < 7 |only if walking
-Continue down the path |goto 45.24,38.34 < 7 |only if walking
-Jump down carefully here |goto 46.18,39.60 < 7 |only if walking
 accept Whirlwing##52459 |goto Stormsong Valley/0 46.90,42.14
 |tip You will accept this quest automatically.
 step
-kill Whirlwing##142088
-|tip It flies around this area.
-Slay Whirlwing |q 52459/1 |goto 46.90,42.141
+kill Whirlwing##142088 |q 52459/1 |goto 46.90,42.141
+|tip He flies in the air around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52344
@@ -4017,7 +4118,7 @@ label "Choose_World_Quest"
 #include "BFA_Choose_World_Quests"
 step
 label quest-50322
-accept A Feathery Fad##50322 |goto Tiragarde Sound/0 76.67,65.43
+accept A Feathery Fad##50322 |goto Tiragarde Sound/0 75.72,62.19
 |tip You will accept this quest automatically.
 stickystart "Collect_Pristine_Skyhunter_Feather"
 step
@@ -4030,16 +4131,15 @@ collect 8 Pristine Skyhunter Feather##157538 |q 50322/1 |goto 75.06,62.35
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52057
-accept Against the Storm##52057 |goto Boralus/0 63.57,88.30
+accept Against the Storm##52057 |goto Boralus/0 69.02,76.30
 |tip You will accept this quest automatically.
 step
-Follow the path up |goto 63.62,86.05 < 7 |only if walking
-Continue following the path |goto 65.40,85.48 < 7 |only if walking
-Continue following the path |goto 66.48,83.00 < 7 |only if walking
 Kill enemies around this area
+click Tidal Scrawlings+
+|tip They look like long scrolls hanging on the walls around this area.
 clicknpc Drowned Scriptures##139699+
-|tip They look like floating books around this area.
-Disrupt the Monastic Rituals |q 52057/1 |goto 64.35,79.39
+|tip They look like floating open books around this area.
+Disrupt the Monastic Rituals |q 52057/1 |goto 65.17,78.41
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51610
@@ -4050,24 +4150,22 @@ kill Adhara White##138279 |q 51610/1 |goto 85.55,43.39
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52047
-Jump down here |goto Boralus/0 76.13,73.77 < 7 |only if walking
-Follow the path |goto 75.78,73.89 < 5 |only if walking
-Cross the water |goto 71.50,76.13 < 7 |only if walking
 accept Against the Storm##52047 |goto Boralus/0 69.02,76.30
 |tip You will accept this quest automatically.
 step
-Follow the path |goto 67.44,75.06 < 7 |only if walking
 Kill enemies around this area
+click Tidal Scrawlings+
+|tip They look like long scrolls hanging on the walls around this area.
 clicknpc Drowned Scriptures##139699+
-|tip They look like floating books around this area.
-Disrupt the Monastic Rituals |q 52047/1 |goto 70.40,55.72
+|tip They look like floating open books around this area.
+Disrupt the Monastic Rituals |q 52047/1 |goto 65.17,78.41
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51225
 Follow the path |goto Boralus/0 76.42,72.06 < 5 |only if walking
 Continue following the path |goto 69.57,61.91 < 7 |only if walking
 Continue following the path |goto 68.21,57.85 < 7 |only if walking
-accept Albatrocity##51225 |goto Boralus/0 64.50,60.86
+accept Albatrocity##51225 |goto Boralus/0 65.17,78.41
 |tip You will accept this quest automatically.
 step
 clicknpc Terrified Civilian##136284
@@ -4188,16 +4286,13 @@ kill Vicious Albatross##138186+
 kill Armored Claw##138242+
 |tip They look like small crabs in the water.
 |tip Use the ability on your action bar.
-Help #15# Juvenile Turtles Reach the Ocean |q 51638/2 |goto 58.06,76.22
+Help #12# Juvenile Turtles Reach the Ocean |q 51638/2
 |tip The turtles will slowly walk into the water.
 |tip You must protect them from the birds and crabs.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51241
-Follow the road |goto Tiragarde Sound/0 67.48,23.51 < 10 |only if walking
-Jump down here |goto 69.13,21.37 < 7 |only if walking
-Run up the stairs |goto 69.26,19.45 < 5 |only if walking
-Cross the bridge |goto 69.44,19.23 < 5 |only if walking
+Cross the bridge |goto Tiragarde Sound/0 69.44,19.23 < 15 |only if walking
 accept The Bear Witch Project##51241 |goto Tiragarde Sound/0 71.09,17.84
 |tip You will accept this quest automatically.
 step
@@ -4205,19 +4300,19 @@ kill 10 Enthralled Ashclaw##130085 |q 51241/1 |goto 71.09,17.84
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51671
-accept Billy Goat Barber##51671 |goto Tiragarde Sound/0 44.15,20.68
+accept Billy Goat Barber##51671 |goto Tiragarde Sound/0 45.25,22.08
 |tip You will accept this quest automatically.
 step
 click Gentle Goat##129110+
-collect 6 Goat Fur##155681 |q 51671/1 |goto 44.15,20.68
+collect 6 Goat Fur##155681 |q 51671/1 |goto 45.25,22.08
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50296
-accept Billy Goat Barber##50296 |goto Tiragarde Sound/0 44.15,20.68
+accept Billy Goat Barber##50296 |goto Tiragarde Sound/0 45.25,22.08
 |tip You will accept this quest automatically.
 step
 click Gentle Goat##129110+
-collect 6 Goat Fur##155681 |q 50296/1 |goto 44.15,20.68
+collect 6 Goat Fur##155681 |q 50296/1 |goto 45.25,22.08
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51841
@@ -4352,12 +4447,12 @@ Hold Back the Horde |q 51577/1 |goto 26.02,63.20
 |next "Tortollan_Seekers_WQ"
 step
 label quest-53076
-accept Foundry Meltdown##53076 |goto Tiragarde Sound/0 77.56,49.62
+accept Foundry Meltdown##53076 |goto Tiragarde Sound/0 78.74,49.67
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
 click Experimental Azerite Weapons##295817+
-|tip They look like a trio of glowing bombs on the ground around this area.
+|tip They look like groups of three glowing bombs on the ground around this area.
 click Unfinished Irontide Cannon##296064+
 |tip They look like large cannons on the ground around this area.
 Delay the Foundry Production |q 53076/1 |goto 80.17,47.85
@@ -4381,31 +4476,22 @@ Shoot Down #8# Hollowbeak Falcons |q 51284/1 |goto 57.72,26.40
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50776
-Run down the stairs |goto Boralus/0 67.33,16.26 < 5 |only if walking
-Follow the path |goto 65.84,20.41 < 7 |only if walking
-Run down the stairs |goto 62.95,20.38 < 7 |only if walking
-Follow the path |goto 62.58,23.38 < 10 |only if walking
-Run up the stairs |goto 62.90,27.74 < 7 |only if walking
-Run down the stairs |goto 60.16,30.23 < 7 |only if walking
-accept False Prophets##50776 |goto Boralus/0 60.08,34.99
+accept False Prophets##50776 |goto Boralus/0 61.62,37.46
 |tip You will accept this quest automatically.
 step
 clicknpc Tidesage Doomspeaker##134845+
 |tip They look like hooded humans around this area.
-kill 3 Corrupted Surge##142556 |q 50776/1 |goto 85.55,43.39
+|tip They will appear on your minimap as yellow dots.
+kill 3 Disguised K'thir##134845 |q 50776/1 |goto 61.62,37.46
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52144
-Follow the path |goto Tiragarde Sound/0 76.04,49.14 < 7 |only if walking
-Follow the road |goto 76.61,48.96 < 7 |only if walking
-Continue following the road |goto 77.30,49.47 < 10 |only if walking
 accept Foundry Meltdown##52144 |goto Tiragarde Sound/0 78.74,49.67
 |tip You will accept this quest automatically.
 step
-Follow the path |goto 79.68,49.76 < 10 |only if walking
 Kill enemies around this area
 click Experimental Azerite Weapons##295817+
-|tip They look like a trio of glowing bombs on the ground around this area.
+|tip They look like groups of three glowing bombs on the ground around this area.
 click Unfinished Irontide Cannon##296064+
 |tip They look like large cannons on the ground around this area.
 Delay the Foundry Production |q 52144/1 |goto 80.17,47.85
@@ -4414,20 +4500,13 @@ step
 label quest-51654
 accept Fowlmouth##51654 |goto Tiragarde Sound/0 90.45,77.11
 |tip You will accept this quest automatically.
+|tip It looks like a bird that flies around this area.
 step
 kill Fowlmouth##132211 |q 51654/1 |goto 90.45,77.11
+|tip It looks like a bird that flies around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51662
-Follow the path up |goto Tiragarde Sound/0 63.71,30.02 < 7 |only if walking
-Continue up the path |goto 62.49,28.08 < 7 |only if walking
-Continue up the path |goto 61.81,28.53 < 7 |only if walking
-Continue up the path |goto 60.67,28.43 < 7 |only if walking
-Continue following the path |goto 60.27,28.02 < 7 |only if walking
-Continue following the path |goto 59.74,27.80 < 7 |only if walking
-Continue up the path |goto 59.54,27.09 < 7 |only if walking
-Continue up the path |goto 60.21,26.62 < 7 |only if walking
-Continue down the path |goto 60.50,24.71 < 7 |only if walking
 accept Foxhollow Skyterror##51662 |goto Tiragarde Sound/0 60.11,22.18
 |tip You will accept this quest automatically.
 step
@@ -4468,6 +4547,7 @@ accept Ghost of the Deep##51611 |goto Tiragarde Sound/0 69.20,47.08
 |tip You will accept this quest automatically.
 step
 kill Ghost of the Deep##138288 |q 51611/1 |goto 69.60,46.73
+|tip It walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52120
@@ -4561,12 +4641,12 @@ step
 label quest-52805
 accept Like Pulling Teeth##52805 |goto Tiragarde Sound/0 41.76,14.74
 |tip You will accept this quest automatically.
-stickystart "Collect_Intact_Wendigo_Teeth"
+stickystart "Collect_Intact_Wendigo_Teeth_52805"
 step
 Enter the cave |goto 43.11,13.42 < 10 |walk
 kill Gore Horn##140404 |q 52805/2 |goto 43.62,12.65
 step
-label "Collect_Intact_Wendigo_Teeth"
+label "Collect_Intact_Wendigo_Teeth_52805"
 Kill Wendigo enemies around this area
 collect 25 Intact Wendigo Tooth##161312 |q 52805/1 |goto 41.76,14.74
 |next "Tortollan_Seekers_WQ"
@@ -4574,28 +4654,22 @@ step
 label quest-50295
 accept Like Pulling Teeth##50295 |goto Tiragarde Sound/0 41.76,14.74
 |tip You will accept this quest automatically.
-stickystart "Collect_Intact_Wendigo_Teeth"
+stickystart "Collect_Intact_Wendigo_Teeth_50295"
 step
 Enter the cave |goto 43.11,13.42 < 10 |walk
 kill Gore Horn##140404 |q 50295/2 |goto 43.62,12.65
 step
-label "Collect_Intact_Wendigo_Teeth"
+label "Collect_Intact_Wendigo_Teeth_50295"
 Kill Wendigo enemies around this area
 collect 25 Intact Wendigo Tooth##161312 |q 50295/1 |goto 41.76,14.74
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51406
-Follow the path |goto Tiragarde Sound/0 53.14,29.29 < 7 |only if walking
-Continue following the path |goto 53.64,29.18 < 7 |only if walking
-Jump down here |goto 53.93,28.60 < 7 |only if walking
-Jump down here |goto 54.13,28.35 < 7 |only if walking
-Jump down here |goto 54.32,28.09 < 7 |only if walking
-Follow the path up |goto 55.35,27.53 < 7 |only if walking
-accept The Lord's Hunt##51406 |goto Tiragarde Sound/0 57.41,26.07
+accept The Lord's Hunt##51406 |goto Tiragarde Sound/0 57.45,25.89
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
-Join in the Hunt! |q 51406/1 |goto 76.10,82.88
+Join in the Hunt! |q 51406/1 |goto 57.45,25.89
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51895
@@ -4614,25 +4688,19 @@ talk Toki##144361
 Tell him _"I am ready."_
 Speak to Toki |q 51632/1 |goto 61.74,31.41
 step
-Guide Loh to the Goal |q 51632/2 |goto 61.80,31.36
-|tip Use the arrows to guide Loh to the flags.
-|tip You cannot cross your own path or you will have to start over.
+Guide Loh to the Goal |q 51632/2
+|tip Move Loh to each flag, then to the finish line without crossing your own path.
+|tip Use the abilities on your action bar.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51659
-Follow the path |goto Tiragarde Sound/0 42.67,22.51 < 7 |only if walking
-Continue following the path |goto 43.20,22.42 < 7 |only if walking
-Follow the path up |goto 43.89,21.68 < 7 |only if walking
-Continue up the path |goto 44.27,20.12 < 7 |only if walking
-Follow the path |goto 43.92,18.31 < 7 |only if walking
-Enter the cave |goto 43.45,17.16 < 10 |walk
-accept Ghost of the Deep##51659 |goto Tiragarde Sound/0 69.20,47.08
+accept Merianae##51659 |goto Tiragarde Sound/0 43.53,17.31
 |tip You will accept this quest automatically.
+|tip At the bottom of the waterfall.
 step
-Enter the cave |goto 43.45,17.16 < 10 |walk
-kill Merianae##131252
+Enter the cave |goto 43.49,17.23 < 20 |walk
+kill Merianae##131252 |q 51659/1 |goto 43.04,16.75
 |tip Inside the cave.
-Slay Merianae |q 51659/1 |goto 43.06,16.78
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50315
@@ -4708,24 +4776,31 @@ step
 label quest-51462
 accept Paratroopers##51462 |goto Tiragarde Sound/0 67.09,21.38
 |tip You will accept this quest automatically.
+|tip At the top of the hill.
 step
 talk Paratrooper Ort##139434
+|tip At the top of the hill.
 Receive Orders from Paratrooper Ort |q 51462/1 |goto 67.09,21.38
 step
 talk Paratrooper Ort##139434
+|tip At the top of the hill.
 Tell him _"I need to infiltrate the Proudmoore Barracks."_
 Mount the Grand Wyvern |invehicle |goto 67.09,21.38
 step
 Drop Into Proudmoore Academy |outvehicle |goto Boralus/0 38.59,38.55
 |tip Use the "Drop Glider" ability on your action bar.
-stickystart "Slay_Proudmoore_Barracks_Guards"
+stickystart "Slay_Proudmoore_Barracks_Guards_51462"
 step
 kill Drill Sergeant Smithson##137790 |q 51462/3 |goto 35.71,37.90
 |tip Inside the building.
 step
-label "Slay_Proudmoore_Barracks_Guards"
+label "Slay_Proudmoore_Barracks_Guards_51462"
 Kill Proudmoore enemies around this area
 Slay #10# Proudmoore Barracks Guards |q 51462/2 |goto 38.59,38.55
+step
+Escape to Plunder Harbor |goto 87.34,50.56 < 20 |noway |c
+|tip Use the "Signal Flare" ability.
+|tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51646
@@ -4859,11 +4934,6 @@ kill Raging Swell##132179 |q 51661/1 |goto 64.74,58.66
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51890
-Follow the road |goto Tiragarde Sound/0 76.37,63.54 < 10 |only if walking
-Continue following the road |goto 74.19,63.07 < 10 |only if walking
-Continue following the road |goto 73.44,62.42 < 10 |only if walking
-Continue following the road |goto 71.38,63.05 < 10 |only if walking
-Follow the path |goto 69.85,62.63 < 7 |only if walking
 accept Ranja the Last Chillpaw##51890 |goto Tiragarde Sound/0 68.31,63.54
 |tip You will accept this quest automatically.
 step
@@ -4879,6 +4949,43 @@ accept Rough Monelite##53313 |goto Tiragarde Sound/0 62.72,18.37
 step
 click Rough Monelite Deposit##297467
 collect Monelite Ore##152512 |q 53313/1 |goto 62.65,17.78
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51463
+accept Sky Drop Rescue##51463 |goto Tiragarde Sound/0 67.09,21.38
+|tip You will accept this quest automatically.
+step
+talk Paratrooper Ort##139434
+Recieve the Orders from Paratrooper Ort |q 51463/1 |goto 67.09,21.38
+step
+talk Paratrooper Ort##139434
+Tell him _"I need to infiltrate the Proudmoore Barracks."_
+Begin Traveling to Proudmoore Barracks |invehicle |goto 67.09,21.38 |q 51463
+step
+Parachute into Proudmoore Barracks |outvehicle |goto Boralus/0 41.78,33.76 |q 51463
+|tip Use the ability on your action bar.
+step
+click Ball and Chain
+|tip Inside the building.
+Rescue Captive Ta'dom |q 51463/2 |goto 42.50,34.86
+step
+Follow the path |goto 42.27,37.69 < 10 |only if walking
+click Ball and Chain
+|tip Inside the building.
+Rescue Captive Idina |q 51463/3 |goto 40.08,37.39
+step
+click Ball and Chain
+|tip Inside the building.
+Rescue Captive Tanra |q 51463/4 |goto 39.99,39.84
+step
+Follow the path |goto 37.68,39.54 < 5 |walk
+click Ball and Chain
+|tip Inside the building.
+Rescue Captive Ortuk |q 51463/5 |goto 37.47,38.23
+step
+Escape the Proudmoore Barracks |goto Tiragarde Sound/0 87.34,50.56 < 10 |noway |c
+|tip Use the "Signal Flare" ability.
+|tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51578
@@ -4925,43 +5032,34 @@ Slay Sawtooth |q 51893/1 |goto 78.15,46.22
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50767
-Run down the stairs |goto Boralus/0 67.33,16.21 < 7 |only if walking
-Follow the path |goto 65.93,20.44 < 7 |only if walking
-Continue following the path |goto 63.08,20.56 < 7 |only if walking
-Continue following the path |goto 59.03,22.82 < 7 |only if walking
-Continue following the path |goto 57.98,24.95 < 7 |only if walking
-Run up the stairs |goto 57.72,30.04 < 7 |only if walking
-Follow the path |goto 58.36,35.95 < 7 |only if walking
-Follow the path |goto 56.88,38.36 < 7 |only if walking
-accept The Scrimshaw Gang##50767 |goto Tiragarde Sound/0 70.49,29.58
+accept The Scrimshaw Gang##50767 |goto Boralus/0 53.12,41.30
 |tip You will accept this quest automatically.
-stickystart "Destroy_Bootleg_Weapon_Crates"
+stickystart "Collect_Scrimshaw_Ledger_50767"
 step
-Follow the path |goto 70.17,29.72 < 7 |only if walking
-Continue following the path |goto 70.20,30.87 < 10 |only if walking
-Enter the building |goto 70.56,30.65 < 3 |walk
-Run down the stairs |goto 70.85,30.33 < 5 |walk
-kill Don Adams##138603
-|tip Inside the building.
-Slay Don Adams |q 50767/2 |goto 70.62,30.33
+Follow the path |goto 53.86,45.47 < 10 |walk
+Enter the building |goto 54.66,44.94 < 10 |walk
+kill Don Adams##138603 |q 50767/2 |goto 55.01,43.72
+|tip Downstairs inside the building.
 step
-label "Destroy_Bootleg_Weapon_Crates"
+label "Collect_Scrimshaw_Ledger_50767"
 Kill Scrimshaw enemies around this area
-collect Scrimshaw Ledger##158677 |q 50767/1 |goto 70.15,30.67
+collect Scrimshaw Ledger##158677 |q 50767/1 |goto 52.77,45.48
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51626
 accept Shell Game##51626 |goto Tiragarde Sound/0 63.55,57.25
 |tip You will accept this quest automatically.
+|tip At the top of the hill.
 step
 talk Collector Kojo##144353
+|tip At the top of the hill.
 Tell him _"I am ready."_
 Speak to Collector Kojo |q 51626/1 |goto 63.55,57.25
 step
 click Shell+
 |tip Click the shells to reveal objects.
 |tip Match the objects in pairs.
-Complete Collector Kojo's Shell Game |q 51626/2 |goto 63.55,57.25
+Complete Collector Kojo's Shell Game |q 51626/2
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51892
@@ -5039,19 +5137,19 @@ Ride the Pengling to the Goal |q 49994/2 |goto 82.61,10.57
 |next "Tortollan_Seekers_WQ"
 step
 label quest-53189
-Follow the path |goto Tiragarde Sound/0 76.55,65.69 < 7 |only if walking
-Continue following the path |goto 77.07,66.61 < 10 |only if walking
-Continue following the path |goto 78.91,67.42 < 10 |only if walking
-Continue up the path |goto 79.64,67.47 < 10 |only if walking
+Follow the path up |goto Tiragarde Sound/0 79.04,67.39 < 20 |only if walking
 accept Slippery Slopes##53189 |goto Tiragarde Sound/0 79.84,66.57
 |tip You will accept this quest automatically.
 step
 talk Rodrigo##129098
 Talk to the Penguing Sledding Barker |q 53189/1 |goto 79.84,66.57
 step
+Fly to the Top of the Slope |outvehicle |goto 83.41,64.72 |q 53189
+step
 clicknpc Racing Pengling##131523
-|tip Avoid the small mounds of snow on the ground around this area.
-Ride the Pengling to the Goal |q 53189/2 |goto 79.84,66.57
+Ride the Pengling to the Goal |q 53189/2 |goto 83.59,64.90
+|tip You will begin sliding down the ice path.
+|tip Avoid the small mounds of snow on the ground as you slide down the mountain.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52143
@@ -5086,24 +5184,16 @@ collect Smooth Platinum##163627 |q 53315/1 |goto 63.67,50.34
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50977
-Follow the road up |goto Tiragarde Sound/0 75.50,43.55 < 7 |only if walking
-Follow the path |goto 76.91,41.83 < 7 |only if walking
-Follow the road |goto 76.85,38.87 < 10 |only if walking
-Continue following the road |goto 76.74,38.66 < 7 |only if walking
-Continue following the road |goto 76.74,38.66 < 10 |only if walking
-accept Smuggler Shakedown##50977 |goto Tiragarde Sound/0 76.74,38.66
+accept Smuggler Shakedown##50977 |goto Boralus/0 63.10,61.76
 |tip You will accept this quest automatically.
-stickystart "Destroy_Bootleg_Weapon_Crates"
+stickystart "Collect_Bootleg_Weapon_Crates_50977"
 step
-Run up the stairs |goto 76.74,38.66 < 5 |only if walking
-Follow the path |goto 76.74,38.66 < 7 |only if walking
-Run down the stairs |goto 76.74,38.66 < 7 |only if walking
-kill Mattius "The Gun" Grubb##136198 |q 50977/2 |goto 76.74,38.66
+kill Mattius "The Gun" Grubb##136198 |q 50977/2 |goto 62.07,62.19
 step
-label "Destroy_Bootleg_Weapon_Crates"
+label "Collect_Bootleg_Weapon_Crates_50977"
 click Bootleg Weapon Crate##287091+
 |tip They look like large brown boxes on the ground around this area.
-collect 5 Bootleg Weapon Crate##159673 |q 50977/1 |goto 76.74,38.66
+collect 5 Bootleg Weapon Crate##159673 |q 50977/1 |goto 64.61,63.56
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50421
@@ -5146,19 +5236,18 @@ kill Squirgle of the Depths##139135 |q 51839/1 |goto 48.90,37.02
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51388
-Follow the path |goto Tiragarde Sound/0 42.11,30.03 < 7 |only if walking
-accept Stopping the Infestation##51388 |goto Tiragarde Sound/0 70.49,29.58
+accept Stopping the Infestation##51388 |goto Tiragarde Sound/0 40.63,29.61
 |tip You will accept this quest automatically.
-stickystart "Slay_Parasitic_Mindstealers"
+stickystart "Kill_Parasitic_Mindstealers_51388"
 step
 click Infested Cargo##289363+
 |tip They look like small crates underwater around this area.
-Burn #5# Infested Cargo |q 51388/1 |goto 41.10,29.53
+Burn #5# Infested Cargo |q 51388/1 |goto 40.63,29.61
 step
-label "Slay_Parasitic_Mindstealers"
+label "Kill_Parasitic_Mindstealers_51388"
 kill 5 Parasitic Mindstealer##125959
 |tip Underwater.
-Slay #5# Parasitic Mindstealers |q 51388/2 |goto 41.10,29.53
+Slay #5# Parasitic Mindstealers |q 51388/2 |goto 40.63,29.61
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52804
@@ -5666,9 +5755,8 @@ label quest-51894
 accept Tentulos the Drifter##51894 |goto Tiragarde Sound/0 55.32,51.53
 |tip You will accept this quest automatically.
 step
-kill Tentulos the Drifter##139289
+kill Tentulos the Drifter##139289 |q 51894/1 |goto 55.32,51.53
 |tip Underwater.
-Slay Tentulos the Drifter |q 51894/1 |goto 55.32,51.53
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51655
@@ -5778,10 +5866,6 @@ click Vigil Hill Documents##293688
 |tip Inside the tent.
 collect Vigil Hill Documents##162449 |q 52752/2 |goto 53.51,57.17
 step
-Follow the path up |goto 53.59,57.91 < 7 |only if walking
-Continue up the path |goto 54.00,58.03 < 7 |only if walking
-Run up the stairs |goto 54.14,57.36 < 7 |only if walking
-Enter the building |goto 54.07,56.91 < 5 |walk
 kill Commander Hallewell##141510
 |tip Inside the building.
 collect Daelin's Gate Dossier##162448 |q 52752/1 |goto 54.04,56.52
@@ -5849,24 +5933,222 @@ label quest-50983
 collect 40 Akunda's Bite##152507 |q 50983 |future
 |tip Farm them with Herbalism or purchase them from the Auction House.
 step
-accept Work Order: Akunda's Bite##50983 |goto Tiragarde Sound/0 73.68,24.99
+accept Work Order: Akunda's Bite##50983 |goto Boralus/0 67.52,21.56
 |tip You will accept this quest automatically.
 step
 talk Provisioner Fray##135808
 |tip Inside the building.
-turnin Work Order: Akunda's Bite##50983 |goto 73.68,24.99
+turnin Work Order: Akunda's Bite##50983 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52423
+collect 5 Battle Flag: Phalanx Defense##154706 |q 52423 |future
+|tip Create them with Tailoring or purchase them from the Auction House.
+step
+accept Work Order: Battle Flag: Phalanx Defense##52423 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Battle Flag: Phalanx Defense##52423 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50992
+collect 40 Calcified Bone##154165 |q 50992 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Calcified Bone##50992 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Calcified Bone##50992 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52389
+collect 5 Contract: Proudmoore Admiralty##153661 |q 52389 |future
+|tip Create them with Inscription or purchase them from the Auction House.
+step
+accept Work Order: Contract: Proudmoore Admiralty##52389 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Contract: Proudmoore Admiralty##52389 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52368
+collect 5 Crow's Nest Scope##158212 |q 52368 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Crow's Nest Scope##52368 |goto Boralus/0 73.22,11.34
+|tip You will accept this quest automatically.
+step
+talk Henrick Wyther##142095
+turnin Work Order: Crow's Nest Scope##52368 |goto 73.22,11.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50998
+collect 40 Deep Sea Satin##152577 |q 50998 |future
+|tip Farm them from Humanoid mobs or purchase them from the Auction House.
+step
+accept Work Order: Deep Sea Satin##50998 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Deep Sea Satin##50998 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52331
+collect 10 Demitri's Draught of Deception##152496 |q 52331 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Demitri's Draught of Deception##52331 |goto Boralus/0 73.22,11.34
+|tip You will accept this quest automatically.
+step
+talk Henrick Wyther##142095
+turnin Work Order: Demitri's Draught of Deception##52331 |goto 73.22,11.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52355
+collect 3 Enchant Weapon - Coastal Surge##153476 |q 52355 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Weapon - Coastal Surge##52355 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Enchant Weapon - Coastal Surge##52355 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52356
+collect 3 Enchant Weapon - Torrent of Elements##153479 |q 52356 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Weapon - Torrent of Elements##52356 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Enchant Weapon - Torrent of Elements##52356 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52363
+collect 5 Incendiary Ammunition##158203 |q 52363 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Incendiary Ammunition##52363 |goto Boralus/0 73.22,11.34
+|tip You will accept this quest automatically.
+step
+talk Henrick Wyther##142095
+turnin Work Order: Incendiary Ammunition##52363 |goto 73.22,11.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52405
+collect 10 Kubiline##153702 |q 52405 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Kubiline##52405 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Kubiline##52405 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52340
+collect 5 Monel-Hardened Hoofplates##152812 |q 52340 |future
+|tip Craft them with Blacksmithing or purchase them from the Auction House.
+step
+accept Work Order: Monel-Hardened Hoofplates##52340 |goto Boralus/0 73.22,11.34
+|tip You will accept this quest automatically.
+step
+talk Henrick Wyther##142095
+turnin Work Order: Monel-Hardened Hoofplates##52340 |goto 73.22,11.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52339
+collect 5 Monel-Hardened Stirrups##152813 |q 52339 |future
+|tip Craft them with Blacksmithing or purchase them from the Auction House.
+step
+accept Work Order: Monel-Hardened Stirrups##52339 |goto Boralus/0 73.22,11.34
+|tip You will accept this quest automatically.
+step
+talk Henrick Wyther##142095
+turnin Work Order: Monel-Hardened Stirrups##52339 |goto 73.22,11.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52333
+collect 5 Sea Mist Potion##152550 |q 52333 |future
+|tip Craft them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Sea Mist Potion##52333 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Sea Mist Potion##52333 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52417
+collect 10 Shimmerscale Diving Helmet##154169 |q 52417 |future
+|tip Craft them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Shimmerscale Diving Helmet##52417 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Shimmerscale Diving Helmet##52417 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52416
+collect 10 Shimmerscale Diving Suit##154168 |q 52416 |future
+|tip Craft them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Shimmerscale Diving Suit##52416 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Shimmerscale Diving Suit##52416 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52404
+collect 10 Solstone##153703 |q 52404 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Solstone##52404 |goto Boralus/0 67.52,21.56
+|tip You will accept this quest automatically.
+step
+talk Provisioner Fray##135808
+|tip Inside the building.
+turnin Work Order: Solstone##52404 |goto 67.52,21.56
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52392
+collect 20 Ultramarine Pigment##153635 |q 52392 |future
+|tip Mill them with Inscription or purchase them from the Auction House.
+step
+accept Work Order: Ultramarine Pigment##52392 |goto Boralus/0 73.22,11.34
+|tip You will accept this quest automatically.
+step
+talk Henrick Wyther##142095
+turnin Work Order: Ultramarine Pigment##52392 |goto 73.22,11.34
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50984
 collect 40 Winter's Kiss##152508 |q 50984 |future
 |tip Farm them with Herbalism or purchase them from the Auction House.
 step
-accept Work Order: Winter's Kiss##50984 |goto Tiragarde Sound/0 73.68,24.99
+accept Work Order: Winter's Kiss##50984 |goto Boralus/0 67.52,21.56
 |tip You will accept this quest automatically.
 step
 talk Provisioner Fray##135808
 |tip Inside the building.
-turnin Work Order: Winter's Kiss##50984 |goto 73.68,24.99
+turnin Work Order: Winter's Kiss##50984 |goto 67.52,21.56
 |next "Tortollan_Seekers_WQ"
 step
 label "Tortollan_Seekers_WQ"
@@ -5930,14 +6212,10 @@ kill Skithis the Infused##136732 |q 51185/1 |goto 60.67,62.51
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52849
-Follow the path |goto Vol'dun/0 39.43,34.39 < 15 |only if walking
-Continue following the path |goto 41.91,32.17 < 15 |only if walking
-Follow the path |goto 44.45,27.58 < 15 |only if walking
-Follow the path |goto 45.06,19.93 < 15 |only if walking
-accept Azerite Empowerment##52849 |goto 46.84,18.52
+accept Azerite Empowerment##52849 |goto Vol'dun/0 46.84,18.52
 |tip You will accept this quest automatically.
 step
-Enter the cave |goto 47.05,18.62 < 5 |walk
+Enter the cave |goto 47.05,18.62 < 10 |walk
 kill Warlord Dagu##141931 |q 52849/1 |goto 47.68,20.22
 |tip Inside the cave.
 |next "Tortollan_Seekers_WQ"
@@ -5953,7 +6231,7 @@ Absorb Azerite from Defeated Elementals |q 51422/1 |goto 59.34,61.24
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50975
-accept Azerite Mining##50975 |goto Vol'dun/0 35.09,60.22
+accept Azerite Mining##50975 |goto Vol'dun/0 59.80,60.79
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
@@ -5961,12 +6239,11 @@ click Azerite Chunk##290611+
 |tip They look like large multicolored veins on the ground around this area.
 click Azerite Node##290723+
 |tip They look like small multicolored veins on the ground around this area.
-Recover Azerite |q 50975/1 |goto 34.65,63.00
-You can find more in the cave at [34.27,62.77]
+Recover Azerite |q 50975/1 |goto 59.80,60.79
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52875
-accept Azerite Mining##52875 |goto Vol'dun/0 35.09,60.22
+accept Azerite Mining##52875 |goto Vol'dun/0 34.65,63.00
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
@@ -5983,6 +6260,7 @@ accept Azerite Wounds##51428 |goto Vol'dun/0 59.88,60.97
 |tip You will accept this quest automatically.
 step
 Heal #5# Azerite Wounds |q 51428/1 |goto 59.88,60.97
+|tip Use the "Heart of Azeroth" ability.
 |tip Use it near the blue glowing spots with sparks flying out of them on the ground around this area.
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
@@ -6003,8 +6281,12 @@ kill Bajiani the Slick##128497 |q 51117/1 |goto 31.00,81.09
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51641
-accept Beachhead##51641 |goto Vol'dun/0 66.61,21.54
+accept Beachhead##51641 |goto Vol'dun/0 66.53,21.51
 |tip You will accept this quest automatically.
+step
+talk Scrollsage Nola##144359
+Tell her _"I am ready."_
+Speak to Scrollsage Nola |q 51641/1 |goto 66.53,21.51
 step
 kill Vicious Albatross##138186+
 |tip They look like birds flying in the air around this area.
@@ -6012,7 +6294,7 @@ kill Vicious Albatross##138186+
 kill Armored Claw##138242+
 |tip They look like small crabs in the water.
 |tip Use the ability on your action bar.
-Help #15# Juvenile Turtles Reach the Ocean |q 51641/1 |goto 66.61,21.54
+Help #12# Juvenile Turtles Reach the Ocean |q 51641/2
 |tip The turtles will slowly walk into the water.
 |tip You must protect them from the birds and crabs.
 |next "Tortollan_Seekers_WQ"
@@ -6059,7 +6341,7 @@ label quest-51155
 accept Brgl-Lrgl the Basher##51155 |goto Vol'dun/0 30.41,45.60
 |tip You will accept this quest automatically.
 step
-Enter the cave |goto 29.99,46.27 < 5 |walk
+Enter the cave |goto 29.99,46.27 < 10 |walk
 kill Brgl-Lrgl the Basher##134643 |q 51155/1 |goto 29.77,46.48
 |tip Inside the cave.
 |next "Tortollan_Seekers_WQ"
@@ -6070,6 +6352,31 @@ accept Bubbling Totem Testing##51793 |goto Vol'dun/0 48.81,43.65
 step
 Kill enemies around this area
 Disrupt the Court of Zak'rajan |q 51793/1 |goto 47.48,44.17
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51098
+accept Commodore Calhoun##51098 |goto Vol'dun/0 43.00,92.30
+|tip You will accept this quest automatically.
+step
+Follow the path up |goto 43.00,92.30 < 15 |only if walking
+Cross the bridge |goto 43.47,91.70 < 15 |only if walking
+kill Commodore Calhoun##124722 |q 51098/1 |goto 42.51,92.08
+|tip Up on the wooden dock.
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51780
+accept Dinner for Dolly and Dot##51780 |goto Vol'dun/0 32.20,59.08
+|tip You will accept this quest automatically.
+stickystart "Collect_Buzzard_Meat_51780"
+step
+click Speckled Egg+
+|tip They look like blue eggs in large bird nests on the ground around this area.
+collect 12 Speckled Egg##155679 |q 51780/1 |goto 29.13,64.69
+step
+label "Collect_Buzzard_Meat_51780"
+kill Bonebeak Buzzard##139072+
+|tip They can be flying in the air around this area.
+collect 6 Buzzard Meat##155680 |q 51780/2 |goto 29.37,64.03
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51559
@@ -6127,6 +6434,20 @@ Kill enemies around this area
 Disrupt the Court of Zak'rajan |q 51794/1 |goto 47.48,44.17
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51285
+accept Feeding Frenzy##51285 |goto Vol'dun/0 36.21,43.98
+|tip You will accept this quest automatically.
+step
+clicknpc Gulch Beetle##137077+
+|tip They look like borwn insects on the ground around this area.
+collect 5 Gulch Beetle##159832 |n
+Feed King Rakataka to Death |q 51285/1 |goto 36.21,43.98
+|tip Use the "Feed Rakataka" ability on King Rakataka.
+|tip It appears as a button on the screen.
+|tip He walks around this area.
+|tip He will appear on your minimap as a yellow dot.
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51900
 accept Faithless Follow-Through##51900 |goto Vol'dun/0 53.94,34.95
 |tip You will accept this quest automatically.
@@ -6151,26 +6472,22 @@ accept Fertilizer Duty##51198 |goto Vol'dun/0 53.22,15.75
 |tip You will accept this quest automatically.
 step
 clicknpc Fertilizer##136770+
-|tip Use the extra action button onscreen to feed meat to Dustmane hyenas.
-|tip After a short pause, they will leave "fertilizer."
-|tip They look like small brown mounds on the ground around this area.
+|tip Use the "Feed Hyena" ability on Dustmane enemies around this area.
+|tip It appears as a button on the screen.
+|tip They will walk a bit and then leave "Fertilizer" on the ground.
 Collect #10# Fertilizer |q 51198/1 |goto 53.22,15.75
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52798
+Follow the path up |goto Vol'dun/0 28.46,66.11 < 20 |only if walking
 accept A Few More Charges##52798 |goto Vol'dun/0 30.23,69.41
 |tip You will accept this quest automatically.
 step
-Follow the path |goto 30.06,69.07 < 7 |only if walking
-Continue down the path |goto 29.17,67.94 < 7 |only if walking
-Continue up the path |goto 28.64,68.46 < 5 |only if walking
 click Lectric Frequency Modulator##292647
 Use the Lectric Frequency Modulator |q 52798/1 |goto 28.66,68.71
 step
-Roll over Lashers
-|tip Avoid the cacti, whirlwinds, and Big Mama.
-|tip Big Mama is the giant lasher half-buried in the ground around this area.
 Feed Lashers to the Ranishu |q 52798/2 |goto 31.00,81.09
+|tip Roll over enemies around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51565
@@ -6190,7 +6507,6 @@ Feed King Rakataka to Death |q 51565/1 |goto 53.64,34.57
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51564
-Follow the path up |goto Vol'dun/0 53.22,15.75 < 15 |only if walking
 accept Fertilizer Duty##51564 |goto Vol'dun/0 53.22,15.75
 |tip You will accept this quest automatically.
 step
@@ -6229,20 +6545,22 @@ step
 label quest-51228
 accept Instant Meat, Ready to Eat##51228 |goto Vol'dun/0 44.74,23.91
 |tip You will accept this quest automatically.
-stickystart "Collect_Steaming_Crab_Meat"
+stickystart "Collect_Steaming_Crab_Meat_51228"
 step
 use the Meatification Potion##159796
-|tip Use it on buzzards around this area.
+|tip Use it on Bonebeak Scavengers around this area.
 click Bonebeak Scavenger Meat##288190+
-|tip They look like little pieces of bird meat on the ground around this area.
+|tip They look like brown pieces of chicken that appear on the ground around this area.
+|tip They sometimes appear after you use the Meatification Potion on Bonebeak Scavengers.
 collect 15 Broiled Buzzard Meat##159794 |q 51228/1 |goto 43.40,23.35
 step
-label "Collect_Steaming_Crab_Meat"
+label "Collect_Steaming_Crab_Meat_51228"
 use the Meatification Potion##159796
-|tip Use it on crabs around this area.
+|tip Use it on Brineclaw enemies around this area.
 Kill Brineclaw enemies around this area
 click Brineclaw Meat##288190+
-|tip They look like little pieces of purple meat on the ground around this area.
+|tip They look like purple lumps that appear on the ground around this area.
+|tip They sometimes appear after you use the Meatification Potion on Brineclaw enemies.
 collect 15 Steaming Crab Meat##159795 |q 51228/2 |goto 43.40,23.35
 |next "Tortollan_Seekers_WQ"
 step
@@ -6277,6 +6595,8 @@ accept Instructions Not Included##51174 |goto Vol'dun/0 58.85,41.67
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
+|tip Use the "Shrinking-Shot" ability.
+|tip It appears as a button on the screen.
 Slay #8# Brine Basin Wildlife |q 51174/1 |goto 58.85,41.67
 |next "Tortollan_Seekers_WQ"
 step
@@ -6359,11 +6679,10 @@ label quest-51252
 accept Kiro's Desert Flower##51252 |goto Vol'dun/0 55.45,67.75
 |tip You will accept this quest automatically.
 step
-Follow the path |goto 56.25,67.78 < 5 |only if walking
 talk Kiro##137027
 Tell him _"I am ready."_
-Kill Sandstinger enemies around this area
-|tip Several waves of enemies will attack.
+Watch the dialogue
+Kill the enemies that attack in waves
 Assist Kiro |q 51252/1 |goto 55.45,67.75
 step
 kill Crimson Gnarlvine##137046 |q 51252/2 |goto 55.43,67.42
@@ -6377,7 +6696,7 @@ talk Toki##138480
 Tell him _"I am ready."_
 Speak to Toki |q 51635/1 |goto 63.36,23.51
 step
-Guide Loh to the Goal |q 51635/2 |goto 63.36,23.51
+Guide Loh to the Goal |q 51635/2
 |tip Move Loh to each flag, then to the finish line without crossing your own path.
 |tip Use the abilities on your action bar.
 |next "Tortollan_Seekers_WQ"
@@ -6386,8 +6705,7 @@ label quest-51153
 accept Mor'fani the Exile##51153 |goto Vol'dun/0 36.40,88.36
 |tip You will accept this quest automatically.
 step
-Follow the path up |goto 36.41,89.11 < 15 |only if walking
-Enter the building |goto 37.45,88.46 < 5 |walk
+Follow the path up |goto 36.41,89.11 < 20 |only if walking
 kill Mor'fani the Exile##134694 |q 51153/1 |goto 37.44,89.10
 |tip Inside the building.
 |next "Tortollan_Seekers_WQ"
@@ -6419,15 +6737,15 @@ step
 label quest-51850
 accept Preserve the Oasis##51850 |goto Vol'dun/0 41.46,62.07
 |tip You will accept this quest automatically.
-stickystart "Slay_Whistlebloom_Predators"
+stickystart "Slay_Whistlebloom_Predators_51850"
 step
 click Fertile Soil##291206+
-|tip They look like mounds of fresh dirt on the ground around this area.
+|tip They look like brown piles of dirt on the ground around this area.
 Water #6# Fertile Soil |q 51850/2 |goto 41.46,62.07
 step
-label "Slay_Whistlebloom_Predators"
+label "Slay_Whistlebloom_Predators_51850"
 Kill Whistlebloom enemies around this area
-Kill #6# Whistlebloom Predators |q 51850/1 |goto 41.46,62.07
+Slay #6# Whistlebloom Predators |q 51850/1 |goto 41.46,62.07
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51853
@@ -6486,6 +6804,13 @@ Kill Withered enemies around this area
 collect 12 Resilient Seed##159909 |q 51330/1 |goto 43.46,80.61
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51106
+accept Songstress Nahjeen##51106 |goto Vol'dun/0 66.89,24.45
+|tip You will accept this quest automatically.
+step
+kill Songstress Nahjeen##136304 |q 51106/1 |goto 66.89,24.45
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51173
 accept Sandfishing##51173 |goto Vol'dun/0 52.22,59.75
 |tip You will accept this quest automatically.
@@ -6497,8 +6822,8 @@ collect 8 Sandworm Fang##159767 |q 51173/1 |goto 52.22,59.75
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51116
-Follow the path up |goto Vol'dun/0 54.92,36.78 < 20 |only if walking
-Follow the path up |goto Vol'dun/0 53.32,35.48 < 20 |only if walking
+Follow the path up |goto Vol'dun/0 54.92,36.78 < 20 |only if walking and Alliance
+Follow the path up |goto Vol'dun/0 53.32,35.48 < 20 |only if walking and Alliance
 accept Skycarver Krakit##51116 |goto Vol'dun/0 52.23,36.20
 |tip You will accept this quest automatically.
 step
@@ -6544,16 +6869,14 @@ step
 click Shell+
 |tip Click the shells to reveal objects.
 |tip Match the objects in pairs.
-Complete Collector Kojo's Shell Game |q 51629/2 |goto 27.34,50.21
+Complete Collector Kojo's Shell Game |q 51629/2
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51104
-Follow the path |goto Vol'dun/0 39.43,34.39 < 10 |only if walking
-Continue following the path |goto 41.91,32.17 < 10 |only if walking
-Enter the cave |goto 46.38,27.14 < 5 |walk
 accept Skycaller Teskris##51104 |goto 46.65,27.12
-|tip You will accept this quest automatically inside the cave.
+|tip You will accept this quest automatically.
 step
+Enter the cave |goto 46.38,27.14 < 10 |walk
 kill Skycaller Teskris##134571 |q 51104/1 |goto 46.96,25.15
 |tip Inside the cave.
 |next "Tortollan_Seekers_WQ"
@@ -6578,11 +6901,21 @@ Tell him _"Begin pet battle."_
 Defeat Sizzik |q 52856/1 |goto 26.59,54.92
 |next "Tortollan_Seekers_WQ"
 step
-label quest-51120
-accept Stef "Marrow" Quin##51120 |goto Vol'dun/0 41.38,24.20
+label quest-51836
+accept Sourcing Resources##51836 |goto Vol'dun/0 47.57,87.01
 |tip You will accept this quest automatically.
 step
-kill Captain Stef "Marrow" Quin##136346 |q 51120/1 |goto 41.38,24.20
+click Large Azerite Sack##291154+
+|tip Use the "Whacking" ability that appears onscreen on Orc Peons.
+|tip Peons walk around this area carrying Large Azerite Sacks.
+collect 8 Azerite Sack##160755 |q 51836/1 |goto 47.57,87.01
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51120
+accept Stef "Marrow" Quin##51120 |goto Vol'dun/0 41.32,24.18
+|tip You will accept this quest automatically.
+step
+kill Captain Stef "Marrow" Quin##136346 |q 51120/1 |goto 41.32,24.18
 |tip She walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
@@ -6630,24 +6963,56 @@ label "Slay_Pirates"
 Slay #50# Pirates |q 52059/4 |goto 32.98,84.19
 |next "Tortollan_Seekers_WQ"
 step
-label quest-51983
-accept Vorrik's Vengeance##51983 |goto Vol'dun/0 47.26,35.17
+label quest-51119
+Follow the path up |goto Vol'dun/0 56.48,71.53 < 15 |only if walking
+accept Vathikur##51119 |goto Vol'dun/0 57.32,73.30
 |tip You will accept this quest automatically.
 step
+kill Pit Snake##126894+
+kill Vathikur##130401 |q 51119/1 |goto 57.32,73.30
+|tip He appears after you kill all of the Pit Snakes.
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51983
+accept Vorrik's Vengeance##51983 |goto Vol'dun/0 45.42,35.05
+|tip You will accept this quest automatically.
+step
+Follow the path up |goto Vol'dun/0 45.46,35.18 < 20 |only if walking
+Follow the path up |goto 46.37,37.53 < 10 |only if walking
 clicknpc Rakjan the Unbroken##139454
+|tip At the top of the mountain.
 Mount Rakjan the Unbroken |q 51983/1 |goto 47.16,39.38
 step
+Kill enemies around this area
+|tip They are on the ground as you fly.
+|tip Use the abilities on your action bar.
 Slay #50# Faithless |q 51983/2 |goto 47.76,32.25
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51995
-accept Vorrik's Vengeance##51995 |goto Vol'dun/0 47.26,35.17
+accept Vorrik's Vengeance##51995 |goto Vol'dun/0 45.42,35.05
 |tip You will accept this quest automatically.
 step
+Follow the path up |goto Vol'dun/0 45.46,35.18 < 20 |only if walking
+Follow the path up |goto 46.37,37.53 < 10 |only if walking
 clicknpc Rakjan the Unbroken##139454
+|tip At the top of the mountain.
 Mount Rakjan the Unbroken |q 51995/1 |goto 47.16,39.38
 step
+Kill enemies around this area
+|tip They are on the ground as you fly.
+|tip Use the abilities on your action bar.
 Slay #50# Faithless |q 51995/2 |goto 47.76,32.25
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51223
+accept Walking on Broken Glass##51223 |goto Vol'dun/0 28.72,47.35
+|tip You will accept this quest automatically.
+step
+Kill Tideflat enemies around this area
+click Sea Glass##288168+
+|tip They look various colored crystals on the ground around this area.
+collect 30 Sea Glass##159790 |q 51223/1 |goto 28.72,47.35
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51316
@@ -6766,13 +7131,14 @@ step
 label quest-51763
 accept Zem'lan Rescue##51763 |goto Vol'dun/0 38.46,78.98
 |tip You will accept this quest automatically.
-stickystart "Slay_Zem'lan_Pirates"
+stickystart "Slay_Zemlan_Pirates_51763"
 step
 clicknpc Captured Exile##138976+
-|tip They look like bound Trolls around this area.
+|tip They look like troll soldiers sitting on the ground around this area.
+|tip They will appear on your minimap as yellow dots.
 Free #4# Prisoners |q 51763/1 |goto 36.62,79.29
 step
-label "Slay_Zem'lan_Pirates"
+label "Slay_Zemlan_Pirates_51763"
 Kill enemies around this area
 Slay #10# Zem'lan Pirates |q 51763/2 |goto 36.62,79.29
 |next "Tortollan_Seekers_WQ"
@@ -6780,14 +7146,14 @@ step
 label quest-51783
 accept Zem'lan Rescue##51783 |goto Vol'dun/0 37.70,81.98
 |tip You will accept this quest automatically.
-stickystart "Slay_Zem'lan_Pirates"
+stickystart "Slay_Zemlan_Pirates_51783"
 step
 clicknpc Captured NPC's
 |tip They look like human soldiers sitting on the ground around this area.
 |tip They will appear on your minimap as yellow dots.
 Free #4# Prisoners |q 51783/1 |goto 36.28,80.56
 step
-label "Slay_Zem'lan_Pirates"
+label "Slay_Zemlan_Pirates_51783"
 Kill enemies around this area
 Slay #10# Zem'lan Pirates |q 51783/2 |goto 36.28,80.56
 |next "Tortollan_Seekers_WQ"
@@ -6927,6 +7293,13 @@ Heal #5# Azeroth Wounds |q 51175/1 |goto 56.15,22.96
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50868
+accept Bramblewing##50868 |goto Zuldazar/0 66.74,32.29
+|tip You will accept this quest automatically.
+step
+kill Bramblewing##131718 |q 50868/1 |goto 66.74,32.29
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50652
 accept Biting the Hand that Feeds Them##50652 |goto Zuldazar/0 70.47,39.99
 |tip You will accept this quest automatically.
@@ -6988,16 +7361,25 @@ step
 kill Bloodbulge##128699 |q 50862/1 |goto 59.84,18.29
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50854
+accept Crimsonclaw##50854 |goto Zuldazar/0 70.41,32.86
+|tip You will accept this quest automatically.
+step
+Enter the cave |goto 70.41,32.86 < 10 |walk
+kill Umbra'jin##122004 |q 50854/1 |goto 71.41,32.40
+|tip Inside the cave.
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50966
 accept Cleanup Crew##50966 |goto Zuldazar/0 76.67,50.53
 |tip You will accept this quest automatically.
-stickystart "Slay_7th_Legion_Sailors"
+stickystart "Slay_7th_Legion_Sailors_50966"
 step
 click 7th Legion Supply Crate##284468+
 |tip They look like small wooden crates on the ground around this area.
 collect 5 Bundle of Supplies##160703 |q 50966/2 |goto 76.67,50.53
 step
-label "Slay_7th_Legion_Sailors"
+label "Slay_7th_Legion_Sailors_50966"
 Kill 7th Legion enemies around this area
 Slay #10# 7th Legion Sailors |q 50966/1 |goto 76.67,50.53
 |next "Tortollan_Seekers_WQ"
@@ -7095,12 +7477,15 @@ kill Gahz'ralka##129954 |q 50877/1 |goto 64.24,32.73
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50765
-accept Herding Children##50765 |goto Dazar'alor/0 52.76,89.04
+accept Herding Children##50765 |goto Dazar'alor/0 52.87,89.82
 |tip You will accept this quest automatically.
 step
-Chase #3# Orphans |q 50765/1 |goto 52.76,89.04
-|tip They look like small children around this area.
-|tip Chase them to caretakers, which appear on the map as a yellow dot.
+Chase #3# Orphans |q 50765/1 |goto 52.87,89.82
+|tip They look like small blue children around this area.
+|tip Run next to them to make them run away from you.
+|tip Try to make them run toward Caretaker Padae.
+Chase them toward [53.71,84.81]
+|tip Caretaker Padae will appear on your map as a yellow dot.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51497
@@ -7194,16 +7579,22 @@ Kill Atal'zul enemies around this area
 Slay #12# Zul Followers |q 50547/1 |goto 79.54,16.27
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50885
+accept Lei-zhi##50885 |goto Zuldazar/0 58.68,74.19
+|tip You will accept this quest automatically.
+step
+kill Lei-zhi##131233 |q 50885/1 |goto 58.68,74.19
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51496
 accept Loa Your Standards##51496 |goto Dazar'alor/0 47.48,23.49
 |tip You will accept this quest automatically.
 step
 click Idol of Gonk##293876+
-|tip They look like small green statues around this area.
+|tip They look like small green statues on the ground around this area.
 click Greater Idol of Gonk##293878+
-|tip They look like large green statues around this area.
-kill Raptari Druid##141891+
-Prank #10# Raptari Druids |q 51496/1 |goto 50.47,17.00
+|tip They look like large green statues on the ground around this area.
+Prank #10# Raptari Druids |q 51496/1 |goto 47.56,20.91
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50876
@@ -7281,9 +7672,9 @@ label quest-50524
 accept Purify the Temple##50524 |goto Zuldazar/0 73.34,27.91
 |tip You will accept this quest automatically.
 step
+Kill enemies around this area
 click Blasphemous Writing##281675+
 |tip They look like scrolls on the ground around this area.
-Kill enemies around this area
 Purify the Temple Grounds |q 50524/1 |goto 73.59,25.60
 |next "Tortollan_Seekers_WQ"
 step
@@ -7356,6 +7747,20 @@ Kill enemies around this area
 Defeat #4# Loa Champions |q 50964/1 |goto 43.63,7.37
 |next "Tortollan_Seekers_WQ"
 step
+label quest-50873
+Follow the road |goto Zuldazar/0 65.10,43.21 < 30 |only if walking and Horde
+accept Strange Egg##50873 |goto Zuldazar/0 61.99,46.23
+|tip You will accept this quest automatically.
+step
+Enter the cave |goto 61.99,46.23 < 10 |walk
+click Strange Egg
+|tip Inside the cave.
+Choose _"Investigate the egg."_
+Kill the enemies that attack in waves
+kill Vukuba##134048
+Investigate the Strange Egg |q 50873/1 |goto 61.90,46.22
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50737
 Cross the bridge |goto Zuldazar/0 53.21,49.16 < 20 |only if walking
 Run down the stairs |goto Dazar'alor/0 49.73,64.05 < 15 |only if walking
@@ -7386,13 +7791,13 @@ step
 label quest-50581
 accept Scrolls and Scales##50581 |goto Zuldazar/0 82.20,39.91
 |tip You will accept this quest automatically.
-stickystart "Slay_Dreadcoil Seekers"
+stickystart "Kill_Dreadcoil_Seekers_50581"
 step
 click Scroll of Gral##281652+
-|tip They look like large scrollcases on the ground around this area.
+|tip They look like large glass tubes on the ground around this area.
 collect 4 Scroll of Gral##158068 |q 50581/2 |goto 82.20,39.91
 step
-label "Slay_Dreadcoil Seekers"
+label "Kill_Dreadcoil_Seekers_50581"
 kill 8 Dreadcoil Seeker##125174 |q 50581/1 |goto 82.20,39.91
 |next "Tortollan_Seekers_WQ"
 step
@@ -7440,9 +7845,9 @@ Tell him _"I am ready."_
 Speak to Collector Kojo |q 51630/1 |goto 37.84,78.83
 step
 click Shell+
-|tip Click the shells to reveal matching objects.
-|tip Shell objects will match in pairs.
-Complete Collector Kojo's Shell Game |q 51630/2 |goto 37.84,78.83
+|tip Click the shells to reveal objects.
+|tip Match the objects in pairs.
+Complete Collector Kojo's Shell Game |q 51630/2
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52249
@@ -7514,7 +7919,8 @@ kill Torraske the Eternal##127939 |q 50861/1 |goto 46.66,65.23
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50847
-Enter the cave |goto 76.44,27.10 < 10 |walk
+Follow the path |goto Zuldazar/0 75.23,25.98 < 20 |only if walking
+Enter the cave |goto Zuldazar/0 76.44,27.10 < 10 |walk
 accept Twisted Child of Rezan##50847 |goto Zuldazar/0 76.90,27.91
 |tip You will accept this quest automatically.
 step
@@ -7527,9 +7933,9 @@ accept Underfoot##49444 |goto Dazar'alor/0 43.31,31.48
 |tip You will accept this quest automatically.
 step
 clicknpc Fragile Cargo##129646+
-|tip They look like brown boxes near the Brutosaur around this area.
-|tip Pay attention the cast time on the Frightened Brutosaur's Frightened Stomp.
-|tip Collect the cargo between casts.
+|tip They look like brown boxes on the ground around this small area.
+|tip Watch the cast time on the Frightened Brutosaur's Frightened Stomp.
+|tip Cick them while he is casting, and move away before he finishes casting.
 Recover #8# Fragile Cargo |q 49444/1 |goto 43.31,31.48
 |next "Tortollan_Seekers_WQ"
 step
@@ -7574,8 +7980,19 @@ accept What Goes Up##50619 |goto Zuldazar/0 39.22,72.89
 |tip You will accept this quest automatically.
 step
 click Nightborne Trap##293683+
-|tip They look like small glowing traps on the ground around this area.
+|tip They look like small yellow glowing crystal totems on the ground around this area.
 Set #8# Traps |q 50619/1 |goto 39.22,72.89
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52425
+collect 5 Battle Flag: Spirit of Freedom##154707 |q 52425 |future
+|tip Craft them with Tailoring or purchase them from the Auction House.
+step
+accept Work Order: Battle Flag: Spirit of Freedom##52425 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Battle Flag: Spirit of Freedom##52425 |goto 67.25,71.57
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52394
@@ -7587,6 +8004,28 @@ accept Work Order: Contract: Champions of Azeroth##52394 |goto Zuldazar/0 71.50,
 step
 talk Collector Kojo##134345
 turnin Work Order: Contract: Champions of Azeroth##52394 |goto 71.50,30.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51010
+collect 40 Coarse Leather##152541 |q 51010 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Coarse Leather##51010 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Coarse Leather##51010 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52395
+collect 5 Contract: Zandalari Empire##153664 |q 52395 |future
+|tip Craft them with Inscription or purchase them from the Auction House.
+step
+accept Work Order: Contract: Zandalari Empire##52395 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Contract: Zandalari Empire##52395 |goto 67.25,71.57
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51013
@@ -7623,13 +8062,10 @@ Deliver Rezan's Wrath |q 50957/2 |goto 73.67,25.42
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51824
-Follow the path |goto Zuldazar/0 40.94,71.09 < 7 |only if walking
-Continue following the path |goto 43.18,71.31 < 10 |only if walking
-Continue following the path |goto 44.67,71.04 < 10 |only if walking
 accept You're Grounded##51824 |goto Zuldazar/0 46.65,71.24
 |tip You will accept this quest automatically.
 step
-click Dark Iron Trap##293674
+click Dark Iron Trap##293674+
 |tip They look like yellow boxes on the ground around this area.
 Set #8# Traps |q 51824/1 |goto 46.65,71.24
 |next "Tortollan_Seekers_WQ"

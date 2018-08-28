@@ -2354,7 +2354,7 @@ function ZGV:Options_DefineOptionTables()
 			AddOption('debug_showdepth',{ name = "Debug log: show .... stack depth", type="toggle", width = "full"  })
 			AddOption('debug_showcall',{ name = "Debug log: show function call", type="toggle", width = "full"  })
 
-			AddOption('fpsgraph',{ name="FPS Graph", desc="Show a detailed FPS graph. Max=100fps.", type = 'toggle', width = "full", _default=false, set = function(i,v) Setter_Simple(i,v)  ZGV:StartFPSFrame() end, })
+			AddOption('fpsgraph',{ name="FPS Graph", desc="Show a detailed FPS graph. Max=60fps.", type = 'toggle', width = "full", _default=false, set = function(i,v) Setter_Simple(i,v)  ZGV:StartFPSFrame() end, })
 			--AddOption('npcdebugauto',{ name = "Automatically add current npcs to list", type="toggle", width = "full", })
 
 			AddOption('debug_beta',{ name = "Enable Beta access", type="toggle", tristate=true, width = "full", set = function(i,v) Setter_Simple(i,v)  ZGV:SetBeta(v) end })

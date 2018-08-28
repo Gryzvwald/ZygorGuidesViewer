@@ -598,16 +598,16 @@ data.basenodes.transit = {
 	---------------
 
 		-- Sanctum of the Sages - Boralus Harbor, Tiragarde Sound -to- Stormwind City - Elwynn Forest, Eastern Kingdoms --
-		"Tiragarde Sound/0 74.31,23.84 <subtype:cityportal> -to- Stormwind City/0 49.59,86.53 {fac:A} {mode:PORTAL} {title:Click the Portal to Stormwind} {cond:ZGV.InPhase('bfa')}",
+		"Tiragarde Sound/0 74.31,23.84 <subtype:cityportal> -to- Stormwind City/0 49.59,86.53 {fac:A} {mode:PORTAL} {title:Click the Portal to Stormwind Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Sanctum of the Sages - Boralus Harbor, Tiragarde Sound -to- Ironforge - Dun Morogh, Eastern Kingdoms --
-		"Tiragarde Sound/0 74.49,23.50 <subtype:cityportal> -to- Ironforge/0 25.51,8.43 {fac:A} {mode:PORTAL} {title:Click the Portal to Ironforge} {cond:ZGV.InPhase('bfa')}",
+		"Tiragarde Sound/0 74.49,23.50 <subtype:cityportal> -to- Ironforge/0 25.51,8.43 {fac:A} {mode:PORTAL} {title:Click the Portal to Ironforge Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Sanctum of the Sages - Boralus Harbor, Tiragarde Sound -to- The Exodar - Azuremyst Isle, Kalimdor --
-		"Tiragarde Sound/0 74.38,23.41 <subtype:cityportal> -to- The Exodar/0 47.62,59.82 {fac:A} {mode:PORTAL} {title:Click the Portal to Exodar} {cond:ZGV.InPhase('bfa')}",
+		"Tiragarde Sound/0 74.38,23.41 <subtype:cityportal> -to- The Exodar/0 47.62,59.82 {fac:A} {mode:PORTAL} {title:Click the Portal to Exodar Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Sanctum of the Sages - Boralus Harbor, Tiragarde Sound -to- Magni's Encampment - Silithus, Kalimdor --
-		"Boralus/0 69.76,15.64 -to- Silithus/0 41.41,45.19 {fac:A} {mode:PORTAL} {title:Click the Portal to Silithus} {cond:ZGV.InPhase('bfa')}",
+		"Boralus/0 69.76,15.64 -to- Silithus/0 41.41,45.19 {fac:A} {mode:PORTAL} {title:Click the Portal to Silithus Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Magni's Encampment - Silithus, Kalimdor -to- Sanctum of the Sages - Boralus Harbor, Tiragarde Sound --
 		"Silithus/0 41.49,44.85 -to- Tiragarde Sound/0 73.78,25.29 <subtype:cityportal> {fac:A} {mode:PORTAL} {title:Click the Portal to Tiragarde} {cond:ZGV.InPhase('bfa')}",
@@ -617,19 +617,19 @@ data.basenodes.transit = {
 	--------------
 
 		-- Hall of Ancient Paths - Zuldazar, Zandalar -to- Silvermoon City, Eversong Woods --
-		"Dazar'alor/1 73.99,62.22 <subtype:cityportal> -to- Silvermoon City/0 58.26,19.24 {fac:H} {mode:PORTAL} {title:Click the Portal to Silvermoon City} {cond:ZGV.InPhase('bfa')}",
+		"Dazar'alor/1 73.99,62.22 <subtype:cityportal> -to- Silvermoon City/0 58.26,19.24 {fac:H} {mode:PORTAL} {title:Click the Portal to Silvermoon City Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Hall of Ancient Paths - Zuldazar, Zandalar -to- Orgrimmar - Durotar, Kalimdor --
-		"Dazar'alor/1 74.04,69.94 <subtype:cityportal> -to- Orgrimmar/2 48.28,64.53 {fac:H} {mode:PORTAL} {title:Click the Portal to Orgrimmar} {cond:ZGV.InPhase('bfa')}",
+		"Dazar'alor/1 74.04,69.94 <subtype:cityportal> -to- Orgrimmar/2 48.28,64.53 {fac:H} {mode:PORTAL} {title:Click the Portal to Orgrimmar Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Orgrimmar - Durotar, Kalimdor - Zuldazar, Zandalar -to- Hall of Ancient Paths --
-		"Orgrimmar/2 47.47,60.05 <subtype:cityportal> -to- Dazar'alor/1 68.28,64.58 {fac:H} {mode:PORTAL} {title:Click the Portal to Zuldazar} {cond:ZGV.InPhase('bfa')}",
+		"Orgrimmar/2 47.47,60.05 <subtype:cityportal> -to- Dazar'alor/1 68.28,64.58 {fac:H} {mode:PORTAL} {title:Click the Portal to Zuldazar Inside the Cleft of Shadow} {cond:ZGV.InPhase('bfa')}",
 
 		-- Hall of Ancient Paths - Zuldazar, Zandalar -to- Thunder Bluff - Mulgore, Kalimdor --
-		"Dazar'alor/1 73.60,77.38 <subtype:cityportal> -to- Thunder Bluff/0 22.21,16.87 {fac:H} {mode:PORTAL} {title:Click the Portal to Thunder Bluff} {cond:ZGV.InPhase('bfa')}",
+		"Dazar'alor/1 73.60,77.38 <subtype:cityportal> -to- Thunder Bluff/0 22.21,16.87 {fac:H} {mode:PORTAL} {title:Click the Portal to Thunder Bluff Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Hall of Ancient Paths - Zuldazar, Zandalar -to- Silithus, Kalimdor --
-		"Dazar'alor/1 73.81,85.40 -to- Silithus/0 41.41,45.19 {fac:H} {mode:PORTAL} {title:Click the Portal to Silithus} {cond:ZGV.InPhase('bfa')}",
+		"Dazar'alor/1 73.81,85.40 -to- Silithus/0 41.41,45.19 {fac:H} {mode:PORTAL} {title:Click the Portal to Silithus Inside the Building} {cond:ZGV.InPhase('bfa')}",
 
 		-- Silithus, Kalimdor -to- Hall of Ancient Paths - Zuldazar, Zandalar --
 		"Silithus/0 41.61,45.20 <subtype:cityportal> -to- Dazar'alor/1 68.28,64.58 {fac:H} {mode:PORTAL} {title:Click the Portal to Zuldazar} {cond:ZGV.InPhase('bfa')}",

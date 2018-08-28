@@ -15,91 +15,17 @@ talk Elric Whalgrene##132228
 Train Kul Tiran Alchemy |skillmax Kul Tiran Alchemy,150 |goto Boralus/0 74.21,6.53
 step
 talk Elric Whalgrene##132228
-buy 200 Crystal Vial##3371 |n
-|tip They're cheap, so just stock up on a lot now, so you don't have to buy more constantly.
-collect 200 Crystal Vial##3371 |goto 74.21,6.53
+buy 160 Crystal Vial##3371 |goto 74.21,6.53
 step
-collect 175 Siren's Pollen##152509
+collect 1300 Siren's Pollen##152509
 |tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
-Open Your Alchemy Crafting Panel:
-_<Create 25 Coastal Healing Potion>_
-Reach Level 25 Alchemy |skill Kul Tiran Alchemy,25
-step
-talk Elric Whalgrene##132228
-Train Potion of Concealment (Rank 1) |learn Potion of Concealment##252400 |goto 74.21,6.53
-step
-collect 225 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 15 Potion of Concealment>_
-Reach Level 40 Alchemy |skill Kul Tiran Alchemy,40
-step
-talk Elric Whalgrene##132228
-Train Coastal Healing Potion (Rank 2) |learn Coastal Healing Potion##252383 |goto 74.21,6.53
-step
-collect 50 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 10 Coastal Healing Potion>_
-Reach Level 50 Alchemy |skill Kul Tiran Alchemy,50
-step
-talk Elric Whalgrene##132228
-Train Potion of Concealment (Rank 2) |learn Potion of Concealment##252401 |goto 74.21,6.53
-step
-collect 100 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 10 Potion of Concealment>_
-Reach Level 60 Alchemy |skill Kul Tiran Alchemy,60
-step
-talk Elric Whalgrene##132228
-Train Potion of Bursting Blood (Rank 1) |learn Potion of Bursting Blood##252341 |goto 74.21,6.53
-step
-talk Elric Whalgrene##132228
-Train Potion of Bursting Blood (Rank 2) |learn Potion of Bursting Blood##252342 |goto 74.21,6.53
-step
-collect 150 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 120 Riverbud##152505
+collect 240 Riverbud##152505
 |tip You get these by gathering from Riverbud flowers that grow on the ground along rivers, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
-Open Your Alchemy Crafting Panel:
-_<Create 15 Potion of Bursting Blood>_
-Reach Level 75 Alchemy |skill Kul Tiran Alchemy,75
-step
-talk Elric Whalgrene##132228
-Train Battle Potion of Agility (Rank 1) |learn Battle Potion of Agility##279159 |goto 74.21,6.53
-step
-talk Elric Whalgrene##132228
-Train Battle Potion of Agility (Rank 2) |learn Battle Potion of Agility##279160 |goto 74.21,6.53
-step
-collect 150 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 120 Riverbud##152505
-|tip You get these by gathering from Riverbud flowers that grow on the ground along rivers, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 15 Battle Potion of Agility>_
-Reach Level 90 Alchemy |skill Kul Tiran Alchemy,90
-step
-talk Elric Whalgrene##132228
-Train Flask of the Vast Horizon (Rank 1) |learn Flask of the Vast Horizon##252354 |goto 74.21,6.53
-step
-collect 150 Anchor Weed##152510
+collect 500 Anchor Weed##152510
 |tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
@@ -111,24 +37,68 @@ collect 300 Star Moss##152506
 |tip You get these by gathering from Star Moss plants that grow on the sides of walls and bridges, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
 step
+collect 625 Akunda's Bite##152507
+|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+collect 450 Sea Stalk##152511
+|tip You get these by gathering from Sea Stalk plants that grow on ocean shores, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Alchemy Crafting Panel:
+_<Create 25 Coastal Healing Potion>_
+Reach Level 25 Alchemy |skill Kul Tiran Alchemy,25
+step
+talk Elric Whalgrene##132228
+Train Potion of Concealment (Rank 1) |learn Potion of Concealment##252400 |goto 74.21,6.53
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Potion of Concealment>_
+Reach Level 40 Alchemy |skill Kul Tiran Alchemy,40
+step
+talk Elric Whalgrene##132228
+Train Coastal Healing Potion (Rank 2) |learn Coastal Healing Potion##252383 |goto 74.21,6.53
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Coastal Healing Potion>_
+Reach Level 50 Alchemy |skill Kul Tiran Alchemy,50
+step
+talk Elric Whalgrene##132228
+Train Potion of Concealment (Rank 2) |learn Potion of Concealment##252401 |goto 74.21,6.53
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Potion of Concealment>_
+Reach Level 60 Alchemy |skill Kul Tiran Alchemy,60
+step
+talk Elric Whalgrene##132228
+Train Potion of Bursting Blood (Rank 1) |learn Potion of Bursting Blood##252341 |goto 74.21,6.53
+step
+talk Elric Whalgrene##132228
+Train Potion of Bursting Blood (Rank 2) |learn Potion of Bursting Blood##252342 |goto 74.21,6.53
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Potion of Bursting Blood>_
+Reach Level 75 Alchemy |skill Kul Tiran Alchemy,75
+step
+talk Elric Whalgrene##132228
+Train Battle Potion of Agility (Rank 1) |learn Battle Potion of Agility##279159 |goto 74.21,6.53
+step
+talk Elric Whalgrene##132228
+Train Battle Potion of Agility (Rank 2) |learn Battle Potion of Agility##279160 |goto 74.21,6.53
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Battle Potion of Agility>_
+Reach Level 90 Alchemy |skill Kul Tiran Alchemy,90
+step
+talk Elric Whalgrene##132228
+Train Flask of the Vast Horizon (Rank 1) |learn Flask of the Vast Horizon##252354 |goto 74.21,6.53
+step
 Open Your Alchemy Crafting Panel:
 _<Create 15 Flask of the Vast Horizon>_
 Reach Level 105 Alchemy |skill Kul Tiran Alchemy,105
 step
 talk Elric Whalgrene##132228
 Train Flask of the Currents (Rank 1) |learn Flask of the Currents##252348 |goto 74.21,6.53
-step
-collect 150 Anchor Weed##152510
-|tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 225 Akunda's Bite##152507
-|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 300 Sea Stalk##152511
-|tip You get these by gathering from Sea Stalk plants that grow on ocean shores, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Alchemy Crafting Panel:
 _<Create 15 Flask of the Currents>_
@@ -140,18 +110,6 @@ step
 talk Elric Whalgrene##132228
 Train Flask of the Undertow (Rank 2) |learn Flask of the Undertow##252358 |goto 74.21,6.53
 step
-collect 150 Anchor Weed##152510
-|tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 300 Akunda's Bite##152507
-|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 450 Siren's Pollen##152509
-|tip You get these by gathering from Siren's Sting flowers that grow attached to trees on the ground, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Alchemy Crafting Panel:
 _<Create 30 Flask of the Undertow>_
 Reach Level 145 Alchemy |skill Kul Tiran Alchemy,145
@@ -159,21 +117,12 @@ step
 talk Elric Whalgrene##132228
 Train Flask of the Currents (Rank 2) |learn Flask of the Currents##252349 |goto 74.21,6.53
 step
-collect 50 Anchor Weeds##152510
-|tip You get these by gathering from Anchor Weed plants that grow near water, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 100 Akunda's Bite##152507
-|tip You get these by gathering from Akunda's Bite plants that grow in mountainous areas of Vol'dun, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 150 Sea Stalk##152511
-|tip You get these by gathering from Sea Stalk plants that grow on ocean shores, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Alchemy Crafting Panel:
 _<Create 10 Flask of the Currents>_
 Reach Level 150 Alchemy |skill Kul Tiran Alchemy,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Alchemy Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Blacksmithing\\Leveling Guides\\Kul Tiran Blacksmithing 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -186,9 +135,23 @@ step
 talk Grix "Ironfists" Barlow##133536
 Train Kul Tiran Blacksmithing |skillmax Kul Tiran Blacksmithing,150 |goto Boralus/0 73.40,8.45
 step
-collect 140 Monelite Ore##152512
+collect 1249 Monelite Ore##152512
 |tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
 |tip You can also purchase them from the Auction House.
+step
+collect 2150 Storm Silver Ore##152579
+|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 300 Platinum Ore##152513
+|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+talk Grix "Ironfists" Barlow##133536
+buy 7 Durable Flux##160298 |goto 73.40,8.45
+step
+talk Grix "Ironfists" Barlow##133536
+buy 750 Elemental Flux##18567 |goto 73.40,8.45
 step
 Open Your Blacksmithing Crafting Panel:
 _<Create 15 Monel-Hardened Armguards>_
@@ -197,79 +160,56 @@ step
 talk Grix "Ironfists" Barlow##133536
 Train Monel-Hardened Waistguard |learn Monel-Hardened Waistguard##253180 |goto 73.40,8.45
 step
-collect 140 Monelite Ore##152512
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 10 Monel-Hardened Waistguard>_
-Reach Level 25 Blacksmithing |skill Kul Tiran Blacksmithing,25 |goto 73.52,8.54
+_<Create 13 Monel-Hardened Waistguard>_
+Reach Level 28 Blacksmithing |skill Kul Tiran Blacksmithing,28 |goto 73.52,8.54
 step
 talk Grix "Ironfists" Barlow##133536
 Train Monel-Hardened Greaves |learn Monel-Hardened Greaves##253174 |goto 73.40,8.45
 step
-talk Grix "Ironfists" Barlow##133536
-buy 10 Durable Flux##160298 |n
-collect 10 Durable Flux##160298 |goto 73.40,8.45
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 10 Monel-Hardened Greaves>_
+_<Create 7 Monel-Hardened Greaves>_
 Reach Level 35 Blacksmithing |skill Kul Tiran Blacksmithing,35 |goto 73.52,8.54
 step
 talk Grix "Ironfists" Barlow##133536
 Train Monel-Hardened Breastplate |learn Monel-Hardened Breastplate##253162 |goto 73.40,8.45
 step
-collect 720 Monelite Ore##152512
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
+Open Your Blacksmithing Crafting Panel:
+_<Create 15 Monel-Hardened Breastplate>_
+Reach Level 50 Blacksmithing |skill Kul Tiran Blacksmithing,50 |goto 73.52,8.54
+step
+talk Grix "Ironfists" Barlow##133536
+Train Monelite Skeleton Key |learn Monelite Skeleton Key##269064 |goto 73.40,8.45
 step
 Open Your Blacksmithing Crafting Panel:
-_<Create 40 Monel-Hardened Breastplate>_
-Reach Level 75 Blacksmithing |skill Kul Tiran Blacksmithing,75 |goto 73.52,8.54
+_<Create 20 Monelite Skeleton Key>_
+|tip You may need to craft a few more to reach level 60.
+Reach Level 60 Blacksmithing |skill Kul Tiran Blacksmithing,60 |goto 73.52,8.54
+step
+Open Your Blacksmithing Crafting Panel:
+_<Create 25 Monel-Hardened Breastplate>_
+|tip You may need to craft a few more to reach level 85.
+Reach Level 85 Blacksmithing |skill Kul Tiran Blacksmithing,85 |goto 73.52,8.54
 step
 talk Grix "Ironfists" Barlow##133536
 Train Honorable Combatant's Plate Armguards |learn Honorable Combatant's Plate Armguards##269451 |goto 73.40,8.45
 step
-talk Grix "Ironfists" Barlow##133536
-buy 200 Elemental Flux##18567 |n
-collect 200 Elemental Flux##18567 |goto 73.40,8.45
-step
-collect 750 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 25 Honorable Combatant's Plate Armguards>_
+_<Create 15 Honorable Combatant's Plate Armguards>_
 Reach Level 100 Blacksmithing |skill Kul Tiran Blacksmithing,100 |goto 73.52,8.54
 step
 talk Grix "Ironfists" Barlow##133536
 Train Honorable Combatant's Plate Boots |learn Honorable Combatant's Plate Boots##269424 |goto 73.40,8.45
 step
-talk Grix "Ironfists" Barlow##133536
-buy 65 Elemental Flux##18567 |n
-collect 65 Elemental Flux##18567 |goto 73.40,8.45
-step
-collect 200 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 5 Honorable Combatant's Plate Boots>_
-Reach Level 105 Blacksmithing |skill Kul Tiran Blacksmithing,105 |goto 73.52,8.54
+_<Create 10 Honorable Combatant's Plate Boots>_
+Reach Level 110 Blacksmithing |skill Kul Tiran Blacksmithing,110 |goto 73.52,8.54
 step
 talk Grix "Ironfists" Barlow##133536
 Train Honorable Combatant's Plate Greaves |learn Honorable Combatant's Plate Greaves##269444 |goto 73.40,8.45
 step
-talk Grix "Ironfists" Barlow##133536
-buy 300 Elemental Flux##18567 |n
-collect 300 Elemental Flux##18567 |goto 73.40,8.45
-step
-collect 1000 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Blacksmithing Crafting Panel:
-_<Create 15 Honorable Combatant's Plate Greaves>_
+_<Create 10 Honorable Combatant's Plate Greaves>_
 Reach Level 120 Blacksmithing |skill Kul Tiran Blacksmithing,120 |goto 73.52,8.54
 step
 talk Grix "Ironfists" Barlow##133536
@@ -278,57 +218,27 @@ step
 talk Grix "Ironfists" Barlow##133536
 Train Stormsteel Dagger (Rank 2) |learn Stormsteel Dagger##253157 |goto 73.40,8.45
 step
-talk Grix "Ironfists" Barlow##133536
-buy 50 Elemental Flux##18567 |n
-collect 50 Elemental Flux##18567 |goto 73.40,8.45
+Reach Revered with the 7th Legion |condition rep("7th Legion") >= Revered
+|tip Use our "7th Legion" reputation guide to accomplish this.
 step
-collect 100 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
+talk Vindicator Jaelaana##135446
+buy 1 Recipe: Stormsteel Dagger##162275 |goto 69.32,24.94
 step
-collect 45 Platinum Ore##152513
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
+use Recipe: Stormsteel Dagger##162275
+Train Stormsteel Dagger (Rank 3) |learn Stormsteel Dagger##253158
 step
 click Scrap-O-Matic 1000##293132
 |tip Use this device to destroy old gear and turn it into Expulsom.
 |tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 10 Expulsom##152668 |goto 77.13,16.32
+collect 50 Expulsom##152668 |goto 77.13,16.32
 step
 Open Your Blacksmithing Crafting Panel:
-_<Create 5 Stormsteel Dagger>_
-Reach Level 125 Blacksmithing |skill Kul Tiran Blacksmithing,125 |goto 73.52,8.54
-step
-talk Grix "Ironfists" Barlow##133536
-Train Stormsteel Girdle |learn Stormsteel Girdle##253190 |goto 73.40,8.45
-step
-talk Grix "Ironfists" Barlow##133536
-buy 125 Elemental Flux##18567 |n
-collect 125 Elemental Flux##18567 |goto 73.40,8.45
-stickystart "Collect_Expulsom"
-stickystart "Collect_Hydrocore"
-step
-collect 1000 Storm Silver Ore##152579
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
-collect 450 Platinum Ore##152513
-|tip Use the Battle for Azeroth ore farming guides to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-step
-label "Collect_Expulsom"
-click Scrap-O-Matic 1000##293132
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 750 Expulsom##152668 |goto 77.13,16.32
-step
-label "Collect_Hydrocore"
-collect 375 Hydrocore##162460
-|tip These are dropped by the last boss of Mythic dungeons.
-step
-Open Your Blacksmithing Crafting Panel:
-_<Create 25 Stormsteel Girdle>_
+_<Create 50 Stormsteel Dagger>_
+|tip You may need to craft more or less of these to reach 150.
 Reach Level 150 Blacksmithing |skill Kul Tiran Blacksmithing,150 |goto 73.52,8.54
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Blacksmithing Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Kul Tiran Cooking 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -338,12 +248,8 @@ condition_end=function() return skill('Kul Tiran Cooking')>=150 end,
 condition_suggested=function() return skill('Kul Tiran Cooking')>0 and skill('Kul Tiran Cooking')<150 and level>=110 end,
 },[[
 step
-Follow the path |goto Boralus/0 68.10,15.59 < 10 |walk
-Continue following the path |goto 70.57,16.89 < 10 |walk
-Continue following the path |goto 71.32,14.63 < 7 |only if walking
-Continue following the path |goto 70.56,12.93 < 7 |only if walking
 talk "Cap'n" Byron Mehlsack##136052
-Learn Kul Tiran Cooking |skillmax Kul Tiran Cooking,150 |goto 71.21,10.70
+Learn Kul Tiran Cooking |skillmax Kul Tiran Cooking,150 |goto Boralus/0 71.21,10.70
 step
 Load the "Aromatic Fish Oil" guide |confirm |next "Zygor's Profession Guides\\Fishing\\Farming Guides\\Aromatic Fish Oil"
 |tip Click the line above to load the guide.
@@ -353,10 +259,6 @@ collect 98 Aromatic Fish Oil##160711
 |tip You can also purchase them from the Auction House.
 |only if skill("Kul Tiran Cooking") < 50
 step
-Follow the path |goto Boralus/0 70.74,13.55 < 7 |only if walking
-Continue following the path |goto 71.37,14.97 < 7 |only if walking
-Run down the stairs |goto 71.27,16.40 < 5 |only if walking
-Continue down the stairs |goto 71.80,16.78 < 5 |only if walking
 talk Sara Bartlett##123635
 buy 245 Foosaka##160400 |goto 72.96,15.58
 |only if skill("Kul Tiran Cooking") < 50
@@ -375,11 +277,6 @@ _<Create 34 Mon'Dazi>_
 |tip Be sure to save any Mon'Dazi you craft.
 Reach Level 35 Kul Tiran Cooking |skill Kul Tiran Cooking,35
 step
-Run up the stairs |goto 72.04,16.39 < 5 |only if walking
-Continue up the stairs |goto 71.66,16.78 < 5 |only if walking
-Follow the path |goto 71.11,16.10 < 7 |only if walking
-Continue following the path |goto 71.31,14.65 < 7 |only if walking
-Continue following the path |goto 70.87,12.73 < 10 |only if walking
 talk "Cap'n" Byron Mehlsack##136052
 Learn the Rank 2 Recipe for Mon'Dazi |learn Mon'Dazi##259443 |goto 71.22,10.69
 step
@@ -398,10 +295,6 @@ collect 600 Meaty Haunch##154898
 |tip You can also purchase them from the Auction House.
 |only if skill("Kul Tiran Cooking") < 110
 step
-Follow the path |goto Boralus/0 70.74,13.55 < 7 |only if walking
-Continue following the path |goto 71.37,14.97 < 7 |only if walking
-Run down the stairs |goto 71.27,16.40 < 5 |only if walking
-Continue down the stairs |goto 71.80,16.78 < 5 |only if walking
 talk Sara Bartlett##123635
 buy 300 Choral Honey##160398 |goto 72.96,15.58
 |only if skill("Kul Tiran Cooking") < 110
@@ -411,11 +304,6 @@ Open Your Cooking Crafting Panel:
 _<Create 40 Honey-Glazed Haunches>_
 Reach Level 90 Kul Tiran Cooking |skill Kul Tiran Cooking,90
 step
-Run up the stairs |goto 72.04,16.39 < 5 |only if walking
-Continue up the stairs |goto 71.66,16.78 < 5 |only if walking
-Follow the path |goto 71.11,16.10 < 7 |only if walking
-Continue following the path |goto 71.31,14.65 < 7 |only if walking
-Continue following the path |goto 70.87,12.73 < 10 |only if walking
 talk "Cap'n" Byron Mehlsack##136052
 Learn the Rank 2 Recipe for Honey-Glazed Haunches |learn Honey-Glazed Haunches##259415 |goto 71.22,10.69
 step
@@ -493,7 +381,7 @@ _<Create 40 Bountiful Captain's Feasts>_
 Reach Level 150 Kul Tiran Cooking |skill Kul Tiran Cooking,150
 step
 _Congratulations!_
-You reached level 150 with the Kul Tiran Cooking profession.
+You Reached 150 Kul Tiran Cooking Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Thick Paleo Steak",{
 author="support@zygorguides.com",
@@ -558,27 +446,31 @@ talk Emily Fairweather##136041
 Train Kul Tiran Enchanting |skillmax Kul Tiran Enchanting,150 |goto Boralus/0 74.02,11.56
 step
 talk Emily Fairweather##136041
-buy 150 Enchanting Vellum##38682 |n
-collect 150 Enchanting Vellum##38682 |goto 74.02,11.56
+buy 150 Enchanting Vellum##38682 |goto 74.02,11.56
 step
 talk Emily Fairweather##136041
-buy Copper Rod##6217 |n
-collect Copper Rod##6217 |condition itemcount(6217) >= 1 or itemcount (6218) >= 1 |goto 74.02,11.56
+buy Copper Rod##6217 |goto 74.02,11.56 |only if itemcount(6218) == 0
 step
 talk Emily Fairweather##136041
-buy Strange Dust##10940 |n
-collect Strange Dust##10940 |condition itemcount(10940) >= 1 or itemcount (6218) >= 1 |goto 74.02,11.56
+buy Strange Dust##10940 |goto 74.02,11.56 |only if itemcount(6218) == 0
 step
 talk Emily Fairweather##136041
-buy Lesser Magic Essence##10938 |n
-collect Lesser Magic Essence##10938 |condition itemcount(10938) >= 1 or itemcount (6218) >= 1 |goto 74.02,11.56
+buy Lesser Magic Essence##10938 |goto 74.02,11.56 |only if itemcount(6218) == 0
 step
 Open Your Enchanting Crafting Panel:
 _<Create 1 Runed Copper Rod>_
 collect Runed Copper Rod##6218
 step
-collect 225 Gloom Dust##152875
+collect 2425 Gloom Dust##152875
 |tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 605 Umbra Shard##152876
+|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 385 Veiled Crystal##152877
+|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
@@ -594,25 +486,14 @@ step
 talk Emily Fairweather##136041
 Train Safe Hearthing |learn Safe Hearthing##271366 |goto 74.02,11.56
 step
-collect 50 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 10 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Enchanting Crafting Panel:
 _<Create 10 Safe Hearthing>_
-|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip Click your bracers place the selected enchantment on them.
+|tip Keep doing this, overwriting the existing enchant.
 Reach Level 35 Enchanting |skill Kul Tiran Enchanting,35
 step
 talk Emily Fairweather##136041
 Train Seal of Versatility (Rank 2) |learn Seal of Versatility##255089 |goto 74.02,11.56
-step
-collect 50 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 5 Seal of Versatility>_
@@ -622,18 +503,6 @@ step
 talk Emily Fairweather##136041
 Train Weapon Enchant - Gale-Force Striking |learn Weapon Enchant - Gale-Force Striking##255141 |goto 74.02,11.56
 step
-collect 400 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 100 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 20 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Enchanting Crafting Panel:
 _<Create 20 Weapon Enchant - Gale-Force Striking>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
@@ -641,18 +510,6 @@ Reach Level 60 Enchanting |skill Kul Tiran Enchanting,60
 step
 talk Emily Fairweather##136041
 Train Weapon Enchant - Deadly Navigation |learn Weapon Enchant - Deadly Navigation##268907 |goto 74.02,11.56
-step
-collect 300 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 120 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 15 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 15 Weapon Enchant - Deadly Navigation>_
@@ -662,18 +519,6 @@ step
 talk Emily Fairweather##136041
 Train Pact of Critical Strike |learn Pact of Critical Strike##255075 |goto 74.02,11.56
 step
-collect 500 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 125 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 200 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Enchanting Crafting Panel:
 _<Create 25 Pact of Critical Strike>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
@@ -681,18 +526,6 @@ Reach Level 100 Enchanting |skill Kul Tiran Enchanting,100
 step
 talk Emily Fairweather##136041
 Train Pact of Critical Strike (Rank 2) |learn Pact of Critical Strike##255090 |goto 74.02,11.56
-step
-collect 450 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 100 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 125 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
 _<Create 25 Pact of Critical Strike>_
@@ -705,22 +538,13 @@ step
 talk Emily Fairweather##136041
 Train Weapon Enchant - Quick Navigation (Rank 2) |learn Weapon Enchant - Quick Navigation##268895 |goto 74.02,11.56
 step
-collect 450 Gloom Dust##152875
-|tip You can get these by disenchanting Battle for Azeroth level Uncommon (green) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 150 Umbra Shard##152876
-|tip You can get these by disenchanting Battle for Azeroth level Rare (blue) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
-collect 25 Veiled Crystal##152877
-|tip You can get these by disenchanting Battle for Azeroth level Epic (purple) armor and weapons.
-|tip You can also purchase them from the Auction House.
-step
 Open Your Enchanting Crafting Panel:
 _<Create 25 Weapon Enchant - Quick Navigation>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 150 Enchanting |skill Kul Tiran Enchanting,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Enchanting Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Leveling Guides\\Kul Tiran Engineering 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -835,7 +659,7 @@ _<Create 15 AZ3-R1-T3 Bionic Bifocals>_
 Reach Level 150 Kul Tiran Engineering |skill Kul Tiran Engineering,150
 step
 _Congratulations!_
-You reached level 150 with the Kul Tiran Engineering profession.
+You Reached 150 Kul Tiran Engineering Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Kul Tiran Fishing 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -861,7 +685,7 @@ Fish in the open water
 Reach Level 150 Kul Tiran Fishing |skill Kul Tiran Fishing,150 |goto 74.18,5.51
 step
 _Congratulations!_
-You reached level 150 with the Kul Tiran Fishing profession.
+You Reached 150 Kul Tiran Fishing Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Redtail Loach",{
 author="support@zygorguides.com",
@@ -944,26 +768,24 @@ description="This guide will walk you through farming Great Sea Catfish for vari
 startlevel=110.0,
 },[[
 step
-label "loop"
+label "Start"
 map Nazmir/0
-path follow smart; loop off; ants curved; dist 20
+path follow smart; loop off; ants curved; dist 30
 path	39.12,84.85	40.75,87.50	44.45,87.52	46.38,86.58	47.92,82.26
-path	52.34,80.48	55.22,81.01	55.99,77.68	55.27,75.45	57.93,76.83
-path	57.99,75.50	58.95,74.33	60.40,71.18	60.81,70.35	64.07,68.70
-path	65.11,63.06 	65.93,60.32
+path	52.34,80.48	55.22,81.01	55.99,77.68	58.95,74.33	60.40,71.18
+path	60.81,70.35	64.07,68.70	65.11,63.06 	65.93,60.32
 Fish in Great Sea Catfish Schools
 |tip They share spawn points with Redtail Loach School.
 |tip You will need fishing to gather from this path.
 |tip You may need water walking in order to farm from some of the pools.
 |tip They look like small circular swirling spots in the water along the coast.
 collect Great Sea Catfish##152547 |n
-Click here to continue |confirm
+'|goto Nazmir/0 65.93,60.32 < 30 |c |noway
 step
 map Nazmir/0
-path follow smart; loop off; ants curved; dist 20
-path	65.46,55.63	67.41,57.61	65.93,60.32	65.11,63.06	64.07,68.70
-path	60.81,70.35	60.40,71.18	58.95,74.33	57.99,75.50	57.93,76.83
-path	55.27,75.45	55.99,77.68	55.22,81.01	52.34,80.48	47.92,82.26
+path follow smart; loop off; ants curved; dist 30
+path	65.93,60.32	65.11,63.06	64.07,68.70	60.81,70.35	60.40,71.18
+path	58.95,74.33	55.99,77.68	55.22,81.01	52.34,80.48	47.92,82.26
 path	46.38,86.58	44.45,87.52	40.75,87.50	39.12,84.85
 Fish in Great Sea Catfish Schools
 |tip They share spawn points with Redtail Loach School.
@@ -971,7 +793,7 @@ Fish in Great Sea Catfish Schools
 |tip You may need water walking in order to farm from some of the pools.
 |tip They look like small circular swirling spots in the water along the coast.
 collect Great Sea Catfish##152547 |n
-Click here to continue |confirm |next "loop"
+'|goto Nazmir/0 39.12,84.85 < 30 |c |noway |next "Start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Tiragarde Perch",{
 author="support@zygorguides.com",
@@ -1006,6 +828,7 @@ description="This guide will walk you through farming Midnight Salmon for variou
 startlevel=110.0,
 },[[
 step
+label "Start"
 map Stormsong Valley/0
 path follow smart; loop off; ants curved; dist 20
 path	56.42,19.69	58.70,17.84	61.38,15.17	63.06,14.62	64.28,16.06
@@ -1013,12 +836,28 @@ path	66.47,18.99	69.95,34.95	69.56,36.85	69.24,40.52	66.68,48.49
 path	68.08,50.14	70.34,48.58	72.69,48.96	73.83,52.22	73.82,53.81
 path	72.18,57.68	73.81,59.71	75.43,60.95	77.58,61.04	78.25,61.57
 path	79.24,61.77	80.76,61.45
-Fish in pool found in Stormsong
+Fish in pools found in Stormsong Valley
 |tip You can also fish in one spot for these.
 |tip Midnight Salmon are rare, so it will take a while to collect them.
-collect Midnight Salmon##162515 |n
 |tip They look like small circular swirling spots in the water along the coast.
 |tip These can be found along the coasts of Stormsong Valley.
+collect Midnight Salmon##162515 |n
+'|goto Stormsong Valley/0 80.76,61.45 < 20 |c |noway
+step
+map Stormsong Valley/0
+path follow smart; loop off; ants curved; dist 20
+path	80.76,61.45	79.24,61.77	78.25,61.57	77.58,61.04	75.43,60.95
+path	73.81,59.71	72.18,57.68	73.82,53.81	73.83,52.22	72.69,48.96
+path	70.34,48.58	68.08,50.14	66.68,48.49	69.24,40.52	69.56,36.85
+path	69.95,34.95	66.47,18.99	64.28,16.06	63.06,14.62	61.38,15.17
+path	58.70,17.84	56.42,19.69
+Fish in pools found in Stormsong Valley
+|tip You can also fish in one spot for these.
+|tip Midnight Salmon are rare, so it will take a while to collect them.
+|tip They look like small circular swirling spots in the water along the coast.
+|tip These can be found along the coasts of Stormsong Valley.
+collect Midnight Salmon##162515 |n
+'|goto Stormsong Valley/0 56.42,19.69 < 20 |c |noway |next "Start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Leveling Guides\\Kul Tiran Herbalism 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -1042,6 +881,9 @@ path	63.39,28.98	64.73,27.39	65.28,26.38	64.97,25.70	65.12,24.33
 Click herbs as you follow the path around this area
 |tip Track them on your minimap with "Find Herbs".
 Reach Level 150 Herbalism |skill Kul Tiran Herbalism,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Herbalism Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Quest Guides\\Kul Tiran Herbalism Quest Line",{
 author="support@zygorguides.com",
@@ -1473,8 +1315,8 @@ step
 map Zuldazar/0
 path	follow smart; loop on; ants curved; dist 20
 path	70.56,64.15	71.41,65.42	72.20,65.36	73.23,66.61	73.80,65.36
-path	74.88,66.24	76.25,66.34	77.44,66.50	77.35,63.75
-path	75.76,64.34	74.96,63.20	73.08,63.26	72.06,62.91
+path	74.88,66.24	76.25,66.34	77.44,66.50	77.35,63.75	75.76,64.34
+path	74.96,63.20	73.08,63.26	72.06,62.91
 click Sea Stalk##
 |tip Track them on your minimap with "Find Herbs".
 collect Sea Stalk##152511 |n
@@ -1570,15 +1412,14 @@ path	58.55,25.49	59.14,24.60	58.52,23.26	58.62,21.68	58.95,21.21
 path	59.48,20.31	60.41,20.27	61.04,20.56	61.05,21.94	61.03,24.10
 path	61.58,24.56	62.36,24.45	62.99,23.80	63.49,23.68	64.05,23.77
 path	64.54,24.42	65.70,25.12	66.63,25.18	67.37,23.75	67.83,23.40
-path	68.54,23.34	68.82,21.99
-path	68.24,20.37	68.12,19.31	67.49,18.36	66.46,18.11	65.94,17.30
-path	65.11,18.00	64.25,18.18	63.40,18.49	62.76,18.29
-path	62.50,17.18	62.44,15.74	61.50,16.16	60.83,17.04	60.82,17.52
-path	60.50,18.43	59.90,19.26	58.91,18.81	57.67,19.79	56.80,19.71
-path	56.11,19.16	55.91,19.37	55.51,19.52	55.33,19.92	54.74,20.13
-path	54.36,20.47	54.08,19.83	53.78,19.57	53.53,19.83	52.65,20.71
-path	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27	52.89,22.81
-path	53.57,23.70	54.35,25.18	54.43,26.35
+path	68.54,23.34	68.82,21.99	68.24,20.37	68.12,19.31	67.49,18.36
+path	66.46,18.11	65.94,17.30	65.11,18.00	64.25,18.18	63.40,18.49
+path	62.76,18.29	62.50,17.18	62.44,15.74	61.50,16.16	60.83,17.04
+path	60.82,17.52	60.50,18.43	59.90,19.26	58.91,18.81	57.67,19.79
+path	56.80,19.71	56.11,19.16	55.91,19.37	55.51,19.52	55.33,19.92
+path	54.74,20.13	54.36,20.47	54.08,19.83	53.78,19.57	53.53,19.83
+path	52.65,20.71	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27
+path	52.89,22.81	53.57,23.70	54.35,25.18	54.43,26.35
 click Siren's Pollen
 |tip Track them on your minimap with "Find Herbs".
 |tip They grow on trees.
@@ -1734,6 +1575,9 @@ step
 Open Your Inscription Crafting Panel:
 _<Create 50 Darkmoon Card of War>_
 Reach Level 150 Inscription |skill Kul Tiran Inscription,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Inscription Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Jewelcrafting\\Leveling Guides\\Kul Tiran Jewelcrafting 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -1864,6 +1708,9 @@ step
 Open Your Jewelcrafting Crafting Panel:
 _<Create 25 Kraken's Eye of Agility>_
 Reach Level 150 Jewelcrafting |skill Kul Tiran Jewelcrafting,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Jewelcrafting Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Leatherworking\\Leveling Guides\\Kul Tiran Leatherworking 1-150 Leveling Guide",{
 author="support@zygorguides.com",
@@ -1904,104 +1751,36 @@ _<Create 25 Coarse Leather Pauldrons>_
 Reach Level 50 Leatherworking |skill Kul Tiran Leatherworking,50
 step
 talk Cassandra Brennor##136063
-Train Shimmerscale Diving Helmet |learn Shimmerscale Diving Helmet##256793 |goto 75.48,12.61
+Train Hardened Tempest Hide |learn Hardened Tempest Hide##272278 |goto 75.48,12.61
 step
-collect 125 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
+collect 95 Tempest Hide##154722
+|tip Use the "Tempest Hide" farming guide to collect them, if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
-collect 250 Shimmerscale##153050
-|tip Use the "Shimmerscale" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
+talk Cassandra Brennor##136063
+buy 95 Amber Tanning Oil##160059 |goto 75.48,12.61
 step
 Open Your Leatherworking Crafting Panel:
-_<Create 25 Shimmerscale Diving Helmet>_
-Reach Level 75 Leatherworking |skill Kul Tiran Leatherworking,75
+_<Create 95 Hardened Tempest Hide>_
+Reach Level 145 Leatherworking |skill Kul Tiran Leatherworking,145
 step
 talk Cassandra Brennor##136063
 Train Drums of the Maelstrom |learn Drums of the Maelstrom##256791 |goto 75.48,12.61
 step
-collect 250 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
+collect 100 Coarse Leather##152541
+|tip Use the "Coarse Leather" farming guide to collect them, if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
-collect 100 Blood-Stained Bone##154164
-|tip Use the "Blood-Stained Bone" farming guides to collect them, if you have Skinning.
+collect 50 Blood-Stained Bone##154164
+|tip Use the "Blood-Stained Bone" farming guide to collect them, if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Leatherworking Crafting Panel:
-_<Create 10 Drums of the Maelstrom>_
-Reach Level 85 Leatherworking |skill Kul Tiran Leatherworking,85
-step
-talk Cassandra Brennor##136063
-Train Honorable Combatant's Mail Armguards |learn Honorable Combatant's Mail Armguards##269543 |goto 75.48,12.61
-step
-collect 300 Mistscale##153051
-|tip Use the "Mistscale" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 180 Calcified Bone##154165
-|tip Use the "Calcified Bone" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-click Scrap-O-Matic 1000##293132
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 30 Expulsom##152668 |goto 77.13,16.32
-step
-Open Your Leatherworking Crafting Panel:
-_<Create 15 Honorable Combatant's Mail Armguards>_
-Reach Level 100 Leatherworking |skill Kul Tiran Leatherworking,100
-step
-talk Cassandra Brennor##136063
-Train Hardened Tempest Knuckles (Rank 1) |learn Hardened Tempest Knuckles##256782 |goto 75.48,12.61
-step
-talk Cassandra Brennor##136063
-Train Hardened Tempest Knuckles (Rank 2) |learn Hardened Tempest Knuckles##256783 |goto 75.48,12.61
-step
-collect 390 Tempest Hide##154722
-|tip Use the "Tempest Hide" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 270 Calcified Bone##154165
-|tip Use the "Calcified Bone" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-click Scrap-O-Matic 1000##293132
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 45 Expulsom##152668 |goto 77.13,16.32
-step
-Open Your Leatherworking Crafting Panel:
-_<Create 15 Hardened Tempest Knuckles>_
-Reach Level 115 Leatherworking |skill Kul Tiran Leatherworking,115
-step
-talk Cassandra Brennor##136063
-Train Hardened Tempest Boots |learn Hardened Tempest Boots##256765 |goto 75.48,12.61
-stickystart "Collect_Expulsom"
-stickystart "Collect_Hydrocore"
-step
-collect 630 Hardened Tempest Hide##152542
-|tip Use the "Hardened Tempest Hide" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 1400 Calcified Bone##154165
-|tip Use the "Calcified Bone" farming guides to collect them, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-label "Collect_Expulsom"
-click Scrap-O-Matic 1000##293132
-|tip Use this device to destroy old gear and turn it into Expulsom.
-|tip You can purchase level 110+ gear from the Auction House to use if you don't have any.
-collect 1050 Expulsom##152668 |goto 77.13,16.32
-step
-label "Collect_Hydrocore"
-collect 525 Hydrocore##162460
-|tip These are dropped by the last boss of Mythic dungeons.
-step
-Open Your Leatherworking Crafting Panel:
-_<Create 35 Hardened Tempest Boots>_
+_<Create 5 Drums of the Maelstrom>_
 Reach Level 150 Leatherworking |skill Kul Tiran Leatherworking,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Leatherworking Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Mining\\Quest Guides\\Kul Tiran Mining Quest Line",{
 author="support@zygorguides.com",
@@ -2875,6 +2654,9 @@ Kill enemies as you follow the path around this area
 |tip Only Freshwater Snappers, Hillborn Saurolisks, Cragbound Foxes and Venomous Coilscales are skinnable.
 |tip Loot and skin them.
 Reach Level 150 Skinning |skill Kul Tiran Skinning,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Skinning Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Quest Guides\\Kul Tiran Skinning Quest Guide",{
 author="support@zygorguides.com",
@@ -2905,7 +2687,7 @@ path	53.90,27.15	55.39,29.32	56.01,30.94	56.90,30.44	57.33,31.38
 path	58.26,32.14	59.32,31.97	60.26,30.95	61.08,30.67	61.86,29.97
 path	63.35,29.04	65.23,26.54	64.99,25.68	65.27,25.09	65.08,24.23
 Kill enemies as you follow the path around this area
-|tip Only Freshwater Snappers, Hillborn Saurolisks, Cragbound Foxes and Venomous Coilscales are skinnable.
+|tip Only Freshwater Snappers, Hillborn Saurolisks, Cragbound Foxes, and Venomous Coilscales are skinnable.
 |tip Loot and skin them.
 Reach Level 50 Skinning |skill Kul Tiran Skinning,50
 step
@@ -2914,40 +2696,14 @@ accept Brinepinch##52223 |goto Boralus/0 75.66,13.39
 accept In Pursuit of Fashion##52225 |goto 75.66,13.39
 accept Bone Needle##52227 |goto 75.66,13.39
 step
-Follow the path |goto 76.45,14.57 < 10 |only if walking
-Continue following the path |goto 75.24,16.07 < 10 |only if walking
-Continue following the path |goto 73.98,14.67 < 10 |only if walking
-Continue following the path |goto 72.38,14.54 < 10 |only if walking
-Continue following the path |goto 70.42,16.95 < 10 |only if walking
-Continue following the path |goto Tiragarde Sound/0 53.23,29.28 < 10 |only if walking
-Continue following the path |goto 53.73,29.13 < 10 |only if walking
-Jump down here |goto 54.06,28.80 < 10 |only if walking
-Cross the water |goto 55.45,29.31 < 10 |only if walking
-Follow the path up |goto 56.19,29.63 < 10 |only if walking
-Jump down here |goto 56.58,30.24 < 7 |only if walking
-Follow the path down |goto 57.23,31.16 < 10 |only if walking
-Continue following the path |goto 56.77,32.26 < 10 |only if walking
+Jump down here |goto Tiragarde Sound/0 54.06,28.80 < 15 |only if walking
+Jump down here |goto 56.14,31.38 < 15 |only if walking
 kill Brinepinch##140612
 collect Brinepinch's "Head"##161423 |q 52223/1 |goto 56.35,34.58
 stickystart "Collect_Pristine_Saurlisk_Skins"
 step
-Follow the path |goto 56.76,32.30 < 10 |only if walking
-Continue following the path |goto 57.31,31.40 < 10 |only if walking
-Follow the path up |goto 56.88,30.49 < 10 |only if walking
-Continue following the path |goto 56.87,29.55 < 10 |only if walking
-Continue following the path |goto 57.22,28.10 < 10 |only if walking
-Continue following the path |goto 56.73,26.78 < 10 |only if walking
-Continue following the path |goto 56.09,26.03 < 10 |only if walking
-Cross the bridge |goto 55.19,25.72 < 10 |only if walking
-Cross the bridge |goto 54.30,26.28 < 10 |only if walking
-Continue following the path |goto 52.69,27.15 < 10 |only if walking
-Continue following the path |goto 51.86,27.97 < 10 |only if walking
-Continue following the path |goto 51.14,28.97 < 10 |only if walking
-Continue following the path |goto 51.50,29.51 < 10 |only if walking
-Continue following the path |goto 52.50,28.61 < 10 |only if walking
-Continue following the path |goto Drustvar/0 69.96,41.37 < 10 |only if walking
 kill Invasive Quillrat##125401+
-collect Immaculate Quill##161427 |q 52227/1 |goto 67.79,41.58
+collect Immaculate Quill##161427 |q 52227/1 |goto Drustvar/0 67.79,41.58
 step
 label "Collect_Pristine_Saurlisk_Skins"
 kill Shallows Saurolisk##125452+
@@ -2975,25 +2731,8 @@ talk Camilla Darksky##136061
 accept Turtle Soup##52226 |goto Boralus/0 75.66,13.39
 accept An Unbreakable Bone Needle##52228 |goto 75.66,13.39
 step
-Follow the path |goto 76.45,14.57 < 10 |only if walking
-Continue following the path |goto 75.24,16.07 < 10 |only if walking
-Continue following the path |goto 73.98,14.67 < 10 |only if walking
-Continue following the path |goto 72.38,14.54 < 10 |only if walking
-Continue following the path |goto 70.42,16.95 < 10 |only if walking
-Continue following the path |goto Tiragarde Sound/0 76.03,49.22 < 10 |only if walking
-Follow the path up |goto 76.72,48.97 < 10 |only if walking
-Continue up the path |goto 77.32,49.51 < 10 |only if walking
-Cross the bridge |goto 76.30,50.16 < 10 |only if walking
-Continue following the path |goto 73.33,48.76 < 10 |only if walking
-Follow the path up |goto 72.27,48.24 < 10 |only if walking
-Continue up the path |goto 70.74,48.31 < 10 |only if walking
-Continue following the path |goto 70.00,49.17 < 10 |only if walking
-Follow the path down |goto 69.19,51.85 < 10 |only if walking
-Continue following the path |goto 69.31,53.62 < 10 |only if walking
-Continue following the path |goto 68.70,55.26 < 10 |only if walking
-Continue following the path |goto 67.55,55.34 < 10 |only if walking
 kill Enriched Rockshell##130776+
-collect 5 Sulphur Speckled Turtle Skin##161426 |q 52226/1 |goto 66.82,56.37
+collect 5 Sulphur Speckled Turtle Skin##161426 |q 52226/1 |goto Tiragarde Sound/0 66.82,56.37
 step
 kill Invasive Quillrat##125401+
 |tip Loot and skin them.
@@ -3185,6 +2924,9 @@ step
 Open Your Tailoring Crafting Panel:
 _<Create 50 Battle Flag: Phalanx Defense>_
 Reach Level 150 Tailoring |skill Kul Tiran Tailoring,150
+step
+_Congratulations!_
+You Reached 150 Kul Tiran Tailoring Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Farming Guides\\Tidespray Linen",{
 author="support@zygorguides.com",
@@ -3198,6 +2940,7 @@ path	51.94,29.15	52.47,28.79	52.63,27.89	52.53,26.28	51.49,26.15
 path	51.07,26.49	50.33,26.19	49.64,25.26	49.10,25.05	48.79,26.35
 path	49.21,27.05	49.95,27.53	50.61,28.29
 Kill enemies around this area
+|tip Only humanoid mobs drop cloth.
 collect Tidespray Linen##152576 |n
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Farming Guides\\Deep Sea Satin",{
@@ -3212,6 +2955,7 @@ path	51.94,29.15	52.47,28.79	52.63,27.89	52.53,26.28	51.49,26.15
 path	51.07,26.49	50.33,26.19	49.64,25.26	49.10,25.05	48.79,26.35
 path	49.21,27.05	49.95,27.53	50.61,28.29
 Kill enemies around this area
+|tip Only humanoid mobs drop cloth.
 |tip These are a rare drop.
 collect Deep Sea Satin##152577 |n
 ]])

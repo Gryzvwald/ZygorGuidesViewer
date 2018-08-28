@@ -274,9 +274,12 @@ function ZGV:OnInitialize()
 	self.dailyQuests = self.dailyQuests or {}
 
 	self.completionelapsed = 0
-	self.completionintervallong = 1.0
-	self.completionintervalmin = 0.01
-	self.completioninterval = self.completionintervallong
+	self.completionintervaldefault = 0.1 -- when sitting on a step, waiting for it to complete.
+	self.completionintervallong = 1.0 -- when starting skipping through steps
+	self.completionintervalmin = 0.01 -- after skipping through some steps
+	self.completionintervalspeed = 0.8 -- multiplier of speed at each step in a row
+	self.completioninterval = self.completionintervaldefault
+	self.completionstreak = 0
 
 	self:Debug ("&startup Initializing step 2...")
 	self.db.char.lastlogin = time()
@@ -1179,6 +1182,7 @@ function ZGV:SetGuide(name,step,hack,silent) --hack used for testing
 	end
 
 	self.pause = nil
+	self.completioninterval = self.completionintervaldefault
 
 	-- Clear info about guide that was set to set to turn-ins-only mode 
 	self.db.char.guideTurnInsOnly = false
@@ -1553,6 +1557,8 @@ end
 function ZGV:PreviousStep(fast,forcefocus)
 	if not self.CurrentGuide then return end
 
+	if self.completionstreak==0 then ZGV.completioninterval=ZGV.completionintervallong end  -- first skip
+
 	self.LastSkip = -1
 	self.lastskip_rec = -1
 
@@ -1587,6 +1593,8 @@ end
 
 function ZGV:SkipStep(fast,hack,forcefocus) --Hack used for testing, forces showing endguide popup
 	if not self.CurrentGuide then return end
+
+	if self.completionstreak then ZGV.completioninterval=ZGV.completionintervallong end  -- first skip
 
 	self.LastSkip = 1
 	self.lastskip_rec = 1
@@ -1818,15 +1826,16 @@ function ZGV:TryToCompleteStep(force)
 		end
 		self.completionelapsed = 0
 	--
-	
+
 	local stepcomplete,steppossible = self.CurrentStep:IsComplete()
 
 	local completing = stepcomplete
 
 
 	-- smart skipping: treat invalid or impossible or skippable as completed
-	if not self.CurrentStep:AreRequirementsMet()
-	or (self.db.profile.skipimpossible and not steppossible)
+	if (not self.CurrentStep:AreRequirementsMet()
+	or (self.db.profile.skipimpossible and not steppossible))
+	and self.fastforward -- but only skip invalids/impossibles if we're already skipping forward!
 	--or (self.db.profile.skipobsolete and self.CurrentStep:IsObsolete())
 	--or (self.db.profile.skipauxsteps and self.CurrentStep:IsAuxiliarySkippable())
 	then
@@ -1834,7 +1843,7 @@ function ZGV:TryToCompleteStep(force)
 		--self.pause=nil
 	end
 
-	if completing and self.Sync then
+	if completing and self.Sync and self.Sync:IsEnabled() then
 		if self.Sync:IsClearToProceed(self.CurrentStepNum) then -- check synced party members. Who is on the same step, but has it incomplete?
 			ZGV.Sync:Debug("Party members completed the step, moving on.")
 		else
@@ -1844,7 +1853,7 @@ function ZGV:TryToCompleteStep(force)
 	end
 
 	if not completing then
-		interval = self.completionintervallong
+		interval = self.completionintervaldefault
 		self.pause=nil
 	end
 
@@ -1852,7 +1861,7 @@ function ZGV:TryToCompleteStep(force)
 	local confirmfound = false
 	wipe(goalsneedanimating)
 	local step = self.CurrentStep
-	for i,goal in ipairs(step.goals) do
+	for i,goal in ipairs(step.goals) do  if goal:IsCompleteable() then
 		local iscomplete,ispossible,done,needed = goal:IsComplete()
 		if iscomplete and not self.recentlyCompletedGoals[goal] then
 			self.recentlyCompletedGoals[goal] = true
@@ -1867,7 +1876,7 @@ function ZGV:TryToCompleteStep(force)
 		end
 
 		if self.recentGoalProgress[goal]==nil then self.recentGoalProgress[goal]=done end
-		if self.recentGoalProgress[goal]~=done then
+		if self.recentGoalProgress[goal]~=done and (goal.action~="goto" or (self.recentGoalProgress[goal]==1 ~= done==1)) then  -- announce and animate anything BUT a goto.
 			goal.dirtytext=true
 			goalsneedanimating[goal]=true
 			self:SendMessage("ZGV_GOAL_PROGRESS",step.num,i)
@@ -1878,12 +1887,13 @@ function ZGV:TryToCompleteStep(force)
 			confirmfound = true
 			if goal.status == "complete" then confirmcompleted = true end
 		end
-	end
+	end end
 	if confirmfound and confirmcompleted ~= true then completing = false end
 
 	if self.pause or self.db.profile.dontprogress then
-		interval = self.completionintervallong
+		interval = self.completionintervaldefault
 		self.LastSkip = 1
+		self.completionstreak=0
 	else
 		if completing then
 			--self.recentlyCompletedQuests = {} -- forget it! We're skipping the step, already.
@@ -1901,12 +1911,14 @@ function ZGV:TryToCompleteStep(force)
 			end
 
 			-- do, do, do the SKIP!
-
 			if self.LastSkip<0 then self:PreviousStep(true) else self:SkipStep(true) end
+			if not self.fastforward then interval=self.completionintervallong end -- first skip, set speed to slow and begin speeding up.
+
 			self.fastforward=true
 
-			interval = interval * 0.8
+			interval = interval * self.completionintervalspeed
 			if interval<self.completionintervalmin then interval=self.completionintervalmin end
+			self.completionstreak=self.completionstreak+1
 			--skipped=skipped+1
 			--if skipped>100 then break end
 
@@ -1920,11 +1932,12 @@ function ZGV:TryToCompleteStep(force)
 
 			--stepcomplete = self.CurrentStep:IsComplete()
 		else
-			interval = self.completionintervallong
+			interval = self.completionintervaldefault
 			self.pause=nil
 			self.fastforward=nil
 			self.skipping = false
 			self.LastSkip = 1
+			self.completionstreak = 0
 			--self.completioninterval = self.completionlonginterval
 		end
 
@@ -5825,29 +5838,40 @@ function ZGV:StartFPSFrame()
 		ZGV.FPSFrame = ZGV.ChainCall(CreateFrame("FRAME","ZygorFPSFrame",UIParent)) :SetPoint("BOTTOMLEFT") :SetSize(SIZE+11,MAXFPS) :SetFrameStrata("DIALOG") .__END
 		ZGV.FPSFrame.back = ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetAllPoints() :SetColorTexture(0,0,0,1) .__END
 		ZGV.FPSFrame.bars={}
+		ZGV.FPSFrame.fpsbars={}
 		for b=1,SIZE do
-			tinsert(ZGV.FPSFrame.bars, ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame,"BOTTOMLEFT",b,0) :SetSize(1,MAXFPS) :SetColorTexture(1,1,1) .__END)
+			tinsert(ZGV.FPSFrame.bars, ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame,"BOTTOMLEFT",b,0) :SetSize(1,MAXFPS) :SetColorTexture(1,1,1) :SetDrawLayer("ARTWORK",1) .__END)
+			tinsert(ZGV.FPSFrame.fpsbars, ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame,"BOTTOMLEFT",b,0) :SetSize(1,2) :SetColorTexture(1,1,1) :SetDrawLayer("ARTWORK",2) .__END)
 		end
-		ZGV.FPSFrame.fpsbar = ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame.bars[SIZE],"BOTTOMRIGHT",3,0) :SetSize(5,MAXFPS) :SetColorTexture(1,1,1) .__END
-		ZGV.FPSFrame.hicbar = ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame.bars[SIZE],"BOTTOMRIGHT",10,0) :SetSize(5,MAXFPS) :SetColorTexture(1,1,1) .__END
+		ZGV.FPSFrame.fpsbar = ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame.bars[SIZE],"BOTTOMRIGHT",3,0) :SetSize(5,MAXFPS) :SetColorTexture(1,1,1) :SetDrawLayer("ARTWORK",1) .__END
+		ZGV.FPSFrame.hicbar = ZGV.ChainCall(ZGV.FPSFrame:CreateTexture()) :SetPoint("BOTTOMLEFT",ZGV.FPSFrame.bars[SIZE],"BOTTOMRIGHT",10,0) :SetSize(5,MAXFPS) :SetColorTexture(1,1,1) :SetDrawLayer("ARTWORK",1) .__END
 
 		tinsert(ZGV.FPSFrame.bars,ZGV.FPSFrame.fpsbar)
+
+		local barheights={}
+		local fpslineheights={}
+		for b=1,SIZE do barheights[b]=0 fpslineheights[b]=0 end
 
 		local hiccup=0
 		function ZGV.FPSFrame:OnUpdate(elapsed)
 			local t1=debugprofilestop()
 			--local fps=GetFramerate()
-			local fps=1/elapsed
 			local n=floor(min(max(1,elapsed*100),SIZE))  -- n bars to cover
 			for b=1,SIZE-n do
-				self.bars[b]:SetHeight(self.bars[b+n]:GetHeight())
-			end
-			local h=min(fps/2,MAXFPS)  -- 1..50
-			for b=SIZE-n+1,SIZE do
-				self.bars[b]:SetHeight(h)
+				barheights[b]=barheights[b+n]
+				fpslineheights[b]=fpslineheights[b+n]
 			end
 
-			self.fpsbar:SetHeight(min(max(1,GetFramerate()*0.5),MAXFPS))
+			local fps=1/elapsed
+			local h=min(fps,MAXFPS)
+			local avgfps=min(MAXFPS,GetFramerate())
+			for b=SIZE-n+1,SIZE do
+				barheights[b]=h
+				fpslineheights[b]=avgfps
+			end
+
+			local h=min(max(GetFramerate(),1),MAXFPS)
+			barheights[SIZE+1]=h  -- fpsbar
 
 			local elams = elapsed*1000
 			if elams>50 then --20fps, awful
@@ -5858,12 +5882,17 @@ function ZGV:StartFPSFrame()
 			hiccup = min(max(0,hiccup-elapsed*5),MAXFPS)
 			self.hicbar:SetHeight(min(max(1,hiccup),MAXFPS))
 
+
 			for b=1,SIZE+1 do
-				local h1=self.bars[b]:GetHeight()/MAXFPS
+				local h1=barheights[b]/MAXFPS
 				local r=(h1<0.5) and 1 or 2-(h1*2)
 				local g=(h1<0.5) and h1*2 or 1
 				self.bars[b]:SetColorTexture(r,g,0)
+
+				self.bars[b]:SetHeight(barheights[b])
+				if b<=SIZE then self.fpsbars[b]:SetPoint("BOTTOMLEFT",b,fpslineheights[b]) end
 			end
+
 			local h1=hiccup/MAXFPS
 			local r=(h1<0.5) and h1*2 or 1
 			local g=(h1<0.5) and 1 or 2-(h1*2)

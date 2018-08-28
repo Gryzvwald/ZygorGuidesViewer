@@ -270,8 +270,7 @@ do
 	function Lib:InitializeTaxis()
 		for c,cont in pairs(Lib.taxipoints) do
 			for z,zone in pairs(cont) do
-				z=Lib.MapIDsByName[z] or z
-				if type(z)=="table" then z=z[1] end
+				z=LibRover:GetMapByNameFloor(z)
 				local n=1
 				while n<=#zone do
 					local node=zone[n]
@@ -780,7 +779,8 @@ do
 		if not TaxiFrame:IsShown() and not FlightMapFrame:IsShown() then self:Debug("Map not shown, unable to scan."); return end
 		local cont = ZGV.GetCurrentMapContinent()
 
-		local ret = ""
+		local ret = {}
+		local rett = {}
 
 		local taxidata,taxidata_by_slot = self:GetTaxiDataBySlot()
 		
@@ -791,13 +791,15 @@ do
 
 			local taxitype=TaxiNodeGetType(dest)
 
-			if not taxidata_by_slot[dest] then ret=ret .. ("%d. %s (%s) - Sanity fault, not in taxidata!\n"):format(dest,TaxiNodeName(dest),taxitype) break end
+			local s
+
+			if not taxidata_by_slot[dest] then s = ("%d. %s (%s) - Sanity fault, not in taxidata!"):format(dest,TaxiNodeName(dest),taxitype) tinsert(ret,s) tinsert(rett,{"?"}) break end
 			
 			local taxi = Lib:FindTaxiByNodeID(taxidata_by_slot[dest].nodeID) or Lib:FindTaxiByTag(cont,taxitag)
 
 			local texkit = taxidata_by_slot[dest].textureKitPrefix or ""
 
-			ret = ret .. ("%d. %s%s%s|r [|cffff8800%d|r, |cff0088ff%s|r, |cffffdd00%d|r hops, %s, %s)\n"):format(
+			local s = ("%2d. %s%s%s|r [ID |cffff8800%d|r, |cffffdd00%d|r hops, %s, %s)"):format(
 				dest,
 				    taxitype=="CURRENT" and "|cffbbff88"
 				 or taxitype=="REACHABLE" and "|cff00ff00"
@@ -808,7 +810,6 @@ do
 				    or (taxi and taxi.taxioperator=="seahorse" and "|r - |cff88ffddSEAHORSE|r")
 				 or "",
 				taxidata_by_slot[dest].nodeID,
-				taxitag,
 				GetNumRoutes(dest),
 				taxitype,
 				taxi and (     (TaxiNodeCost(dest)==0 and taxitype=="DISTANT" and "|cff888888DISABLED|r")
@@ -817,11 +818,20 @@ do
 					        or "|cffff0000???|r")
 				     or "|cffff0000NPC NOT FOUND|r"
 				)
-		until true end
 
+			tinsert(ret,s)
+			tinsert(rett,taxi or {"?"})
+
+		until true end
 		-- Missing hops have now been given the "0" time. Enough to get connections right.
 
-		ZGV:ShowDump(ret,"Taxi data for continent "..cont)
+		if Spoo then
+			local retz = {}
+			for i,s in ipairs(ret) do retz[s]=rett[i] end
+			Spoo(nil,nil,retz)
+		else
+			ZGV:ShowDump(table.concat(ret,"\n"),"Taxi data for continent "..cont)
+		end
 	end
 
 

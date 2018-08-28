@@ -5,5 +5,6 @@ if ZGV:DoMutex("AchievementsABFA") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZGV.BETAEND()
 ZGV.BETAEND()
+ZGV.BETAEND()
 ZGV.BETASTART()
 ZGV.BETAEND()
