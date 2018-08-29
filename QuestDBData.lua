@@ -7220,7 +7220,7 @@ ZGV.Quest_Cache_Ally = {
 	includes = {"trainer_Tailoring","--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Tailoring |condition skill(Tailoring)>=125","vendor_Tailoring"},
 },
 ["PROFESSIONS\\Alchemy\\Leveling Guides\\Classic Alchemy 1-300 Leveling Guide"] = {
-	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","GB_Path","LR_SK_Path","GS_SM_Path","FL_GT_KW_BW_Path","GT_WS_Path","trainer_Alchemy","TJ_Path","Kingsblood_Path","SV_CB_Path","HB_Path","Whiptail_Path","IT_LB_Path","NB_DG_Path","Sungrass_Path","GC_DN_TL_Path","Terocone_Path","FW_DG_Path"},
+	includes = {"FW_DG_Path","follow_path_herbs"},
 },
 ["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Slithershock Elver"] = {
 	{ids="38299"},
@@ -11609,12 +11609,13 @@ ZGV.Quest_Cache_Horde = {
 	{ids="49334,50617,48585,47573,50641,50904,48872,48888,48896,49669,48657,50745,51773,48992,51056,51829,50817,48530,48554,49327,48315,48331,47319,47327,50913,48889,49662,51718,50746,50770,48993,49001,50539,51057,50818,48531,50834,48555,48324,48332,47320,51161,47870,50739,51775,50771,49002,48532,50596,47313,47321,51162,49138,47871,49664,51991,50979,50748,47959,48987,49003,51059,50812,48533,48549,48326,47314,47322,49139,49665,50980,47928,50749,49227,48988,48996,51060,47498,48534,51602,48550,48327,47315,47578,49040,51164,48330,48335,47873,49666,48334,50702,48840,48322,48715,50755,48320,50750,47638,47501,47502,47503,50535,51053,51061,47499,51717,48790,50328,48551,51364,47497,49340,47577,48846,47324,51810,51165,47576,49141,48894,49667,48655,50656,47581,47574,47965,47571,47570,50751,47943,51772,50775,50757,49261,51054,51062,49335,50550,48684,50536,51357,48314,49333,48321,47564,47317,47580,51668,48871,49005,48887,48895,49668,48656,47874,49437,51574,49676,47316,47939,50752,52129,48847,48991,47716,49262,51055,51573,50561,48529,49677,48850,48553,48313,50794"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\War Campaign"] = {
+	{ids="53068",goal_onlyif=function() return havequest(53068) or completedq(53068) end},
 	{ids="53066",goal_onlyif=function() return havequest(53066) or completedq(53066) end},
 	{ids="53065",goal_onlyif=function() return havequest(53065) or completedq(53065) end},
 	{ids="53067",goal_onlyif=function() return havequest(53067) or completedq(53067) end},
 	{ids="53050",goal_onlyif=function() return havequest(53050) or completedq(53050) end},
 	{ids="53056",goal_onlyif=function() return havequest(53056) or completedq(53056) end},
-	{ids="51818,52765,52767,52769,52773,51830,51771,53602,51590,51592,51594,51596,51598,51789,51797,52746,51805,52122,52978,53079,53333,52768,52770,52772,52774,52766,51770,52764,51837,51601,51589,51591,51593,51595,51786,51788,51916,51785,51597,51599,51798,51819,51787,52749,51784"},
+	{ids="52184,52186,52188,52190,52192,51818,52765,52767,52769,52773,51830,51771,53602,51590,51592,51594,51596,51598,51789,52990,51797,53003,52746,52185,51805,52122,52187,52189,52191,52183,52978,53079,53333,52768,52770,52772,52774,52766,51770,52764,51837,51601,51589,51591,51593,51595,51786,51788,51916,51785,51597,51599,51798,51819,51787,52749,51784"},
 	includes = {"Stormsong_Valley_Foothold_Quests","Tiragarde_Sound_Foothold_Quests","Choose_Foothold_3","Choose_Foothold_2","Drustvar_Foothold_Quests","Choose_Foothold_1"},
 },
 ["LEVELING\\Battle for Azeroth (110-120)\\Scouting Reports\\Swiftwind Post (Drustvar)"] = {
@@ -16433,15 +16434,15 @@ ZGV.Quest_Cache = {
 	{ids="51918"},
 },
 ["DAILIES\\Battle for Azeroth\\Drustvar World Quests"] = {
-	{ids="50987,52357,52381"},
+	{ids="52334,52357,50985,52381,50987,52406,52414,52407,52364,50986,50991,52424"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Nazmir World Quests"] = {
-	{ids="52410"},
+	{ids="52372,51015,52418,52411,51009,52337,52360,52361,52410,51012,51005,52396,51006,52426"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Stormsong Valley World Quests"] = {
-	{ids="52394,50989,52380,52344"},
+	{ids="52394,52380,50982,52346,52344,52367,52345,52353,50996,50989,52332,52415,52393,50981,52347"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Tiragarde Sound World Quests"] = {
@@ -16449,11 +16450,11 @@ ZGV.Quest_Cache = {
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Vol'dun World Quests"] = {
-	{ids="52397,52412"},
+	{ids="51007,51008,52419,52427,52338,51011,52362,52412,52397,52371,51003"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["DAILIES\\Battle for Azeroth\\Zuldazar World Quests"] = {
-	{ids="52394,51010,52398,52395,52425,51013,51038"},
+	{ids="52408,51014,52348,52349,52350,52398,51013,52420,52421,52395,51010,52394,50999,51000,52425,52335,52336,52409,52369,52342,51038,52341,52373,52374,52358,52359"},
 	includes = {"BFA_Choose_World_Quests","BFA_World_Quest_Emissaries"},
 },
 ["GOLD\\Farming\\Gold Ore"] = {

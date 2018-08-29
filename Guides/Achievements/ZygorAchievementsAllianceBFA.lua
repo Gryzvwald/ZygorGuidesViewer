@@ -132,6 +132,134 @@ step
 _Congratulations!_
 You Earned the "Heroic: Waycrest Manor" Achievement.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Atal'Dazar",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Yazma in Atal'Dazar on Mythic difficulty or higher.",
+achieveid={12826},
+startlevel=120,
+endlevel=120,
+keywords={"Yazma, Dungeon, Mythic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Atal'Dazar on Mythic difficulty or higher
+Click here to load the "Atal'Dazar" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Atal'Dazar"
+Defeat Yazma in Atal'Dazar on Mythic difficulty or higher |achieve 12826
+step
+_Congratulations!_
+You Earned the "Mythic: Atal'Dazar" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Freehold",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Harlan Sweete in Freehold on Mythic difficulty or higher.",
+achieveid={12833},
+startlevel=120,
+endlevel=120,
+keywords={"Harlan, Dungeon, Mythic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Freehold on Mythic difficulty or higher
+Click here to load the "Freehold" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Freehold"
+Defeat Harlan Sweete in Freehold on Mythic difficulty or higher |achieve 12833
+step
+_Congratulations!_
+You Earned the "Mythic: Freehold" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Shrine of the Storm",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Vol'zith the Whisperer in Shrine of the Storm on Mythic difficulty or higher.",
+achieveid={12838},
+startlevel=120,
+endlevel=120,
+keywords={"Vol'zith, Dungeon, Mythic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Shrine of the Storm on Mythic difficulty or higher
+Click here to load the "Shrine of the Storm" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Shrine of the Storm"
+Defeat Vol'zith the Whisperer in Shrine of the Storm on Mythic difficulty or higher |achieve 12838
+step
+_Congratulations!_
+You Earned the "Mythic: Shrine of the Storm" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: The Temple of Sethraliss",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to restore the Avatar of Sethraliss in the Temple of Sethraliss on Mythic difficulty or higher.",
+achieveid={12506},
+startlevel=120,
+endlevel=120,
+keywords={"Avatar, Dungeon, Mythic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete the Temple of Sethraliss on Mythic difficulty or higher
+Click here to load the "Temple of Sethraliss" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Temple of Sethraliss"
+Complete the Avatar of Sethraliss encounter in the Temple of Sethraliss on Mythic difficulty or higher |achieve 12506
+step
+_Congratulations!_
+You Earned the "Mythic: The Temple of Sethraliss" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: The MOTHERLODE!!",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Mogul Razdunk in The MOTHERLODE!! on Mythic difficulty or higher.",
+achieveid={12846},
+startlevel=120,
+endlevel=120,
+keywords={"Razdunk, Dungeon, Mythic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete The MOTHERLODE!! on Mythic difficulty or higher
+Click here to load "The MOTHERLODE!!" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\The MOTHERLODE!!"
+Defeat Mogul Razdunk in The MOTHERLODE!! on Mythic difficulty or higher |achieve 12846
+step
+_Congratulations!_
+You Earned the "Mythic: The MOTHERLODE!!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Tol Dagor",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Overseer Korgus in Tol Dagor on Mythic difficulty or higher.",
+achieveid={12842},
+startlevel=120,
+endlevel=120,
+keywords={"Korgus, Dungeon, Mythic, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Tol Dagor on Mythic difficulty or higher
+Click here to load the "Tol Dagor" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Tol Dagor"
+Defeat Overseer Korgus in Tol Dagor on Mythic difficulty or higher |achieve 12842
+step
+_Congratulations!_
+You Earned the "Mythic: Tol Dagor" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Underrot",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Unbound Abomination in Underrot on Mythic difficulty or higher.",
+achieveid={12502},
+startlevel=120,
+endlevel=120,
+keywords={"Unbound, Abomination, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete the Underrot on Mythic difficulty or higher
+Click here to load the "Underrot" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\The Underrot"
+Defeat the Unbound Abomination in the Underrot on Mythic difficulty or higher |achieve 12502
+step
+_Congratulations!_
+You Earned the "Mythic: Underrot" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Waycrest Manor",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Gorak Tul in Waycrest Manor on Mythic difficulty or higher.",
+achieveid={12488},
+startlevel=120,
+endlevel=120,
+keywords={"Gorak, Tul, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Waycrest Manor on Mythic difficulty or higher
+Click here to load the "Waycrest Manor" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Waycrest Manor"
+Defeat Gorak Tul in Waycrest Manor on Mythic difficulty or higher |achieve 12488
+step
+_Congratulations!_
+You Earned the "Mythic: Waycrest Manor" Achievement.
+]])
 ZGV.BETAEND()
 ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Exploration\\Battle for Azeroth\\Explore Tiragarde Sound",{

@@ -474,7 +474,7 @@ collect 385 Veiled Crystal##152877
 |tip You can also purchase them from the Auction House.
 step
 Open Your Enchanting Crafting Panel:
-_<Create 9 Zandari Crafting>_
+_<Create 9 Kul Tiran Crafting>_
 |tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
 Reach Level 10 Enchanting |skill Kul Tiran Enchanting,10
 step

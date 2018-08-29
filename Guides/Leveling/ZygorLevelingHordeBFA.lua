@@ -7420,8 +7420,174 @@ step
 talk Nathanos Blightcaller##135691
 turnin With Prince in Tow##52978 |goto Zuldazar/0 58.44,62.67
 step
-_Under Construction!_
-This guide will be updated to continue the War Campaign questline very soon.
+talk Nathanos Blightcaller##135691
+turnin Operation: Hook and Line##53068 |goto Zuldazar/0 58.44,62.67 |only if havequest(53068) or completedq(53068)
+accept When a Plan Comes Together##52183 |goto Zuldazar/0 58.44,62.67
+step
+talk Nathanos Blightcaller##135691
+Tell him _"Tell me your plan, Nathanos."_
+Watch the dialogue
+Listen to Nathanos' Plan |q 52183/1 |goto 58.44,62.67
+step
+talk Dread-Admiral Tattersail##135690
+|tip At the top of the ship.
+Tell her _"Set sail for Tiragarde Sound."_
+Speak with Tattersail to Sail to Tiragarde Sound |q 52183/2 |goto 58.46,62.99
+step
+Run up the stairs |goto Tiragarde Sound/0 87.62,51.39 < 15 |only if walking
+Meet Nathanos in Plunder Harbor |q 52183/3 |goto Tiragarde Sound/0 87.04,52.86
+step
+talk Nathanos Blightcaller##140485
+|tip Inside the cave.
+turnin When a Plan Comes Together##52183 |goto 86.91,53.14
+accept The Bulk of the Guard##52186 |goto 86.91,53.14
+step
+talk Captain Amalia Stone##140484
+|tip Inside the cave.
+accept Old Colleagues##52187 |goto 86.96,53.11
+step
+talk Hobart Grapplehammer##141010 |goto 87.23,52.72
+Tell him _"Send me to the flagship."_
+Fly to the Flagship |goto 92.18,49.79 < 10 |noway |c |q 52187
+stickystart "Kill_Proudmoore_Guards"
+step
+kill Guard-Commander Trunksal##141122 |q 52187/2 |goto 92.09,49.65
+|tip Downstairs, on the bottom floor, inside the ship.
+step
+Follow the path |goto 91.45,48.44 < 5 |walk
+kill Captain Gastrod##141065 |q 52187/1 |goto 91.40,47.94
+|tip Upstairs inside the ship.
+step
+talk Hobart Grapplehammer##141010 |goto 92.19,49.85
+|tip On the deck of the ship.
+Tell him _"Send me to the smaller ship."_
+Fly to the Smaller Ship |goto 91.60,52.11 < 10 |noway |c |q 52187
+step
+kill Helmsman Miria##141099 |q 52187/3 |goto 92.27,51.12
+|tip At the top of the ship.
+step
+label "Kill_Proudmoore_Guards"
+kill 12 Proudmoore Guard##141035 |q 52186/1 |goto 92.06,51.38
+step
+Enter the cave |goto 87.05,52.86 < 15 |only if walking
+talk Captain Amalia Stone##140484
+|tip Inside the cave.
+turnin Old Colleagues##52187 |goto 86.96,53.12
+step
+talk Nathanos Blightcaller##140485
+|tip Inside the cave.
+turnin The Bulk of the Guard##52186 |goto 86.91,53.14
+accept A Well Placed Portal##52185 |goto 86.91,53.14
+step
+click Portal to Boralus
+|tip Inside the building.
+Take the Portal to Boralus |q 52185/1 |goto 86.94,52.47
+step
+talk Thomas Zelling##140487
+|tip Inside the building.
+turnin A Well Placed Portal##52185 |goto Boralus/0 71.19,84.76
+accept Relics of Ritual##52184 |goto Boralus/0 71.19,84.76
+accept Forfeit Souls##52189 |goto Boralus/0 71.19,84.76
+accept Tidesage Teachings##52188 |goto Boralus/0 71.19,84.76
+stickystart "Collect_Tomes_Of_Tidesage_Research"
+stickystart "Slay_Tidesages"
+step
+Follow the path |goto 70.16,85.55 < 10 |walk
+kill Archivist Medira##140606
+collect Compass of Clarity##161336 |q 52184/1 |goto 67.69,81.73
+step
+kill Brother Marrin##140572
+collect Curio of the Depths##161335 |q 52184/2 |goto 64.01,80.12
+step
+kill Unleashed Tidebreaker##140586
+|tip Kill the enemies channeling on him to be able to attack him.
+collect Key of the Sea##161334 |q 52184/3 |goto 59.66,86.44
+step
+label "Collect_Tomes_Of_Tidesage_Research"
+click Tome of Tidesage Research+
+|tip They look like thick books sitting on objects on the ground around this area.
+collect Tome of Tidesage Research##162106 |q 52188/1 |goto 64.60,79.51
+step
+label "Slay_Tidesages"
+Kill enemies around this area
+|tip Boralus Militia will not count for this quest goal.
+Slay #8# Tidesages |q 52189/1 |goto 64.60,79.51
+step
+Run down the stairs |goto 70.16,85.54 < 10 |walk
+talk Thomas Zelling##140487
+|tip Inside the building.
+turnin Relics of Ritual##52184 |goto 71.18,84.77
+turnin Forfeit Souls##52189 |goto 71.18,84.77
+turnin Tidesage Teachings##52188 |goto 71.18,84.77
+accept Gaining the Upper Hand##52190 |goto 71.18,84.77
+step
+talk Thomas Zelling##140487
+|tip Inside the building.
+Talk to Zelling |q 52190/1 |goto 71.18,84.77
+step
+Follow the path |goto 70.15,85.52 < 10 |walk
+Enter the building |goto 70.66,82.23 < 10 |walk
+click Key of the Sea
+|tip Downstairs inside the building.
+Begin the Ritual |q 52190/2 |goto 71.16,82.59
+step
+Watch the dialogue
+|tip Downstairs inside the building.
+Kill the enemies that attack in waves
+Protect Zelling |q 52190/3 |goto 71.14,82.12
+step
+click Abyssal Scepter
+|tip Downstairs inside the building.
+collect Abyssal Scepter##162579 |q 52190/4 |goto 71.16,82.62
+step
+_Next to you:_
+talk Thomas Zelling
+turnin Gaining the Upper Hand##52190
+accept Return to the Harbor##52990
+step
+Leave the building |goto 70.70,82.25 < 5 |walk
+Run down the stairs |goto 70.15,85.52 < 10 |walk
+click Portal to Plunder Harbor
+|tip Downstairs inside the building.
+Take the Portal to Plunder Harbor |q 52990/1 |goto 70.87,84.34
+step
+Enter the cave |goto Tiragarde Sound/0 87.05,52.85 < 10 |walk
+talk Nathanos Blightcaller##140485
+|tip Inside the cave.
+turnin Return to the Harbor##52990 |goto Tiragarde Sound/0 86.91,53.15
+accept Life Held Hostage##52191 |goto Tiragarde Sound/0 86.91,53.15
+step
+Watch the dialogue
+|tip Follow Nathanos Blightcaller as he walks.
+Walk with Nathanos |q 52191/1 |goto 87.21,52.12
+step
+kill General Cadarin##141808 |q 52191/2 |goto 87.52,52.12
+step
+Enter the cave |goto 87.04,52.86 < 15 |walk
+talk Nathanos Blightcaller##140485
+|tip Inside the cave.
+turnin Life Held Hostage##52191 |goto 86.91,53.14
+accept The Aid of the Tides##52192 |goto 86.91,53.14
+step
+talk Nathanos Blightcaller##140485
+|tip Inside the cave.
+Tell him _"Let's get out of here."_
+Speak with Nathanos |q 52192/1 |goto 86.91,53.14
+step
+talk Nathanos Blightcaller##135691
+turnin The Aid of the Tides##52192 |goto Zuldazar/0 58.44,62.67
+accept A Cycle of Hatred##53003 |goto Zuldazar/0 58.44,62.67
+step
+talk Lilian Voss##141961
+accept Champion: Lilian Voss##52861 |goto 58.41,62.73
+step
+Enter the building |goto Orgrimmar/1 49.92,75.64 < 10 |walk
+talk Lady Sylvanas Windrunner##134711
+|tip Inside the building.
+turnin A Cycle of Hatred##53003 |goto Orgrimmar/1 48.33,71.16
+step
+_Congratulations!_
+You completed the War Campaign.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Swiftwind Post (Drustvar)",{
 author="support@zygorguides.com",

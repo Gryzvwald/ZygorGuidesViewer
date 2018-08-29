@@ -723,26 +723,21 @@ kill Braedan Whitewall##139321 |q 51989/1 |goto 27.64,59.59
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50369
-Follow the path |goto Drustvar/0 25.94,70.83 < 7 |only if walking
-Continue up the path |goto 24.78,67.07 < 10 |only if walking
-Continue up the path |goto 24.54,61.86 < 10 |only if walking
-Jump down here |goto 24.02,59.69 < 7 |only if walking
-Jump down here |goto 23.17,57.08 < 7 |only if walking
 accept Bruin Potions##50369 |goto Drustvar/0 18.89,56.86
 |tip You will accept this quest automatically.
-stickystart "Burn_Bloody_Banners"
-stickystart "Kill_Enthralled_Wildlife"
+stickystart "Collect_Bear_Hearts_50369"
+stickystart "Collect_Hearthbloom_Petals_50369"
 step
 kill Hexwood Sentry##138088+
 collect 4 Caustic Sap##160442 |q 50369/3 |goto 18.89,56.86
 step
-label "Burn_Bloody_Banners"
+label "Collect_Bear_Hearts_50369"
 kill Hexed Brambleback##133501+
 collect 6 Bear Heart##157545 |q 50369/1 |goto 18.89,56.86
 step
-label "Kill_Enthralled_Wildlife"
+label "Collect_Hearthbloom_Petals_50369"
 click Hearthbloom##281252+
-|tip They look like small flowers on the ground around this area.
+|tip They look like small red and yellow flowers on the ground around this area.
 collect 10 Hearthbloom Petals##157546 |q 50369/2 |goto 18.89,56.86
 |next "Tortollan_Seekers_WQ"
 step
@@ -1356,19 +1351,20 @@ step
 label quest-51683
 accept Slash and Burn Tactics##51683 |goto Drustvar/0 71.22,58.85
 |tip You will accept this quest automatically.
-stickystart "Kill_Curseformed_Familiars"
-stickystart "Burn_Witch_Banners"
+stickystart "Burn_Witch_Banners_51683"
+stickystart "Kill_Curseformed_Familiars_51683"
 step
 clicknpc Frightened Woodsman##138525+
 |tip They look like humangs cowering on the ground around this area.
 Rally #6# Frightened Woodsmen |q 51683/1 |goto 71.22,58.85
 step
-label "Kill_Curseformed_Familiars"
-kill 8 Curseformed Familiar##126151 |q 51683/2 |goto 71.22,58.85
-step
-label "Burn_Witch_Banners"
-click Witch Banner##290443
+label "Burn_Witch_Banners_51683"
+click Witch Effigy+
+|tip They look like white flags with red painted symbols on them hanging from gnarled wooden stands on the ground around this area.
 Burn #8# Witch Banners |q 51683/3 |goto 71.22,58.85
+step
+label "Kill_Curseformed_Familiars_51683"
+kill 8 Curseformed Familiar##126151 |q 51683/2 |goto 71.22,58.85
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51687
@@ -1517,6 +1513,127 @@ click Untended Fishing Rod##127652
 Reel in Vicemaul |q 51508/1 |goto 72.84,60.49
 step
 kill Vicemaul##127651 |q 51508/2 |goto 72.84,60.49
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52424
+collect 5 Battle Flag: Rallying Swiftness##154705 |q 52424 |future
+|tip Create them with Tailoring or purchase them from the Auction House.
+step
+accept Work Order: Battle Flag: Rallying Swiftness##52424 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Battle Flag: Rallying Swiftness##52424 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50991
+collect 40 Blood-Stained Bone##154164 |q 50991 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Blood-Stained Bone##50991 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Blood-Stained Bone##50991 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52414
+collect 3 Drums of the Maelstrom##154167 |q 52414 |future
+|tip Create them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Drums of the Maelstrom##52414 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Drums of the Maelstrom##52414 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52357
+collect 3 Enchant Weapon - Quick Navigation##159786 |q 52357 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Weapon - Quick Navigation##52357 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Enchant Weapon - Quick Navigation##52357 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52407
+collect 10 Golden Beryl##153700 |q 52407 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Golden Beryl##52407 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Golden Beryl##52407 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50987
+collect 40 Monelite Ore##152512 |q 50987 |future
+|tip Farm them with Mining or purchase them from the Auction House.
+step
+accept Work Order: Monelite Ore##50987 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Monelite Ore##50987 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52334
+collect 5 Potion of Concealment##152503 |q 52334 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Potion of Concealment##52334 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Potion of Concealment##52334 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52406
+collect 10 Rubellite##153701 |q 52406 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Rubellite##52406 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Rubellite##52406 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50986
+collect 40 Sea Stalk##152511 |q 50986 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Sea Stalk##50986 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Sea Stalk##50986 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50985
+collect 40 Siren's Pollen##152509 |q 50985 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Siren's Pollen##50985 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Siren's Pollen##50985 |goto 37.90,49.00
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52364
+collect 5 Thermo-Accelerated Plague Spreader##152509 |q 52364 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Thermo-Accelerated Plague Spreader##52364 |goto Drustvar/0 37.90,49.00
+|tip You will accept this quest automatically.
+step
+talk Quartermaster Alcorn##135815
+turnin Work Order: Thermo-Accelerated Plague Spreader##52364 |goto 37.90,49.00
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51769
@@ -2121,14 +2238,15 @@ step
 label quest-50695
 accept It's Never Time for Cannibalism##50695 |goto Nazmir/0 49.67,35.43
 |tip You will accept this quest automatically.
-stickystart "Slay_Natha'vor_Cannibals"
+stickystart "Slay_Nathavor_Cannibals_50695"
 step
 clicknpc Zandalari Sacrifice##134761+
-|tip They look like tied up trolls around this area.
+|tip They look like trolls tied to spears on the ground around this area.
 Rescue #4# Zandalari Sacrifices |q 50695/2 |goto 49.67,35.43
 step
-label "Slay_Natha'vor_Cannibals"
-kill Natha'vor Cannibal##124688+ |q 50695/1 |goto 49.67,35.43
+label "Slay_Nathavor_Cannibals_50695"
+Kill Natha'vor enemies around this area
+Slay #12# Cannibals |q 50695/1 |goto 49.67,35.43
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50689
@@ -2214,7 +2332,7 @@ accept Lost Scroll##50566 |goto Nazmir/0 81.68,61.07
 |tip You will accept this quest automatically.
 step
 click Lost Scroll##134295
-kill Vilescale Guardian##125393 |q 50566/1 |goto 81.68,61.07
+kill Enraged Water Elemental##134294 |q 50566/1 |goto 81.68,61.07
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50517
@@ -2333,6 +2451,13 @@ click Ancient Texts##287161+
 |tip They look like brown stone tablets on the ground around this area.
 |tip They can also be inside the buildings around this area.
 Examine #8# Ancient Text |q 51154/1 |goto 68.45,35.34
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50501
+accept Queen Tzxi'kik##50501 |goto Nazmir/0 57.72,67.71
+|tip You will accept this quest automatically.
+step
+kill Queen Tzxi'kik##128974 |q 50501/1 |goto 57.72,67.71
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50786
@@ -2611,6 +2736,160 @@ step
 kill Vugthuth##128584 |q 50459/1 |goto 46.74,33.74
 |next "Tortollan_Seekers_WQ"
 step
+label quest-52426
+collect 5 Battle Flag: Phalanx Defense##153703 |q 52426 |future
+|tip Create them with Tailoring or purchase them from the Auction House.
+step
+accept Work Order: Battle Flag: Phalanx Defense##52426 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Battle Flag: Phalanx Defense##52426 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51009
+collect 40 Calcified Bone##154165 |q 51009 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Calcified Bone##51009 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Calcified Bone##51009 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52396
+collect 5 Contract: Talanji's Expedition##153665 |q 52396 |future
+|tip Create them with Inscription or purchase them from the Auction House.
+step
+accept Work Order: Contract: Talanji's Expedition##52396 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Contract: Talanji's Expedition##52396 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51015
+collect 40 Deep Sea Satin##152577 |q 51015 |future
+|tip Farm them from Humanoid mobs or purchase them from the Auction House.
+step
+accept Work Order: Deep Sea Satin##51015 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Deep Sea Satin##51015 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52418
+collect 3 Drums of the Maelstrom##154167 |q 52418 |future
+|tip Create them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Drums of the Maelstrom##52418 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Drums of the Maelstrom##52418 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52360
+collect 3 Enchant Weapon - Coastal Surge##153476 |q 52360 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Weapon - Coastal Surge##52360 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Enchant Weapon - Coastal Surge##52360 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52361
+collect 3 Enchant Weapon - Torrent of Elements##153479 |q 52361 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Weapon - Torrent of Elements##52361 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Enchant Weapon - Torrent of Elements##52361 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52411
+collect 10 Kubiline##153702 |q 52411 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Kubiline##52411 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Kubiline##52411 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51006
+collect 40 Monelite Ore##152512 |q 51006 |future
+|tip Farm them with Mining or purchase them from the Auction House.
+step
+accept Work Order: Monelite Ore##51006 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Monelite Ore##51006 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52337
+collect 5 Sea Mist Potion##152550 |q 52337 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Sea Mist Potion##52337 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Sea Mist Potion##52337 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51005
+collect 40 Sea Stalk##152511 |q 51005 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Sea Stalk##51005 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Sea Stalk##51005 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51012
+collect 40 Shimmerscale##153050 |q 51012 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Shimmerscale##51012 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Shimmerscale##51012 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52410
+collect 10 Solstone##153050 |q 52410 |future
+|tip Prospect them with Mining or purchase them from the Auction House.
+step
+accept Work Order: Solstone##52410 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: Solstone##52410 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52372
+collect 5 XA-1000 Surface Skimmer##153512 |q 52372 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: XA-1000 Surface Skimmer##52372 |goto Nazmir/0 39.07,79.52
+|tip You will accept this quest automatically.
+step
+talk Provisioner Lija##135459
+turnin Work Order: XA-1000 Surface Skimmer##52372 |goto 39.07,79.52
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50516
 accept Wardrummer Zurula##50516 |goto Nazmir/0 47.66,49.55
 |tip You will accept this quest automatically.
@@ -2817,18 +3096,12 @@ kill Beehemoth##134147 |q 52330/1 |goto 68.16,74.84
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52865
-Follow the road up |goto Stormsong Valley/0 51.58,70.14 < 7 |only if walking
-Follow the path |goto 52.26,72.90 < 7 |only if walking
-Cross the bridge |goto 52.46,74.41 < 7 |only if walking
-Follow the path up |goto 52.90,75.25 < 7 |only if walking
-Continue following the path |goto 54.31,77.59 < 7 |only if walking
-Continue up the path |goto 55.64,78.53 < 10 |only if walking
-Follow the road |goto 56.81,81.05 < 7 |only if walking
 accept Blockade Runner##52865 |goto Stormsong Valley/0 57.12,83.03
 |tip You will accept this quest automatically.
 step
 talk Stormsong Sentinel##137985
 Tell them _"Open this pass at once."_
+|tip Some of them will attack you.
 Route #8# Stormsong Blockades |q 52865/1 |goto 57.57,83.61
 |next "Tortollan_Seekers_WQ"
 step
@@ -3982,6 +4255,138 @@ kill Vinespeaker Ratha##135939
 Slay Vinespeaker Ratha |q 52301/1 |goto 47.26,65.85
 |next "Tortollan_Seekers_WQ"
 step
+label quest-52415
+collect 5 Coarse Leather Barding##154166 |q 52415 |future
+|tip Create them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Coarse Leather Barding##52415 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Coarse Leather Barding##52415 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52393
+collect 5 Contract: Tortollan Seekers##153667 |q 52393 |future
+|tip Create them with Inscription or purchase them from the Auction House.
+step
+accept Work Order: Contract: Tortollan Seekers##52393 |goto Stormsong Valley/0 40.54,36.41
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##135793
+turnin Work Order: Contract: Tortollan Seekers##52393 |goto 40.54,36.41
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52367
+collect 5 Electroshock Mount Motivator##153573 |q 52367 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Electroshock Mount Motivator##52367 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Electroshock Mount Motivator##52367 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52353
+collect 3 Enchant Ring - Seal of Haste##153439 |q 52353 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Ring - Seal of Haste##52353 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Enchant Ring - Seal of Haste##52353 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52347
+collect 20 Honey-Glazed Haunches##154882 |q 52347 |future
+|tip Create them with Cooking or purchase them from the Auction House.
+step
+accept Work Order: Honey-Glazed Haunches##52347 |goto Stormsong Valley/0 40.54,36.41
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##135793
+turnin Work Order: Honey-Glazed Haunches##52347 |goto 40.54,36.41
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52332
+collect 5 Lightfoot Potion##152497 |q 52332 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Lightfoot Potion##52332 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Lightfoot Potion##52332 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50996
+collect 40 Mistscale##153051 |q 50996 |future
+|tip Farm them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Mistscale##50996 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Mistscale##50996 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52345
+collect 20 Ravenberry Tarts##154883 |q 52345 |future
+|tip Create them with Cooking or purchase them from the Auction House.
+step
+accept Work Order: Ravenberry Tarts##52345 |goto Stormsong Valley/0 40.54,36.41
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##135793
+turnin Work Order: Ravenberry Tarts##52345 |goto 40.54,36.41
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50981
+collect 40 Riverbud##152505 |q 50981 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Riverbud##50981 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Riverbud##50981 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52346
+collect 20 Sailor's Pie##154888 |q 52346 |future
+|tip Create them with Cooking or purchase them from the Auction House.
+step
+accept Work Order: Sailor's Pie##52346 |goto Stormsong Valley/0 40.54,36.41
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##135793
+turnin Work Order: Sailor's Pie##52346 |goto 40.54,36.41
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50982
+collect 40 Star Moss##152506 |q 50982 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Star Moss##50982 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Star Moss##50982 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50989
+collect 40 Storm Silver Ore##152579 |q 50989 |future
+|tip Farm them with Mining or purchase them from the Auction House.
+step
+accept Work Order: Storm Silver Ore##50989 |goto Stormsong Valley/0 59.29,69.33
+|tip You will accept this quest automatically.
+step
+talk Sister Lilyana##135800
+turnin Work Order: Storm Silver Ore##50989 |goto 59.29,69.33
+|next "Tortollan_Seekers_WQ"
+step
 label quest-52300
 accept Wagga Snarltusk##52300 |goto Stormsong Valley/3 40.98,51.71
 |tip You will accept this quest automatically.
@@ -4390,11 +4795,11 @@ collect Coarse Storm Silver##163626 |q 53314/1 |goto 68.29,18.93
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51405
-Cross the water |goto Tiragarde Sound/0 73.07,42.04 < 10 |only if walking
 accept Corruption in the Bay##51405 |goto Tiragarde Sound/0 32.62,25.68
 |tip You will accept this quest automatically.
 step
 Kill enemies around this area
+|tip Underwater.
 Purge the Corruption |q 51405/1 |goto 32.62,25.68
 |next "Tortollan_Seekers_WQ"
 step
@@ -4543,10 +4948,11 @@ Protect the Azerite Extractor |q 52119/1 |goto 75.74,55.30
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51611
-accept Ghost of the Deep##51611 |goto Tiragarde Sound/0 69.20,47.08
+accept Ghost of the Deep##51611 |goto Tiragarde Sound/0 69.48,47.02
 |tip You will accept this quest automatically.
+|tip It walks around this area.
 step
-kill Ghost of the Deep##138288 |q 51611/1 |goto 69.60,46.73
+kill Ghost of the Deep##138288 |q 51611/1 |goto 69.48,47.02
 |tip It walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
@@ -7005,6 +7411,105 @@ Kill enemies around this area
 Slay #50# Faithless |q 51995/2 |goto 47.76,32.25
 |next "Tortollan_Seekers_WQ"
 step
+label quest-52427
+collect 5 Battle Flag: Rallying Swiftness##154705 |q 52427 |future
+|tip Create them with Tailoring or purchase them from the Auction House.
+step
+accept Work Order: Battle Flag: Rallying Swiftness##52427 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Battle Flag: Rallying Swiftness##52427 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51008
+collect 40 Blood-Stained Bone##154164 |q 51008 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Blood-Stained Bone##51008 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Blood-Stained Bone##51008 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52419
+collect 5 Coarse Leather Barding##154166 |q 52419 |future
+|tip Create them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Coarse Leather Barding##52419 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Coarse Leather Barding##52419 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52362
+collect 3 Enchant Weapon - Quick Navigation##159786 |q 52362 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Weapon - Quick Navigation##52362 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Enchant Weapon - Quick Navigation##52362 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52371
+collect 5 F.R.I.E.D.##153490 |q 52371 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: F.R.I.E.D.##52371 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: F.R.I.E.D.##52371 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52338
+collect 5 Potion of Concealment##152503 |q 52338 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Potion of Concealment##52338 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Potion of Concealment##52338 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51007
+collect 40 Storm Silver Ore##152579 |q 51007 |future
+|tip Farm them with Mining or purchase them from the Auction House.
+step
+accept Work Order: Storm Silver Ore##51007 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Storm Silver Ore##51007 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51011
+collect 40 Tempest Hide##154722 |q 51011 |future
+|tip Farm them with Skinning or purchase them from the Auction House.
+step
+accept Work Order: Tempest Hide##51011 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Tempest Hide##51011 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51003
+collect 40 Winter's Kiss##152508 |q 51003 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Winter's Kiss##51003 |goto Vol'dun/0 56.69,49.73
+|tip You will accept this quest automatically.
+step
+talk Hoarder Jena##135804
+turnin Work Order: Winter's Kiss##51003 |goto 56.69,49.73
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51223
 accept Walking on Broken Glass##51223 |goto Vol'dun/0 28.72,47.35
 |tip You will accept this quest automatically.
@@ -7101,11 +7606,15 @@ turnin Work Order: Rubellite##52412 |goto 56.69,49.73
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51957
-accept The Wrath of Vorrik##51957 |goto Vol'dun/0 50.02,27.28
+Cross the bridge |goto Vol'dun/0 51.87,34.51 < 20 |only if walking
+Follow the path |goto Vol'dun/0 51.69,29.07 < 20 |only if walking
+accept The Wrath of Vorrik##51957 |goto Vol'dun/0 50.51,28.24
 |tip You will accept this quest automatically.
 step
+Kill Faithless enemies around this area
+|tip Run near them.
+|tip Run over the Lightning Orbs that appear on the ground to recharge the ability bar.
 Expunge #100# Faithless |q 51957/1 |goto 50.02,27.28
-|tip Collect the small white crackling orbs that spawn to renew your lightning power.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52864
@@ -7417,6 +7926,13 @@ step
 kill Darkspeaker Jo'la##134760 |q 50875/1 |goto 65.38,10.24
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51373
+accept Ears Everywhere##51373 |goto Zuldazar/0 55.72,23.38
+|tip You will accept this quest automatically.
+step
+kill 12 Zandalari Spy##137489 |q 51373/1 |goto 55.72,23.38
+|next "Tortollan_Seekers_WQ"
+step
 label quest-50571
 accept Eggstermination##50571 |goto Zuldazar/0 64.54,18.60
 |tip You will accept this quest automatically.
@@ -7547,6 +8063,13 @@ kill Gurubashi Attacker##136699+
 |tip Stand near the totems for huge buffs.
 |tip Each buff lasts for 45 seconds.
 Slay #100# Gurubashi Attackers |q 51178/1 |goto 65.51,30.15
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50869
+accept Kiboku##50869 |goto Zuldazar/0 75.63,35.90
+|tip You will accept this quest automatically.
+step
+kill Kiboku##132244 |q 50869/1 |goto 75.63,35.90
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50859
@@ -7897,18 +8420,20 @@ kill Tambano##131687 |q 50867/1 |goto 77.71,10.18
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50592
-accept Tiny Terror##50592 |goto Zuldazar/0 46.13,24.47
+accept Tiny Terror##50592 |goto Zuldazar/0 46.27,23.90
 |tip You will accept this quest automatically.
 step
-Kill Sethrak enemies around this area
-Slay #15# Sethrak Invaders |q 50592/1 |goto 46.13,24.47
+Kill enemies around this area
+Slay #15# Sethrak Invaders |q 50592/1 |goto 46.27,23.90
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50850
 accept Tia'Kawan##50850 |goto Zuldazar/0 64.63,23.00
 |tip You will accept this quest automatically.
+|tip It walks around this area.
 step
 kill Tia'Kawan##133163 |q 50850/1 |goto 64.63,23.00
+|tip It walks around this area.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50861
@@ -7964,6 +8489,215 @@ Kill Da'kani enemies around this area
 click Gorilla Totem+
 |tip They look like clusters of sticks on the ground around this area.
 Disrupt the Da'kani Gorillas |q 51374/1 |goto 49.01,54.17
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52374
+collect 5 Crow's Nest Scope##158212 |q 52374 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Crow's Nest Scope##52374 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Crow's Nest Scope##52374 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52335
+collect 10 Demitri's Draught of Deception##152496 |q 52335 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Demitri's Draught of Deception##52335 |goto Dazar'alor/0 44.26,32.26
+|tip You will accept this quest automatically.
+step
+talk Hanul Swiftgale##141936
+turnin Work Order: Demitri's Draught of Deception##52335 |goto 44.26,32.26
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52373
+collect 5 Electroshock Mount Motivator##153573 |q 52373 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Electroshock Mount Motivator##52373 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Electroshock Mount Motivator##52373 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52358
+collect 3 Enchant Ring - Seal of Haste##153439 |q 52358 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Ring - Seal of Haste##52358 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Enchant Ring - Seal of Haste##52358 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52359
+collect 3 Enchant Ring - Seal of Mastery##153440 |q 52359 |future
+|tip Create them with Enchanting or purchase them from the Auction House.
+step
+accept Work Order: Enchant Ring - Seal of Mastery##52359 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Enchant Ring - Seal of Mastery##52359 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52369
+collect 5 Incendiary Ammunition##158203 |q 52369 |future
+|tip Create them with Engineering or purchase them from the Auction House.
+step
+accept Work Order: Incendiary Ammunition##52369 |goto Dazar'alor/0 44.26,32.26
+|tip You will accept this quest automatically.
+step
+talk Hanul Swiftgale##141936
+turnin Work Order: Incendiary Ammunition##52369 |goto 44.26,32.26
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52408
+collect 3 Kyanite##153705 |q 52408 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Kyanite##52408 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Kyanite##52408 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52336
+collect 5 Lightfoot Potion##152497 |q 52336 |future
+|tip Create them with Alchemy or purchase them from the Auction House.
+step
+accept Work Order: Lightfoot Potion##52336 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Lightfoot Potion##52336 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52349
+collect 20 Loa Loaf##154887 |q 52349 |future
+|tip Create them with Cooking or purchase them from the Auction House.
+step
+accept Work Order: Loa Loaf##52349 |goto Zuldazar/0 71.50,30.35
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##134345
+turnin Work Order: Loa Loaf##52349 |goto 71.50,30.35
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52348
+collect 20 Mon'Dazi##154885 |q 52348 |future
+|tip Create them with Cooking or purchase them from the Auction House.
+step
+accept Work Order: Mon'Dazi##52348 |goto Zuldazar/0 71.50,30.35
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##134345
+turnin Work Order: Mon'Dazi##52348 |goto 71.50,30.35
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52342
+collect 5 Monel-Hardened Hoofplates##152812 |q 52342 |future
+|tip Create them with Blacksmithing or purchase them from the Auction House.
+step
+accept Work Order: Monel-Hardened Hoofplates##52342 |goto Dazar'alor/0 44.26,32.26
+|tip You will accept this quest automatically.
+step
+talk Hanul Swiftgale##141936
+turnin Work Order: Monel-Hardened Hoofplates##52342 |goto 44.26,32.26
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52341
+collect 5 Monel-Hardened Stirrups##152813 |q 52341 |future
+|tip Create them with Blacksmithing or purchase them from the Auction House.
+step
+accept Work Order: Monel-Hardened Stirrups##52341 |goto Dazar'alor/0 44.26,32.26
+|tip You will accept this quest automatically.
+step
+talk Hanul Swiftgale##141936
+turnin Work Order: Monel-Hardened Stirrups##52341 |goto 44.26,32.26
+|next "Tortollan_Seekers_WQ"
+step
+label quest-50999
+collect 40 Riverbud##152505 |q 50999 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Riverbud##50999 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Riverbud##50999 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52421
+collect 10 Shimmerscale Diving Helmet##154169 |q 52421 |future
+|tip Create them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Shimmerscale Diving Helmet##52421 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Shimmerscale Diving Helmet##52421 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52420
+collect 10 Shimmerscale Diving Suit##154168 |q 52420 |future
+|tip Create them with Leatherworking or purchase them from the Auction House.
+step
+accept Work Order: Shimmerscale Diving Suit##52420 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Shimmerscale Diving Suit##52420 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51000
+collect 40 Star Moss##152506 |q 51000 |future
+|tip Farm them with Herbalism or purchase them from the Auction House.
+step
+accept Work Order: Star Moss##51000 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Star Moss##51000 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52350
+collect 20 Swamp Fish 'n Chips##154884 |q 52350 |future
+|tip Create them with Cooking or purchase them from the Auction House.
+step
+accept Work Order: Swamp Fish 'n Chips##52350 |goto Zuldazar/0 71.50,30.35
+|tip You will accept this quest automatically.
+step
+talk Collector Kojo##134345
+turnin Work Order: Swamp Fish 'n Chips##52350 |goto 71.50,30.35
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51014
+collect 40 Tidespray Linen##152576 |q 51014 |future
+|tip Farm them from Humanoid mobs or purchase them from the Auction House.
+step
+accept Work Order: Tidespray Linen##51014 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Tidespray Linen##51014 |goto 67.25,71.57
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52409
+collect 10 Viridium##153704 |q 52409 |future
+|tip Prospect them with Jewelcrafting or purchase them from the Auction House.
+step
+accept Work Order: Viridium##52409 |goto Dazar'alor/2 67.25,71.57
+|tip You will accept this quest automatically.
+step
+talk Natal'hakata##131287
+turnin Work Order: Viridium##52409 |goto 67.25,71.57
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50872
