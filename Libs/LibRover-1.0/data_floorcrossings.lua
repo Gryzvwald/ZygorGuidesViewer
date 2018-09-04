@@ -13,6 +13,12 @@ data.basenodes.FloorCrossings = {
 	
 			-- Gol Thovas, Indoor Floor Cross
 				"Tiragarde Sound/1 50.95,47.91 -x- Tiragarde Sound/2 36.75,55.63 {title_atob:Follow the path up} {title_btoa:Follow the path down}",
+
+			-- Winterchill Mine, Cave Entrance
+				"Tiragarde Sound/0 78.77,53.26 -x- Tiragarde Sound/4 39.98,34.23 {template:cave}",
+
+			-- Winterchill Mine, Indoor Floor Cross
+				"Tiragarde Sound/4 47.06,61.74 -x- Tiragarde Sound/3 55.34,30.26 {title_atob:Follow the path up} {title_btoa:Follow the path down}",
 		},
 		
 		["Stormsong Valley"] = {

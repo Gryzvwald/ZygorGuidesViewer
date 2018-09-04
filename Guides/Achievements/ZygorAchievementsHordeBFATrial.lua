@@ -4,4 +4,3 @@ if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("AchievementsHBFA") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZGV.BETAEND()
-ZGV.BETAEND()

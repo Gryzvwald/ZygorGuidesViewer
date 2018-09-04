@@ -13,117 +13,145 @@ if not ZGV then return end
 
 ZGV.Professions = {}
 local ZGVP = ZGV.Professions
--- this is not widely used, yet, sadly - most functions remain global.
 
 ZGVP.skillSpells = {}
 
 ZGVP.tradeskills = {
 	[171] = {name="Alchemy",crafting=true,subs={
-		[592] = "Zandalari Alchemy",
-		[433] = "Legion Alchemy",
-		[332] = "Draenor Alchemy",
-		[596] = "Pandaria Alchemy",
-		[598] = "Cataclysm Alchemy",
-		[600] = "Northrend Alchemy",
-		[602] = "Outland Alchemy",
+		[592] = {name="Zandalari Alchemy", skill=2478},
+		[433] = {name="Legion Alchemy", skill=2479},
+		[332] = {name="Draenor Alchemy", skill=2480},
+		[596] = {name="Pandaria Alchemy", skill=2481},
+		[598] = {name="Cataclysm Alchemy", skill=2482},
+		[600] = {name="Northrend Alchemy", skill=2483},
+		[602] = {name="Outland Alchemy", skill=2484},
+		[604] = {name="Alchemy", skill=2485},
 	}},
 	[164] = {name="Blacksmithing",crafting=true,subs={
-		[542] = "Zandalari Blacksmithing",
-		[426] = "Legion Blacksmithing",
-		[389] = "Draenor Blacksmithing",
-		[553] = "Pandaren Blacksmithing",
-		[569] = "Cataclysm Blacksmithing",
-		[577] = "Northrend Blacksmithing",
-		[584] = "Outland Blacksmithing",
+		[542] = {name="Zandalari Blacksmithing", skill=2437},
+		[426] = {name="Legion Blacksmithing", skill=2454},
+		[389] = {name="Draenor Blacksmithing", skill=2472},
+		[553] = {name="Pandaren Blacksmithing", skill=2473},
+		[569] = {name="Cataclysm Blacksmithing", skill=2474},
+		[577] = {name="Northrend Blacksmithing", skill=2475},
+		[584] = {name="Outland Blacksmithing", skill=2476},
+		[590] = {name="Blacksmithing", skill=2477},
 	}},
 	[333] = {name="Enchanting",crafting=true,subs={
-		[647] = "Zandalari Enchanting",
-		[443] = "Legion Enchanting",
-		[348] = "Draenor Enchanting",
-		[656] = "Pandaria Enchanting",
-		[661] = "Cataclysm Enchanting",
-		[663] = "Northrend Enchanting",
-		[665] = "Outland Enchanting",
+		[647] = {name="Zandalari Enchanting", skill=2486},
+		[443] = {name="Legion Enchanting", skill=2487},
+		[348] = {name="Draenor Enchanting", skill=2488},
+		[656] = {name="Pandaria Enchanting", skill=2489},
+		[661] = {name="Cataclysm Enchanting", skill=2491},
+		[663] = {name="Northrend Enchanting", skill=2492},
+		[665] = {name="Outland Enchanting", skill=2493},
+		[667] = {name="Enchanting", skill=2494},
 	}},
 	[202] = {name="Engineering",crafting=true,subs={
-		[709] = "Zandalari Engineering",
-		[469] = "Legion Engineering",
-		[347] = "Draenor Engineering",
-		[713] = "Pandaria Engineering",
-		[715] = "Cataclysm Engineering",
-		[717] = "Northrend Engineering",
-		[719] = "Outland Engineering",
+		[709] = {name="Zandalari Engineering", skill=2499},
+		[469] = {name="Legion Engineering", skill=2500},
+		[347] = {name="Draenor Engineering", skill=2501},
+		[713] = {name="Pandaria Engineering", skill=2502},
+		[715] = {name="Cataclysm Engineering", skill=2503},
+		[717] = {name="Northrend Engineering", skill=2504},
+		[719] = {name="Outland Engineering", skill=2505},
+		[419] = {name="Engineering", skill=2506},
 	}},
 	[773] = {name="Inscription",crafting=true,subs={
-		[759] = "Zandalari Inscription",
-		[450] = "Legion Inscription",
-		[410] = "Draenor Inscription",
-		[763] = "Pandaria Inscription",
-		[765] = "Cataclysm Inscription",
-		[767] = "Northrend Inscription",
-		[769] = "Outland Inscription",
+		[759] = {name="Zandalari Inscription", skill=2507},
+		[450] = {name="Legion Inscription", skill=2508},
+		[410] = {name="Draenor Inscription", skill=2509},
+		[763] = {name="Pandaria Inscription", skill=2510},
+		[765] = {name="Cataclysm Inscription", skill=2511},
+		[767] = {name="Northrend Inscription", skill=2512},
+		[769] = {name="Outland Inscription", skill=2513},
+		[415] = {name="Inscription", skill=2514},
 	}},
 	[755] = {name="Jewelcrafting",crafting=true,subs={
-		[805] = "Zandalari Jewelcrafting",
-		[464] = "Legion Jewelcrafting",
-		[373] = "Draenor Jewelcrafting",
-		[809] = "Pandaria Jewelcrafting",
-		[811] = "Cataclysm Jewelcrafting",
+		[805] = {name="Zandalari Jewelcrafting", skill=2517},
+		[464] = {name="Legion Jewelcrafting", skill=2518},
+		[373] = {name="Draenor Jewelcrafting", skill=2519},
+		[809] = {name="Pandaria Jewelcrafting", skill=2520},
+		[811] = {name="Cataclysm Jewelcrafting", skill=2521},
+		--  id:"2522,"name":"Northrend Jewelcrafting"
+		--  id:"2523,"name":"Outland Jewelcrafting"
+		[372] = {name="Jewelcrafting", skill=2524},
 	}},
 	[165] = {name="Leatherworking",crafting=true,subs={
-		[871] = "Zandalari Leatherworking",
-		[460] = "Legion Leatherworking",
-		[380] = "Draenor Leatherworking",
-		[876] = "Pandaria Leatherworking",
-		[878] = "Cataclysm Leatherworking",
-		[880] = "Northrend Leatherworking",
-		[882] = "Outland Leatherworking",
+		[871] = {name="Zandalari Leatherworking", skill=2525},
+		[460] = {name="Legion Leatherworking", skill=2526},
+		[380] = {name="Draenor Leatherworking", skill=2527},
+		[876] = {name="Pandaria Leatherworking", skill=2528},
+		[878] = {name="Cataclysm Leatherworking", skill=2529},
+		[880] = {name="Northrend Leatherworking", skill=2530},
+		[882] = {name="Outland Leatherworking", skill=2531},
+		[379] = {name="Leatherworking", skill=2532},
 	}},
 	[197] = {name="Tailoring",crafting=true,subs={
-		[942] = "Zandalari Tailoring",
-		[430] = "Legion Tailoring",
-		[369] = "Draenor Tailoring",
-		[950] = "Pandaria Tailoring",
-		[952] = "Cataclysm Tailoring",
-		[954] = "Northrend Tailoring",
-		[956] = "Outland Tailoring",
+		[942] = {name="Zandalari Tailoring", skill=2533},
+		[430] = {name="Legion Tailoring", skill=2534},
+		[369] = {name="Draenor Tailoring", skill=2535},
+		[950] = {name="Pandaria Tailoring", skill=2536},
+		[952] = {name="Cataclysm Tailoring", skill=2537},
+		[954] = {name="Northrend Tailoring", skill=2538},
+		[956] = {name="Outland Tailoring", skill=2539},
+		[362] = {name="Tailoring", skill=2540},
 	}},
 	[182] = {name="Herbalism",subs={
-		[1029] = "Zandalari Herbalism",
-		[456] = "Legion Herbalism",
+		[1029] = {name="Zandalari Herbalism", skill=2549},
+		[456] = {name="Legion Herbalism", skill=2550},
+		-- id:2551,"name":"Draenor Herbalism"
+		-- id:2552,"name":"Pandaria Herbalism"
+		-- id:2553,"name":"Cataclysm Herbalism"
+		-- id:2554,"name":"Northrend Herbalism"
+		-- id:2555,"name":"Outland Herbalism"
+		[1044] = {name="Herbalism", skill=2556},
 	}},
 	[186] = {name="Mining",crafting=true,subs={
-		[1065] = "Zandalari Mining",
-		[425] =  "Legion Mining",
-		[1070] = "Pandaria Mining",
-		[1072] = "Cataclysm Mining",
-		[1074] = "Northrend Mining",
-		[1076] = "Outland Mining",
+		[1065] = {name="Zandalari Mining", skill=2565},
+		[425] =  {name="Legion Mining", skill=2566},
+		-- id:2567,"name":"Draenor Mining"
+		[1070] = {name="Pandaria Mining", skill=2568},
+		[1072] = {name="Cataclysm Mining", skill=2569},
+		[1074] = {name="Northrend Mining", skill=2570},
+		[1076] = {name="Outland Mining", skill=2571},
+		[1078] = {name="Mining", skill=2572},
 	}},
 	[393] = {name="Skinning",subs={
-		[1046] = "Zandalari Skinning",
-		[459] = "Legion Skinning",
+		[1046] = {name="Zandalari Skinning", skill=2557},
+		[459] = {name="Legion Skinning", skill=2558},
+		-- id:2560,"name":"Pandaria Skinning"
+		-- id:2561,"name":"Cataclysm Skinning"
+		-- id:2562,"name":"Northrend Skinning"
+		-- id:2563,"name":"Outland Skinning"
+		[1060] = {name="Skinning", skill=2564},
 	}},
-	[794] = {name="Archaeology",subs={}},
+	[794] = {name="Archaeology",subs={
+		[794] = {name="Archaeology", skill=794},
+	}},
 	[185] = {name="Cooking",crafting=true,subs={
-		[1118] = "Zandalari Cooking",
-		[475] = "Legion Cooking",
-		[342] = "Draenor Cooking",
-		[90] = "Pandaria Cooking",
-		[75] = "Cataclysm Cooking",
-		[74] = "Northrend Cooking",
-		[73] = "Outland Cooking",
+		[1118] = {name="Zandalari Cooking", skill=2541},
+		[475] = {name="Legion Cooking", skill=2542},
+		[342] = {name="Draenor Cooking", skill=2543},
+		[90] = {name="Pandaria Cooking", skill=2544},
+		[75] = {name="Cataclysm Cooking", skill=2545},
+		[74] = {name="Northrend Cooking", skill=2546},
+		[73] = {name="Outland Cooking", skill=2547},
+		[72] = {name="Cooking", skill=2548},
 	}},
 	[356] = {name="Fishing",subs={
-		[1102] = "Outland Fishing",
-		[1104] = "Northrend Fishing",
-		[1106] = "Cataclysm Fishing",
-		[1108] = "Pandaria Fishing",
-		[1110] = "Draenor Fishing",
-		[1112] = "Legion Fishing",
-		[1114] = "Zandalari Fishing",
+		[1114] = {name="Zandalari Fishing", skill=2585},
+		[1112] = {name="Legion Fishing", skill=2586},
+		[1110] = {name="Draenor Fishing", skill=2587},
+		[1108] = {name="Pandaria Fishing", skill=2588},
+		[1106] = {name="Cataclysm Fishing", skill=2589},
+		[1104] = {name="Northrend Fishing", skill=2590},
+		[1102] = {name="Outland Fishing", skill=2591},
+		[1100] = {name="Fishing", skill=2592},
 	}},
-	[762] = {name="Riding",subs={}}
+	[762] = {name="Riding",subs={
+		[762] = {name="Riding", skill=762},
+	}}
 }
 
 ZGVP.skillLocale = {
@@ -194,6 +222,7 @@ function ZGV:CacheSkills_Queued()
 
 		if Goldguide and ZGVP.tradeskills[skillline] and ZGVP.tradeskills[skillline].crafting then Goldguide.knows_crafting = true end-- this is a crafting skill, mark for gold guide that user can craft something
 
+		--[[ -- nope, even core skills need to be handled via subskills, as GetProfessionInfo now returns info about highest tier only
 		local name = ZGVP.tradeskills[skillline] and ZGVP.tradeskills[skillline].name
 		ZGVP.SkillsKnown[name] = ZGVP.SkillsKnown[name] or {}
 		local pro = ZGVP.SkillsKnown[name]
@@ -203,12 +232,14 @@ function ZGV:CacheSkills_Queued()
 		pro.active = true
 		pro.skillID = skillline
 		pro.name = name
+		--]]
 
 		cacheskill_lines[skillline] = true
-		cacheskill_core[skillline]=true
+		cacheskill_core[skillline] = true
 
 		-- subskills
-		for subid,subname in pairs(ZGVP.tradeskills[skillline].subs) do
+		for subid,subdata in pairs(ZGVP.tradeskills[skillline].subs) do
+			local subname = subdata.name
 			if faction=="Alliance" then
 				subname = subname:gsub("Zandalari ","Kul Tiran ")
 			end
@@ -221,7 +252,7 @@ function ZGV:CacheSkills_Queued()
 				pro.level = cat.skillLineCurrentLevel
 				pro.max = cat.skillLineMaxLevel
 				pro.active = (cat.skillLineCurrentLevel>0)
-				pro.skillID = subid
+				pro.skillID = subdata.skill
 				pro.name = subname
 				pro.parentname = name
 				pro.parentskillID = skillline
@@ -398,10 +429,43 @@ local pattern = "Skill (%d+) increased from (%d+) to (%d+)"
 local function UpdateSkillConsole(_,_,msg)
 	local id,from,to = msg:match(pattern)
 	if id and to then
+		id=tonumber(id)
+		to=tonumber(to)
+
 		for name,skill in pairs(ZGV.db.char.SkillsKnown) do
 			if skill.skillID==id then
 				skill.level = to
 				return
+			end
+		end
+
+		if to>0 then
+			for sid,linedata in pairs(ZGVP.tradeskills) do
+				for subid,skilldata in pairs(linedata.subs) do
+					if skilldata.skill==id then
+						ZGVP.SkillsKnown[skilldata.name] = ZGVP.SkillsKnown[skilldata.name] or {}
+						local pro =  ZGVP.SkillsKnown[skilldata.name]
+						local subname = skilldata.name
+						if faction=="Alliance" then
+							subname = subname:gsub("Zandalari ","Kul Tiran ")
+						end
+
+						pro.level = to
+						pro.max = skilldata.name==linedata.name and 300 or 100
+						pro.active = true
+						pro.skillID = skilldata.skill
+						pro.name = subname
+						pro.parentname = linedata.name
+						pro.parentskillID = sid
+						cacheskill_lines[subid] = true
+					end
+				end
+			end
+		else
+			for name,linedata in pairs(ZGVP.SkillsKnown) do
+				if linedata.parentskillID==id or linedata.skillID==id then
+					ZGVP.SkillsKnown[name] = nil
+				end
 			end
 		end
 	end

@@ -4,6 +4,187 @@ if UnitFactionGroup("player")~="Alliance" then return end
 if ZGV:DoMutex("AchievementsABFA") then return end
 ZygorGuidesViewer.GuideMenuTier = "BFA"
 ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Alchemical Romance",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to destroy three Deathtouched Slavers' corspes using a single Alchemical Fire before defeating Gorak Tul on Mythic Difficulty in Waycrest Manor.",
+achieveid={12490},
+startlevel=120,
+endlevel=120,
+keywords={"Waycrest, Manor, Gorak, Tul, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you will need to destroy three Deathtouched Slavers' corpses using a single Alchemical Fire, then defeat Gorak Tul in Waycrest Manor on Mythic difficulty
+During the Gorak Tul fight he will occasionally throw out Alchemical Fire which can be picked up and used on Deathtouched Slavers
+Wait for three Deathtouched Slavers to spawn, kill them at the same time and then burn all three corpses with a single Alchemical Fire, then kill the boss
+Earn the _Alchemical Romance_ Achievement |achieve 12490
+step
+_Congratulations!_
+You Earned the "Alchemical Romance" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Atal'Dazar",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Yazma in Atal'Dazar.",
+achieveid={12824},
+startlevel=120,
+endlevel=120,
+keywords={"Yazma, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Atal'Dazar
+Click here to load the "Atal'Dazar" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Atal'Dazar"
+Defeat Yazma in Atal'Dazar |achieve 12824
+step
+_Congratulations!_
+You Earned the "Atal'Dazar" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Bringing Hexy Back",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat all bosses in Atal'Dazar on Mythic difficulty with at least one party member affected by Unstable Hex.",
+achieveid={12270},
+startlevel=120,
+endlevel=120,
+keywords={"Atal'Dazar, Unstable, Hex, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you will need to defeat all bosses in Atal'Dazar on Mythic difficulty while a party member affected by Unstable Hex
+As you clear trash before each boss, leave one of the Zanchuli Witch-Doctors alive and pull it into the boss room
+Keep it CC'd until the boss is at about 10% health and then allow it to cast Unstable Hex, then kill the boss
+|tip If you can't keep it CC'd just keep interrupting Unstable Hex until you're ready to kill the boss.
+Earn the _Bringing Hexy Back_ Achievement |achieve 12270
+step
+_Congratulations!_
+You Earned the "Bringing Hexy Back" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Freehold",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Harlan Sweete in Freehold.",
+achieveid={12831},
+startlevel=110,
+endlevel=120,
+keywords={"Harlan, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Freehold
+Click here to load the "Freehold" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Freehold"
+Defeat Harlan Sweete in Freehold |achieve 12831
+step
+_Congratulations!_
+You Earned the "Freehold" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Gold Fever",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Priestess Alun'za after destroying the Fatal Corruption in Atal'Dazar on Mythic difficulty.",
+achieveid={12272},
+startlevel=120,
+endlevel=120,
+keywords={"Atal'Dazar, Priestess, Alun'za, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you must defeat Priestess Alun'za after defeating the Fatal Corruption in Atal'Dazar on Mythic difficulty
+Priestess Alun'za will use Spirit of Gold to spawn an add. The add will run to nearby Tainted Blood pools and absorb them
+Allow the add to absorb 8 pools of Tainted Blood and it will turn into a Fatal Corruption
+Kill the Fatal Corruption and then kill the boss
+Earn the _Gold Fever_ Achievement |achieve 12272
+step
+_Congratulations!_
+You Earned the "Gold Fever" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Shrine of the Storm",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Vol'zith the Whisperer in Shrine of the Storm.",
+achieveid={12835},
+startlevel=110,
+endlevel=120,
+keywords={"Vol'zith, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Shrine of the Storm
+Click here to load the "Shrine of the Storm" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Shrine of the Storm"
+Defeat Vol'zith the Whisperer in Shrine of the Storm |achieve 12835
+step
+_Congratulations!_
+You Earned the "Shrine of the Storm" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\The Temple of Sethraliss",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to restore the Avatar of Sethraliss in the Temple of Sethraliss.",
+achieveid={12504},
+startlevel=120,
+endlevel=120,
+keywords={"Avatar, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete the Temple of Sethraliss
+Click here to load the "Temple of Sethraliss" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Temple of Sethraliss"
+Complete the Avatar of Sethraliss encounter in the Temple of Sethraliss |achieve 12504
+step
+_Congratulations!_
+You Earned the "The Temple of Sethraliss" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\The MOTHERLODE!!",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Mogul Razdunk in The MOTHERLODE!!.",
+achieveid={12844},
+startlevel=120,
+endlevel=120,
+keywords={"Razdunk, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete The MOTHERLODE!!
+Click here to load "The MOTHERLODE!!" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\The MOTHERLODE!!"
+Defeat Mogul Razdunk in The MOTHERLODE!! |achieve 12844
+step
+_Congratulations!_
+You Earned the "The MOTHERLODE!!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Tol Dagor",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Overseer Korgus in Tol Dagor.",
+achieveid={12840},
+startlevel=115,
+endlevel=120,
+keywords={"Korgus, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Tol Dagor
+Click here to load the "Tol Dagor" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Tol Dagor"
+Defeat Overseer Korgus in Tol Dagor |achieve 12840
+step
+_Congratulations!_
+You Earned the "Tol Dagor" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Underrot",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Unbound Abomination in Underrot.",
+achieveid={12500},
+startlevel=120,
+endlevel=120,
+keywords={"Unbound, Abomination, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete the Underrot
+Click here to load the "Underrot" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\The Underrot"
+Defeat the Unbound Abomination in the Underrot |achieve 12500
+step
+_Congratulations!_
+You Earned the "Underrot" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Waycrest Manor",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Gorak Tul in Waycrest Manor.",
+achieveid={12483},
+startlevel=110,
+endlevel=120,
+keywords={"Gorak, Tul, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, complete Waycrest Manor
+Click here to load the "Waycrest Manor" dungeon guide |confirm |next "Zygor's Dungeon Guides\\Battle for Azeroth Dungeons\\Waycrest Manor"
+Defeat Gorak Tul in Waycrest Manor |achieve 12483
+step
+_Congratulations!_
+You Earned the "Waycrest Manor" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Heroic: Atal'Dazar",{
 author="support@zygorguides.com",
 description="\nTo earn this achievement, you will be required to defeat Yazma in Atal'Dazar on Heroic difficulty or higher.",
@@ -132,6 +313,41 @@ step
 _Congratulations!_
 You Earned the "Heroic: Waycrest Manor" Achievement.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\I'm in Charge Now!",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Skycap'n Kragg after summoning and defeating Patches on Mythic difficulty in Freehold.",
+achieveid={12548},
+startlevel=120,
+endlevel=120,
+keywords={"Skycap'n, Kragg, Patches, Freehold, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you must defeat Skycap'n Kragg after summoning and defeating Patches in Freehold on Mythic difficulty
+Patches is summed by using the Hearthstone Board toy before engaging the boss
+Kill Patches and then defeat the boss
+Earn the _I'm in Charge Now!_ Achievement |achieve 12548
+step
+_Congratulations!_
+You Earned the "I'm in Charge Now!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\It's Lit!",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Yazma while all four Shadowflame Sconces are lit in Atal'Dazar on Mythic difficulty",
+achieveid={12273},
+startlevel=120,
+endlevel=120,
+keywords={"Yazma, Atal'Dazar, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you must defeat Yazma while all four Shadowflame Sconces are lit in Atal'Dazar on Mythic difficulty
+When the boss is at about 10% health, each party member (except the tank) needs to stand next to one of the Shadowflame Sconces when the boss casts Soulrend
+Soulrend will cause the Shadowflame Sconces to light, then kill the boss
+|tip The Shadowflame Sconces stay lit for about 25 seconds.
+Earn the _It's Lit!_ Achievement |achieve 12273
+step
+_Congratulations!_
+You Earned the "It's Lit!" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Mythic: Atal'Dazar",{
 author="support@zygorguides.com",
 description="\nTo earn this achievement, you will be required to defeat Yazma in Atal'Dazar on Mythic difficulty or higher.",
@@ -259,6 +475,40 @@ Defeat Gorak Tul in Waycrest Manor on Mythic difficulty or higher |achieve 12488
 step
 _Congratulations!_
 You Earned the "Mythic: Waycrest Manor" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Not a Fun Guy",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat Musashitake, then defeat Sporecaller Zancha in Underrot on Mythic difficulty.",
+achieveid={12549},
+startlevel=120,
+endlevel=120,
+keywords={"Musashitake, Sporecaller, Zancha, Underrot, Mythic, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you must defeat Musashitake, then defeat Sporecaller Zancha in Underrot on Mythic difficulty
+Musashitake is found in the top left part of the boss room and is spawned by facing the boss toward it when he uses Shockwave
+Defeat Musashitake then kill the boss
+Earn the _Not a Fun Guy_ Achievement |achieve 12549
+step
+_Congratulations!_
+You Earned the "Not a Fun Guy" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Run Wild Like a Man On Fire",{
+author="support@zygorguides.com",
+description="\nTo earn this achievement, you will be required to defeat the Soulbound Goliath without it gaining 12 stacks of Soul Harvest in Waycrest Manor.",
+achieveid={12495},
+startlevel=120,
+endlevel=120,
+keywords={"Soulbound, Goliath, Waycrest, Manor, Dungeon, BFA, Battle, for, Azeroth"},
+},[[
+step
+To earn this achievement, you must defeat the Soulbound Goliath without it gaining 12 stacks of Soul Harvest in Waycrest Manor on Mythic difficulty
+The Soulbound Goliath gains 2 stacks of Soul Harvest every 2 seconds
+Kite the boss through Wildfire to keep the stacks of Soul Harvest low as you fight
+Earn the _Run Wild Like a Man On Fire_ Achievement |achieve 12495
+step
+_Congratulations!_
+You Earned the "Run Wild Like a Man On Fire" Achievement.
 ]])
 ZGV.BETAEND()
 ZGV.BETASTART()

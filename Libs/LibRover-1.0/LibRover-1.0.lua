@@ -2316,7 +2316,7 @@ do
 				for i,data in ipairs(self.extradata.multiple_ends) do
 					local node = LibRover_Node:New(data)
 					node.type="end"
-					AddNode(node,true) -- don't link endpoints, it's end-pointless
+					AddNode(node) -- don't link endpoints, it's end-pointless
 					limit=limit-1
 					if limit%10==0 then
 						local t2=debugprofilestop()

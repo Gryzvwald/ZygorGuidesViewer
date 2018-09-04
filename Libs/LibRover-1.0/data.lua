@@ -4,7 +4,7 @@ addon.LibRoverData = addon.LibRoverData or {}
 local data=addon.LibRoverData
 
 data.version={
-	nodes_version = 199,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
+	nodes_version = 202,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
 }
 
 -- These are kept strictly unique. Make up bogus names if you need to.
@@ -38,7 +38,7 @@ data.MapIDsByName = {
 ["Drustvar"] = {[0]=896, [1]=1045},
 ["Stormsong Valley"] = {[0]=942, [1]=1179, [2]=1180, [3]=1183, [4]=1182},
 ["Kul Tiras"] = {[0]=1014},
-["Tiragarde Sound"] = {[0]=895, [1]=1171, [2]=1172},
+["Tiragarde Sound"] = {[0]=895, [1]=1171, [2]=1172, [3]=1185, [4]=1184},
 ["The Great Sea"] = {[0]=1157},
 
 --Zandalar
@@ -793,6 +793,9 @@ data.greenborders = {
 	{"Dazar'alor/0","Dazar'alor/2"},
 	{"Dazar'alor/1","Dazar'alor/2"},
 	{"Drustvar/0","Tiragarde Sound/0"},
+	{"Tiragarde Sound/3","Tiragarde Sound/4"},
+	{"Tiragarde Sound/0","Tiragarde Sound/3"},
+	{"Tiragarde Sound/0","Tiragarde Sound/4"},
 }
 
 data.walls = {

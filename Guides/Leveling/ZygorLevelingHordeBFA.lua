@@ -2924,7 +2924,11 @@ step
 talk Beastmother Jabati##131354
 turnin The Sethrak Incursion##49679 |goto 47.33,25.14
 turnin Lil' Tika##49681 |goto 47.33,25.14
-|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+step
+_Congratulations!_
+You completed the Zuldazar leveling guide.
+Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+|tip This will load the "Intro & Quest Zone Choice" guide.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Nazmir",{
 author="support@zygorguides.com",
@@ -4782,7 +4786,11 @@ Enter the building |goto Dazar'alor/0 49.97,42.11 < 10 |walk
 talk Baine Bloodhoof##141555
 |tip Inside the building.
 turnin Halting the Empire's Fall##50808 |goto Dazar'alor/2 41.41,72.22
-|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+step
+_Congratulations!_
+You completed the Nazmir leveling guide.
+Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+|tip This will load the "Intro & Quest Zone Choice" guide.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Vol'dun",{
 author="support@zygorguides.com",
@@ -6749,7 +6757,11 @@ talk Baine Bloodhoof##141555
 turnin Informing the Horde##50703 |goto Dazar'alor/2 41.38,72.34 |only if havequest(50703) or completedq(50703)
 turnin Informing the Horde##52023 |goto Dazar'alor/2 41.38,72.34 |only if havequest(52023) or completedq(52023)
 turnin Informing the Horde##52024 |goto Dazar'alor/2 41.38,72.34 |only if havequest(52024) or completedq(52024)
-|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+step
+_Congratulations!_
+You completed the Vol'dun leveling guide.
+Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+|tip This will load the "Intro & Quest Zone Choice" guide.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\War Campaign",{
 author="support@zygorguides.com",
@@ -6864,17 +6876,49 @@ step
 label "Tiragarde_Sound_Foothold_2"
 #include "Tiragarde_Sound_Foothold_Quests"
 step
-|next "Reach_Level_118"
+|next "Reach_Level_116"
 step
 label "Drustvar_Foothold_2"
 #include "Drustvar_Foothold_Quests"
 step
-|next "Reach_Level_118"
+|next "Reach_Level_116"
 step
 label "Stormsong_Valley_Foothold_2"
 #include "Stormsong_Valley_Foothold_Quests"
 step
-|next "Reach_Level_118"
+|next "Reach_Level_116"
+step
+label "Reach_Level_116"
+Reach Level 116 |ding 116
+|tip You must be at least level 116 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+talk Nathanos Blightcaller##135691
+turnin The Azerite Advantage##53062 |goto Zuldazar/0 58.44,62.67 |only if havequest(53062) or completedq(53062)
+accept Island Expedition##51870 |goto Zuldazar/0 58.44,62.67 |or |next "Start_Island_Expedition_Intro"
+|tip
+_NOTE:_
+|tip You can only complete the Island Expedition introduction quest on one character.
+|tip You may not be able to accept this quest.
+Click Here If You Are Unable to Accept the Quest |confirm |q 51888 |future |or |next "Reach_Level_118"
+step
+label "Start_Island_Expedition_Intro"
+talk Captain Rez'okun##123000
+turnin Island Expedition##51870 |goto Dazar'alor/0 44.80,95.46
+accept Island Expedition##51888 |goto Dazar'alor/0 44.80,95.46
+step
+talk Captain Rez'okun##123000
+Tell him _"Let's go!"_
+Use the Expedition Map |q 51888/1 |goto 44.80,95.46
+step
+Watch the dialogue
+|tip The waypoint arrow does not work on island expedition maps.
+|tip Use your world map and minimap to complete the scenario objectives.
+|tip The scenario is simple to do, everything is nearby and easy to find.
+Explore the Uncharted Island |q 51888/2
+step
+talk Captain Rez'okun##123000
+turnin Island Expedition##51888 |goto Dazar'alor/0 44.80,95.45
 step
 label "Reach_Level_118"
 Reach Level 118 |ding 118
@@ -7420,6 +7464,10 @@ step
 talk Nathanos Blightcaller##135691
 turnin With Prince in Tow##52978 |goto Zuldazar/0 58.44,62.67
 step
+Reach Revered Reputation with The Honorbound |condition rep('The Honorbound')>=Revered
+|tip Use the "World Quests" guides to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
 talk Nathanos Blightcaller##135691
 turnin Operation: Hook and Line##53068 |goto Zuldazar/0 58.44,62.67 |only if havequest(53068) or completedq(53068)
 accept When a Plan Comes Together##52183 |goto Zuldazar/0 58.44,62.67
@@ -7611,6 +7659,7 @@ buy Scouting Report: Swiftwind Post##162536 |goto Zuldazar/0 58.06,62.65 |q 5227
 step
 use the Scouting Report: Swiftwind Post##162536
 |tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
 Click Here After Using The Scouting Report |confirm |q 52275 |future
 step
 click Mission Command Table
@@ -7621,8 +7670,8 @@ accept Mission Report: Swiftwind Post##52275 |goto Dazar'alor/0 51.52,99.61
 |tip You will accept this quest automatically after you complete the mission.
 step
 talk Nathanos Blightcaller##135691
-turnin Mission Report: Swiftwind Post##52275 |goto 58.44,62.67
-accept Swiftwind Post##52276 |goto 58.44,62.67
+turnin Mission Report: Swiftwind Post##52275 |goto Zuldazar/0 58.44,62.67
+accept Swiftwind Post##52276 |goto Zuldazar/0 58.44,62.67
 step
 Follow the path |goto Drustvar/0 38.27,34.55 < 30 |only if walking
 Follow the road |goto Drustvar/0 46.13,35.82 < 30 |only if walking
@@ -7662,6 +7711,7 @@ buy Scouting Report: Wolf's Den##162530 |goto Zuldazar/0 58.06,62.65 |q 52005 |f
 step
 use the Scouting Report: Wolf's Den##162530
 |tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
 Click Here After Using The Scouting Report |confirm |q 52005 |future
 step
 click Mission Command Table
@@ -7672,8 +7722,8 @@ accept Mission Report: The Wolf's Den##52005 |goto Dazar'alor/0 51.52,99.61
 |tip You will accept this quest automatically after you complete the mission.
 step
 talk Nathanos Blightcaller##135691
-turnin Mission Report: The Wolf's Den##52005 |goto 58.44,62.67
-accept The Wolf's Den##52127 |goto 58.44,62.67
+turnin Mission Report: The Wolf's Den##52005 |goto Zuldazar/0 58.44,62.67
+accept The Wolf's Den##52127 |goto Zuldazar/0 58.44,62.67
 step
 Follow the path |goto Tiragarde Sound/0 41.46,23.62 < 30 |only if walking
 Follow the path |goto Tiragarde Sound/0 53.74,15.85 < 30 |only if walking
@@ -7689,6 +7739,269 @@ turnin The Wolf's Den##52127 |goto 62.49,12.48
 step
 _Congratulations!_
 You unlocked the Wolf's Den outpost in Tiragarde Sound.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Hillcrest Pasture (Stormsong Valley)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Hillcrest Pasture outpost in Stormsong Valley.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51916)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with The Honorbound |condition rep('The Honorbound')>=Revered
+|tip Use the "World Quests" guides to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
+talk Ransa Greyfeather##135447
+buy Scouting Report: Hillcrest Pasture##162533 |goto Zuldazar/0 58.06,62.65 |q 52478 |future
+step
+use the Scouting Report: Hillcrest Pasture##162533
+|tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
+Click Here After Using The Scouting Report |confirm |q 52478 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Hillcrest Pasture" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Hillcrest Pasture##52478 |goto Dazar'alor/0 51.52,99.61
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Nathanos Blightcaller##135691
+turnin Mission Report: Hillcrest Pasture##52478 |goto Zuldazar/0 58.44,62.67
+accept Hillcrest Pasture##52479 |goto Zuldazar/0 58.44,62.67
+step
+Follow the road |goto Stormsong Valley/0 53.76,53.15 < 30 |only if walking
+Continue following the road |goto Stormsong Valley/0 54.26,58.56 < 30 |only if walking
+Continue following the road |goto Stormsong Valley/0 51.16,62.32 < 30 |only if walking
+Follow the path |goto Stormsong Valley/0 52.92,75.36 < 30 |only if walking
+click Horde Banner
+Claim the Outpost |q 52479/1 |goto Stormsong Valley/0 53.42,77.66
+step
+Follow the path up |goto 53.51,79.73 < 20 |only if walking
+talk Hosan Cloudhoof##134842
+fpath Hillcrest Pasture |goto 52.76,80.13
+step
+talk Ruknoz Greyfang##141308
+turnin Hillcrest Pasture##52479 |goto 54.19,78.65
+step
+_Congratulations!_
+You unlocked the Hillcrest Pasture outpost in Stormsong Valley.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Mudfisher Cove (Drustvar)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Mudfisher Cove outpost in Drustvar.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51916)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with The Honorbound |condition rep('The Honorbound')>=Revered
+|tip Use the "World Quests" guides to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
+talk Ransa Greyfeather##135447
+buy Scouting Report: Mudfisher Cove##162535 |goto Zuldazar/0 58.06,62.65 |q 52313 |future
+step
+use the Scouting Report: Mudfisher Cove##162535
+|tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
+Click Here After Using The Scouting Report |confirm |q 52313 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Mudfisher Cove" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Mudfisher Cove##52313 |goto Dazar'alor/0 51.52,99.61
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Nathanos Blightcaller##135691
+turnin Mission Report: Mudfisher Cove##52313 |goto Zuldazar/0 58.44,62.67
+accept Mudfisher Cove##52314 |goto Zuldazar/0 58.44,62.67
+step
+Follow the path |goto Tiragarde Sound/0 39.78,33.48 < 20 |only if walking
+click Horde Banner
+Claim the Outpost |q 52314/1 |goto Drustvar/0 61.83,16.32
+step
+talk Drasha Windspear##140939
+fpath Mudfisher Cove |goto 62.03,16.88
+step
+talk Garn Blackwolf##140947
+turnin Mudfisher Cove##52314 |goto 62.43,17.01
+step
+_Congratulations!_
+You unlocked the Mudfisher Cove outpost in Drustvar.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Stonefist Watch (Tiragarde Sound)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Stonefist Watch outpost in Tiragarde Sound.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51916)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with The Honorbound |condition rep('The Honorbound')>=Revered
+|tip Use the "World Quests" guides to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
+talk Ransa Greyfeather##135447
+buy Scouting Report: Stonefist Watch##162531 |goto Zuldazar/0 58.06,62.65 |q 52221 |future
+step
+use the Scouting Report: Stonefist Watch##162531
+|tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
+Click Here After Using The Scouting Report |confirm |q 52221 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Stonefist Watch" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Stonefist Watch##52221 |goto Dazar'alor/0 51.52,99.61
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Nathanos Blightcaller##135691
+turnin Mission Report: Stonefist Watch##52221 |goto Zuldazar/0 58.44,62.67
+accept Stonefist Watch##52222 |goto Zuldazar/0 58.44,62.67
+step
+Follow the path up |goto Tiragarde Sound/0 51.98,57.97 < 20 |only if walking
+click Horde Banner
+Claim the Outpost |q 52222/1 |goto Tiragarde Sound/0 53.29,63.26
+step
+talk Munovuth Boldcleaver##140533
+fpath Stonefist Watch |goto 53.14,63.16
+step
+talk Kora Gorekill##140531
+|tip Inside the cave.
+turnin Stonefist Watch##52222 |goto 53.63,63.34
+step
+_Congratulations!_
+You unlocked the Stonefist Watch outpost in Tiragarde Sound.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Stonetusk Watch (Stormsong Valley)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Stonetusk Watch outpost in Stormsong Valley.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51916)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with The Honorbound |condition rep('The Honorbound')>=Revered
+|tip Use the "World Quests" guides to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
+talk Ransa Greyfeather##135447
+buy Scouting Report: Stonetusk Watch##162534 |goto Zuldazar/0 58.06,62.65 |q 52776 |future
+step
+use the Scouting Report: Stonetusk Watch##162534
+|tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
+Click Here After Using The Scouting Report |confirm |q 52776 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Stonetusk Watch" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Stonetusk Watch##52776 |goto Dazar'alor/0 51.52,99.61
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Nathanos Blightcaller##135691
+turnin Mission Report: Stonetusk Watch##52776 |goto Zuldazar/0 58.44,62.67
+accept Stonetusk Watch##52777 |goto Zuldazar/0 58.44,62.67
+step
+Follow the road |goto Stormsong Valley/0 53.77,53.29 < 30 |only if walking
+Follow the road |goto Stormsong Valley/0 54.23,58.69 < 30 |only if walking
+Follow the road |goto Stormsong Valley/0 50.81,61.84 < 30 |only if walking
+Follow the path up |goto Stormsong Valley/0 39.62,63.44 < 30 |only if walking
+Follow the path up |goto Stormsong Valley/0 39.08,65.32 < 20 |only if walking
+Enter the cave |goto Stormsong Valley/0 39.11,67.00 < 15 |walk
+click Horde Banner
+|tip Inside the cave.
+Claim the Outpost |q 52777/1 |goto Stormsong Valley/0 39.38,68.34
+step
+talk Rasha Stonetusk##141598
+|tip Inside the cave.
+turnin Stonetusk Watch##52777 |goto 39.41,68.59
+step
+Leave the cave |goto 39.06,66.93 < 10 |walk
+talk Wyna Breezehorn##134844
+fpath Stonetusk Watch |goto 38.84,66.64
+step
+_Congratulations!_
+You unlocked the Stonetusk Watch outpost in Stormsong Valley.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Windfall Cavern (Stormsong Valley)",{
+author="support@zygorguides.com",
+description="This guide will walk you through unlocking the Windfall Cavern outpost in Stormsong Valley.",
+condition_suggested=function() return level>=120 end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip You must be at least level 120 to continue this questline.
+|tip Use the Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(51916)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+Reach Revered Reputation with The Honorbound |condition rep('The Honorbound')>=Revered
+|tip Use the "World Quests" guides to complete "The Honorbound" world quests.
+|tip Complete the weekly Island Expeditions quest "Azerite for the Horde".
+step
+talk Ransa Greyfeather##135447
+buy Scouting Report: Windfall Cavern##162532 |goto Zuldazar/0 58.06,62.65 |q 52319 |future
+step
+use the Scouting Report: Windfall Cavern##162532
+|tip It will seem like nothing has happened after you use it.
+|tip It adds a mission to your mission table.
+Click Here After Using The Scouting Report |confirm |q 52319 |future
+step
+click Mission Command Table
+|tip Click the "Missions" tab at the bottom of the window that appears.
+|tip Complete the "Windfall Cavern" mission.
+|tip This mission will take 6 hours to complete.
+accept Mission Report: Windfall Cavern##52319 |goto Dazar'alor/0 51.52,99.61
+|tip You will accept this quest automatically after you complete the mission.
+step
+talk Nathanos Blightcaller##135691
+turnin Mission Report: Windfall Cavern##52319 |goto Zuldazar/0 58.44,62.67
+accept Windfall Cavern##52320 |goto Zuldazar/0 58.44,62.67
+step
+Follow the path |goto Stormsong Valley/0 52.50,32.84 < 20 |only if walking
+Follow the path up |goto Stormsong Valley/0 59.53,29.97 < 30 |only if walking
+Enter the cave |goto Stormsong Valley/0 60.68,26.73 < 15 |walk
+click Horde Banner
+|tip Inside the cave.
+Claim the Outpost |q 52320/1 |goto Stormsong Valley/0 60.33,25.28
+step
+talk Morn Ironhorn##141087
+|tip Inside the cave.
+turnin Windfall Cavern##52320 |goto 60.21,24.97
+step
+Leave the cave |goto 60.69,26.69 < 10 |walk
+talk Allabas##138251
+fpath Windfall Cavern |goto 60.84,27.12
+step
+_Congratulations!_
+You unlocked the Windfall Cavern outpost in Stormsong Valley.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment",{
 author="support@zygorguides.com",
@@ -7739,8 +8052,29 @@ step
 talk Magni Bronzebeard##130216
 accept The Chamber of Heart##53406 |goto 42.22,44.27
 step
-|confirm
-|tip This guide is still under construction and will be updated further soon.
+talk Magni Bronzebeard##130216
+accept The Chamber of Heart##53406 |goto 42.22,44.27
+step
+click Titan Translocator
+Enter the Chamber of Heart |q 53406/1 |goto 43.19,44.50
+step
+talk Magni Bronzebeard##136907
+|tip Inside the building.
+Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
+Empower the Heart of Azeroth within the Chamber of Heart |q 53406/2 |goto Chamber Of Heart/0 50.17,58.15
+step
+Banish the Old God Incursion
+|tip Use the "Unleash Heart of Azeroth" ability inside the building.
+|tip It appears as a button on the screen.
+Watch the dialogue
+Click Here After Unleashing the Heart of Azeroth |confirm |goto 50.00,64.78 |q 53406
+step
+talk Magni Bronzebeard##136907
+|tip Inside the building.
+turnin The Chamber of Heart##53406 |goto 50.16,58.14
+step
+_Congratulations!_
+You Fully Empowered the Heart of Azeroth.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Nightborne Race Unlock",{
 author="support@zygorguides.com",

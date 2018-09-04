@@ -426,7 +426,9 @@ local statustext2 = { [0]="[ ]", [1]="[X]", [2]="[?]" }
 	℅ℓ№™Ω℮⅛⅜⅝⅞∂∆∏∑−√∞∫≈≠≤≥
 ]]
 function Sync:GetStepGoalPartyStatusText(stepnum,goalnum)
-	if not (self:IsMaster() or self:IsSlave()) or not self.PartyStatus then return end
+	if not (self:IsMaster() or self:IsSlave()) or not self.PartyStatus then
+		return
+	end
 	local s=""
 	local on_step=0
 	local any_incomplete=false
@@ -439,9 +441,10 @@ function Sync:GetStepGoalPartyStatusText(stepnum,goalnum)
 	for i,name in ipairs(partysort) do repeat
 		local status = self.PartyStatus[name]
 		if not status then break end --continue
+		if not (status.guide==ZGV.CurrentGuide.title or status.guide:find("SHARED\\",1,true)) then break end
 
 		local step
-		if status.stepnum==stepnum and status.guide==ZGV.CurrentGuide.title then
+		if status.stepnum==stepnum then
 			step=status
 		elseif status.stickies then
 			for i,st in ipairs(status.stickies) do
@@ -641,10 +644,14 @@ end
 function Sync:UpdateButtonColor()
 	if not ZygorGuidesViewerFrame_Border_Guides_GuideShareButton then return end
 	local r,g,b,a
-	if self:IsSlave() then
-		r,g,b,a = 0,1,0,1
-	elseif self:IsMaster() then
-		r,g,b,a = 0,1,0,1
+	if self:IsInGroup() then
+		if self:IsSlave() then
+			r,g,b,a = 0,1,0,1
+		elseif self:IsMaster() then
+			r,g,b,a = 0,1,0,1
+		else
+			r,g,b,a = 1,1,1,1
+		end
 	--[[
 	elseif not self:IsInGroup() then
 		r,g,b,a = 0.3,0.3,0.3,1

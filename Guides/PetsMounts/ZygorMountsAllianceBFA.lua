@@ -400,12 +400,12 @@ use the Captured Dun Scavenger##163576
 Learn the "Dune Scavenger" Mount |learnmount Dune Scavenger##237286 |goto Vol'dun/0 49.4,75.8
 step
 _Congratulations!_
-You Collected the "Palehide Direhorn" Mount.
+You Collected the "Dune Scavenger" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Leaping Veinseeker",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Dropped Mounts\\Leaping Veinseeker",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, for, azeroth"},
+keywords={"flying, mount, battle, for, azeroth"},
 mounts={243795},
 model={76706},
 description="This mount is acquired by a random world drop.",
@@ -421,14 +421,14 @@ step
 _Congratulations!_
 You Collected the "Leaping Veinseeker" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Sharkbait",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Dropped Mounts\\Sharkbait",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, of, azeroth, dungeon, drop"},
+keywords={"flying, mount, battle, of, azeroth, dungeon, drop"},
 mounts={254813},
 model={80449},
 condition_end=function() return hasmount(254813) end,
-description="This mount is acquired by obtaining a random drop from Harlan Sweete in the Freehold dungeon.",
+description="This mount is acquired by obtaining a random drop from Harlan Sweete in the Freehold dungeon on Mythic difficulty.",
 },[[
 step
 Enter the Freehold Dungeon |goto Freehold/0 0.00,0.00 < 1000
@@ -436,8 +436,9 @@ step
 kill Harlan Sweete##129440
 collect 1 Sharkbait's Favorite Crackers##159842 |n
 |tip This is a rare drop.
+|tip This only can drop in Mythic difficulty.
 use Sharkbait's Favorite Crackers##159842
-Learn the Sharkbait Mount |learnmount Underrot Crawg##254813
+Learn the Sharkbait Mount |learnmount Sharkbait##254813
 step
 _Congratulations!_
 You Earned the "Sharkbait" Mount.
@@ -477,6 +478,7 @@ step
 kill King Dazar##136160
 collect 1 Mummified Raptor Skull##159921 |n
 |tip This is a rare drop.
+|tip This only drops on Mythic difficulty.
 use the Mummified Raptor Skull##159921
 Learn the Tomb Stalker Mount |learnmount Mummified Raptor Skull##266058
 step
@@ -507,7 +509,7 @@ You Earned the "Underrot Crawg" Mount.
 ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Aquatic Mounts\\Island Expedition Mounts\\Surf Jelly",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, of, azeroth, island, expeditions, drop"},
+keywords={"aquatic, mount, battle, of, azeroth, island, expeditions, drop"},
 mounts={278979},
 model={87747},
 condition_end=function() return hasmount(278979) end,
@@ -556,10 +558,10 @@ step
 _Congratulations!_
 You Earned the "Craghorn Chasm-Leaper" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Qinsho's Eternal Hound",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Island Expedition Mounts\\Qinsho's Eternal Hound",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
+keywords={"flying, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
 mounts={279469},
 model={45836},
 condition_end=function() return hasmount(279469) end,
@@ -582,10 +584,10 @@ step
 _Congratulations!_
 You Earned the "Qinsho's Eternal Hound" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Squawks",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Island Expedition Mounts\\Squawks",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
+keywords={"flying, mount, battle, of, azeroth, island, expeditions, dungeon, drop"},
 mounts={254811},
 model={79916},
 condition_end=function() return hasmount(254811) end,
@@ -608,10 +610,10 @@ step
 _Congratulations!_
 You Earned the "Squawks" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Island Expedition Mounts\\Twilight Avenger",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Island Expedition Mounts\\Twilight Avenger",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, of, azeroth, island, expeditions, drop"},
+keywords={"flying, mount, battle, of, azeroth, island, expeditions, drop"},
 mounts={279466},
 model={87775},
 condition_end=function() return hasmount(279466) end,
@@ -884,7 +886,7 @@ You Collected the "Teldrassil Hippogryph" Mount.
 ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Aquatic Mounts\\Profession Mounts\\Great Sea Ray",{
 author="support@zygorguides.com",
 startlevel=110.0,
-keywords={"ground, mount, battle, for, azeroth"},
+keywords={"aquatic, mount, battle, for, azeroth"},
 mounts={278803},
 model={73253},
 description="This mount is acquired by a random world drop.",
@@ -899,7 +901,7 @@ step
 _Congratulations!_
 You Collected the "Great Sea Ray" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Voldunai\\Admiralty Stallion",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Proudmoore Admiralty\\Admiralty Stallion",{
 author="support@zygorguides.com",
 startlevel=110.0,
 keywords={"ground, mount, battle, for, azeroth"},
@@ -922,7 +924,7 @@ step
 _Congratulations!_
 You Collected the "Admiralty Stallion" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Voldunai\\Dapple Gray",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Storm's Wake\\Dapple Gray Horse",{
 author="support@zygorguides.com",
 startlevel=110.0,
 keywords={"ground, mount, battle, for, azeroth"},
@@ -938,12 +940,12 @@ step
 talk Sister Lilyana##135800
 buy Reins of the Dapple Gray##161912 |n
 use the Reins of the Dapple Gray##161912
-Learn the "Dapple Gray" Mount |learnmount Dapple Gray##260172 |goto Stormsong Valley/0 59.29,69.34
+Learn the "Dapple Gray Horse" Mount |learnmount Dapple Gray##260172 |goto Stormsong Valley/0 59.29,69.34
 step
 _Congratulations!_
-You Collected the "Dapple Gray" Mount.
+You Collected the "Dapple Gray Horse" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Voldunai\\Smoky Charger",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Order of Embers\\Smoky Charger",{
 author="support@zygorguides.com",
 startlevel=110.0,
 keywords={"ground, mount, battle, for, azeroth"},
@@ -1000,3 +1002,147 @@ step
 _Congratulations!_
 You Collected the "Palehide Direhorn" Mount.
 ]])
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Goldmane",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={275868},
+model={83664},
+description="This mount is acquired by completing Emissary World Quests.",
+},[[
+step
+collect Goldmane's Reins##163573 |n
+|tip This can drop from any mob in Stormsong Valley.
+use the Goldmane's Reins##163573
+Learn the "Goldmane" Mount |learnmount Goldmane##275868
+step
+_Congratulations!_
+You Collected the "Goldmane" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Profession Mounts\\Mecha-Mogul Mk2",{
+author="support@zygorguides.com",
+startlevel=110.0,
+keywords={"flying, mount, battle, for, azeroth"},
+mounts={274621},
+model={73253},
+description="This mount is acquired by a random world drop.",
+},[[
+step
+Load the "Kul Tiran Engineering" Leveling Guide |confirm |next "Zygor's Profession Guides\\Engineering\\Leveling Guides\\Kul Tiran Engineering 1-150 Leveling Guide"
+|tip Click the line above to load the guide.
+Reach Level 150 Kul Tiran Engineering |skill Kul Tiran Engineering,150
+step
+Equip a pair of "AZ3-R1-T3" Headgear
+|tip This is a crafted item.
+|tip You will need to have the 3 levels of Azerite Upgrades available.
+|tip For the first slot, choose the upgrade that grants +25 Kul Tiran Engineering.
+|tip For the third slot, choose the upgrade that grants +30 Kul Tiran Engineering.
+|tip The higher your Kul Tiran Engineering skill, the higher the chance for drops later.
+Click here to continue |confirm
+step
+Load the "Platinum Ore" guide |confirm |next "Zygor's Profession Guides\\Mining\\Farming Guides\\Platinum"
+|tip Click the line above to load the guide.
+|tip You will need the "Mining" skill in order to utilize the guide.
+collect 50 Platinum Ore##152513
+|tip You can also purchase them from the Auction House.
+step
+Load the "Storm Silver Ore" guide |confirm |next "Zygor's Profession Guides\\Mining\\Farming Guides\\Storm Silver"
+|tip Click the line above to load the guide.
+|tip You will need the "Mining" skill in order to utilize the guide.
+collect 100 Storm Silver Ore##152579
+|tip You can also purchase them from the Auction House.
+step
+You will need to kill Mogul Razdunk on "Mythic difficulty"
+|tip You need a premade group in order to do Mythic dungeons.
+Enter The MOTHERLODE!! |goto King's Rest/0 0.00,0.00 < 1000
+step
+Kill trash mobs inside of The MOTHERLODE!!
+collect Azerite Inspir-A-Geneering Elixir##161138 |n
+|tip You can also buy this from the Auction House.
+use the Azerite Inspir-A-Geneering Elixir##161138
+Gain the Azerite Inspir-A-Geneering buff |havebuff Time Travelling##133214
+stickystart "Collect_Blast-Fired_Electric_Servomotor"
+stickystart "Collect_Crush_Resistant_Stabilizer"
+stickystart "Collect_Barely_Stable_Azerite_Reactor"
+stickystart "Collect_Mecha-Mogul_Mk1_Remote_Activation_Device"
+step
+collect 20 Azerite Forged Protection Plating##161136
+|tip These come from Shredders between the last two bosses.
+|tip You must have the "Kul Turan Skinning" skill in order to collect these.
+step
+label "Collect_Blast-Fired_Electric_Servomotor"
+collect 20 Blast-Fired Electric Servomotor##161137
+|tip These come from Venture Co. War Machines while having the Azerite Inspir-A-Geneering buff.
+step
+label "Collect_Crush_Resistant_Stabilizer"
+collect 20 Crush Resistant Stabilizer##161132
+|tip These come from mechanical enemies in the MOTHERLODE!! on Mythic difficulty.
+step
+label "Collect_Barely_Stable_Azerite_Reactor"
+collect 1 Barely Stable Azerite Reactor##161131
+|tip This comes from Dr Boom in the MOTHERLODE!! on Mythic difficulty.
+|tip He is found before the first boss.
+step
+label "Collect_Mecha-Mogul_Mk1_Remote_Activation_Device"
+collect 1 Mecha-Mogul Mk1 Remote Activation Device##161129
+|tip This comes from Mogul Razdunk, the last boss of The MOTHERLODE!! on Mythic difficulty.
+step
+kill Mogul Razdunk##132713
+|tip He's the last boss of the instance.
+collect Schematic: Mecha-Mogul Mk2##161135 |n
+use the Schematic: Mecha-Mogul Mk2##161135
+Learn the "Mecha-Mogul Mk2" Recipe |learn Mecha-Mogul Mk2##274621
+step
+collect 20 Expulsom##152668
+|tip These are obtained from World Quests, Salvaging Gear, Milling Herbs and Disenchanting magical items.
+You can find the Shred-Master Mk1 here [Boralus/0 77.13,16.34]
+step
+Open Your Kul Tiran Engineering Crafting Panel:
+_<Create a Mecha-Mogul Mk2>_
+collect Mecha-Mogul Mk2##161134 |n
+use the Mecha-Mogul Mk2##161134
+Learn the "Mecha-Mogul Mk2" Mount |learnmount Mecha-Mogul Mk2##274621
+step
+_Congratulations!_
+You Collected the "Mecha-Mogul Mk2" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Frenzied Feltalon",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={280729},
+model={83664},
+description="This mount is acquired by collect 400 mounts.",
+},[[
+step
+Collect 400 different mounts
+|tip Use our various mount guides to accomplish this.
+Earn the "A Horde of Hoofbeats" Achievement |achieve 12933
+step
+use the Frenzied Feltalon##163981
+Learn the "Frenzied Feltalon" Mount |learnmount Frenzied Feltalon##280729
+step
+_Congratulations!_
+You Collected the "Frenzied Feltalon" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Pureheart Courser",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={280730},
+model={83664},
+description="This mount is acquired by collect 400 mounts.",
+},[[
+step
+Earn Exalted with 100 Reputations
+|tip Use our various Reputation guides to accomplish this.
+Earn the "100 Exalted Reputations" Achievement |achieve 12866
+step
+use the Pureheart Courser##163982
+Learn the "Pureheart Courser" Mount |learnmount Pureheart Courser##280730
+step
+_Congratulations!_
+You Collected the "Pureheart Courser" Mount.
+]])
+ZGV.BETAEND()

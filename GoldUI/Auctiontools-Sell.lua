@@ -858,19 +858,17 @@ function Appraiser:UpdateAuctionCost(stacksize,stackcount)
 	if not stacksize then stacksize = tonumber(Appraiser.Inventory_Frame.stacksize:GetText()) end
 	if not stackcount then stackcount = tonumber(Appraiser.Inventory_Frame.stackcount:GetText()) end
 	local auction_time = Appraiser.Inventory_Frame.durationdropdown:GetCurrentSelectedItemValue()
-	local selling_price_buy,selling_price_bid = Appraiser:GetSellPriceForStacksize("stack")
+	local selling_price_buy,selling_price_bid = Appraiser:GetSellPriceForStacksize("unit")
 
 	AuctionsStackSizeEntry:SetText(stacksize or 0)
 	AuctionsNumStacksEntry:SetText(stackcount or 0)
 
 	local deposit
 	if GetAuctionDeposit then
-		deposit = GetAuctionDeposit(auction_time,selling_price_bid,selling_price_buy)
+		deposit = GetAuctionDeposit(auction_time,selling_price_bid,selling_price_buy,stacksize,stackcount)
 	else
 		deposit = CalculateAuctionDeposit(auction_time)
 	end
-
-	deposit = deposit * stackcount
 
 	Appraiser.Inventory_Frame.aucpostfee:SetText("Deposit: "..ZGV.GetMoneyString(deposit or 0))
 

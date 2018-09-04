@@ -653,9 +653,11 @@ Reach Level 125 Kul Tiran Engineering |skill Kul Tiran Engineering,125
 step
 talk Layla Evenkeel##136059
 Learn the Recipe for AZ3-R1-T3 Bionic Bifocals |learn AZ3-R1-T3 Bionic Bifocals##272062 |goto 77.63,14.32
+|tip Learn whichever is most suitable for your class.
 step
 Open Your Engineering Crafting Panel:
 _<Create 15 AZ3-R1-T3 Bionic Bifocals>_
+|tip Create whichever you decided to learn.
 Reach Level 150 Kul Tiran Engineering |skill Kul Tiran Engineering,150
 step
 _Congratulations!_

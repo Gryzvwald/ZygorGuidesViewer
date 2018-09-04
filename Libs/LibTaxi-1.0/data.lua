@@ -115,7 +115,7 @@ data.taxipoints = {
 		{name="Timberfell Outpost",faction="H",npc="Michaela Reed",npcid=133861,x=72.18,y=51.91,quest=51591},
 		{name="Waning Glacier",faction="H",npc="Kip Wingnut",npcid=142740,x=39.68,y=18.54},
 		{name="Wolf's Den",faction="H",npc="Narkalt",npcid=133331,x=62.11,y=13.57,quest=52127},
-		{name="Stonefist Watch",faction="H",npc="Placeholder Guy",npcid=135388,x=54,y=66,maybe__quest=52041},	-- FAKE INFO, FIX LATER
+		{name="Stonefist Watch",faction="H",npc="Munovuth Boldcleaver",npcid=140533,x=53.14,y=63.16,quest=52222},
 	},
 
 	['Drustvar']={
@@ -132,6 +132,7 @@ data.taxipoints = {
 		-- Horde --
 		{name="Krazzlefrazz Outpost",faction="H",npc="Rixi Rocketboom",npcid=138022,x=37.37,y=24.04,quest=51234},
 		{name="Swiftwind Post",faction="H",npc="Windtamer Loka",npcid=140772,x=66.46,y=59.32,quest=52276},
+		{name="Mudfisher Cove",faction="H",npc="Drasha Windspear",npcid=140939,x=62.03,y=16.88,quest=52314},
 
 		-- Neutral --
 		{name="Anyport",faction="B",npc="Tan Lotuswind",npcid=135988,x=19.14,y=43.31,cond_fun=function() return IsQuestFlaggedCompleted(50978) or IsQuestFlaggedCompleted(51340) end},
@@ -147,7 +148,7 @@ data.taxipoints = {
 		{name="Millstone Hamlet",faction="A",npc="Alexa Davenport",npcid=138180,x=30.75,y=66.57},
 		{name="Fort Daelin",faction="A",npc="Misty Koret",npcid=138193,x=34.28,y=47.23},
 		{name="Deadwash",faction="A",npc="Malorian Tailwind",npcid=134832,x=42.77,y=57.54},
-		{name="The Amber Waves",faction="A",npc="Karla Fairweather",npcid=134963,x=50.79,y=70.27},
+		{name="The Amber Waves",faction="A",npc="Karla Fairweather",npcid=134963,x=50.75,y=70.21},
 		{name="Brennadam",faction="A",npc="Anna Skyspirit",npcid=134704,x=59.73,y=70.56},
 		{name="Mildenhall Meadery",faction="A",npc="Colony Caretaker",npcid=142060,x=68.53,y=64.99},
 		{name="Tidecross",faction="A",npc="Marla Featherfoot",npcid=134696,x=65.56,y=48.00},
@@ -158,15 +159,12 @@ data.taxipoints = {
 		
 		-- Horde --
 		{name="Warfang Hold",faction="H",npc="Muka Stormbreaker",npcid=138097,x=51.42,y=33.74,quest=51986},
-		{name="Hillcrest Pasture",faction="H",npc="Hosan Cloudhoof",npcid=134842,x=52.76,y=80.13,quest=99999},	-- FAKE INFO, FIX LATER
+		{name="Hillcrest Pasture",faction="H",npc="Hosan Cloudhoof",npcid=134842,x=52.76,y=80.13,quest=52479},
 		{name="Ironmaul Overlook",faction="H",npc="Chulani Cloudbreath",npcid=134850,x=75.88,y=64.14},
 		{name="Shrine of the Storm",faction="H",npc="Dark Ranger Allanah",npcid=134853,taxinodeID=2095,x=77.90,y=24.07},
 		{name="Diretusk Hollow",faction="H",npc="Kudra Windblade",npcid=134848,x=54.27,y=49.35},
-		{name="Windfall Cavern",faction="H",npc="Allabas",npcid=138251,x=60.8,y=27.0,quest=99999},		-- FIX WITH MORE ACCURATE COORDS AND QUEST TAG LATER
-		{name="Stonetusk Watch",faction="H",npc="Wyna Breezehorn",npcid=134844,x=38.87,y=66.68,quest=99999},	-- FIX WITH MORE ACCURATE COORDS AND QUEST TAG LATER
-
-
-
+		{name="Windfall Cavern",faction="H",npc="Allabas",npcid=138251,x=60.84,y=27.12,quest=52320},
+		{name="Stonetusk Watch",faction="H",npc="Wyna Breezehorn",npcid=134844,x=38.84,y=66.64,quest=52777},
 	},
 },
 
@@ -7921,6 +7919,7 @@ data.flightcost = {
 		name = "Stonefist Watch, Tiragarde Sound",
 		neighbors = {
 			[2023] = 0, -- Freehold, Tiragarde Sound
+			[2062] = 0, -- Wolf's Den, Tiragarde Sound
 			[2067] = 0, -- Timberfell Outpost, Tiragarde Sound
 			[2274] = 0, -- Swiftwind Post, Drustvar
 		},
@@ -7991,6 +7990,7 @@ data.flightcost = {
 			[2273] = 0, -- Waning Glacier, Tiragarde Sound
 			[2274] = 0, -- Swiftwind Post, Drustvar
 			[2275] = 0, -- Mudfisher Cove, Drustvar
+			[2279] = 0, -- Stonefist Watch, Tiragarde Sound
 		},
 	},
 	{

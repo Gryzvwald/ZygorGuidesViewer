@@ -274,7 +274,7 @@ function ZGV:OnInitialize()
 	self.dailyQuests = self.dailyQuests or {}
 
 	self.completionelapsed = 0
-	self.completionintervaldefault = 0.1 -- when sitting on a step, waiting for it to complete.
+	self.completionintervaldefault = 1.0 -- when sitting on a step, waiting for it to complete.
 	self.completionintervallong = 1.0 -- when starting skipping through steps
 	self.completionintervalmin = 0.01 -- after skipping through some steps
 	self.completionintervalspeed = 0.8 -- multiplier of speed at each step in a row
@@ -6417,7 +6417,7 @@ function ZGV.InPhase(phasename)
 	phasename = phasename:lower():gsub(" ","")
 
 	if phasename=="olddarnassus" then
-		return has_timetravel or not PlayerCompletedQuest(53310)
+		return has_timetravel or UnitLevel('player')<110
 	elseif phasename=="oldundercity" then
 		return has_timetravel or not PlayerCompletedQuest(52981)
 	elseif phasename=="oldsilithius" then

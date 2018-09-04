@@ -6913,7 +6913,7 @@ ZygorGuidesViewer:RegisterInclude("BFA_World_Quest_Emissaries",[[
 	step
 	label "Order_of_Embers_WQ"
 		talk Quartermaster Alcorn##135815
-		turnin Order of Embers##50600 |goto Drustvar/0 37.91,48.94
+		turnin Order of Embers##50600 |goto Drustvar/0 37.90,49.00
 		|only if readyq(50600)
 	step
 	label "Proudmoore_Admiralty_WQ"
