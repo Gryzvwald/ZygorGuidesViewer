@@ -245,8 +245,9 @@ function ZGV:CacheSkills_Queued()
 			end
 
 			local cat = C_TradeSkillUI.GetCategoryInfo(subid)
-			if cat then
+			if cat and cat.skillLineMaxLevel then
 				ZGVP.SkillsKnown[subname] = ZGVP.SkillsKnown[subname] or {}
+					
 				local pro = ZGVP.SkillsKnown[subname]
 
 				pro.level = cat.skillLineCurrentLevel
@@ -471,6 +472,10 @@ local function UpdateSkillConsole(_,_,msg)
 	end
 end
 
+function ZGVP:HasProfessionSlot()
+	local p1, p2, arch, fish, cook, first = GetProfessions()
+	return not (p1 and p2)
+end
 
 tinsert(ZGV.startups,{"Professions setup",function(self)
 	--self:AddEventHandler("PLAYER_ENTERING_WORLD","CacheSkills") don't cache at start, load saved instead

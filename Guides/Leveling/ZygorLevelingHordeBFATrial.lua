@@ -6,7 +6,7 @@ ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\World Events\\Battle for Azeroth (110-120)\\The Burning of Teldrassil",{
 author="support@zygorguides.com",
 description="This guide will help you assault Teldrassil on behalf of the Horde.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level == 110 and not completedq(52981) end,
 },[[
 step
 accept The Warchief Awaits##50476

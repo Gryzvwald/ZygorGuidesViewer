@@ -7,8 +7,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Alchemy\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Alchemy profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Alchemy')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Alchemy')>0 and skill('Kul Tiran Alchemy')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Alchemy') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Alchemy') > 0 and skill('Kul Tiran Alchemy') < 150 and level >= 110 end,
 },[[
 step
 talk Elric Whalgrene##132228
@@ -128,8 +128,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Blacksmithing\\Level
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Blacksmithing profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Blacksmithing')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Blacksmithing')>0 and skill('Kul Tiran Blacksmithing')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Blacksmithing') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Blacksmithing') > 0 and skill('Kul Tiran Blacksmithing') < 150 and level >= 110 end,
 },[[
 step
 talk Grix "Ironfists" Barlow##133536
@@ -244,8 +244,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Cooking profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Cooking')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Cooking')>0 and skill('Kul Tiran Cooking')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Cooking') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Cooking') > 0 and skill('Kul Tiran Cooking') < 150 and level >= 110 end,
 },[[
 step
 talk "Cap'n" Byron Mehlsack##136052
@@ -383,7 +383,7 @@ step
 _Congratulations!_
 You Reached 150 Kul Tiran Cooking Skill.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Thick Paleo Steak",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Thick Paleo Steak",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Thick Paleo Steak for various Cooking recipes.",
 startlevel=110.0,
@@ -393,7 +393,7 @@ kill Venomous Diemetradon##123098+
 |tip If you have the "Skinning" skill, you can gather extra meat.
 collect Thick Paleo Steak##154899 |n |goto Zuldazar/0 68.15,25.53
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Meaty Haunch",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Meaty Haunch",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Meaty Haunch for various Cooking recipes.",
 startlevel=110.0,
@@ -404,7 +404,7 @@ Kill enemies around this area
 collect Meaty Haunch##154898 |n |goto Zuldazar/0 69.82,26.34
 You can find more around [70.34,23.77]
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Stringy Loins",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Stringy Loins",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Stringy Loins for various Cooking recipes.",
 startlevel=110.0,
@@ -415,7 +415,7 @@ kill Shallows Saurolisk##125452
 collect Stringy Loins##154897 |n |goto Drustvar/0 68.2,40.6
 You can find more around [65.33,40.57]
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Briny Flesh",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Briny Flesh",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Briny Flesh for various Cooking recipes.",
 startlevel=110.0,
@@ -438,8 +438,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Enchanting\\Leveling
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Enchanting profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Enchanting')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Enchanting')>0 and skill('Kul Tiran Enchanting')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Enchanting') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Enchanting') > 0 and skill('Kul Tiran Enchanting') < 150 and level >= 110 end,
 },[[
 step
 talk Emily Fairweather##136041
@@ -550,8 +550,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Engineering profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Engineering')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Engineering')>0 and skill('Kul Tiran Engineering')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Engineering') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Engineering') > 0 and skill('Kul Tiran Engineering') < 150 and level >= 110 end,
 },[[
 step
 Follow the path |goto Boralus/0 68.18,15.66 < 7 |only if walking
@@ -667,8 +667,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Fishing profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Fishing')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Fishing')>150 and skill('Kul Tiran Fishing')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Fishing') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Fishing') > 0 and skill('Kul Tiran Fishing') < 150 and level >= 110 end,
 },[[
 step
 Follow the road |goto Boralus/0 68.11,15.59 < 10 |only if walking
@@ -764,7 +764,7 @@ Fish in the open water
 |tip You will occassionally catch Lane Snappers as well as Frenzied Fangtooth.
 collect Lane Snapper##152546 |n |goto Stormsong Valley/0 52.51,25.97
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Great Sea Catfish",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Great Sea Catfish",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Great Sea Catfish for various Cooking recipes.",
 startlevel=110.0,
@@ -797,7 +797,7 @@ Fish in Great Sea Catfish Schools
 collect Great Sea Catfish##152547 |n
 '|goto Nazmir/0 39.12,84.85 < 30 |c |noway |next "Start"
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Tiragarde Perch",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Tiragarde Perch",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Tiragarde Perch for various Cooking recipes.",
 startlevel=110.0,
@@ -865,8 +865,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Leveling 
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Herbalism profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Herbalism')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Herbalism')>0 and skill('Kul Tiran Herbalism')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Herbalism') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Herbalism') > 0 and skill('Kul Tiran Herbalism') < 150 and level >= 110 end,
 },[[
 step
 talk Declan Senal##136096
@@ -889,10 +889,10 @@ You Reached 150 Kul Tiran Herbalism Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Quest Guides\\Kul Tiran Herbalism Quest Line",{
 author="support@zygorguides.com",
-description="This guide will walk you through completing the Kul Tiran Alchemy quest line.",
+description="This guide will walk you through completing the Kul Tiran Herbalism quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48763) end,
-condition_suggested=function() return skill('Kul Tiran Herbalism')>0 and level>=110 and not completedq(48763) end,
+condition_suggested=function() return skill('Kul Tiran Herbalism') > 0 and level >= 110 and not completedq(48763) end,
 },[[
 step
 talk Declan Senal##136096
@@ -946,102 +946,61 @@ accept Here In Spirit##48756 |goto 71.25,5.33
 accept Cultural Significance##51365 |goto 71.25,5.33
 accept Meet Sweetflower##48762 |goto 71.25,5.33
 step
-Follow the path |goto 71.41,6.83 < 10 |only if walking
-Continue following the path |goto 69.85,9.34 < 10 |only if walking
-Continue following the path |goto 71.49,15.14 < 10 |only if walking
-Jump down here |goto 70.42,17.63 < 7 |only if walking
-Run up the stairs |goto 69.26,21.35 < 7 |only if walking
-Enter the building |goto Tiragarde Sound/0 73.98,24.88 < 5 |walk
-Run down the stairs |goto 73.66,24.94 < 5 |walk
-Continue following the path |goto 73.69,25.33 < 5 |walk
+Jump down here |goto 70.42,17.63 < 10 |only if walking
+Enter the building |goto Tiragarde Sound/0 73.98,24.88 < 7 |walk
 talk Provisioner Fray##135808
 |tip Inside the building.
 Ask her _"What can you tell me about this sea stalk?"_
 Ask Provisioner Fray About Sea Stalks |q 51365/1 |goto 73.68,24.99
 step
-Run up the stairs |goto 73.72,25.33 < 5 |walk
-Leave the building |goto 73.58,25.41 < 5 |walk
-Follow the path |goto Boralus/0 66.63,28.11 < 10 |only if walking
 talk Flynn Fairwind##131290
 Ask him _"What can you tell me about this sea stalk?"_
-Ask Flynn Fairwind About Sea Stalks |q 51365/2 |goto 66.86,33.24
+Ask Flynn Fairwind About Sea Stalks |q 51365/2 |goto Boralus/0 66.86,33.24
 step
-Follow the path |goto 66.74,37.38 < 10 |only if walking
 talk Joseph Furlong##122072
 Ask him _"What can you tell me about this sea stalk?"_
 Ask Joseph Furlong About Sea Stalks |q 51365/3 |goto 65.99,37.71
 step
-Follow the path |goto Boralus/0 66.94,36.58 < 10 |only if walking
-Continue following the path |goto 66.68,32.05 < 10 |only if walking
-Continue following the path |goto 66.55,26.36 < 10 |only if walking
-Run down the stairs |goto 67.44,24.62 < 7 |only if walking
-Continue following the path |goto 68.25,24.93 < 5 |only if walking
-Run up the stairs |goto 69.51,25.15 < 7 |only if walking
-Follow the path |goto 69.85,22.43 < 10 |only if walking
-Run up the stairs |goto 71.38,17.96 < 7 |only if walking
-Continue up the stairs |goto 71.69,16.80 < 5 |only if walking
-Continue following the path |goto 70.26,16.25 < 10 |only if walking
-Continue following the path |goto Tiragarde Sound/0 66.12,22.70 < 10 |only if walking
 click Rivermud##290136+
 |tip They look like small brown mounds of dirt on the ground around this area.
 |tip They will appear on your minimap as a yellow dot.
-Plant #10# Riverbud Seeds |q 48753/1 |goto 62.82,18.67
+Plant #10# Riverbud Seeds |q 48753/1 |goto Tiragarde Sound/0 62.82,18.67
 step
 talk Declan Senal##136096
 |tip He walks around this area.
 turnin Emergency Transplants##48753 |goto Boralus/0 71.25,5.33
 turnin Cultural Significance##51365 |goto 71.25,5.33
 step
-Cross the bridge |goto Vol'dun/0 61.74,22.54 < 10 |only if walking
-Follow the path |goto 61.49,24.58 < 10 |only if walking
-Continue following the path |goto 61.85,26.51 < 10 |only if walking
-Continue following the path |goto 62.23,26.61 < 7 |only if walking
-Enter the cave |goto 62.31,26.00 < 5 |walk
+Follow the path |goto Vol'dun/0 61.49,24.58 < 20 |only if walking
+Enter the cave |goto 62.31,26.00 < 10 |walk
 talk Patu##137572
 |tip Inside the cave.
 turnin An Unusual Mentor##51398 |goto 62.34,25.72
 accept Foul Harvest##51399 |goto 62.34,25.72
 step
-Leave the cave |goto 62.31,26.08 < 5 |walk
-Follow the path |goto 61.72,28.62 < 10 |only if walking
-Continue following the path |goto 61.45,29.87 < 10 |only if walking
-Continue following the path |goto 60.54,30.81 < 10 |only if walking
-Continue down the path |goto 60.54,32.77 < 10 |only if walking
-Continue down the path |goto 60.94,35.37 < 10 |only if walking
+Follow the path |goto 61.43,29.70 < 30 |only if walking
+Continue following the path |goto 60.64,36.25 < 30 |only if walking
 click Sun Baked Dung##289448+
 |tip They look like small brown piles of poop with flies coming off them on the ground around this area.
 |tip They will appear on your minimap as a yellow dot.
 collect 12 Digested Akunda's Bite Seed##160108 |q 51399/1 |goto 59.37,40.63
 step
-Follow the path |goto 60.47,37.34 < 10 |only if walking
-Continue following the path |goto 60.96,35.54 < 10 |only if walking
-Continue following the path |goto 60.61,33.83 < 10 |only if walking
-Continue up the path |goto 60.52,32.23 < 10 |only if walking
-Continue up the path |goto 60.49,30.87 < 10 |only if walking
-Continue up the path |goto 61.44,29.83 < 10 |only if walking
+Follow the path |goto 60.64,36.25 < 30 |only if walking
+Continue following the path |goto 61.43,29.70 < 30 |only if walking
 Enter the cave |goto 62.31,26.00 < 5 |walk
 talk Patu##137572
 |tip Inside the cave.
 turnin Foul Harvest##51399 |goto 62.34,25.72
 accept Giving Back to Nature##51408 |goto 62.34,25.72
 step
-Leave the cave |goto 62.31,26.08 < 5 |walk
-Follow the path |goto 61.72,28.62 < 10 |only if walking
-Continue following the path |goto 61.45,29.87 < 10 |only if walking
-Continue following the path |goto 60.54,30.81 < 10 |only if walking
-Continue down the path |goto 60.54,32.77 < 10 |only if walking
-Continue down the path |goto 60.94,35.37 < 10 |only if walking
-Continue following the path |goto 60.14,38.19 < 10 |only if walking
+Follow the path |goto 61.43,29.70 < 30 |only if walking
+Continue following the path |goto 60.64,36.25 < 30 |only if walking
 use the Akunda's Bite Sapling##160187
 Defeat the enemies that attack in waves
 Defend Akunda's Bite Sapling |q 51408/1 |goto 59.66,45.16
 step
-Follow the path |goto 60.47,37.34 < 10 |only if walking
-Continue following the path |goto 60.96,35.54 < 10 |only if walking
-Continue following the path |goto 60.61,33.83 < 10 |only if walking
-Continue up the path |goto 60.52,32.23 < 10 |only if walking
-Continue up the path |goto 60.49,30.87 < 10 |only if walking
-Continue up the path |goto 61.44,29.83 < 10 |only if walking
+Follow the path |goto 60.64,36.25 < 30 |only if walking
+Continue following the path |goto 61.43,29.70 < 30 |only if walking
 Enter the cave |goto 62.31,26.00 < 5 |walk
 talk Patu##137572
 |tip Inside the cave.
@@ -1052,21 +1011,15 @@ click Star Moss##276236+
 |tip Track them on your minimap with "Find Herbs".
 collect 10 Fresh Star Moss##159830 |q 48756/1 |goto Tiragarde Sound/0 80.32,49.37
 step
-Follow the path |goto Drustvar/0 21.11,44.57 < 10 |only if walking
-Continue up the path |goto 21.04,45.03 < 10 |only if walking
-Continue up the path |goto 20.81,45.60 < 10 |only if walking
 talk Xun Xun Sweetflower##136141
-turnin Meet Sweetflower##48762 |goto 20.68,45.59
+turnin Meet Sweetflower##48762 |goto Drustvar/0 20.68,45.59
 accept Can't Teach on an Empty Stomach##51376 |goto 20.68,45.59
 step
-Fish in the open water
+Fish in the open water |cast Fishing##131474
 |tip You will occassionally catch Lane Snappers.
 |tip You can also purchase them from the Auction House.
 collect 8 Lane Snapper##152546 |q 51376/1 |goto 19.95,44.86
 step
-Run up the stairs |goto 20.08,45.00 < 7 |only if walking
-Follow the path |goto 20.34,45.40 < 7 |only if walking
-Continue following the path |goto 20.56,45.92 < 7 |only if walking
 talk Xun Xun Sweetflower##136141
 turnin Can't Teach on an Empty Stomach##51376 |goto 20.68,45.59
 step
@@ -1146,18 +1099,7 @@ accept Breaking The Food Chain##48754 |goto Boralus/0 71.25,5.33
 accept Ghost Busting##48757 |goto 71.25,5.33
 accept Gathering Mementos##48769 |goto 71.25,5.33
 step
-Follow the path |goto 71.43,6.83 < 10 |only if walking
-Continue following the path |goto 69.90,9.33 < 10 |only if walking
-Continue following the path |goto 71.42,15.05 < 10 |only if walking
-Continue following the path |goto 70.74,16.94 < 10 |only if walking
-Run up the stairs |goto 68.80,16.93 < 5 |only if walking
-Continue up the stairs |goto 67.44,21.54 < 5 |only if walking
-Continue following the path |goto 67.12,23.43 < 10 |only if walking
-Continue following the path |goto 66.88,30.10 < 10 |only if walking
-Jump down carefully here |goto 66.39,42.10 < 7 |only if walking
-Cross the bridge |goto 59.84,48.09 < 7 |only if walking
-Run up the stairs |goto 54.79,50.53 < 5 |only if walking
-Continue following the path |goto 54.75,52.51 < 5 |only if walking
+Jump down here |goto Boralus/0 53.04,57.66 < 20 |only if walking
 Enter the building |goto 53.90,52.26 < 5 |walk
 use the Smoldering Bundle of Star Moss##159833
 |tip Inside the building.
@@ -1167,14 +1109,13 @@ kill Angry Spirit##137832
 |tip Inside the building.
 Put the Angry Spirit to Rest |q 48757/2 |goto 54.04,51.73
 step
-Follow the path |goto Tiragarde Sound/0 66.06,22.53 < 10 |only if walking
-Continue following the path |goto 64.60,21.09 < 10 |only if walking
-Continue following the path |goto 62.91,18.48 < 10 |only if walking
+Follow the path |goto Tiragarde Sound/0 66.06,22.53 < 30 |only if walking
+Continue following the path |goto 64.60,21.09 < 30 |only if walking
+Continue following the path |goto 62.91,18.48 < 30 |only if walking
 kill 15 Freshwater Snapper##127626 |q 48754/1 |goto 61.38,17.55
 step
 click Flotsam##289322+
 |tip They look like brown piles of wood and boxes floating in the water around this area.
-|tip They will appear on your minimap as a yellow dot.
 collect Sailor's Cutlass##160057 |q 48769/1 |goto 86.65,84.96
 step
 talk Declan Senal##136096
@@ -1182,31 +1123,6 @@ talk Declan Senal##136096
 turnin Breaking The Food Chain##48754 |goto Boralus/0 71.25,5.33
 turnin Ghost Busting##48757 |goto 71.25,5.33
 turnin Gathering Mementos##48769 |goto 71.25,5.33
-step
-map Tiragarde Sound/0
-path	follow smart; loop on; ants curved; dist 20
-path	65.34,23.21	64.72,21.34	64.34,20.77	63.50,19.34	62.24,17.97
-path	61.78,18.18	60.61,19.46	59.39,20.01	57.49,20.81	55.72,22.05
-path	54.26,23.40	54.48,25.24	54.88,26.05	55.23,27.39	55.63,29.55
-path	56.25,29.69	57.26,28.03	58.35,28.47	59.65,29.39	61.62,29.99
-path	63.39,28.98	64.73,27.39	65.28,26.38	64.97,25.70	65.12,24.33
-Click herbs as you follow the path around this area
-|tip Track them on your minimap with "Find Herbs".
-Reach Level 150 Herbalism |skill Kul Tiran Herbalism,150
-step
-map Tiragarde Sound/0
-path follow smart; loop on; ants curved; dist 20
-path	53.51,25.36	52.57,24.24	51.38,22.97	51.07,22.30	50.76,22.19
-path	49.12,22.09	47.55,24.06	47.77,25.77	48.56,27.47	49.63,29.79
-path	50.64,30.76	50.95,31.57	50.94,32.34	51.11,33.86	51.28,35.04
-path	52.23,37.41	53.13,37.13	53.54,35.14	54.98,34.75	56.54,33.97
-path	56.75,32.19	57.32,31.41	56.89,30.43	56.29,30.69	55.65,30.29
-path	55.26,29.30	53.79,26.86
-click Anchor Weed##276242+
-|tip Track them on your minimap with "Find Herbs".
-use the Enormous Anchor Pod##160550
-accept Enormous Anchor Pod##51360
-|tip You will eventually accept this quest after looting.
 step
 map Tiragarde Sound/0
 path	follow smart; loop on; ants curved; dist 20
@@ -1223,22 +1139,8 @@ accept Disgustingly Damp Flower##48758
 step
 talk Declan Senal##136096
 |tip He walks around this area.
-turnin Enormous Anchor Pod##51360 |goto Boralus/0 71.25,5.33
-accept More Anchor Pods##51361 |goto 71.25,5.33
-turnin Disgustingly Damp Flower##48758 |goto 71.25,5.33
+turnin Disgustingly Damp Flower##48758 |goto Boralus/0 71.25,5.33
 accept Pollen Punching##48755 |goto 71.25,5.33
-step
-map Tiragarde Sound/0
-path follow smart; loop on; ants curved; dist 20
-path	53.51,25.36	52.57,24.24	51.38,22.97	51.07,22.30	50.76,22.19
-path	49.12,22.09	47.55,24.06	47.77,25.77	48.56,27.47	49.63,29.79
-path	50.64,30.76	50.95,31.57	50.94,32.34	51.11,33.86	51.28,35.04
-path	52.23,37.41	53.13,37.13	53.54,35.14	54.98,34.75	56.54,33.97
-path	56.75,32.19	57.32,31.41	56.89,30.43	56.29,30.69	55.65,30.29
-path	55.26,29.30	53.79,26.86
-click Anchor Weed##276242+
-|tip Track them on your minimap with "Find Herbs".
-collect 9 Mature Anchor Pod##160036 |q 51361/1
 step
 map Tiragarde Sound/0
 path	follow smart; loop on; ants curved; dist 20
@@ -1253,10 +1155,6 @@ collect 12 Heaping Handful of Damp Pollen##159957 |q 48755/1
 step
 Click the Complete Quest Box:
 turnin Pollen Punching##48755
-step
-talk Declan Senal##136096
-|tip He walks around this area.
-turnin More Anchor Pods##51361 |goto Boralus/0 71.25,5.33
 step
 map Vol'dun/0
 path follow smart; loop off; ants curved; dist 20
@@ -1307,6 +1205,52 @@ Harvest #10# Winter's Kiss Without Taking Cold Damage |q 48763/1
 step
 Click the Complete Quest Box:
 turnin The Frigid Boon##48763
+step
+map Tiragarde Sound/0
+path	follow smart; loop on; ants curved; dist 20
+path	65.34,23.21	64.72,21.34	64.34,20.77	63.50,19.34	62.24,17.97
+path	61.78,18.18	60.61,19.46	59.39,20.01	57.49,20.81	55.72,22.05
+path	54.26,23.40	54.48,25.24	54.88,26.05	55.23,27.39	55.63,29.55
+path	56.25,29.69	57.26,28.03	58.35,28.47	59.65,29.39	61.62,29.99
+path	63.39,28.98	64.73,27.39	65.28,26.38	64.97,25.70	65.12,24.33
+Click herbs as you follow the path around this area
+|tip Track them on your minimap with "Find Herbs".
+Reach Level 150 Herbalism |skill Kul Tiran Herbalism,150
+step
+map Tiragarde Sound/0
+path follow smart; loop on; ants curved; dist 20
+path	53.51,25.36	52.57,24.24	51.38,22.97	51.07,22.30	50.76,22.19
+path	49.12,22.09	47.55,24.06	47.77,25.77	48.56,27.47	49.63,29.79
+path	50.64,30.76	50.95,31.57	50.94,32.34	51.11,33.86	51.28,35.04
+path	52.23,37.41	53.13,37.13	53.54,35.14	54.98,34.75	56.54,33.97
+path	56.75,32.19	57.32,31.41	56.89,30.43	56.29,30.69	55.65,30.29
+path	55.26,29.30	53.79,26.86
+click Anchor Weed##276242+
+|tip Track them on your minimap with "Find Herbs".
+use the Enormous Anchor Pod##160550
+accept Enormous Anchor Pod##51360
+|tip You will eventually accept this quest after looting.
+step
+talk Declan Senal##136096
+|tip He walks around this area.
+turnin Enormous Anchor Pod##51360 |goto Boralus/0 71.25,5.33
+accept More Anchor Pods##51361 |goto 71.25,5.33
+step
+map Tiragarde Sound/0
+path follow smart; loop on; ants curved; dist 20
+path	53.51,25.36	52.57,24.24	51.38,22.97	51.07,22.30	50.76,22.19
+path	49.12,22.09	47.55,24.06	47.77,25.77	48.56,27.47	49.63,29.79
+path	50.64,30.76	50.95,31.57	50.94,32.34	51.11,33.86	51.28,35.04
+path	52.23,37.41	53.13,37.13	53.54,35.14	54.98,34.75	56.54,33.97
+path	56.75,32.19	57.32,31.41	56.89,30.43	56.29,30.69	55.65,30.29
+path	55.26,29.30	53.79,26.86
+click Anchor Weed##276242+
+|tip Track them on your minimap with "Find Herbs".
+collect 9 Mature Anchor Pod##160036 |q 51361/1
+step
+talk Declan Senal##136096
+|tip He walks around this area.
+turnin More Anchor Pods##51361 |goto Boralus/0 71.25,5.33
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Farming Guides\\Sea Stalk",{
 author="support@zygorguides.com",
@@ -1453,8 +1397,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Inscription\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Inscription profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Inscription')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Inscription')>0 and skill('Kul Tiran Inscription')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Inscription') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Inscription') > 0 and skill('Kul Tiran Inscription') < 150 and level >= 110 end,
 },[[
 step
 talk Zooey Inksprocket##130399
@@ -1585,8 +1529,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Jewelcrafting\\Level
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Jewelcrafting profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Jewelcrafting')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Jewelcrafting')>0 and skill('Kul Tiran Jewelcrafting')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Jewelcrafting') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Jewelcrafting') > 0 and skill('Kul Tiran Jewelcrafting') < 150 and level >= 110 end,
 },[[
 step
 talk Samuel D. Colton III##130368
@@ -1718,8 +1662,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Leatherworking\\Leve
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Leatherworking profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Leatherworking')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Leatherworking')>0 and skill('Kul Tiran Leatherworking')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Leatherworking') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Leatherworking') > 0 and skill('Kul Tiran Leatherworking') < 150 and level >= 110 end,
 },[[
 step
 talk Cassandra Brennor##136063
@@ -1789,7 +1733,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Mining quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(39830) end,
-condition_suggested=function() return skill('Mining')>0 and level>=110 and not completedq(39830) end,
+condition_suggested=function() return skill('Mining') > 0 and level >= 110 and not completedq(39830) end,
 },[[
 step
 Follow the path |goto Boralus/0 68.14,15.61 < 10 |only if walking
@@ -2637,8 +2581,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Leveling G
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Skinning profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Skinning')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Skinning')>0 and skill('Kul Tiran Skinning')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Skinning') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Skinning') > 0 and skill('Kul Tiran Skinning') < 150 and level >= 110 end,
 },[[
 step
 talk Camilla Darksky##136061
@@ -2664,8 +2608,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Quest Guid
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Kul Tiran Skinning quest line.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Skinning')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Skinning')>0 and skill('Kul Tiran Skinning')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Skinning') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Skinning') > 0 and skill('Kul Tiran Skinning') < 150 and level >= 110 end,
 },[[
 step
 talk Camilla Darksky##136061
@@ -2845,8 +2789,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Leveling 
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Kul Tiran Tailoring profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Kul Tiran Tailoring')>=150 end,
-condition_suggested=function() return skill('Kul Tiran Tailoring')>0 and skill('Kul Tiran Tailoring')<150 and level>=110 end,
+condition_end=function() return skill('Kul Tiran Tailoring') >= 150 end,
+condition_suggested=function() return skill('Kul Tiran Tailoring') > 0 and skill('Kul Tiran Tailoring') < 150 and level >= 110 end,
 },[[
 step
 talk Daniel Brineweaver##136071

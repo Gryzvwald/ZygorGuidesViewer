@@ -656,12 +656,42 @@ step
 Press _I_ and Queue for Uldir - Halls of Containment or Enter the Raid with your Group |goto Uldir/0 0.00,0.00 < 1000
 step
 kill Taloc##122276
+_EVERYONE:_ |grouprole EVERYONE
+|tip Move away from allies afflicted with "Cudgel of Gore". |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip Allies afflicted with "Plasma Discharge" will take heavy damage. |grouprole HEALER
+|tip Avoid standing in front of Taloc when he begins casting "Sanguine Static". |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip Face Taloc towards "Blood Storms" when he casts "Cudgel of Gore". |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Focus damage on "Volatile Droplets" when they appear. |grouprole DAMAGE
+|tip Avoid standing in front of Taloc when he begins casting "Sanguine Static". |grouprole DAMAGE
 Defeat Taloc |confirm
 step
-kill Remnant of Corruption##136315
-Defeat the Remnant of Corruption |confirm
+kill MOTHER##135452
+_EVERYONE:_ |grouprole EVERYONE
+|tip Have everyone move through "Defense Grids" as they appear. |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip Avoid standing in front of MOTHER when she casts "Sanitizing Strike". |grouprole HEALER
+|tip Prepare AoE heals for allies passing through the "Defense Grids". |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip Quickly pick up "Remnants of Corruption" as they appear. |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Avoid standing in front of MOTHER when she casts "Sanitizing Strike". |grouprole DAMAGE
+|tip Make it a priority to interrupt "Clinging Corruption". |grouprole DAMAGE
+Defeat MOTHER |confirm
 step
 kill Zek'voz##134445
+_HEALER:_ |grouprole HEALER
+|tip Be prepared for "Titan Sparks" as they will deal significant damage to random allies. |grouprole HEALER
+|tip If "Orb of Corruption" isn't properly intercepted, be prepared for AoE heals. |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip Move away from Zek'voz during "Void Lash" while it's affected by "Might of the Void". |grouprole TANK
+|tip Interrupt allies afflicted by "Will of the Corruptor". |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Make it a priority to intercept "Orbs of Corruption". |grouprole DAMAGE
+|tip Move away from allies when "Eye Beam" is about to be cast. |grouprole DAMAGE
+|tip Interrupt allies afflicted by "Will of the Corruptor". |grouprole DAMAGE
 Defeat Zek'voz |confirm
 step
 _Congratulations!_
@@ -678,13 +708,47 @@ description="To complete Uldir - Crimson Descent, you will need to kill the foll
 step
 Press _I_ and Queue for Uldir - Crimson Descent or Enter the Raid with your Group |goto Uldir/0 0.00,0.00 < 1000
 step
-kill Vectis##134442
-Defeat Vectis |confirm
-step
 kill Fetid Devourer##133298
+_HEALER:_ |grouprole HEALER
+|tip Prepare for heavy heals when "Terrible Thrash" hits. |grouprole HEALER
+|tip Allies afflicted with "Malodorous Miasma" will accelerate to "Putrid Paroxysm" which will require focused healing. |grouprole HEALER
+|tip Bigger heals will be needed when "Fetid Frenzy" kicks in.
+_TANK:_ |grouprole TANK
+|tip Off-tank should stand close to the main tank to soak damage from "Terrible Thrash". |grouprole TANK
+|tip Use damage mitigation abilities for when "Fetid Frenzy" kicks in. |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Focus damage on "Corruption Corpuscles" before the finish casting "Enticing Essence". |grouprole DAMAGE
+|tip When the Chimaera reaches 100 energy, prepare to avoid "Rotting Regurgitation". |grouprole DAMAGE
 Defeat the Fetid Devourer |confirm
 step
+kill Vectis##134442
+_EVERYONE:_ |grouprole EVERYONE
+|tip "Plauge Bombs" will spawn Plague Amalgams when they detonate without a player being hit by it. |grouprole EVERYONE
+|tip Move away from allies afflicted by "Gestate". |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip Allies afflicted with "Omega Vector" and "Gestate" will need heavy healing. |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip Stay away from allies afflicted by "Omega Vector". |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Make it a priority to focus down "Plague Amalgams" when they appear. |grouprole DAMAGE
+|tip When "Omega Vector" is cast on a player, have an assigned player ready to pick it up next to them for when the spell expires.
+Defeat Vectis |confirm
+step
 kill Zul##138967
+_EVERYONE:_ |grouprole EVERYONE
+|tip Avoid being close to allies afflicted with "Dark Revelation". |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip AoE heals will be needed for "Dark Revelation" and "Deathwish". |grouprole HEALER
+|tip Make it a priority to dispel "Deathwish" as soon as possible. |grouprole HEALER
+|tip Dispelling "Bound by Shadow" from Minions of Zul will instantly kill them. |grouprole HEALER
+|tip During "Locus of Corruption", the raid will take constant damage for the remainder of the encounter. |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip Keep "Nazmani Crushers" away from the raid. |grouprole TANK
+|tip Avoid being hit by "Bloodthirsty Crawgs". |grouprole TANK
+|tip Move away from the raid when you become afflicted with "Rupturing Blood". |grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Focus damage on "Animated Ichors" as they appear. |grouprole DAMAGE
+|tip Dispelling "Bound by Shadow" from Minions of Zul will instantly kill them. |grouprole DAMAGE
 Defeat Zul |confirm
 step
 _Congratulations!_
@@ -702,6 +766,18 @@ step
 Press _I_ and Queue for Uldir - Heart of Corruption or Enter the Raid with your Group |goto Uldir/0 0.00,0.00 < 1000
 step
 kill Mythrax the Unraveler##134546
+_EVERYONE:_ |grouprole EVERYONE
+|tip If afflicted with "Annihilation" search for "Existence Fragments" to regain the health lost. |grouprole EVERYONE
+|tip Avoid having multiple players afflicted by the "Oblivion Sphere". |grouprole EVERYONE
+_HEALER:_ |grouprole HEALER
+|tip Move away from allies afflicted by "imminent Ruin". |grouprole HEALER
+|tip Breaking multiple targets from "Oblivion Sphere" will cause major raid damage. |grouprole HEALER
+_TANK:_ |grouprole TANK
+|tip If afflicted by "Essence Shear", quickly move away from in front of Mythrax to avoid getting hit with it again. |grouprole TANK
+|tip Be sure to use "Existence Fragments" to remove the health debuff of "Annihilation".|grouprole TANK
+_DAMAGE:_ |grouprole DAMAGE
+|tip Prioritize running away from "Oblivion Spheres" as they spawn. |grouprole DAMAGE
+|tip Move away from allies when afflicted by "Imminent Ruin". |grouprole DAMAGE
 Defeat Mythrax the Unraveler |confirm
 step
 kill G'huun##132998

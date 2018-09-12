@@ -510,7 +510,7 @@ description="This guide will walk you through completing the \"More Plots\" Achi
 },[[
 step
 Complete the Tanaan Jungle (90) Storyline |condition completedq(34446)
-Click here to load the Tanaan Jungle Leveling gudie |confirm |next "Zygor's Leveling Guides\\Draenor (90-100)\\Tanaan Jungle (90-90)"
+Click here to load the Tanaan Jungle Leveling gudie |confirm |next "Zygor's Leveling Guides\\Draenor (90-100)\\Tanaan Jungle (90)"
 step
 Be sure to save up _200 Garrison Resources_
 |tip You will need 200 Garrison Resources to upgrade your Garrison to Level 2.
@@ -5075,7 +5075,6 @@ Congratulations, you have _earned_ the ...They All Fall Down Achievement!
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Exploration\\Draenor Explorer",{
 condition_end=function() return achieved(8935) end,
 achieveid={8937,8939,8938,8940,8941,8942,8935},
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="Complete the Angler achievements.",
 },[[
 step
@@ -5358,7 +5357,6 @@ Congratulations, you are now a Field Photographer!
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Exploration\\Master/Grand Treasure Hunter",{
 condition_end=function() return achieved(9728) end,
 achieveid={9726, 9727, 9728,9728},
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 keywords={"Master","Treasure","Hunter"},
 description="Discover 200 treasures of Draenor.",
 },[[
@@ -6628,8 +6626,8 @@ Congratulations, you have _earned_ the Shredder Maniac Achievement!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Exploration\\Draenor Pathfinder",{
 achieveid={10018},
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="This guide will walk you through completing the Draenor Pathfinder Achievement.",
+condition_suggested=function() return level >= 90 and level <= 100 and not achieved(10018) end,
 },[[
 step
 Complete these achievements:
@@ -8780,7 +8778,6 @@ Congratulations, you have earned the _Working in Draenor_ Achievement!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Quests\\Draenor\\Loremaster of Draenor",{
 achieveid={9923},
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="Complete the Draenor quest achievements.",
 },[[
 step
@@ -8788,10 +8785,10 @@ Use these Draenor Leveling Guides to complete Loremaster:
 |tip The Leveling guides cover all required questlines for Loremaster.
 |tip Click one of the lines below to load the Leveling guide for that zone.
 condition achieved(9923) |next
-Frostfire Ridge |condition achieved(9923,4) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Frostfire Ridge (90-92)"
-Gorgrond |condition achieved(9923,5) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Gorgrond (92-94)"
-Talador |condition achieved(9923,1) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Talador (94-96)"
-Spires of Arak |condition achieved(9923,2) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Spires of Arak (96-98)"
+Frostfire Ridge |condition achieved(9923,4) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Frostfire Ridge (90-100)"
+Gorgrond |condition achieved(9923,5) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Gorgrond (92-100)"
+Talador |condition achieved(9923,1) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Talador (94-100)"
+Spires of Arak |condition achieved(9923,2) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Spires of Arak (96-100)"
 Nagrand |condition achieved(9923,3) |confirm always |next "Zygor's Leveling Guides\\Draenor (90-100)\\Nagrand (98-100)"
 step
 Congratulations, you earned the _Loremaster of Draenor_ Achievement!
@@ -10512,7 +10509,6 @@ Congratulations, you have earned the _Putting the Gore in Gorgrond_ Achievement!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Quests\\Draenor\\Securing Draenor",{
 achieveid={9562},
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="Complete the Draenor bonus objectives.",
 },[[
 step
@@ -10837,10 +10833,10 @@ step
 Use the Draenor Leveling Guides to complete Loremaster:
 |tip The Leveling guides cover all required questlines for Loremaster.
 |tip Click one of the lines below to load the Leveling guide for that zone.
-Frostfire Ridge Quests |achieve 8671 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Frostfire Ridge (90-92)"
-Gorgrond Quests |achieve 8924 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Gorgrond (92-94)"
-Talador Quests |achieve 8919 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Talador (94-96)"
-Spires of Arak Quests |achieve 8926 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Spires of Arak (96-98)"
+Frostfire Ridge Quests |achieve 8671 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Frostfire Ridge (90-100)"
+Gorgrond Quests |achieve 8924 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Gorgrond (92-100)"
+Talador Quests |achieve 8919 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Talador (94-100)"
+Spires of Arak Quests |achieve 8926 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Spires of Arak (96-100)"
 Nagrand Quests |achieve 8928 |loadguide "Zygor's Leveling Guides\\Draenor (90-100)\\Nagrand (98-100)"
 step
 Congratulations, you have _earned_ the _Loremaster of Draenor_ achievement!

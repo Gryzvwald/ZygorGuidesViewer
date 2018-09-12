@@ -7,8 +7,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Alchemy\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Alchemy profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Alchemy')>=150 end,
-condition_suggested=function() return skill('Zandalari Alchemy')>0 and skill('Zandalari Alchemy')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Alchemy') >= 150 end,
+condition_suggested=function() return skill('Zandalari Alchemy') > 0 and skill('Zandalari Alchemy') < 150 and level >= 110 end,
 },[[
 step
 talk Clever Kumali##122703
@@ -128,8 +128,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Blacksmithing\\Level
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Blacksmithing profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Blacksmithing')>=150 end,
-condition_suggested=function() return skill('Zandalari Blacksmithing')>0 and skill('Zandalari Blacksmithing')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Blacksmithing') >= 150 end,
+condition_suggested=function() return skill('Zandalari Blacksmithing') > 0 and skill('Zandalari Blacksmithing') < 150 and level >= 110 end,
 },[[
 step
 talk Forgemaster Zak'aal##127112
@@ -244,8 +244,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Cooking profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Cooking')>=150 end,
-condition_suggested=function() return skill('Zandalari Cooking')>0 and skill('Zandalari Cooking')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Cooking') >= 150 end,
+condition_suggested=function() return skill('Zandalari Cooking') > 0 and skill('Zandalari Cooking') < 150 and level >= 110 end,
 },[[
 step
 talk T'sarah the Royal Chef##141549
@@ -383,7 +383,7 @@ step
 _Congratulations!_
 You Reached 150 Zandalari Cooking Skill.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Thick Paleo Steak",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Thick Paleo Steak",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Thick Paleo Steak for various Cooking recipes.",
 startlevel=110.0,
@@ -393,7 +393,7 @@ kill Venomous Diemetradon##123098+
 |tip If you have the "Skinning" skill, you can gather extra meat.
 collect Thick Paleo Steak##154899 |n |goto Zuldazar/0 68.15,25.53
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Meaty Haunch",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Meaty Haunch",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Meaty Haunch for various Cooking recipes.",
 startlevel=110.0,
@@ -404,7 +404,7 @@ Kill enemies around this area
 collect Meaty Haunch##154898 |n |goto Zuldazar/0 69.82,26.34
 You can find more around [70.34,23.77]
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Stringy Loins",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Stringy Loins",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Stringy Loins for various Cooking recipes.",
 startlevel=110.0,
@@ -415,7 +415,7 @@ kill Shallows Saurolisk##125452
 collect Stringy Loins##154897 |n |goto Drustvar/0 68.2,40.6
 You can find more around [65.33,40.57]
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Guides\\Briny Flesh",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Farming Guides\\Briny Flesh",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Briny Flesh for various Cooking recipes.",
 startlevel=110.0,
@@ -438,8 +438,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Enchanting\\Leveling
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Enchanting profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Enchanting')>=150 end,
-condition_suggested=function() return skill('Zandalari Enchanting')>0 and skill('Zandalari Enchanting')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Enchanting') >= 150 end,
+condition_suggested=function() return skill('Zandalari Enchanting') > 0 and skill('Zandalari Enchanting') < 150 and level >= 110 end,
 },[[
 step
 Enter the building |goto Dazar'alor/0 44.50,36.95 < 5 |walk
@@ -578,8 +578,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Engineering profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Engineering')>=150 end,
-condition_suggested=function() return skill('Zandalari Engineering')>0 and skill('Zandalari Engineering')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Engineering') >= 150 end,
+condition_suggested=function() return skill('Zandalari Engineering') > 0 and skill('Zandalari Engineering') < 150 and level >= 110 end,
 },[[
 step
 Run down the stairs |goto Dazar'alor/0 48.86,40.35 < 7 |only if walking
@@ -691,8 +691,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Fishing profession from 800-950.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Fishing')>=150 end,
-condition_suggested=function() return skill('Zandalari Fishing')>150 and skill('Zandalari Fishing')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Fishing') >= 150 end,
+condition_suggested=function() return skill('Zandalari Fishing') > 0 and skill('Zandalari Fishing') < 150 and level >= 110 end,
 },[[
 step
 Run up the stairs |goto Dazar'alor/0 52.16,19.80 < 5 |only if walking
@@ -781,7 +781,7 @@ Fish in the open water
 |tip You will occassionally catch Lane Snappers as well as Frenzied Fangtooth.
 collect Lane Snapper##152546 |n |goto Stormsong Valley/0 52.51,25.97
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Great Sea Catfish",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Great Sea Catfish",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Great Sea Catfish for various Cooking recipes.",
 startlevel=110.0,
@@ -814,7 +814,7 @@ Fish in Great Sea Catfish Schools
 collect Great Sea Catfish##152547 |n
 '|goto Nazmir/0 39.12,84.85 < 30 |c |noway |next "Start"
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Guides\\Tiragarde Perch",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Farming Guides\\Tiragarde Perch",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Tiragarde Perch for various Cooking recipes.",
 startlevel=110.0,
@@ -862,8 +862,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Leveling 
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Herbalism profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Herbalism')>=150 end,
-condition_suggested=function() return skill('Zandalari Herbalism')>0 and skill('Zandalari Herbalism')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Herbalism') >= 150 end,
+condition_suggested=function() return skill('Zandalari Herbalism') > 0 and skill('Zandalari Herbalism') < 150 and level >= 110 end,
 },[[
 step
 talk Jahden Fla##122704
@@ -890,10 +890,10 @@ You Reached 150 Zandalari Herbalism Skill.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Quest Guides\\Zandalari Herbalism Quest Line",{
 author="support@zygorguides.com",
-description="This guide will walk you through completing the Zandalari Alchemy quest line.",
+description="This guide will walk you through completing the Zandalari Herbalism quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48763) end,
-condition_suggested=function() return skill('Zandalari Herbalism')>0 and level>=110 and not completedq(48763) end,
+condition_suggested=function() return skill('Zandalari Herbalism') > 0 and level >= 110 and not completedq(48763) end,
 },[[
 step
 talk Jahden Fla##122704
@@ -951,44 +951,23 @@ accept Meet Sweetflower##51446 |goto 42.18,36.05
 accept Here In Spirit##51464 |goto 42.18,36.05
 accept Cultural Significance##51498 |goto 42.18,36.05
 step
-Follow the path |goto 51.31,88.72 < 10 |only if walking
-Jump down here |goto 50.73,87.14 < 7 |only if walking
-Run down the stairs |goto 49.99,88.26 < 7 |only if walking
-Continue down the stairs |goto 50.28,90.80 < 10 |only if walking
-Follow the path |goto 50.92,93.13 < 10 |only if walking
-Continue following the path |goto 52.15,94.50 < 5 |only if walking
-Continue following the path |goto 52.31,95.53 < 5 |only if walking
+Jump down here |goto 50.73,87.14 < 20 |only if walking
+Follow the path |goto Dazar'alor/0 52.20,95.17 < 20 |only if walking
 talk Wavesinger De'zan##133538
 Ask him _"What can you tell me about sea stalks?"_
 Ask Wavesinger De'zan About Sea Stalks |q 51498/1 |goto 52.83,95.78
 step
-Run up the stairs |goto 52.70,95.48 < 5 |only if walking
-Follow the path |goto 52.22,95.47 < 5 |only if walking
-Continue following the path |goto 52.22,94.47 < 5 |only if walking
-Continue following the path |goto 44.88,94.31 < 10 |only if walking
 talk Captain Rez'okun##123000
 Ask him _"What can you tell me about sea stalks?"_
 Ask Captain Rez'okun About Sea Stalks |q 51498/2 |goto 44.48,95.45
 step
-Follow the path |goto 44.84,94.40 < 10 |only if walking
-Run up the stairs |goto 45.76,93.05 < 10 |only if walking
-Continue following the path |goto 45.86,90.70 < 10 |only if walking
-Continue up the stairs |goto 45.87,88.46 < 10 |only if walking
-Continue following the path |goto 45.90,86.68 < 10 |only if walking
-Continue up the stairs |goto 45.56,85.37 < 10 |only if walking
-Continue following the path |goto 44.77,83.71 < 10 |only if walking
+Run up the stairs |goto 45.76,93.05 < 20 |only if walking
 talk Dockmaster Cobo##126009
 Ask him _"What can you tell me about sea stalks?"_
 Ask Dockmaster Cobo About Sea Stalks |q 51498/3 |goto 45.31,79.78
 step
-Follow the path |goto Zuldazar/0 66.98,42.81 < 10 |only if walking
-Continue following the path |goto 66.23,42.44 < 5 |only if walking
-Jump down carefully here |goto 66.08,42.15 < 5 |only if walking
-Jump down here |goto 65.84,41.18 < 7 |only if walking
-Follow the road |goto 65.93,40.29 < 10 |only if walking
-Follow the road down |goto 65.08,37.72 < 10 |only if walking
-Continue following the road |goto 64.08,37.26 < 10 |only if walking
-Continue following the road |goto 63.61,36.36 < 10 |only if walking
+Jump down here |goto Zuldazar/0 65.84,41.18 < 20 |only if walking
+Follow the road down |goto 65.08,37.72 < 30 |only if walking
 click Rivermud##290136+
 |tip They look like small brown mounds of dirt on the ground around this area.
 |tip They will appear on your minimap as a yellow dot.
@@ -999,57 +978,37 @@ talk Jahden Fla##122704
 turnin Emergency Transplants##51230 |goto Dazar'alor/0 42.18,36.05
 turnin Cultural Significance##51498 |goto 42.18,36.05
 step
-Cross the bridge |goto Vol'dun/0 61.74,22.54 < 10 |only if walking
-Follow the path |goto 61.49,24.58 < 10 |only if walking
-Continue following the path |goto 61.85,26.51 < 10 |only if walking
-Continue following the path |goto 62.23,26.61 < 7 |only if walking
-Enter the cave |goto 62.31,26.00 < 5 |walk
+Follow the path |goto Vol'dun/0 61.49,24.58 < 20 |only if walking
+Enter the cave |goto 62.31,26.00 < 10 |walk
 talk Patu##137572
 |tip Inside the cave.
 turnin An Unusual Mentor##51432 |goto 62.34,25.72
 accept Foul Harvest##51399 |goto 62.34,25.72
 step
-Leave the cave |goto 62.31,26.08 < 5 |walk
-Follow the path |goto 61.72,28.62 < 10 |only if walking
-Continue following the path |goto 61.45,29.87 < 10 |only if walking
-Continue following the path |goto 60.54,30.81 < 10 |only if walking
-Continue down the path |goto 60.54,32.77 < 10 |only if walking
+Follow the path |goto 61.40,29.83 < 20 |only if walking
 Continue down the path |goto 60.94,35.37 < 10 |only if walking
 click Sun Baked Dung##289448+
 |tip They look like small brown piles of poop with flies coming off them on the ground around this area.
 |tip They will appear on your minimap as a yellow dot.
 collect 12 Digested Akunda's Bite Seed##160108 |q 51399/1 |goto 59.37,40.63
 step
-Follow the path |goto 60.47,37.34 < 10 |only if walking
-Continue following the path |goto 60.96,35.54 < 10 |only if walking
-Continue following the path |goto 60.61,33.83 < 10 |only if walking
-Continue up the path |goto 60.52,32.23 < 10 |only if walking
-Continue up the path |goto 60.49,30.87 < 10 |only if walking
-Continue up the path |goto 61.44,29.83 < 10 |only if walking
-Enter the cave |goto 62.31,26.00 < 5 |walk
+Follow the path |goto 60.96,35.47 < 20 |only if walking
+Continue following the path |goto 61.44,29.83 < 20 |only if walking
+Enter the cave |goto 62.31,26.00 < 10 |walk
 talk Patu##137572
 |tip Inside the cave.
 turnin Foul Harvest##51399 |goto 62.34,25.72
 accept Giving Back to Nature##51408 |goto 62.34,25.72
 step
-Leave the cave |goto 62.31,26.08 < 5 |walk
-Follow the path |goto 61.72,28.62 < 10 |only if walking
-Continue following the path |goto 61.45,29.87 < 10 |only if walking
-Continue following the path |goto 60.54,30.81 < 10 |only if walking
-Continue down the path |goto 60.54,32.77 < 10 |only if walking
-Continue down the path |goto 60.94,35.37 < 10 |only if walking
-Continue following the path |goto 60.14,38.19 < 10 |only if walking
+Follow the path |goto 61.72,28.62 < 20 |only if walking
+Continue down the path |goto 60.94,35.37 < 20 |only if walking
 use the Akunda's Bite Sapling##160187
 Defeat the enemies that attack in waves
 Defend Akunda's Bite Sapling |q 51408/1 |goto 59.66,45.16
 step
-Follow the path |goto 60.47,37.34 < 10 |only if walking
-Continue following the path |goto 60.96,35.54 < 10 |only if walking
-Continue following the path |goto 60.61,33.83 < 10 |only if walking
-Continue up the path |goto 60.52,32.23 < 10 |only if walking
-Continue up the path |goto 60.49,30.87 < 10 |only if walking
-Continue up the path |goto 61.44,29.83 < 10 |only if walking
-Enter the cave |goto 62.31,26.00 < 5 |walk
+Follow the path |goto 60.95,35.48 < 20 |only if walking
+Continue up the path |goto 61.44,29.83 < 20 |only if walking
+Enter the cave |goto 62.31,26.00 < 10 |walk
 talk Patu##137572
 |tip Inside the cave.
 turnin Giving Back to Nature##51408 |goto 62.34,25.72
@@ -1064,19 +1023,13 @@ click Star Moss##276236+
 |tip Track them on your minimap with "Find Herbs".
 collect 10 Fresh Star Moss##159830 |q 51464/1
 step
-talk Dread-Admiral Tattersail##135690
-|tip At the top of the ship.
-Tell her _"Set sail for Drustvar."_ |goto Zuldazar/0 58.46,62.99
-Teleport to Drustvar |goto Drustvar/0 20.61,43.69 < 10 |noway |c |q 51446
+Teleport to Drustvar |goto Drustvar/0 20.61,43.69 < 200 |c |q 51446
 step
-Follow the path |goto 21.11,44.57 < 10 |only if walking
-Continue up the path |goto 21.04,45.03 < 10 |only if walking
-Continue up the path |goto 20.81,45.60 < 10 |only if walking
 talk Xun Xun Sweetflower##136141
 turnin Meet Sweetflower##51446 |goto 20.68,45.59
 accept Can't Teach on an Empty Stomach##51376 |goto 20.68,45.59
 step
-Fish in the open water
+Fish in the open water |cast Fishing##131474
 |tip You will occassionally catch Lane Snappers.
 |tip You can also purchase them from the Auction House.
 collect 8 Lane Snapper##152546 |q 51376/1 |goto 19.95,44.86
@@ -1087,9 +1040,7 @@ Continue following the path |goto 20.56,45.92 < 7 |only if walking
 talk Xun Xun Sweetflower##136141
 turnin Can't Teach on an Empty Stomach##51376 |goto 20.68,45.59
 step
-talk Swellthrasher##139519
-Tell her _"Take us back to Zuldazar."_ |goto 20.61,43.35
-Return to Zuldazar |goto Zuldazar/0 58.40,62.50 < 10 |c |noway |q 51464
+Return to Zuldazar |goto Zuldazar/0 58.40,62.50 < 200 |c |q 51464
 step
 talk Jahden Fla##122704
 |tip He walks around this area.
@@ -1114,7 +1065,7 @@ talk Jahden Fla##122704
 |tip He walks around this area.
 accept Seeking More Knowledge##51482 |goto Dazar'alor/0 42.18,36.05
 step
-Press _I_ and Queue for Waycrest Manor or Enter the Dungeon with your Group |goto Waycrest Manor/0 0.00,0.00 < 1000 |q 51482
+Press _I_ and Queue for Waycrest Manor or Enter the Dungeon with your Group |goto Waycrest Manor/0 0.00,0.00 < 1000 |noway |q 51482
 step
 click A Treatise on Anchor Weed##288621
 |tip It looks like a small brown book with an anchor symbol on the front in the Waycrest Manor dungeon.
@@ -1170,24 +1121,12 @@ accept Breaking The Food Chain##51243 |goto Dazar'alor/0 42.18,36.05
 accept Ghost Busting##51478 |goto 42.18,36.05
 accept Gathering Mementos##51503 |goto 42.18,36.05
 step
-Follow the path |goto 43.22,34.10 < 10 |only if walking
-Cross the bridge |goto 43.72,29.50 < 10 |only if walking
-Continue following the path |goto 42.13,27.01 < 10 |only if walking
-Jump down here |goto 40.02,28.18 < 7 |only if walking
+Cross the bridge |goto 43.72,29.50 < 25 |only if walking
+Jump down here |goto 40.02,28.18 < 15 |only if walking
 kill 12 Ravenous Jacunda##131522 |q 51243/1 |goto Zuldazar/0 54.16,39.16
 step
-Cross the water |goto 53.35,39.85 < 10 |only if walking
-Follow the path |goto 53.08,40.25 < 7 |only if walking
-Cross the bridge |goto 53.07,39.95 < 7 |only if walking
-Follow the path |goto Dazar'alor/0 39.30,26.58 < 10 |only if walking
-Continue following the path |goto 41.39,26.95 < 10 |only if walking
-Continue following the path |goto 42.77,24.30 < 10 |only if walking
-Run down the stairs |goto 45.28,24.00 < 10 |only if walking
-Continue down the stairs |goto 46.68,22.32 < 10 |only if walking
-Continue down the stairs |goto 47.70,23.47 < 10 |only if walking
-Continue down the stairs |goto 49.21,21.38 < 10 |only if walking
+Run down the stairs |goto Dazar'alor/0 45.28,24.00 < 10 |only if walking
 Continue down the stairs |goto 50.32,21.17 < 10 |only if walking
-Continue following the path |goto 51.99,18.75 < 10 |only if walking
 Enter the building |goto 52.05,87.93 < 7 |walk
 Go to Spirits Be With You |q 51478/1 |goto 52.29,85.19
 |tip Inside the building.
@@ -1202,7 +1141,6 @@ Put the Angry Spirit to Rest |q 51478/3 |goto 52.28,85.19
 step
 click Ship Wreckage##289767+
 |tip They look like brown piles of wood on the ground around this area.
-|tip They will appear on your minimap as a yellow dot.
 collect Sailor's Necklace##160314 |q 51503/1 |goto Nazmir/0 80.59,32.78
 step
 talk Jahden Fla##122704
@@ -1212,39 +1150,6 @@ turnin Ghost Busting##51478 |goto 42.18,36.05
 turnin Gathering Mementos##51503 |goto 42.18,36.05
 step
 map Zuldazar/0
-path	follow smart; loop on; ants curved; dist 20
-path	79.87,42.02	78.77,40.79	78.68,39.68	77.44,38.80	77.20,36.98
-path	76.32,36.09	76.22,34.67	75.49,32.51	74.66,31.30	73.81,30.02
-path	72.90,28.93	72.07,29.24	70.34,29.84	69.95,28.69	68.98,27.22
-path	69.22,25.54	69.04,23.76	68.56,23.36	67.65,23.51	66.69,25.26
-path	65.62,25.10	63.34,23.65	61.15,25.03	Dazar'alor/0 58.83,0.86	60.95,3.55
-path	Zuldazar/0 62.41,32.99	63.73,34.95	63.63,36.68	65.06,37.75	65.90,40.39
-path	67.01,39.67	67.81,40.51	68.79,39.54	68.46,37.93	70.34,36.38
-path	70.98,36.34	71.10,37.31	72.12,39.58	72.95,39.51	74.54,40.92
-path	75.35,41.09	76.63,41.97	77.74,43.01	79.72,43.00
-Click herbs as you follow the path around this area
-|tip Track them on your minimap with "Find Herbs".
-Reach Level 150 Herbalism |skill Zandalari Herbalism,150
-step
-map Nazmir/0
-path follow smart; loop on; ants curved; dist 20
-path	41.31,79.88	42.35,78.69	44.42,78.71	47.60,78.67	48.60,80.32
-path	50.17,82.02	51.84,81.36	53.57,76.46	54.89,74.29	55.29,74.00
-path	57.19,72.89	58.20,71.35	59.37,69.45	60.23,67.62	61.67,63.67
-path	63.04,62.18	64.06,60.53	64.90,59.48	64.39,56.65	63.79,55.18
-path	63.28,54.08	63.15,52.14	64.06,51.01	64.03,48.68	64.45,46.84
-path	64.42,44.37	61.01,42.16	59.45,39.19	57.75,38.05	55.70,36.87
-path	54.24,35.95	54.06,35.01	52.74,34.09	50.38,31.37	49.29,29.24
-path	47.90,25.91	46.44,24.92	45.39,28.74	44.84,31.93	44.00,33.91
-path	43.70,35.47	43.63,37.42	43.59,39.81	42.54,41.42	41.33,42.08
-path	40.15,41.19
-click Anchor Weed##276242+
-|tip Track them on your minimap with "Find Herbs".
-use the Enormous Anchor Pod##160550
-accept Enormous Anchor Pod##51480
-|tip You will eventually accept this quest after looting.
-step
-map Zuldazar/0
 path follow smart; loop on; ants curved; dist 20
 path	53.29,29.09	53.90,28.49	54.76,28.21	55.94,27.53	57.14,26.19
 path	58.55,25.49	59.14,24.60	58.52,23.26	58.62,21.68	58.95,21.21
@@ -1262,32 +1167,13 @@ path	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27	52.89,22.81
 path	53.57,23.70	54.35,25.18	54.43,26.35
 click Siren's Sting##281869+
 |tip Track them on your minimap with "Find Herbs".
-use the Disgustingly Damp Flower##160301
 accept Disgustingly Damp Flower##51451
 |tip You will eventually accept this quest after looting.
 step
 talk Jahden Fla##122704
 |tip He walks around this area.
-turnin Enormous Anchor Pod##51480 |goto Dazar'alor/0 42.18,36.05
-accept More Anchor Pods##51481 |goto 42.18,36.05
-turnin Disgustingly Damp Flower##51451 |goto 42.18,36.05
+turnin Disgustingly Damp Flower##51451 |goto Dazar'alor/0 42.18,36.05
 accept Pollen Punching##51452 |goto 42.18,36.05
-step
-map Nazmir/0
-path follow smart; loop on; ants curved; dist 20
-path	41.31,79.88	42.35,78.69	44.42,78.71	47.60,78.67	48.60,80.32
-path	50.17,82.02	51.84,81.36	53.57,76.46	54.89,74.29	55.29,74.00
-path	57.19,72.89	58.20,71.35	59.37,69.45	60.23,67.62	61.67,63.67
-path	63.04,62.18	64.06,60.53	64.90,59.48	64.39,56.65	63.79,55.18
-path	63.28,54.08	63.15,52.14	64.06,51.01	64.03,48.68	64.45,46.84
-path	64.42,44.37	61.01,42.16	59.45,39.19	57.75,38.05	55.70,36.87
-path	54.24,35.95	54.06,35.01	52.74,34.09	50.38,31.37	49.29,29.24
-path	47.90,25.91	46.44,24.92	45.39,28.74	44.84,31.93	44.00,33.91
-path	43.70,35.47	43.63,37.42	43.59,39.81	42.54,41.42	41.33,42.08
-path	40.15,41.19
-click Anchor Weed##276242+
-|tip Track them on your minimap with "Find Herbs".
-collect 9 Mature Anchor Pod##160036 |q 51481/1
 step
 map Zuldazar/0
 path follow smart; loop on; ants curved; dist 20
@@ -1296,25 +1182,20 @@ path	58.55,25.49	59.14,24.60	58.52,23.26	58.62,21.68	58.95,21.21
 path	59.48,20.31	60.41,20.27	61.04,20.56	61.05,21.94	61.03,24.10
 path	61.58,24.56	62.36,24.45	62.99,23.80	63.49,23.68	64.05,23.77
 path	64.54,24.42	65.70,25.12	66.63,25.18	67.37,23.75	67.83,23.40
-path	68.54,23.34	68.82,21.99
-path	68.24,20.37	68.12,19.31	67.49,18.36	66.46,18.11	65.94,17.30
-path	65.11,18.00	64.25,18.18	63.40,18.49	62.76,18.29
-path	62.50,17.18	62.44,15.74	61.50,16.16	60.83,17.04	60.82,17.52
-path	60.50,18.43	59.90,19.26	58.91,18.81	57.67,19.79	56.80,19.71
-path	56.11,19.16	55.91,19.37	55.51,19.52	55.33,19.92	54.74,20.13
-path	54.36,20.47	54.08,19.83	53.78,19.57	53.53,19.83	52.65,20.71
-path	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27	52.89,22.81
-path	53.57,23.70	54.35,25.18	54.43,26.35
+path	68.54,23.34	68.82,21.99	68.24,20.37	68.12,19.31	67.49,18.36
+path	66.46,18.11	65.94,17.30	65.11,18.00	64.25,18.18	63.40,18.49
+path	62.76,18.29	62.50,17.18	62.44,15.74	61.50,16.16	60.83,17.04
+path	60.82,17.52	60.50,18.43	59.90,19.26	58.91,18.81	57.67,19.79
+path	56.80,19.71	56.11,19.16	55.91,19.37	55.51,19.52	55.33,19.92
+path	54.74,20.13	54.36,20.47	54.08,19.83	53.78,19.57	53.53,19.83
+path	52.65,20.71	51.19,21.06	51.25,21.74	51.87,22.12	52.53,22.27
+path	52.89,22.81	53.57,23.70	54.35,25.18	54.43,26.35
 click Siren's Sting##281869+
 |tip Track them on your minimap with "Find Herbs".
 collect 12 Heaping Handful of Damp Pollen##159957 |q 51452/1
 step
 Click the Complete Quest Box:
 turnin Pollen Punching##51452
-step
-talk Jahden Fla##122704
-|tip He walks around this area.
-turnin More Anchor Pods##51481 |goto Dazar'alor/0 42.18,36.05
 step
 map Vol'dun/0
 path follow smart; loop off; ants curved; dist 20
@@ -1330,7 +1211,7 @@ accept What Happens Next##51404
 |tip You will eventually automatically accept this quest after looting.
 step
 map Vol'dun/0
-path follow smart; loop off; ants curved; dist 20
+path follow smart; loop on; ants curved; dist 20
 path	49.82,41.45	48.88,41.67	48.29,41.13	47.67,41.21	48.23,39.70
 path	48.42,38.67	48.15,37.58	48.47,36.49	49.41,35.76	49.67,34.73
 path	48.70,34.35	47.76,34.60	47.19,34.79	46.70,34.51	46.16,33.27
@@ -1365,6 +1246,64 @@ Harvest #10# Winter's Kiss Without Taking Cold Damage |q 48763/1
 step
 Click the Complete Quest Box:
 turnin The Frigid Boon##48763
+step
+map Zuldazar/0
+path	follow smart; loop on; ants curved; dist 20
+path	79.87,42.02	78.77,40.79	78.68,39.68	77.44,38.80	77.20,36.98
+path	76.32,36.09	76.22,34.67	75.49,32.51	74.66,31.30	73.81,30.02
+path	72.90,28.93	72.07,29.24	70.34,29.84	69.95,28.69	68.98,27.22
+path	69.22,25.54	69.04,23.76	68.56,23.36	67.65,23.51	66.69,25.26
+path	65.62,25.10	63.34,23.65	61.15,25.03	Dazar'alor/0 58.83,0.86	60.95,3.55
+path	Zuldazar/0 62.41,32.99	63.73,34.95	63.63,36.68	65.06,37.75	65.90,40.39
+path	67.01,39.67	67.81,40.51	68.79,39.54	68.46,37.93	70.34,36.38
+path	70.98,36.34	71.10,37.31	72.12,39.58	72.95,39.51	74.54,40.92
+path	75.35,41.09	76.63,41.97	77.74,43.01	79.72,43.00
+Click herbs as you follow the path around this area
+|tip Track them on your minimap with "Find Herbs".
+Reach Level 150 Herbalism |skill Zandalari Herbalism,150
+step
+map Nazmir/0
+path follow smart; loop on; ants curved; dist 20
+path	41.31,79.88	42.35,78.69	44.42,78.71	47.60,78.67	48.60,80.32
+path	50.17,82.02	51.84,81.36	53.57,76.46	54.89,74.29	55.29,74.00
+path	57.19,72.89	58.20,71.35	59.37,69.45	60.23,67.62	61.67,63.67
+path	63.04,62.18	64.06,60.53	64.90,59.48	64.39,56.65	63.79,55.18
+path	63.28,54.08	63.15,52.14	64.06,51.01	64.03,48.68	64.45,46.84
+path	64.42,44.37	61.01,42.16	59.45,39.19	57.75,38.05	55.70,36.87
+path	54.24,35.95	54.06,35.01	52.74,34.09	50.38,31.37	49.29,29.24
+path	47.90,25.91	46.44,24.92	45.39,28.74	44.84,31.93	44.00,33.91
+path	43.70,35.47	43.63,37.42	43.59,39.81	42.54,41.42	41.33,42.08
+path	40.15,41.19
+click Anchor Weed##276242+
+|tip Track them on your minimap with "Find Herbs".
+use the Enormous Anchor Pod##160550
+accept Enormous Anchor Pod##51480
+|tip You will eventually accept this quest after looting.
+step
+talk Jahden Fla##122704
+|tip He walks around this area.
+turnin Enormous Anchor Pod##51480 |goto Dazar'alor/0 42.18,36.05
+accept More Anchor Pods##51481 |goto 42.18,36.05
+step
+map Nazmir/0
+path follow smart; loop on; ants curved; dist 20
+path	41.31,79.88	42.35,78.69	44.42,78.71	47.60,78.67	48.60,80.32
+path	50.17,82.02	51.84,81.36	53.57,76.46	54.89,74.29	55.29,74.00
+path	57.19,72.89	58.20,71.35	59.37,69.45	60.23,67.62	61.67,63.67
+path	63.04,62.18	64.06,60.53	64.90,59.48	64.39,56.65	63.79,55.18
+path	63.28,54.08	63.15,52.14	64.06,51.01	64.03,48.68	64.45,46.84
+path	64.42,44.37	61.01,42.16	59.45,39.19	57.75,38.05	55.70,36.87
+path	54.24,35.95	54.06,35.01	52.74,34.09	50.38,31.37	49.29,29.24
+path	47.90,25.91	46.44,24.92	45.39,28.74	44.84,31.93	44.00,33.91
+path	43.70,35.47	43.63,37.42	43.59,39.81	42.54,41.42	41.33,42.08
+path	40.15,41.19
+click Anchor Weed##276242+
+|tip Track them on your minimap with "Find Herbs".
+collect 9 Mature Anchor Pod##160036 |q 51481/1
+step
+talk Jahden Fla##122704
+|tip He walks around this area.
+turnin More Anchor Pods##51481 |goto Dazar'alor/0 42.18,36.05
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Farming Guides\\Sea Stalk",{
 author="support@zygorguides.com",
@@ -1511,8 +1450,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Inscription\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Inscription profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Inscription')>=150 end,
-condition_suggested=function() return skill('Zandalari Inscription')>0 and skill('Zandalari Inscription')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Inscription') >= 150 end,
+condition_suggested=function() return skill('Zandalari Inscription') > 0 and skill('Zandalari Inscription') < 150 and level >= 110 end,
 },[[
 step
 talk Chronicler Grazzul##130901
@@ -1643,8 +1582,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Jewelcrafting\\Level
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Jewelcrafting profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Jewelcrafting')>=150 end,
-condition_suggested=function() return skill('Zandalari Jewelcrafting')>0 and skill('Zandalari Jewelcrafting')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Jewelcrafting') >= 150 end,
+condition_suggested=function() return skill('Zandalari Jewelcrafting') > 0 and skill('Zandalari Jewelcrafting') < 150 and level >= 110 end,
 },[[
 step
 Enter the building |goto Dazar'alor/0 44.50,36.95 < 5 |walk
@@ -1801,8 +1740,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Leatherworking\\Leve
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Leatherworking profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Leatherworking')>=150 end,
-condition_suggested=function() return skill('Zandalari Leatherworking')>0 and skill('Zandalari Leatherworking')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Leatherworking') >= 150 end,
+condition_suggested=function() return skill('Zandalari Leatherworking') > 0 and skill('Zandalari Leatherworking') < 150 and level >= 110 end,
 },[[
 step
 talk Xanjo##122698
@@ -1872,7 +1811,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Mining quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(39830) end,
-condition_suggested=function() return skill('Mining')>0 and level>=110 and not completedq(39830) end,
+condition_suggested=function() return skill('Mining') > 0 and level >= 110 and not completedq(39830) end,
 },[[
 step
 Enter the building |goto Dazar'alor/0 49.93,42.13 < 7 |only if walking
@@ -2810,8 +2749,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Leveling G
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Skinning profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Skinning')>=150 end,
-condition_suggested=function() return skill('Zandalari Skinning')>0 and skill('Zandalari Skinning')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Skinning') >= 150 end,
+condition_suggested=function() return skill('Zandalari Skinning') > 0 and skill('Zandalari Skinning') < 150 and level >= 110 end,
 },[[
 step
 talk Rana the Cutta##122699
@@ -2832,8 +2771,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Quest Guid
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Zandalari Skinning quest line.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Skinning')>=150 end,
-condition_suggested=function() return skill('Zandalari Skinning')>0 and skill('Zandalari Skinning')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Skinning') >= 150 end,
+condition_suggested=function() return skill('Zandalari Skinning') > 0 and level >= 110 and not completedq(52213) end,
 },[[
 step
 talk Rana the Cutta##122699
@@ -3024,8 +2963,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Leveling 
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Zandalari Tailoring profession from 1-150.",
 startlevel=110.0,
-condition_end=function() return skill('Zandalari Tailoring')>=150 end,
-condition_suggested=function() return skill('Zandalari Tailoring')>0 and skill('Zandalari Tailoring')<150 and level>=110 end,
+condition_end=function() return skill('Zandalari Tailoring') >= 150 end,
+condition_suggested=function() return skill('Zandalari Tailoring') > 0 and skill('Zandalari Tailoring') < 150 and level >= 110 end,
 },[[
 step
 talk Pin'jin the Patient##122700

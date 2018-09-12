@@ -23,7 +23,7 @@ local Enum_Dungeon = Enum.UIMapType.Dungeon
 local Enum_Orphan = Enum.UIMapType.Orphan
 
 local force_maptype={
-	[427]=3,[582]=3,[590]=3,[622]=3,[624]=3,[750]=3,[747]=3, -- these zones have mapType==6, let's correct it to zone
+	[427]=3,[582]=3,[590]=3,[622]=3,[624]=3,[750]=3,[747]=3,[1182]=3, -- these zones have mapType==6, let's correct it to zone
 	[626]=5,[627]=5,[628]=5,[629]=5, -- Dalaran L is a micro, not a dungeon
 	[125]=5,[126]=5, -- Dalaran is a micro, not a dungeon
 	[499]=5,[500]=5, -- Deeprun Tram 
@@ -161,9 +161,14 @@ local function GetMAPDATAFromHBD()
 		MAPDATA[i]={d.instance,d[3],d[4],d[1],d[2]}
 	until true end
 end
-local function FixMAPDATA()
-	MAPDATA[1022]=MAPDATA[939]
+local function FixMAPDATA() 
+	MAPDATA[1022]=MAPDATA[939] -- expedition maps, clone sizes from Tropical Isle 8.0
 	MAPDATA[1032]=MAPDATA[939]
+	MAPDATA[1033]=MAPDATA[939]
+	MAPDATA[1034]=MAPDATA[939]
+	MAPDATA[1035]=MAPDATA[939]
+	MAPDATA[1036]=MAPDATA[939]
+	MAPDATA[1037]=MAPDATA[939]
 	MAPDATA[1036]=MAPDATA[939]
 end
 GetMAPDATAFromHBD()

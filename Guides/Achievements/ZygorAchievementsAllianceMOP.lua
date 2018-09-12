@@ -10065,7 +10065,35 @@ Routing to Proper Section |next "golden2" |only if not completedq(30638)
 Routing to proper Section |next "tillers" |only if completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31392 |goto Kun-Lai Summit 72,94.2
+|only if not completedq(31394)
+step
+talk Anduin Wrynn##64540
+turnin Temple of the White Tiger##31392 |only if not completedq(31394) |goto 68.8,43.1
+accept A Celestial Experience##31394 |goto 68.8,43.1
+step
+Talk to Xuen |q 31394/1 |goto 68.9,42.8
+kill Spirit of Violence##64656
+Pass the First Test |q 31394/2 |goto 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31394/3 |goto 68.9,42.8
+kill Spirit of Hatred##64744
+Pass the Third Test |q 31394/4 |goto 68.9,42.8
+step
+talk Anduin Wrynn##64540
+turnin A Celestial Experience##31394 |goto 68.8,43.1
+accept A Witness to History##31512 |or |goto 68.8,43.1
+accept A Witness to History##31511 |or |goto 68.8,43.1
+step
+talk Anduin Wrynn##64848
+Tell him "Let's find out!" |q 31512/1 |only if havequest(31512) |goto 55.5,91.3
+Tell him "Let's find out!" |q 31511/1 |only if havequest(31511) |goto 55.5,91.3
+step
+talk Matron Vi Vinh##64149
+turnin A Witness to History##31511 |goto Vale of Eternal Blossoms/3 35.4,65.9
+or
+turnin A Witness to History##31512 |goto Vale of Eternal Blossoms/3 35.4,65.9
 step
 label "tillers"
 Routing to Proper Section |next "tillers2" |only if not completedq(31945)
@@ -11382,7 +11410,35 @@ Routing to Proper Section |next "golden2" |only if not completedq(30638)
 Routing to proper Section |next "achieve" |only if completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31392 |goto Kun-Lai Summit 72,94.2
+|only if not completedq(31394)
+step
+talk Anduin Wrynn##64540
+turnin Temple of the White Tiger##31392 |only if not completedq(31394) |goto 68.8,43.1
+accept A Celestial Experience##31394 |goto 68.8,43.1
+step
+Talk to Xuen |q 31394/1 |goto 68.9,42.8
+kill Spirit of Violence##64656
+Pass the First Test |q 31394/2 |goto 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31394/3 |goto 68.9,42.8
+kill Spirit of Hatred##64744
+Pass the Third Test |q 31394/4 |goto 68.9,42.8
+step
+talk Anduin Wrynn##64540
+turnin A Celestial Experience##31394 |goto 68.8,43.1
+accept A Witness to History##31512 |or |goto 68.8,43.1
+accept A Witness to History##31511 |or |goto 68.8,43.1
+step
+talk Anduin Wrynn##64848
+Tell him "Let's find out!" |q 31512/1 |only if havequest(31512) |goto 55.5,91.3
+Tell him "Let's find out!" |q 31511/1 |only if havequest(31511) |goto 55.5,91.3
+step
+talk Matron Vi Vinh##64149
+turnin A Witness to History##31511 |goto Vale of Eternal Blossoms/3 35.4,65.9
+or
+turnin A Witness to History##31512 |goto Vale of Eternal Blossoms/3 35.4,65.9
 step
 label "achieve"
 You will have two people coming from the sides as well as two coming straight ahead of you. | goto Vale of Eternal Blossoms 19.8,68.0
@@ -11405,7 +11461,35 @@ Routing to Proper Section |next "golden2" |only if not completedq(30638)
 Routing to proper Section |next "achieve" |only if completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31392 |goto Kun-Lai Summit 72,94.2
+|only if not completedq(31394)
+step
+talk Anduin Wrynn##64540
+turnin Temple of the White Tiger##31392 |only if not completedq(31394) |goto 68.8,43.1
+accept A Celestial Experience##31394 |goto 68.8,43.1
+step
+Talk to Xuen |q 31394/1 |goto 68.9,42.8
+kill Spirit of Violence##64656
+Pass the First Test |q 31394/2 |goto 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31394/3 |goto 68.9,42.8
+kill Spirit of Hatred##64744
+Pass the Third Test |q 31394/4 |goto 68.9,42.8
+step
+talk Anduin Wrynn##64540
+turnin A Celestial Experience##31394 |goto 68.8,43.1
+accept A Witness to History##31512 |or |goto 68.8,43.1
+accept A Witness to History##31511 |or |goto 68.8,43.1
+step
+talk Anduin Wrynn##64848
+Tell him "Let's find out!" |q 31512/1 |only if havequest(31512) |goto 55.5,91.3
+Tell him "Let's find out!" |q 31511/1 |only if havequest(31511) |goto 55.5,91.3
+step
+talk Matron Vi Vinh##64149
+turnin A Witness to History##31511 |goto Vale of Eternal Blossoms/3 35.4,65.9
+or
+turnin A Witness to History##31512 |goto Vale of Eternal Blossoms/3 35.4,65.9
 step
 label "achieve"
 talk Kelari Featherfoot##58704 |goto Vale of Eternal Blossoms 18.2,63.6
@@ -11753,7 +11837,35 @@ Routing to proper section |next "revered" |only if rep("Golden Lotus")<Revered a
 Routing to proper section |next "golden2" |only if rep("Golden Lotus")<Revered and not completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31392 |goto Kun-Lai Summit 72,94.2
+|only if not completedq(31394)
+step
+talk Anduin Wrynn##64540
+turnin Temple of the White Tiger##31392 |only if not completedq(31394) |goto 68.8,43.1
+accept A Celestial Experience##31394 |goto 68.8,43.1
+step
+Talk to Xuen |q 31394/1 |goto 68.9,42.8
+kill Spirit of Violence##64656
+Pass the First Test |q 31394/2 |goto 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31394/3 |goto 68.9,42.8
+kill Spirit of Hatred##64744
+Pass the Third Test |q 31394/4 |goto 68.9,42.8
+step
+talk Anduin Wrynn##64540
+turnin A Celestial Experience##31394 |goto 68.8,43.1
+accept A Witness to History##31512 |or |goto 68.8,43.1
+accept A Witness to History##31511 |or |goto 68.8,43.1
+step
+talk Anduin Wrynn##64848
+Tell him "Let's find out!" |q 31512/1 |only if havequest(31512) |goto 55.5,91.3
+Tell him "Let's find out!" |q 31511/1 |only if havequest(31511) |goto 55.5,91.3
+step
+talk Matron Vi Vinh##64149
+turnin A Witness to History##31511 |goto Vale of Eternal Blossoms/3 35.4,65.9
+or
+turnin A Witness to History##31512 |goto Vale of Eternal Blossoms/3 35.4,65.9
 step
 label "revered"
 For this achievement you must be at least _Revered_ with _The Golden Lotus_.

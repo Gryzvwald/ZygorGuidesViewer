@@ -792,7 +792,35 @@ Click here for the daily quests. |next "Zygor's Dailies Guides\\Mists of Pandari
 |tip You have to complete the Dailies for the Golden Lotus and open Treasures of the Vale (quest rewards)to get the recipe for this pet.
 step
 label "GLPQ"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31392 |goto Kun-Lai Summit 72,94.2
+|only if not completedq(31394)
+step
+talk Anduin Wrynn##64540
+turnin Temple of the White Tiger##31392 |only if not completedq(31394) |goto 68.8,43.1
+accept A Celestial Experience##31394 |goto 68.8,43.1
+step
+Talk to Xuen |q 31394/1 |goto 68.9,42.8
+kill Spirit of Violence##64656
+Pass the First Test |q 31394/2 |goto 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31394/3 |goto 68.9,42.8
+kill Spirit of Hatred##64744
+Pass the Third Test |q 31394/4 |goto 68.9,42.8
+step
+talk Anduin Wrynn##64540
+turnin A Celestial Experience##31394 |goto 68.8,43.1
+accept A Witness to History##31512 |or |goto 68.8,43.1
+accept A Witness to History##31511 |or |goto 68.8,43.1
+step
+talk Anduin Wrynn##64848
+Tell him "Let's find out!" |q 31512/1 |only if havequest(31512) |goto 55.5,91.3
+Tell him "Let's find out!" |q 31511/1 |only if havequest(31511) |goto 55.5,91.3
+step
+talk Matron Vi Vinh##64149
+turnin A Witness to History##31511 |goto Vale of Eternal Blossoms/3 35.4,65.9
+or
+turnin A Witness to History##31512 |goto Vale of Eternal Blossoms/3 35.4,65.9
 step
 map Vale of Eternal Blossoms
 path	54.6,23.7	52.8,23.1	47.0,18.7

@@ -6,7 +6,7 @@ ZygorGuidesViewer.GuideMenuTier = "BFA"
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\World Events\\Battle for Azeroth (110-120)\\The Burning of Teldrassil",{
 author="support@zygorguides.com",
 description="This guide will help you assault Teldrassil on behalf of the Horde.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level == 110 and not completedq(52981) end,
 },[[
 step
 accept The Warchief Awaits##50476
@@ -293,7 +293,7 @@ description="\nThis guide will assist you in completing the following:\n"..
 "\nBattle for Azeroth \"The Battle for Lordaeron\" introduction scenario\n"..
 "\nObtaining the Heart of Azeroth\n"..
 "\nChoosing which zones to complete quests in to level your character\n",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\BfAIntro",
@@ -741,29 +741,29 @@ talk Princess Talanji##133050
 turnin We Need Each Other##52131 |goto 41.14,66.73
 step
 label "Choose_Next_Questing_Zone_BFA"
-click Scouting Map
+click Scouting Map |goto Dazar'alor/2 41.71,69.41
 |tip Inside the building.
 |tip You are choosing the zone you wish to do quests in next.
 |tip Pick whichever you like, it doesn't matter.
-accept Zuldazar##47514|or |goto 41.71,69.41 |next "Zuldazar_Start" |only if not completedq(47514)
-accept Nazmir##47512 |or |goto 41.71,69.41 |next "Nazmir_Start" |only if not completedq(47512)
-accept Vol'dun##47513 |or |goto 41.71,69.41 |next "Voldun_Start" |only if not completedq(47513)
+accept Zuldazar##47514|or |next "Zuldazar_Start" |only if not completedq(47514)
+accept Nazmir##47512 |or |next "Nazmir_Start" |only if not completedq(47512)
+accept Vol'dun##47513 |or |next "Voldun_Start" |only if not completedq(47513)
 Completing Guide |next "All_Zones_Completed_BFA" |only if completedq(47514) and completedq(47512) and completedq(47513)
 step
 label "Zuldazar_Start"
 talk Princess Talanji##133050
 |tip Inside the building.
-turnin Zuldazar##47514 |goto 41.14,66.73 |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Zuldazar"
+turnin Zuldazar##47514 |goto Dazar'alor/2 41.14,66.73 |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Zuldazar"
 step
 label "Nazmir_Start"
 talk Princess Talanji##133050
 |tip Inside the building.
-turnin Nazmir##47512 |goto 41.14,66.73 |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Nazmir"
+turnin Nazmir##47512 |goto Dazar'alor/2 41.14,66.73 |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Nazmir"
 step
 label "Voldun_Start"
 talk Princess Talanji##133050
 |tip Inside the building.
-turnin Vol'dun##47513 |goto 41.14,66.73 |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Vol'dun"
+turnin Vol'dun##47513 |goto Dazar'alor/2 41.14,66.73 |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Vol'dun"
 step
 label "All_Zones_Completed_BFA"
 _Congratulations!_
@@ -772,7 +772,7 @@ You unlocked all of the questing zones.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Zuldazar",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Zuldazar storylines:\n\nAudience with the King\nPort of Zandalar\nWeb of Lies\nThe Zanchuli Council\nPortents and Prophecies\nWarport Rastari\nAmong the People\nMarch of the Loa",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(49681) and completedq(52131) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\Zuldazar",
@@ -2933,7 +2933,7 @@ Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azero
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Nazmir",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Nazmir storylines:\n\nDeep in the Swamp\nUndercover Sista\nA Friend of the Frogs\nBring the Boom\nA Pact with Death\nTurtle Power\nEverything Contained\nBleeding the Blood Trolls",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(50808) and completedq(52131) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\Nazmir",
@@ -4795,7 +4795,7 @@ Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azero
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Vol'dun",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Voldun storylines:\n\nDangers in the Desert\nA City of Secrets\nStorming the Spire\nUnlikely Allies\nThe Warguard's Fate\nThe Three Keepers\nAtul'Aman",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(49040) and completedq(52131) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\Vol'dun",
@@ -6766,7 +6766,7 @@ Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azero
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\War Campaign",{
 author="support@zygorguides.com",
 description="This guide will walk you through the Horde War Campaign for Battle for Azeroth.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(53003) and completedq(52131) end,
 image=ZGV.DIR.."\\Guides\\Images\\WarCampaign",
 },[[
 step
@@ -7145,7 +7145,7 @@ Follow the path up |goto 66.54,57.22 < 30 |only if walking
 Follow the path up |goto 72.48,61.76 < 20 |only if walking
 Follow the path up |goto 74.81,64.70 < 20 |only if walking
 talk Chulani Cloudbreath##134850
-fpath Ironmaw Overlook |goto 75.87,64.14
+fpath Ironmaul Overlook |goto 75.87,64.14
 step
 Follow the path up |goto 70.81,28.28 < 20 |only if walking
 Run up the stairs |goto 72.02,29.79 < 15 |only if walking
@@ -7637,10 +7637,118 @@ step
 _Congratulations!_
 You completed the War Campaign.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Warfronts\\Warfronts Introduction Quests",{
+author="support@zygorguides.com",
+description="This guide will walk you through the Warfronts Introduction quests for Battle for Azeroth.",
+condition_suggested=function() return level == 120 and not completedq(53212) end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip Use the "Intro & Quest Zone Choice" and Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(52450)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+talk Throk##138949
+turnin The Warfront Looms##53207 |goto Dazar'alor/0 52.93,94.49 |only if havequest(53207) or completedq(53207)
+accept To the Front##53208 |goto Dazar'alor/0 52.93,94.49
+step
+Does the Horde Currently Control the Warfront?
+|tip The following quests change slightly, depending if your faction controls the warfront or not.
+Yes |confirm |or |next "Horde_Controls_Warfront" |q 53212
+No |confirm |or |next "Horde_Doesnt_Control_Warfront" |q 53212
+step
+label "Horde_Controls_Warfront"
+talk Druza Netherfang##143388 |goto Dazar'alor/0 51.83,94.46
+Tell her _"Send me to Arathi Highlands!"_
+Teleport to Ar'gorok |goto Arathi Highlands/0 27.40,29.97 < 10 |noway |c |q 53208
+step
+talk Wistel Silversnitch##143019
+turnin To the Front##53208 |goto 27.53,31.84
+accept Touring the Front##53210 |goto 27.53,31.84
+step
+talk Flightgineer Krazzle##143323
+Tell him _"Wistel said you could give me a tour of the area."_
+Begin Riding the Rocket |invehicle |goto 25.88,29.61 |q 53210
+step
+Watch the dialogue
+View the Battleground with Flightgineer Krazzle |q 53210/3 |goto 25.68,35.79
+step
+Watch the dialogue
+Return to the Ground |outvehicle |goto 25.89,29.97 |q 53210
+step
+Enter the mine |goto 33.80,36.64 < 10 |walk
+Follow the path down |goto 34.23,35.03 < 10 |walk
+Run down the stairs |goto 32.90,35.40 < 10 |walk
+talk Foreman Drogg##143372
+|tip Inside the mine.
+Tell him _"Thank you."_
+Check on Foreman Drogg |q 53210/1 |goto 33.25,38.04
+step
+Run up the stairs |goto 32.80,36.72 < 10 |walk
+Follow the path up |goto 33.32,35.21 < 10 |walk
+Leave the mine |goto 33.72,36.72 < 10 |c |q 53210
+step
+talk Graul##143373
+Tell him _"Thank you."_
+Check on Graul |q 53210/2 |goto 18.14,28.76
+step
+talk Wistel Silversnitch##143019
+turnin Touring the Front##53210 |goto 27.53,31.84
+accept Back to Zuldazar##53212 |goto 27.53,31.84
+step
+talk Druza Netherfang##143381 |goto 27.29,29.80
+Tell her _"Send me to Zuldazar!"_
+Return to Zuldazar |goto Dazar'alor/0 51.93,94.20 < 10 |noway |c |q 53212
+|next "Warfront_Intro_End"
+step
+label "Horde_Doesnt_Control_Warfront"
+talk Druza Netherfang##143388 |goto Dazar'alor/0 51.83,94.46
+Tell her _"Send me to Arathi Highlands!"_
+Teleport to Ar'gorok |goto Arathi Highlands/0 26.38,35.77 < 10 |noway |c |q 53208
+step
+talk Wistel Silversnitch##143019
+turnin To the Front##53208 |goto 26.07,35.56
+accept Touring the Front##53210 |goto 26.07,35.56
+step
+talk Flightgineer Krazzle##143323
+Tell him _"Wistel said you could give me a tour of the area."_
+Begin Riding the Rocket |invehicle |goto 25.96,36.12 |q 53210
+step
+Watch the dialogue
+View the Battleground with Flightgineer Krazzle |q 53210/3 |goto 25.68,35.79
+step
+Watch the dialogue
+Return to the Ground |outvehicle |goto 26.07,36.34 |q 53210
+step
+talk Foreman Drogg##143372
+Tell him _"Thank you."_
+Check on Foreman Drogg |q 53210/1 |goto 33.30,36.30
+step
+talk Graul##143373
+Tell him _"Thank you."_
+Check on Graul |q 53210/2 |goto 20.91,25.91
+step
+talk Wistel Silversnitch##143019
+turnin Touring the Front##53210 |goto 26.07,35.56
+accept Back to Zuldazar##53212 |goto 26.07,35.56
+step
+talk Druza Netherfang##143381 |goto 26.67,35.79
+Tell her _"Send me to Zuldazar!"_
+Return to Zuldazar |goto Dazar'alor/0 51.93,94.20 < 10 |noway |c |q 53212
+|next "Warfront_Intro_End"
+step
+label "Warfront_Intro_End"
+talk Throk##138949
+turnin Back to Zuldazar##53212 |goto Dazar'alor/0 52.92,94.52
+step
+_Congratulations!_
+You unlocked Warfronts.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Swiftwind Post (Drustvar)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Swiftwind Post outpost in Drustvar.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Honored and not completedq(52276) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -7692,7 +7800,7 @@ You unlocked the Swiftwind Post outpost in Drustvar.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Wolf's Den (Tiragarde Sound)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Grimwatt's Crash outpost in Nazmir.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Honored and not completedq(52127) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -7743,7 +7851,7 @@ You unlocked the Wolf's Den outpost in Tiragarde Sound.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Hillcrest Pasture (Stormsong Valley)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Hillcrest Pasture outpost in Stormsong Valley.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Revered and not completedq(52479) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -7796,7 +7904,7 @@ You unlocked the Hillcrest Pasture outpost in Stormsong Valley.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Mudfisher Cove (Drustvar)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Mudfisher Cove outpost in Drustvar.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Revered and not completedq(52314) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -7845,7 +7953,7 @@ You unlocked the Mudfisher Cove outpost in Drustvar.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Stonefist Watch (Tiragarde Sound)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Stonefist Watch outpost in Tiragarde Sound.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Revered and not completedq(52222) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -7895,7 +8003,7 @@ You unlocked the Stonefist Watch outpost in Tiragarde Sound.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Stonetusk Watch (Stormsong Valley)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Stonetusk Watch outpost in Stormsong Valley.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Revered and not completedq(52777) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -7952,7 +8060,7 @@ You unlocked the Stonetusk Watch outpost in Stormsong Valley.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Windfall Cavern (Stormsong Valley)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Windfall Cavern outpost in Stormsong Valley.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('The Honorbound') >= Revered and not completedq(52320) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -8006,14 +8114,14 @@ You unlocked the Windfall Cavern outpost in Stormsong Valley.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment",{
 author="support@zygorguides.com",
 description="This guide will walk you through empowering your Heart of Azeroth necklace to increase its item level.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('Champions of Azeroth') >= Friendly and not completedq(53406) end,
 },[[
 step
 Reach Level 120 |ding 120
 |tip Use the "Intro & Quest Zone Choice" and Leveling guides to accomplish this.
 step
 Unlock World Quests |condition completedq(52450)
-|tip Use the War Campaign guide to accomplish this.
+|tip Use the "War Campaign" guide to accomplish this.
 step
 Reach Friendly Reputation with the Champions of Azeroth |condition rep('Champions of Azeroth')>=Friendly
 |tip Use the Battle for Azeroth "World Quests" guides to complete "Champions of Azeroth" world quests.
@@ -8063,10 +8171,10 @@ talk Magni Bronzebeard##136907
 Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
 Empower the Heart of Azeroth within the Chamber of Heart |q 53406/2 |goto Chamber Of Heart/0 50.17,58.15
 step
+Watch the dialogue
 Banish the Old God Incursion
 |tip Use the "Unleash Heart of Azeroth" ability inside the building.
 |tip It appears as a button on the screen.
-Watch the dialogue
 Click Here After Unleashing the Heart of Azeroth |confirm |goto 50.00,64.78 |q 53406
 step
 talk Magni Bronzebeard##136907
@@ -8079,7 +8187,7 @@ You Fully Empowered the Heart of Azeroth.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Nightborne Race Unlock",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the new Nightborne allied race.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and not completedq(49614) end,
 image=ZGV.DIR.."\\Guides\\Images\\NightborneUnlock",
 },[[
 step
@@ -8201,7 +8309,7 @@ You Unlocked the "Nightborne" Allied Race.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Highmountain Tauren Race Unlock",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the new Highmountain Tauren allied race.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and not completedq(48433) end,
 image=ZGV.DIR.."\\Guides\\Images\\HighmountainTaurenUnlock",
 },[[
 step
@@ -8488,7 +8596,7 @@ You Unlocked the "Highmountain Tauren" Allied Race.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Mag'har Orc Race Unlock",{
 author="support@zygorguides.com",
 description="To unlock the new Mag'har Orc allied race, you will need to earn exalted reputation with The Honorbound and complete the Horde War Campaign.",
-condition_suggested=function() return level >= 120 and not achieved(12518) end,
+condition_suggested=function() return level == 120 and not achieved(12518) and completedq(52131) end,
 condition_end=function() return achieved(12518) end,
 image=ZGV.DIR.."\\Guides\\Images\\MagHarOrcUnlock",
 },[[
@@ -8511,6 +8619,91 @@ _Island Expeditions and Warfronts:_
 |tip Each successful Warfront awards 500 reputation with the The Honorbound.
 |tip Completing the island expedition quest "Azerite for the Horde" will award 1,500 reputation.
 Gain Exalted Reputation with The Honorbound |achieve 12957
+step
+talk Eitrigg##126066
+accept Vision of Time##53466 |goto Orgrimmar/1 37.79,80.53
+step
+talk Chief Telemancer Oculeth##131443
+turnin Vision of Time##53466 |goto Dazar'alor/1 67.15,73.79
+accept Caverns of Time##53467 |goto 67.15,73.79
+step
+talk Anachronos##15192
+turnin Caverns of Time##53467 |goto Tanaris/18 41.83,49.75
+accept Echo of Gul'dan##53354 |goto 41.83,49.75
+step
+click Time Rift
+kill Echo of Gul'dan##143505 |q 53354/1 |goto Blasted Lands/0 54.4,50.4
+step
+talk Anachronos##143692
+turnin Echo of Gul'dan##53354 |goto Blasted Lands/0 54.4,50.4
+accept Echo of Warlord Zaela##53353 |goto 54.4,50.4
+step
+Enter the building |goto Kun-Lai Summit/0 68.63,45.98 < 10 |walk
+click Time Rift
+kill Echo of Warlord Zaela##143504 |q 53353/1 |goto 68.81,43.69
+step
+turnin Echo of Warlord Zaela##53353 |goto 68.89,43.95
+accept Echo of Garrosh Hellscream##53355 |goto 68.89,43.95
+step
+talk Anachronos##144225
+Tell him _"I am ready to seek the Echo of Garrosh."_
+|tip You will be teleported to The Inner Sanctum.
+Meet Anachronos outside Orgrimmar |q 53355/1 |goto Durotar/0 40.75,16.36
+step
+Jump down into the room
+click Time Rift
+kill Echo of Garrosh Hellscream##143425 |q 53355/2
+step
+talk Chief Telemancer Oculeth##131443
+turnin Echo of Garrosh Hellscream##53355 |goto Dazar'alor/1 67.15,73.79
+step
+talk Eitrigg##126066
+accept Restoring Old Bonds##52942 |goto 70.60,69.21
+step
+talk Chief Telemancer Oculeth##131443
+Tell him _"(Quest) I am ready to go to Draenor."_
+Speak with Oculeth to go to Draenor |q 52942/1 |goto 67.15,73.79
+step
+Follow Eitrigg
+|tip A group of mounted Mag'har orcs will approach you.
+Meet the Overlord |q 52942/2 |goto Gorgrond/0 41.4,16.6
+step
+talk Eitrigg##126066
+turnin Restoring Old Bonds##52942 |goto 41.4,16.6
+accept Calling Out the Clans##52943 |goto 41.4,16.6
+step
+Follow Eitrigg and Overlord Geya'rah
+click Blackrock Banner
+Pay homage to the Blackrock Clan Symbol |q 52943/1
+step
+Follow Eitrigg and Overlord Geya'rah
+click Warsong Banner
+Pay homage to the Warsong Clan Symbol |q 52943/2
+step
+Follow Eitrigg and Overlord Geya'rah
+click Frostwolf Banner
+Pay homage to the Frostwolf Clan Symbol |q 52943/3
+step
+talk Overlord Geya'rah##142109
+|tip Next to you.
+turnin Calling Out the Clans##52943
+step
+talk Grommash Hellscream
+|tip Next to the bonfire.
+accept Bonds Forged Through Battle##52945
+step
+Enter the cave |goto 38.51,67.40 < 10 |walk |goto 37.14,68.95
+Kill Kor'gall enemies around this area
+kill 10 Kor'gall Defectors |q 52945/1 |goto Gorgrond/0 43.72,58.93
+step
+Watch the dialogue
+kill Kor'gall, Greatson of Kor'gal##140949 |q 52945/1
+step
+talk Overlord Geya'rah##142109
+|tip Next to you.
+turnin Bonds Forged Through Battle##52945
+accept Tyranny of the Light##52955
+step
 step
 _Congratulations!_
 You Unlocked the "Mag'har Orc" Allied Race.

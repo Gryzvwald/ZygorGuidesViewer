@@ -860,7 +860,7 @@ function AutoEquip:ShowGearReport(verbose,minimal,hideDump)
 		if AutoEquip.CurrentGear then
 			dumptext2 = dumptext2.."\nCurrent Gear\n"
 			for slot,info in pairs(AutoEquip.CurrentGear) do
-				dumptext2 = dumptext2.."   "..slot.. (" - %s#%d scored: %d\n"):format(info.link, info.itemid,info.score)
+				dumptext2 = dumptext2.."   "..slot.. (" - %s#%d %s scored: %d\n"):format(info.link, info.itemid,info.link:match("item:[%d:]*"), info.score)
 			end
 		end
 
@@ -868,7 +868,7 @@ function AutoEquip:ShowGearReport(verbose,minimal,hideDump)
 			dumptext2 = dumptext2.."\nPossible Upgrades\n"
 
 			for slot,info in pairs(AutoEquip.PossibleUpgrades) do
-				dumptext2 = dumptext2.."   "..slot.. (" - %s#%d scored: %d\n"):format(info.link, info.itemid,info.score)
+				dumptext2 = dumptext2.."   "..slot.. (" - %s#%d %s scored: %d\n"):format(info.link, info.itemid,info.link:match("item:[%d:]*"), info.itemid,info.score)
 			end
 		end
 	end
@@ -889,7 +889,23 @@ function AutoEquip:ShowGearReport(verbose,minimal,hideDump)
 		logs = logs..line.."\n"
 	end
 
-	local s = dumptext.."\n"..dumptext2.."\n\n LOGS\n"..logs
+	local dumpstats = "Live stats: \n"
+	if F.item and F.item.link then
+		dumpstats = dumpstats.."New item\n"
+		local stats = GetItemStats(F.item.link)
+		for i,v in pairs(stats) do
+			dumpstats = dumpstats..i.." "..v.."\n"
+		end
+	end
+	if F.olditem and F.olditem.link then
+		dumpstats = dumpstats.."Old item\n"
+		local stats = GetItemStats(F.olditem.link)
+		for i,v in pairs(stats) do
+			dumpstats = dumpstats..i.." "..v.."\n"
+		end
+	end
+
+	local s = dumptext.."\n"..dumptext2.."\n"..dumpstats.."\n\n LOGS\n"..logs
 
 	if not hideDump then ZGV:ShowDump(s,"Zygor Gear Bug Report") end
 
@@ -1127,8 +1143,9 @@ function AutoEquip:ShowPopup(item)
 		end
 
 		if cur then
-			local new_ilvl = (select(4,ZGV:GetItemInfo(item.link)))
-			local cur_ilvl = (select(4,ZGV:GetItemInfo(cur.link)))
+			local new_ilvl,_,baseitemlvl = GetDetailedItemLevelInfo(item.link) 
+			local cur_ilvl,_,baseitemlvl = GetDetailedItemLevelInfo(cur.link) 
+
 			if new_ilvl < cur_ilvl then
 				st1 = st1.."\nThe new item is better, but has lower item level. Keep the old item in your bags for now, as it will help keep your player item level unchanged."
 			end

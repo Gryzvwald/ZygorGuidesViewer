@@ -2719,6 +2719,10 @@ function Goal:AutoTranslate()
 				ZGV.db.global.instantDailies[self.questid] = qt
 			end
 			--]]
+		elseif self.parentStep.is_poi then
+			-- POIs have quests that never yield any data! They won't translate.
+			self.Lretries = 0
+			self.L=true
 		else
 			self.Lretries = (self.Lretries or retries) - 1
 			self.L=nil -- WHOA.
@@ -2803,6 +2807,7 @@ function Goal:AutoTranslate()
 			--if self.npcid and not self.quest then reasons = reasons .. " (questid "..self.questid..")" end
 			ZGV:Debug(("&goal Translating step %d goal %d, tried %d times - failed: %s"):format(self.parentStep.num,self.num,retries-(self.Lretries or retries), self.Lreasons))
 			self.L=true  --sorry.
+			oldL=self.L  -- prevent "dirty" returns
 			self.Lfail=true
 			self.Lretries=nil
 		end

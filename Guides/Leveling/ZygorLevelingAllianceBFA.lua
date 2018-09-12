@@ -6,7 +6,7 @@ ZygorGuidesViewer.GuideMenuTier = "BFA"
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\World Events\\Battle for Azeroth (110-120)\\The Burning of Teldrassil",{
 author="support@zygorguides.com",
 description="This guide will help to defend Teldrassil against the incoming Horde attack..",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level == 110 and not completedq(53310) end,
 },[[
 step
 accept A Short-Lived Peace##52058
@@ -262,7 +262,7 @@ description="\nThis guide will assist you in completing the following:\n"..
 "\nBattle for Azeroth \"The Battle for Lordaeron\" introduction scenario\n"..
 "\nObtaining the Heart of Azeroth\n"..
 "\nChoosing which zones to complete quests in to level your character\n",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\BfAIntro",
@@ -606,13 +606,13 @@ talk Taelia##121235
 turnin A Nation Divided##47189 |goto 68.17,21.97
 step
 label "Choose_Next_Questing_Zone_BFA"
-click Scouting Map
+click Scouting Map |goto Boralus/0 68.38,22.06
 |tip Inside the building.
 |tip You are choosing the zone you wish to do quests in next.
 |tip Pick whichever you like, it doesn't matter.
-accept Tiragarde Sound##47960 |or |goto Boralus/0 68.38,22.06 |next "Tiragarde_Sound_Start" |only if not completedq(47960)
-accept Drustvar##47961 |or |goto Boralus/0 68.38,22.06 |next "Drustvar_Start" |only if not completedq(47961)
-accept Stormsong Valley##47962 |or |goto Boralus/0 68.38,22.06 |next "Stormsong_Valley_Start" |only if not completedq(47962)
+accept Tiragarde Sound##47960 |or |next "Tiragarde_Sound_Start" |only if not completedq(47960)
+accept Drustvar##47961 |or |next "Drustvar_Start" |only if not completedq(47961)
+accept Stormsong Valley##47962 |or |next "Stormsong_Valley_Start" |only if not completedq(47962)
 Completing Guide |next "All_Zones_Completed_BFA" |only if completedq(47960) and completedq(47962) and completedq(47961)
 step
 label "Tiragarde_Sound_Start"
@@ -637,7 +637,7 @@ You unlocked all of the questing zones.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Kul Tiras\\Tiragarde Sound",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Tiragarde Sound storylines:\n\nA Nation Divided\nCastaways and Cutouts\nDefenders of Daelin's Gate\nThe Norwington Estate\nThe Ashvane Trading Company\nFreehold\nThe Shadow Over Anglepoint",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level < 120 and not completedq(50972) and completedq(47189) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\TiragardeSound",
@@ -650,7 +650,7 @@ step
 Use Flynn's Pistol
 |tip It appears as a button on the screen.
 |tip Inside the building.
-Shoot the Water Barrel |q 47181/1 |goto 67.72,21.97
+Shoot the Water Barrel |q 47181/1 |goto 67.59,22.22
 step
 talk Flynn Fairwind##121239
 |tip Inside the building.
@@ -660,41 +660,21 @@ talk Cyrus Crestfall##122370
 |tip Inside the building.
 accept The Ashvane Trading Company##47485 |goto 68.01,21.89
 step
-Run up the stairs |goto Boralus/0 67.51,22.92 < 3 |walk
-Run up the stairs |goto Boralus/0 67.22,22.55 < 3 |walk
-Follow the path |goto Boralus/0 67.43,21.40 < 3 |walk
-Follow the path |goto Boralus/0 67.80,20.73 < 5 |walk
-Leave the building |goto Boralus/0 68.88,21.15 < 3 |walk
-Follow the path |goto Boralus/0 70.36,18.88 < 5 |only if walking
-Run up the stairs |goto Boralus/0 71.44,17.72 < 5 |only if walking
-Run down the stairs |goto Boralus/0 71.81,16.73 < 5 |only if walking
 talk Donald Harris##124289
-accept A Bundle of Furs##51144 |goto Boralus/0 72.18,16.02
+accept A Bundle of Furs##51144 |goto 72.18,16.02
 step
-Run up the stairs |goto  71.98,16.44 < 3 |only if walking
-Run up the stairs |goto 71.64,16.73 < 3 |only if walking
-Follow the path |goto 71.23,16.48 < 5 |only if walking
-Run up the stairs |goto 68.31,15.67 < 5 |only if walking
-Run down the stairs |goto 67.40,16.43 < 5 |only if walking
-Follow the path |goto 66.03,20.44 < 7 |only if walking
-Run down the stairs |goto 63.84,20.34 < 5 |only if walking
-Follow the path |goto 62.40,18.58 < 5 |only if walking
-Continue following the path |goto 57.86,16.16 < 7 |only if walking
-Cross the bridge |goto 52.58,18.86 < 7 |only if walking
-Follow the road |goto 48.66,19.52 < 7 |only if walking
-Follow the road |goto Tiragarde Sound/0 68.15,24.22 < 7 |only if walking
+Run down the stairs |goto 67.29,16.34 < 15 |only if walking
+Follow the path |goto 63.70,20.17 < 15 |only if walking
+Cross the bridge |goto 52.55,18.80 < 20 |only if walking
 talk Davey Brindle##134776
 accept Worker's Rights##50699 |goto Tiragarde Sound/0 67.40,24.14
 step
-Follow the path |goto 67.03,23.63 < 7 |only if walking
 talk Mariah McKee##133210
 fpath Hatherford |goto 66.93,23.07
 step
-Follow the path |goto 67.02,23.61 < 7 |only if walking
 click WANTED: Gryphon 'Nappers
 accept WANTED: Gryphon 'Nappers##51358 |goto 66.85,24.36
 step
-Enter the building |goto 66.42,24.41 < 5 |walk
 talk Dandy Jones##133214
 |tip Inside the building.
 turnin A Bundle of Furs##51144 |goto 66.27,24.29
@@ -703,47 +683,29 @@ talk Dandy Jones##133214
 |tip Inside the building.
 home Hatherford |goto 66.27,24.29 |q 48903 |future
 step
-Leave the building |goto 66.42,24.42 < 3 |walk
 talk Hatherford Guard##139089
 accept Drust in Time##50700 |goto 66.32,24.81
 step
 click Formal Invitation
 accept The Norwington Festival##48070 |goto 67.14,24.80
-stickystart "Kill_Silent_Boris"
 step
-Follow the path |goto 66.87,24.60 < 7 |only if walking
-Follow the path up |goto 67.38,23.48 < 7 |only if walking
-Follow the path up |goto 67.34,22.72 < 7 |only if walking
-Enter the cave |goto 67.36,22.01 < 5 |walk
+Enter the cave |goto 67.36,22.01 < 10 |walk
 kill Lindel the Snatcher##137367 |q 51358/1 |goto 67.27,21.82
-|tip Inside the cave.
-|tip You may need help with this.
-step
-label "Kill_Silent_Boris"
 kill Silent Boris##137369 |q 51358/2 |goto 67.27,21.82
 |tip Inside the cave.
 |tip You may need help with this.
 step
-Leave the cave |goto 67.37,22.03 < 3 |walk
-Follow the road down |goto 68.30,22.06 < 7 |only if walking
-Follow the path down |goto 68.58,20.94 < 7 |only if walking
-Enter the building |goto 68.89,20.43 < 3 |walk
 talk Maynard Algerson##129613
 |tip Inside the building.
 turnin Worker's Rights##50699 |goto 68.93,20.59
 accept Maximizing Resources##49465 |goto 68.93,20.59
 accept Inventory Deficit##49452 |goto 68.93,20.59
 step
-Leave the building |goto 68.90,20.43 < 3 |walk
 talk Benjamin Algerson##129669
 accept Time Off Requests##49451 |goto 68.89,19.84
 stickystart "Collect_Reclaimed_Axes"
 stickystart "Collect_Wood_Adorned_Skulls"
 step
-Follow the path |goto 68.53,18.84 < 7 |only if walking
-Follow the path up |goto 67.94,17.66 < 7 |only if walking
-Follow the path up |goto 67.30,16.93 < 7 |only if walking
-Follow the path up |goto 66.86,17.00 < 7 |only if walking
 talk Lyssa Treewarden##129670
 accept Give a Dam##49453 |goto 66.62,17.32
 accept Sowing Saplings##48557 |goto 66.62,17.32
@@ -761,8 +723,6 @@ talk Lyssa Treewarden##129670
 turnin Give a Dam##49453 |goto 66.62,17.32
 turnin Sowing Saplings##48557 |goto 66.62,17.32
 step
-Follow the path down |goto 67.10,16.85 < 7 |only if walking
-Follow the path down |goto 67.41,16.95 < 7 |only if walking
 clicknpc Entangled Lumberjack##129745+
 |tip They look like standing humans trapped in brown tree roots on the ground around this area.
 Free #5# Entangled Lumberjacks |q 49451/1 |goto 68.28,18.29
@@ -777,9 +737,6 @@ Kill enemies around this area
 |tip Timberfang Summonlings will not drop the quest item.
 collect 5 Wood-Adorned Skull##154993 |q 49465/1 |goto 68.28,18.29
 step
-Follow the path |goto 68.46,18.66 < 5 |only if walking
-Follow the path |goto 68.75,20.29 < 5 |only if walking
-Enter the building |goto 68.90,20.43 < 3 |walk
 talk Maynard Algerson##129613
 |tip Inside the building.
 turnin Maximizing Resources##49465 |goto 68.93,20.59
@@ -787,12 +744,6 @@ turnin Inventory Deficit##49452 |goto 68.93,20.59
 turnin Time Off Requests##49451 |goto 68.93,20.59
 accept Emergent Strategy##48369 |goto 68.93,20.59
 step
-Leave the building |goto 68.90,20.43 < 3 |walk
-Follow the path |goto 68.75,20.25 < 5 |only if walking
-Continue following the path |goto 68.91,19.44 < 5 |only if walking
-Cross the bridge |goto 69.35,19.26 < 5 |only if walking
-Follow the path |goto 70.17,18.85 < 5 |only if walking
-Follow the path |goto 70.13,18.55 < 5 |only if walking
 talk Benjamin Algerson##129669
 turnin Emergent Strategy##48369 |goto 70.09,18.58
 accept Required Webinar##49468 |goto 70.09,18.58
@@ -802,16 +753,13 @@ stickystart "Free_Webbed_Lumberjacks"
 stickystart "Destroy_Mossfang_Eggs"
 stickystart "Slay_Enthralled_Beasts"
 step
-Follow the path |goto 70.50,18.72 < 5 |only if walking
-Continue following the path |goto 71.21,17.73 < 7 |only if walking
-Continue following the path |goto 71.98,17.45 < 7 |only if walking
 talk Terrence Foster##134325
 accept The Witch's Pet##50058 |goto 72.96,17.54
 stickystop "Free_Webbed_Lumberjacks"
 stickystop "Destroy_Mossfang_Eggs"
 stickystop "Slay_Enthralled_Beasts"
 step
-Enter the cave |goto 73.04,17.85 < 5 |walk
+Enter the cave |goto 73.04,17.85 < 10 |walk
 kill Mossfang Matriarch##129833 |q 50058/1 |goto 73.50,18.74
 |tip Inside the cave.
 step
@@ -819,8 +767,6 @@ Click the Complete Quest Box:
 turnin The Witch's Pet##50058
 stickystart "Destroy_Mossfang_Eggs"
 stickystart "Slay_Enthralled_Beasts"
-step
-Leave the cave |goto 73.02,17.82 < 5 |c |q 49468
 step
 label "Free_Webbed_Lumberjacks"
 clicknpc Webbed Lumberjack##134122+
@@ -836,25 +782,16 @@ label "Slay_Enthralled_Beasts"
 Kill Enthralled enemies around this area
 Slay #10# Enthralled Beasts |q 49450/1 |goto 71.11,17.75
 step
-Follow the path |goto 72.14,17.51 < 10 |only if walking
-Continue following the path |goto 71.05,17.85 < 7 |only if walking
-Continue following the path |goto 70.69,18.64 < 7 |only if walking
 talk Benjamin Algerson##129669
 turnin Required Webinar##49468 |goto 70.09,18.58
 turnin Pest Prevention##49454 |goto 70.09,18.58
 turnin Incident Reports##49450 |goto 70.09,18.58
 accept Witch of the Woods##49467 |goto 70.09,18.58
 step
-Follow the path |goto 70.73,18.52 < 5 |only if walking
-Follow the path up |goto 71.11,17.55 < 7 |only if walking
-Continue up the path |goto 70.98,16.74 < 7 |only if walking
-Continue up the path |goto 71.16,15.56 < 7 |only if walking
-Follow the path |goto 70.50,14.28 < 7 |only if walking
+Follow the path up |goto 71.11,17.55 < 20 |only if walking
 kill Witch of the Woods##129625
 collect Petula's Locket##155586 |q 49467/1 |goto 70.45,13.75
 step
-Follow the path |goto 70.11,13.40 < 7 |only if walking
-Follow the path |goto 69.23,13.32 < 7 |only if walking
 talk Maynard Algerson##129613
 turnin Witch of the Woods##49467 |goto 68.85,13.17
 step
@@ -862,11 +799,6 @@ talk Dandy Jones##133214
 |tip Inside the building.
 turnin WANTED: Gryphon 'Nappers##51358 |goto 66.27,24.29
 step
-Leave the building |goto 66.42,24.41 < 3 |walk
-Cross the bridge |goto 66.34,24.89 < 5 |only if walking
-Follow the road |goto 65.57,25.95 < 5 |only if walking
-Continue following the road |goto 64.02,28.22 < 7 |only if walking
-Follow the path |goto 62.96,29.56 < 5 |only if walking
 talk Drogrin Alewhisker##128381
 turnin Drust in Time##50700 |goto 62.73,29.95
 accept Chasing the Leader##49225 |goto 62.72,29.95
@@ -876,13 +808,7 @@ talk Recruit Brutis##130101
 accept A Marine Out of Water##49234 |goto 62.95,29.91
 stickystart "Kill_Ancient_Protectors"
 step
-Follow the path up |goto 62.83,29.13 < 7 |only if walking
-Follow the path |goto 62.77,28.31 < 5 |only if walking
-Enter the cave |goto 62.87,27.34 < 5 |walk
-Follow the path down |goto Tiragarde Sound/1 43.28,85.62 < 5 |walk |notravel
-Follow the path |goto Tiragarde Sound/1 40.00,72.97 < 5 |walk |notravel
-Follow the path |goto Tiragarde Sound/1 43.84,65.87 < 5 |walk
-Follow the path |goto Tiragarde Sound/1 47.46,65.22 < 5 |walk
+Enter the cave |goto 62.87,27.34 < 10 |walk
 talk Birch Tomlin##128354
 |tip Inside the cave.
 accept I'm a Druid, Not a Priest##49233 |goto Tiragarde Sound/1 50.36,70.29
@@ -894,10 +820,7 @@ stickystart "Recover_Drust_Relics"
 stickystart "Free_Cursed_Raiders"
 stickystart "Kill_Ancient_Protectors"
 step
-Follow the path |goto 56.10,59.66 < 5 |walk
-Continue following the path |goto 63.04,55.90 < 5 |walk
-Continue following the path |goto 65.15,51.15 < 5 |walk
-Follow the path up |goto 63.67,44.19 < 5 |walk
+Follow the path |goto 62.92,55.44 < 10 |walk
 talk Hilde Firebreaker##128349
 |tip Inside the cave.
 turnin Chasing the Leader##49225 |goto 58.68,37.79
@@ -914,37 +837,25 @@ talk Hilde Firebreaker##128349
 |tip Inside the cave.
 turnin Backup While I Pack Up##49260 |goto 58.68,37.79
 step
-Follow the path |goto 62.31,44.76 < 5 |walk
-Continue following the path |goto 64.57,52.43 < 5 |walk
-Continue following the path |goto 61.84,56.20 < 5 |walk
-Follow the path up |goto 58.00,54.25 < 5 |walk
-Follow the path up |goto 51.73,48.48 < 5 |walk
-Continue up the path |goto 42.36,55.21 < 5 |walk
-Follow the path |goto Tiragarde Sound/2 38.20,65.39 < 5 |c |q 49234
+Follow the path |goto 63.07,55.75 < 10 |walk
+Follow the path up |goto 55.80,52.70 < 10 |c |q 49234
 step
-Follow the path |goto 48.28,84.54 < 5 |walk
-Follow the path |goto 64.30,64.84 < 5 |walk
-Continue following the path |goto 67.60,44.45 < 5 |walk
-Continue following the path |goto 61.10,23.43 < 5 |walk
-kill Awakened Guardian##128302 |q 49234/1 |goto 64.20,11.34
+kill Awakened Guardian##128302 |q 49234/1 |goto Tiragarde Sound/2 64.20,11.34
 |tip Upstairs inside the cave.
-step
-Jump down carefully here |goto 59.26,36.95
-Return to the Bottom Floor of the Cave |goto Tiragarde Sound/1 56.41,55.78 < 20 |noway |c |q 49232
 step
 label "Recover_Drust_Relics"
 click Packaged Relics##277427+
 |tip They look like wooden boxes on the ground around this area inside the cave.
-collect 6 Drust Relic##153349 |q 49232/1 |goto Tiragarde Sound/1 56.43,56.86
+collect 6 Drust Relic##153349 |q 49232/1 |goto Tiragarde Sound/1 50.61,63.01
 step
 label "Free_Cursed_Raiders"
 use the Repurposed Gilnean Staff##153350
 |tip Use it on Cursed Raiders around this area inside the cave.
-Free #5# Cursed Raiders |q 49233/1 |goto 56.43,56.86
+Free #5# Cursed Raiders |q 49233/1 |goto 50.61,63.01
 step
 label "Kill_Ancient_Protectors"
-kill 6 Ancient Protector##128285 |q 49229/1 |goto 56.43,56.86
-|tip Inside and outside the cave.
+kill 6 Ancient Protector##128285 |q 49229/1 |goto 50.61,63.01
+|tip Inside the cave.
 step
 talk Pendi Cranklefuse##128353
 |tip Inside the cave.
@@ -954,28 +865,18 @@ talk Birch Tomlin##128354
 |tip Inside the cave.
 turnin I'm a Druid, Not a Priest##49233 |goto 50.37,70.39
 step
-Follow the path |goto 48.80,65.90 < 5 |walk
-Follow the path up |goto 46.15,64.93 < 5 |walk
-Continue up the path |goto 40.20,71.01 < 5 |walk
-Continue up the path |goto 41.48,80.21 < 5 |walk
-Leave the cave |goto Tiragarde Sound/0 62.87,27.34 < 5 |walk |notravel
-Follow the path down |goto Tiragarde Sound/0 62.77,28.38 < 7 |only if walking
-Follow the path |goto Tiragarde Sound/0 62.91,29.53 < 7 |only if walking
+Follow the path up |goto 46.15,64.93 < 10 |walk
+Leave the cave |goto Tiragarde Sound/0 62.87,27.34 < 10 |walk
 talk Recruit Brutis##130101
 turnin A Marine Out of Water##49234 |goto Tiragarde Sound/0 62.82,29.87
 step
 talk Drogrin Alewhisker##128381
 turnin The Ruins Fought Back##49229 |goto 62.73,29.95
 step
-Follow the road up |goto 62.56,29.44 < 5 |only if walking
-Follow the road |goto 61.95,29.88 < 7 |only if walking
-Follow the path down |goto 61.33,30.10 < 5 |only if walking
 talk Jenny Swiftbrook##140752
 accept She Sells Seashells##52258 |goto 60.99,30.85
 stickystart "Collect_Sparkling_Tidescales"
 step
-Follow the path down |goto 60.37,30.93 < 7 |only if walking
-Follow the path |goto 59.17,32.12 < 10 |only if walking
 clicknpc Gleaming Seacrab##140755+
 |tip They look like small crabs with spiral shells walking on the ground around this area.
 collect 4 Gleaming Spiral##161439 |q 52258/1 |goto 58.70,32.79
@@ -985,18 +886,11 @@ click Sparkling Tidescale##161440+
 |tip They look like white and brown seashells on the ground around this area.
 collect 6 Sparkling Tidescale##161440 |q 52258/2 |goto 58.70,32.79
 step
-Follow the path |goto 59.01,32.28 < 10 |only if walking
-Follow the path up |goto 60.15,31.00 < 7 |only if walking
+Follow the path up |goto 60.10,31.10 < 20 |only if walking
 talk Jenny Swiftbrook##140752
 turnin She Sells Seashells##52258 |goto 60.99,30.86
 step
-Follow the road up |goto 61.23,29.99 < 7 |only if walking
-Continue following the road |goto 60.18,29.58 < 7 |only if walking
-Continue following the road |goto 58.04,28.19 < 7 |only if walking
-Continue following the road |goto 57.17,27.96 < 7 |only if walking
-Continue following the road |goto 56.64,26.71 < 7 |only if walking
-Follow the path |goto 56.12,25.94 < 7 |only if walking
-Follow the path |goto 56.00,25.25 < 7 |only if walking
+Follow the road |goto 61.07,29.85 < 20 |only if walking
 talk Abbey Watkins##125309
 turnin The Norwington Festival##48070 |goto 55.45,24.67
 accept The Stoat Hunt##48077 |goto 55.45,24.67
@@ -1008,25 +902,15 @@ stickystart "Collect_Soft_Stoat_Pelts"
 stickystart "Shoot_Down_Hollowbeak_Falcons"
 stickystart "Collect_Rugged_Boar_Tusks"
 step
-Follow the path |goto 56.48,24.28 < 10 |only if walking
-Follow the path |goto 57.56,23.78 < 7 |only if walking
-Follow the path |goto 57.95,24.70 < 7 |only if walking
 talk Caleb Batharen##127803
 accept Settle the Score##48965 |goto 58.29,25.40
 step
-Follow the path |goto 58.51,25.57 < 7 |only if walking
-Continue following the path |goto 59.16,24.48 < 10 |only if walking
-Continue following the path |goto 60.04,22.85 < 10 |only if walking
-Continue following the path |goto 60.94,21.89 < 10 |only if walking
-Enter the cave |goto 61.22,22.10 < 5 |walk
+Follow the path |goto 59.98,23.00 < 30 |only if walking
+Enter the cave |goto 61.22,22.10 < 10 |walk
 kill Chartusk##127800 |q 48965/1 |goto 61.70,22.73
 |tip He walks around this area inside the cave.
 step
-Leave the cave |goto 61.18,22.05 < 3 |walk
-Follow the path |goto 60.74,22.00 < 10 |only if walking
-Follow the path down |goto 60.03,22.83 < 10 |only if walking
-Follow the path down |goto 59.63,23.83 < 10 |only if walking
-Follow the path |goto 58.40,25.60 < 7 |only if walking
+Leave the cave |goto 61.18,22.05 < 10 |walk
 clicknpc Caleb Batharen##127803
 turnin Settle the Score##48965 |goto 58.29,25.40
 step
@@ -1047,10 +931,6 @@ label "Collect_Rugged_Boar_Tusks"
 kill Mudbrush Boar##125347+
 collect 8 Rugged Boar Tusk##151913 |q 48080/1 |goto 57.99,25.19
 step
-Follow the path |goto 57.99,24.73 < 10 |only if walking
-Follow the path down |goto 57.81,24.09 < 7 |only if walking
-Follow the path down |goto 57.43,23.76 < 7 |only if walking
-Follow the path down |goto 56.05,24.54 < 10 |only if walking
 talk Harold Beckett##125398
 turnin An Element of Danger##48080 |goto 55.52,24.59
 turnin Bolas and Birds##48616 |goto 55.52,24.59
@@ -1061,11 +941,7 @@ step
 talk Melissa Kenny##127006
 accept Runaway Rider##48670 |goto 55.59,24.60
 step
-Jump down here |goto 55.55,24.09 < 5 |only if walking
-Follow the path |goto 55.01,23.14 < 10 |only if walking
-Follow the path up |goto 54.24,22.28 < 7 |only if walking
-Follow the path up |goto 54.00,21.13 < 7 |only if walking
-Follow the path |goto 54.17,20.29 < 7 |only if walking
+Follow the path up |goto 53.99,21.09 < 20 |only if walking
 talk Melissa Kenny##127144
 turnin Runaway Rider##48670 |goto 54.48,19.39
 accept Following Eddie's Trail##48196 |goto 54.48,19.39
@@ -1073,7 +949,6 @@ accept Troublesome Troglodytes##48195 |goto 54.48,19.39
 stickystart "Kill_Grimestone_Throwers"
 stickystart "Kill_Grimestone_Bullies"
 step
-Follow the path |goto 55.08,19.08 < 7 |only if walking
 talk Trapped Saurolisk##126804
 accept Saurolisk Escape##48597 |goto 55.95,17.51
 stickystart "Free_Trapped_Saurolisks"
@@ -1087,11 +962,10 @@ stickystart "Collect_Unidentifiable_Meat"
 stickystart "Collect_Saurolisk_Scale"
 stickystart "Collect_Soup_Stones"
 step
-Follow the path up |goto 56.07,17.17 < 7 |only if walking
 click Bag of Horse Treats
 Find the Bag of Horse Treats |q 48196/2 |goto 56.21,16.14
 step
-Enter the cave |goto 55.99,15.37 < 5 |walk
+Enter the cave |goto 55.99,15.37 < 10 |walk
 kill Boneface the Giant##125475
 |tip Inside the cave.
 collect Boneface's "Key"##152109 |q 48196/3 |goto 55.68,14.30
@@ -1104,10 +978,7 @@ talk Eddie Norwington##127091
 |tip Inside the cave.
 turnin Following Eddie's Trail##48196 |goto 55.60,14.57
 step
-Leave the cave |goto 55.99,15.35 < 3 |walk
-Follow the path |goto 56.39,15.43 < 7 |only if walking
-Follow the path down |goto 56.85,14.99 < 7 |only if walking
-Follow the path |goto 57.44,15.03 < 7 |only if walking
+Leave the cave |goto 55.99,15.35 < 10 |walk
 click Stirring Bone
 collect Stirring Bone##152678 |q 48778/4 |goto 58.07,14.57
 step
@@ -3647,7 +3518,7 @@ Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azero
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Kul Tiras\\Drustvar",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Drustvar storylines:\n\nThe Final Effigy\nAn Airtight Alibi\nA New Order\nStorming the Manor\nFighting With Fire\nThe Burden of Proof\nThe Order of Embers\nBreak on Through\nClear Victory\nStick It To 'Em!",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(50588) and completedq(47189) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\Drustvar",
@@ -3657,18 +3528,7 @@ talk Taelia##121235
 |tip Inside the building.
 accept The Vanishing Lord##48622 |goto Boralus/0 68.17,21.97
 step
-Run up the stairs |goto Boralus/0 67.51,22.92 < 3 |walk
-Run up the stairs |goto Boralus/0 67.22,22.55 < 3 |walk
-Follow the path |goto Boralus/0 67.43,21.35 < 5 |walk
-Follow the path |goto Boralus/0 67.88,20.78 < 5 |walk
-Leave the building |goto Boralus/0 68.83,21.15 < 3 |walk
-Follow the path |goto Boralus/0 70.03,19.00 < 7 |only if walking
-Continue following the path |goto Boralus/0 71.60,18.13 < 7 |only if walking
-Continue following the path |goto Boralus/0 74.33,18.88 < 7 |only if walking
-Continue following the path |goto Boralus/0 75.82,22.14 < 5 |only if walking
-Run down the stairs |goto Boralus/0 75.65,22.97 < 5 |only if walking
-Follow the path |goto Boralus/0 74.95,23.01 < 5 |only if walking
-Jump down here |goto Boralus/0 74.25,23.88 < 5 |only if walking
+Leave the building |goto 67.08,23.45 < 10 |walk
 talk Will Melborne##135064
 Tell him _"I need a ferry to Drustvar."_
 Take the Ferry to Drustvar |q 48622/1 |goto Boralus/0 74.17,24.78
@@ -3676,10 +3536,7 @@ step
 Watch the dialogue
 Ride the Ferry to Drustvar |goto Drustvar/0 61.79,36.54 < 10 |c |q 48622 |notravel
 step
-Follow the path |goto 61.01,36.65 < 10 |only if walking
-Follow the path up |goto 60.10,35.54 < 7 |only if walking
-Follow the path |goto 58.92,34.87 < 7 |only if walking
-Follow the path up |goto 57.36,35.84 < 7 |only if walking
+Follow the path up |goto 60.10,35.54 < 20 |only if walking
 talk Cyril White##130419
 Choose _<Look for the source of the spell.>_
 Meet with Cyril White |q 48622/2 |goto 56.14,35.29
@@ -3692,18 +3549,17 @@ turnin The Vanishing Lord##48622 |goto 55.87,35.07
 step
 click Mayor's Bulletin
 accept Signs and Portents##47968 |goto 56.14,35.30
-step
-accept Fallhaven's Curse##47969 |goto 57.19,35.85 |only if level < 120
-|tip You will automatically accept this quest. |only if level < 120
+stickystart "Accept_Fallhavens_Curse"
 stickystart "Combat_The_Curse"
 step
-Follow the path down |goto 56.46,35.30 < 7 |only if walking
-Follow the path |goto 57.33,35.86 < 7 |only if walking
 click Rancher's Letter
 Read the Rancher's Letter |q 47968/2 |goto 57.96,35.69
 step
+label "Accept_Fallhavens_Curse"
+accept Fallhaven's Curse##47969 |goto 57.19,35.85 |only if level < 120
+|tip You will automatically accept this quest. |only if level < 120
+step
 label "Combat_The_Curse"
-Follow the path |goto 58.12,35.08 < 7 |only if walking
 Kill enemies around this area
 |tip The Fallhaven Pigs respawn quickly, so this is the best place to get the quest completed fast.
 click Tainted Pig Feed+
@@ -3713,40 +3569,20 @@ click Cursed Charm+
 Combat the Curse |q 47969/1 |goto 58.11,34.13
 |only if havequest(47969) or completedq(47969)
 step
-Follow the path up |goto 57.38,35.89 < 7 |only if walking
-Follow the path |goto 56.29,35.17 < 7 |only if walking
-Run up the stairs |goto 55.26,35.30 < 5 |only if walking
-Enter the building |goto 55.27,35.50 < 3 |walk
-Follow the path |goto 55.27,35.75 < 3 |walk
+Enter the building |goto 55.27,35.50 < 10 |walk
 click Ava's Note
 |tip Inside the building.
 Read Ava's Note |q 47968/3 |goto 55.21,35.98
 step
-Follow the path |goto 55.27,35.73 < 3 |walk
-Leave the building |goto 55.27,35.49 < 3 |walk
-Follow the road |goto 55.12,35.05 < 7 |only if walking
-Follow the path |goto 54.10,35.71 < 7 |only if walking
-Follow the path |goto 53.60,35.67 < 7 |only if walking
+Leave the building |goto 55.27,35.48 < 10 |walk
 click Farmer's Journal
 Read the Farmer's Journal |q 47968/1 |goto 53.21,35.13
 step
-Follow the path |goto 53.50,35.55 < 7 |only if walking
-Follow the road |goto 54.17,35.75 < 7 |only if walking
-Follow the road |goto 55.16,35.08 < 7 |only if walking
-Follow the path |goto 55.57,35.25 < 7 |only if walking
 click Fallhaven Log
 turnin Signs and Portents##47968 |goto 55.64,35.76
 accept The Wayward Crone##47978 |goto 55.64,35.76
 step
-Follow the road |goto 55.72,35.40 < 7 |only if walking
-Follow the road |goto 56.86,34.41 < 7 |only if walking
-Cross the bridge |goto 56.95,33.14 < 7 |only if walking
-Follow the path |goto 57.20,32.47 < 7 |only if walking
-Follow the path |goto 57.67,31.97 < 7 |only if walking
-Continue following the path |goto 58.82,32.05 < 7 |only if walking
-Continue following the path |goto 60.32,30.84 < 7 |only if walking
-Run up the stairs |goto 60.66,31.25 < 3 |only if walking
-Enter the building |goto 60.62,31.46 < 3 |walk
+Cross the bridge |goto 56.95,33.15 < 15 |only if walking
 talk Helena Gentle##124922
 |tip Inside the building.
 turnin The Wayward Crone##47978 |goto 60.51,31.65
@@ -3761,18 +3597,13 @@ click Gentle's Spellbook
 |tip Inside the building.
 accept Cracking the Curse##47981 |goto 60.58,31.47
 step
-Leave the building |goto 60.62,31.45 < 3 |walk
 clicknpc Fallhaven Villager##125093
 accept Furious Familiars##47980 |goto 60.85,30.65
 stickystart "Slay_Enthralled_Wildlife"
 step
-Follow the path up |goto 60.30,30.01 < 7 |only if walking
-Follow the path up |goto 59.26,28.62 < 5 |only if walking
-Follow the path |goto 59.28,28.36 < 5 |only if walking
 click Lesser Effigy
 Destroy the Lesser Effigy |q 47981/1 |goto 59.54,28.30 |count 1
 step
-Follow the path up |goto 58.85,27.64 < 7 |only if walking
 kill Helena Gentle##124953 |q 47979/2 |goto 57.81,28.15
 step
 Click the Complete Quest Box:
@@ -3781,12 +3612,9 @@ step
 click Lesser Effigy
 Destroy the Lesser Effigy |q 47981/1 |goto 57.66,27.81 |count 2
 step
-Follow the path |goto 58.25,28.71 < 7 |only if walking
 click Lesser Effigy
 Destroy the Lesser Effigy |q 47981/1 |goto 57.55,30.07 |count 3
 step
-Follow the path |goto 57.54,29.47 < 7 |only if walking
-Follow the path |goto 56.84,29.08 < 7 |only if walking
 click Lesser Effigy
 Destroy the Lesser Effigy |q 47981/1 |goto 56.18,29.13 |count 4
 step
@@ -3797,12 +3625,6 @@ step
 Click the Complete Quest Box:
 turnin Furious Familiars##47980
 step
-Follow the path down |goto 56.89,29.49 < 7 |only if walking
-Follow the path |goto 56.56,30.92 < 7 |only if walking
-Follow the road |goto 57.56,31.97 < 7 |only if walking
-Cross the bridge |goto 57.19,32.51 < 7 |only if walking
-Follow the road |goto 56.95,33.19 < 7 |only if walking
-Continue following the road |goto 56.83,34.39 < 7 |only if walking
 click Cursed Effigy
 turnin Cracking the Curse##47981 |goto 55.87,35.07
 accept The Final Effigy##47982 |goto 55.87,35.07
@@ -3826,22 +3648,14 @@ step
 talk Clarence Page##124466
 fpath Fallhaven |goto 55.13,34.69
 step
-Enter the building |goto 55.37,34.50 < 3 |walk
 talk Dinah Wellard##129992
 |tip Inside the building.
 home The Swine's Larder |goto 55.50,34.26 |q 47945 |future
 step
-Leave the building |goto 55.37,34.50 < 3 |walk
-Follow the road |goto 55.55,34.85 < 7 |only if walking
-Follow the road |goto 56.19,34.89 < 7 |only if walking
-Continue following the road |goto 56.87,34.28 < 7 |only if walking
-Cross the bridge |goto 56.94,33.17 < 7 |only if walking
-Follow the road |goto 57.19,32.46 < 7 |only if walking
-Continue following the road |goto 57.59,31.99 < 7 |only if walking
-Continue following the road |goto 58.88,32.02 < 7 |only if walking
-Continue following the road |goto 60.03,31.02 < 7 |only if walking
-Continue following the road |goto 61.13,30.73 < 7 |only if walking
-Follow the path |goto 62.84,27.83 < 7 |only if walking
+talk Maude Rifthold##128457
+accept The North Pass Caverns##48948 |goto 55.16,35.16
+step
+Cross the bridge |goto 56.94,33.17 < 15 |only if walking
 talk Thomas Staughton##124786
 turnin To Market, To Market##47945 |goto 63.24,27.04
 accept Save Their Bacon##47946 |goto 63.24,27.04
@@ -3849,24 +3663,18 @@ accept Big Bad Wolves##47947 |goto 63.24,27.04
 accept Pork Chop##47948 |goto 63.24,27.04
 stickystart "Slay_Spellbound_Beasts"
 step
-Follow the path down |goto 63.45,27.84 < 7 |only if walking
-Follow the path |goto 63.96,28.39 < 7 |only if walking
 clicknpc Trevor Hightide##124844
 Free Trevor Hightide |q 47946/1 |goto 64.24,28.31
 step
-Follow the path |goto 63.99,28.48 < 7 |only if walking
 clicknpc Travis Daybreak##129488
 Free Travis Daybreak |q 47946/2 |goto 63.61,29.33
 step
-Enter the building |goto 63.49,30.27 < 5 |walk
 click Pig Effigy
 |tip Inside the building.
 accept That's Not My Fetish##47949 |goto 63.35,30.10
 step
-Leave the building |goto 63.49,30.26 < 3 |walk
 kill Roland Hacksaw##124882 |q 47948/1 |goto 63.85,31.14
 step
-Follow the path |goto 63.93,31.59 < 3 |only if walking
 clicknpc Burke Stevenson##129490
 Free Burke Stevenson |q 47946/4 |goto 64.06,31.52
 step
@@ -3877,7 +3685,6 @@ label "Slay_Spellbound_Beasts"
 kill Hexed Howler##124814+
 Slay #10# Spellbound Beasts |q 47947/1 |goto 64.14,29.33
 step
-Follow the path up |goto 63.92,28.80 < 7 |only if walking
 talk Thomas Staughton##124786
 turnin Save Their Bacon##47946 |goto 63.24,27.04
 turnin Big Bad Wolves##47947 |goto 63.24,27.04
@@ -3892,34 +3699,31 @@ step
 talk Thomas Staughton##124786
 turnin Cured Ham##47950 |goto 63.24,27.04
 step
-Follow the path |goto 63.78,27.26 < 7 |only if walking
-Follow the path |goto 63.78,25.67 < 7 |only if walking
-Continue following the path |goto 63.38,24.63 < 7 |only if walking
-Continue following the path |goto 62.79,23.84 < 7 |only if walking
+Follow the road |goto 63.82,25.80 < 20 |only if walking
 talk David Maldus##127296
 accept Wicker Worship##48677 |goto 62.54,23.94
 step
 talk Anna Ridgeley##129984
 fpath Barbthorn Ridge |goto 62.61,23.99
 step
-Follow the path |goto 62.33,23.59 < 7 |only if walking
-Continue following the path |goto 60.84,23.49 < 7 |only if walking
-Continue following the path |goto 60.00,22.71 < 7 |only if walking
 talk Lord Autumnvale##127080
 turnin Wicker Worship##48677 |goto 59.45,21.91
 accept Questionable Offerings##48678 |goto 59.45,21.91
 step
 click Entrails
+|tip It looks like a bowl of blood and organs on the ground.
 Click Here Once You Are Carrying the Entrails |confirm |goto 59.86,21.98 |q 48678
 step
 Give the Offering |q 48678/1 |goto 59.39,21.92 |count 1
 step
 click Bundle of Wicker
+|tip It looks like a bundle of sticks on the ground.
 Click Here Once You Are Carrying the Bundle of Wicker |confirm |goto 59.88,21.99 |q 48678
 step
 Give the Offering |q 48678/1 |goto 59.39,21.92 |count 2
 step
 click Bones
+|tip It looks like a brown-ish colored skeleton ribcage on the ground.
 Click Here Once You Are Carrying the Bones |confirm |goto 59.89,21.96 |q 48678
 step
 Give the Offering |q 48678/1 |goto 59.39,21.92 |count 3
@@ -3934,10 +3738,7 @@ accept Not the Bees!##48680 |goto 59.45,21.92 |only if level < 120
 accept Mind the Hives##48679 |goto 59.45,21.92
 stickystart "Drive_Back_The_Barbthorn_Swarm"
 step
-Follow the path |goto 59.38,21.42 < 7 |only if walking
-Follow the path up |goto 59.60,20.00 < 7 |only if walking
-Follow the path |goto 60.48,19.10 < 7 |only if walking
-Enter the cave |goto 60.66,18.17 < 5 |walk
+Enter the cave |goto 60.66,18.17 < 10 |walk
 Find Edwin |q 48679/1 |goto 60.60,17.60
 |tip Inside the cave.
 step
@@ -3947,8 +3748,7 @@ Kill the enemies that attack in waves
 Save Edwin |q 48679/2 |goto 60.60,17.60
 step
 label "Drive_Back_The_Barbthorn_Swarm"
-Leave the cave |goto 60.66,18.20 < 3 |walk
-Follow the path down |goto 60.44,19.30 < 7 |only if walking
+Leave the cave |goto 60.66,18.20 < 10 |walk
 Kill Barbthorn enemies around this area
 click Barbthorn Hive+
 |tip They look like yellow bee hives hanging on trees around this area.
@@ -3957,25 +3757,22 @@ click Abandoned Effigy+
 Drive Back the Barbthorn Swarm |q 48680/1 |goto 59.51,20.01
 |only if havequest(48680) or completedq(48680)
 step
-Follow the path up |goto 58.90,21.41 < 7 |only if walking
 talk Initiate Peony##127396
 turnin Mind the Hives##48679 |goto 59.03,22.37
 accept A Simple Sacrifice##48682 |goto 59.03,22.37
 step
-Follow the path up |goto 58.78,22.89 < 7 |only if walking
-Enter the cave |goto 57.81,23.47 < 5 |walk
+Enter the cave |goto 57.81,23.47 < 10 |walk
 Watch the dialogue
 kill Lord Autumnvale##127419
 |tip Inside the cave.
-Save Edwin, Again |q 48682/1 |goto 56.79,23.92
+Save Edwin, Again |q 48682/1 |goto 56.57,23.98
 step
 talk Edwin Maldus##127418
 |tip Inside the cave.
 turnin A Simple Sacrifice##48682 |goto 56.49,24.01
 accept Changing Seasons##48683 |goto 56.49,24.01
 step
-Leave the cave |goto 57.78,23.47 < 5 |walk
-Follow the path down |goto 58.56,23.15 < 7 |only if walking
+Leave the cave |goto 57.78,23.47 < 10 |walk
 Watch the dialogue
 Follow Edwin |q 48683/1 |goto 59.35,21.98
 step
@@ -3985,48 +3782,36 @@ step
 talk Edwin Maldus##126979
 turnin Changing Seasons##48683 |goto 59.35,21.98
 step
-Follow the path |goto 59.93,22.63 < 7 |only if walking
-Continue following the path |goto 60.72,23.38 < 7 |only if walking
-Continue following the path |goto 61.92,23.51 < 7 |only if walking
 talk Maude Rifthold##128457
 accept The North Pass Caverns##48948 |goto 55.15,35.16
 step
-Jump down here |goto 54.78,34.31 < 5 |only if walking
-Follow the path |goto 54.34,33.63 < 7 |only if walking
-Continue following the path |goto 53.85,32.10 < 7 |only if walking
-kill Rindlewoe##129783 |q 51547/1 |goto 52.79,29.63
-|tip He walks in the water around this area.
-|tip You may need help with this.
-step
-Follow the path up |goto 52.98,28.90 < 7 |only if walking
-Follow the path up |goto 53.81,28.11 < 7 |only if walking
-Follow the path |goto 54.07,27.32 < 7 |only if walking
+Follow the path up |goto 57.94,20.21 < 15 |only if walking
+Follow the path up |goto 56.99,24.41 < 20 |only if walking
 talk Thaddeus "Gramps" Rifthold##127015
 turnin The North Pass Caverns##48948 |goto 53.92,26.99
 accept The Adventurer's Society##48793 |goto 53.92,26.99
 accept Menace to Society##48792 |goto 53.92,26.99
+step
+kill Rindlewoe##129783 |q 51547/1 |goto 52.79,29.63
+|tip He walks in the water around this area.
+|tip You may need help with this.
 stickystart "Slay_Bonegnasher_Troggs"
 step
+Follow the path up |goto 53.72,28.42 < 20 |only if walking
 click Child-sized Backpack
 Choose _<Inspect Backpack>_
 Find the Backpack |q 48793/1 |goto 53.37,25.79
 step
-Follow the path up |goto 53.13,24.68 < 7 |only if walking
-Follow the path |goto 52.90,24.12 < 7 |only if walking
-Enter the cave |goto 53.33,23.39 < 5 |walk
+Enter the cave |goto 53.33,23.39 < 10 |walk
 click Beginner's Guide to Archaeology
 |tip Inside the small cave.
 collect A Beginner's Guide to Archaeology##152677 |q 48793/2 |goto 53.51,23.24
 step
-Leave the cave |goto 53.29,23.42 < 5 |walk
-Follow the path |goto 52.93,23.01 < 7 |only if walking
-Enter the cave |goto 52.94,22.68 < 5 |walk
+Enter the cave |goto 52.94,22.68 < 10 |walk
 click Is it a Rock? How to Identify Relics
 |tip Inside the small cave.
 collect Is it a Rock? How to Identify Relics##152685 |q 48793/3 |goto 53.05,22.43
 step
-Leave the cave |goto 52.93,22.69 < 5 |walk
-Follow the path |goto 52.36,23.92 < 7 |only if walking
 click Half-eaten Journal
 collect Half-eaten Journal##152676 |q 48793/4 |goto 51.81,24.15
 step
@@ -4034,25 +3819,20 @@ label "Slay_Bonegnasher_Troggs"
 Kill Bonegnasher enemies around this area
 Slay #10# Bonegnasher Troggs |q 48792/1 |goto 52.26,23.93
 step
-Follow the path up |goto 52.14,23.82 < 7 |only if walking
-Follow the path |goto 51.72,23.55 < 7 |only if walking
 talk Marcus Howlingdale##127157
 turnin The Adventurer's Society##48793 |goto 51.37,23.27
 turnin Menace to Society##48792 |goto 51.37,23.27
 accept Mistakes Were Made##48804 |goto 51.37,23.27
 step
-Follow the path |goto 51.44,22.97 < 7 |only if walking
 click Excavation Inventory
 accept Research Recovery##48805 |goto 51.81,22.81
 step
 click "Ancient Potsherds"
 collect "Ancient Potsherds"##152699 |q 48805/3 |goto 51.14,22.53
 step
-Follow the path |goto 50.98,22.21 < 5 |only if walking
 clicknpc Euphemia Batten-Chase##127160
 Save Euphemia Batten-Chase |q 48804/3 |goto 50.63,22.11
 step
-Follow the path |goto 51.15,22.18 < 7 |only if walking
 click "Genuine Titan Disc"
 collect "Genuine Titan Disc"##152703 |q 48805/2 |goto 51.60,21.92
 step
@@ -4062,30 +3842,20 @@ clicknpc Amelia Tidecrest##127159
 Watch the dialogue
 Save Amelia Tidecrest |q 48804/2 |goto 51.73,21.53
 step
-Enter the cave |goto 52.41,21.00 < 5 |walk
+Enter the cave |goto 52.41,21.00 < 10 |walk
 clicknpc Jonathan "Johnny" Presterby##127158
 |tip Inside the cave.
 Save Jonathan Presterby |q 48804/1 |goto 52.68,20.97
 step
-Leave the cave |goto 52.37,21.01 < 5 |walk
-Follow the path up |goto 51.35,20.65 < 7 |only if walking
-Follow the path up |goto 51.05,20.52 < 7 |only if walking
-Follow the path up |goto 50.78,20.54 < 5 |only if walking
 click "Relic of the Makers"
 collect "Relic of the Makers"##152704 |q 48805/1 |goto 50.75,20.23
 step
-Follow the path up |goto 50.35,21.28 < 5 |only if walking
-Follow the path |goto 50.30,21.95 < 5 |only if walking
-Jump down here |goto 50.70,22.75 < 5 |only if walking
-Follow the path up |goto 50.89,23.32 < 5 |only if walking
-Follow the path |goto 50.78,23.77 < 5 |only if walking
 talk Marcus Howlingdale##127157
 turnin Mistakes Were Made##48804 |goto 50.61,24.31
 turnin Research Recovery##48805 |goto 50.61,24.31
 accept Terminal Degree##48853 |goto 50.61,24.31
 step
-Follow the path |goto 50.39,24.13 < 5 |only if walking
-Enter the cave |goto 50.35,23.81 < 5 |walk
+Enter the cave |goto 50.35,23.81 < 10 |walk
 kill Cragg the Stoneshaker##127125 |q 48853/1 |goto 49.67,23.52
 |tip Inside the cave.
 step
@@ -4093,41 +3863,26 @@ clicknpc Nigel Rifthold##127156
 |tip Inside the cave.
 Free Nigel Rifthold |q 48853/2 |goto 49.40,23.38
 step
-Leave the cave |goto 50.34,23.79 < 5 |walk
-Follow the path |goto 50.39,24.13 < 5 |only if walking
+Leave the cave |goto 50.34,23.79 < 10 |walk
 talk Thaddeus "Gramps" Rifthold##127015
 turnin Terminal Degree##48853 |goto 50.59,24.43
 step
-Leave the building |goto 55.37,34.48 < 3 |walk
-Follow the path |goto 55.55,34.85 < 7 |only if walking
-Follow the path |goto 55.82,34.92 < 5 |only if walking
 talk Cyril White##124417
 turnin WANTED: Rindlewoe##51547 |goto 55.87,35.13
 step
-Follow the path |goto 55.74,35.27 < 5 |only if walking
-Follow the path |goto 55.09,35.03 < 7 |only if walking
-Continue following the path |goto 54.53,35.68 < 7 |only if walking
-Cross the bridge |goto 54.56,36.62 < 7 |only if walking
-Follow the path |goto 54.62,37.35 < 7 |only if walking
-Follow the path up |goto 54.36,38.34 < 7 |only if walking
+Cross the bridge |goto 54.56,36.62 < 15 |only if walking
 talk Abby Lewis##121603
 |tip She walks around this area.
 accept Teddies and Tea##47289 |goto 54.35,39.21
 step
-Follow the path down |goto 54.65,39.31 < 7 |only if walking
-Run up the stairs |goto 55.42,39.36 < 3 |only if walking
-Enter the building |goto 55.43,39.58 < 3 |walk
+Enter the building |goto 55.43,39.58 < 10 |walk
 click Trunksy
 |tip Inside the building.
 Find Trunksy |q 47289/2 |goto 55.39,39.75
 step
-Leave the building |goto 55.43,39.59 < 3 |walk
-Follow the path |goto 55.56,38.80 < 5 |only if walking
 click Mr. Munchykins
 Find Mr. Munchykins |q 47289/1 |goto 55.61,38.55
 step
-Follow the path |goto 55.92,38.57 < 5 |only if walking
-Follow the path up |goto 56.16,38.59 < 5 |only if walking
 click Mayor Striggs
 Find Mayor Striggs |q 47289/3 |goto 56.28,38.19
 step
@@ -4136,8 +3891,6 @@ talk Abby Lewis##122169
 turnin Teddies and Tea##47289
 accept Kitty?##47428
 step
-Follow the path |goto 55.71,39.42 < 7 |only if walking
-Follow the path up |goto 55.66,40.22 < 7 |only if walking
 clicknpc Smoochums##121684
 turnin Kitty?##47428 |goto 55.60,41.18
 accept The Accursed Thicket##45972 |goto 55.60,41.18 |only if level < 120
@@ -4147,30 +3900,20 @@ click Glenbrook Register
 accept The Village of Glenbrook##45079 |goto 55.62,41.19
 stickystart "Purge_The_Woods"
 step
-Follow the path |goto 55.21,41.84 < 7 |only if walking
-Follow the path up |goto 54.26,41.94 < 7 |only if walking
-Follow the path up |goto 53.85,42.77 < 7 |only if walking
-Follow the path |goto 53.85,43.66 < 7 |only if walking
-Enter the cave |goto 53.54,44.06 < 5 |walk
+Enter the cave |goto 53.54,44.06 < 10 |walk
 click Mary's Book
 |tip Inside the cave.
 Find Mary Hayes |q 45079/1 |goto 53.14,44.44
 step
-Leave the cave |goto 53.53,44.07 < 5 |walk
-Follow the path |goto 54.64,44.84 < 7 |only if walking
-Follow the path |goto 55.19,44.91 < 5 |only if walking
+Leave the cave |goto 53.53,44.07 < 10 |walk
 click Hawthorne's Hoe
 Find Samuel Hawthorne |q 45079/3 |goto 55.49,45.29
 step
-Follow the path up |goto 55.82,45.40 < 7 |only if walking
-Follow the path up |goto 56.15,46.71 < 7 |only if walking
-Enter the cave |goto 56.74,46.64 < 5 |walk
+Enter the cave |goto 56.74,46.64 < 10 |walk
 clicknpc Jonathan Hayes##122491
 |tip Inside the cave.
 Choose _<Investigate the body for identification.>_
 Find Jonathan Hayes |q 45079/2 |goto 57.17,46.41
-step
-Leave the cave |goto 56.74,46.64 < 5 |c |q 45079
 step
 label "Purge_The_Woods"
 Kill enemies around this area
@@ -4181,21 +3924,15 @@ click Disturbing Charm+
 Purge the Woods |q 45972/1 |goto 56.09,46.76
 |only if havequest(45972) or completedq(45972)
 step
-Follow the path up |goto 56.16,47.02 < 7 |only if walking
-Follow the path up |goto 56.16,47.78 < 7 |only if walking
-Follow the path |goto 55.63,48.53 < 7 |only if walking
-Enter the cave |goto 54.86,48.69 < 5 |walk
+Enter the cave |goto 54.86,48.69 < 10 |walk
 talk Annie Warren##122493
 |tip Inside the cave.
 turnin The Village of Glenbrook##45079 |goto 54.74,49.14
 accept Tea Party##44785 |goto 54.74,49.14
 step
-Leave the cave |goto 54.89,48.63 < 5 |walk
-Follow the path |goto 55.28,48.35 < 7 |only if walking
+Leave the cave |goto 54.89,48.63 < 10 |walk
 Follow Abby Lewis |q 44785/1 |goto 56.40,49.06
 step
-Follow the path |goto 56.75,48.88 < 7 |only if walking
-Follow the path |goto 57.20,48.18 < 7 |only if walking
 click Teapot
 Pour the Tea |q 44785/2 |goto 58.18,47.91
 step
@@ -4204,21 +3941,13 @@ step
 talk Annie Warren##123123
 turnin Tea Party##44785 |goto 57.71,47.75
 step
-Follow the path down |goto 58.12,47.38 < 7 |only if walking
-Follow the path down |goto 59.04,45.88 < 7 |only if walking
-Continue down the path |goto 59.28,42.89 < 7 |only if walking
-Follow the road |goto 60.29,39.72 < 7 |only if walking
-Follow the road up |goto 61.54,39.88 < 7 |only if walking
-Follow the road up |goto 62.94,41.24 < 7 |only if walking
 talk Caretaker Allen##126210
 accept Seeing Spirits##48475 |goto 62.62,42.98
 step
-accept Crypt Keepers##48474 |goto 61.75,43.73 |only if level < 120
+accept Crypt Keepers##48474 |goto 61.20,44.84 |only if level < 120
 |tip You will automatically accept this quest. |only if level < 120
 stickystart "Cleanse_The_Cemetery"
 step
-Follow the path |goto 61.76,43.69 < 7 |only if walking
-Follow the path |goto 61.57,44.56 < 7 |only if walking
 click Gravebloom+
 |tip They look like blue flowers on the ground around this area.
 Collect #10# Graveblooms |q 48475/1 |goto 61.20,44.84
@@ -4233,7 +3962,6 @@ step
 click Ritual Urn
 Create and Apply the Salve |q 48475/2 |goto 59.99,45.84
 step
-Follow the path down |goto 60.17,46.15 < 7 |only if walking
 click Major Corrupting Circle
 Free Aaron Cresterly |q 48475/3 |goto 60.77,46.62
 step
@@ -4241,42 +3969,100 @@ talk Aaron Cresterly##126225
 turnin Seeing Spirits##48475 |goto 60.77,46.62
 accept Split Party##48476 |goto 60.77,46.62
 step
-Follow the path up |goto 60.27,47.04 < 7 |only if walking
-Follow the path |goto 60.04,47.50 < 7 |only if walking
 kill Wicker-Bound Hunter##126262
 Free Bridget Fairwater |q 48476/1 |goto 60.31,48.49
 step
-Run up the stairs |goto 60.07,48.87 < 5 |only if walking
-Follow the path |goto 59.99,48.96 < 3 |walk
 talk Bridget Fairwater##126240
+|tip Inside the building.
 turnin Split Party##48476 |goto 59.80,48.93
 accept Looking For One More##48477 |goto 59.80,48.93
 step
-Follow the path |goto 59.81,49.14 < 5 |only if walking
-Follow the path |goto 59.61,50.07 < 7 |only if walking
-Run up the stairs |goto 59.12,50.70 < 5 |only if walking
 kill Sister Westwood##126245 |q 48477/1 |goto 58.86,50.70
 step
 Watch the dialogue
 talk Mercy Fairwater##126253
 turnin Looking For One More##48477 |goto 59.50,51.21
 step
-Leave the building |goto 55.37,34.50 < 3 |walk
-Follow the road |goto 55.56,34.87 < 7 |only if walking
-Follow the path down |goto 56.38,35.15 < 7 |only if walking
-Follow the path |goto 57.27,35.87 < 7 |only if walking
-Follow the path down |goto 58.86,35.10 < 7 |only if walking
-Cross the bridge |goto 59.57,36.52 < 7 |only if walking
-Follow the path |goto 59.72,37.29 < 7 |only if walking
-Follow the road |goto 60.17,39.59 < 7 |only if walking
-Follow the road up |goto 61.62,39.91 < 7 |only if walking
-Continue following the road |goto 63.13,41.21 < 7 |only if walking
-Continue following the road |goto 63.74,41.80 < 7 |only if walking
-Continue following the road |goto 65.21,44.43 < 7 |only if walking
-Continue following the road |goto 66.91,44.71 < 7 |only if walking
-Continue following the road |goto 68.13,43.49 < 7 |only if walking
-Run up the stairs |goto 69.95,42.74 < 3 |only if walking
-Follow the path |goto 70.05,42.66 < 3 |only if walking
+accept Nooooope##48181 |goto 64.58,54.80
+|tip You will automatically accept this quest.
+|only if level < 120
+stickystart "Kill_Spiders_And_Egg_Sacs"
+step
+talk Rebecca Hale##125457
+accept Deliverance##52074 |goto 64.58,54.80
+step
+label "Kill_Spiders_And_Egg_Sacs"
+Kill enemies around this area
+|tip Only enemies that look like spiders will count for this quest goal.
+|tip You can walk over the tiny spiders to kill them.
+click Egg Sac+
+|tip They look like groups of smaller white eggs on the ground next to trees around this area.
+Kill Spiders and Egg Sacs |q 48181/1 |goto 64.98,54.62
+|only if havequest(48181) or completedq(48181)
+step
+talk Ranger Wons##139912
+turnin Deliverance##52074 |goto 61.91,59.29
+accept Rescue Rangers##48179 |goto 61.91,59.29
+accept Boned##52075 |goto 61.91,59.29
+step
+talk Thornspeaker Birchgrove##139926
+accept Total Cairnage##48182 |goto 61.88,59.32
+accept The Hills Are Alive##48183 |goto 61.88,59.32
+stickystart "Collect_Runic_Power_Cores"
+stickystart "Heal_Injured"
+stickystart "Kill_Vengeful_Bones"
+step
+click Minor Ancient Cairn
+Destroy the Minor Ancient Cairn |q 48182/1 |goto 60.91,60.97 |count 1
+step
+click Minor Ancient Cairn
+Destroy the Minor Ancient Cairn |q 48182/1 |goto 62.51,64.65 |count 2
+step
+click Minor Ancient Cairn
+Destroy the Minor Ancient Cairn |q 48182/1 |goto 59.36,66.29 |count 3
+step
+click Minor Ancient Cairn
+Destroy the Minor Ancient Cairn |q 48182/1 |goto 59.45,63.79 |count 4
+step
+talk Arthur Tradewind##140048
+accept Really Big Problem##48180 |goto 58.44,63.18
+step
+kill Ancient Sentinel##126542 |q 48180/1 |goto 58.52,64.45
+|tip He walks around this area.
+step
+click Major Ancient Cairn
+Destroy the Major Ancient Cairn |q 48182/2 |goto 59.15,67.88
+step
+label "Collect_Runic_Power_Cores"
+kill Awoken Guardian##126355+
+collect 8 Runic Power Core##152394 |q 48183/1 |goto 61.49,62.93
+step
+label "Heal_Injured"
+clicknpc Injured NPC+
+|tip They look like dead friendly NPC's ground around this area.
+|tip They have various names.
+Heal #10# Injured |q 48179/1 |goto 61.10,60.30
+step
+label "Kill_Vengeful_Bones"
+kill 8 Vengeful Bones##128703 |q 52075/1 |goto 61.23,60.40
+step
+talk Thornspeaker Birchgrove##139926
+turnin Total Cairnage##48182 |goto 61.88,59.32
+turnin The Hills Are Alive##48183 |goto 61.88,59.32
+turnin Really Big Problem##48180 |goto 61.88,59.32
+step
+talk Ranger Wons##139912
+turnin Rescue Rangers##48179 |goto 61.91,59.29
+turnin Boned##52075 |goto 61.91,59.29
+step
+talk Thornspeaker Birchgrove##139926
+accept The High Thornspeaker##53110 |goto 61.88,59.32
+step
+Leave the building |goto 55.37,34.50 < 10 |walk
+Cross the bridge |goto Tiragarde Sound/0 53.43,54.59 < 15 |only if walking
+talk Aaron Ridgeley##128576
+fpath Hangman's Point |goto Drustvar/0 71.05,40.88
+step
 talk Constable Henry Framer##125394
 turnin The Waycrest Daughter##48108 |goto 70.09,42.94
 accept Standing Accused##48283 |goto 70.09,42.94
@@ -4289,16 +4075,9 @@ talk Marshal Everit Reade##125385
 turnin Standing Accused##48283 |goto 69.67,43.18
 accept The Woods Have Eyes##48109 |goto 69.67,43.18
 accept In Case of Ambush##48110 |goto 69.67,43.18
-step
-Follow the road |goto 69.58,42.00 < 7 |only if walking
-Follow the road |goto 69.92,41.39 < 7 |only if walking
-talk Aaron Ridgeley##128576
-fpath Hangman's Point |goto 71.05,40.88
 stickystart "Kill_Watchful_Ravens"
 stickystart "Kill_Darkmaw_Prowlers"
 step
-Follow the road |goto 69.94,41.40 < 7 |only if walking
-Follow the road |goto 68.98,43.21 < 7 |only if walking
 click Place Trap+
 |tip They look like metal bear traps on the ground around this area.
 Place #6# Traps |q 48110/1 |goto 68.07,43.71
@@ -4309,13 +4088,10 @@ step
 label "Kill_Darkmaw_Prowlers"
 kill 6 Darkmaw Prowler##125464 |q 48109/2 |goto 68.07,43.71
 step
-Follow the road |goto 68.47,43.38 < 10 |only if walking
 talk Marshal Everit Reade##125385
 turnin The Woods Have Eyes##48109 |goto 69.67,43.18
 turnin In Case of Ambush##48110 |goto 69.67,43.18
 step
-Run up the stairs |goto 69.95,42.74 < 3 |only if walking
-Follow the path |goto 70.05,42.66 < 3 |only if walking
 talk Lucille Waycrest##125380
 accept Trial by Superstition##48111 |goto 70.07,42.83
 step
@@ -4323,8 +4099,6 @@ talk Fletcher's Hollow Villager##125400+
 Ask them _"How can you prove someone is not a witch?"_
 Question #5# Villagers |q 48111/1 |goto 69.95,42.99
 step
-Run up the stairs |goto 69.95,42.74 < 3 |only if walking
-Follow the path |goto 70.05,42.66 < 3 |only if walking
 talk Lucille Waycrest##125380
 turnin Trial by Superstition##48111 |goto 70.07,42.83
 accept A Pungent Solution##48113 |goto 70.07,42.83
@@ -4343,7 +4117,6 @@ label "Collect_Intact_Venom_Glands"
 kill Shallows Saurolisk##125452+
 collect 5 Intact Venom Gland##151935 |q 48165/1 |goto 68.84,40.72
 step
-Follow the path up |goto 67.09,41.00 < 7 |only if walking
 talk Adela Hawthorne##128494
 accept Quill or Be Quilled##49242 |goto 66.93,42.16
 stickystart "Kill_Invasive_Quillrats"
@@ -4358,11 +4131,6 @@ step
 talk Adela Hawthorne##128494
 turnin Quill or Be Quilled##49242 |goto 66.93,42.16
 step
-Follow the path up |goto 67.22,42.52 < 7 |only if walking
-Follow the road |goto 67.94,43.59 < 7 |only if walking
-Follow the path |goto 69.00,43.18 < 7 |only if walking
-Run up the stairs |goto 69.95,42.74 < 3 |only if walking
-Follow the path |goto 70.05,42.66 < 3 |only if walking
 talk Lucille Waycrest##125380
 turnin A Pungent Solution##48113 |goto 70.07,42.83
 turnin Once Bitten, Twice Shy##48170 |goto 70.07,42.83
@@ -4390,24 +4158,10 @@ talk Lucille Waycrest##125380
 turnin The Burden of Proof##48198 |goto 70.08,42.83
 accept The Curse of Fletcher's Hollow##48171 |goto 70.08,42.83
 step
-Follow the path down |goto 70.28,43.51 < 7 |only if walking
-Follow the path |goto 70.79,44.99 < 7 |only if walking
-Continue following the path |goto 70.64,46.20 < 7 |only if walking
-Continue following the path |goto 70.19,47.34 < 7 |only if walking
-Continue following the path |goto 70.24,48.33 < 7 |only if walking
-Run up the stairs |goto 70.80,48.96 < 5 |only if walking
-Follow the path |goto 70.99,49.00 < 5 |only if walking
-Run up the stairs |goto 71.01,49.25 < 5 |only if walking
-Follow the path |goto 71.02,49.62 < 5 |only if walking
-Follow the path |goto 71.36,50.38 < 5 |only if walking
-Run down the stairs |goto 71.55,50.40 < 5 |only if walking
 talk Art Hughie##127558
 accept Mean Gulls##48880 |goto 71.80,50.41
 accept Take the Bait##48904 |goto 71.80,50.41
 step
-Run up the stairs |goto 71.71,50.40 < 3 |only if walking
-Follow the path |goto 71.38,50.43 < 5 |only if walking
-Follow the path |goto 70.94,50.83 < 5 |only if walking
 click Intact Mudfish
 accept I Like Fish Guts and I Cannot Lie##48882 |goto 70.75,50.74
 stickystart "Collect_Snapclaw_Meat"
@@ -4447,38 +4201,17 @@ step
 label "Kill_Ravenous_Gulls"
 kill 10 Ravenous Gull##127530 |q 48880/1 |goto 70.76,52.30
 step
-Follow the path up |goto 71.10,51.33 < 7 |only if walking
-Follow the path up |goto 71.26,50.92 < 5 |only if walking
-Follow the path |goto 71.23,50.52 < 7 |only if walking
-Run down the stairs |goto 71.49,50.40 < 5 |only if walking
 talk Art Hughie##127558
 turnin Mean Gulls##48880 |goto 71.80,50.41
 turnin Take the Bait##48904 |goto 71.80,50.41
 turnin I Like Fish Guts and I Cannot Lie##48882 |goto 71.80,50.41
 accept Big Gulls Won't Die##48883 |goto 71.80,50.41
 step
-Run up the stairs |goto 71.71,50.42 < 3 |only if walking
-Follow the path |goto 71.38,50.41 < 5 |only if walking
-Run down the stairs |goto 71.00,49.66 < 5 |only if walking
-Run down the stairs |goto 71.07,49.18 < 5 |only if walking
 kill Brinebeak##127553 |q 48883/1 |goto 71.47,49.09
 step
-Run up the stairs |goto 71.19,49.19 < 5 |only if walking
-Run up the stairs |goto 71.02,49.25 < 5 |only if walking
-Follow the path |goto 71.01,49.62 < 5 |only if walking
-Follow the path |goto 71.38,50.40 < 5 |only if walking
-Run down the stairs |goto 71.53,50.41 < 5 |only if walking
 talk Art Hughie##127558
 turnin Big Gulls Won't Die##48883 |goto 71.81,50.41
 step
-Run up the stairs |goto 71.71,50.41 < 3 |only if walking
-Follow the path |goto 71.40,50.42 < 5 |only if walking
-Follow the path |goto 70.11,51.43 < 7 |only if walking
-Follow the road |goto 69.27,52.66 < 7 |only if walking
-Follow the road |goto 68.85,56.38 < 7 |only if walking
-Cross the bridge |goto 69.11,57.99 < 7 |only if walking
-Follow the path |goto 69.44,59.24 < 7 |only if walking
-Follow the path up |goto 69.79,59.75 < 7 |only if walking
 talk Evelyn Pare##126310
 turnin The Curse of Fletcher's Hollow##48171 |goto 70.07,60.27
 accept Save Who We Can##48518 |goto 70.07,60.27
@@ -4494,7 +4227,6 @@ step
 label "Kill_Curseformed_Familiars"
 kill 8 Curseformed Familiar##126151 |q 49295/1 |goto 70.94,59.26
 step
-Follow the path up |goto 70.05,59.44 < 7 |only if walking
 talk Evelyn Pare##126310
 turnin Save Who We Can##48518 |goto 70.07,60.27
 turnin Clear-Cutting##49295 |goto 70.07,60.27
@@ -4505,7 +4237,6 @@ Kill the enemies that attack in waves
 kill Grotesque Butcher##137914
 Defend the Villagers |q 48519/1 |goto 69.42,60.34
 step
-Follow the path up |goto 69.63,60.28 < 7 |only if walking
 talk Evelyn Pare##126310
 turnin Hope They Can't Swim##48519 |goto 70.07,60.27
 accept Break Them to Splinters##48525 |goto 70.07,60.27 |only if level < 120
@@ -4513,25 +4244,18 @@ accept Break Them to Splinters##48525 |goto 70.07,60.27 |only if level < 120
 accept The Three Sisters##48520 |goto 70.07,60.27
 stickystart "Reclaim_Fletchers_Hollow"
 step
-Follow the path down |goto 69.94,60.69 < 5 |only if walking
-Follow the path up |goto 69.61,61.92 < 7 |only if walking
-Follow the path |goto 69.67,62.63 < 7 |only if walking
 click Bladed Charm
 accept Charming the Lifeless##48521 |goto 70.07,62.99
 stickystart "Control_A_Dormant_Ravager"
 step
 kill Sister Early##126522 |q 48520/2 |goto 70.52,63.15
 step
-Follow the path |goto 70.17,62.83 < 7 |only if walking
-Enter the building |goto 70.00,62.19 < 5 |walk
+Enter the building |goto 70.00,62.19 < 10 |walk
 kill Sister Mooring##126523 |q 48520/3 |goto 70.13,62.12
 |tip Downstairs inside the building.
 stickystart "Accept_A_Revealing_Missive"
 step
-Leave the building |goto 70.02,62.17 < 3 |walk
-Follow the path |goto 69.77,62.63 < 7 |only if walking
-Follow the path |goto 68.92,63.66 < 7 |only if walking
-Enter the building |goto 68.67,63.68 < 3 |walk
+Enter the building |goto 68.67,63.68 < 10 |walk
 kill Sister Ashwell##126144 |q 48520/1 |goto 68.52,63.55
 |tip She walks around this area inside the building.
 step
@@ -4542,7 +4266,6 @@ accept A Revealing Missive##48522 |goto 68.52,63.55
 |tip You will automatically accept this quest after looting.
 step
 label "Control_A_Dormant_Ravager"
-Leave the building |goto 68.67,63.68 < 3 |walk
 use the Wicker Charm##152590
 |tip Use it on Dormant Ravagers around this area.
 |tip Eventually, one of them will become friendly.
@@ -4557,8 +4280,6 @@ click Ensorcelled Pig Heart+
 Reclaim Fletcher's Hollow |q 48525/1 |goto 69.31,62.79
 |only if havequest(48525) or completedq(48525)
 step
-Follow the path |goto 69.57,62.26 < 15 |only if walking
-Follow the path up |goto 69.83,60.99 < 7 |only if walking
 talk Evelyn Pare##126310
 turnin The Three Sisters##48520 |goto 70.07,60.27
 turnin Charming the Lifeless##48521 |goto 70.07,60.27
@@ -4568,29 +4289,14 @@ accept Culling the Coven##48524 |goto 70.07,60.27
 step
 clicknpc Dormant Ravager##126415
 Control the Dormant Ravager |q 48523/1 |goto 69.93,60.39
-stickystart "Slay_Heartsbane_Minions"
 step
-Follow the path up |goto 69.65,61.64 < 7 |only if walking
-Follow the path up |goto 69.65,63.37 < 7 |only if walking
-Follow the path up |goto 69.83,64.80 < 7 |only if walking
-Enter the mine |goto 69.85,66.95 < 5 |walk
-Follow the path down |goto 69.90,67.69 < 5 |walk
-Follow the path down |goto 70.24,67.95 < 5 |c |q 48523
-step
-Follow the path down |goto 70.36,67.68 < 5 |walk
-Follow the path |goto 70.44,67.27 < 5 |walk
-Run down the stairs |goto 70.58,66.89 < 5 |walk
-Run down the stairs |goto 70.61,66.61 < 5 |walk
-Run down the stairs |goto 70.35,66.38 < 5 |c |q 48523
-step
-label "Slay_Heartsbane_Minions"
+Enter the mine |goto 69.85,66.95 < 10 |walk
+Follow the path down |goto 70.29,67.91 < 10 |walk
 Kill enemies around this area
 |tip Inside the mine.
 |tip Use the abilities on your action bar.
 Slay #25# Heartsbane Minions |q 48524/1 |goto 69.66,66.03
 step
-Follow the path |goto 69.66,66.03 < 5 |walk
-Follow the path |goto 69.11,67.15 < 5 |walk
 Kill the enemies that attack
 |tip Inside the mine.
 Watch the dialogue
@@ -4603,10 +4309,6 @@ turnin The Murderous Matron##48523 |goto 70.07,60.28
 turnin Culling the Coven##48524 |goto 70.07,60.28
 accept An Airtight Alibi##48538 |goto 70.07,60.28
 step
-Follow the road |goto 70.41,41.11 < 7 |only if walking
-Follow the path |goto 69.71,41.78 < 7 |only if walking
-Run up the stairs |goto 69.95,42.73 < 3 |only if walking
-Follow the path |goto 70.06,42.69 < 3 |only if walking
 talk Constable Henry Framer##125394
 turnin An Airtight Alibi##48538 |goto 70.09,42.94
 step
@@ -4625,137 +4327,17 @@ talk Lucille Waycrest##125380
 turnin And Justice For All##49259 |goto 69.62,43.33
 accept A Slight Detour##48941 |goto 69.62,43.33
 step
-talk Auntie Amanda Hale##127743
-accept Gol Koval##48947 |goto 69.48,43.74
-step
-Follow the road |goto 69.08,43.22 < 7 |only if walking
-Continue following the road |goto 68.19,43.49 < 7 |only if walking
-Continue following the road |goto 67.43,44.38 < 7 |only if walking
-Continue following the road |goto 66.84,44.76 < 7 |only if walking
-Follow the path up |goto 65.10,44.62 < 7 |only if walking
-Follow the path |goto 64.41,46.25 < 7 |only if walking
-Follow the path |goto 64.15,47.36 < 7 |only if walking
-Cross the bridge |goto 64.32,48.68 < 7 |only if walking
-Follow the path up |goto 64.47,49.49 < 7 |c |q 48947
-step
-accept Nooooope##48181 |goto 64.62,51.38
-|tip You will automatically accept this quest.
-|only if level < 120
-stickystart "Kill_Spiders_And_Egg_Sacs"
-step
-Follow the path |goto 64.65,52.49 < 7 |only if walking
-talk Rebecca Hale##125457
-turnin Gol Koval##48947 |goto 64.58,54.80
-accept Deliverance##52074 |goto 64.58,54.80
-step
-label "Kill_Spiders_And_Egg_Sacs"
-Kill enemies around this area
-|tip Only Venomous Weavers and Skittering Spiderlings will count for the quest goal.
-click Egg Sac+
-|tip They look like groups of smaller white eggs on the ground next to trees around this area.
-Kill Spiders and Egg Sacs |q 48181/1 |goto 64.98,54.62
-|only if havequest(48181) or completedq(48181)
-step
-Follow the path up |goto 64.83,55.18 < 7 |only if walking
-Follow the path |goto 63.40,58.78 < 7 |only if walking
-Follow the path |goto 63.06,59.37 < 7 |only if walking
-talk Ranger Wons##139912
-turnin Deliverance##52074 |goto 61.91,59.29
-accept Rescue Rangers##48179 |goto 61.91,59.29
-accept Boned##52075 |goto 61.91,59.29
-step
-talk Thornspeaker Birchgrove##139926
-accept Total Cairnage##48182 |goto 61.88,59.32
-accept The Hills Are Alive##48183 |goto 61.88,59.32
-stickystart "Collect_Runic_Power_Cores"
-stickystart "Heal_Injured"
-stickystart "Kill_Vengeful_Bones"
-step
-Follow the path |goto 61.39,60.49 < 7 |only if walking
-click Minor Ancient Cairn
-Destroy the Minor Ancient Cairn |q 48182/1 |goto 60.91,60.97 |count 1
-step
-Follow the path |goto 61.32,63.09 < 7 |only if walking
-Follow the path |goto 61.77,63.67 < 7 |only if walking
-click Minor Ancient Cairn
-Destroy the Minor Ancient Cairn |q 48182/1 |goto 62.51,64.65 |count 2
-step
-Follow the path |goto 61.93,64.93 < 7 |only if walking
-Follow the path up |goto 61.07,65.64 < 7 |only if walking
-Follow the path up |goto 60.60,67.36 < 7 |only if walking
-Follow the path |goto 60.18,67.59 < 7 |only if walking
-Follow the path |goto 59.58,66.40 < 7 |only if walking
-click Minor Ancient Cairn
-Destroy the Minor Ancient Cairn |q 48182/1 |goto 59.36,66.29 |count 3
-step
-click Minor Ancient Cairn
-Destroy the Minor Ancient Cairn |q 48182/1 |goto 59.45,63.79 |count 4
-step
-Follow the path |goto 59.02,63.67 < 7 |only if walking
-talk Arthur Tradewind##140048
-accept Really Big Problem##48180 |goto 58.44,63.18
-step
-Follow the path up |goto 58.48,63.58 < 7 |only if walking
-kill Ancient Sentinel##126542 |q 48180/1 |goto 58.52,64.45
-|tip He walks around this area.
-step
-Follow the path |goto 59.26,65.08 < 7 |only if walking
-Follow the path up |goto 59.65,66.47 < 7 |only if walking
-Follow the path up |goto 59.59,67.25 < 7 |only if walking
-click Major Ancient Cairn
-Destroy the Major Ancient Cairn |q 48182/2 |goto 59.15,67.88
-step
-label "Collect_Runic_Power_Cores"
-Follow the path down |goto 60.11,67.68 < 7 |only if walking
-Follow the path down |goto 60.44,67.49 < 7 |only if walking
-kill Awoken Guardian##126355+
-collect 8 Runic Power Core##152394 |q 48183/1 |goto 61.49,62.93
-step
-label "Heal_Injured"
-clicknpc Injured NPC+
-|tip They look like dead friendly NPC's ground around this area.
-|tip They have various names.
-Heal #10# Injured |q 48179/1 |goto 61.10,60.30
-step
-label "Kill_Vengeful_Bones"
-kill 8 Vengeful Bones##128703 |q 52075/1 |goto 61.23,60.40
-step
-Follow the path |goto 61.49,61.78 < 7 |only if walking
-talk Thornspeaker Birchgrove##139926
-turnin Total Cairnage##48182 |goto 61.88,59.32
-turnin The Hills Are Alive##48183 |goto 61.88,59.32
-turnin Really Big Problem##48180 |goto 61.88,59.32
-step
-talk Ranger Wons##139912
-turnin Rescue Rangers##48179 |goto 61.91,59.29
-turnin Boned##52075 |goto 61.91,59.29
-step
-talk Thornspeaker Birchgrove##139926
-accept The High Thornspeaker##53110 |goto 61.88,59.32
-step
-Leave the building |goto 55.37,34.49 < 3 |walk
-Follow the road |goto 55.27,34.94 < 7 |only if walking
-Continue following the road |goto 52.72,37.13 < 7 |only if walking
-Follow the road up |goto 51.90,38.58 < 7 |only if walking
-Follow the road up |goto 50.95,37.42 < 7 |only if walking
-Follow the road up |goto 50.72,35.64 < 7 |only if walking
-Continue following the road |goto 49.36,34.44 < 7 |only if walking
-Continue following the road |goto 48.89,32.07 < 7 |only if walking
-Continue following the road |goto 48.16,30.51 < 7 |only if walking
-Continue following the road |goto 47.20,30.32 < 7 |only if walking
-Continue following the road |goto 46.24,32.31 < 7 |only if walking
+Follow the road |goto 51.84,38.53 < 30 |only if walking
+Follow the road |goto 47.73,30.29 < 30 |only if walking
 talk Lucille Waycrest##127715
 turnin A Slight Detour##48941 |goto 46.11,33.42
 accept Yeti to Rumble##48942 |goto 46.11,33.42
 accept Salvage Rights##48943 |goto 46.11,33.42
 stickystart "Kill_Chillfur_Yetis"
 step
-Follow the path up |goto 46.01,33.66 < 5 |only if walking
-Follow the path up |goto 45.76,33.93 < 7 |only if walking
 click Wrapped Supplies
 Collect the Wrapped Supplies |q 48943/1 |goto 45.60,34.38
 step
-Follow the path |goto 45.19,33.62 < 7 |only if walking
 kill Awakened Dead##136490+
 accept If Bones Could Talk##51134 |goto 45.08,33.42
 |tip You will eventually automatically accept this quest after looting.
@@ -4764,11 +4346,9 @@ step
 click Cask of Salted Fish
 Collect the Cask of Salted Fish |q 48943/2 |goto 45.04,32.49
 step
-Follow the path up |goto 44.45,32.21 < 7 |only if walking
 click Hardened Lockbox
 Collect the Hardened Lockbox |q 48943/3 |goto 43.54,30.79
 step
-Follow the path |goto 44.69,30.37 < 7 |only if walking
 click Bucket of Grain
 Collect the Bucket of Grain |q 48943/4 |goto 45.53,30.07
 step
@@ -4785,11 +4365,9 @@ turnin Salvage Rights##48943 |goto 44.80,28.56
 turnin If Bones Could Talk##51134 |goto 44.80,28.56
 accept Diversionary Tactics##48963 |goto 44.80,28.56
 step
-Follow the path |goto 44.87,28.38 < 5 |only if walking
 kill Frostmange##127794 |q 48963/1 |goto 45.25,28.61
 step
-Run up the stairs |goto 45.23,28.03 < 3 |only if walking
-Enter the building |goto 45.11,27.89 < 3 |walk
+Enter the building |goto 45.11,27.89 < 10 |walk
 talk Lucille Waycrest##127715
 |tip Inside the building.
 turnin Diversionary Tactics##48963 |goto 45.01,27.77
@@ -4810,15 +4388,6 @@ talk Lucille Waycrest##127715
 Tell her _"I'm ready to go in."_
 Follow Lucille |goto 44.97,27.53 > 10 |c |q 48945
 step
-Follow the path down |goto 44.15,26.86 < 7 |only if walking
-Follow the path |goto 43.85,26.45 < 7 |only if walking
-Follow the path |goto 43.91,25.93 < 7 |only if walking
-Follow the path |goto 43.96,25.62 < 7 |only if walking
-Follow the path down |goto 43.75,25.34 < 7 |only if walking
-Follow the path |goto 43.09,25.53 < 7 |only if walking
-Follow the path up |goto 42.45,26.56 < 7 |only if walking
-Follow the path up |goto 42.05,26.24 < 7 |only if walking
-Follow the path up |goto 42.08,25.82 < 7 |only if walking
 Watch the dialogue
 |tip Follow Lucille Waycrest as she walks inside the cave.
 click Debris
@@ -4840,23 +4409,10 @@ talk Lucille Waycrest##127715
 turnin The Order of Embers##48946 |goto 42.59,25.23
 accept Take the High Road##48986 |goto 42.59,25.23
 step
-Follow the path |goto 42.43,25.48 < 5 |walk
-Jump down here |goto 42.42,26.11 < 5 |walk
-Follow the path |goto 42.80,25.97 < 5 |walk
-Follow the path up |goto 43.14,25.48 < 5 |walk
-Follow the path |goto 43.80,25.34 < 5 |walk
-Follow the path up |goto 43.96,25.74 < 5 |walk
-Follow the path up |goto 43.84,26.38 < 5 |walk
-Follow the path up |goto 44.01,26.66 < 5 |walk
-Run up the stairs |goto 44.89,27.44 < 3 |walk
-Leave the building |goto 45.10,27.88 < 3 |walk
-Follow the path down |goto 44.92,28.95 < 10 |only if walking
-Follow the path down |goto 44.39,29.88 < 10 |only if walking
-Follow the path |goto 44.10,33.33 < 10 |only if walking
-Follow the path |goto 44.62,34.25 < 7 |only if walking
-Jump down here |goto 45.55,36.02 < 7 |only if walking
-Follow the road |goto 45.43,36.83 < 7 |only if walking
-Follow the path up |goto 43.81,38.35 < 7 |only if walking
+Jump down here |goto 42.44,26.08 < 10 |walk
+Follow the path up |goto 43.14,25.49 < 10 |walk
+Follow the path up |goto 43.96,25.70 < 10 |walk
+Leave the building |goto 45.10,27.88 < 10 |walk
 talk Arthur Tradewind##143161
 Tell him _"I am ready to go!"_
 Meet Arthur Tradewind |q 53110/1 |goto 43.63,39.12
@@ -4871,45 +4427,26 @@ talk Ulfar##141159
 |tip Inside the cave.
 turnin The High Thornspeaker##53110 |goto 45.21,45.84
 step
-Leave the cave |goto 46.11,45.28 < 5 |walk
-Follow the path down |goto 46.42,44.50 < 7 |only if walking
-Follow the path down |goto 46.17,43.24 < 7 |only if walking
-Continue down the path |goto 46.20,41.28 < 7 |only if walking
-Continue down the path |goto 46.67,39.77 < 5 |only if walking
-Follow the path |goto 46.58,39.23 < 5 |only if walking
-Follow the path down |goto 46.05,39.01 < 5 |only if walking
-Follow the path down |goto 45.09,39.57 < 7 |only if walking
-Follow the path down |goto 44.36,39.76 < 7 |only if walking
-Follow the road |goto 43.38,39.19 < 7 |only if walking
-Follow the path up |goto 42.83,40.42 < 7 |only if walking
+Leave the cave |goto 46.11,45.28 < 10 |walk
+Follow the path down |goto 46.19,40.08 < 30 |only if walking
 click Wanted Poster
 accept WANTED: The Rime Huntress##52033 |goto 41.25,40.98
 step
-Follow the path |goto 42.62,40.32 < 10 |only if walking
 kill The Rime Huntress##136697 |q 52033/1 |goto 44.21,40.35
 |tip She looks like a large wolf that walks stealthed around this area.
 |tip She will appear as a yellow dot on your minimap.
 |tip You may need help with this.
 step
-Follow the path up |goto 43.08,40.05 < 10 |only if walking
-Follow the road |goto 41.62,41.06 < 10 |only if walking
-Follow the road |goto 40.99,46.35 < 10 |only if walking
-Follow the road |goto 39.91,48.13 < 10 |only if walking
-Continue following the road |goto 38.89,49.80 < 7 |only if walking
-Follow the path |goto 38.01,49.79 < 7 |only if walking
-Enter the building |goto 37.46,48.70 < 3 |walk
+Follow the road |goto 41.08,45.38 < 30 |only if walking
+Enter the building |goto 37.46,48.70 < 10 |walk
 talk Owen Northwood##136480
 |tip Inside the building.
 home Northwood Home |goto 37.43,48.56 |q 52033
 step
-Leave the building |goto 37.47,48.69 < 3 |walk
-Follow the path |goto 37.37,49.01 < 5 |only if walking
 talk Guardsman Hayles##139714
 turnin WANTED: The Rime Huntress##52033 |goto 37.13,49.38
 step
-Follow the path up |goto 37.37,49.92 < 5 |only if walking
-Run up the stairs |goto 37.26,50.20 < 5 |only if walking
-Enter the building |goto 37.13,50.19 < 3 |walk
+Enter the building |goto 37.13,50.19 < 10 |walk
 talk Lucille Waycrest##129642
 |tip Inside the building.
 turnin Take the High Road##48986 |goto 36.86,50.14
@@ -4921,7 +4458,8 @@ Light #6# Candles |q 49443/1 |goto 36.89,50.06
 step
 click Lucille's Notes
 |tip Inside the building.
-Take the Notes |q 49443/2 |goto 36.84,50.12
+Watch the dialogue
+Take Notes |q 49443/2 |goto 36.84,50.12
 step
 click Lucille's Pack
 |tip Inside the building.
@@ -4936,30 +4474,19 @@ talk Marshal Everit Reade##129643
 |tip Inside the building.
 accept Changing of the Guard##49803 |goto 36.96,50.09
 step
-Follow the path |goto 36.98,50.16 < 3 |walk
-Leave the building |goto 37.14,50.19 < 3 |walk
 click Heartsbane Grimoire
 accept Implements of Ill Intent##49805 |goto 37.72,50.38
 stickystart "Accept_Hidden_Dealings"
 stickystart "Test_Corlain_Refugees"
 stickystart "Destroy_Heartsbane_Objects"
 step
-Follow the path |goto 37.15,50.84 < 7 |only if walking
-Follow the path |goto 36.69,51.26 < 7 |only if walking
-Follow the path up |goto 36.40,51.74 < 5 |only if walking
-Follow the path up |goto 36.14,52.41 < 7 |only if walking
 talk Ensign Yorrick##122112
 Choose _<Hand over Marshal Reade's orders.>_
 Recruit Ensign Yorrick |q 49803/2 |goto 35.26,53.13
 step
-Follow the path down |goto 36.09,52.53 < 7 |only if walking
-Follow the path |goto 36.42,51.70 < 5 |only if walking
-Follow the path |goto 36.75,51.19 < 7 |only if walking
-Follow the path down |goto 37.48,51.74 < 7 |only if walking
 talk Jess Albury##135023
 fpath Arom's Stand |goto 38.14,52.54
 step
-Follow the path |goto 38.48,52.05 < 7 |only if walking
 talk Falconer Notley##122110
 Choose _<Hand over Marshal Reade's orders.>_
 Recruit Falconer Notley |q 49803/5 |goto 38.74,52.46
@@ -4968,16 +4495,10 @@ talk Ensign Mace##122115
 Choose _<Hand over Marshal Reade's orders.>_
 Recruit Ensign Mace |q 49803/4 |goto 39.04,51.51
 step
-Follow the path |goto 39.17,50.77 < 7 |only if walking
-Run up the stairs |goto 39.32,50.37 < 3 |only if walking
-Enter the building |goto 39.42,50.27 < 3 |walk
-Leave the building |goto 39.71,50.16 < 3 |walk
 talk Lieutenant Sterntide##131111
 Choose _<Hand over Marshal Reade's orders.>_
 Recruit Lieutenant Sterntide |q 49803/3 |goto 39.90,50.18
 step
-Follow the path |goto 39.31,49.55 < 7 |only if walking
-Follow the path |goto 38.00,49.80 < 7 |only if walking
 talk Captain Joan Cleardawn##131103
 Choose _<Hand over Marshal Reade's orders.>_
 Recruit Captain Cleardawn |q 49803/1 |goto 37.54,48.77
@@ -4990,11 +4511,7 @@ kill Unmasked Witch##129575+
 accept Hidden Dealings##49806 |goto 37.88,50.34
 |tip You will eventually automatically accept this quest.
 step
-Follow the path |goto 38.32,51.74 < 7 |only if walking
-Follow the path |goto 38.66,52.32 < 7 |only if walking
-Run down the stairs |goto 38.41,53.16 < 3 |walk
-Run down the stairs |goto 38.26,53.20 < 3 |walk
-Follow the path |goto 38.27,53.42 < 5 |walk
+Run down the stairs |goto 38.41,53.16 < 7 |walk
 talk Suspicious Refugee##131359
 |tip Inside the building.
 Ask her _"What's going on down here?"_
@@ -5003,12 +4520,6 @@ Explore the Cellar |q 49806/1 |goto 38.37,53.69
 step
 kill Sister Littlefield##131359 |q 49806/2 |goto 38.37,53.59
 |tip Inside the building.
-step
-Run up the stairs |goto 38.27,53.41 < 3 |walk
-Run up the stairs |goto 38.29,53.16 < 3 |walk
-Follow the path |goto 38.42,53.15 < 3 |walk
-Follow the path |goto 38.65,52.35 < 7 |only if walking
-Follow the path |goto 38.31,51.73 < 7 |c |q 49804
 step
 label "Test_Corlain_Refugees"
 use Lucille's Sewing Needle##156518
@@ -5021,8 +4532,7 @@ click Heartsbane Object+
 |tip They look like various objects with Heartsbane names on the ground, and hanging from trees and buildings around this area.
 Destroy #12# Heartsbane Objects |q 49805/1 |goto 37.88,50.37
 step
-Run up the stairs |goto 37.26,50.22 < 5 |only if walking
-Enter the building |goto 37.13,50.19 < 3 |walk
+Enter the building |goto 37.13,50.19 < 10 |walk
 talk Lucille Waycrest##129642
 |tip Inside the building.
 turnin Sharp Thinking##49804 |goto 36.86,50.14
@@ -5079,15 +4589,10 @@ talk Marshal Everit Reade##129643
 |tip Inside the building.
 accept The Road to Corlain##49926 |goto 36.96,50.09
 step
-Follow the path |goto 36.98,50.16 < 3 |walk
-Leave the building |goto 37.12,50.19 < 3 |walk
 talk Inquisitor Cleardawn##135021
 accept Through the Old Roads##48504 |goto 37.27,50.35
 step
-Follow the path |goto 38.27,51.03 < 7 |only if walking
-Follow the path up |goto 39.44,51.55 < 7 |only if walking
-Follow the path up |goto 39.95,53.45 < 7 |only if walking
-Follow the path |goto 40.34,54.32 < 7 |only if walking
+Follow the path up |goto 39.44,51.55 < 30 |only if walking
 talk Inquisitor Cleardawn##129983
 turnin Through the Old Roads##48504 |goto 40.23,56.50
 accept Pieces of History##48184 |goto 40.23,56.50
@@ -5101,26 +4606,15 @@ step
 click First Carved Stone
 Examine the First Stone |q 48184/1 |goto 38.50,58.38
 step
-Follow the path |goto 37.77,58.75 < 5 |only if walking
-Follow the path |goto 37.03,58.39 < 7 |only if walking
 click Second Carved Stone
 Examine the Second Stone |q 48184/2 |goto 36.56,58.03
 step
-Follow the path |goto 37.07,58.34 < 7 |only if walking
-Follow the path |goto 37.75,58.73 < 7 |only if walking
-Follow the path |goto 38.44,59.84 < 7 |only if walking
-Follow the path up |goto 38.90,60.88 < 7 |only if walking
 click Third Carved Stone
 Examine the Third Stone |q 48184/3 |goto 39.27,61.15
 step
-Follow the path down |goto 37.92,62.13 < 7 |only if walking
-Follow the path |goto 37.79,63.54 < 7 |only if walking
 click Fourth Carved Stone
 Examine the Fourth Stone |q 48184/4 |goto 37.83,64.67
 step
-Follow the path |goto 37.84,63.89 < 7 |only if walking
-Follow the path up |goto 37.62,62.50 < 7 |only if walking
-Follow the path |goto 37.23,61.77 < 7 |only if walking
 click Fifth Carved Stone
 Examine the Fifth Stone |q 48184/5 |goto 36.53,61.27
 step
@@ -5143,9 +4637,7 @@ talk Inquisitor Cleardawn
 turnin Honorable Discharge##48517
 accept Drustfall##49890
 step
-Follow the path up |goto 38.68,62.14 < 10 |only if walking
-Enter the cave |goto 39.48,62.39 < 5 |walk
-Follow the path |goto 40.11,62.62 < 5 |walk
+Enter the cave |goto 39.48,62.39 < 10 |walk
 click Ritual Stone
 |tip Inside the cave.
 Watch the dialogue
@@ -5160,19 +4652,10 @@ talk Inquisitor Cleardawn
 turnin Drustfall##49890
 accept To Falconhurst!##49896
 step
-Follow the path up |goto 40.11,62.65 < 5 |walk
-Leave the cave |goto 39.42,62.38 < 5 |walk
-Follow the path up |goto 38.85,61.86 < 7 |only if walking
-Follow the path up |goto 38.85,60.37 < 10 |only if walking
+Leave the cave |goto 39.42,62.38 < 10 |walk
 talk Captain Lilian Nottley##135085
 turnin Clear Victory##49898 |goto 39.69,57.98
 step
-Follow the path |goto 38.77,60.52 < 10 |only if walking
-Follow the path down |goto 38.07,66.67 < 7 |only if walking
-Follow the path down |goto 38.09,68.01 < 7 |only if walking
-Follow the road |goto 36.88,69.02 < 7 |only if walking
-Follow the path |goto 33.48,67.14 < 7 |only if walking
-Continue following the path |goto 33.32,65.87 < 7 |only if walking
 talk Adalyn Forestwatcher##135861
 accept Saplings in the Snow##51543 |goto 33.44,65.09
 step
@@ -5185,14 +4668,12 @@ talk Adalyn Forestwatcher##135861
 turnin Saplings in the Snow##51543 |goto 33.43,65.09
 accept Greenstalker##50953 |goto 33.43,65.09
 step
-Follow the path up |goto 33.52,63.82 < 7 |only if walking
-Enter the cave |goto 33.72,62.41 < 5 |walk
+Enter the cave |goto 33.72,62.41 < 10 |walk
 use the Tranquil Charm##159143
 |tip Use it on Greenstalker inside the cave.
 kill Greenstalker##135868 |q 50953/1 |goto 34.57,61.54
 step
-Leave the cave |goto 33.72,62.38 < 5 |walk
-Follow the path down |goto 33.55,63.64 < 7 |only if walking
+Leave the cave |goto 33.72,62.38 < 10 |walk
 talk Adalyn Forestwatcher##135861
 turnin Greenstalker##50953 |goto 33.43,65.09
 step
@@ -5218,22 +4699,10 @@ step
 talk Zallestrasza##137732
 turnin Life Preserver##51472 |goto 42.04,81.98
 step
-Follow the path up |goto 41.65,81.41 < 7 |only if walking
-Follow the path up |goto 41.50,80.54 < 7 |only if walking
-Continue up the path |goto 41.49,77.63 < 7 |only if walking
-Follow the path |goto 40.78,74.90 < 10 |only if walking
-Follow the path |goto 39.57,73.23 < 10 |only if walking
-Follow the path down |goto 38.55,70.29 < 7 |only if walking
-Follow the road |goto 36.61,68.93 < 7 |only if walking
-Continue following the road |goto 34.27,67.29 < 7 |only if walking
-Continue following the road |goto 32.22,67.81 < 7 |only if walking
-Cross the bridge |goto 31.82,66.67 < 7 |only if walking
-Follow the road |goto 31.70,65.40 < 7 |only if walking
-Follow the road |goto 31.42,63.99 < 7 |only if walking
-Continue following the road |goto 30.49,62.60 < 7 |only if walking
-Continue following the road |goto 29.41,62.29 < 7 |only if walking
-Continue following the road |goto 27.54,63.73 < 7 |only if walking
-Follow the path |goto 26.95,64.90 < 7 |only if walking
+Follow the path |goto 40.63,75.05 < 50 |only if walking
+Follow the road |goto 36.42,68.78 < 30 |only if walking
+Cross the bridge |goto 31.83,66.64 < 20 |only if walking
+Follow the road |goto 30.56,62.70 < 30 |only if walking
 talk Inquisitor Cleardawn##131879
 turnin To Falconhurst!##49896 |goto 26.91,65.81
 accept Breaking Hag##50001 |goto 26.91,65.81
@@ -5269,60 +4738,41 @@ talk Inquisitor Cleardawn##131879
 turnin Hold The Barricade!##50177 |goto 25.79,70.26
 accept So Long, Sister##49939 |goto 25.79,70.26
 step
-Follow the path up |goto 25.50,70.47 < 7 |only if walking
-Run up the stairs |goto 25.33,71.45 < 5 |only if walking
-Enter the building |goto 25.23,71.61 < 3 |walk
-Follow the path |goto 25.15,71.78 < 3 |walk
+Enter the building |goto 25.23,71.61 < 7 |walk
 kill Sister Noella Briarwood##132395 |q 49939/1 |goto 25.02,71.83
 |tip Inside the building.
 step
-Follow the path |goto 25.14,71.79 < 3 |walk
-Leave the building |goto 25.24,71.61 < 3 |walk
-Jump down here |goto 25.55,70.89 < 5 |only if walking
-Follow the road |goto 25.88,70.72 < 7 |only if walking
-Run up the stairs |goto 26.57,72.16 < 5 |only if walking
+Leave the building |goto 25.24,71.61 < 7 |walk
 talk Leandro Royston##131442
 turnin So Long, Sister##49939 |goto 26.67,72.19
 accept Village Repair##50091 |goto 26.67,72.19 |only if level < 120
 |tip You will accept this quest automatically. |only if level < 120
 step
-click Wanted Poster
-accept WANTED: The Crimson Cutthroats##51390 |goto 26.43,72.19
+talk Alisha Darkwater##136655
+|tip Inside the building.
+home Falcon's Roost |goto 26.67,72.56
 step
-Follow the path |goto 26.61,71.87 < 7 |only if walking
-Follow the path |goto 26.85,72.08 < 7 |only if walking
 talk Viviana Swailes##134866
 fpath Falconhurst |goto 26.99,72.39
 step
-Run up the stairs |goto 26.84,71.59 < 5 |only if walking
-Enter the building |goto 26.88,71.38 < 3 |walk
 talk Lynn Sweet##132966
 |tip Inside the building.
 accept Bramblethorn##50238 |goto 26.99,71.39
 step
-Leave the building |goto 26.88,71.39 < 3 |walk
-Follow the path up |goto 26.68,71.79 < 7 |only if walking
-Follow the path up |goto 26.21,71.38 < 7 |only if walking
-Follow the path |goto 25.78,70.37 < 5 |only if walking
+click Wanted Poster
+accept WANTED: The Crimson Cutthroats##51390 |goto 26.43,72.19
+step
 talk Marten Webb##131469
 accept A Missing Master##50903 |goto 25.53,70.10
 stickystart "Destroy_Signs_Of_Witchcraft"
 step
-Follow the path |goto 25.32,69.62 < 7 |only if walking
-Continue following the path |goto 24.69,69.26 < 7 |only if walking
-Run down the stairs |goto 24.78,69.01 < 3 |walk
-Run down the stairs |goto 24.93,68.96 < 3 |walk
-Follow the path |goto 24.91,68.74 < 3 |walk
+Run down the stairs |goto 24.78,69.01 < 7 |walk
 kill Bramblethorn##132734
 |tip Downstairs inside the building.
 collect Lord Sharptooth##156830 |q 50238/1 |goto 24.80,68.91
 step
-Run up the stairs |goto 24.92,68.78 < 3 |walk
-Run up the stairs |goto 24.90,69.01 < 3 |walk
-Follow the path |goto 24.79,69.02 < 3 |walk
-Follow the path |goto 24.64,68.35 < 7 |only if walking
-Run down the stairs |goto 25.59,68.01 < 3 |walk
-Run down the stairs |goto 25.56,67.78 < 3 |walk
+Leave the building |goto 24.79,69.02 < 7 |walk
+Run down the stairs |goto 25.59,68.01 < 7 |walk
 Find Master Ashton |q 50903/1 |goto 25.42,67.79
 |tip Downstairs inside the building.
 step
@@ -5337,43 +4787,24 @@ turnin A Missing Master##50903 |goto 25.29,67.89
 accept Curiously Strong##50092 |goto 25.29,67.89
 stickystart "Extinguish_Fires"
 step
-Run up the stairs |goto 25.44,67.79 < 3 |walk
-Run up the stairs |goto 25.60,67.83 < 3 |walk
-Follow the path |goto 25.60,68.02 < 3 |walk
-Follow the path |goto 25.42,69.18 < 7 |only if walking
+Leave the building |goto 25.60,68.02 < 7 |walk
 talk Leandro Royston##131442
 accept Building Defenses##50090 |goto 25.55,70.13
+stickystop "Destroy_Signs_Of_Witchcraft"
 stickystart "Collect_Lumber"
-stickystart "Kill_Wallis_Crowder"
-stickystart "Kill_Thorn_Sutton"
 step
-Follow the path |goto 25.91,68.49 < 7 |only if walking
-Follow the path up |goto 26.76,68.02 < 7 |only if walking
-Follow the path |goto 27.87,67.19 < 7 |only if walking
-Enter the cave |goto 28.85,66.42 < 5 |walk
-Follow the path |goto 29.14,65.96 < 5 |walk
+Follow the path |goto 27.47,67.29 < 30 |only if walking
+Enter the cave |goto 28.85,66.42 < 10 |walk
 kill Mareen Sherwood##137551 |q 51390/1 |goto 29.77,65.50
-|tip Inside the cave.
-|tip Try to pull her by herself to fight her alone.
-|tip You may need help with this.
-step
-label "Kill_Thorn_Sutton"
+kill Wallis Crowder##137550 |q 51390/2 |goto 29.90,65.34
 kill Thorn Sutton##137548 |q 51390/3 |goto 29.79,65.60
 |tip Inside the cave.
-|tip Try to pull him by himself to fight him alone.
+|tip Try to pull them by themselves to fight them each alone.
 |tip You may need help with this.
-step
-label "Kill_Wallis_Crowder"
-kill Wallis Crowder##137550 |q 51390/2 |goto 29.90,65.34
-|tip He walks around inside the cave.
-|tip Try to pull him by himself to fight him alone.
-|tip You may need help with this.
+stickystart "Destroy_Signs_Of_Witchcraft"
 step
 label "Collect_Lumber"
-Follow the path |goto 29.18,65.94 < 5 |walk
-Leave the cave |goto 28.86,66.45 < 5 |walk
-Follow the path |goto 27.98,67.16 < 7 |only if walking
-Follow the path |goto 26.75,67.61 < 7 |only if walking
+Leave the cave |goto 28.86,66.45 < 10 |walk
 click Wooden Plank+
 |tip They look like wooden boards leaning on objects and laying on the ground around this area.
 Collect #10# Lumber |q 50090/1 |goto 25.77,69.00
@@ -5408,8 +4839,6 @@ step
 click Barricade
 Place the Defenses |q 50090/2 |goto 26.63,67.07 |count 4
 step
-Follow the path |goto 26.45,67.07 < 7 |only if walking
-Follow the path |goto 25.74,67.34 < 7 |only if walking
 talk Warren Ashton##131448
 turnin Curiously Strong##50092 |goto 25.23,67.16
 accept A Weapon of Old##50036 |goto 25.23,67.16
@@ -5428,49 +4857,28 @@ talk Warren Ashton##131448
 turnin A Weapon of Old##50036 |goto 25.23,67.16
 accept Fighting With Fire##50063 |goto 25.23,67.16
 step
-Follow the path up |goto 25.01,66.58 < 5 |only if walking
-Follow the path |goto 25.00,65.91 < 7 |only if walking
 use the Liquid Fire Flask##156710
 |tip Use it on Briarwood Bulwarks around this area.
 |tip Use it repeatedly to kill them easier.
 kill 3 Briarwood Bulwark##133072 |q 50063/1 |goto 24.68,65.38
 step
-Follow the path down |goto 24.99,65.91 < 7 |only if walking
-Follow the path |goto 25.05,67.02 < 7 |only if walking
 talk Marten Webb##131469
 turnin Fighting With Fire##50063 |goto 25.13,67.39
 step
 talk Inquisitor Cleardawn##131879
 accept Into the Crimsonwood##50172 |goto 25.13,67.43
 step
-Follow the path |goto 25.40,68.44 < 7 |only if walking
-Follow the path |goto 25.39,69.20 < 7 |only if walking
 talk Leandro Royston##131442
 turnin WANTED: The Crimson Cutthroats##51390 |goto 25.55,70.13
 turnin Building Defenses##50090 |goto 25.55,70.13
 step
-Follow the path down |goto 25.77,70.29 < 7 |only if walking
-Follow the path |goto 26.29,71.56 < 7 |only if walking
-Run up the stairs |goto 26.84,71.58 < 5 |only if walking
-Enter the building |goto 26.88,71.38 < 3 |walk
 talk Lynn Sweet##132966
 |tip Inside the building.
 turnin Bramblethorn##50238 |goto 26.99,71.39
 step
-Leave the building |goto 26.88,71.39 < 3 |walk
-Follow the path |goto 26.72,71.74 < 7 |only if walking
-Follow the path up |goto 26.31,71.62 < 7 |only if walking
-Follow the path |goto 25.76,70.32 < 7 |only if walking
-Follow the road |goto 25.61,69.65 < 7 |only if walking
-Continue following the road |goto 26.31,67.61 < 7 |only if walking
-Follow the path up |goto 26.71,64.93 < 7 |only if walking
-Follow the road |goto 26.42,64.16 < 7 |only if walking
-Continue following the road |goto 24.50,64.08 < 7 |only if walking
-Continue following the road |goto 23.60,63.62 < 7 |only if walking
-Continue following the road |goto 23.03,62.33 < 7 |only if walking
-Follow the path |goto 22.32,60.61 < 7 |only if walking
-Follow the path |goto 21.44,59.87 < 7 |only if walking
-Follow the path |goto 20.50,58.09 < 7 |only if walking
+Follow the road |goto 25.79,70.34 < 20 |only if walking
+Follow the road |goto 26.66,64.17 < 30 |only if walking
+Follow the path up |goto 22.26,60.56 < 20 |only if walking
 talk Inquisitor Cleardawn##133098
 turnin Into the Crimsonwood##50172 |goto 20.64,57.46
 accept Saving Master Ashton##50265 |goto 20.64,57.46
@@ -5480,7 +4888,6 @@ accept Odds and Ends##50306 |goto 20.64,57.51
 stickystart "Collect_Bags_Of_Reagents"
 stickystart "Collect_Organic_Matter_Samples"
 step
-Follow the path down |goto 20.31,57.01 < 7 |only if walking
 kill Hexwood Binder##133112+
 collect Cage Key##156859 |goto 21.28,56.36 |q 50265
 step
@@ -5493,7 +4900,6 @@ step
 click Cage
 Release Samantha Sweet |q 50266/1 |goto 21.17,55.07
 step
-Follow the path |goto 21.21,55.56 < 7 |only if walking
 click Gauntlet
 Recover the Gauntlet |q 50266/4 |goto 21.94,55.95
 step
@@ -5503,12 +4909,9 @@ step
 click Boots
 Recover the Boots |q 50266/2 |goto 21.35,57.04
 step
-Follow the path |goto 21.30,57.57 < 5 |only if walking
 click Cuirass
 Recover the Cuirass |q 50266/5 |goto 21.11,57.54
 step
-Follow the path |goto 20.88,57.10 < 7 |only if walking
-Follow the path |goto 21.11,55.86 < 7 |only if walking
 talk Samantha Sweet##133101
 Tell her _"I found your gear. <Hand Samantha her gear>"_
 Return Samantha's Gear |q 50266/6 |goto 21.15,55.15
@@ -5521,8 +4924,6 @@ label "Collect_Organic_Matter_Samples"
 kill Timber Mongrel##133116+
 collect 4 Organic Matter Sample##156950 |q 50306/1 |goto 22.00,56.57
 step
-Follow the path up |goto 21.01,56.57 < 10 |only if walking
-Follow the path |goto 20.31,57.23 < 5 |only if walking
 talk Samantha Sweet##133252
 turnin Bittersweet##50266 |goto 20.60,57.49
 step
@@ -5548,11 +4949,6 @@ step
 talk Inquisitor Cleardawn##133098
 accept Deeper into the Woods##50370 |goto 20.64,57.46
 step
-Follow the path down |goto 20.27,57.10 < 7 |only if walking
-Follow the path |goto 20.97,56.63 < 10 |only if walking
-Follow the road |goto 22.11,56.57 < 10 |only if walking
-Follow the path down |goto 23.94,55.77 < 7 |only if walking
-Follow the path down |goto 24.36,55.91 < 7 |only if walking
 Go Deeper Into the Woods |q 50370/1 |goto 24.58,56.65
 step
 talk Inquisitor Cleardawn##133098
@@ -5566,26 +4962,13 @@ accept Matrons of the Crimsonwood##50329 |goto 24.58,56.72
 stickystart "Free_Captive_Villagers"
 stickystart "Collect_Control_Charms"
 step
-Follow the path |goto 24.62,57.05 < 5 |only if walking
-Follow the path down |goto 24.68,57.46 < 5 |only if walking
-Follow the path |goto 24.91,57.93 < 7 |only if walking
-Follow the path |goto 24.65,59.17 < 5 |only if walking
 click Witch Effigy
 Destroy the First Focus |q 50325/1 |goto 24.60,59.29
 step
-Follow the path |goto 24.65,59.16 < 3 |only if walking
-Follow the path |goto 24.89,58.59 < 7 |only if walking
-Follow the path up |goto 25.72,55.48 < 7 |only if walking
-Follow the road |goto 26.81,54.76 < 7 |only if walking
-Follow the path |goto 25.97,53.82 < 7 |only if walking
-Follow the path |goto 26.20,52.62 < 7 |only if walking
 click Witch Effigy
 Destroy the Third Focus |q 50325/3 |goto 26.44,52.00
 step
-Follow the path |goto 25.81,53.08 < 7 |only if walking
-Follow the path up |goto 25.45,53.02 < 7 |only if walking
-Follow the path down |goto 25.34,52.30 < 7 |only if walking
-Follow the path |goto 24.99,51.62 < 7 |only if walking
+Follow the path |goto 25.42,52.66 < |only if walking
 click Witch Effigy
 Destroy the Second Focus |q 50325/2 |goto 25.23,50.02
 step
@@ -5598,82 +4981,40 @@ label "Collect_Control_Charms"
 kill Haunted Servitor##137587+
 collect 5 Control Charm##157821 |q 50445/1 |goto 24.76,51.61
 step
-Follow the road |goto 24.43,52.54 < 7 |only if walking
-Follow the path down |goto 23.88,55.73 < 7 |only if walking
-Follow the path down |goto 24.39,55.92 < 7 |only if walking
 talk Inquisitor Cleardawn##133098
 turnin Stopping the Grand Rite##50325 |goto 24.57,56.66
 turnin Witch Way Out?##50530 |goto 24.57,56.66
 step
 talk Warren Ashton##133105
 turnin Controlling the Situation##50445 |goto 24.58,56.72
-stickystart "Kill_Matron_Elsbeth_Garrick"
-stickystart "Kill_Matron_Wilona_Blackwood"
 step
-Follow the path up |goto 24.45,56.03 < 7 |only if walking
-Follow the path |goto 24.10,55.69 < 7 |only if walking
-Follow the path |goto 22.34,56.48 < 7 |only if walking
-Follow the path up |goto 21.44,55.77 < 7 |only if walking
-Follow the path up |goto 21.28,53.63 < 7 |only if walking
-Follow the path |goto 20.87,53.35 < 7 |only if walking
-Follow the path up |goto 20.32,53.81 < 7 |only if walking
 use the Weakening Potion##158175
-|tip Use it on Matron Stefania Denholm.
-|tip Use it repeatedly to kill her faster.
-kill Matron Stefania Denholm##137594 |q 50329/2 |goto 19.53,53.69
-step
-label "Kill_Matron_Elsbeth_Garrick"
-use the Weakening Potion##158175
-|tip Use it on Matron Elsbeth Garrick.
-|tip Use it repeatedly to kill her faster.
+|tip Use it on the three Matron enemies around this area.
+|tip Use it repeatedly to kill them faster.
 kill Matron Elsbeth Garrick##133103 |q 50329/1 |goto 19.53,53.69
-step
-label "Kill_Matron_Wilona_Blackwood"
-use the Weakening Potion##158175
-|tip Use it on Matron Wilona Blackwood.
-|tip Use it repeatedly to kill her faster.
+kill Matron Stefania Denholm##137594 |q 50329/2 |goto 19.53,53.69
 kill Matron Wilona Blackwood##137596 |q 50329/3 |goto 19.53,53.69
 step
-Follow the path |goto 20.38,53.75 < 7 |only if walking
-Follow the path down |goto 20.80,53.28 < 7 |only if walking
-Follow the path down |goto 21.31,53.63 < 7 |only if walking
-Follow the path |goto 21.44,55.72 < 7 |only if walking
-Follow the road |goto 22.24,56.49 < 7 |only if walking
-Follow the path down |goto 23.92,55.76 < 7 |only if walking
-Follow the path down |goto 24.38,55.91 < 7 |only if walking
 talk Warren Ashton##133105
 turnin Matrons of the Crimsonwood##50329 |goto 24.58,56.72
 step
 talk Inquisitor Cleardawn##133098
 accept In the Hall of the Drust King##50481 |goto 24.57,56.65
 step
-Follow the path |goto 24.52,55.65 < 7 |only if walking
-Continue following the path |goto 25.96,56.40 < 7 |only if walking
-Enter the cave |goto 27.02,58.45 < 3 |walk
-Follow the path |goto 27.45,59.54
+Enter the cave |goto 27.02,58.45 < 10 |walk
 Watch the dialogue
-Travel to Gorak Tul |goto 27.22,60.32 < 7 |noway |c |q 50481
+Travel to Gorak Tul |goto 27.22,60.32 < 10 |c |q 50481
 step
-Run down the stairs |goto 27.14,60.20 < 3 |walk
-Follow the path |goto 27.19,59.95 < 5 |walk
 kill Gorak Tul##134004 |q 50481/1 |goto 27.54,59.37
 |tip Downstairs inside the cave.
 |tip He will eventually surrender.
 step
 Watch the dialogue
-Run up the stairs |goto 27.20,59.96 < 5 |walk
-Follow the path |goto 27.17,60.23 < 5 |walk
-Run up the stairs |goto 27.27,60.42 < 5 |c |q 50481
-step
-Follow the path |goto 27.42,60.46 < 5 |walk
-Run up the stairs |goto 27.72,60.34 < 5 |walk
-Run up the stairs |goto 27.79,59.87 < 5 |walk
-Follow the path |goto 27.62,59.59 < 5 |walk
-Follow the path |goto 27.41,59.47 < 5 |walk
 Escape the Chamber |q 50481/2 |goto 27.30,59.19
+|tip Run up the stairs toward the exit of the cave.
 |tip Inside the cave.
 step
-Return to the Crimson Forest |goto 26.95,58.24 < 10 |c |q 50481 |noway
+Return to the Crimson Forest |goto 26.95,58.24 < 10 |noway |c |q 50481
 step
 _Next to you:_
 talk Inquisitor Cleardawn
@@ -5682,111 +5023,56 @@ accept Stick It To 'Em!##50533
 step
 use the Greater Control Charm##158064
 |tip Use it next to the Crimsonwood Demolisher.
-Use the Greater Control Charm |q 50533/1 |goto 27.19,57.94
+Use the Greater Control Charm |q 50533/1 |goto 27.18,57.91
 step
-Follow the path |goto 26.53,57.69 < 7 |only if walking
-Follow the path |goto 23.88,55.67 < 7 |only if walking
 Kill enemies around this area
 |tip Use the abilities on your action bar.
-Destroy Witch Forces |q 50533/2 |goto 22.26,56.58
+Destroy the Witch Forces |q 50533/2 |goto 22.26,56.58
 step
-Follow the path up |goto 21.35,55.00 < 7 |only if walking
-Follow the path up |goto 21.14,53.58 < 7 |only if walking
-Follow the path up |goto 20.90,52.89 < 7 |only if walking
-Follow the path |goto 20.60,51.46 < 7 |only if walking
-Follow the path |goto 20.19,51.21 < 7 |only if walking
-Follow the path up |goto 19.72,51.69 < 7 |only if walking
 Reach the Signal Point |q 50533/3 |goto 19.39,51.02
 step
-Follow the path down |goto 19.59,50.04 < 7 |only if walking
-Jump down here |goto 21.10,49.40 < 7 |only if walking
-Follow the path up |goto 21.56,48.16 < 7 |only if walking
-Follow the path |goto 22.28,47.61 < 7 |only if walking
 talk Cesi Loosecannon##136234
 accept An Economic Opportunity##50988 |goto 22.88,46.24
 step
-Follow the path |goto 22.59,46.60 < 7 |only if walking
-Follow the path down |goto 21.98,45.81 < 7 |only if walking
-Continue down the path |goto 21.38,46.20 < 7 |only if walking
-Continue down the path |goto 20.59,47.45 < 5 |only if walking
-Continue down the path |goto 20.29,47.11 < 5 |only if walking
-Cross the bridge |goto 20.39,46.87 < 5 |only if walking
-Follow the path |goto 20.60,46.50 < 5 |only if walking
 talk Cesi Loosecannon##136234
 turnin An Economic Opportunity##50988 |goto 20.62,46.19
 step
 talk Fixi Slyshiv##136227
 accept Cutthroat Business Practices##51020 |goto 20.85,46.19
 step
-Follow the path down |goto 20.51,45.83 < 7 |only if walking
-Run down the stairs |goto 20.24,45.27 < 5 |only if walking
-Follow the path |goto 19.94,44.71 < 5 |only if walking
 talk Klause Fairwind##136233
 accept She's Got it Where it Counts##51019 |goto 19.89,44.25
 step
-Cross the bridge |goto 20.19,44.29 < 5 |only if walking
-Follow the path |goto 20.18,43.80 < 5 |only if walking
-Follow the path |goto 20.48,43.72 < 5 |only if walking
 click Ball & Chain
 Free Miranda |q 51019/1 |goto 20.61,43.57
 step
-Enter the cave |goto 21.19,43.90 < 5 |walk
+Enter the cave |goto 21.19,43.90 < 10 |walk
 kill Gary Cofferdam##136294 |q 51020/1 |goto 21.49,43.56
 |tip Inside the cave.
 step
-Leave the cave |goto 21.18,43.90 < 5 |walk
-Cross the bridge |goto 20.50,43.74 < 5 |only if walking
-Cross the bridge |goto 20.17,43.84 < 5 |only if walking
-Follow the path |goto 20.13,44.27 < 5 |only if walking
 talk Klause Fairwind##136233
 turnin She's Got it Where it Counts##51019 |goto 19.89,44.26
 step
-Follow the path |goto 19.92,44.69 < 5 |only if walking
-Run up the stairs |goto 20.09,45.02 < 5 |only if walking
-Follow the path |goto 20.24,45.26 < 5 |only if walking
-Follow the path |goto 20.47,45.76 < 5 |only if walking
 talk Fixi Slyshiv##136227
 turnin Cutthroat Business Practices##51020 |goto 20.85,46.19
 step
 talk Cesi Loosecannon##136234
 accept Out With the Old Boss##50978 |goto 20.62,46.19
 step
-Follow the path down |goto 20.84,45.54 < 7 |only if walking
-Follow the path down |goto 21.11,44.69 < 7 |only if walking
-Follow the path |goto 20.92,44.02 < 7 |only if walking
-Cross the bridge |goto 20.45,43.74 < 7 |only if walking
-Run up the stairs |goto 19.80,43.77 < 5 |only if walking
-Follow the path |goto 19.70,43.76 < 5 |only if walking
-Run up the stairs |goto 19.51,43.96 < 5 |only if walking
-Follow the path |goto 19.41,43.99 < 5 |only if walking
 kill Richard Tornsail##136474 |q 50978/1 |goto 19.29,43.65
 step
-Run up the stairs |goto 19.26,43.34 < 5 |only if walking
-Follow the path |goto 19.09,43.33 < 5 |only if walking
-Enter the building |goto 19.11,43.49 < 3 |walk
+Watch the dialogue
 talk Cesi Loosecannon##136234
-|tip Inside the building.
+|tip Upstairs inside the building.
 turnin Out With the Old Boss##50978 |goto 19.20,43.51
 step
-Leave the building |goto 19.11,43.49 < 3 |walk
-Run up the stairs |goto 19.08,43.64 < 3 |c |q 51001 |future
-step
-Follow the path up |goto 19.23,43.64 < 3 |walk
-Follow the path up |goto 19.27,43.35 < 3 |walk
 talk Tan Lotuswind##135988
+|tip At the top of the ship.
 fpath Anyport |goto 19.14,43.30
 step
-Jump down here |goto 19.30,43.40 < 5 |only if walking
-Jump down here |goto 19.51,43.69 < 5 |only if walking
-Run down the stairs |goto 19.72,43.75 < 5 |only if walking
-Cross the bridge |goto 19.87,43.77 < 5 |only if walking
-Follow the path |goto 20.48,43.73 < 7 |only if walking
 talk Clonk Greaseybit##136140
 accept Every Day I'm Smugglin'##51001 |goto 20.92,43.64
 step
-Follow the path up |goto 21.07,44.22 < 7 |only if walking
-Follow the path up |goto 21.08,44.89 < 7 |only if walking
-Follow the path |goto 20.80,45.62 < 5 |only if walking
 talk Kane Carlyle##136184
 accept Asking for a Friend##51018 |goto 20.83,46.02
 step
@@ -5794,44 +5080,37 @@ talk Xun Xun Sweetflower##136141
 Ask her _"You have an extensive pantry. Is there anything missing from your spice rack?"_
 Ask Xun Xun |q 51018/1 |goto 20.67,45.58
 step
-Follow the path down |goto 20.87,45.46 < 5 |only if walking
-Follow the path down |goto 21.11,44.69 < 7 |only if walking
-Follow the path |goto 21.03,44.17 < 7 |only if walking
-Follow the path |goto 20.49,43.75 < 7 |only if walking
-Run down the stairs |goto 20.18,43.65 < 5 |only if walking
 talk Merchant Kooda##136282
 buy Century Sauce##159678 |n
 Obtain the Century Sauce |q 51018/2 |goto 20.18,43.28
 step
-Run up the stairs |goto 20.17,43.50 < 5 |only if walking
-Cross the bridge |goto 20.17,43.84 < 5 |only if walking
-Follow the path |goto 20.16,44.23 < 5 |only if walking
-Run down the stairs |goto 19.76,44.60 < 5 |only if walking
+click Wanted Poster
+accept WANTED: Anchorface##51240 |goto 19.55,43.61
+stickystart "Collect_Smuggled_Goods"
+step
+kill Anchorface##137011 |q 51240/1 |goto 18.00,43.79
+|tip He looks like a large shark that swims underwater around this area.
+|tip You may need help with this.
+step
+label "Collect_Smuggled_Goods"
 click Smuggled Goods+
 |tip They look like wooden crates floating in the water around this area.
 collect 5 Smuggled Goods##159680 |q 51001/1 |goto 18.44,46.03
 step
-Run up the stairs |goto 19.65,44.72 < 5 |only if walking
-Follow the path |goto 19.77,44.57 < 5 |only if walking
-Cross the bridge |goto 20.18,44.26 < 5 |only if walking
-Follow the path |goto 20.20,43.79 < 5 |only if walking
+Run up the stairs |goto 19.67,44.71 < 15 |only if walking
+talk Cesi Loosecannon##136579
+|tip Upstairs inside the building.
+turnin WANTED: Anchorface##51240 |goto 19.20,43.51
+step
 talk Clonk Greaseybit##136140
 turnin Every Day I'm Smugglin'##51001 |goto 20.92,43.65
 step
-Follow the path up |goto 21.05,44.21 < 7 |only if walking
-Follow the path up |goto 21.09,44.87 < 7 |only if walking
-Follow the path |goto 20.80,45.62 < 5 |only if walking
 talk Kane Carlyle##136184
 turnin Asking for a Friend##51018 |goto 20.83,46.02
 step
-Follow the path up |goto 20.61,46.50 < 5 |only if walking
-Follow the path up |goto 20.32,47.07 < 5 |only if walking
-Follow the path up |goto 20.57,47.42 < 5 |only if walking
-Continue up the path |goto 21.70,45.87 < 7 |only if walking
-Follow the path |goto 22.16,45.93 < 7 |only if walking
-Follow the path |goto 22.23,48.58 < 7 |only if walking
-Follow the path up |goto 21.41,49.54 < 7 |only if walking
-Follow the path |goto 19.77,49.81 < 7 |only if walking
+Follow the path up |goto 20.57,46.57 < 15 |only if walking
+Follow the path |goto 22.21,45.99 < 20 |only if walking
+Follow the path up |goto 21.39,49.66 < 20 |only if walking
 talk Inquisitor Cleardawn##133098
 Tell her _"Send the signal. Let's get out of here!"_
 Tell Cleardawn to Send the Signal |q 50533/4 |goto 19.30,50.74
@@ -5845,22 +5124,11 @@ step
 talk Inquisitor Cleardawn##135021
 turnin Stick It To 'Em!##50533 |goto 37.87,50.09
 step
-Follow the road |goto 37.75,49.72 < 7 |only if walking
-Continue following the road |goto 37.14,49.23 < 7 |only if walking
-Continue following the road |goto 36.07,48.82 < 7 |only if walking
-Continue following the road |goto 34.84,46.97 < 7 |only if walking
-Continue following the road |goto 33.05,46.40 < 7 |only if walking
-Cross the bridge |goto 32.30,43.99 < 7 |only if walking
-Follow the path |goto 31.62,42.94 < 7 |only if walking
-Follow the path |goto 31.00,41.79 < 7 |only if walking
 talk Morwin Gladeheart##135976
 accept A Farmer's Fate##50970 |goto 29.92,40.44
 accept Lost in the Woods##50967 |goto 29.92,40.44
 stickystart "Accept_Those_Who_Remain"
 step
-Follow the road |goto 30.65,42.10 < 7 |only if walking
-Follow the road |goto 28.23,43.52 < 7 |only if walking
-Follow the path up |goto 27.02,43.16 < 7 |only if walking
 click Mark of Ash
 Gain the Mark of Ash |q 50970/1 |goto 26.69,41.92
 step
@@ -5870,56 +5138,36 @@ accept Those Who Remain##50965 |goto 26.69,41.92
 |tip You will eventually accept this quest after looting.
 stickystart "Collect_Ashenwood_Relics"
 step
-Follow the path |goto 26.52,42.14 < 7 |only if walking
-Follow the path |goto 25.96,41.63 < 7 |only if walking
 click Mark of Yew
 Gain the Mark of Yew |q 50970/2 |goto 25.21,41.84
 step
-Enter the tunnel |goto 24.93,40.39 < 5 |only if walking
-Leave the tunnel |goto 24.28,40.81 < 5 |only if walking
+Enter the tunnel |goto 24.93,40.39 < 10 |only if walking
+Leave the tunnel |goto 24.28,40.81 < 10 |only if walking
 click Mark of Alder
 Gain the Mark of Alder |q 50970/3 |goto 24.02,40.68
 step
-Follow the path |goto 23.66,40.90 < 7 |only if walking
-Follow the path |goto 23.48,40.50 < 7 |only if walking
-Enter the cave |goto 23.41,39.28 < 5 |walk
+Enter the cave |goto 23.41,39.28 < 10 |walk
 kill Lichenlord Ripp##135914
 |tip Inside the cave.
 Save Amalie Oakseeker |q 50967/1 |goto 23.42,39.09
 step
 label "Collect_Ashenwood_Relics"
-Leave the cave |goto 23.41,39.28 < 5 |walk
-Follow the path down |goto 23.43,40.36 < 7 |only if walking
-Follow the path |goto 23.70,40.92 < 7 |only if walking
-Enter the tunnel |goto 24.28,40.83 < 5 |only if walking
-Leave the tunnel |goto 24.95,40.43 < 5 |only if walking
+Enter the tunnel |goto 24.28,40.83 < 10 |only if walking
+Leave the tunnel |goto 24.95,40.43 < 10 |only if walking
 Kill Bloodbough enemies around this area
 collect 8 Ashenwood Relic##160027 |q 50965/1 |goto 25.23,41.00
 step
-Follow the path up |goto 27.40,42.01 < 10 |only if walking
-Follow the path up |goto 28.84,41.63 < 7 |only if walking
-Follow the path |goto 29.58,40.87 < 7 |only if walking
 talk Morwin Gladeheart##135976
 turnin A Farmer's Fate##50970 |goto 29.92,40.44
 turnin Lost in the Woods##50967 |goto 29.92,40.44
 turnin Those Who Remain##50965 |goto 29.92,40.44
 step
-Follow the road |goto 30.96,39.38 < 7 |only if walking
-Cross the bridge |goto 31.07,36.35 < 7 |only if walking
-Follow the road |goto 30.68,34.90 < 7 |only if walking
-Follow the path |goto 30.13,33.03 < 7 |only if walking
-Continue following the path |goto 31.66,32.19 < 7 |only if walking
 talk Marshal Everit Reade##131636
 turnin The Road to Corlain##49926 |goto 32.06,30.94
 accept The First Watch##50003 |goto 32.06,30.94
 step
 Watch the dialogue
-Run up the stairs |goto 31.43,30.09 < 5 |only if walking
-Enter the building |goto 31.35,30.00 < 3 |walk
-Run up the stairs |goto 31.11,29.76 < 3 |c |q 50003
-step
-Run up the stairs |goto 31.21,29.67 < 3 |walk
-Follow the path |goto 31.33,29.85 < 3 |walk
+Enter the building |goto 31.35,30.00 < 10 |walk
 kill Sister Adela##131671 |q 50003/1 |goto 31.18,29.81
 |tip Upstairs inside the building.
 step
@@ -5929,17 +5177,11 @@ talk Marshal Everit Reade##131636
 turnin The First Watch##50003 |goto 31.26,29.88
 accept A Weather Eye##50149 |goto 31.26,29.88
 step
-Run down the stairs |goto 31.32,29.80 < 3 |walk
-Run down the stairs |goto 31.17,29.66 < 3 |walk
-Follow the path |goto 31.11,29.82 < 3 |c |q 50149
-step
-Leave the building |goto 31.34,29.98 < 3 |walk
 talk Ensign Wallace##135024
 fpath Watchman's Rise |goto 31.87,30.45
 step
-Follow the path |goto 31.23,30.42 < 5 |only if walking
-Continue following the path |goto 30.82,30.01 < 5 |only if walking
 talk Inquisitor Notley##131640
+|tip Behind the building.
 Tell him _"I need your help scouting the surrounding area."_
 collect Falconer's Whistle##156855 |q 50149/1 |goto 30.96,29.56
 step
@@ -5960,10 +5202,8 @@ Scout the Armory |q 50149/5 |goto 25.01,35.84
 |tip Fly into the floating yellow globe.
 step
 Watch the dialogue
-Return to Watchman's Rise |goto 30.84,29.42 < 7 |c |q 50149 |notravel
+Return to Watchman's Rise |goto 30.84,29.42 < 10 |c |q 50149 |notravel
 step
-Follow the path up |goto 30.83,30.01 < 5 |only if walking
-Follow the path |goto 31.24,30.42 < 5 |only if walking
 talk Marshal Everit Reade##131636
 turnin A Weather Eye##50149 |goto 31.35,30.29
 accept A Steady Ballast##50151 |goto 31.35,30.29
@@ -5972,18 +5212,13 @@ talk Lucille Waycrest##131638
 accept Precious Metals##50173 |goto 31.43,30.25
 stickystart "Collect_Silver_Nuggets"
 step
-Follow the path |goto 32.06,31.01 < 7 |only if walking
-Follow the path up |goto 32.92,30.69 < 7 |only if walking
-Run up the stairs |goto 34.14,30.80 < 5 |only if walking
-Enter the building |goto 34.40,30.74 < 3 |walk
+Enter the building |goto 34.40,30.74 < 10 |walk
 talk Elsie Wright##132374
 |tip Inside the building.
 accept An Eight-Legged Curse##50175 |goto 34.60,30.73
 accept All Wrapped Up##50174 |goto 34.60,30.73
 stickystart "Slay_Bilefang_Spiders"
 step
-Leave the building |goto 34.39,30.74 < 3 |walk
-Follow the path up |goto 34.26,31.23 < 5 |only if walking
 kill Writhing Cocoon##132345+
 |tip They look like large squirming white eggs on the ground around this area.
 |tip They will appear on your minimap as yellow dots.
@@ -6000,49 +5235,28 @@ label "Slay_Bilefang_Spiders"
 Kill Bilefang enemies around this area
 Slay #20# Bilefang Spiders |q 50175/1 |goto 35.15,31.52
 step
-Run up the stairs |goto 34.14,30.82 < 5 |only if walking
-Enter the building |goto 34.40,30.74 < 3 |walk
+Enter the building |goto 34.40,30.74 < 10 |walk
 talk Elsie Wright##132374
 |tip Inside the building.
 turnin An Eight-Legged Curse##50175 |goto 34.60,30.73
 turnin All Wrapped Up##50174 |goto 34.60,30.73
 step
-Leave the building |goto 34.40,30.74 < 3 |walk
-Follow the path |goto 34.00,30.85 < 7 |only if walking
-Continue following the path |goto 33.07,30.68 < 7 |only if walking
-Continue following the path |goto 32.02,30.95 < 7 |only if walking
 talk Lucille Waycrest##131638
 turnin Precious Metals##50173 |goto 31.43,30.25
 step
-Run up the stairs |goto 31.43,30.09 < 3 |only if walking
-Enter the building |goto 31.35,30.00 < 3 |walk
 talk Quartermaster Rickard##137455
 |tip Inside the building.
 home Watchman's Tower |goto 31.19,29.76 |q 50588 |future
 step
-Leave the building |goto 31.34,29.99 < 3 |walk
-Follow the path |goto 32.06,31.02 < 7 |only if walking
-Follow the path |goto 31.97,31.84 < 7 |only if walking
-Continue following the path |goto 31.50,32.29 < 7 |only if walking
-Continue following the path |goto 29.20,33.53 < 7 |only if walking
-Continue following the path |goto 27.78,33.96 < 7 |only if walking
-Continue following the path |goto 26.80,35.01 < 7 |only if walking
 talk Inquisitor Yorrick##131641
 accept Digging for Scraps##50152 |goto 26.23,36.10
 step
-Follow the path |goto 26.05,35.70 < 7 |only if walking
-Continue following the path |goto 25.56,35.78 < 7 |only if walking
 kill Hexthralled Guardsman##131530+
 click Quality Salvage+
 |tip They look like swords and various pieces of armor laying on objects and on the ground around this area.
 collect 10 Quality Salvage##156663 |q 50152/1 |goto 24.88,36.30
 step
-Follow the path |goto 24.62,36.45 < 7 |only if walking
-Continue following the path |goto 24.45,36.67 < 5 |only if walking
-Run down the stairs |goto 24.45,37.26 < 3 |walk
-Run down the stairs |goto 24.62,37.20 < 3 |c |q 50151
-step
-Follow the path |goto 24.58,36.96 < 3 |walk
+Run down the stairs |goto 24.46,37.25 < 7 |walk
 Watch the dialogue
 talk Angus Ballaster##132193
 |tip Downstairs inside the building.
@@ -6054,8 +5268,6 @@ Watch the dialogue
 Kill the enemies that attack
 Defeat the Coven Ambush |q 50151/2 |goto 24.52,36.83
 step
-Leave the building |goto 31.34,29.98 < 3 |walk
-Follow the path |goto 31.44,30.19 < 5 |only if walking
 talk Marshal Everit Reade##131636
 turnin A Steady Ballast##50151 |goto 31.35,30.30
 turnin Digging for Scraps##50152 |goto 31.35,30.30
@@ -6089,28 +5301,19 @@ step
 click Wanted Poster
 accept WANTED: Sister Lilias##51356 |goto 31.75,30.79
 step
-Follow the path up |goto 30.95,30.47 < 7 |only if walking
-Follow the path down |goto 30.40,30.74 < 7 |only if walking
-Jump down here |goto 30.02,30.63 < 5 |only if walking
 clicknpc Corlain Townsperson##134009
 accept Remembering the Fallen##50447 |goto 29.29,29.81
 stickystart "Collect_Personal_Keepsakes"
 stickystart "Combat_The_Heartsbane_Coven"
 step
-Follow the path |goto 29.37,29.51 < 7 |only if walking
-Follow the path |goto 30.11,29.30 < 7 |only if walking
 kill Matron Adeline##133350 |q 50446/2 |goto 30.38,28.83
 |tip Use the "Witchrend" ability on her to kill her easier.
 |tip It appears as a button on the screen.
 step
-Follow the path |goto 30.11,29.32 < 7 |only if walking
-Follow the path |goto 29.71,29.27 < 7 |only if walking
-Follow the path |goto 29.38,28.72 < 7 |only if walking
 kill Matron Ceridwen##133307 |q 50446/1 |goto 29.11,27.64
 |tip Use the "Witchrend" ability on her to kill her easier.
 |tip It appears as a button on the screen.
 step
-Follow the path |goto 28.25,27.65 < 7 |only if walking
 kill Matron Letitia##133351 |q 50446/3 |goto 27.09,29.31
 |tip Use the "Witchrend" ability on her to kill her easier.
 |tip It appears as a button on the screen.
@@ -6132,14 +5335,10 @@ click Dormant Servitor+
 Combat the Heartsbane Coven |q 50448/1 |goto 28.11,27.88
 |only if havequest(50448) or completedq(50448)
 step
-Follow the path |goto 28.10,27.46 < 7 |only if walking
-Follow the path |goto 28.69,26.43 < 7 |only if walking
 talk Inquisitor Mace##131639
 accept Reeking Refuge##50449 |goto 28.54,25.65
 step
-Follow the path |goto 28.19,24.99 < 7 |only if walking
-Run up the stairs |goto 27.38,25.09 < 5 |only if walking
-Enter the building |goto 27.28,25.24 < 3 |walk
+Enter the building |goto 27.28,25.24 < 10 |walk
 Investigate the Farm |q 50449/1 |goto 27.06,25.23
 |tip Inside the building.
 step
@@ -6150,7 +5349,6 @@ accept Eating Through the Defenses##50451 |goto 27.06,25.23
 accept An Offensive Harvest##50450 |goto 27.06,25.23
 stickystart "Kill_Scavenging_Boars"
 step
-Leave the building |goto 27.28,25.24 < 3 |walk
 click Aromatic Onion+
 |tip They look like white onions with green fumes rising off of them half-buried in the ground around this area.
 collect 7 Aromatic Onion##157807 |q 50450/1 |goto 27.65,24.73
@@ -6158,18 +5356,13 @@ step
 label "Kill_Scavenging_Boars"
 kill 8 Scavenging Boar##133822 |q 50451/1 |goto 27.65,24.73
 step
-Run up the stairs |goto 27.38,25.09 < 5 |only if walking
-Enter the building |goto 27.28,25.24 < 3 |walk
+Enter the building |goto 27.28,25.24 < 10 |walk
 talk Harris Hocking##133839
 |tip Inside the building.
 turnin Eating Through the Defenses##50451 |goto 27.06,25.23
 turnin An Offensive Harvest##50450 |goto 27.06,25.23
 accept Potent Protection##50452 |goto 27.06,25.23
 step
-Leave the building |goto 27.28,25.24 < 3 |walk
-Follow the road |goto 28.19,23.90 < 7 |only if walking
-Cross the bridge |goto 27.07,21.23 < 7 |only if walking
-Follow the path |goto 27.05,20.79 < 7 |only if walking
 kill Sister Lilias##137371
 |tip Use the "Witchrend" ability on her to kill her easier.
 |tip It appears as a button on the screen.
@@ -6177,14 +5370,9 @@ kill Sister Lilias##137371
 |tip You may need help with this.
 collect Sister Lilias' Head##160026 |q 51356/1 |goto 27.07,19.54
 step
-Follow the road |goto 26.32,20.89 < 7 |only if walking
-Follow the path up |goto 25.55,17.69 < 7 |only if walking
-Follow the path up |goto 25.47,16.98 < 7 |only if walking
 talk Bertram##135025
 fpath Whitegrove Chapel |goto 25.75,16.56
 step
-Jump down here |goto 25.27,17.15 < 5 |only if walking
-Follow the path |goto 23.60,17.44 < 7 |only if walking
 click Simple Gravestone
 Place the Flowers |q 50754/1 |goto 23.26,17.47
 step
@@ -6193,9 +5381,6 @@ talk Alexander Treadward##135200
 turnin To Have Loved and Lost##50754 |goto 23.30,17.42
 accept Painful Memories##50758 |goto 23.30,17.42
 step
-Follow the path up |goto 23.26,16.47 < 7 |only if walking
-Follow the path |goto 23.13,15.79 < 7 |only if walking
-Follow the path |goto 22.92,14.60 < 7 |only if walking
 click Forgotten Bones
 Find Treadward's Ring |q 50758/1 |goto 23.31,12.60
 step
@@ -6204,14 +5389,7 @@ talk Alexander Treadward##134953
 turnin Painful Memories##50758 |goto 23.29,12.59
 accept Running Late##50759 |goto 23.29,12.59
 step
-Follow the path |goto 23.37,12.97 < 7 |only if walking
-Continue following the path |goto 23.57,13.83 < 7 |only if walking
-Enter the building |goto 23.85,14.98 < 5 |only if walking
-Follow the path |goto 24.10,15.13 < 3 |walk
-Run up the stairs |goto 24.37,14.94 < 3 |walk
-Run up the stairs |goto 24.37,15.11 < 5 |c |q 50759
-step
-Follow the path |goto 24.20,15.16 < 3 |walk
+Enter the building |goto 23.85,14.98 < 10 |only if walking
 Watch the dialogue
 talk Lord Arthur Waycrest##132994
 |tip Upstairs inside the building.
@@ -6226,13 +5404,6 @@ talk Lord Arthur Waycrest##132994
 |tip Upstairs inside the building.
 turnin Running Late##50759 |goto 24.31,14.94
 step
-Run down the stairs |goto 24.25,15.18 < 3 |c |q 50760 |future
-step
-Run down the stairs |goto 24.40,15.06 < 3 |walk
-Follow the path |goto 24.32,14.90 < 3 |walk
-Follow the path |goto 24.14,15.11 < 3 |walk
-Leave the building |goto 23.87,15.06 < 3 |walk
-Follow the path |goto 23.56,13.80 < 7 |only if walking
 talk Alexander Treadward##134953
 accept From This Day Forward##50760 |goto 23.29,12.59
 step
@@ -6250,14 +5421,7 @@ talk Lord Arthur Waycrest##132994
 turnin Blood in the Chapel##50761 |goto 23.25,12.70
 accept The Lady's Fate##50762 |goto 23.25,12.70
 step
-Follow the path |goto 23.37,12.97 < 7 |only if walking
-Continue following the path |goto 23.57,13.83 < 7 |only if walking
-Enter the building |goto 23.85,14.98 < 5 |only if walking
-Follow the path |goto 24.10,15.13 < 3 |walk
-Run down the stairs |goto 24.30,15.15 < 3 |walk
-Run down the stairs |goto 24.40,15.07 < 5 |c |q 50762
-step
-Follow the path |goto 24.31,14.84 < 3 |walk
+Enter the building |goto 23.85,14.98 < 10 |only if walking
 Watch the dialogue
 |tip Downstairs inside the building.
 Find Lady Waycrest |q 50762/1 |goto 24.28,15.13
@@ -6272,57 +5436,15 @@ click Assassin's Orders
 |tip Downstairs inside the building.
 collect Assassin's Orders##158914 |q 50762/3 |goto 24.25,15.01
 step
-Run up the stairs |goto 24.35,14.87 < 5 |c |q 50762
-step
-Run up the stairs |goto 24.39,15.11 < 3 |walk
-Follow the path |goto 24.30,15.16 < 3 |walk
-Follow the path |goto 24.13,15.11 < 3 |walk
-Leave the building |goto 23.87,15.05 < 3 |walk
-Follow the path |goto 23.66,14.85 < 7 |only if walking
-Continue following the path |goto 23.23,15.11 < 7 |only if walking
-Continue following the path |goto 23.10,15.71 < 7 |only if walking
 talk Alexander Treadward##135200
 turnin The Lady's Fate##50762 |goto 23.30,17.42
 accept One Last Request##50763 |goto 23.30,17.42
-step
-Follow the path |goto 23.62,17.46 < 7 |only if walking
-Follow the path up |goto 25.50,17.63 < 7 |only if walking
-Follow the path up |goto 25.44,17.00 < 7 |only if walking
-talk Lucille Waycrest##131638
-turnin Witchrending##50446 |goto 31.43,30.25
-turnin Remembering the Fallen##50447 |goto 31.43,30.25
-turnin Potent Protection##50452 |goto 31.43,30.25
-turnin One Last Request##50763 |goto 31.43,30.25
-step
-talk Lieutenant Course##137368
-turnin WANTED: Sister Lilias##51356 |goto 31.49,30.07
-step
-talk Angus Ballaster##132193
-accept Barrier Buster##50453 |goto 31.78,29.56
-step
-talk Marshal Everit Reade##131636
-accept A Traitor's Death##50454 |goto 31.35,30.29
 stickystart "Accept_Plundering_Pirates"
 stickystart "Drive_Back_The_Irontide"
 step
-Follow the path down |goto 25.43,17.00 < 7 |only if walking
-Follow the path |goto 25.72,17.76 < 7 |only if walking
-Follow the road |goto 26.40,18.07 < 10 |only if walking
-Continue following the road |goto 27.08,16.50 < 7 |only if walking
-Run down the stairs |goto 27.93,15.27 < 5 |only if walking
-Run down the stairs |goto 28.27,14.78 < 5 |only if walking
-Follow the path |goto 28.28,14.43 < 5 |only if walking
-Follow the path |goto 27.72,14.05 < 7 |only if walking
-Run down the stairs |goto 27.54,13.56 < 5 |only if walking
-Cross the bridge |goto 27.54,12.90 < 3 |only if walking
-Follow the path |goto 27.64,12.72 < 3 |only if walking
-Run down the stairs |goto 27.63,12.59 < 3 |only if walking
-Follow the path |goto 27.62,12.46 < 3 |only if walking
-Run up the stairs |goto 27.75,12.12 < 3 |only if walking
-Follow the path |goto 27.71,11.98 < 3 |only if walking
-Run up the stairs |goto 27.45,11.86 < 3 |only if walking
-Follow the path |goto 27.41,11.74 < 3 |only if walking
+Cross the bridge |goto 27.54,12.90 < 10 |only if walking
 click Ship's Log
+|tip At the top of the ship.
 accept Sweete's Orders##50960 |goto 27.45,11.61
 step
 label "Accept_Plundering_Pirates"
@@ -6341,19 +5463,25 @@ click Outlaw Cannon+
 Drive Back the Irontide |q 50959/1 |goto 27.53,15.38
 |only if havequest(50959) or completedq(50959)
 step
-Leave the building |goto 31.34,29.98 < 3 |walk
 talk Lucille Waycrest##131638
+turnin Potent Protection##50452 |goto 31.43,30.25
+turnin Witchrending##50446 |goto 31.43,30.25
+turnin One Last Request##50763 |goto 31.43,30.25
+turnin Remembering the Fallen##50447 |goto 31.43,30.25
 turnin Sweete's Orders##50960 |goto 31.43,30.25
+step
+talk Lieutenant Course##137368
+turnin WANTED: Sister Lilias##51356 |goto 31.49,30.07
+step
+talk Angus Ballaster##132193
+accept Barrier Buster##50453 |goto 31.78,29.56
+step
+talk Marshal Everit Reade##131636
+accept A Traitor's Death##50454 |goto 31.35,30.29
 stickystart "Collect_Blasting_Powder"
 stickystart "Slay_Goodspeeds_Guardsmen"
 step
-Follow the path |goto 32.05,29.91 < 7 |only if walking
-Follow the path down |goto 32.41,28.58 < 7 |only if walking
-Follow the path |goto 30.45,25.95 < 7 |only if walking
-Follow the path |goto 30.09,23.91 < 7 |only if walking
-Continue following the path |goto 29.86,22.57 < 7 |only if walking
-Continue following the path |goto 29.53,21.08 < 7 |only if walking
-Continue following the path |goto 29.15,19.87 < 7 |only if walking
+Follow the path |goto 30.81,26.17 < 50 |only if walking
 kill Captain Goodspeed##133841 |q 50454/1 |goto 28.94,19.07
 step
 label "Collect_Blasting_Powder"
@@ -6365,10 +5493,8 @@ label "Slay_Goodspeeds_Guardsmen"
 Kill Hexthralled enemies around this area
 Slay #10# Goodspeed's Guardsmen |q 50454/2 |goto 29.33,20.78
 step
-Follow the path up |goto 30.43,22.21 < 7 |only if walking
-Follow the path up |goto 30.70,22.16 < 7 |only if walking
-Jump up here |goto 30.64,21.50 < 3 |only if walking
 talk Inquisitor Sterntide##131642
+|tip On top of the wall.
 turnin Barrier Buster##50453 |goto 30.63,21.63
 accept Break On Through##50457 |goto 30.63,21.63
 step
@@ -6394,12 +5520,10 @@ click Falcon Cage+
 |tip They look like dark metal bird cages sitting on objects and on the ground around this area.
 Open #5# Falcon Cages |q 50455/1 |goto 31.79,24.53
 step
-Follow the path |goto 31.72,23.45 < 10 |only if walking
 talk Inquisitor Notley##131640
 turnin Hexed Hatchlings##50456 |goto 31.27,22.72
 turnin Leaving the Nest##50455 |goto 31.27,22.72
 step
-Follow the road |goto 30.95,20.84 < 7 |only if walking
 talk Lucille Waycrest##131638
 turnin Break On Through##50457 |goto 31.01,20.25
 accept To the Other Side##50583 |goto 31.01,20.25
@@ -6417,47 +5541,34 @@ step
 click Corlain Citizen's Journal
 Read the Corlain Journal |q 50586/1 |goto 30.75,19.57 |count 1
 step
-Follow the path |goto 30.58,18.85 < 7 |only if walking
 click Corlain Citizen's Journal
 Read the Corlain Journal |q 50586/1 |goto 30.21,18.37 |count 2
 step
-Follow the path |goto 30.36,17.91 < 7 |only if walking
 click Gate
 Open the East Gate |q 50583/1 |goto 29.85,17.92
 step
-Follow the path |goto 30.36,17.82 < 7 |only if walking
-Follow the path |goto 31.54,18.27 < 7 |only if walking
 click Corlain Citizen's Journal
 Read the Corlain Journal |q 50586/1 |goto 31.98,18.27 |count 3
 step
-Run up the stairs |goto 31.97,19.08 < 5 |only if walking
-Follow the path |goto 32.01,19.26 < 5 |only if walking
 click Corlain Citizen's Journal
 Read the Corlain Journal |q 50586/1 |goto 31.99,20.44 |count 4
 step
-Follow the path |goto 32.39,20.15 < 5 |only if walking
 click Gate
 Open the South Gate |q 50583/2 |goto 32.52,20.52
 step
-Run up the stairs |goto 32.48,19.94 < 5 |only if walking
 click Corlain Citizen's Journal
 Read the Corlain Journal |q 50586/1 |goto 32.68,20.01 |count 5
 step
-Follow the road |goto 33.05,19.86 < 7 |only if walking
-Follow the path |goto 33.86,20.00 < 7 |only if walking
-Follow the path |goto 34.01,20.67 < 7 |only if walking
+Follow the path |goto 33.98,20.27 < 20 |only if walking
 click Gate
 Open the West Gate |q 50583/3 |goto 33.74,20.95
 step
-Follow the path |goto 34.03,20.62 < 7 |only if walking
-Follow the road |goto 33.66,19.65 < 7 |only if walking
 click Corlain Citizen's Journal
 Read the Corlain Journal |q 50586/1 |goto 33.97,18.51 |count 6
 step
 label "Kill_Blighted_Horrors"
-kill Heartsbane Disciple##134237+
-|tip Attack the ones next to Blighted Horrors to be able to attack the Blighted Horrors.
 kill 4 Blighted Horror##137568 |q 50584/1 |goto 33.42,18.32
+|tip Attack the Heartsbane Disciples next to them around this area.
 |tip They will appear on your minimap as yellow dots.
 step
 label "Slay_Heartsbane_Witches"
@@ -6465,7 +5576,6 @@ Kill enemies around this area
 |tip Only Heartsbane and Coven enemies will count toward this quest goal.
 Slay #13# Heartsbane Witches |q 50585/1 |goto 33.42,18.32
 step
-Follow the road |goto 31.49,19.01 < 15 |only if walking
 talk Marshal Everit Reade##131636
 turnin Hexecutioner##50585 |goto 31.03,20.26
 turnin Ruinous Rituals##50584 |goto 31.03,20.26
@@ -6478,10 +5588,8 @@ step
 Watch the dialogue
 Begin Following Lucille Waycrest |goto 31.00,20.25 > 10 |c |q 50588
 step
-Follow the road |goto 31.48,18.00 < 7 |only if walking
-Follow the path up |goto 32.03,16.34 < 7 |only if walking
-Follow the path |goto 32.31,15.72 < 7 |only if walking
 Watch the dialogue
+|tip Follow Lucille Waycrest as she runs.
 Follow Lucille |q 50588/1 |goto 32.67,15.35
 step
 Watch the dialogue
@@ -6500,7 +5608,7 @@ Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azero
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Kul Tiras\\Stormsong Valley",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Stormsong Valley storylines:\n\nThe Tidesages of Stormsong\nThe Growing Tempest\nCycle of Hatred\nBriarback Kraul\nA House in Peril\nAt the Edge of Madness\nFrom the Depths They Come\nTreasure in Deadwash",
-condition_suggested=function() return level >= 110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(50733) and completedq(47189) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\StormsongValley",
@@ -7320,91 +6428,62 @@ step
 click Wanted: War Gore
 accept WANTED: War Gore##52876 |goto 46.74,48.13
 step
-Follow the path |goto 47.48,47.18 < 7 |only if walking
-Follow the path up |goto 48.11,46.02 < 7 |only if walking
-Follow the path up |goto 48.16,45.34 < 7 |only if walking
-Continue up the path |goto 47.70,43.48 < 7 |only if walking
-Follow the path |goto 47.95,42.33 < 7 |only if walking
-Follow the path |goto 48.08,40.24 < 7 |only if walking
-Follow the path |goto 47.88,39.35 < 7 |only if walking
+Follow the path up |goto 48.14,45.64 < 20 |only if walking
 click Bundle of Dynamite
 collect Bundle of Dynamite##160738 |q 51711/1 |goto 47.65,38.36
 step
-Follow the path |goto 47.71,36.76 < 10 |only if walking
-Follow the path up |goto 47.37,35.73 < 7 |only if walking
-Follow the path up |goto 47.07,35.30 < 7 |only if walking
-Continue up the path |goto 46.76,35.10 < 5 |only if walking
-Follow the path |goto 46.93,34.69 < 5 |only if walking
-Follow the path |goto 47.48,34.56 < 7 |only if walking
-Follow the path down |goto 48.46,34.62 < 7 |only if walking
-Follow the path |goto 48.79,33.48 < 5 |only if walking
-Enter the cave |goto 48.46,33.19 < 5 |c |q 52876
-step
-Follow the path |goto 48.09,33.60 < 5 |walk
+Follow the path up |goto 47.23,35.52 < 20 |only if walking
+Follow the path |goto 46.84,34.75 < 15 |only if walking
+Enter the cave |goto 48.46,33.19 < 10 |walk
 kill War Gore##141984 |q 52876/1 |goto 47.37,33.97
 |tip Inside the cave.
 |tip You may need help with this.
-step
-Follow the path |goto 48.03,33.66 < 5 |walk
-Leave the cave |goto 48.43,33.20 < 5 |c |q 51752
 stickystart "Kill_Mine_Technicians"
 stickystart "Slay_Warfang_Miners"
 step
-Follow the path up |goto 48.79,33.33 < 5 |only if walking
-Follow the path |goto 48.43,34.68 < 7 |only if walking
-Follow the path |goto 47.48,34.59 < 7 |only if walking
-Follow the path down |goto 47.00,34.68 < 7 |only if walking
-Jump down here |goto 46.75,35.66 < 5 |only if walking
-Enter the mine |goto 46.62,36.20 < 5 |walk
-Follow the path |goto Stormsong Valley/4 77.26,42.13 < 5 |walk
+Leave the cave |goto 48.43,33.20 < 10 |walk
+Follow the path |goto 48.81,33.46 < 15 |only if walking
+Enter the mine |goto 46.62,36.20 < 10 |walk
 talk Holger Nash##138924
 |tip Inside the mine.
 accept Get Out of Here##51726 |goto Stormsong Valley/4 66.33,38.48
 stickystart "Free_Captured_Miners"
 step
-Follow the path |goto 60.06,32.51 < 5 |walk
-Follow the path down |goto 55.09,24.27 < 5 |walk
-Follow the path down |goto 48.19,17.05 < 5 |walk
-Follow the path |goto 41.32,17.77 < 5 |walk
-kill Mine Technician##138521+
+Follow the path |goto 57.19,27.64 < 10 |walk
+click Cracked Mine Sweeper
 |tip Inside the mine.
-accept The Mine Sweeper##51881 |goto 46.44,36.02
-|tip You will eventually automatically accept this quest after looting.
+accept The Mine Sweeper##51881 |goto 47.19,15.59
 step
-Follow the path |goto 35.91,20.28 < 5 |walk
-Continue following the path |goto 30.11,26.86 < 5 |walk
-Follow the path up |goto 27.99,49.61 < 5 |walk
-Follow the path up |goto 27.47,55.41 < 3 |walk
-Follow the path up |goto 33.26,53.18 < 3 |walk
+Follow the path |goto 29.77,29.37 < 10 |walk
+Follow the path up |goto 27.36,54.99 < 10 |walk
 kill Chief Engineer Grizz##138581 |q 51752/1 |goto 35.51,38.93
 |tip Inside the mine.
 step
 label "Kill_Mine_Technicians"
-Jump down here |goto 38.99,30.05 < 5 |walk
-kill 4 Mine Technician##138521 |q 51711/3 |goto 41.12,24.26
+kill 4 Mine Technician##138521 |q 51711/3 |goto 41.37,17.76
 |tip Inside the mine.
 step
-Follow the path up |goto 41.44,17.51 < 5 |walk
-Follow the path up |goto 47.92,16.90 < 5 |walk
-Follow the path |goto 55.57,25.82 < 5 |c |q 51726
+Follow the path up |goto 41.37,17.76 < 10 |c |q 51726
 step
 label "Free_Captured_Miners"
 clicknpc Captured Miner##136333+
 |tip They look like humans mining next to the walls around this area inside the mine.
-Free #6# Captured Miners |q 51726/1 |goto 60.46,34.73
+Free #6# Captured Miners |q 51726/1 |goto 66.38,38.44
 step
 label "Slay_Warfang_Miners"
-kill 16 Warfang Miner##136015 |q 51711/2 |goto 60.46,34.73
-|tip Use the "Toss Dynamite" ability on Blackpowder Ore nodes next to Warfang Miners around this area inside the mine.
+Kill enemies around this area.
+|tip Inside the mine.
+|tip Use the "Toss Dynamite" ability.
+|tip It appears as a button on the screen.
+|tip Use it on Blackpowder Ore nodes next to enemies, and on enemies, around this area inside the mine.
 |tip They look like large rocky black ore nodes on the ground around this area inside the mine.
+Slay #16# Warfang Miners |q 51711/2 |goto 66.38,38.44
 step
 talk Holger Nash##138924
 |tip Inside the mine.
 turnin Get Out of Here##51726 |goto 66.38,38.44
 step
-Follow the path |goto 76.23,42.12 < 5 |walk
-Leave the mine |goto Stormsong Valley/0 46.60,36.17 < 5 |walk
-Follow the path |goto Stormsong Valley/0 46.70,36.43 < 5 |only if walking
+Leave the mine |goto Stormsong Valley/0 46.60,36.17 < 10 |walk
 talk Felecia Gladstone##138735
 turnin Having a Blast##51711 |goto Stormsong Valley/0 46.40,36.98
 turnin Grizzled##51752 |goto Stormsong Valley/0 46.40,36.98
@@ -7416,13 +6495,14 @@ stickystart "Burn_Lumber_Piles"
 stickystart "Collect_Energized_Core"
 stickystart "Kill_Warfang_Lumberjacks"
 step
-Follow the path |goto 47.99,37.06 < 7 |only if walking
 Burn the Siege Tower |q 51728/2 |goto 49.05,37.43 |count 1
-|tip Use the "Flamethrower" ability next to Lumber Piles around this area.
+|tip Use the "Flamethrower" ability.
+|tip Use it next to the Siege Tower.
 |tip It appears as a button on the screen.
 step
 Burn the Siege Tower |q 51728/2 |goto 49.65,38.08 |count 2
-|tip Use the "Flamethrower" ability next to Lumber Piles around this area.
+|tip Use the "Flamethrower" ability.
+|tip Use it next to the Siege Tower.
 |tip It appears as a button on the screen.
 step
 label "Burn_Lumber_Piles"
@@ -7453,19 +6533,12 @@ Pilot the Prototype Shredder |q 51712/1 |goto 51.24,36.72
 stickystart "Burn_Warfang_Buildings"
 stickystart "Slay_Horde_Soldiers"
 step
-Follow the path down |goto 50.41,36.01 < 7 |only if walking
-Cross the bridge |goto 50.30,34.24 < 7 |only if walking
-Follow the path |goto 50.36,33.55 < 7 |only if walking
-Follow the path up |goto 49.90,32.54 < 7 |only if walking
-Follow the path up |goto 49.48,32.55 < 5 |only if walking
-Cross the bridge |goto 49.27,33.03 < 5 |only if walking
+Cross the bridge |goto 50.30,34.24 < 15 |only if walking
+Follow the path up |goto 49.90,32.54 < 15 |only if walking
 kill General Blackstone##138683 |q 51712/3 |goto 49.14,34.46
 |tip Use the abilties on your action bar.
 step
 label "Burn_Warfang_Buildings"
-Cross the bridge |goto 49.18,33.88 < 5 |only if walking
-Follow the path down |goto 49.28,32.95 < 5 |only if walking
-Follow the path down |goto 49.73,32.45 < 7 |only if walking
 Burn #8# Warfang Buildings |q 51712/2 |goto 50.17,32.61
 |tip Use the "Flamethrower" ability on your action bar next to buildings around this area.
 |tip The buildings you can burn can be seen on your minimap.
@@ -7476,9 +6549,7 @@ Kill enemies around this area
 |tip Use the abilties on your action bar.
 Slay #30# Horde Soldiers |q 51712/4 |goto 50.17,32.61
 step
-Cross the bridge |goto 50.37,33.58 < 7 |only if walking
-Follow the path |goto 50.30,34.27 < 7 |only if walking
-Follow the path up |goto 50.30,35.53 < 7 |only if walking
+Cross the bridge |goto 50.37,33.58 < 15 |only if walking
 Return to Felecia Gladstone |goto 51.29,36.96 < 10 |c |q 51712
 step
 Stop Piloting the Prototype Shredder |outvehicle |goto 51.29,36.96 |q 51712
@@ -7487,28 +6558,14 @@ step
 talk Felecia Gladstone##138735
 turnin Eye for an Eye##51712 |goto 51.29,36.96
 step
-Leave the building |goto 43.35,54.16 < 3 |walk
-Cross the bridge |goto 43.57,53.29 < 7 |only if walking
-Follow the road |goto 43.40,52.21 < 7 |only if walking
-Follow the road |goto 43.00,50.65 < 7 |only if walking
-Continue following the road |goto 44.77,49.96 < 7 |only if walking
-Continue following the road |goto 46.76,50.55 < 7 |only if walking
-Follow the path up |goto 48.17,50.14 < 7 |only if walking
-Follow the path up |goto 48.38,49.63 < 7 |only if walking
-Follow the path |goto 47.29,48.29 < 7 |only if walking
-Enter the building |goto 46.76,47.94 < 3 |walk
+Follow the path |goto 48.12,40.34 < 30 |only if walking
+Follow the path |goto 48.10,46.13 < 30 |only if walking
 talk Matthew Gandorian##139635
-|tip Inside the building.
+|tip Inside the tent.
 turnin WANTED: War Gore##52876 |goto 46.67,47.98
 step
-Leave the building |goto 46.77,47.94 < 3 |walk
-Follow the path |goto 46.76,48.15 < 3 |walk
-Jump down carefully here |goto 46.49,48.49 < 5 |only if walking
-Follow the road |goto 44.62,50.01 < 7 |only if walking
-Follow the road |goto 43.01,50.61 < 7 |only if walking
-Follow the path |goto 40.23,49.45 < 7 |only if walking
-Continue following the path |goto 40.74,47.89 < 7 |only if walking
-Continue following the path |goto 40.56,46.74 < 7 |only if walking
+Follow the road |goto 44.62,50.01 < 30 |only if walking
+Follow the path |goto 40.23,49.45 < 30 |only if walking
 talk Maokka##136710
 turnin A Turtle's Invitation##50797 |goto 40.72,45.70
 step
@@ -7522,22 +6579,14 @@ stickystart "Clean_Sandbills"
 stickystart "Kill_Venture_Co_Oilers"
 stickystart "Kill_Venture_Co_Firestarters"
 step
-Follow the path |goto 40.07,44.95 < 10 |only if walking
-Follow the path |goto 38.71,44.23 < 5 |only if walking
 click Tortollan Chest
 collect Scroll of Harmonious Fins##160327 |q 51343/3 |goto 38.69,44.54
 step
-Follow the path |goto 38.79,43.73 < 7 |only if walking
-Continue following the path |goto 39.01,42.51 < 7 |only if walking
-Continue following the path |goto 39.17,40.78 < 7 |only if walking
-Continue following the path |goto 39.33,39.75 < 7 |only if walking
-Enter the cave |goto 39.05,39.28 < 5 |walk
+Enter the cave |goto 39.05,39.28 < 10 |walk
 click Tortollan Chest
 |tip Inside the cave.
 collect Scroll of Endless Tides##160329 |q 51343/1 |goto 38.71,39.34
 step
-Leave the cave |goto 39.09,39.27 < 5 |walk
-Follow the path up |goto 39.90,37.87 < 7 |only if walking
 talk Scroll of Flight##137318
 fpath Seekers Vista |goto 40.02,37.32
 step
@@ -7545,19 +6594,11 @@ talk Okada##137668
 |tip He walks around this area.
 home Seekers' Vista |goto 40.84,37.10 |q 50640 |future
 step
-Follow the path |goto 39.96,37.21 < 7 |only if walking
-Continue following the path |goto 38.34,37.32 < 7 |only if walking
-Continue following the path |goto 37.18,36.95 < 7 |only if walking
-Continue following the path |goto 35.61,37.24 < 7 |only if walking
-Follow the path |goto 34.49,37.45 < 7 |only if walking
-Follow the path |goto 34.14,36.88 < 7 |only if walking
+Follow the path |goto 35.57,37.27 < 20 |only if walking
 click Tortollan Chest
 collect Scroll of Graceful Breaths##160270 |q 51343/2 |goto 34.34,36.42
 step
 label "Clean_Sandbills"
-Follow the path |goto 34.18,37.01 < 7 |only if walking
-Follow the path |goto 34.59,37.49 < 7 |only if walking
-Continue following the path |goto 35.88,37.30 < 7 |only if walking
 clicknpc Oily Sandbill Piper##137248+
 |tip They look like dark colored birds on the ground around this area.
 Clean #8# Sandbills |q 51339/1 |goto 36.28,38.40
@@ -7568,9 +6609,6 @@ step
 label "Kill_Venture_Co_Firestarters"
 kill 10 Venture Co. Firestarter##138093 |q 51352/1 |goto 36.28,38.40
 step
-Follow the path |goto 36.89,36.95 < 7 |only if walking
-Follow the path up |goto 39.60,37.48 < 7 |only if walking
-Follow the path |goto 40.12,37.80 < 5 |only if walking
 talk Toki##135795
 turnin Don't Play with Matches##51352 |goto 40.19,37.65
 accept Make Loh Go##53369 |goto 40.19,37.65
@@ -7579,12 +6617,14 @@ talk Toki##135795
 Tell him _"I am ready."_
 Speak with Toki |q 53369/1 |goto 40.19,37.65
 step
-Guide Loh to the First Goal |q 53369/2 |goto 40.32,37.72
+Guide Loh to the First Goal |q 53369/2
 |tip Move Loh to the finish line marker in the middle of the piles of small boxes.
+|tip Make sure Loh doesn't cross his own path.
 |tip Use the abilities on your action bar.
 step
-Guide Loh Through All the Points Without Crossing His Own Path |q 53369/3 |goto 40.32,37.72
+Guide Loh Through All the Points Without Crossing His Own Path |q 53369/3
 |tip Move Loh to the treasure chest, then the finish line marker.
+|tip Make sure Loh doesn't cross his own path.
 |tip Use the abilities on your action bar.
 step
 Click the Completed Quest Box:
@@ -7595,9 +6635,7 @@ turnin Cleaning Bills##51339 |goto 40.41,36.94
 turnin Swimming Lessons##51343 |goto 40.41,36.94
 accept Cave of Ai'twen##51353 |goto 40.41,36.94
 step
-Follow the path down |goto 40.41,36.24 < 7 |only if walking
-Follow the path |goto 40.07,35.58 < 7 |only if walking
-Enter the underwater cave |goto 37.17,32.60 < 7 |walk
+Enter the underwater cave |goto 37.17,32.60 < 20 |walk
 talk Loroja##137453
 |tip Inside the underwater cave.
 turnin Cave of Ai'twen##51353 |goto 35.68,31.24
@@ -7605,8 +6643,7 @@ accept Flavorable Offering##51371 |goto 35.68,31.24
 accept Response Required##51221 |goto 35.68,31.24
 stickystart "Collect_Seaweed"
 step
-Leave the underwater cave |goto 37.42,32.76 < 7 |walk
-Follow the path |goto 37.92,31.54 < 7 |only if walking
+Leave the underwater cave |goto 37.42,32.76 < 20 |walk
 click Bot Buster Bomb
 |tip Underwater.
 accept Explosive Situation##51540 |goto 37.85,28.51
@@ -7627,7 +6664,7 @@ click Seaweed+
 |tip They look like tall stringy plants on the ground underwater around this area.
 collect 50 Seaweed##160055 |q 51371/1 |goto 38.26,28.29
 step
-Enter the underwater cave |goto 37.17,32.60 < 7 |walk
+Enter the underwater cave |goto 37.17,32.60 < 20 |walk
 talk Loroja##137453
 |tip Inside the underwater cave.
 turnin Flavorable Offering##51371 |goto 35.68,31.24
@@ -7651,10 +6688,8 @@ accept What's Yours is Mined##51222 |goto 35.74,31.31
 stickystart "Steal_Mines"
 stickystart "Kill_Venture_Co_Seawrenches"
 step
-Leave the underwater cave |goto 37.43,32.70 < 7 |walk
-Follow the path |goto 38.03,31.74 < 10 |only if walking
-Continue following the path |goto 37.63,28.37 < 10 |only if walking
-Continue following the path |goto 35.92,26.45 < 10 |only if walking
+Leave the underwater cave |goto 37.43,32.70 < 20 |walk
+Follow the path |goto 37.29,27.06 < 30 |only if walking
 Destroy the Reef Breaker |q 51545/1 |goto 35.39,27.76
 |tip Use the "Bot Cluster Bomb" ability on it.
 |tip It appears as a button on the screen.
@@ -7666,7 +6701,7 @@ Steal #10# Sea Mines |q 51222/1 |goto 36.46,25.23
 step
 label "Kill_Venture_Co_Seawrenches"
 kill 6 Venture Co. Seawrench##137544 |q 51220/1 |goto 36.46,25.23
-|tip Underwater.
+|tip Underwater around this area.
 step
 talk Toki##137554
 turnin Deep Sea Venture##51220 |goto 34.37,26.32
@@ -7678,69 +6713,42 @@ Mount Ai'twen |q 51386/1 |goto 34.33,25.95
 step
 Watch the dialogue
 Kill enemies around this area
-|tip Use the ability on your action bar.
+|tip Use the "Sea Mine Toss" ability on your action bar.
 Slay #40# Venture Co. Forces |q 51386/2 |goto 38.12,23.91
 step
 Watch the dialogue
-Return to Seekers' Vista |goto 40.10,35.49 < 7 |c |q 51386 |notravel
+Return to Seekers' Vista |goto 40.10,35.49 < 10 |c |q 51386 |notravel
 step
-Follow the path |goto 40.44,36.26 < 7 |only if walking
-Follow the path down |goto 40.51,36.88 < 7 |only if walking
 talk Toki##135795
 turnin Battle Victorious##51386 |goto 40.20,37.65
 step
-Follow the path |goto 40.12,37.77 < 3 |only if walking
-Follow the path |goto 39.63,37.26 < 7 |only if walking
-Enter the underwater cave |goto 37.17,32.60 < 7 |walk
+Enter the underwater cave |goto 37.17,32.60 < 20 |walk
 talk Loroja##137453
 |tip Inside the underwater cave.
 turnin Breaker Bad##51545 |goto 35.68,31.24
 step
-Run up the stairs |goto 58.89,70.36 < 5 |only if walking
-Enter the building |goto 58.76,70.45 < 3 |walk
 talk Mayor Roz##134752
 |tip Inside the building.
-turnin A Question of Quillpower##50640 |goto 58.63,70.43
 turnin WANTED: Thundersnout##49730 |goto 58.63,70.43
+turnin A Question of Quillpower##50640 |goto 58.63,70.43
 step
-Leave the building |goto 58.75,70.45 < 3 |walk
-Run down the stairs |goto 42.90,57.45 < 5 |only if walking
-Follow the path |goto 43.08,57.61 < 5 |only if walking
-Cross the bridge |goto 43.50,58.31 < 7 |only if walking
-Follow the path |goto 43.99,59.21 < 7 |only if walking
-Follow the road |goto 44.74,61.62 < 7 |only if walking
-Follow the road |goto 43.84,62.39 < 7 |only if walking
-Continue following the road |goto 42.38,62.07 < 7 |only if walking
-Continue following the road |goto 40.40,63.27 < 7 |only if walking
-Continue following the road |goto 39.06,62.89 < 7 |only if walking
+Cross the bridge |goto 43.52,58.36 < 15 |only if walking
+Follow the road |goto 44.67,61.70 < 30 |only if walking
 click Marie's Package
 accept Undelivered Package##51218 |goto 38.47,63.03
 step
-Follow the road |goto 38.03,63.18 < 7 |only if walking
-Continue following the road |goto 37.12,64.15 < 7 |only if walking
-Continue following the road |goto 34.94,65.26 < 7 |only if walking
-Continue following the road |goto 32.48,64.97 < 10 |only if walking
-Continue following the road |goto 31.83,65.31 < 7 |only if walking
-Continue following the road |goto 31.16,66.33 < 7 |only if walking
 talk Alexa Davenport##138180
 fpath Millstone Hamlet |goto 30.75,66.56
 step
-Run up the stairs |goto 31.29,67.02 < 5 |only if walking
-Enter the building |goto 31.45,67.07 < 3 |walk
 talk Carol Netley##143328
 |tip Inside the building.
 home Millstone Hamlet |goto 31.51,67.27 |q 50635 |future
 step
-Leave the building |goto 31.45,67.07 < 3 |walk
-Run up the stairs |goto 30.61,66.91 < 5 |only if walking
-Enter the building |goto 30.47,66.89 < 3 |walk
 talk Marie Davenport##136658
 |tip Inside the building.
 turnin Undelivered Package##51218 |goto 30.34,66.81
 accept Be A Dear##51214 |goto 30.34,66.81
 step
-Leave the building |goto 30.47,66.89 < 3 |walk
-Follow the path |goto 30.68,67.07 < 5 |only if walking
 click Water Bucket
 Gather a Water Bucket |q 51214/1 |goto 30.67,67.60
 step
@@ -7756,8 +6764,6 @@ click Logs
 Gather Logs |q 51214/3 |goto 29.79,67.06
 stickystart "Collect_Gunpowder"
 step
-Follow the path down |goto 29.60,67.28 < 7 |only if walking
-Follow the path down |goto 29.01,66.89 < 7 |only if walking
 use the Bug Zapper##159882
 |tip Use it on Bilge Rats around this area.
 clicknpc Bilge Rat##136686+
@@ -7768,8 +6774,6 @@ kill Volatile Rat##137126+
 collect 100 Gunpowder##159776 |q 51492/1 |goto 28.15,66.36
 stickystart "Collect_Spider_Silk"
 step
-Follow the path up |goto 28.66,67.21 < 7 |only if walking
-Follow the path |goto 29.08,68.49 < 7 |only if walking
 click Sack of Flour
 Gather a Sack of Flour |q 51214/2 |goto 29.27,69.66
 step
@@ -7781,41 +6785,26 @@ talk Charles Davenport##136574
 turnin Aww, Rats!##51205 |goto 29.79,67.11
 turnin Basement Dwellers##51251 |goto 29.79,67.11
 step
-Run up the stairs |goto 30.13,66.71 < 5 |only if walking
-Enter the building |goto 30.19,66.70 < 3 |walk
 talk Marie Davenport##136658
 |tip Inside the building.
 turnin Be A Dear##51214 |goto 30.34,66.81
 turnin Gunpowder Plot##51492 |goto 30.34,66.81
 accept Milking Goats##51215 |goto 30.34,66.81
 step
-Leave the building |goto 30.46,66.89 < 3 |walk
-Follow the path up |goto 31.14,67.89 < 7 |only if walking
-Follow the path up |goto 31.89,68.40 < 7 |only if walking
 talk Shepherd Milbrooke##136414
 accept Cry Wolf##51203 |goto 31.86,69.52
 accept The Black Sheep##51200 |goto 31.86,69.52
 stickystart "Collect_Mountain_Goat_Milk"
 stickystart "Kill_Feral_Razorclaws"
 step
-Follow the path up |goto 31.31,70.63 < 7 |only if walking
-Follow the path up |goto 29.70,72.12 < 10 |only if walking
-Continue up the path |goto 28.15,73.05 < 7 |only if walking
-Continue up the path |goto 27.01,74.12 < 7 |only if walking
 clicknpc Millie##136734
 Rescue Millie |q 51200/1 |goto 26.54,75.35
 step
-Follow the path up |goto 26.87,75.27 < 5 |only if walking
-Follow the path up |goto 27.32,76.63 < 7 |only if walking
-Follow the path |goto 27.46,77.24 < 7 |only if walking
-Enter the cave |goto 28.00,77.92 < 5 |walk
+Follow the path up |goto 27.38,76.70 < |only if walking
+Enter the cave |goto 28.00,77.92 < 10 |walk
 kill Razorclaw Alpha##136417 |q 51204/1 |goto 28.03,79.73
 |tip Inside the cave.
 |tip You may need help with this.
-step
-Leave the cave |goto 27.99,77.90 < 5 |walk
-Jump down here |goto 27.95,77.33 < 5 |only if walking
-Follow the path |goto 28.35,74.18 < 10 |c |q 51215
 step
 label "Collect_Mountain_Goat_Milk"
 clicknpc Mother Goat##136939+
@@ -7825,16 +6814,11 @@ step
 label "Kill_Feral_Razorclaws"
 kill 10 Feral Razorclaw##136416 |q 51203/1 |goto 29.01,73.23
 step
-Follow the path |goto 31.28,70.71 < 10 |only if walking
 talk Shepherd Milbrooke##136414
 turnin WANTED: Razorclaw Alpha##51204 |goto 31.86,69.52
 turnin Cry Wolf##51203 |goto 31.86,69.52
 turnin The Black Sheep##51200 |goto 31.86,69.52
 step
-Follow the path down |goto 31.94,68.54 < 7 |only if walking
-Follow the path |goto 31.04,67.77 < 7 |only if walking
-Run up the stairs |goto 30.61,66.92 < 5 |only if walking
-Enter the building |goto 30.47,66.89 < 3 |walk
 talk Marie Davenport##136658
 |tip Inside the building.
 turnin Milking Goats##51215 |goto 30.33,66.81
@@ -7860,26 +6844,13 @@ accept Ettin It Done##51207 |goto 30.34,66.80
 accept Cookie Delivery##51504 |goto 30.34,66.80
 stickystart "Slay_Ettins"
 step
-Leave the building |goto 30.47,66.89 < 3 |walk
-Follow the path up |goto 31.15,67.90 < 7 |only if walking
-Follow the path |goto 32.48,68.91 < 7 |only if walking
-Follow the path up |goto 33.07,69.54 < 7 |only if walking
-Follow the path |goto 33.72,70.01 < 7 |only if walking
-Follow the path |goto 34.92,70.30 < 7 |only if walking
-Continue following the path |goto 35.45,71.38 < 7 |only if walking
-Follow the path up |goto 35.22,73.06 < 7 |only if walking
-Follow the path up |goto 35.14,74.10 < 7 |only if walking
-Follow the path |goto 35.53,74.65 < 7 |only if walking
 talk Charles Davenport##136574
 turnin Cookie Delivery##51504 |goto 36.21,74.72
 accept Wheat A Minute##51208 |goto 36.21,74.72
 accept Mighty Grokkfist##51209 |goto 36.21,74.72
 stickystart "Gather_Grain_Sacks"
 step
-Follow the path |goto 36.42,75.00 < 7 |only if walking
-Follow the path up |goto 37.35,75.19 < 7 |only if walking
-Follow the path up |goto 38.38,75.18 < 7 |only if walking
-Follow the path |goto 38.71,73.19 < 7 |only if walking
+Follow the path up |goto 37.83,75.43 < 20 |only if walking
 use the Pack of Rats##160063
 |tip It will summon a bunch of rats to help you fight.
 kill Grokkfist##136420 |q 51209/1 |goto 38.78,72.02
@@ -7887,9 +6858,6 @@ kill Grokkfist##136420 |q 51209/1 |goto 38.78,72.02
 |tip He will appear on your minimap as a yellow dot.
 step
 label "Gather_Grain_Sacks"
-Follow the path |goto 38.84,72.07 < 7 |only if walking
-Follow the path down |goto 38.68,73.23 < 7 |only if walking
-Follow the path down |goto 38.32,75.40 < 7 |only if walking
 click Grain Sack+
 |tip They look like tan rectangle bags on the ground around this area.
 Gather #10# Grain Sacks |q 51208/1 |goto 36.65,74.97
@@ -7901,9 +6869,6 @@ use the Flour Bomb##160052
 Kill Ettin enemies around this area
 Slay #8# Ettins |q 51207/1 |goto 36.65,74.97
 step
-Leave the building |goto 31.45,67.08 < 3 |walk
-Run up the stairs |goto 30.62,66.90 < 5 |only if walking
-Enter the building |goto 30.47,66.89 < 3 |walk
 talk Charles Davenport##136574
 |tip Inside the building.
 turnin Wheat A Minute##51208 |goto 30.42,66.92
@@ -7913,13 +6878,6 @@ talk Marie Davenport##136658
 |tip Inside the building.
 turnin Ettin It Done##51207 |goto 30.33,66.80
 step
-Leave the building |goto 30.19,66.70 < 3 |walk
-Follow the path down |goto 29.92,66.66 < 7 |only if walking
-Follow the path |goto 29.85,65.19 < 7 |only if walking
-Follow the path |goto 29.93,64.51 < 7 |only if walking
-Follow the path down |goto 29.54,62.47 < 7 |only if walking
-Follow the path |goto 30.13,60.48 < 7 |only if walking
-Follow the path |goto 30.29,59.54 < 7 |only if walking
 talk Lieutenant Bauer##131002
 turnin Trouble at Fort Daelin##49818 |goto 30.16,59.20
 turnin Helping Out, Somewhere Else##52068 |goto 30.16,59.20
@@ -7930,9 +6888,6 @@ stickystart "Collect_Songstone"
 stickystart "Free_Villagers"
 stickystart "Kill_Bound_Seasurges"
 step
-Follow the path down |goto 29.86,58.87 < 7 |only if walking
-Follow the path |goto 29.05,58.95 < 7 |only if walking
-Follow the path |goto 28.29,60.01 < 7 |only if walking
 kill Binder Sa'thress##134341 |q 50616/1 |goto 27.73,62.40
 step
 label "Collect_Songstone"
@@ -7949,32 +6904,18 @@ step
 label "Kill_Bound_Seasurges"
 kill 6 Bound Seasurge##134340 |q 50614/1 |goto 27.85,61.24
 step
-Follow the path up |goto 27.12,58.65 < 7 |only if walking
-Follow the path |goto 26.95,57.78 < 7 |only if walking
-Run up the stairs |goto 26.63,57.32 < 5 |only if walking
-Follow the path |goto 26.42,57.20 < 5 |only if walking
-Cross the bridge |goto 26.18,56.70 < 5 |only if walking
-Enter the building |goto 26.00,55.77 < 3 |only if walking
-Run up the stairs |goto 26.05,55.56 < 3 |only if walking
-Run up the stairs |goto 25.99,55.38 < 3 |only if walking
-Leave the building |goto 25.86,55.43 < 3 |c |q 50376 |future
-step
-Follow the path |goto 25.85,55.71 < 3 |only if walking
-Run up the stairs |goto 25.97,55.73 < 3 |only if walking
-Run up the stairs |goto 26.08,55.62 < 3 |only if walking
 talk Coxswain Hook##133576
+|tip On top of the building.
 accept Deadliest Cache: Reel Big Fish##50376 |goto 26.00,55.22
 step
 talk Coxswain Hook##133576
 Ask him _"And then what happened?"_
 Listen to Coxswain Hook's Tale |q 50376/1 |goto 26.00,55.22
 step
-Jump down here |goto 26.15,55.66 < 5 |only if walking
 Watch the dialogue
 kill 12 Land Shark##133613 |q 50376/2 |goto 26.49,55.37
 |tip Use the abilities on your action bar.
 step
-Run up the stairs |goto 26.45,53.21 < 5 |only if walking
 kill Tidemaw##133650
 |tip Use the abilities on your action bar.
 Slay the Land Shark Alpha |q 50376/3 |goto 26.34,52.69
@@ -7998,7 +6939,6 @@ click Slagshot Slammer
 Gather the Fishin' Rod |q 50391/2 |goto 25.92,55.18
 stickystart "Kill_Drowned_Horrors"
 step
-Jump down here |goto 25.83,55.20 < 3 |only if walking
 click Slagshot Fishflayer+
 |tip They look like metal cannons on the wooden docks around this area.
 |tip They will appear on your minimap as yellow dots.
@@ -8071,27 +7011,14 @@ talk Coxswain Hook##133576
 Ask him _"And then what happened?"_
 Listen to Coxswain Hook's Tale |q 52130/1 |goto 26.01,55.22
 step
-Jump down here |goto 25.84,55.20 < 3 |only if walking
-Run down the stairs |goto 25.47,54.95 < 5 |only if walking
-Follow the path |goto 25.23,55.02 < 5 |only if walking
-Run down the stairs |goto 25.12,54.70 < 5 |only if walking
 Watch the dialogue
 click Signal Fire
 Light the Southern Signal Fire |q 52130/3 |goto 25.04,54.26
 step
-Run up the stairs |goto 25.09,54.52 < 5 |only if walking
-Follow the path |goto 25.13,54.69 < 5 |only if walking
-Run up the stairs |goto 25.24,55.02 < 5 |only if walking
-Follow the path |goto 25.46,54.94 < 5 |only if walking
-Follow the path |goto 26.56,54.42 < 5 |only if walking
-Run down the stairs |goto 26.39,53.62 < 5 |only if walking
-Follow the path |goto 26.32,53.17 < 5 |only if walking
 click Signal Fire
 Light the Northern Signal Fire |q 52130/2 |goto 26.34,52.81
 step
-Run up the stairs |goto 26.31,53.18 < 5 |only if walking
-Follow the path |goto 26.40,53.62 < 5 |only if walking
-Follow the path |goto 26.54,54.46 < 5 |only if walking
+Run up the stairs |goto 26.31,53.19 < 10 |only if walking
 click Spyglass
 Watch the dialogue
 Scan the Horizon |q 52130/4 |goto 26.26,54.58
@@ -8111,41 +7038,23 @@ step
 talk Coxswain Hook##133576
 turnin Deadliest Cache: Carpe Diem##52130 |goto 26.00,55.22
 step
-Jump down here |goto 26.15,55.67 < 5 |only if walking
-Follow the path |goto 27.23,55.77 < 7 |only if walking
-Follow the path |goto 27.78,56.88 < 7 |only if walking
-Continue following the path |goto 28.97,58.00 < 7 |only if walking
-Follow the path up |goto 29.42,58.56 < 7 |only if walking
-Follow the path |goto 29.87,58.89 < 7 |only if walking
 talk Lieutenant Bauer##131002
 turnin Freedom for the Sea##50614 |goto 30.16,59.20
 turnin A Bit of a Bind##50616 |goto 30.16,59.20
 turnin Caught in the Net##50621 |goto 30.16,59.20
 accept The Shifting Tides##50635 |goto 30.16,59.20
 step
-Follow the path |goto 30.84,58.99 < 7 |only if walking
-Continue following the path |goto 32.61,58.15 < 7 |only if walking
-Follow the road |goto 34.10,58.40 < 7 |only if walking
-Follow the road |goto 34.56,57.57 < 7 |only if walking
-Continue following the road |goto 34.55,56.75 < 7 |only if walking
-Continue following the road |goto 34.25,55.53 < 7 |only if walking
-Continue following the road |goto 34.49,52.91 < 7 |only if walking
-Run up the stairs |goto 35.20,50.84 < 5 |only if walking
-Follow the path |goto 35.20,50.48 < 5 |only if walking
-Run up the stairs |goto 35.13,49.68 < 5 |only if walking
-Follow the path |goto 34.95,49.41 < 5 |only if walking
-Follow the path |goto 34.43,48.32 < 5 |only if walking
+Follow the path |goto 34.55,56.77 < 20 |only if walking
+Run up the stairs |goto 35.20,50.83 < 15 |only if walking
 talk Rikal##131014
 turnin The Shifting Tides##50635 |goto 35.02,47.67
 accept Eeling in a Big One##50645 |goto 35.02,47.67
 accept Filching from Thieves##50649 |goto 35.02,47.67
 step
-Enter the building |goto 34.75,47.25 < 3 |walk
 talk Staff Sergeant Cotner##138210
 |tip Inside the building.
 home Fort Daelin |goto 34.83,47.15 |q 49908 |future
 step
-Leave the building |goto 34.76,47.23 < 3 |walk
 talk Specialist Wembley##131003
 accept Facing the Invaders##50644 |goto 34.58,47.16
 accept Reclaiming our Defenses##50653 |goto 34.58,47.16
@@ -8156,42 +7065,30 @@ stickystart "Collect_Tide_Beacons"
 stickystart "Collect_Abyssal_Fangs"
 stickystart "Slay_Northern_Naga_Forces"
 step
-Follow the path |goto 33.74,46.62 < 7 |only if walking
-Follow the path |goto 32.94,46.56 < 7 |only if walking
-Run down the stairs |goto 32.72,46.32 < 5 |only if walking
-Follow the path |goto 32.49,46.05 < 5 |only if walking
-Follow the path down |goto 32.25,44.84 < 7 |only if walking
-Follow the path |goto 32.04,40.93 < 7 |only if walking
-Follow the path |goto 33.45,40.51 < 7 |only if walking
-Continue following the path |goto 33.95,40.77 < 7 |only if walking
-Continue following the path |goto 34.97,41.91 < 7 |only if walking
 clicknpc Stranded Battalion Soldier##131409+
 |tip They look like human soldiers kneeling and floating while kicking their legs on the ground around this area.
-Save #8# Battalion Soldiers |q 50653/1 |goto 35.68,42.04
+|tip You can find more downstairs on the beaches around this area.
+Save #8# Battalion Soldiers |q 50653/1 |goto 33.34,43.37
 step
 label "Collect_Tide_Beacons"
 click Tidal Beacon+
 |tip They look like small metal lanterns sitting in blue circles on the ground around this area.
-collect 7 Tidal Beacon##158183 |q 50649/1 |goto 35.68,42.04
+|tip You can find more downstairs on the beaches around this area.
+collect 7 Tidal Beacon##158183 |q 50649/1 |goto 33.34,43.37
 step
 label "Collect_Abyssal_Fangs"
 kill Abyssal Eel##129980+
-collect 16 Abyssal Fang##158181 |q 50645/1 |goto 35.68,42.04
+|tip You can find more downstairs on the beaches around this area.
+collect 16 Abyssal Fang##158181 |q 50645/1 |goto 33.34,43.37
 step
 label "Slay_Northern_Naga_Forces"
 Kill Zeth'jir enemies around this area
 |tip Zeth'jir Attackers will not count for this quest goal.
-Slay #15# Northern Naga Forces |q 50644/1 |goto 35.68,42.04
+|tip You can find more downstairs on the beaches around this area.
+Slay #15# Northern Naga Forces |q 50644/1 |goto 33.34,43.37
 step
-Run up the stairs |goto 34.43,42.86 < 5 |only if walking
-Follow the path |goto 33.75,43.29 < 5 |only if walking
-Follow the path |goto 33.58,44.15 < 7 |only if walking
-Continue following the path |goto 34.09,44.69 < 7 |only if walking
-Run up the stairs |goto 34.53,45.58 < 5 |only if walking
-Follow the path |goto 34.38,45.84 < 5 |only if walking
-Follow the path |goto 34.21,46.35 < 7 |only if walking
-Follow the path |goto 34.49,47.10 < 5 |only if walking
 talk Specialist Wembley##131003
+|tip Upstairs inside the fort.
 turnin Facing the Invaders##50644 |goto 34.58,47.16
 turnin Reclaiming our Defenses##50653 |goto 34.58,47.16
 accept Any Ammo Will Do##50672 |goto 34.58,47.16
@@ -8218,11 +7115,7 @@ turnin You're a Shark##50773 |goto 35.01,47.68
 stickystart "Arm_Explosive_Traps"
 stickystart "Collect_Zethjir_Harpoons"
 step
-Follow the path |goto 33.06,48.24 < 7 |only if walking
-Follow the path |goto 32.79,48.46 < 7 |only if walking
-Run down the stairs |goto 32.65,48.71 < 5 |only if walking
-Follow the path |goto 32.46,48.97 < 5 |only if walking
-Follow the path |goto 31.47,47.96 < 7 |only if walking
+Run down the stairs |goto 32.63,48.72 < 15 |only if walking
 kill Zeth'jir Seacaller##130824+
 |tip You can find more downstairs on the beach.
 collect Zeth'jir Channeling Rod##158200 |q 50679/1 |goto 31.00,47.36
@@ -8240,12 +7133,8 @@ click Zeth'jir Harpoon+
 |tip You can find more downstairs on the beach.
 collect 20 Zeth'jir Harpoon##156482 |q 50672/1 |goto 31.00,47.36
 step
-Follow the path |goto 31.38,47.97 < 10 |only if walking
-Run up the stairs |goto 32.47,48.97 < 5 |only if walking
-Follow the path |goto 32.64,48.73 < 5 |only if walking
-Continue following the path |goto 32.94,48.27 < 7 |only if walking
-Continue following the path |goto 33.77,48.19 < 7 |only if walking
 talk Specialist Wembley##131003
+|tip Upstairs inside the fort.
 turnin Any Ammo Will Do##50672 |goto 34.58,47.16
 turnin Piercing the Shield##50679 |goto 34.58,47.16
 turnin Problem Solving with Gunpowder##50698 |goto 34.58,47.16
@@ -8253,9 +7142,7 @@ accept A Snake with Three Heads##50705 |goto 34.58,47.16
 accept Clearing the Delta##50706 |goto 34.58,47.16
 stickystart "Slay_Zethjir_Forces"
 step
-Jump down here |goto 32.86,49.35 < 5 |only if walking
-Follow the path down |goto 32.52,50.16 < 7 |only if walking
-Follow the path |goto 32.68,51.39 < 7 |only if walking
+Jump down here |goto 32.87,49.40 < 15 |only if walking
 use Zeth'jir Channeling Rod##158332
 |tip Use it on Binder Ser'less.
 kill Binder Ser'less##134809 |q 50705/2 |goto 32.64,53.96
@@ -8272,10 +7159,8 @@ label "Slay_Zethjir_Forces"
 Kill Zeth'jir enemies around this area
 Slay #15# Zeth'jir Forces |q 50706/1 |goto 31.32,54.72
 step
-Follow the path |goto 33.41,51.99 < 7 |only if walking
-Jump up here |goto 33.99,53.25 < 5 |only if walking
-Follow the path |goto 34.22,54.07 < 7 |only if walking
 talk Commander Kellam##131000
+|tip On the bridge.
 turnin A Snake with Three Heads##50705 |goto 34.11,54.87
 turnin Clearing the Delta##50706 |goto 34.11,54.87
 accept From the Depths##49831 |goto 34.11,54.87
@@ -8289,29 +7174,15 @@ talk Commander Kellam##131000
 turnin From the Depths##49831 |goto 34.11,54.87
 accept Back to Brennadam##49908 |goto 34.11,54.87
 step
-Follow the path |goto 34.48,52.94 < 7 |only if walking
-Follow the path |goto 35.04,51.63 < 7 |only if walking
-Run up the stairs |goto 35.20,50.85 < 5 |only if walking
-Follow the path |goto 35.20,50.47 < 5 |only if walking
-Run up the stairs |goto 35.13,49.68 < 5 |only if walking
-Follow the path |goto 34.96,49.42 < 5 |only if walking
-Follow the path |goto 34.44,48.37 < 7 |only if walking
-Follow the path |goto 59.50,70.14 < 7 |only if walking
+Run up the stairs |goto 35.20,50.85 < 15 |only if walking
 talk Squire Augustus III##131004
 turnin Back to Brennadam##49908 |goto 59.51,69.95
 step
-Run up the stairs |goto 58.90,70.37 < 5 |only if walking
-Enter the building |goto 58.76,70.46 < 3 |walk
 talk "Nasty" Buck##138221
 |tip He walks around this area inside the building.
 home The Golden Flagon |goto 58.58,70.31 |q 49997 |future
 step
-Leave the building |goto 58.75,70.46 < 3 |walk
-Follow the path |goto 59.41,69.62 < 7 |only if walking
-Follow the path down |goto 59.93,69.36 < 7 |only if walking
-Follow the road |goto 61.68,68.87 < 7 |only if walking
-Cross the bridge |goto 62.73,66.71 < 7 |only if walking
-Follow the path |goto 63.47,65.09 < 7 |only if walking
+Cross the bridge |goto 62.75,66.67 < 15 |only if walking
 talk Brother Pike##130714
 turnin House Stormsong##49703 |goto 63.43,64.76
 accept Unnecessary Duress##49705 |goto 63.43,64.76
@@ -8322,8 +7193,6 @@ accept Haywire Harvesters##49704 |goto 63.46,64.94
 stickystart "Rejuvenate_Laborers"
 stickystart "Collect_Drenched_Mainspring"
 step
-Follow the path down |goto 63.38,64.32 < 7 |only if walking
-Follow the path down |goto 62.54,63.99 < 7 |only if walking
 click Stormsong Proclamation+
 |tip They look like paper scrolls nailed to the sides of objects and buildings around this area.
 Read #3# Stormsong Proclamations |q 49706/1 |goto 62.23,64.54
@@ -8337,9 +7206,7 @@ label "Collect_Drenched_Mainspring"
 kill Rewired Harvester##130131+
 collect Drenched Mainspring##155829 |q 49704/1 |goto 62.23,64.54
 step
-Follow the path up |goto 62.00,64.02 < 7 |only if walking
-Follow the path up |goto 62.72,63.80 < 7 |only if walking
-Follow the path |goto 63.40,64.39 < 7 |only if walking
+Follow the path up |goto 62.58,63.90 < 20 |only if walking
 talk Brother Pike##130714
 turnin Unnecessary Duress##49705 |goto 63.43,64.76
 turnin Proclamation Investigation##49706 |goto 63.43,64.76
@@ -8352,8 +7219,6 @@ talk Brother Pike##130714
 accept Lost, Not Forgotten##49791 |goto 63.42,64.76
 accept Means to an End##49793 |goto 63.42,64.76
 step
-Follow the path |goto 63.40,63.74 < 7 |only if walking
-Follow the path |goto 64.11,62.38 < 7 |only if walking
 talk Samuel Williams##130904
 accept Forced Labor##49887 |goto 64.60,62.11
 step
@@ -8367,43 +7232,21 @@ accept Bound and Oppressed##49792 |goto 64.60,62.11
 stickystart "Destroy_Anchors_Of_Binding"
 stickystart "Recover_Souls"
 step
-Follow the path |goto 64.83,61.36 < 7 |only if walking
-Run up the stairs |goto 65.17,60.93 < 3 |only if walking
-Run up the ramp |goto 65.37,61.11 < 3 |only if walking
-Follow the path |goto 65.43,60.99 < 3 |only if walking
+Run up the stairs |goto 65.17,60.93 < 10 |only if walking
 kill Sister Ava##130952 |q 49794/1 |goto 65.56,60.74
+|tip On the deck of the ship.
 step
-Cross the bridge |goto 65.60,60.39 < 3 |only if walking
-Follow the path |goto 65.64,60.20 < 5 |only if walking
-Run down the stairs |goto 65.72,59.91 < 5 |only if walking
-Follow the path |goto 65.82,59.72 < 5 |only if walking
-Follow the path up |goto 66.22,59.44 < 7 |only if walking
-Follow the path |goto 66.49,59.60 < 7 |only if walking
-Follow the path |goto 66.53,60.27 < 7 |only if walking
-Follow the path |goto 66.73,60.59 < 7 |only if walking
+Follow the path |goto 66.40,59.53 < 15 |only if walking
 click Wavecaller's Mantle
 Recover the Wavecaller's Mantle |q 49793/3 |goto 66.87,60.61
 step
-Follow the path |goto 66.55,60.31 < 7 |only if walking
-Follow the path down |goto 66.36,59.93 < 7 |only if walking
-Follow the path |goto 65.82,59.38 < 7 |only if walking
-Continue following the path |goto 65.51,58.40 < 7 |only if walking
 click Abyssal Beacon
 Recover the Abyssal Beacon |q 49793/2 |goto 64.75,57.89
 step
-Follow the path down |goto 64.91,58.54 < 7 |only if walking
-Cross the bridge |goto 64.73,59.04 < 7 |only if walking
-Follow the path |goto 64.38,59.69 < 7 |only if walking
-Follow the path |goto 64.08,60.16 < 7 |only if walking
-Follow the path |goto 63.37,59.73 < 7 |only if walking
 click Tidal Kris
 Recover the Tidal Kris |q 49793/1 |goto 63.25,59.54
 step
 label "Destroy_Anchors_Of_Binding"
-Cross the bridge |goto 64.13,60.20 < 7 |only if walking
-Follow the path up |goto 64.72,59.00 < 7 |only if walking
-Follow the path |goto 65.24,58.25 < 7 |only if walking
-Follow the path |goto 65.48,58.42 < 7 |only if walking
 clicknpc Anchor of Binding##130895+
 |tip They look like large metal vases with water bubbling out of the top of them on the ground around this area.
 Destroy #8# Anchors of Binding |q 49792/1 |goto 65.80,59.26
@@ -8420,10 +7263,6 @@ talk Brother Pike
 turnin Lost, Not Forgotten##49791
 turnin Means to an End##49793
 step
-Run down the stairs |goto 65.39,58.00 < 5 |only if walking
-Follow the path |goto 65.49,57.67 < 5 |only if walking
-Follow the path |goto 65.88,57.33 < 7 |only if walking
-Follow the path |goto 66.25,57.15 < 7 |only if walking
 click Help Wanted
 accept Make it Mildenhall##51582 |goto 66.35,57.23
 step
@@ -8449,22 +7288,12 @@ step
 talk Samuel Williams##131248
 accept Fabricated Fabrications##49995 |goto 66.49,56.44
 step
-Run up the stairs |goto 66.80,55.78 < 5 |only if walking
-Follow the path |goto 67.01,55.70 < 5 |only if walking
-Follow the path up |goto 67.25,55.86 < 5 |only if walking
-Follow the path up |goto 67.44,56.05 < 5 |only if walking
-Follow the path |goto 67.78,55.74 < 7 |only if walking
+Run up the stairs |goto 66.80,55.78 < 10 |only if walking
 click Charred Note
 accept The Missing Link##50139 |goto 68.70,54.40
 stickystart "Collect_Stormfused_Weapons"
 stickystart "Collect_Warship_Blueprints"
 step
-Follow the path down |goto 69.05,54.01 < 7 |only if walking
-Follow the path down |goto 69.12,53.10 < 7 |only if walking
-Follow the path |goto 69.22,52.68 < 7 |only if walking
-Continue following the path |goto 69.84,52.42 < 7 |only if walking
-Continue following the path |goto 70.50,51.46 < 7 |only if walking
-Continue following the path |goto 70.28,50.55 < 7 |only if walking
 kill Tideguard Pontus##132163
 collect Architect's Cipher##156629 |q 50139/1 |goto 70.16,49.92
 step
@@ -8483,14 +7312,7 @@ label "Collect_Warship_Blueprints"
 Kill enemies around this area
 collect 8 Warship Blueprint##156607 |q 49995/1 |goto 69.75,51.08
 step
-Follow the path up |goto 69.03,51.98 < 7 |only if walking
-Follow the path up |goto 69.14,53.05 < 7 |only if walking
-Follow the path |goto 69.10,53.85 < 7 |only if walking
-Continue following the path |goto 68.53,54.55 < 7 |only if walking
-Continue following the path |goto 67.90,55.26 < 7 |only if walking
-Follow the path down |goto 67.69,55.91 < 7 |only if walking
-Jump down here |goto 67.25,56.18 < 5 |only if walking
-Jump down here |goto 66.79,56.35 < 5 |only if walking
+Follow the path |goto 69.13,53.17 < 20 |only if walking
 talk Samuel Williams##131248
 turnin Fabricated Fabrications##49995 |goto 66.49,56.44
 turnin The Missing Link##50139 |goto 66.49,56.44
@@ -8501,10 +7323,6 @@ step
 talk Brother Pike##130714
 accept Storm's Judgment##49997 |goto 66.34,56.51
 step
-Follow the path up |goto 66.47,57.19 < 7 |only if walking
-Follow the path up |goto 67.15,58.35 < 7 |only if walking
-Follow the path |goto 68.33,58.42 < 7 |only if walking
-Follow the path down |goto 68.86,58.78 < 7 |only if walking
 talk Brother Pike##132173
 Tell him _"I am ready."_
 Speak to Brother Pike |q 49997/1 |goto 69.28,58.71
@@ -8514,10 +7332,6 @@ Kill the enemies that attack in waves
 kill Riptide##132171
 Confront Wavespeaker Reid |q 49997/2 |goto 70.19,57.90
 step
-Follow the path up |goto 69.63,58.49 < 7 |only if walking
-Follow the path |goto 69.03,59.24 < 7 |only if walking
-Follow the path down |goto 68.59,61.34 < 7 |only if walking
-Follow the path |goto 68.36,63.24 < 7 |only if walking
 talk Colony Caretaker##142060
 fpath Mildenhall Meadery |goto 68.54,64.99
 step
@@ -8525,7 +7339,6 @@ talk Ancel Mildenhall##131793
 turnin Make it Mildenhall##51582 |goto 68.88,65.16
 accept Mayhem at Mildenhall Meadery##50343 |goto 68.88,65.16
 step
-Follow the path up |goto 68.75,66.00 < 7 |only if walking
 Investigate the Meadery |q 50343/1 |goto 68.45,67.47
 step
 _Next to you:_
@@ -8536,31 +7349,21 @@ accept Cleanup Duty##50359
 stickystart "Kill_Flowing_Honey"
 stickystart "Kill_Bubbling_Mead"
 step
-Follow the path up |goto 68.40,67.88 < 7 |only if walking
 click Honey Soaked Boot
 Find the Clue |q 50070/1 |goto 68.52,69.00 |count 1
 step
-Follow the path |goto 68.95,68.92 < 7 |only if walking
 click Brewmaster's Treatise Vol. 1
 Find the Clue |q 50070/1 |goto 69.16,69.34 |count 2
 step
-Follow the path up |goto 68.73,68.80 < 7 |only if walking
-Follow the path |goto 68.33,69.88 < 7 |only if walking
 click Misplaced Flask
 Find the Clue |q 50070/1 |goto 67.92,70.94 |count 3
 step
-Follow the path up |goto 68.46,70.53 < 7 |only if walking
 click Rough Map
 Find the Clue |q 50070/1 |goto 69.24,70.77 |count 4
 step
-Follow the path |goto 70.00,69.49 < 10 |only if walking
-Run up the stairs |goto 70.62,69.64 < 5 |only if walking
-Enter the building |goto 70.70,69.64 < 3 |walk
 click Crystalized Honey Fragment
 |tip Inside the building.
 Find the Clue |q 50070/1 |goto 70.83,69.67 |count 5
-step
-Leave the building |goto 70.70,69.65 < 3 |c |q 50359
 step
 label "Kill_Flowing_Honey"
 kill 4 Flowing Honey##131663 |q 50359/1 |goto 70.34,69.46
@@ -8574,11 +7377,7 @@ turnin Detective Mildenhall##50070
 turnin Cleanup Duty##50359
 accept Don't Go in the Basement##50064
 step
-Follow the path |goto 70.55,69.18 < 7 |only if walking
-Run down the stairs |goto 70.75,69.14 < 3 |walk
-Run down the stairs |goto 70.79,69.36 < 3 |walk
-Follow the path |goto 70.92,69.36 < 3 |c |q 50064
-step
+Run down the stairs |goto 70.75,69.13 < 5 |walk
 click Mead Barrel
 |tip Downstairs inside the building.
 Examine Mead Barrel |q 50064/1 |goto 70.82,69.07
@@ -8591,27 +7390,20 @@ talk Ancel Mildenhall##132647
 turnin Don't Go in the Basement##50064 |goto 71.05,69.24
 accept Recovering Raimond##50161 |goto 71.05,69.24
 step
-Run up the stairs |goto 70.92,69.36 < 3 |walk
-Run up the stairs |goto 70.75,69.32 < 3 |walk
-Follow the path |goto 70.76,69.14 < 3 |walk
-Follow the path |goto 71.12,68.47 < 7 |only if walking
+Leave the building |goto 70.75,69.15 < 5 |walk
 click Honey Soaked Boot
 collect Sticky Boot##156717 |q 50161/1 |goto 71.63,67.98 |count 2
 step
-Follow the path |goto 72.42,68.12 < 7 |only if walking
 click Discarded Pages
 collect Journal Pages##156808 |q 50161/2 |goto 72.42,68.64 |count 1
 step
-Follow the path |goto 72.30,69.79 < 7 |only if walking
 click Discarded Pages
 collect Journal Pages##156808 |q 50161/2 |goto 72.32,70.56 |count 2
 step
-Follow the path up |goto 72.66,70.89 < 7 |only if walking
-Follow the path up |goto 73.05,71.68 < 7 |only if walking
 click Discarded Pages
 collect Journal Pages##156808 |q 50161/2 |goto 73.37,72.27 |count 3
 step
-Enter the cave |goto 73.83,72.44 < 5 |walk
+Enter the cave |goto 73.83,72.44 < 10 |walk
 talk Raimond Mildenhall##132292
 |tip Inside the cave.
 turnin Recovering Raimond##50161 |goto 74.13,72.74
@@ -8619,34 +7411,25 @@ accept Royal Succession##50168 |goto 74.13,72.74
 accept Sticky Situation##50162 |goto 74.13,72.74
 stickystart "Collect_Royal_Jelly"
 step
-Leave the cave |goto 73.79,72.42 < 5 |walk
-Follow the path down |goto 73.49,72.08 < 7 |only if walking
-Follow the path |goto 73.48,71.21 < 7 |only if walking
-Follow the path up |goto 73.86,70.59 < 7 |only if walking
-Follow the path up |goto 74.26,70.25 < 7 |only if walking
-Enter the cave |goto 74.62,71.07 < 5 |walk
+Leave the cave |goto 73.79,72.42 < 10 |walk
+Enter the cave |goto 74.62,71.07 < 10 |walk
 kill Hive Mother##132341
 |tip Inside the cave.
 collect Hive Mother's Stinger##157839 |q 50168/1 |goto 74.81,71.51
 step
 label "Collect_Royal_Jelly"
-Leave the cave |goto 74.61,71.07 < 5 |walk
-Follow the path |goto 74.26,70.29 < 7 |only if walking
 Kill enemies around this area
 click Bee Hive+
 |tip They look like small rope huts wih handles on top of them sitting on wooden boxes on the ground around this area.
 collect 60 Royal Jelly##156709 |q 50162/1 |goto 73.52,69.77
 step
-Follow the path up |goto 73.40,71.04 < 7 |only if walking
-Follow the path |goto 73.38,71.91 < 7 |only if walking
-Enter the cave |goto 73.81,72.44 < 5 |walk
+Enter the cave |goto 73.81,72.44 < 10 |walk
 talk Raimond Mildenhall##132292
 |tip Inside the cave.
 turnin Royal Succession##50168 |goto 74.13,72.74
 turnin Sticky Situation##50162 |goto 74.13,72.74
 accept Honey Glazed Sam##50504 |goto 74.13,72.74
 step
-Leave the cave |goto 73.80,72.43 < 5 |walk
 clicknpc Sam Robinson##134013
 Rescue Sam Robinson |q 50504/1 |goto 72.80,72.25
 step
@@ -8663,18 +7446,7 @@ stickystart "Rescue_Wrex"
 stickystart "Rescue_Honey_Encased_Farmhands"
 stickystart "Slay_Highlands_Maulers"
 step
-Follow the path |goto 72.39,72.42 < 7 |only if walking
-Follow the path up |goto 71.92,72.98 < 7 |only if walking
-Follow the path |goto 71.14,73.81 < 7 |only if walking
-Continue following the path |goto 70.65,74.14 < 7 |only if walking
-Continue following the path |goto 69.65,73.89 < 7 |only if walking
-Continue following the path |goto 68.39,74.75 < 10 |only if walking
-Continue following the path |goto 67.80,75.36 < 7 |only if walking
-Follow the path |goto 67.26,75.46 < 7 |only if walking
-Follow the path up |goto 66.87,75.94 < 7 |only if walking
-Follow the path |goto 67.21,76.95 < 7 |only if walking
-Follow the path |goto 67.20,77.49 < 7 |only if walking
-Enter the cave |goto 66.91,77.82 < 5 |walk
+Enter the cave |goto 66.91,77.82 < 10 |walk
 use the Bee Pheromones##157851
 |tip Use it on Bonerender inside the cave.
 kill Bonerender##131537 |q 50534/1 |goto 65.87,79.43
@@ -8684,12 +7456,10 @@ talk Raimond Mildenhall
 turnin Wendigo Away##50534
 step
 label "Rescue_Wrex"
-Follow the path up |goto 66.62,78.20 < 5 |walk
-Leave the cave |goto 66.94,77.83 < 5 |walk
-Follow the path |goto 67.27,77.15 < 7 |only if walking
-Continue following the path |goto 66.87,75.76 < 7 |only if walking
+Leave the cave |goto 66.94,77.83 < 10 |walk
 click Crystallized Honey+
 |tip They look like big yellow rocks on the ground inside the caves around this area.
+|tip He will eventually be in one of them, it's random.
 |tip They will appear on your minimap as yellow dots.
 Rescue Wrex |q 50493/1 |goto 68.44,74.73
 step
@@ -8711,49 +7481,28 @@ turnin Fetching Wrex##50493
 turnin The Bee Team##50165
 accept Back to the Lab##50553
 step
-Follow the path down |goto 69.61,72.18 < 7 |only if walking
-Follow the path down |goto 70.22,70.76 < 7 |only if walking
-Follow the path |goto 70.52,69.27 < 7 |only if walking
-Run down the stairs |goto 70.75,69.13 < 3 |walk
-Run down the stairs |goto 70.78,69.36 < 3 |walk
-Follow the path |goto 70.92,69.35 < 3 |walk
+Run down the stairs |goto 70.75,69.13 < 5 |walk
 talk Raimond Mildenhall##133204
 |tip Downstairs inside the building.
 turnin Back to the Lab##50553 |goto 71.00,69.23
 step
-Run up the stairs |goto 70.92,69.36 < 3 |walk
-Run up the stairs |goto 70.75,69.33 < 3 |walk
-Follow the path |goto 70.75,69.15 < 3 |walk
-Follow the path down |goto 70.29,67.62 < 7 |only if walking
-Follow the path down |goto 69.83,66.45 < 7 |only if walking
-Follow the path |goto 68.26,65.00 < 7 |only if walking
-Follow the path up |goto 68.31,63.02 < 7 |only if walking
-Follow the path up |goto 68.62,62.28 < 7 |only if walking
-Follow the road |goto 68.44,60.86 < 7 |only if walking
-Follow the path down |goto 68.34,59.83 < 7 |only if walking
-Follow the path down |goto 67.17,58.30 < 10 |only if walking
-Follow the path |goto 66.55,57.21 < 7 |only if walking
+Leave the building |goto 70.75,69.14 < 5 |walk
+Follow the path up |goto 68.35,63.00 < 20 |only if walking
 talk Brother Pike##130714
 turnin Storm's Judgment##49997 |goto 66.31,56.48
 accept Voices Below##49998 |goto 66.31,56.48
 step
-Run up the stairs |goto 66.80,55.79 < 5 |only if walking
-Follow the path |goto 67.03,55.70 < 5 |only if walking
-Follow the path up |goto 67.40,56.07 < 5 |only if walking
-Follow the road |goto 67.82,55.77 < 7 |only if walking
-Follow the road |goto 67.80,53.99 < 7 |only if walking
-Cross the bridge |goto 67.11,52.38 < 7 |only if walking
+Run up the stairs |goto 66.83,55.77 < 10 |only if walking
+Follow the road |goto 67.82,55.76 < 20 |only if walking
+Cross the bridge |goto 67.11,52.38 < 20 |only if walking
 talk Brother Pike##134642
 Ask him _"What is it?"_
 Watch the dialogue
 Investigate the Omen |q 49998/1 |goto 66.42,50.65
 step
-Follow the path |goto 66.14,50.22 < 7 |only if walking
-Follow the path |goto 65.64,49.08 < 7 |only if walking
 talk Sister Alison##142634
 home Tidecross |goto 65.47,48.30
 step
-Run up the stairs |goto 65.36,48.07 < 3 |only if walking
 talk Marla Featherfoot##134696
 fpath Tidecross |goto 65.57,48.00
 step
@@ -8767,8 +7516,6 @@ stickystart "Accept_A_Bloody_Mess"
 stickystart "Slay_Skeletons"
 stickystart "Kill_Tidesage_Seacallers"
 step
-Follow the path |goto 66.83,46.02 < 7 |only if walking
-Follow the path |goto 67.09,45.21 < 7 |only if walking
 use the Abyssal Beacon##158211
 |tip Use it on the Writhing Grasp.
 Dispel the Southern Grasp |q 50594/1 |goto 67.43,44.36
@@ -8779,19 +7526,11 @@ accept A Bloody Mess##50593 |goto 67.00,44.83
 |tip You will eventually automatically accept this quest after looting.
 stickystart "Collect_Tideblood"
 step
-Follow the path |goto 66.70,44.78 < 10 |only if walking
-Run up the stairs |goto 65.96,44.63 < 5 |only if walking
-Follow the path |goto 65.71,44.40 < 5 |only if walking
-Continue following the path |goto 65.57,43.43 < 5 |only if walking
-Continue following the path |goto 65.80,42.06 < 5 |only if walking
+Run up the stairs |goto 65.96,44.63 < 10 |only if walking
 use the Abyssal Beacon##158211
 |tip Use it on the Writhing Grasp.
 Dispel the Western Grasp |q 50594/2 |goto 66.00,41.80
 step
-Run down the stairs |goto 66.11,41.43 < 5 |only if walking
-Follow the path |goto 66.40,41.30 < 5 |only if walking
-Follow the path down |goto 66.62,41.38 < 7 |only if walking
-Follow the path |goto 66.83,41.98 < 7 |only if walking
 use the Abyssal Beacon##158211
 |tip Use it on the Writhing Grasp.
 Dispel the Eastern Grasp |q 50594/3 |goto 67.66,42.32
@@ -8810,9 +7549,7 @@ step
 label "Kill_Tidesage_Seacallers"
 kill 4 Tidesage Seacaller##130094 |q 50595/2 |goto 66.91,42.06
 step
-Follow the path |goto 66.06,44.42 < 15 |only if walking
-Continue following the path |goto 66.71,45.29 < 7 |only if walking
-Cross the bridge |goto 66.84,45.99 < 7 |only if walking
+Cross the bridge |goto 66.82,46.04 < 20 |only if walking
 talk Taelia##134623
 turnin No Quarter##50595 |goto 66.31,47.09
 step
@@ -8824,20 +7561,14 @@ accept Gathering Storm##50610 |goto 66.17,47.45
 step
 talk Taelia##134623
 accept From the Maw of Madness##50609 |goto 66.31,47.10
+stickystart "Place_Focusing_Rods"
 stickystart "Disrupt_Rituals"
 stickystart "Slay_Kthir"
 step
-Follow the path |goto 66.85,45.99 < 7 |only if walking
-Run up the stairs |goto 66.94,44.19 < 3 |only if walking
-Follow the path |goto 67.32,44.10 < 3 |only if walking
-Follow the path |goto 67.31,43.84 < 3 |only if walking
-Run up the stairs |goto 67.15,43.67 < 5 |only if walking
-Run up the stairs |goto 66.94,43.72 < 3 |only if walking
-Follow the path |goto 66.81,43.75 < 3 |only if walking
-Follow the path |goto 66.64,43.75 < 3 |walk
+Run up the stairs |goto 66.94,44.19 < 10 |only if walking
 Find Samuel Williams |q 50609/1 |goto 66.56,43.73
+|tip Upstairs inside the ship.
 step
-Follow the path |goto 66.47,43.47 < 3 |walk
 Watch the dialogue
 kill Brother Halsey##134999 |q 50609/2 |goto 66.51,43.48
 |tip Inside the ship.
@@ -8847,59 +7578,24 @@ kill Samuel Williams##134983
 |tip He will eventually surrender.
 Save Samuel Williams |q 50609/3 |goto 66.37,43.50
 step
-Follow the path |goto 66.63,43.75 < 3 |c |q 50610
-step
-Run up the stairs |goto 66.70,43.44 < 3 |only if walking
-Follow the path |goto 66.53,43.45 < 3 |only if walking
-Follow the path |goto 66.43,43.29 < 3 |only if walking
-click Focusing Rod
-Place a Focusing Rod |q 50610/1 |goto 66.27,43.53 |count 1
-step
-Follow the path |goto 66.41,43.66 < 3 |only if walking
-Run down the stairs |goto 66.54,43.47 < 3 |only if walking
-Follow the path |goto 66.70,43.43 < 3 |only if walking
-Run down the stairs |goto 66.76,43.09 < 3 |only if walking
-Follow the path |goto 66.89,43.06 < 3 |q 50610
-step
-Follow the path |goto 66.88,43.18 < 3 |walk
-click Focusing Rod
-|tip Inside the ship.
-Place a Focusing Rod |q 50610/1 |goto 66.78,43.51 |count 2
-step
-Follow the path |goto 66.88,43.18 < 3 |walk
-Run down the stairs |goto 67.01,43.07 < 5 |only if walking
-Run up the stairs |goto 67.74,42.93 < 3 |only if walking
-Follow the path |goto 67.84,42.93 < 3 |only if walking
-click Focusing Rod
-Place a Focusing Rod |q 50610/1 |goto 67.95,43.19 |count 3
-step
-Run down the stairs |goto 67.83,42.91 < 3 |only if walking
-Follow the path |goto 67.70,42.98 < 5 |c |q 50610
-step
-Run down the stairs |goto 67.86,43.20 < 3 |walk
-Follow the path |goto Stormsong Valley/1 77.67,42.66 < 3 |walk
-Run down the stairs |goto Stormsong Valley/1 77.31,48.84 < 3 |c |q 50610
-step
-Follow the path |goto 72.73,50.34 < 5 |only if walking
-Follow the path |goto 65.82,51.60 < 5 |only if walking
-click Focusing Rod
-|tip Inside the ship.
-Place a Focusing Rod |q 50610/1 |goto 62.61,44.49 |count 4
+label "Place_Focusing_Rods"
+click Focusing Rod+
+|tip They look like golden swirling shaped statues around this area inside the ship.
+Place #4# Focusing Rods |q 50610/1 |goto 67.43,43.53
 step
 label "Disrupt_Rituals"
 use the Tidal Kris##158465
 |tip Use it next to Fanatical Acolytes around this area.
 |tip They look like humans kneeling on purple flaming runes on the ground around this area on the ship.
-Disrupt #6# Rituals |q 50608/2 |goto 62.61,44
+Disrupt #6# Rituals |q 50608/2 |goto 67.43,43.53
 step
 label "Slay_Kthir"
 Kill enemies around this area
 |tip On the ship.
-Slay #15# K'thir |q 50608/1 |goto 62.61,44
+Slay #15# K'thir |q 50608/1 |goto 67.43,43.53
 step
-Follow the path |goto Stormsong Valley/0 65.29,47.97 < 7 |only if walking
 talk Samuel Williams##134641
-turnin From the Maw of Madness##50609 |goto Stormsong Valley/0 66.02,47.11
+turnin From the Maw of Madness##50609 |goto 66.02,47.11
 step
 talk Brother Pike##134639
 turnin Forbidden Rites##50608 |goto 66.16,47.45
@@ -8915,9 +7611,7 @@ talk Brother Pike##134639
 turnin Storm's Vengeance##50611 |goto 66.17,47.45
 accept A House Divided##50612 |goto 66.17,47.45
 step
-Follow the path up |goto 65.41,47.20 < 7 |only if walking
-Follow the path up |goto 64.67,46.32 < 7 |only if walking
-Follow the path up |goto 63.80,44.39 < 7 |only if walking
+Follow the path up |goto 64.30,45.83 < 30 |only if walking
 talk Brother Pike##135534
 turnin A House Divided##50612 |goto 63.16,43.15
 accept The Storm Awakens##50777 |goto 63.16,43.15
@@ -8925,29 +7619,22 @@ step
 talk Samuel Williams##136053
 accept Twisted Intentions##50778 |goto 63.10,43.16
 step
-Follow the road |goto 63.30,42.65 < 7 |c |q 50778
-step
-accept A Clean Slate##50779 |goto 63.25,40.73
+accept A Clean Slate##50779 |goto 61.66,41.25
 |tip You will automatically accept this quest.
 |only if level < 120
 stickystart "Rally_Defectors"
 stickystart "Purge_The_Corruption"
 step
-Follow the path up |goto 62.68,40.63 < 7 |only if walking
-Follow the path |goto 61.66,41.25 < 7 |only if walking
+Follow the path |goto 61.66,41.25 < 15 |only if walking
 talk Tideguard Victoria##135517
 accept Oathbound##50780 |goto 60.89,41.38
 step
-Follow the path |goto 60.79,41.02 < 7 |only if walking
-Run up the stairs |goto 60.52,41.18 < 5 |only if walking
-Follow the path |goto 60.42,41.25 < 5 |only if walking
 kill Bound Tempest##135457 |q 50778/1 |goto 59.91,41.39
 |tip Attack the Drowned Acendants channeling on him to be able to attack him.
 step
-Run up the stairs |goto 59.65,40.85 < 5 |only if walking
-Follow the path |goto 59.62,40.62 < 5 |only if walking
-Enter the building |goto 59.82,39.87 < 3 |walk
-Leave the building |goto 59.10,39.34 < 3 |walk
+Run up the stairs |goto 59.65,40.85 < 15 |only if walking
+Enter the building |goto 59.82,39.87 < 10 |walk
+Leave the building |goto 59.10,39.34 < 10 |walk
 click Rod of Tides
 Claim the Rod of Tides |q 50780/1 |goto 59.14,38.71
 step
@@ -8955,11 +7642,8 @@ Kill the enemies that attack
 click Rod of Tides
 collect Rod of Tides##159157 |q 50780/2 |goto 59.14,38.71
 step
-Enter the building |goto 59.09,39.34 < 3 |walk
-Follow the path |goto 59.70,39.46 < 5 |walk
-Leave the building |goto 60.06,39.15 < 3 |walk
-Follow the path |goto 60.46,38.35 < 7 |only if walking
-Follow the path |goto 60.88,38.13 < 7 |only if walking
+Enter the building |goto 59.09,39.34 < 10 |walk
+Leave the building |goto 60.06,39.15 < 10 |walk
 kill Enthralled Tidefury##135506 |q 50778/2 |goto 61.76,38.08
 |tip Attack the Drowned Hierarchs channeling on him to be able to attack him.
 step
@@ -8984,26 +7668,17 @@ clicknpc Books+
 Purge the Corruption |q 50779/1 |goto 60.72,38.15
 |only if havequest(50779) or completedq(50779)
 step
-Run up the stairs |goto 60.13,38.12 < 5 |only if walking
 talk Taelia##136498
 turnin The Storm Awakens##50777 |goto 60.03,37.89
 turnin Twisted Intentions##50778 |goto 60.03,37.89
 accept The Abyssal Council##50783 |goto 60.03,37.89
 step
-Cross the bridge |goto 59.48,37.16 < 7 |only if walking
-Run up the stairs |goto 58.98,36.46 < 5 |only if walking
-Enter the building |goto 58.71,36.14 < 5 |walk
+Enter the building |goto 58.71,36.14 < 10 |walk
 kill Wavespeaker Reid##135985 |q 50783/1 |goto 58.21,35.40
 |tip Inside the building.
 step
-Follow the path |goto 58.55,35.89 < 3 |walk
-Leave the building |goto 58.71,36.14 < 3 |walk
-Cross the bridge |goto 59.03,36.50 < 7 |only if walking
-Follow the path |goto 59.48,37.15 < 7 |only if walking
-Run down the stairs |goto 60.02,38.02 < 5 |only if walking
-Follow the path |goto 60.15,38.13 < 5 |only if walking
-Follow the path |goto 60.44,38.07 < 7 |only if walking
-Cross the bridge |goto 61.25,37.12 < 7 |only if walking
+Leave the building |goto 58.71,36.14 < 10 |walk
+Run down the stairs |goto 60.03,38.02 < 15 |only if walking
 talk Tideguard Victoria##136497
 turnin Oathbound##50780 |goto 61.80,36.29
 step
@@ -9018,19 +7693,10 @@ Tell her _"I am ready."_
 Watch the dialogue
 Begin Following Tideguard Victoria |goto 61.80,36.29 > 10 |c |q 50784
 step
-Follow the path up |goto 61.92,35.37 < 7 |only if walking
-Follow the path |goto 62.20,35.01 < 7 |only if walking
-Cross the bridge |goto 62.99,35.53 < 7 |only if walking
-Follow the road |goto 63.64,35.68 < 7 |only if walking
-Follow the road |goto 64.72,36.34 < 7 |only if walking
-Cross the bridge |goto 65.87,34.96 < 7 |only if walking
-Follow the path |goto 66.48,34.96 < 7 |only if walking
-Run up the stairs |goto 67.01,35.11 < 5 |only if walking
-Follow the path |goto 67.20,35.17 < 5 |only if walking
 Watch the dialogue
 |tip Follow Tideguard Victoria as she walks.
 Kill the enemies that attack
-Escort Tideguard Victoria |q 50784/1 |goto 67.43,35.26
+Escort Tideguard Victoria |q 50784/1 |goto 67.41,35.25
 step
 click Whirling Torrent
 Take the Whirling Torrent |q 50784/2 |goto 67.86,35.38
@@ -9052,30 +7718,16 @@ accept Lost and Forgotten##51278 |goto 70.32,36.14
 accept Sealed Fate##51320 |goto 70.32,36.14
 stickystart "Fill_The_Dead_Ringer"
 step
-Cross the bridge |goto 70.65,36.25 < 7 |only if walking
-Follow the path |goto 72.42,37.06 < 7 |only if walking
-Run up the stairs |goto 73.22,37.46 < 5 |only if walking
-Follow the path up |goto 74.13,38.23 < 7 |only if walking
-Follow the path up |goto 75.36,37.92 < 7 |only if walking
-Follow the path |goto 75.48,37.43 < 7 |only if walking
-Run up the stairs |goto 75.21,36.74 < 5 |only if walking
+Follow the road up |goto 74.27,38.21 < 20 |only if walking
 click Tidemother's Wrath
 Destroy the Tidemother's Wrath |q 51320/1 |goto 74.87,35.97
 step
-Follow the path up |goto 74.56,35.49 < 7 |only if walking
-Cross the bridge |goto 74.18,34.37 < 5 |only if walking
-Follow the path |goto 73.96,33.60 < 5 |only if walking
-Continue following the path |goto 73.77,33.12 < 7 |only if walking
-Follow the path up |goto 73.11,32.39 < 7 |only if walking
-Follow the path |goto 72.85,32.09 < 7 |only if walking
-Run down the stairs |goto 72.33,32.01 < 5 |only if walking
-Follow the path |goto 71.93,31.55 < 5 |only if walking
+Cross the bridge |goto 74.18,34.37 < 15 |only if walking
+Run down the stairs |goto 72.36,31.97 < 15 |only if walking
 click Tidemother's Radiance
 Destroy the Tidemother's Radiance |q 51320/2 |goto 71.56,30.28
 step
-Run up the stairs |goto 72.02,29.81 < 5 |only if walking
-Run up the stairs |goto 72.48,29.68 < 7 |only if walking
-Follow the path |goto 72.85,29.95 < 5 |only if walking
+Run up the stairs |goto 72.01,29.80 < 15 |only if walking
 click Tidemother's Pride
 Destroy the Tidemother's Pride |q 51320/3 |goto 73.41,30.19
 step
@@ -9092,24 +7744,14 @@ talk Brother Pike
 turnin Lost and Forgotten##51278
 accept The Final Ascent##51319
 step
-Run up the stairs |goto 73.72,31.01 < 5 |only if walking
+Run up the stairs |goto 73.71,31.00 < 15 |only if walking
 use the Dead Ringer##160056
 Watch the dialogue
 Open the Tempest Gate |q 51319/1 |goto 74.20,30.69
 step
-Enter the building |goto 74.34,30.61 < 3 |walk
-Follow the path |goto 74.57,30.46 < 3 |walk
-Follow the path up |goto 74.81,29.58 < 3 |walk
-Follow the path |goto 74.53,28.64 < 3 |walk
-Leave the building |goto 74.43,28.32 < 3 |walk
-Follow the path |goto 73.76,26.89 < 7 |only if walking
-Follow the path up |goto 73.57,26.03 < 7 |only if walking
-Follow the path |goto 73.66,25.22 < 7 |only if walking
-Run up the stairs |goto 73.95,24.76 < 5 |only if walking
-Run up the stairs |goto 74.59,24.84 < 5 |only if walking
-Run up the stairs |goto 75.07,24.89 < 7 |only if walking
-Follow the path |goto 75.38,25.21 < 5 |only if walking
-Run up the stairs |goto 75.49,26.14 < 5 |only if walking
+Enter the building |goto 74.34,30.61 < 10 |walk
+Leave the building |goto 74.43,28.32 < 10 |walk
+Follow the path up |goto 73.64,25.28 < 20 |only if walking
 talk Brother Pike##137506
 turnin The Final Ascent##51319 |goto 75.61,27.05
 accept Storm's End##50824 |goto 75.61,27.05
@@ -9117,10 +7759,7 @@ step
 Watch the dialogue
 kill Azshj'thul the Drowned##137197 |q 50824/1 |goto 76.62,29.38
 step
-Follow the path |goto 77.11,28.19 < 7 |only if walking
-Follow the path up |goto 77.81,27.54 < 7 |only if walking
-Follow the path up |goto 78.12,27.98 < 7 |only if walking
-Follow the path up |goto 78.16,28.50 < 7 |only if walking
+Follow the path up |goto 77.99,27.70 < 15 |only if walking
 talk Brother Pike##137691
 turnin Storm's End##50824 |goto 78.33,28.77
 accept Shrine of the Storm: Whispers Below##50825 |goto 78.33,28.77
@@ -9131,16 +7770,10 @@ step
 talk Galeheart##137693
 fpath Shrine of the Storm |goto 78.32,29.01
 step
-Follow the path |goto Boralus/0 68.10,15.59 < 7 |only if walking
-Jump down here |goto Boralus/0 70.28,17.52 < 5 |only if walking
-Run up the stairs |goto Boralus/0 69.16,21.17 < 5 |only if walking
-Enter the building |goto Boralus/0 68.87,21.12 < 3 |walk
-Follow the path |goto Boralus/0 67.81,20.87 < 5 |walk
-Run down the stairs |goto Boralus/0 67.45,21.35 < 3 |walk
-Run down the stairs |goto Boralus/0 67.40,22.84 < 3 |walk
+Enter the building |goto Boralus/0 68.84,21.15 < 10 |walk
 talk Taelia##121235
 |tip Inside the building.
-turnin A New Dawn##50733 |goto 68.15,21.99
+turnin A New Dawn##50733 |goto Boralus/0 68.15,21.99
 step
 _Congratulations!_
 You completed the Stormsong Valley leveling guide.
@@ -9150,7 +7783,7 @@ Click Here to Continue |confirm |next "Zygor's Leveling Guides\\Battle for Azero
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\War Campaign",{
 author="support@zygorguides.com",
 description="This guide will walk you through the Alliance War Campaign for Battle for Azeroth.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and level <= 120 and not completedq(52790) and completedq(47189) end,
 image=ZGV.DIR.."\\Guides\\Images\\WarCampaign",
 },[[
 step
@@ -9161,12 +7794,8 @@ talk Genn Greymane##120788
 |tip Inside the building.
 accept The War Campaign##52654 |goto Boralus/0 68.05,22.18
 step
-Run up the stairs |goto 67.51,22.88 < 3 |walk
-Leave the building |goto 67.10,23.35 < 3 |walk
-Run up the ramp |goto 67.41,25.17 < 3 |only if walking
-Follow the path |goto 68.04,25.29 < 5 |only if walking
-Cross the bridge |goto 69.27,25.71 < 3 |only if walking
 talk Halford Wyrmbane##135612
+|tip On the ship.
 turnin The War Campaign##52654 |goto 69.27,27.01
 accept The War Cache##52544 |goto 69.27,27.01
 step
@@ -11247,10 +9876,118 @@ step
 _Congratulations!_
 You completed the War Campaign.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Warfronts\\Warfronts Introduction Quests",{
+author="support@zygorguides.com",
+description="This guide will walk you through the Warfronts Introduction quests for Battle for Azeroth.",
+condition_suggested=function() return level == 120 and not completedq(53198) end,
+},[[
+step
+Reach Level 120 |ding 120
+|tip Use the "Intro & Quest Zone Choice" and Leveling guides to accomplish this.
+step
+Unlock World Quests |condition completedq(52450)
+|tip Use the "War Campaign" guide to accomplish this.
+step
+talk Ralston Karn##142721
+turnin The Warfront Looms##53175 |goto Boralus/0 65.88,26.05 |only if havequest(53175) or completedq(53175)
+accept To the Front##53194 |goto Boralus/0 65.88,26.05
+step
+Does the Alliance Currently Control the Warfront?
+|tip The following quests change slightly, depending if your faction controls the warfront or not.
+Yes |confirm |or |next "Alliance_Controls_Warfront" |q 53198
+No |confirm |or |next "Alliance_Doesnt_Control_Warfront" |q 53198
+step
+label "Alliance_Controls_Warfront"
+talk Yvera Dawnwing##143380 |goto Boralus/0 66.24,24.79
+Tell her _"Send me to Arathi Highlands!"_
+Teleport to Ar'gorok |goto Arathi Highlands/0 21.69,65.16 < 10 |noway |c |q 53194
+step
+talk Captain Roderick Brewston##143018
+turnin To the Front##53194 |goto 19.25,61.93
+accept Touring the Front##53197 |goto 19.25,61.93
+step
+talk Grayson Bell##142008
+Tell him _"Captain Brewston said you could give me a tour of the area."_
+Begin Riding the Alliance Gryphon |invehicle |goto 18.26,67.93 |q 53197
+step
+Watch the dialogue
+View the Battleground with Grayson Bell |q 53197/3 |goto 19.42,56.21
+step
+Watch the dialogue
+Return to the Ground |outvehicle |goto 18.20,67.48 |q 53197
+step
+Enter the mine |goto 27.50,55.46 < 10 |walk
+Follow the path down |goto 27.46,53.90 < 10 |walk
+Run down the stairs |goto 26.32,55.05 < 10 |walk
+talk Foreman Tully##143318
+|tip Inside the mine.
+Tell her _"Thank you."_
+Check on Foreman Tully |q 53197/1 |goto 27.55,57.01
+step
+Run up the stairs |goto 26.67,56.22 < 10 |walk
+Follow the path up |goto 26.62,54.56 < 10 |walk
+Leave the mine |goto 27.50,55.46 < 10 |c |q 53197
+step
+talk Lumbering Leo##143321
+Tell him _"Thank you."_
+Check on Lumbering Leo |q 53197/2 |goto 12.01,52.12
+step
+talk Captain Roderick Brewston##143018
+turnin Touring the Front##53197 |goto 19.24,61.93
+accept Back to Boralus##53198 |goto 19.24,61.93
+step
+talk Yvera Dawnwing##143172 |goto 21.70,64.88
+Tell her _"Send me to Boralus!"_
+Return to Boralus |goto Boralus/0 66.72,24.80 < 10 |noway |c |q 53198
+|next "Warfront_Intro_End"
+step
+label "Alliance_Doesnt_Control_Warfront"
+talk Yvera Dawnwing##143380 |goto Boralus/0 66.24,24.79
+Tell her _"Send me to Arathi Highlands!"_
+Teleport to Ar'gorok |goto Arathi Highlands/0 18.85,56.44 < 30 |noway |c |q 53194
+step
+talk Captain Roderick Brewston##143018
+turnin To the Front##53194 |goto 19.33,56.77
+accept Touring the Front##53197 |goto 19.33,56.77
+step
+talk Grayson Bell##142008
+Tell him _"Captain Brewston said you could give me a tour of the area."_
+Begin Riding the Alliance Gryphon |invehicle |goto 19.46,56.63 |q 53197
+step
+Watch the dialogue
+View the Battleground with Grayson Bell |q 53197/3 |goto 19.42,56.21
+step
+Watch the dialogue
+Return to the Ground |outvehicle |goto 19.50,56.48 |q 53197
+step
+talk Foreman Tully##143318
+Tell her _"Thank you."_
+Check on Foreman Tully |q 53197/1 |goto 27.26,55.68
+step
+talk Lumbering Leo##143321
+Tell him _"Thank you."_
+Check on Lumbering Leo |q 53197/2 |goto 13.42,55.16
+step
+talk Captain Roderick Brewston##143018
+turnin Touring the Front##53197 |goto 19.33,56.77
+accept Back to Boralus##53198 |goto 19.33,56.77
+step
+talk Yvera Dawnwing##143172 |goto 18.94,56.83
+Tell her _"Send me to Boralus!"_
+Return to Boralus |goto Boralus/0 66.72,24.80 < 10 |noway |c |q 53198
+|next "Warfront_Intro_End"
+step
+label "Warfront_Intro_End"
+talk Ralston Karn##142721
+turnin Back to Boralus##53198 |goto Boralus/0 65.88,26.03
+step
+_Congratulations!_
+You unlocked Warfronts.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Veiled Grotto (Zuldazar)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Veiled Grotto outpost in Zuldazar.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('7th Legion') >= Honored and not completedq(52802) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -11307,7 +10044,7 @@ You unlocked the Veiled Grotto outpost in Zuldazar.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Grimwatt's Crash (Nazmir)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Grimwatt's Crash outpost in Nazmir.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('7th Legion') >= Honored and not completedq(53007) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -11356,7 +10093,7 @@ You unlocked the Grimwatt's Crash outpost in Nazmir.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Mistvine Ledge (Zuldazar)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Mistvine Ledge outpost in Zuldazar.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('7th Legion') >= Revered and not completedq(52963) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -11407,7 +10144,7 @@ You unlocked the Mistvine Ledge outpost in Zuldazar.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Mugamba Overlook (Zuldazar)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Mugamba Overlook outpost in Zuldazar.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('7th Legion') >= Revered and not completedq(52852) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -11455,7 +10192,7 @@ You unlocked the Mugamba Overlook outpost in Zuldazar.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Verdant Hollow (Zuldazar)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Verdant Hollow outpost in Zuldazar.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('7th Legion') >= Revered and not completedq(52888) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -11506,7 +10243,7 @@ You unlocked the Verdant Hollow outpost in Zuldazar.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Scouting Reports\\Vulture's Nest (Vol'dun)",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the Vulture's Nest outpost in Vol'dun.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('7th Legion') >= Revered and not completedq(53044) end,
 },[[
 step
 Reach Level 120 |ding 120
@@ -11558,7 +10295,7 @@ You unlocked the Vulture's Nest outpost in Vol'dun.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Heart of Azeroth\\Heart of Azeroth Empowerment",{
 author="support@zygorguides.com",
 description="This guide will walk you through empowering your Heart of Azeroth necklace to increase its item level.",
-condition_suggested=function() return level>=120 end,
+condition_suggested=function() return level == 120 and rep('Champions of Azeroth') >= Friendly and not completedq(53406) end,
 image=ZGV.DIR.."\\Guides\\Images\\HeartofAzeroth",
 },[[
 step
@@ -11613,10 +10350,10 @@ talk Magni Bronzebeard##136907
 Tell him _"Magni, I'm ready for you to empower the Heart of Azeroth."_
 Empower the Heart of Azeroth within the Chamber of Heart |q 53406/2 |goto Chamber Of Heart/0 50.17,58.15
 step
+Watch the dialogue
 Banish the Old God Incursion
 |tip Use the "Unleash Heart of Azeroth" ability inside the building.
 |tip It appears as a button on the screen.
-Watch the dialogue
 Click Here After Unleashing the Heart of Azeroth |confirm |goto 50.00,64.78 |q 53406
 step
 talk Magni Bronzebeard##136907
@@ -11629,7 +10366,7 @@ You Fully Empowered the Heart of Azeroth.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Void Elf Race Unlock",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the new Void Elf allied race.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and not completedq(48962) end,
 image=ZGV.DIR.."\\Guides\\Images\\VoidElfUnlock",
 },[[
 step
@@ -11814,7 +10551,7 @@ You Unlocked the "Void Elf" Allied Race.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Lightforged Draenei Race Unlock",{
 author="support@zygorguides.com",
 description="This guide will walk you through unlocking the new Lightforged Draenei allied race.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and not completedq(50071) end,
 image=ZGV.DIR.."\\Guides\\Images\\LightforgedDraeneiUnlock",
 },[[
 step
@@ -12018,7 +10755,7 @@ You Unlocked the "Lightforged Draenei" Allied Race.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Allied Races\\Dark Iron Dwarf Race Unlock",{
 author="support@zygorguides.com",
 description="To unlock the new Dark Iron Dwarf allied race, you will need to earn exalted reputation with the 7th Legion and complete the Alliance War Campaign.",
-condition_suggested=function() return level >= 120 and not achieved(12515) end,
+condition_suggested=function() return level == 120 and not achieved(12515) and completedq(47189) end,
 condition_end=function() return achieved(12515) end,
 image=ZGV.DIR.."\\Guides\\Images\\DarkIronDwarfUnlock",
 },[[

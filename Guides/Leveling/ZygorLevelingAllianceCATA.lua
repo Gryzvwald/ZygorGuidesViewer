@@ -667,7 +667,7 @@ turnin Where Kings Walk##13188 |goto Stormwind City/0 85.8,31.7
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Draenei (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Azuremyst",
-condition_suggested=function() return raceclass('Draenei') and level<=15 end,
+condition_suggested=function() return raceclass('Draenei') and level <= 5 and not completedq(9312) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Azuremyst Isle (1-20)",
 startlevel=1,
@@ -843,7 +843,7 @@ accept Travel to Azure Watch##9313 |goto 50.50,47.85
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Dwarf (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Dun Morogh",
-condition_suggested=function() return raceclass('Dwarf') and level<=5 end,
+condition_suggested=function() return raceclass('Dwarf') and level <= 5 and not completedq(24493) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Dun Morogh (1-20)",
 startlevel=1,
@@ -1049,7 +1049,7 @@ turnin Don't Forget About Us##24493 |goto Dun Morogh/0 53.1,50.0
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Gnome (1-5)",{
 author="support@zygorguides.com",
-condition_suggested=function() return raceclass('Gnome') and level<=5 end,
+condition_suggested=function() return raceclass('Gnome') and level <= 5 and not completedq(26364) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Dun Morogh (1-20)",
 startlevel=1,
@@ -1303,7 +1303,7 @@ accept Bound for Kharanos##26380 |goto Dun Morogh 49.9,45.0
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Human (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Elwynn Forest",
-condition_suggested=function() return raceclass('Human') and level<=5 end,
+condition_suggested=function() return raceclass('Human') and level <= 5 and not completedq(26390) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Elwynn Forest (1-20)",
 startlevel=1,
@@ -1509,7 +1509,7 @@ accept Report to Goldshire##54 |goto 33.6,53.0
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Night Elf (1-10)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\NightElf",
-condition_suggested=function() return raceclass('NightElf') and level<=15 end,
+condition_suggested=function() return raceclass('NightElf') and level <= 10 and not completedq(14039) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Darkshore (10-60)",
 startlevel=1,
@@ -2041,7 +2041,7 @@ Reach Rut'theran Village |goto Teldrassil/0 55.10,88.53 |noway |c |q 28490 |only
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Worgen (1-10)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Gilneas",
-condition_suggested=function() return raceclass('Worgen') and level<=13 and not completedq(28517) and not raceclass('DEATHKNIGHT') end,
+condition_suggested=function() return raceclass('Worgen') and level <= 13 and not completedq(28517) and not raceclass('DEATHKNIGHT') end,
 condition_suggested_exclusive=true,
 condition_end=function() return completedq(28517) or raceclass('DEATHKNIGHT') end,
 condition_valid=function() return raceclass('Worgen')  end,
@@ -2992,6 +2992,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Easter
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Dun Morogh",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Loch Modan (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(6392) end,
 startlevel=1,
 endlevel=10
 },[[
@@ -3416,6 +3417,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Easter
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Elwynn_2",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Westfall (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(11) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -3761,6 +3763,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Loch Modan",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Wetlands (20-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(13661) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -4389,6 +4392,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Westfall",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Redridge Mountains (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(26370) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -4857,6 +4861,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Redridge_Mountains_2",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Duskwood (20-60)",
+condition_suggested=function() return level >= 15 and level <= 60 and not completedq(26726) end,
 startlevel=15,
 endlevel=60,
 },[[
@@ -5454,6 +5459,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Duskwood",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Northern Stranglethorn (25-60)",
+condition_suggested=function() return level >= 20 and level <= 60 and not completedq(26794) end,
 startlevel=20,
 endlevel=60,
 },[[
@@ -5983,6 +5989,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Wetlands",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Arathi Highlands (25-60)",
+condition_suggested=function() return level >= 20 and level <= 60 and not completedq(26128) end,
 startlevel=20,
 endlevel=60,
 },[[
@@ -6497,6 +6504,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Arathi",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\The Hinterlands (30-60)",
+condition_suggested=function() return level >= 25 and level <= 60 and not completedq(26038) end,
 startlevel=25,
 endlevel=60,
 },[[
@@ -6576,6 +6584,7 @@ Follow the path |goto 24.67,70.30 < 20 |only if walking
 Follow the path down |goto 25.55,75.24 < 20 |only if walking
 Continue down the path |goto 26.58,80.09 < 20 |only if walking
 talk Professor Phizzlethorpe##2768
+|tip You may need to wait a moment if another player has already started this quest.
 accept Goggle Boggle##26050 |goto 27.6,83.0
 step
 Enter the cave |goto 28.89,82.92 < 15 |walk
@@ -6839,6 +6848,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Northern_Stranglethorn",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\The Cape of Stranglethorn (30-60)",
+condition_suggested=function() return level >= 25 and level <= 60 and not completedq(208) end,
 startlevel=25,
 endlevel=60,
 },[[
@@ -7611,6 +7621,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\The Cape of Stranglethorn",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Western Plaguelands (35-60)",
+condition_suggested=function() return level >= 30 and level <= 60 and not completedq(26703) end,
 startlevel=30,
 endlevel=60,
 },[[
@@ -8483,6 +8494,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Hinterlands",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Western Plaguelands (35-60)",
+condition_suggested=function() return level >= 30 and level <= 60 and not completedq(26532) end,
 startlevel=30,
 endlevel=60,
 },[[
@@ -8968,6 +8980,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Western Plaguelands",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Eastern Plaguelands (40-60)",
+condition_suggested=function() return level >= 35 and level <= 60 and not completedq(27206) end,
 startlevel=35,
 endlevel=60,
 },[[
@@ -9584,6 +9597,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Badlands",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Searing Gorge (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(27833) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -10147,6 +10161,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Blasted Lands",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Hellfire Peninsula (58-80)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(26187) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -10824,6 +10839,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Burning Steppes",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Swamp of Sorrows (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(28322) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -11500,6 +11516,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Eastern Plaguelands",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Badlands (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(27527) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -12562,6 +12579,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Searing Gorge",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Burning Steppes (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(28064) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -13094,6 +13112,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Swamp of Sorrows",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Winterspring (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(24913) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -13572,6 +13591,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Kalimd
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Azuremyst",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Darkshore (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(9623) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -14108,6 +14128,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Bloodmyst",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Darkshore (10-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(9632) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -15008,6 +15029,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Darkshore",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Ashenvale (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(13898) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -16333,6 +16355,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Ashenvale",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Stonetalon Mountains (20-60)",
+condition_suggested=function() return level >= 15 and level <= 60 and not completedq(26470) end,
 startlevel=15,
 endlevel=60,
 },[[
@@ -17575,6 +17598,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Stonetalon 26-31",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Southern Barrens (25-60)",
+condition_suggested=function() return level >= 20 and level <= 60 and not completedq(25851) end,
 startlevel=20,
 endlevel=60,
 },[[
@@ -18465,6 +18489,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Southern Barrens 31-34",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Dustwallow Marsh (35-60)",
+condition_suggested=function() return level >= 25 and level <= 60 and not completedq(25080) end,
 startlevel=25,
 endlevel=60,
 },[[
@@ -19240,6 +19265,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Desolace 31-33",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Feralas (35-60)",
+condition_suggested=function() return level >= 30 and level <= 60 and not completedq(14394) end,
 startlevel=30,
 endlevel=60,
 },[[
@@ -20213,6 +20239,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Dustwallow 35-39",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Thousand Needles (40-60)",
+condition_suggested=function() return level >= 35 and level <= 60 and not completedq(27291) end,
 startlevel=35,
 endlevel=60,
 },[[
@@ -21260,6 +21287,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Feralas 36-40",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Thousand Needles (40-60)",
+condition_suggested=function() return level >= 35 and level <= 60 and not completedq(25438) end,
 startlevel=35,
 endlevel=60,
 },[[
@@ -21914,6 +21942,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Felwood 47-48",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Winterspring (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(28366) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -22767,6 +22796,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Silithus 55-57",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Un'Goro Crater (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(8314) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -23194,6 +23224,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Tanaris 44-47",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Felwood (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(26895) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -23738,6 +23769,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\1k 39-44",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Tanaris (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(28160) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -24741,6 +24773,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Ungoro 55-57",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Blasted Lands (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(24695) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -25500,6 +25533,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Winterspring",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Un'Goro Crater (40-60)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(28842) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -26176,6 +26210,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Hellfire",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Zangarmarsh (60-80)",
+condition_suggested=function() return level >= 58 and level <= 80 and not completedq(9383) end,
 startlevel=58,
 endlevel=80,
 },[[
@@ -27190,6 +27225,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Zangarmarsh",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Terokkar Forest (62-80)",
+condition_suggested=function() return level >= 60 and level <= 80 and not completedq(9732) end,
 startlevel=60,
 endlevel=80,
 },[[
@@ -27851,6 +27887,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Terokkar",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Nagrand (64-80)",
+condition_suggested=function() return level >= 62 and level <= 80 and not completedq(10898) end,
 startlevel=62,
 endlevel=80,
 },[[
@@ -28780,6 +28817,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Nagrand",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Blade's Edge Mountains (65-80)",
+condition_suggested=function() return level >= 64 and level <= 80 and not completedq(9977) end,
 startlevel=64,
 endlevel=80,
 },[[
@@ -29765,6 +29803,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\BladesEdge",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Netherstorm (67-80)",
+condition_suggested=function() return level >= 65 and level <= 80 and not completedq(11091) end,
 startlevel=65,
 endlevel=80,
 },[[
@@ -30958,6 +30997,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Netherstorm",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Borean Tundra (58-80)",
+condition_suggested=function() return level >= 67 and level <= 80 and not completedq(10257) end,
 startlevel=67,
 endlevel=80,
 },[[
@@ -32738,6 +32778,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\The Burning Crusade (6
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Shadowmoon",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Borean Tundra (58-80)",
+condition_suggested=function() return level >= 67 and level <= 80 and not completedq(10679) end,
 startlevel=67,
 endlevel=80,
 },[[
@@ -34237,6 +34278,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Borean",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Dragonblight (61-80)",
+condition_suggested=function() return level >= 58 and level <= 80 and not completedq(11723) end,
 startlevel=58,
 endlevel=80,
 },[[
@@ -35747,6 +35789,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Howling",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Dragonblight (61-80)",
+condition_suggested=function() return level >= 58 and level <= 80 and not completedq(11348) end,
 startlevel=58,
 endlevel=80,
 },[[
@@ -37446,6 +37489,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\DragonBlight",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Grizzly Hills (63-80)",
+condition_suggested=function() return level >= 61 and level <= 80 and not completedq(12790) end,
 startlevel=61,
 endlevel=80,
 },[[
@@ -39037,6 +39081,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\GrizzlyHills",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Zul'Drak (64-80)",
+condition_suggested=function() return level >= 63 and level <= 80 and not completedq(12249) end,
 startlevel=63,
 endlevel=80,
 },[[
@@ -40143,6 +40188,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\ZulDrak",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\Sholazar Basin (66-80)",
+condition_suggested=function() return level >= 64 and level <= 80 and not completedq(12948) end,
 startlevel=64,
 endlevel=80,
 },[[
@@ -41501,6 +41547,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Sholazar",
 next="Zygor's Leveling Guides\\Wrath of the Lich King (60-80)\\The Storm Peaks (67-80)",
+condition_suggested=function() return level >= 66 and level <= 80 and not completedq(12546) end,
 startlevel=66,
 endlevel=80,
 },[[
@@ -42373,6 +42420,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\StormPeaks",
 next="Zygor's Leveling Guides\\Cataclysm (80-90)\\Mount Hyjal (80-90)",
+condition_suggested=function() return level >= 67 and level <= 80 and not completedq(13007) end,
 startlevel=67,
 endlevel=80,
 },[[
@@ -43709,6 +43757,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Wrath of the Lich King
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Icecrown",
 next="Zygor's Leveling Guides\\Cataclysm (80-90)\\Mount Hyjal (80-90)",
+condition_suggested=function() return level >= 67 and level <= 80 and not completedq(13403) end,
 startlevel=67,
 endlevel=80,
 },[[
@@ -45587,6 +45636,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Cataclysm (80-90)\\Mou
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Mount Hyjal",
 next="Zygor's Leveling Guides\\Cataclysm (80-90)\\Deepholm (81-90)",
+condition_suggested=function() return level >= 80 and level <= 90 and not completedq(27398) end,
 startlevel=80,
 endlevel=90,
 },[[
@@ -47012,6 +47062,7 @@ author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Vashj'ir",
 achieveid={5452,5318},
 next="Zygor's Leveling Guides\\Cataclysm (80-90)\\Deepholm (81-90)",
+condition_suggested=function() return level >= 80 and level <= 90 and not completedq(26193) end,
 startlevel=80,
 endlevel=90,
 },[[
@@ -48753,6 +48804,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Cataclysm (80-90)\\Dee
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Deepholm",
 next="Zygor's Leveling Guides\\Cataclysm (80-90)\\Uldum (83-90)",
+condition_suggested=function() return level >= 81 and level <= 90 and not completedq(26709) end,
 startlevel=81,
 endlevel=90,
 },[[
@@ -49921,6 +49973,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Cataclysm (80-90)\\Uld
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Uldum",
 next="Zygor's Leveling Guides\\Cataclysm (80-90)\\Twilight Highlands (84-90)",
+condition_suggested=function() return level >= 83 and level <= 90 and not completedq(28633) end,
 achieveid={4961},
 startlevel=83,
 endlevel=90,
@@ -51152,6 +51205,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Cataclysm (80-90)\\Twi
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Twilight Highlands",
 next="Zygor's Leveling Guides\\Pandaria (80-90)\\The Jade Forest (80-90)",
+condition_suggested=function() return level >= 84 and level <= 90 and not completedq(27787) end,
 startlevel=84,
 endlevel=90,
 },[[

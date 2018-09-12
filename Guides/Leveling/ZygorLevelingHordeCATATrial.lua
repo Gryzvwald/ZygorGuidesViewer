@@ -6,7 +6,7 @@ ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Blood Elf (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Eversong 1-5",
-condition_suggested=function() return raceclass('BloodElf') and level<=5.39 end,
+condition_suggested=function() return raceclass('BloodElf') and level <= 5 and not completedq(8338) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Eversong Woods (1-20)",
 startlevel=1,
@@ -793,7 +793,7 @@ turnin Where Kings Walk##13188 |goto Stormwind City/0 85.8,31.7
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Goblin (1-10)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\BilgeWater",
-condition_suggested=function() return raceclass('Goblin') and level <=13 and not completedq(25267) and not raceclass('DEATHKNIGHT') end,
+condition_suggested=function() return raceclass('Goblin') and level <= 13 and not completedq(25267) and not raceclass('DEATHKNIGHT') end,
 condition_suggested_exclusive=true,
 condition_end=function() return completedq(25267) or raceclass('DEATHKNIGHT') end,
 condition_valid=function() return raceclass('Goblin')  end,
@@ -1918,7 +1918,7 @@ turnin Reports to Orgrimmar##26806 |goto 53.1,43.6
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Orc (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Durotar Orc 1-5",
-condition_suggested=function() return raceclass('Orc') and level<=5 end,
+condition_suggested=function() return raceclass('Orc') and level <= 5 and not completedq(25132) end,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Durotar",
 startlevel=1,
 endlevel=5,
@@ -2033,7 +2033,7 @@ accept Report to Sen'jin Village##25133 |goto 45.82,63.44
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Tauren (1-4)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Mulgore 1-4",
-condition_suggested=function() return raceclass('Tauren') and level<=4 end,
+condition_suggested=function() return raceclass('Tauren') and level <= 4 and not completedq(23733) end,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Mulgore",
 startlevel=1,
 endlevel=4,
@@ -2128,7 +2128,7 @@ Fly to Bloodhoof Village |goto Mulgore/0 47.8,59.9 < 20 |c |q 24215
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Troll (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Durotar Troll 1-5",
-condition_suggested=function() return raceclass('Troll') and level<=5 end,
+condition_suggested=function() return raceclass('Troll') and level <= 5 and not completedq(24814) end,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Durotar",
 startlevel=1,
 endlevel=5,
@@ -2577,7 +2577,7 @@ accept Sen'jin Village##25073 |goto 61.55,65.85
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Undead (1-10)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Tirisfal 1-11",
-condition_suggested=function() return raceclass('Scourge') and level<=11 end,
+condition_suggested=function() return raceclass('Scourge') and level <= 10 and not completedq(25012) end,
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Silverpine Forest (10-60)",
 startlevel=1,
 endlevel=10,
@@ -3182,6 +3182,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Easter
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Eversong 5-12",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Ghostlands (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(8490) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -4012,6 +4013,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Ghostlands 12-20",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Hillsbrad Foothills (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -5942,6 +5944,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Blasted Lands",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Hellfire Peninsula (58-80)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(25720) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -6322,10 +6325,11 @@ Follow the path up |goto 44.7,72.5 < 10 |only if walking
 talk Rohan Sunveil##42344
 turnin The Downfall of Marl Wormthorn##25720 |goto 49.8,71.4
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Durotar",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Durotar (1-20)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Durotar 5-8",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Northern Barrens (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(25263) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -6664,10 +6668,11 @@ talk Neeru Fireblade##3216
 turnin Neeru Fireblade##25263 |goto Orgrimmar/2 58.2,54.5
 accept Ak'Zeloth##25264 |goto Orgrimmar/2 58.2,54.5
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Mulgore",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Mulgore (1-20)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Mulgore 4-10",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Northern Barrens (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(26397) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -6939,6 +6944,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Northern Barrens 10-13",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Ashenvale (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(29112) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -7707,6 +7713,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Azshara 10-12",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Ashenvale (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(24463) end,
 startlevel=10,
 endlevel=60,
 },[[

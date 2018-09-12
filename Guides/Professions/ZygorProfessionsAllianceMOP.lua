@@ -5,9 +5,9 @@ if ZGV:DoMutex("ProfessionsAMoP") then return end
 ZygorGuidesViewer.GuideMenuTier = "MOP"
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Alchemy",600},
-hidden=true,
-description="This guide will walk you through leveling your Alchemy skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Alchemy skill from 1-75.",
+condition_end=function() return skill('Pandaria Alchemy') >= 75 end,
+condition_suggested=function() return skill('Pandaria Alchemy') > 0 and skill('Pandaria Alchemy') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Alchemy"
@@ -96,9 +96,9 @@ Congratulations, you are now a Zen Master Alchemist!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 525-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Archaeology",600},
-hidden=true,
 description="This guide will walk you through leveling your Archaeology skill from 525-600.",
+condition_end=function() return skill('Archaeology') >= 600 end,
+condition_suggested=function() return skill('Archaeology') >= 525 and skill('Archaeology') < 600 and level >= 85 end,
 },[[
 step
 label "arc_525-600"
@@ -121,9 +121,9 @@ Congratulations, you are now a Zen Master Archaeologist
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Blacksmithing\\Leveling Guides\\Blacksmithing 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Blacksmithing",600},
-hidden=true,
-description="This guide will walk you through leveling your Blacksmithing skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Blacksmithing skill from 1-75.",
+condition_end=function() return skill('Pandaria Blacksmithing') >= 75 end,
+condition_suggested=function() return skill('Pandaria Blacksmithing') > 0 and skill('Pandaria Blacksmithing') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Blacksmithing"
@@ -227,6 +227,10 @@ step
 #include "MoP_Cooking_Dailies"
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Pandaria Cooking skill from 1-75.",
+condition_end=function() return skill('Pandaria Cooking') >= 75 end,
+condition_suggested=function() return skill('Pandaria Cooking') > 0 and skill('Pandaria Cooking') < 75 and level >= 85 end,
 },[[
 #include "Cooking_520-600"
 step
@@ -1133,9 +1137,9 @@ You reached level 600 with the Way of the Brew cooking profession.
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Enchanting",600},
-hidden=true,
-description="This guide will walk you through leveling your Enchanting skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Enchanting skill from 1-75.",
+condition_end=function() return skill('Pandaria Enchanting') >= 75 end,
+condition_suggested=function() return skill('Pandaria Enchanting') > 0 and skill('Pandaria Enchanting') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Enchanting"
@@ -1180,9 +1184,9 @@ Congratulations, you are now a Zen Master Enchanter!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Engineering",600},
-hidden=true,
-description="This guide will walk you through leveling your Engineering skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Engineering skill from 1-75.",
+condition_end=function() return skill('Pandaria Engineering') >= 75 end,
+condition_suggested=function() return skill('Pandaria Engineering') > 0 and skill('Pandaria Engineering') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Engineering"
@@ -1255,38 +1259,11 @@ create Mist-Piercing Goggles##127130,Engineering,600
 step
 Congratulations, you are now a Zen Master Engineer!
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\First Aid\\Leveling Guides\\First Aid 525-600 Leveling Guide",{
-author="support@zygorguides.com",
-completion={"skill","First Aid",600},
-hidden=true,
-description="This guide will walk you through leveling your First Aid skill from 525-600.",
-},[[
-step
-#include "trainer_FirstAid"
-skillmax First Aid,600
-|tip You must be at least level 85.
-step
-#include "trainer_FirstAid"
-learn Windwool Bandage##102697
-step
-kill Springtail Leaper##57415+, Springtail Gnasher##57413+
-collect 130 Windwool Cloth##72988 |goto Valley of the Four Winds 43.9,38.6 |condition skill("First Aid")>=600
-|tip You can also buy these materials from the Auction House.
-step
-create Windwool Bandage##102697,First Aid,550
-step
-#include "trainer_FirstAid"
-learn Heavy Windwool Bandage##102698 |condition skill("First Aid")>=600
-step
-create Heavy Embersilk Bandage##102698,First Aid,600
-step
-Congratulations, you're now a Zen Master in First Aid!
-]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 525-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Fishing",600},
-hidden=true,
-description="This guide will walk you through leveling your Fishing skill from 525-600.",
+description="This guide will walk you through leveling your Pandaria Fishing skill from 1-75.",
+condition_end=function() return skill('Pandaria Fishing') >= 75 end,
+condition_suggested=function() return skill('Pandaria Fishing') > 0 and skill('Pandaria Fishing') < 75 and level >= 85 end,
 },[[
 step
 label "fish_525-600"
@@ -1305,9 +1282,9 @@ Congratulations, you are now a Zen Master Fisherman!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Herbalism\\Leveling Guides\\Herbalism 525-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Herbalism",600},
-hidden=true,
-description="This guide will walk you through leveling your Herbalism skill from 525-600.",
+description="This guide will walk you through leveling your Pandaria Herbalism skill from 1-75.",
+condition_end=function() return skill('Pandaria Herbalism') >= 75 end,
+condition_suggested=function() return skill('Pandaria Herbalism') > 0 and skill('Pandaria Herbalism') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Herbalism"
@@ -1353,9 +1330,9 @@ Congratulations, you are now a Zen Master Herbalist!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Inscription",600},
-hidden=true,
-description="This guide will walk you through leveling your Inscription skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Inscription skill from 1-75.",
+condition_end=function() return skill('Pandaria Inscription') >= 75 end,
+condition_suggested=function() return skill('Pandaria Inscription') > 0 and skill('Pandaria Inscription') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Inscription"
@@ -1391,9 +1368,9 @@ Congratulations, you are now a Zen Master Inscriptionist!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Jewelcrafting",600},
-hidden=true,
-description="This guide will walk you through leveling your Jewelcrafting skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Jewelcrafting skill from 1-75.",
+condition_end=function() return skill('Pandaria Jewelcrafting') >= 75 end,
+condition_suggested=function() return skill('Pandaria Jewelcrafting') > 0 and skill('Pandaria Jewelcrafting') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Jewelcrafting"
@@ -1481,9 +1458,9 @@ Congratulations, you are now a Zen Master Jewelcrafter!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Leatherworking\\Leveling Guides\\Leatherworking 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Leatherworking",600},
-hidden=true,
-description="This guide will walk you through leveling your Leatherworking skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Leatherworking skill from 1-75.",
+condition_end=function() return skill('Pandaria Leatherworking') >= 75 end,
+condition_suggested=function() return skill('Pandaria Leatherworking') > 0 and skill('Pandaria Leatherworking') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Leatherworking"
@@ -1545,9 +1522,9 @@ Congratulations, you are now a Zen Master Leatherworker!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Mining\\Leveling Guides\\Mining 525-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Mining",600},
-hidden=true,
-description="This guide will walk you through leveling your Mining skill from 525-600.",
+description="This guide will walk you through leveling your Pandaria Mining skill from 1-75.",
+condition_end=function() return skill('Pandaria Mining') >= 75 end,
+condition_suggested=function() return skill('Pandaria Mining') > 0 and skill('Pandaria Mining') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Mining"
@@ -1579,9 +1556,9 @@ Congratulations, you are now a level 600 Miner!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Mining\\Leveling Guides\\Mining with Smelting 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Mining",600},
-hidden=true,
-description="This guide will walk you through leveling your Mining skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Mining skill from 1-75 using Smelting for some points.",
+condition_end=function() return skill('Pandaria Mining') >= 75 end,
+condition_suggested=function() return skill('Pandaria Mining') > 0 and skill('Pandaria Mining') < 75 and level >= 85 end,
 },[[
 step
 #include trainer_Mining
@@ -1612,9 +1589,9 @@ Congratulations, you are now a level 600 Miner!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Skinning\\Leveling Guides\\Skinning 525-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Skinning",600},
-hidden=true,
-description="This guide will walk you through leveling your Skinning skill from 525-600.",
+description="This guide will walk you through leveling your Pandaria Skinning skill from 1-75.",
+condition_end=function() return skill('Pandaria Skinning') >= 75 end,
+condition_suggested=function() return skill('Pandaria Skinning') > 0 and skill('Pandaria Skinning') < 75 and level >= 85 end,
 },[[
 step
 #include trainer_Skinning
@@ -1633,9 +1610,9 @@ Congratulations, you are now a Zen Master Skinner!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Tailoring",600},
-hidden=true,
-description="This guide will walk you through leveling your Tailoring skill from 500-600.",
+description="This guide will walk you through leveling your Pandaria Tailoring skill from 1-75.",
+condition_end=function() return skill('Pandaria Tailoring') >= 75 end,
+condition_suggested=function() return skill('Pandaria Tailoring') > 0 and skill('Pandaria Tailoring') < 75 and level >= 85 end,
 },[[
 step
 #include "trainer_Tailoring"

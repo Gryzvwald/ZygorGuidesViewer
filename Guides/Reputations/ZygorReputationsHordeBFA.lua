@@ -7,7 +7,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Battle for Azeroth\
 author="support@zygorguides.com",
 keywords={"Champions","of","Azeroth"},
 description="This guide will walk you through becoming exalted with the \"Champions of Azeroth\" faction.",
-condition_suggested=function() return level>=110 and level<=120 end,
+condition_suggested=function() return level >= 110 and level <= 120 and rep('Champions of Azeroth') < Exalted end,
 achieveid={12955},
 },[[
 step
@@ -28,7 +28,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Battle for Azeroth\
 author="support@zygorguides.com",
 keywords={"Talanji's", "Expedition"},
 description="This guide will walk you through becoming exalted with the \"Talanji's Expedition\" faction.",
-condition_suggested=function() return level>=110 and level<=120 end,
+condition_suggested=function() return level >= 110 and level <= 120 and rep('Talanji\'s Expedition') < Exalted end,
 achieveid={12948},
 },[[
 step
@@ -49,7 +49,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Battle for Azeroth\
 author="support@zygorguides.com",
 keywords={"Honorbound"},
 description="This guide will walk you through becoming exalted with the \"The Honorbound\" faction.",
-condition_suggested=function() return level>=110 and level<=120 end,
+condition_suggested=function() return level >= 110 and level <= 120 and rep('The Honorbound') < Exalted end,
 achieveid={12957},
 },[[
 step
@@ -71,7 +71,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Battle for Azeroth\
 author="support@zygorguides.com",
 keywords={"Tortollan","Seekers"},
 description="This guide will walk you through becoming exalted with the \"Tortollan Seekers\" faction.",
-condition_suggested=function() return level>=110 and level<=120 end,
+condition_suggested=function() return level >= 110 and level <= 120 and rep('Tortollan Seekers') < Exalted end,
 achieveid={12956},
 },[[
 step
@@ -92,7 +92,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Battle for Azeroth\
 author="support@zygorguides.com",
 keywords={"Voldunai"},
 description="This guide will walk you through becoming exalted with the \"Voldunai\" faction.",
-condition_suggested=function() return level>=110 and level<=120 end,
+condition_suggested=function() return level >= 110 and level <= 120 and rep('Voldunai') < Exalted end,
 achieveid={12949},
 },[[
 step
@@ -113,7 +113,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Battle for Azeroth\
 author="support@zygorguides.com",
 keywords={"Zandalari","Empire"},
 description="This guide will walk you through becoming exalted with the \"Zandalari Empire\" faction.",
-condition_suggested=function() return level>=110 and level<=120 end,
+condition_suggested=function() return level >= 110 and level <= 120 and rep('Zandalari Empire') < Exalted end,
 achieveid={12950},
 },[[
 step

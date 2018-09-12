@@ -413,6 +413,13 @@ data.basenodes.transit = {
 		-- Hall of the Guardian - Dalaran, Broken Isles -to- Dalaran, Broken Isles --
 		"Hall of the Guardian/1 57.32,90.51 -to- Dalaran L/10 67.52,46.47 {mode:PORTAL} {title:Click the Portal to Dalaran} {cond:PlayerCompletedQuest(41036)}",
 
+		-- Teleportation Nexus order hall ability
+		"Hall of the Guardian/1 66.78,46.52 -x- Val'sharah/0 51.25,25.56 {mode:PORTAL} {title:Click the Portal to Val'sharah} {cond:IsSpellKnown(223413)}",
+		"Hall of the Guardian/1 67.12,41.71 -x- Stormheim/0 31.34,60.51 {mode:PORTAL} {title:Click the Portal to Stormheim} {cond:IsSpellKnown(223413)}",
+		"Hall of the Guardian/1 60.26,51.78 -x- Suramar/0 33.43,50.44 {mode:PORTAL} {title:Click the Portal to Suramar} {cond:IsSpellKnown(223413)}",
+		"Hall of the Guardian/1 55.06,39.65 -x- Azsuna/0 57.95,15.15 {mode:PORTAL} {title:Click the Portal to Azsuna} {cond:IsSpellKnown(223413)}",
+		"Hall of the Guardian/1 54.75,44.45 -x- Highmountain/0 31.41,63.82 {mode:PORTAL} {title:Click the Portal to Highmountain} {cond:IsSpellKnown(223413)}",
+
 	-- WARRIOR --
 		-- Dalaran, Broken Isles -to- Skyhold - Stormheim, Broken Isles --
 		"Dalaran L/10 75.23,47.22 -to- Skyhold/1 58.92,36.29 {mode:PORTAL} {title:Use the Jump to Skyhold ability}"..

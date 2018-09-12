@@ -5,9 +5,7 @@ if ZGV:DoMutex("ProfessionsH") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-description="This guide will walk you through leveling your Alchemy skill from 1-600.",
-completion={"skill","Alchemy",600},
-condition_suggested=function() return hasprof('Alchemy',1,600) end,
+description="This guide will walk you through leveling your Alchemy skill from 1-300.",
 },[[
 step
 #include "trainer_Alchemy"
@@ -58,8 +56,6 @@ create 38 Elixir of Wisdom##3171,Alchemy,125
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Archaeology",600},
-condition_suggested=function() return hasprof('Archaeology',1,600) end,
 description="This guide will walk you through leveling your Archaeology skill from 1-600.",
 },[[
 step
@@ -94,9 +90,7 @@ skill Archaeology,125
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Blacksmithing\\Leveling Guides\\Blacksmithing 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Blacksmithing",600},
-condition_suggested=function() return hasprof('Blacksmithing',1,600) end,
-description="This guide will walk you through leveling your Blacksmithing skill from 1-600.",
+description="This guide will walk you through leveling your Blacksmithing skill from 1-300.",
 },[[
 step
 #include "trainer_Blacksmithing"
@@ -185,9 +179,7 @@ create Rough Bronze Leggings##2668,Blacksmithing,125
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Enchanting",600},
-condition_suggested="hasprof('Enchanting',1,600)",
-description="This guide will walk you through leveling your Enchanting skill from 1-600.",
+description="This guide will walk you through leveling your Enchanting skill from 1-300.",
 },[[
 step
 #include "trainer_Enchanting"
@@ -251,9 +243,7 @@ create 25 Enchant Cloak - Minor Agility##13419,Enchanting,135
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Engineering",600},
-condition_suggested=function() return hasprof('Engineering',1,600) end,
-description="This guide will walk you through leveling your Engineering skill from 1-600.",
+description="This guide will walk you through leveling your Engineering skill from 1-300.",
 },[[
 step
 #include "trainer_Engineering"
@@ -362,9 +352,7 @@ create 3 Flying Tiger Goggles##3934,Engineering,130
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Fishing",600},
-condition_suggested=function() return hasprof('Fishing',1,600) end,
-description="This guide will walk you through leveling your Fishing skill from 1-600.",
+description="This guide will walk you through leveling your Fishing skill from 1-300.",
 },[[
 step
 #include "trainer_Fishing"
@@ -397,9 +385,7 @@ Get your Fishing skill to level 150 |skill Fishing,150
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Herbalism\\Leveling Guides\\Herbalism 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Herbalism",600},
-condition_suggested=function() return hasprof('Herbalism',1,600) end,
-description="This guide will walk you through leveling your Herbalism skill from 1 - 600.",
+description="This guide will walk you through leveling your Herbalism skill from 1-300.",
 },[[
 step
 #include "trainer_Herbalism"
@@ -439,9 +425,7 @@ skill Herbalism,125
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Inscription",600},
-condition_suggested=function() return hasprof('Inscription',1,600) end,
-description="This guide will walk you through leveling your Inscription skill from 1-600.",
+description="This guide will walk you through leveling your Inscription skill from 1-300.",
 },[[
 step
 #include "trainer_Inscription"
@@ -496,9 +480,7 @@ create Research: Midnight Ink##165304,Inscription,128
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Jewelcrafting",600},
-condition_suggested=function() return hasprof('Jewelcrafting',1,600) end,
-description="This guide will walk you through leveling your Jewelcrafting skill from 1-600.",
+description="This guide will walk you through leveling your Jewelcrafting skill from 1-300.",
 },[[
 'Redirecting to end of trial |only if default |next "end_of_prof_trial"
 step
@@ -610,9 +592,7 @@ create Pendant of the Agate Shield##25610,Jewelcrafting,150
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Leatherworking\\Leveling Guides\\Leatherworking 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Leatherworking",600},
-condition_suggested=function() return hasprof('Leatherworking',1,600) end,
-description="This guide will walk you through leveling your Leatherworking skill from 1-600.",
+description="This guide will walk you through leveling your Leatherworking skill from 1-300.",
 },[[
 step
 #include "trainer_Leatherworking"
@@ -694,9 +674,7 @@ create Hillman's Leather Gloves##3764,Leatherworking,150
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Mining\\Leveling Guides\\Classic Mining 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Mining",600},
-condition_suggested=function() return hasprof('Mining',1,600) end,
-description="This guide will walk you through leveling your Mining skill from 1 - 600.",
+description="This guide will walk you through leveling your Mining skill from 1-300.",
 },[[
 step
 #include "trainer_Mining"
@@ -751,9 +729,7 @@ skill Mining,150
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Mining\\Leveling Guides\\Mining 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Mining",600},
-condition_suggested=function() return hasprof('Mining',1,600) end,
-description="This guide will walk you through leveling your Mining skill from 1 - 600.",
+description="This guide will walk you through leveling your Mining skill from 1-300.",
 },[[
 step
 talk Stonebreaker Ruian##66979 |goto The Jade Forest/0 27.8,14.8
@@ -799,9 +775,7 @@ skill Mining,150
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Skinning\\Leveling Guides\\Skinning 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Skinning",600},
-condition_suggested=function() return hasprof('Skinning',1,600) end,
-description="This guide will walk you through leveling your Skinning skill from 1-600.",
+description="This guide will walk you through leveling your Skinning skill from 1-300.",
 },[[
 step
 #include "trainer_Skinning"
@@ -843,9 +817,7 @@ skill Skinning,150
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 1-600 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Tailoring",600},
-condition_suggested=function() return hasprof('Tailoring',1,600) end,
-description="This guide will walk you through leveling your Tailoring skill from 1-600.",
+description="This guide will walk you through leveling your Tailoring skill from 1-300.",
 },[[
 step
 #include "trainer_Tailoring"

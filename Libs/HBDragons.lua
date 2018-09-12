@@ -13,11 +13,16 @@ end
 
 local PI2 = math.pi * 2
 
+local instanceRemaps = {
+	[1616]=1220,  -- Azsuna Mage Hunter scenario
+}
+
 function pins:GetDirectionToIcon( icon )
 	-- TODO : rework to use real values
 	local data = pins.minimapPins[icon];
 	if ( data ) then
 		local oX, oY, instanceID = HBD:GetPlayerWorldPosition()
+		local remap = instanceRemaps[instanceID]  if remap then instanceID=remap end
 		if instanceID~=data.instanceID then return end
 		return HBD:GetWorldVector(instanceID, oX, oY, data.x, data.y)
 	end
@@ -28,6 +33,7 @@ function pins:GetDistanceToIcon( icon )
 	if ( data ) then
 		local oX, oY, instanceID = HBD:GetPlayerWorldPosition()
 		if not oX then return end
+		local remap = instanceRemaps[instanceID]  if remap then instanceID=remap end
 		if instanceID~=data.instanceID then return end
 		local dist, detalx, deltay = HBD:GetWorldDistance(instanceID, oX, oY, data.x, data.y)
 		return dist, detalx, deltay

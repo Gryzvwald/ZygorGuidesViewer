@@ -667,7 +667,7 @@ turnin Where Kings Walk##13188 |goto Stormwind City/0 85.8,31.7
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Draenei (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Azuremyst",
-condition_suggested=function() return raceclass('Draenei') and level<=15 end,
+condition_suggested=function() return raceclass('Draenei') and level <= 5 and not completedq(9312) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Kalimdor\\Azuremyst Isle (1-20)",
 startlevel=1,
@@ -843,7 +843,7 @@ accept Travel to Azure Watch##9313 |goto 50.50,47.85
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Dwarf (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Dun Morogh",
-condition_suggested=function() return raceclass('Dwarf') and level<=5 end,
+condition_suggested=function() return raceclass('Dwarf') and level <= 5 and not completedq(24493) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Dun Morogh (1-20)",
 startlevel=1,
@@ -1049,7 +1049,7 @@ turnin Don't Forget About Us##24493 |goto Dun Morogh/0 53.1,50.0
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Gnome (1-5)",{
 author="support@zygorguides.com",
-condition_suggested=function() return raceclass('Gnome') and level<=5 end,
+condition_suggested=function() return raceclass('Gnome') and level <= 5 and not completedq(26364) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Dun Morogh (1-20)",
 startlevel=1,
@@ -1303,7 +1303,7 @@ accept Bound for Kharanos##26380 |goto Dun Morogh 49.9,45.0
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Human (1-5)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Elwynn Forest",
-condition_suggested=function() return raceclass('Human') and level<=5 end,
+condition_suggested=function() return raceclass('Human') and level <= 5 and not completedq(26390) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (1-10)\\Eastern Kingdoms\\Elwynn Forest (1-20)",
 startlevel=1,
@@ -1509,7 +1509,7 @@ accept Report to Goldshire##54 |goto 33.6,53.0
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Night Elf (1-10)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\NightElf",
-condition_suggested=function() return raceclass('NightElf') and level<=15 end,
+condition_suggested=function() return raceclass('NightElf') and level <= 10 and not completedq(14039) end,
 condition_suggested_exclusive=true,
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Darkshore (10-60)",
 startlevel=1,
@@ -2041,7 +2041,7 @@ Reach Rut'theran Village |goto Teldrassil/0 55.10,88.53 |noway |c |q 28490 |only
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Starter Guides\\Worgen (1-10)",{
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Gilneas",
-condition_suggested=function() return raceclass('Worgen') and level<=13 and not completedq(28517) and not raceclass('DEATHKNIGHT') end,
+condition_suggested=function() return raceclass('Worgen') and level <= 13 and not completedq(28517) and not raceclass('DEATHKNIGHT') end,
 condition_suggested_exclusive=true,
 condition_end=function() return completedq(28517) or raceclass('DEATHKNIGHT') end,
 condition_valid=function() return raceclass('Worgen')  end,
@@ -2992,6 +2992,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Easter
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Dun Morogh",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Loch Modan (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(6392) end,
 startlevel=1,
 endlevel=10
 },[[
@@ -3416,6 +3417,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Easter
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Elwynn_2",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Westfall (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(11) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -3761,6 +3763,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Loch Modan",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Wetlands (20-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(13661) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -4389,6 +4392,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Westfall",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Redridge Mountains (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(26370) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -4857,6 +4861,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Redridge_Mountains_2",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Duskwood (20-60)",
+condition_suggested=function() return level >= 15 and level <= 60 and not completedq(26726) end,
 startlevel=15,
 endlevel=60,
 },[[
@@ -5454,6 +5459,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Wetlands",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Arathi Highlands (25-60)",
+condition_suggested=function() return level >= 20 and level <= 60 and not completedq(26128) end,
 startlevel=20,
 endlevel=60,
 },[[
@@ -5968,6 +5974,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Easte
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Blasted Lands",
 next="Zygor's Leveling Guides\\The Burning Crusade (60-80)\\Hellfire Peninsula (58-80)",
+condition_suggested=function() return level >= 40 and level <= 60 and not completedq(26187) end,
 startlevel=40,
 endlevel=60,
 },[[
@@ -6645,6 +6652,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (1-10)\\Kalimd
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Azuremyst",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Darkshore (10-60)",
+condition_suggested=function() return level >= 1 and level <= 20 and not completedq(9623) end,
 startlevel=1,
 endlevel=10,
 },[[
@@ -7181,6 +7189,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Bloodmyst",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Darkshore (10-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(9632) end,
 startlevel=10,
 endlevel=60,
 },[[
@@ -8081,6 +8090,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Kalim
 author="support@zygorguides.com",
 image=ZGV.DIR.."\\Guides\\Images\\Darkshore",
 next="Zygor's Leveling Guides\\Classic (10-60)\\Kalimdor\\Ashenvale (15-60)",
+condition_suggested=function() return level >= 10 and level <= 60 and not completedq(13898) end,
 startlevel=10,
 endlevel=60,
 },[[

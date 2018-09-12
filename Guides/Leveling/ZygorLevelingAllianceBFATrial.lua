@@ -6,7 +6,7 @@ ZygorGuidesViewer.GuideMenuTier = "TRI"
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\World Events\\Battle for Azeroth (110-120)\\The Burning of Teldrassil",{
 author="support@zygorguides.com",
 description="This guide will help to defend Teldrassil against the incoming Horde attack..",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level == 110 and not completedq(53310) end,
 },[[
 step
 accept A Short-Lived Peace##52058

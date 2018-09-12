@@ -1884,23 +1884,352 @@ You have completed today's Menagerie daily quest
 Click here to return to the Main Menu |confirm |next "Menu"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\Hand of the Prophet Dailies",{
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="This guide will walk you through the daily quests for the Hand of the Prophet faction.",
 },[[
 step
-#include "A_Hand_of_Prophet_Dailies"
+Complete the following guide before continuing:
+_Tanaan Jungle (100) Main Questline_
+confirm |only if not completedq(38578)
+step
+label "hand_prophet_start"
+click Tanaan Planning Map##241725
+|tip It looks like a rectangle table with a map laying on it.
+accept Assault on Ironhold Harbor##37891 |goto Tanaan Jungle/0 58.5,60.4 |or
+accept Bleeding the Bleeding Hollow##38045 |goto Tanaan Jungle/0 58.5,60.4 |or
+accept Battle At The Iron Front##38046 |goto Tanaan Jungle/0 58.5,60.4 |or
+accept Assault on the Ruins of Kra'nak##38250 |goto Tanaan Jungle/0 58.5,60.4 |or
+accept Assault on The Fel Forge##38440 |goto Tanaan Jungle/0 58.5,60.4 |or
+accept Assault on the Temple of Sha'naar##37968 |goto Tanaan Jungle/0 58.5,60.4 |or
+accept Assault on the Throne of Kil'jaeden##38585 |goto Tanaan Jungle/0 58.5,60.4 |or
+|tip You will be able to choose between 2 of these quests, but will only be able to accept 1 of these quests per day.
+step
+talk Parvink##96147
+accept Demonslayer of Tanaan##39581 |goto Tanaan Jungle/0 57.8,59.8 |or
+accept Bringing Down the Iron Horde##39586 |goto Tanaan Jungle/0 57.8,59.8 |or
+|tip This quest only has a chance of being available each, day, so it's not guaranteed to be available. You can only accept one of these quests, if it's available. Sometimes, a different quest for Saberstalkers reputation will be available, instead.
+step
+kill Grom'kar Warsmith##89935+, Grom'kar Sentry##89857+, Grom'kar Leadslinger##89777+, Grom'kar Cauterizer##90136+
+clicknpc True Iron Bomb##90069+
+|tip They look like round metal spiked balls on the ground and sitting on objects all around this area. Get them and cast the spell they grant you on Iron Battle Engines. They look like big metal artillery machines all around this area.
+click Box of Iron Horde Equipment##239839
+|tip They look like wooden crates on the ground around this area.
+clicknpc Iron Horde Banner##90433
+|tip They look like vertical flags made of cloth and bone all around this area.
+click Inferno Shot##243205
+|tip They look like silver metal artillery capsules laying on the ground around this area. They give you a buff that allows you to use Harbor Cannons around this area, which allow you to kill mobs easily.
+Assault the Iron Horde Forces at Ironhold Harbor |q Assault on Ironhold Harbor##37891/1 |goto Tanaan Jungle/0 39.6,37.0
+|tip You will see a progress bar in your quest tracking area.
+step
+_Follow_ the path |goto Tanaan Jungle/0 21.3,58.7 < 30 |only if walking
+kill Eye Sentry##95235+, Bleeding Hollow Hunter##89699+, Felblood Overseer##92706+, Bleeding Hollow Cabalist##90851+, Bleeding Hollow Brute##89706+
+clicknpc Blood Ritual Orb##83670+
+|tip They look like floating swirling red balls around this area.
+Assault the Bleeding Hollow at Zeth'Gol |q Bleeding the Bleeding Hollow##38045/1 |goto Tanaan Jungle/0 22.3,51.1
+|tip You will see a progress bar in your quest tracking area.
+step
+click Medical Supplies##239971
+|tip They look like wooden crates with red crosses on them on the ground all around this area.
+collect First Aid Bandages##122139 |n
+clicknpc Wounded Footsoldier##90443+
+|tip You need First Aid Bandages in order to heal them.
+clicknpc Iron Horde Banner##90433
+|tip They look like vertical flags made of cloth and bone all around this area.
+kill Felsworn Soultwister##92873+, Felsworn Berserker##90482+, Felsworn Bulwark##91251+, Iron Wargronn##90585+, Iron Sniper##77767+
+Aid the Battle at the Iron Front |q Battle At The Iron Front##38046/1 |goto Tanaan Jungle/0 11.4,56.1
+|tip You will see a progress bar in your quest tracking area.
+step
+kill Felborn Enforcer##90620+, Sethekk Neophyte##90312+, Felborn Instructor##89748
+clicknpc Ritual Circle##90300+
+|tip They look like circular green glowing symbols on the ground around this area.
+Assault the Shadow Council Forces at the Ruins of Kra'nak |q Assault on the Ruins of Kra'nak##38250/1 |goto Tanaan Jungle/0 24.0,39.6
+|tip You will see a progress bar in your quest tracking area.
+step
+kill Felblood Warrior##90066+, Felblood Overseer##91760+, Felblood Deadeye##91764+, Forge Engineer##91721+
+click Siege Equipment Blueprints##241669
+|tip They look like small tan pieces of paper laying on the ground and on objects around this area.
+Assault the Iron Horde Forces at the Fel Forge |q Assault on The Fel Forge##38440/1 |goto Tanaan Jungle/0 45.3,43.5
+|tip You will see a progress bar in your quest tracking area.
+step
+_Follow_ the path |goto Tanaan Jungle/0 31.1,63.0 < 30 |only if walking
+_Go up_ the stairs |goto Tanaan Jungle/0 28.9,66.7 < 20 |only if walking
+kill Sargerei Nullifier##90295+, Sargerei Felbinder##90286+
+clicknpc Bound Spirit##90703+
+|tip They look like floating draenei spirits kicking in the air and being choked around this area.
+clicknpc Defiled Corpse##90302+
+|tip They look like dead draenei laying on the ground around this area.
+Assault the Sargerei Forces at the Temple of Sha'naar |q Assault on the Temple of Sha'naar##37968/1 |goto Tanaan Jungle/0 28.5,67.9
+|tip You will see a progress bar in your quest tracking area.
+step
+_Follow_ the road |goto Tanaan Jungle/0 58.1,42.5 < 30 |only if walking
+_Run up_ the zigzag path |goto Tanaan Jungle/0 58.8,31.8 < 30 |only if walking
+kill Felflame Fiend##92082+, Shadowheart Fiend##92083+, Infernal Devastator##92031+, Felblood Corruptor##92396+, Felguard Sentinel##92026+
+Assault the Shadow Council Forces at the Throne of Kil'jaeden |q Assault on the Throne of Kil'jaeden##38585/1 |goto Tanaan Jungle/0 56.0,25.6
+|tip You will see a progress bar in your quest tracking area.
+|tip This is a group quest. Use the Group Finder to easily find a group by opening it and selecting Premade Groups -> Custom, then searching for "Kil'jaeden".
+step
+talk Exarch Yrel##90309
+turnin Assault on Ironhold Harbor##37891 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(37891) or completedq(37891)
+turnin Bleeding the Bleeding Hollow##38045 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(38045) or completedq(38045)
+turnin Battle At The Iron Front##38046 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(38046) or completedq(38046)
+turnin Assault on the Ruins of Kra'nak##38250 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(38250) or completedq(38250)
+turnin Assault on The Fel Forge##38440 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(38440) or completedq(38440)
+turnin Assault on the Temple of Sha'naar##37968 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(37968) or completedq(37968)
+turnin Assault on the Throne of Kil'jaeden##38585 |goto Tanaan Jungle/0 58.5,60.4 |only if havequest(38585) or completedq(38585)
+step
+talk Vindicator Krethos##90974
+accept Pressing the Attack##39574 |goto Tanaan Jungle/0 58.4,60.5
+accept Harnessing Their Power##39573 |goto Tanaan Jungle/0 58.4,60.5 |or
+accept Disarming Sha'naar##39571 |goto Tanaan Jungle/0 58.4,60.5 |or
+accept Secrets of the Shadow Council##39570 |goto Tanaan Jungle/0 58.4,60.5 |or
+accept Breaking Their Fel Bonds##39569 |goto Tanaan Jungle/0 58.4,60.5 |or
+accept A Little Wetwork##39568 |goto Tanaan Jungle/0 58.4,60.5 |or
+accept Bloodied Blades of Zeth'Gol##39567 |goto Tanaan Jungle/0 58.4,60.5 |or
+|tip You will only be able to accept 2 of these quests per day.
+step
+accept Battle At The Iron Front##39443
+click Medical Supplies##239971
+|tip They look like wooden crates with red crosses on them on the ground all around this area.
+collect First Aid Bandages##122139 |n
+clicknpc Wounded Grunt##90452+
+|tip You need First Aid Bandages in order to heal them.
+clicknpc Iron Horde Banner##90433
+|tip They look like vertical flags made of cloth and bone all around this area.
+kill Felsworn Soultwister##92873+, Felsworn Berserker##90482+, Felsworn Bulwark##91251+, Iron Wargronn##90585+, Iron Sniper##77767+
+Aid the Battle at the Iron Front |q Battle At The Iron Front##39443/1 |goto Tanaan Jungle/0 11.4,56.1
+|tip You will see a progress bar in your quest tracking area.
+only if not completedq(39574,1) and not completedq(38046)
+step
+kill Felsworn Soultwister##92873+, Felsworn Berserker##90482+, Felsworn Bulwark##91251+
+collect 20 Vial of Fel Blood##128431 |q Breaking Their Fel Bonds##39569/1 |goto Tanaan Jungle/0 11.4,56.1
+step
+kill Iron Wargronn##90585+
+collect Wargronn Harness##128434 |q Harnessing Their Power##39514/1 |goto Tanaan Jungle/0 13.1,56.2
+step
+kill Felsworn Soultwister##92873+, Felsworn Berserker##90482+, Felsworn Bulwark##91251+
+Slay #25# Iron Horde Orcs |q Bringing Down the Iron Horde##39586/1 |goto Tanaan Jungle/0 11.4,56.1
+step
+_Follow_ the path up |goto Tanaan Jungle/0 31.1,63.0 < 30 |only if walking
+_Run up_ the stairs |goto Tanaan Jungle/0 28.8,66.7 < 30 |only if walking
+_Follow_ the stairs up |goto Tanaan Jungle/0 29.2,68.4 < 30 |only if walking
+_Enter_ the mine |goto Tanaan Jungle/0 29.4,70.8 < 20 |walk
+click Unrefined Draenic Crystal##243794
+|tip They look like small clusters of white crystals on the ground and on objects inside this mine.
+collect 8 Unrefined Draenic Crystal##128433 |q Disarming Sha'naar##39571/1 |goto Tanaan Jungle/0 29.2,71.0
+step
+_Follow_ the path |goto Tanaan Jungle/0 31.1,63.0 < 30 |only if walking
+_Go up_ the stairs |goto Tanaan Jungle/0 28.9,66.7 < 20 |only if walking
+accept Assault on the Temple of Sha'naar##39449
+kill Sargerei Nullifier##90295+, Sargerei Felbinder##90286+
+clicknpc Bound Spirit##90703+
+|tip They look like floating draenei spirits kicking in the air and being choked around this area.
+clicknpc Defiled Corpse##90302+
+|tip They look like dead draenei laying on the ground around this area.
+Assault the Sargerei Forces at the Temple of Sha'naar |q Assault on the Temple of Sha'naar##39449/1 |goto Tanaan Jungle/0 28.5,67.9
+|tip You will see a progress bar in your quest tracking area.
+only if not completedq(39574,1) and not completedq(37968)
+step
+kill Felborn Enforcer##90620+, Sethekk Neophyte##90312+, Felborn Instructor##89748+
+collect 20 Shadow Council Missive##128432 |q Secrets of the Shadow Council##39570/1 |goto Tanaan Jungle/0 24.0,39.6
+step
+accept Assault on the Ruins of Kra'nak##39448
+kill Felborn Enforcer##90620+, Sethekk Neophyte##90312+, Felborn Instructor##89748+
+clicknpc Ritual Circle##90300+
+|tip They look like circular green glowing symbols on the ground around this area.
+Assault the Shadow Council Forces at the Ruins of Kra'nak |q Assault on the Ruins of Kra'nak##39448/1 |goto Tanaan Jungle/0 24.0,39.6
+|tip You will see a progress bar in your quest tracking area.
+only if not completedq(39574,1) and not completedq(38250)
+step
+kill Grom'kar Warsmith##89935+, Grom'kar Sentry##89857+, Grom'kar Leadslinger##89777+, Grom'kar Cauterizer##90136+
+collect 15 Iron Horde Naval Manifest##128429 |q A Little Wetwork##39568/1 |goto Tanaan Jungle/0 39.6,37.0
+step
+_Follow_ the path |goto Tanaan Jungle/0 21.3,58.7 < 30 |only if walking
+kill Bleeding Hollow Hunter##89699+, Bleeding Hollow Cabalist##90851+, Bleeding Hollow Brute##89706+
+collect 25 Bleeding Hollow Ritual Blade##128428 |q Bloodied Blades of Zeth'Gol##39567/1 |goto Tanaan Jungle/0 22.3,51.1
+step
+talk Vindicator Krethos##90974
+turnin Pressing the Attack##39574 |goto Tanaan Jungle/0 58.4,60.5
+turnin Harnessing Their Power##39573 |goto Tanaan Jungle/0 58.4,60.5 |only if havequest(39573) or completedq(39573)
+turnin Disarming Sha'naar##39571 |goto Tanaan Jungle/0 58.4,60.5 |only if havequest(39571) or completedq(39571)
+turnin Secrets of the Shadow Council##39570 |goto Tanaan Jungle/0 58.4,60.5 |only if havequest(39570) or completedq(39570)
+turnin Breaking Their Fel Bonds##39569 |goto Tanaan Jungle/0 58.4,60.5 |only if havequest(39569) or completedq(39569)
+turnin A Little Wetwork##39568 |goto Tanaan Jungle/0 58.4,60.5 |only if havequest(39568) or completedq(39568)
+turnin Bloodied Blades of Zeth'Gol##39567 |goto Tanaan Jungle/0 58.4,60.5 |only if havequest(39567) or completedq(39567)
+step
+_Go through_ the doorway |goto Tanaan Jungle/0 57.8,58.0 < 20 |only if walking
+_Follow_ the path |goto Tanaan Jungle/0 54.9,51.6 < 30 |only if walking
+kill Corrupting Fiend##93024+
+|tip The imps spawn in groups of 3 around this area.
+Slay #20# Demons |q Demonslayer of Tanaan##39581/1 |goto Tanaan Jungle/0 53.9,43.6
+You can find more around [Tanaan Jungle/0 56.9,35.2]
+step
+talk Parvink##96147
+turnin Demonslayer of Tanaan##39581 |goto Tanaan Jungle/0 57.8,59.8 |only if havequest(39581) or completedq(39581)
+turnin Bringing Down the Iron Horde##39586 |goto Tanaan Jungle/0 57.8,59.8 |only if havequest(39586) or completedq(39586)
+step
+You've completed the dailies for today
+Click to restart the dailies run |confirm |next "hand_prophet_start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\Order of the Awakened Dailies",{
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="This guide will walk you through the daily quests for the Order of the Awakened faction.",
 },[[
 step
-#include "OotA_Dailies"
+Complete the following guide before continuing:
+_Tanaan Jungle (100) Main Questline_
+Click here to check out our Tanaan Jungle Questline guide |next "Zygor's Leveling Guides\\Draenor (90-100)\\Tanaan Jungle (100)" |confirm |or
+confirm |only if not completedq(38578) |or
+step
+label "order_awakened_start"
+talk Dawn-Seeker Krisek##95424
+accept Unseen Influence##39433 |goto Tanaan Jungle/0 58.0,59.4
+step
+Follow the path |goto Tanaan Jungle/0 54.9,64.1 < 30 |only if walking
+kill Broodlord Ixkor##92429
+|tip You may have to wait for it to respawn.
+collect 1 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 57.8,67.3
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Follow the path |goto Tanaan Jungle/0 55.9,66.1 < 30 |only if walking
+Continue following the path |goto Tanaan Jungle/0 54.9,63.5 < 30 |only if walking
+Run through here |goto Tanaan Jungle/0 51.9,60.5 < 30 |only if walking
+Jump down here |goto Tanaan Jungle/0 49.1,57.4 < 10 |only if walking
+kill Captain Grok'mar##93264
+|tip You may have to wait for him to respawn.
+collect 2 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 48.6,57.4
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Jump up here |goto Tanaan Jungle/0 49.1,57.4 < 10 |only if walking
+Follow the path |goto Tanaan Jungle/0 49.1,59.3 < 30 |only if walking
+Continue following the dirt path |goto Tanaan Jungle/0 46.6,65.9 < 30 |only if walking
+Turn off the road here |goto Tanaan Jungle/0 43.1,70.2 < 20 |only if walking
+Enter the hole in the ground |goto Tanaan Jungle/0 42.4,68.9 < 20 |walk
+Follow the path |goto Tanaan Jungle/0 40.5,69.3 < 20 |only if walking
+kill Kris'kar the Unredeemed##93279
+|tip You may have to wait for him to respawn.
+collect 3 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 39.6,68.1
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Follow the path |goto Tanaan Jungle/0 40.5,69.3 < 20 |only if walking
+Leave the hole in the ground |goto Tanaan Jungle/0 42.4,68.9 < 20 |walk
+kill Bramblefell##91093
+|tip You may have to wait for him to respawn. He's a big tree ent that patrols the northern part of Zorammarsh, so you may need to search for him.
+collect 4 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 40.8,69.6
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Follow the path |goto Tanaan Jungle/0 38.2,75.1 < 30 |only if walking
+Enter the cave |goto Tanaan Jungle/0 37.4,75.9 < 30 |walk
+Run down the path |goto Tanaan Jungle/0 36.4,77.0 < 20 |only if walking
+kill Captain Ironbeard##93076
+|tip You may have to wait for him to respawn. He's a skeleton that walks around in this area of the cave, so you may need to search for him.
+collect 5 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 36.5,79.8
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Follow the path |goto Tanaan Jungle/0 36.7,78.9 < 20 |only if walking
+Continue following the path |goto Tanaan Jungle/0 36.4,76.4 < 20 |only if walking
+Follow the path |goto Tanaan Jungle/0 38.5,74.6 < 40 |only if walking
+Run on the dirt road |goto Tanaan Jungle/0 37.5,69.5 < 30 |only if walking
+Follow the path |goto Tanaan Jungle/0 35.6,67.5 < 30 |only if walking
+Follow the dirt path up |goto Tanaan Jungle/0 31.1,63.0 < 30 |only if walking
+Run up the stairs |goto Tanaan Jungle/0 28.8,66.7 < 20 |only if walking
+Continue up the stairs |goto Tanaan Jungle/0 29.1,68.4 < 20 |only if walking
+Follow the stairs up |goto Tanaan Jungle/0 30.4,68.6 < 20 |only if walking
+kill Ceraxas##90434
+|tip You may have to wait for it to respawn.
+collect 6 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 31.4,68.0
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Run down the stairs |goto Tanaan Jungle/0 30.7,68.5 < 20 |only if walking
+Follow the stairs up |goto Tanaan Jungle/0 30.3,70.2 < 20 |only if walking
+kill Imp-Master Valessa##90429
+|tip You may have to wait for her to respawn. She patrols this small area, so you may need to search for her.
+collect 7 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 31.6,72.8
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Follow the path |goto Tanaan Jungle/0 45.3,44.7 < 30 |only if walking
+kill Felsmith Damorka##92647
+|tip You may have to wait for her to respawn.
+collect 8 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 45.9,47.2
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+Follow the path |goto Tanaan Jungle/0 47.8,44.7 < 30 |only if walking
+kill Grand Warlock Nethekurse##91695
+|tip You may have to wait for him to respawn. He walks in a circle around this area on this path, so you may need to search for him.
+collect 9 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 47.4,42.3
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+kill Commander Org'mok##89675
+|tip You may have to wait for him to respawn. He walks back and forth on this path, so you may need to search for him.
+collect 10 Fel-Corrupted Apexis Fragment##128346 |q Unseen Influence##39433/1 |goto Tanaan Jungle/0 50.3,45.2
+|tip These drop from any rare in Tanaan Jungle. You can also use the Group Finder to find Rares or do this quest while doing other dailies.
+step
+talk Dawn-Seeker Krisek##95424
+turnin Unseen Influence##39433 |goto Tanaan Jungle/0 58.0,59.4
+step
+You've completed the daily for today
+Click to restart the dailies run |confirm |next "order_awakened_start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Warlords of Draenor Dailies\\Tanaan Jungle (100)\\The Saberstalkers",{
-sugGroup="ACHIEVEMENTS\\Draenor Pathfinder",
 description="This guide will walk you through the daily quests for the The Saberstalkers faction.",
 },[[
 step
-#include "SStalkers_Dailies"
+Complete the following guide before continuing:
+_Tanaan Jungle (100) Main Questline_
+confirm |only if not completedq(38578)
+step
+label "saberstalkers_start"
+talk Parvink##96147
+accept Tooth and Claw##39582 |goto Tanaan Jungle/0 57.8,59.8 |or
+|tip This quest has a chance to be available each day, but is not guaranteed to be available.
+_
+Click here if the quest is not available |confirm |or
+step
+_Go through_ the doorway |goto Tanaan Jungle/0 56.4,59.2 < 20 |walk
+_Follow_ the path |goto Tanaan Jungle/0 54.9,64.3 < 30 |only if walking
+kill Bloodfang Swarmer##89789+, Bloodfang Ravager##89741+
+collect 100 Tanaan Jungle Tooth##128438 |q Tooth and Claw##39582/1 |goto Tanaan Jungle/0 56.4,67.1
+step
+_Follow_ the path |goto Tanaan Jungle/0 55.7,65.8 < 20 |only if walking
+_Run up_ the dirt path |goto Tanaan Jungle/0 55.0,63.6 < 30 |only if walking
+_Go through_ the doorway |goto Tanaan Jungle/0 56.5,59.2 < 20 |walk
+talk Parvink##96147
+turnin Tooth and Claw##39582 |goto Tanaan Jungle/0 57.8,59.8
+step
+_Go through_ the doorway |goto Tanaan Jungle/0 56.5,59.2 < 20 |only if walking
+_Follow_ the path |goto Tanaan Jungle/0 54.5,62.9 < 30 |only if walking
+_Run on_ the dirt road |goto Tanaan Jungle/0 54.7,64.9 < 20 |only if walking
+_Go up_ the dirt path |goto Tanaan Jungle/0 54.0,70.5 < 20 |only if walking
+talk Z'tenga the Walker##92805
+accept Rumble in the Jungle##39565 |goto Tanaan Jungle/0 55.3,74.8
+|tip This quest can only be done once per week.
+step
+_Follow_ the path |goto Tanaan Jungle/0 54.7,76.7 < 30 |only if walking
+kill Blackfang Prowler##89746+, Blackfang Shaman##92481+, Blackfang Savage##89695+, Blackfang Hunter##89747+
+|tip They are all around this area. You can use the Group Finder and select Premade Groups -> Custom, then search for "Fang'rila" or "Blackfang". Being in a group will make this go much faster.
+collect 40 Blackfang Claw##124099 |q 39565 |goto Tanaan Jungle/0 55.8,78.6
+step
+_Follow_ the path |goto Tanaan Jungle/0 54.9,77.4 < 30 |only if walking
+talk Z'tenga the Walker##92805
+buy Minor Blackfang Challenge Totem##124093 |condition itemcount(124093) > 0 or completedq(39565) |goto Tanaan Jungle/0 55.8,78.6
+buy Major Blackfang Challenge Totem##124094 |condition itemcount(124094) > 0 or completedq(39565) |goto Tanaan Jungle/0 55.8,78.6
+buy Prime Blackfang Challenge Totem##124095 |condition itemcount(124095) > 0 or completedq(39565) |goto Tanaan Jungle/0 55.8,78.6
+step
+_Follow_ the path |goto Tanaan Jungle/0 54.7,75.9 < 30 |only if walking
+_Enter_ the Challenge Arena |goto Tanaan Jungle/0 54.8,80.9 < 20 |only if walking
+use Minor Blackfang Challenge Totem##124093
+kill Akrrilo##92766 |q Rumble in the Jungle##39565/1 |goto Tanaan Jungle/0 54.4,81.0
+|tip Other people can help you, or you can help other people who summon him. Everyone will get credit.
+step
+use Major Blackfang Challenge Totem##124094
+kill Rendarr##92817 |q Rumble in the Jungle##39565/2 |goto Tanaan Jungle/0 54.4,81.0
+|tip Other people can help you, or you can help other people who summon him. Everyone will get credit.
+step
+use Prime Blackfang Challenge Totem##124095
+kill Eyepiercer##92819 |q Rumble in the Jungle##39565/3 |goto Tanaan Jungle/0 54.4,81.0
+|tip Other people can help you, or you can help other people who summon him. Everyone will get credit.
+step
+_Follow_ the path |goto Tanaan Jungle/0 54.9,77.4 < 30 |only if walking
+talk Z'tenga the Walker##92805
+turnin Rumble in the Jungle##39565 |goto Tanaan Jungle/0 55.3,74.8
+step
+You've completed the dailies for today
+Click to restart the dailies run |confirm |next "saberstalkers_start"
 ]])

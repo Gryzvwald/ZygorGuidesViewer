@@ -6,7 +6,6 @@ ZygorGuidesViewer.GuideMenuTier = "CAT"
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Argent Dawn",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Argent Dawn faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={946},
 },[[
 #include "Argent_Dawn_Rep"
@@ -14,7 +13,6 @@ achieveid={946},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Bloodsail Buccaneers",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Bloodsail Buccaneers faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={2336},
 },[[
 step
@@ -306,7 +304,6 @@ Congratulations, you are Exalted with the Bloodsail Buccaneers!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Brood of Nozdormu",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Brood of Nozdormu faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={956},
 },[[
 step
@@ -374,7 +371,6 @@ Congratulations, you are Exalted with the Brood of Nozdormu!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Cenarion Circle",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Cenarion Circle faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={953},
 },[[
 #include "Cenarion_Circle_Rep"
@@ -382,7 +378,6 @@ achieveid={953},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Darkmoon Faire",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Darkmoon Faire faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={2336},
 },[[
 step
@@ -416,7 +411,7 @@ Congratulations, you have reached Exalted with The Darkmoon Faire! |condition re
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Darnassus",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Darnassus faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
+condition_suggested=function() return level >= 20 and level <= 60 and rep('Darnassus') < Exalted end,
 },[[
 step
 talk Moon Priestess Lasara##50305
@@ -430,7 +425,7 @@ Congratulations, you have reached exalted with Darnassus!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Gnomeregan",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Gnomeregan faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
+condition_suggested=function() return level >= 20 and level <= 60 and rep('Gnomeregan') < Exalted end,
 },[[
 step
 talk Master Tinker Trini##50308
@@ -444,7 +439,6 @@ Congratulations, you have reached exalted with Gnomeregan!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Hydraxian Waterlords",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Hydraxian Waterlords faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={955},
 },[[
 step
@@ -460,7 +454,7 @@ Congratulations, you are now Exalted with the Hydraxian Waterlords!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Ironforge",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Ironforge faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
+condition_suggested=function() return level >= 20 and level <= 60 and rep('Ironforge') < Exalted end,
 },[[
 step
 talk Captain Stonehelm##50309
@@ -474,7 +468,6 @@ Congratulations, you have reached exalted with Ironforge!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\The League of Arathor",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The League of Arathor faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={711},
 },[[
 step
@@ -515,7 +508,6 @@ Congratulations, you are now Exalted with The League of Arathor!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Ravenholdt",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Ravenholdt faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={2336},
 },[[
 step
@@ -557,7 +549,6 @@ Congratulations, you have reached Exalted with Ravenholdt!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Silverwing Sentinels",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Silverwing Sentinels faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={713},
 },[[
 step
@@ -571,7 +562,6 @@ Congratulations, you are now Exalted with the Silverwing Sentinels!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\The Steamwheedle Cartel",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Steamwheedle Cartel faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 },[[
 step
 label "Steam_Menu"
@@ -776,7 +766,6 @@ Congratulations! You are honored with the Steamwheedle Cartel!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Stormpike Guard",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Stormpike Guard faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={709},
 },[[
 step
@@ -865,7 +854,7 @@ Congratulations, you are now Exalted with the Stormpike Guard!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Stormwind",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Stormwind faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
+condition_suggested=function() return level >= 20 and level <= 60 and rep('Stormwind') < Exalted end,
 },[[
 step
 talk Captain Lancy Revshon##49877
@@ -879,7 +868,6 @@ Congratulations, you have reached exalted with Stormwind!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Thorium Brotherhood",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Thorium Brotherhood faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 },[[
 step
 talk Lunk##47269
@@ -1394,7 +1382,6 @@ Congratulations, you are Exalted with the Thorium Brotherhood!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Timbermaw Hold",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Timbermaw Hold faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 achieveid={944},
 },[[
 #include "Timbermaw_Rep"
@@ -1402,7 +1389,6 @@ achieveid={944},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Classic Reputations\\Wintersaber Trainers",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Wintersaber Trainers faction.",
-condition_suggested=function() return level>=1 and level<=60 end,
 },[[
 step
 This reputation will take _20 days_ to reach Exalted
@@ -1487,7 +1473,6 @@ Congratulations, you are Exalted with the Wintersaber Trainers!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Egg Hunting - Optimized Path",{
 author="support@zygorguides.com",
 description="This guide section will walk you through an optimized path of collecting Netherwing Eggs, which you can turn in for 250 Netherwing rep each. You must have completed the Netherwing Reputation (Neutral) - Pre-Quests guide section in order to be able to collect and turn in the Netherwing Eggs you find using this guide section.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -1712,7 +1697,6 @@ Click here to go back to the beginning of the path. |confirm |next "start"
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Neutral)",{
 author="support@zygorguides.com",
 description="This guide section will walk you through getting friendly reputation with the Netherwing faction. You must have completed the Netherwing Reputation (Neutral) - Pre-Quests guide section in order to be able to complete the quests in this guide section.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -1774,7 +1758,6 @@ Also, you can use the Netherwing Egg Optimized Path guide section to find Nether
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Neutral) - Pre-Quests",{
 author="support@zygorguides.com",
 description="This guide section will walk you through getting Neutral reputation with Netherwing faction. You need to have Artisan flying to complete this section.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -1868,7 +1851,6 @@ turnin The Great Netherwing Egg Hunt##11049 |goto 66.0,86.5
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Friendly)",{
 author="support@zygorguides.com",
 description="This guide section will walk you through getting Honored reputation with the Netherwing faction. You must have completed the Netherwing Reputation (Friendly) - Pre-Quests guide section in order to be able to complete the quests in this guide section.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -1953,7 +1935,6 @@ Repeat this process daily until you are Honored with the Netherwing faction. Als
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Friendly) - Pre-Quests",{
 author="support@zygorguides.com",
 description="This guide section will walk you through a chain of pre-quests, that become available once you have earned Friendly reputation with the Netherwing faction. This chain of pre-quests will open up more Netherwing faction daily quests.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -2017,7 +1998,6 @@ turnin Overseeing and You: Making the Right Choices##11054 |goto Shadowmoon Vall
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Honored)",{
 author="support@zygorguides.com",
 description="This guide section will walk you through getting Revered reputation with the Netherwing faction. You must have completed the Netherwing Reputation (Honored) - Pre-Quests guide section in order to be able to complete the quests in this guide section.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -2112,7 +2092,6 @@ Also, you can use the Netherwing Egg Optimized Path guide section to find Nether
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Honored) - Pre-Quests",{
 author="support@zygorguides.com",
 description="This guide section will walk you through a chain of pre-quests, that become available once you have earned Honored reputation with the Netherwing faction. This chain of pre-quests will open up more Netherwing faction daily quests.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -2181,8 +2160,7 @@ turnin Dragonmaw Race: Captain Skyshatter##11071 |goto 65.9,87.2
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Revered)",{
 author="support@zygorguides.com",
-description="This guide section will walk you through getting Exalted reputation with the Netherwing faction. You must have completed the Netherwing Reputation (Revered) - Pre-Quests guide section in order to be able to complete the quests in this guide section.",
-condition_suggested=function() return level>=60 and level<=70 end,
+description="This guide section will walk you through getting Revered reputation with the Netherwing faction. You must have completed the Netherwing Reputation (Revered) - Pre-Quests guide section in order to be able to complete the quests in this guide section.",
 achieveid={898},
 },[[
 step
@@ -2287,12 +2265,11 @@ turnin Disrupting the Twilight Portal##11086 |goto 66.2,85.7
 turnin The Deadliest Trap Ever Laid##11097 |only if rep ('The Scryers') >= Friendly |goto 66.2,85.7
 turnin The Deadliest Trap Ever Laid##11101 |only if rep ('The Aldor') >= Friendly |goto 66.2,85.7
 step
-Repeat this process daily until you are Exalted with the Netherwing faction.  Also, you can use the Netherwing Egg Optimized Path guide section to find Netherwing Eggs and turn them in for 250 Netherwing reputation per Netherwing Egg.
+Repeat this process daily until you are Revered with the Netherwing faction.  Also, you can use the Netherwing Egg Optimized Path guide section to find Netherwing Eggs and turn them in for 250 Netherwing reputation per Netherwing Egg.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Revered) - Pre-Quests",{
 author="support@zygorguides.com",
 description="This guide section will walk you through a chain of pre-quests, that become available once you have earned Revered reputation with the Netherwing faction. This chain of pre-quests will open up more Netherwing faction daily quests.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -2339,7 +2316,6 @@ only if rep ('The Aldor') >= Friendly
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Netherwing\\Netherwing Reputation (Exalted) - Getting Your Netherdrake!",{
 author="support@zygorguides.com",
 description="This guide section will walk you through the final steps of getting your Netherdrake Mount, once you've earned Exalted reputation with the Netherwing faction. You must have completed the Netherwing Reputation (Revered) guide section in order to be able to complete the quests in this guide section.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={898},
 },[[
 step
@@ -2368,7 +2344,7 @@ Congratulations, you are now the proud owner of a Netherdrake Mount!  Enjoy!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\The Aldor",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Aldor faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
+condition_suggested=function() return level >= 60 and level <= 70 and rep('The Aldor') < Exalted end,
 achieveid={903, 1205},
 },[[
 step
@@ -2773,7 +2749,6 @@ Congratulations, you are Exalted with The Aldor.
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Ashtongue Deathsworn",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Ashtongue Deathsworn faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={958},
 },[[
 step
@@ -2797,7 +2772,7 @@ Congratulations, you are now Exalted with the Ashtongue Deathsworn!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Cenarion Expedition",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Cenarion Expedition faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
+condition_suggested=function() return level >= 60 and level <= 70 and rep('Cenarion Expedition') < Exalted end,
 achieveid={953},
 },[[
 #include "Cenarion_Expedition_Rep"
@@ -2805,7 +2780,6 @@ achieveid={953},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\The Consortium",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Consortium faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={902},
 },[[
 step
@@ -3330,7 +3304,7 @@ Congratulations, you are now Exalted with The Consortium!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Exodar",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Exodar faction.",
-condition_suggested=function() return level>=1 and level<=70 end,
+condition_suggested=function() return level >= 20 and level <= 60 and rep('Exodar') < Exalted end,
 },[[
 step
 talk Kadu##50306
@@ -3344,7 +3318,7 @@ Congratulations, you have reached exalted with Exodar!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Honor Hold",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Honor Hold faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
+condition_suggested=function() return level >= 60 and level <= 70 and rep('Honor Hold') < Exalted end,
 },[[
 step
 talk Bernie Heisten##3546
@@ -3954,7 +3928,6 @@ Congratulations, you are now Exalted with Honor Hold!!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Keepers of Time",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Keepers of Time faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 },[[
 step
 This faction largely relies on running certain instances repeatedly in order to gain reputation
@@ -4082,7 +4055,6 @@ Congratulations, you are now Exalted with the Keepers of Time!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Kurenai",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Kurenai faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={899},
 },[[
 #include "Kurenai_Rep"
@@ -4090,7 +4062,7 @@ achieveid={899},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Lower City",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Lower City faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
+condition_suggested=function() return level >= 60 and level <= 70 and rep('Lower City') < Exalted end,
 },[[
 step
 talk Rilak the Redeemed##22292
@@ -4393,7 +4365,6 @@ Congratulations, you are now Exalted with the Lower City!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Ogri'la",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Ogri'la faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={896},
 },[[
 step
@@ -4711,7 +4682,6 @@ Congratulations, you are now Exalted with Ogri'la!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\The Scale of the Sands",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Scale of the Sands faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={959},
 },[[
 step
@@ -4734,7 +4704,7 @@ Congratulations, you are now Exalted with The Scale of the Sands!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\The Scryers",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Scryers faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
+condition_suggested=function() return level >= 60 and level <= 70 and rep('The Scryers') < Exalted end,
 achieveid={903, 1205},
 },[[
 step
@@ -5128,7 +5098,6 @@ Congratulations, you are now Exalted with The Scryers!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\The Sha'tar",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Sha'tar faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 },[[
 step
 talk Haggard War Veteran##19684
@@ -5690,7 +5659,6 @@ Congratulations, you are now Exalted with The Sha'tar!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Sha'tari Skyguard",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Sha'tari Skyguard faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={894},
 },[[
 step
@@ -5938,7 +5906,6 @@ Killing Terokk will gain you 550 reputation with Ska'tari Skyguard
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Shattered Sun Offensive",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Shattered Sun Offensive faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={897},
 },[[
 step
@@ -5947,7 +5914,6 @@ step
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\Sporeggar",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Sporeggar faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={900},
 },[[
 #include "Sporeggar_Rep"
@@ -5955,7 +5921,6 @@ achieveid={900},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Burning Crusade Reputations\\The Violet Eye",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Violet Eye faction.",
-condition_suggested=function() return level>=60 and level<=70 end,
 achieveid={960},
 },[[
 step
@@ -5977,7 +5942,6 @@ Congratulations, you are now Exalted with The Violet Eye!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Argent Tournament\\Aspirant Rank Dailies",{
 author="support@zygorguides.com",
 description="This guide section will walk you through completing your race's Aspirant Rank dailies in order to achieve Argent Tournament Grounds Valiant Rank with your own race and eventually Crusader title.",
-condition_suggested=function() return level>=70 and level<=80 end,
 },[[
 step
 label "start"
@@ -6056,7 +6020,6 @@ Click here to go back to the beginning of the guide |confirm |next "start"
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Argent Tournament\\Valiant Rank Dailies",{
 author="support@zygorguides.com",
 description="This guide section will walk you through completing your race's Valiant Rank dailies in order to achieve Argent Tournament Grounds Champion Rank with your own race. You must have completed the Argent Tournament Grounds Aspirant Rank Dailies guide section in order to have access to the quests in this guide section and earn the Crusader title.",
-condition_suggested=function() return level>=70 and level<=80 end,
 },[[
 step
 label "start"
@@ -6658,7 +6621,7 @@ Click here to go back to the beginning of the guide |confirm |next "start"
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Alliance Vanguard",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Alliance Vanguard faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
+condition_suggested=function() return level >= 70 and level <= 80 end,
 achieveid={1012},
 },[[
 step
@@ -6693,7 +6656,7 @@ Congratulations, you are Exalted with the _Alliance Vanguard!_
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Argent Crusade",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Argent Crusade faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
+condition_suggested=function() return level >= 70 and level <= 80 and rep('Argent Crusade') < Exalted end,
 achieveid={947},
 },[[
 #include "Argent_Crusade_Rep"
@@ -6701,7 +6664,6 @@ achieveid={947},
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Ashen Verdict",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Ashen Verdict faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
 achieveid={4598},
 },[[
 step
@@ -6724,7 +6686,6 @@ Congratulations, you are now Exalted with the Ashen Verdict!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\The Frenzyheart Tribe",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Frenzyheart Tribe faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
 achieveid={950},
 },[[
 step
@@ -7063,7 +7024,6 @@ Congratulations, you are now Exalted with the Frenzyheart Tribe!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Kalu'ak",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Kalu'ak faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
 achieveid={949},
 },[[
 #include "Kaluak_rep"
@@ -7074,7 +7034,7 @@ Congratulations, you are Exalted with the Kalu'ak!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Kirin Tor",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Kirin Tor faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
+condition_suggested=function() return level >= 70 and level <= 80 and rep('Kirin Tor') < Exalted end,
 achieveid={1008},
 },[[
 step
@@ -7188,7 +7148,6 @@ Congratulations, you are now Exalted with The Kirin Tor!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\Knights of the Ebon Blade",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Knights of the Ebon Blade faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
 achieveid={1009},
 },[[
 step
@@ -7340,7 +7299,6 @@ Congratulations, you are now Exalted with the Knights of the Ebon Blade!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\The Oracles",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the The Oracles faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
 achieveid={951},
 },[[
 step
@@ -7679,7 +7637,6 @@ Congratulations, you are now Exalted with The Oracles!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\The Sons of Hodir",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Sons of Hodir faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
 },[[
 step
 Proceeding to Prequests next step |next |only if rep('The Sons of Hodir')<=Friendly
@@ -8830,7 +8787,7 @@ Congratulations, you are now Exalted with the Sons of Hodir!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Wrath of the Lich King Reputations\\The Wyrmrest Accord",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Wyrmrest Accord faction.",
-condition_suggested=function() return level>=70 and level<=80 end,
+condition_suggested=function() return level >= 70 and level <= 80 and rep('The Wyrmrest Accord') < Exalted end,
 achieveid={1007},
 },[[
 step
@@ -9335,8 +9292,7 @@ Congratulations, you are now Exalted with The Wyrmrest Accord!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Avengers of Hyjal",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Avengers of Hyjal faction.",
-condition_suggested=function() return level>=85 and level<=90 end,
-condition_suggested=function() return level>=80 and level<=85 end,
+condition_suggested=function() return level >= 80 and level <= 85 and rep('Avengers of Hyjal') < Exalted end,
 },[[
 step
 label "start"
@@ -9361,7 +9317,6 @@ Congratulations, you are now Exalted with the Avengers of Hyjal!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Baradin's Wardens",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Baradin's Wardens faction.",
-condition_suggested=function() return level>=80 and level<=85 end,
 achieveid={5375},
 },[[
 step
@@ -9376,7 +9331,7 @@ Congratulations, you are now Exalted with Hellscream's Reach!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\The Earthen Ring",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with The Earthen Ring faction.",
-condition_suggested=function() return level>=80 and level<=85 end,
+condition_suggested=function() return level >= 80 and level <= 85 and rep('The Earthen Ring') < Exalted end,
 achieveid={4881},
 },[[
 step
@@ -9398,7 +9353,7 @@ Congratulations, you are now Exalted with The Earthen Ring!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Gilneas",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Gilneas faction.",
-condition_suggested=function() return level>=1 and level<=85 end,
+condition_suggested=function() return level >= 20 and level <= 60 and rep('Gilneas') < Exalted end,
 },[[
 step
 talk Lord Candren##50307
@@ -9412,7 +9367,7 @@ Congratulations, you have reached exalted with Gilneas!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Guardians of Hyjal",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Guardians of Hyjal faction.",
-condition_suggested=function() return level>=80 and level<=85 end,
+condition_suggested=function() return level >= 80 and level <= 85 and rep('Guardians of Hyjal') < Exalted end,
 achieveid={5827},
 },[[
 step
@@ -10437,7 +10392,7 @@ Congratulations you are Exalted with the Guardians of Hyjal!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Ramkahen",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Ramkahen faction.",
-condition_suggested=function() return level>=80 and level<=85 end,
+condition_suggested=function() return level >= 80 and level <= 85 and rep('Ramkahen') < Exalted end,
 achieveid={4884},
 },[[
 step
@@ -10486,7 +10441,7 @@ Congratulations, you are now Exalted with Ramkahen!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Therazane",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming exalted with the Therazane faction.",
-condition_suggested=function() return level>=80 and level<=85 end,
+condition_suggested=function() return level >= 80 and level <= 85 and rep('Therazane') < Exalted end,
 achieveid={4881},
 },[[
 step
@@ -10508,7 +10463,7 @@ Congratulations, you are now Exalted with Therazane!
 ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Cataclysm Reputations\\Wildhammer Clan",{
 author="support@zygorguides.com",
 description="This guide will walk you through becoming Exalted with the Wildhammer Clan faction.",
-condition_suggested=function() return level>=80 and level<=85 end,
+condition_suggested=function() return level >= 80 and level <= 85 and rep('Wildhammer Clan') < Exalted end,
 achieveid={4885},
 },[[
 step

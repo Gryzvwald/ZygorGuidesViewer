@@ -7,8 +7,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Alchemy\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Alchemy profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Alchemy')>=800 end,
-condition_suggested=function() return skill('Alchemy')>0 and skill('Alchemy')<800 and level>=100 end,
+condition_end=function() return skill('Legion Alchemy') >= 100 end,
+condition_suggested=function() return skill('Legion Alchemy') > 0 and skill('Legion Alchemy') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -130,7 +130,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Alchemy quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(42081) end,
-condition_suggested=function() return skill('Alchemy')>0 and level>=100 and not completedq(42081) end,
+condition_suggested=function() return skill('Legion Alchemy') > 0 and level >= 100 and not completedq(42081) end,
 },[[
 step
 talk Deucus Valdera##92458
@@ -854,7 +854,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Alchemy quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48016) end,
-condition_suggested=function() return skill('Alchemy')>0 and level>=110 and not completedq(48016) end,
+condition_suggested=function() return skill('Legion Alchemy') > 0 and level >= 110 and not completedq(48016) end,
 },[[
 step
 talk Deucus Valdera##92458
@@ -945,8 +945,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Archaeology\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Archaeology profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Archaeology')>=800 end,
-condition_suggested=function() return skill('Archaeology')>0 and skill('Archaeology')<800 and level>=100 end,
+condition_end=function() return skill('Archaeology') >= 800 end,
+condition_suggested=function() return skill('Legion Archaeology') >= 700 and skill('Archaeology') < 800 and level >= 100 end,
 },[[
 step
 talk Dariness the Learned##93538
@@ -979,7 +979,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Archaeology quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(41191) end,
-condition_suggested=function() return skill('Archaeology')>0 and level>=100 and not completedq(41191) end,
+condition_suggested=function() return skill('Archaeology') > 0 and level >= 100 and not completedq(41191) end,
 },[[
 step
 talk Dariness the Learned##93538
@@ -1503,8 +1503,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Blacksmithing\\Level
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Blacksmithing profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Blacksmithing')>=800 end,
-condition_suggested=function() return skill('Blacksmithing')>0 and skill('Blacksmithing')<800 and level>=100 end,
+condition_end=function() return skill('Legion Blacksmithing') >= 100 end,
+condition_suggested=function() return skill('Legion Blacksmithing') > 0 and skill('Legion Blacksmithing') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -1637,7 +1637,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Blacksmithing quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(38533) end,
-condition_suggested=function() return skill('Blacksmithing')>0 and level>=100 and not completedq(38533) end,
+condition_suggested=function() return skill('Legion Blacksmithing') > 0 and level >= 100 and not completedq(38533) end,
 },[[
 step
 talk Alard Schmied##92183
@@ -2298,7 +2298,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Blacksmithing quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48054) end,
-condition_suggested=function() return skill('Blacksmithing')>0 and level>=110 and not completedq(48054) end,
+condition_suggested=function() return skill('Legion Blacksmithing') > 0 and level >= 110 and not completedq(48054) end,
 },[[
 step
 talk Alard Schmied##92183
@@ -2419,8 +2419,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Cooking\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Cooking profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Cooking')>=800 end,
-condition_suggested=function() return skill('Cooking')>0 and skill('Cooking')<800 and level>=100 end,
+condition_end=function() return skill('Legion Cooking') >= 100 end,
+condition_suggested=function() return skill('Legion Cooking') > 0 and skill('Legion Cooking') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -2644,7 +2644,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Cooking quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(40991) end,
-condition_suggested=function() return skill('Cooking')>0 and level>=100 and not completedq(40991) end,
+condition_suggested=function() return skill('Legion Cooking') > 0 and level >= 100 and not completedq(40991) end,
 },[[
 step
 talk Katherine Lee##93534
@@ -2778,8 +2778,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Enchanting\\Leveling
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Enchanting profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Enchanting')>=800 end,
-condition_suggested=function() return skill('Enchanting')>0 and skill('Enchanting')<800 and level>=100 end,
+condition_end=function() return skill('Legion Enchanting') >= 100 end,
+condition_suggested=function() return skill('Legion Enchanting') > 0 and skill('Legion Enchanting') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -2872,7 +2872,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Enchanting quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(39923) end,
-condition_suggested=function() return skill('Enchanting')>0 and level>=100 and not completedq(39923) end,
+condition_suggested=function() return skill('Legion Enchanting') > 0 and level >= 100 and not completedq(39923) end,
 },[[
 step
 talk Enchanter Nalthanis##93531
@@ -3385,8 +3385,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Engineering profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Engineering')>=800 end,
-condition_suggested=function() return skill('Engineering')>0 and skill('Engineering')<800 and level>=100 end,
+condition_end=function() return skill('Legion Engineering') >= 100 end,
+condition_suggested=function() return skill('Legion Engineering') > 0 and skill('Legion Engineering') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -3502,7 +3502,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Engineering quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(40882) end,
-condition_suggested=function() return skill('Engineering')>0 and level>=100 and not completedq(40882) end,
+condition_suggested=function() return skill('Legion Engineering') > 0 and level >= 100 and not completedq(40882) end,
 },[[
 step
 talk Timofey Oshenko##92194
@@ -3939,7 +3939,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Engineering quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48065) end,
-condition_suggested=function() return skill('Engineering')>0 and level>=110 and not completedq(48065) end,
+condition_suggested=function() return skill('Legion Engineering') > 0 and level >= 110 and not completedq(48065) end,
 },[[
 step
 talk Timofey Oshenko##92194
@@ -4069,8 +4069,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Fishing\\Leveling Gu
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Fishing profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Fishing')>=800 end,
-condition_suggested=function() return skill('Fishing')>0 and skill('Fishing')<800 and level>=100 end,
+condition_end=function() return skill('Legion Fishing') >= 100 end,
+condition_suggested=function() return skill('Legion Fishing') > 0 and skill('Legion Fishing') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -4096,7 +4096,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Fishing quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(42911) end,
-condition_suggested=function() return skill('Fishing')>0 and level>=100 and not completedq(42911) end,
+condition_suggested=function() return skill('Legion Fishing') > 0 and level >= 100 and not completedq(42911) end,
 },[[
 step
 talk Marcia Chase##95844
@@ -4133,7 +4133,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through obtaining the Legion Fishing artifact.",
 startlevel=110.0,
 condition_end=function() return completedq(41010) end,
-condition_suggested=function() return skill('Fishing')>0 and level>=110 and not completedq(41010) end,
+condition_suggested=function() return skill('Legion Fishing') > 0 and level >= 110 and not completedq(41010) end,
 },[[
 step
 Earn the "A Cast Above the Rest" Achievement |condition achieved(10595)
@@ -4383,8 +4383,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Herbalism\\Leveling 
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Herbalism profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Herbalism')>=800 end,
-condition_suggested=function() return skill('Herbalism')>0 and skill('Herbalism')<800 and level>=100 end,
+condition_end=function() return skill('Legion Herbalism') >= 100 end,
+condition_suggested=function() return skill('Legion Herbalism') > 0 and skill('Legion Herbalism') < 100 and level >= 100 end,
 },[[
 step
 _Which Herb Do You Prefer to Farm While Leveling Herbalism?_
@@ -4518,7 +4518,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Herbalism quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(40042) end,
-condition_suggested=function() return skill('Herbalism')>0 and level>=100 and not completedq(40042) end,
+condition_suggested=function() return skill('Legion Herbalism') > 0 and level >= 100 and not completedq(40042) end,
 },[[
 step
 talk Kuhuine Tenderstride##92464
@@ -5301,7 +5301,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Herbalism quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48029) end,
-condition_suggested=function() return skill('Herbalism')>0 and level>=110 and not completedq(48029) end,
+condition_suggested=function() return skill('Legion Herbalism') > 0 and level >= 110 and not completedq(48029) end,
 },[[
 step
 talk Kuhuine Tenderstride##92464
@@ -5381,8 +5381,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Inscription\\Levelin
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Inscription profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Inscription')>=800 end,
-condition_suggested=function() return skill('Inscription')>0 and skill('Inscription')<800 and level>=100 end,
+condition_end=function() return skill('Legion Inscription') >= 100 end,
+condition_suggested=function() return skill('Legion Inscription') > 0 and skill('Legion Inscription') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -5441,7 +5441,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Inscription quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(39951) end,
-condition_suggested=function() return skill('Inscription')>0 and level>=100 and not completedq(39951) end,
+condition_suggested=function() return skill('Legion Inscription') > 0 and level >= 100 and not completedq(39951) end,
 },[[
 step
 talk Professor Pallin##92195
@@ -5876,8 +5876,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Jewelcrafting\\Level
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Jewelcrafting profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Jewelcrafting')>=800 end,
-condition_suggested=function() return skill('Jewelcrafting')>0 and skill('Jewelcrafting')<800 and level>=100 end,
+condition_end=function() return skill('Legion Jewelcrafting') >= 100 end,
+condition_suggested=function() return skill('Legion Jewelcrafting') > 0 and skill('Legion Jewelcrafting') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -6050,7 +6050,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Jewelcrafting quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(40561) end,
-condition_suggested=function() return skill('Jewelcrafting')>0 and level>=100 and not completedq(40561) end,
+condition_suggested=function() return skill('Legion Jewelcrafting') > 0 and level >= 100 and not completedq(40561) end,
 },[[
 step
 talk Timothy Jones##93527
@@ -6601,7 +6601,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Jewelcrafting quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48076) end,
-condition_suggested=function() return skill('Jewelcrafting')>0 and level>=110 and not completedq(48076) end,
+condition_suggested=function() return skill('Legion Jewelcrafting') > 0 and level >= 110 and not completedq(48076) end,
 },[[
 step
 talk Timothy Jones##93527
@@ -6695,8 +6695,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Leatherworking\\Leve
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Leatherworking profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Leatherworking')>=800 end,
-condition_suggested=function() return skill('Leatherworking')>0 and skill('Leatherworking')<800 and level>=100 end,
+condition_end=function() return skill('Legion Leatherworking') >= 100 end,
+condition_suggested=function() return skill('Legion Leatherworking') > 0 and skill('Legion Leatherworking') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -6762,7 +6762,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Leatherworking quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(40214) end,
-condition_suggested=function() return skill('Leatherworking')>0 and level>=100 and not completedq(40214) end,
+condition_suggested=function() return skill('Legion Leatherworking') > 0 and level >= 100 and not completedq(40214) end,
 },[[
 step
 talk Namha Moonwater##93523
@@ -7447,7 +7447,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Leatherworking quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48078) end,
-condition_suggested=function() return skill('Leatherworking')>0 and level>=110 and not completedq(48078) end,
+condition_suggested=function() return skill('Legion Leatherworking') > 0 and level >= 110 and not completedq(48078) end,
 },[[
 step
 talk Namha Moonwater##93523
@@ -7619,8 +7619,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Mining\\Leveling Gui
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Mining profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Mining')>=800 end,
-condition_suggested=function() return skill('Mining')>0 and skill('Mining')<800 and level>=100 end,
+condition_end=function() return skill('Legion Mining') >= 100 end,
+condition_suggested=function() return skill('Legion Mining') > 0 and skill('Legion Mining') < 100 and level >= 100 end,
 },[[
 step
 map Val'sharah/0
@@ -7716,7 +7716,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Mining quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(39830) end,
-condition_suggested=function() return skill('Mining')>0 and level>=100 and not completedq(39830) end,
+condition_suggested=function() return skill('Legion Mining') > 0 and level >= 100 and not completedq(39830) end,
 },[[
 step
 talk Mama Diggs##93189
@@ -8183,7 +8183,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Mining quest line.",
 startlevel=110,
 condition_end=function() return completedq(48039) end,
-condition_suggested=function() return skill('Mining')>0 and level>=110 and not completedq(48039) end,
+condition_suggested=function() return skill('Legion Mining') > 0 and level >= 110 and not completedq(48039) end,
 },[[
 step
 talk Mama Diggs##93189
@@ -8355,8 +8355,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Skinning\\Leveling G
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Skinning profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Skinning')>=800 end,
-condition_suggested=function() return skill('Skinning')>0 and skill('Skinning')<800 and level>=100 end,
+condition_end=function() return skill('Legion Skinning') >= 100 end,
+condition_suggested=function() return skill('Legion Skinning') > 0 and skill('Legion Skinning') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -8391,7 +8391,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Skinning quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(40140) end,
-condition_suggested=function() return skill('Skinning')>0 and level>=100 and not completedq(40140) end,
+condition_suggested=function() return skill('Legion Skinning') > 0 and level >= 100 and not completedq(40140) end,
 },[[
 step
 talk Kondal Huntsworn##93541
@@ -8800,7 +8800,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Skinning quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48042) end,
-condition_suggested=function() return skill('Skinning')>0 and level>=110 and not completedq(48042) end,
+condition_suggested=function() return skill('Legion Skinning') > 0 and level >= 110 and not completedq(48042) end,
 },[[
 step
 talk Kondal Huntsworn##93541
@@ -8910,8 +8910,8 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Leveling 
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Tailoring profession from 700-800.",
 startlevel=100.0,
-condition_end=function() return skill('Tailoring')>=800 end,
-condition_suggested=function() return skill('Tailoring')>0 and skill('Tailoring')<800 and level>=100 end,
+condition_end=function() return skill('Legion Tailoring') >= 100 end,
+condition_suggested=function() return skill('Legion Tailoring') > 0 and skill('Legion Tailoring') < 100 and level >= 100 end,
 },[[
 step
 _Before Starting This Guide:_
@@ -8983,7 +8983,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Tailoring quest line.",
 startlevel=100.0,
 condition_end=function() return completedq(38974) end,
-condition_suggested=function() return skill('Tailoring')>0 and level>=100 and not completedq(38974) end,
+condition_suggested=function() return skill('Legion Tailoring') > 0 and level >= 100 and not completedq(38974) end,
 },[[
 step
 talk Tanithria##93542
@@ -9746,7 +9746,7 @@ author="support@zygorguides.com",
 description="This guide will walk you through completing the Argus Tailoring quest line.",
 startlevel=110.0,
 condition_end=function() return completedq(48074) end,
-condition_suggested=function() return skill('Tailoring')>0 and level>=110 and not completedq(48074) end,
+condition_suggested=function() return skill('Legion Tailoring') > 0 and level >= 110 and not completedq(48074) end,
 },[[
 step
 talk Tanithria##93542

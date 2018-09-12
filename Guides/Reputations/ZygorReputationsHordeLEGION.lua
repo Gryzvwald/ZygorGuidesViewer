@@ -7,7 +7,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"fishing, reputation"},
 description="This guide will walk you through becoming best friends with Ilyssia of the Waters.",
-condition_suggested=function() return level>=100 and level<=110 end,
 },[[
 step
 Only one of the 6 Fisherfriends can be up per day
@@ -35,7 +34,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"fishing, reputation"},
 description="This guide will walk you through becoming best friends with Impus in the Broken Shore.",
-condition_suggested=function() return level>=100 and level<=110 and skill('Fishing')>0 end,
 },[[
 step
 Only one of the 6 Fisherfriends can be up per day
@@ -63,7 +61,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"fishing, reputation"},
 description="This guide will walk you through becoming best friends with Corbyn in Stormheim.",
-condition_suggested=function() return level>=100 and level<=110 and skill('Fishing')>0 end,
 },[[
 step
 Only one of the 6 Fisherfriends can be up per day
@@ -89,7 +86,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"fishing, reputation"},
 description="This guide will walk you through becoming best friends with Keeper Raynae in Val'sharah.",
-condition_suggested=function() return level>=100 and level<=110 and skill('Fishing')>0 end,
 },[[
 step
 Only one of the 6 Fisherfriends can be up per day
@@ -119,7 +115,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"fishing, reputation"},
 description="This guide will walk you through becoming best friends with Sha'leth in Suramar.",
-condition_suggested=function() return level>=100 and level<=110 and skill('Fishing')>0 end,
 },[[
 step
 Only one of the 6 Fisherfriends can be up per day
@@ -148,7 +143,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"fishing, reputation"},
 description="This guide will walk you through becoming best friends with Akule Riverhorn in Highmountain.",
-condition_suggested=function() return level>=100 and level<=110 and skill('Fishing')>0 end,
 },[[
 step
 Only one of the 6 Fisherfriends can be up per day
@@ -178,7 +172,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"reputation"},
 description="This guide will walk you through becoming exalted with the Argussian Reach faction.",
-condition_suggested=function() return level>=110 end,
 },[[
 step
 _Earning reputation with Argussian Reach can be achieved by:_
@@ -205,7 +198,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Armies","Legionfall","Army"},
 description="This guide will walk you through becoming exalted with the \"Armies of Legionfall\" faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
 achieveid={11545, 11796},
 },[[
 step
@@ -242,7 +234,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"reputation"},
 description="This guide will walk you through becoming exalted with the Army of the Light faction.",
-condition_suggested=function() return level>=110 end,
 },[[
 step
 _Earning reputation with Army of the Light can be achieved by:_
@@ -269,7 +260,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Conjurer","Margoss"},
 description="This guide will walk you through becoming exalted with the Conjurer Margoss faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
 },[[
 step
 collect Goblin Glider Kit##109076 |c |condition rep("Conjurer Margoss")>=BestFriend
@@ -298,7 +288,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Court","Farondis"},
 description="This guide will walk you through becoming exalted with the Court of Farondis faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
+condition_suggested=function() return level >= 100 and level <= 110 and rep('Court of Farondis') < Exalted end,
 },[[
 step
 Gain Exalted Reputation with Court of Farondis |condition rep("Court of Farondis")>=Exalted
@@ -313,7 +303,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Dreamweavers"},
 description="This guide will walk you through becoming exalted with the Dreamweavers faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
+condition_suggested=function() return level >= 100 and level <= 110 and rep('Dreamweavers') < Exalted end,
 },[[
 step
 Gain Exalted Reputation with Dreamweavers |condition rep("Dreamweavers")>=Exalted
@@ -328,7 +318,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Highmountain","Tribe"},
 description="This guide will walk you through becoming exalted with the Highmountain Tribe faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
+condition_suggested=function() return level >= 100 and level <= 110 and rep('Highmountain Tribe') < Exalted end,
 },[[
 step
 Gain Exalted Reputation with Highmountain Tribe |condition rep("Highmountain Tribe")>=Exalted
@@ -343,7 +333,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Nightfallen"},
 description="This guide will walk you through becoming exalted with The Nightfallen faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
+condition_suggested=function() return level >= 100 and level <= 110 and rep('The Nightfallen') < Exalted end,
 achieveid={10778},
 },[[
 step
@@ -371,7 +361,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Valarjar"},
 description="This guide will walk you through becoming exalted with the Valarjar faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
+condition_suggested=function() return level >= 100 and level <= 110 and rep('Valarjar') < Exalted end,
 },[[
 step
 Gain Exalted Reputation with Valarjar |condition rep("Valarjar")>=Exalted
@@ -386,7 +376,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Reputations Guides\\Legion Reputations\
 author="support@zygorguides.com",
 keywords={"Wardens"},
 description="This guide will walk you through becoming exalted with The Wardens faction.",
-condition_suggested=function() return level>=100 and level<=110 end,
+condition_suggested=function() return level >= 100 and level <= 110 and rep('The Wardens') < Exalted end,
 },[[
 step
 Gain Exalted Reputation with The Wardens |condition rep("The Wardens")>=Exalted

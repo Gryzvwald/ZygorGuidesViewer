@@ -5,8 +5,9 @@ if ZGV:DoMutex("ProfessionsHWOD") then return end
 ZygorGuidesViewer.GuideMenuTier = "WOD"
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Alchemy",700},
-description="This guide will walk you through leveling your Alchemy skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Alchemy skill from 1-100.",
+condition_end=function() return skill('Draenor Alchemy') >= 100 end,
+condition_suggested=function() return skill('Draenor Alchemy') > 0 and skill('Draenor Alchemy') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Alchemy window to detect your profession |cast Alchemy##2259
@@ -138,7 +139,10 @@ step
 Congratulations! You are now a Draenor Master Alchemist!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 600-700 Leveling Guide",{
-description="This guide will walk you through leveling Archaeology from 600-700.",
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Archaeology skill from 600-700.",
+condition_end=function() return skill('Archaeology') >= 700 end,
+condition_suggested=function() return skill('Archaeology') >= 600 and skill('Archaeology') < 700 and level >= 90 end,
 },[[
 step
 To unlock a maximum Archaeology skill of 700, you you will need to loot a Brittle Cartography Journal in Draenor
@@ -161,8 +165,9 @@ Congratulations, you have reached level 700 in Archaeology!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Blacksmithing\\Leveling Guides\\Blacksmithing 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Blacksmithing",700},
-description="This guide will walk you through leveling your Blacksmithing skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Blacksmithing skill from 1-100.",
+condition_end=function() return skill('Draenor Blacksmithing') >= 100 end,
+condition_suggested=function() return skill('Draenor Blacksmithing') > 0 and skill('Draenor Blacksmithing') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Blacksmithing window to detect your profession |cast Blacksmithing##2018
@@ -221,7 +226,10 @@ step
 Congratulations, you have reached level 700 in Blacksmithing!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Cooking 600-700 Leveling Guide",{
-description="This guide will walk you through leveling Cooking from 600-700.",
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Cooking skill from 1-100.",
+condition_end=function() return skill('Draenor Cooking') >= 100 end,
+condition_suggested=function() return skill('Draenor Cooking') > 0 and skill('Draenor Cooking') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Cooking window to detect your profession |cast Cooking##2550
@@ -282,8 +290,9 @@ Congratulations, you have reached level 700 in Cooking!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Enchanting",700},
-description="This guide will walk you through leveling your Enchanting skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Enchanting skill from 1-100.",
+condition_end=function() return skill('Draenor Enchanting') >= 100 end,
+condition_suggested=function() return skill('Draenor Enchanting') > 0 and skill('Draenor Enchanting') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Enchanting window to detect your profession |cast Enchanting##7411
@@ -340,8 +349,9 @@ Congratulations, you have reached level 700 with Enchanting!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Engineering",700},
-description="This guide will walk you through leveling your Engineering skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Engineering skill from 1-100.",
+condition_end=function() return skill('Draenor Engineering') >= 100 end,
+condition_suggested=function() return skill('Draenor Engineering') > 0 and skill('Draenor Engineering') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Engineering window to detect your profession |cast Engineering##4036
@@ -400,51 +410,11 @@ create Didi's Delicate Assembly##169078,Engineering,700
 step
 Congratulations, you have reached level 700 in Engineering!
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\First Aid\\Leveling Guides\\First Aid 600-700 Leveling Guide",{
-author="support@zygorguides.com",
-completion={"skill","FirstAid",700},
-description="This guide will walk you through leveling First Aid from 600-700.",
-},[[
-step
-To unlock a maximum First Aid skill of 700, you you will need to loot First Aid in Draenor
-These can drop off any mob, continue killing or questing until you get it
-collect First Aid in Draenor##111364 |n
-use First Aid in Draenor##111364
-learn Healing Tonic##172540
-step
-You will need _200 Sea Scorpion Segments_ to reach level 700 in First Aid
-These can be gathered if you have the Fishing skill, or purchased off the Auction House
-Click here to go Fishing |next "fish" |confirm
-Click here to go to the Auction House |next "buyfish" |confirm
-step
-label "fish"
-Fish in the water here |goto Frostfire Ridge/0 41.5,65.4 |cast Fishing##131474
-use Sea Scorpion Bait##110292
-Use any _Sea Scorpion Bait_ you may have while fishing
-collect Small Sea Scorpion##111658 |n
-use Small Sea Scorpion##111658
-|tip These can only be used in stacks of 5.
-collect Sea Scorpion##111665 |n
-use Sea Scorpion##111665
-|tip These can only be used in stacks of 5.
-collect Enormous Sea Scorpion##111672 |n
-use Enormous Sea Scorpion##111672
-|tip These can only be used in stacks of 5.
-collect 200 Sea Scorpion Segments##109142
-|next "craft"
-step
-label "buyfish"
-#include "auctioneer"
-Buy _200 Sea Scorpion Segments_ from the Auction House
-collect 200 Sea Scorpion Segment##109142
-|next "craft"
-step
-label "craft"
-create 20 Healing Tonic##172540,First Aid,700
-]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 600-700 Leveling Guide",{
-description="This guide will walk you through leveling Fishing from 600-700.",
-endlevel=94
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Fishing skill from 1-100.",
+condition_end=function() return skill('Draenor Fishing') >= 100 end,
+condition_suggested=function() return skill('Draenor Fishing') > 0 and skill('Draenor Fishing') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Fishing window to detect your profession |cast Fishing##7620
@@ -1029,7 +999,10 @@ collect Talador Orchid##109129 |n
 Click here to pick a different herb |confirm |next "start"
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Herbalism\\Leveling Guides\\Herbalism 600-700 Leveling Guide",{
-description="This guide will walk you through leveling Herbalism from 600-700.",
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Herbalism skill from 1-100.",
+condition_end=function() return skill('Draenor Herbalism') >= 100 end,
+condition_suggested=function() return skill('Draenor Herbalism') > 0 and skill('Draenor Herbalism') < 100 and level >= 90 end,
 },[[
 step
 Kill any lootable enemies found in Draenor
@@ -1062,8 +1035,9 @@ skill Herbalism,700
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Inscription",700},
-description="This guide will walk you through leveling your Inscription skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Inscription skill from 1-100.",
+condition_end=function() return skill('Draenor Inscription') >= 100 end,
+condition_suggested=function() return skill('Draenor Inscription') > 0 and skill('Draenor Inscription') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Inscription window to detect your profession |cast Inscription##45357
@@ -1134,8 +1108,9 @@ Congratulations! You are now a Draenor Master Inscriptionist
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Jewelcrafting",700},
-description="This guide will walk you through leveling your Jewelcrafting skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Jewelcrafting skill from 1-100.",
+condition_end=function() return skill('Draenor Jewelcrafting') >= 100 end,
+condition_suggested=function() return skill('Draenor Jewelcrafting') > 0 and skill('Draenor Jewelcrafting') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Jewelcrafting window to detect your profession |cast Jewelcrafting##25229
@@ -1217,8 +1192,9 @@ Congratulations, you have reached level 700 in Jewelcrafting!
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Leatherworking\\Leveling Guides\\Leatherworking 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Leatherworking",700},
-description="This guide will walk you through leveling your Leatherworking skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Leatherworking skill from 1-100.",
+condition_end=function() return skill('Draenor Leatherworking') >= 100 end,
+condition_suggested=function() return skill('Draenor Leatherworking') > 0 and skill('Draenor Leatherworking') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Leatherworking window to detect your profession |cast Leatherworking##2108
@@ -1280,7 +1256,10 @@ step
 Congratulations, you have reached level 700 in Leatherworking
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Mining\\Leveling Guides\\Mining 600-700 Leveling Guide",{
-description="This guide will walk you through leveling Mining from 600-700.",
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Mining skill from 1-100.",
+condition_end=function() return skill('Draenor Mining') >= 100 end,
+condition_suggested=function() return skill('Draenor Mining') > 0 and skill('Draenor Mining') < 100 and level >= 90 end,
 },[[
 step
 Kill any lootable enemies found in Draenor
@@ -1303,7 +1282,10 @@ Make sure you are tracking minerals, and gather all _Blackrock_ and _True Iron_ 
 skill Mining,700
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Skinning\\Leveling Guides\\Skinning 600-700 Leveling Guide",{
-description="This guide will walk you through leveling Skinning from 600-700.",
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Skinning skill from 1-100.",
+condition_end=function() return skill('Draenor Skinning') >= 100 end,
+condition_suggested=function() return skill('Draenor Skinning') > 0 and skill('Draenor Skinning') < 100 and level >= 90 end,
 },[[
 step
 Kill any lootable enemies found in Draenor
@@ -1320,8 +1302,9 @@ skill Skinning,700
 ]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 600-700 Leveling Guide",{
 author="support@zygorguides.com",
-completion={"skill","Tailoring",700},
-description="This guide will walk you through leveling your Tailoring skill from 600-700.",
+description="This guide will walk you through leveling your Draenor Tailoring skill from 1-100.",
+condition_end=function() return skill('Draenor Tailoring') >= 100 end,
+condition_suggested=function() return skill('Draenor Tailoring') > 0 and skill('Draenor Tailoring') < 100 and level >= 90 end,
 },[[
 step
 Before you continue, open your Tailoring window to detect your profession |cast Tailoring##3908

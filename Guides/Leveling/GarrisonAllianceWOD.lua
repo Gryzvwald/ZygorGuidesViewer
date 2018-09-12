@@ -5,6 +5,7 @@ if ZGV:DoMutex("GarrisonAWOD") then return end
 ZygorGuidesViewer.GuideMenuTier = "WOD"
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Leveling Guide",{
 description="This guide will walk you through leveling your Garrison to Level 3.",
+condition_suggested=function() return level >= 90 and level <= 100 and not completedq(36615) end,
 },[[
 step
 Complete the Tanaan Jungle (90) Storyline |condition completedq(34575)
@@ -379,6 +380,7 @@ Congratulations, you've upgraded your Garrison to level 3!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Alchemy Lab",{
 description="This guide will walk you through creating and upgrading the Alchemy Lab Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -467,6 +469,7 @@ Congratulations, you've finished upgrading your Alchemy Lab!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Enchanter's Study",{
 description="This guide will walk you through creating and upgrading the Enchanter's Study Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -555,6 +558,7 @@ Congratulations, you've finished upgrading your Enchanter's Study!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Engineering Works",{
 description="This guide will walk you through creating and upgrading the Engineering Works Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -645,6 +649,7 @@ Congratulations, you've finished upgrading your Engineering Works!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\The Forge",{
 description="This guide will walk you through creating and upgrading The Forge Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -733,6 +738,7 @@ Congratulations, you've finished upgrading your Forge!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Gem Boutique",{
 description="This guide will walk you through creating and upgrading the Gem Boutique Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -821,6 +827,7 @@ Congratulations, you've finished upgrading your Gem Boutique!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Salvage Yard",{
 description="This guide will walk you through creating and upgrading the Salvage Yard Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 Complete the Pinchwhistle Gearworks questline |condition completedq(35298)
@@ -904,6 +911,7 @@ Congratulations, you've finished upgrading your Salvage Yard!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Scribe's Quarters",{
 description="This guide will walk you through creating and upgrading the Scribe's Quarters Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -993,6 +1001,7 @@ Congratulations, you've finished upgrading your Scribe's Quarters!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Storehouse",{
 description="This guide will walk you through creating and upgrading the Storehouse Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -1069,6 +1078,7 @@ Congratulations, you've finished upgrading your Storehouse!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\Tailoring Emporium",{
 description="This guide will walk you through creating and upgrading the Tailoring Emporium Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -1156,6 +1166,7 @@ Congratulations, you've finished upgrading your Tailoring Emporium!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Small Buildings\\The Tannery",{
 description="This guide will walk you through creating and upgrading The Tannery Garrison building.",
+condition_suggested=function() return level >= 90 and level <= 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -1244,6 +1255,7 @@ Congratulations, you've finished upgrading your Tannery!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Medium Buildings\\Barn",{
 description="This guide will walk you through creating and upgrading the Barn Garrison building.",
+condition_suggested=function() return level >= 98 and level <= 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -1338,6 +1350,7 @@ Congratulations, you've finished upgrading your Barn!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Medium Buildings\\Lunarfall Inn",{
 description="This guide will walk you through creating and upgrading the Lunarfall Inn Garrison building.",
+condition_suggested=function() return level >= 98 and level <= 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -1458,6 +1471,7 @@ Congratulations, you've finished upgrading your Lunarfall Inn!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Medium Buildings\\Gladiator's Sanctum",{
 description="This guide will walk you through creating and upgrading the Gladiator's Sanctum Garrison building.",
+condition_suggested=function() return level >= 98 and level <= 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -1635,6 +1649,7 @@ Congratulations, you've finished upgrading your Galdiator's Sanctum!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Medium Buildings\\Lumber Mill",{
 description="This guide will walk you through creating and upgrading the Lumber Mill Garrison building.",
+condition_suggested=function() return level >= 98 and level <= 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -1824,6 +1839,7 @@ Congratulations, you've finished upgrading your Lumber Mill!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Medium Buildings\\Trading Post",{
 description="This guide will walk you through creating and upgrading the Trading Post Garrison building.",
+condition_suggested=function() return level >= 98 and level <= 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -1954,6 +1970,7 @@ Congratulations, you've finished upgrading your Trading Post!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Large Buildings\\Barracks",{
 description="This guide will walk you through creating and upgrading the Barracks Garrison building.",
+condition_suggested=function() return level == 100 end,
 },[[
 step
 #include "Garrison_ArchitectTable"
@@ -2021,6 +2038,7 @@ Congratulations, you've finished upgrading your Barracks!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Large Buildings\\Gnomish Gearworks",{
 description="This guide will walk you through creating and upgrading the Gnomish Gearworks Garrison building.",
+condition_suggested=function() return level == 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -2160,6 +2178,7 @@ Congratulations, you've finished upgrading your Gnomish Gearworks!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Large Buildings\\Mage Tower",{
 description="This guide will walk you through creating and upgrading the Mage Tower Garrison building.",
+condition_suggested=function() return level == 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -2316,6 +2335,7 @@ Congratulations, you've finished upgrading your Mage Tower!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Large Buildings\\Stables",{
 description="This guide will walk you through creating and upgrading the Stables Garrison building.",
+condition_suggested=function() return level == 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -3064,6 +3084,7 @@ Congratulations, you've finished upgrading your Stables!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Large Buildings\\Dwarven Bunker",{
 description="This guide will walk you through creating and upgrading the Dwarven Bunker Garrison building.",
+condition_suggested=function() return level == 100 end,
 },[[
 step
 Upgrade your Garrison to Level 2 |condition garrisonlvl() > 1
@@ -3145,6 +3166,7 @@ Congratulations, you've finished upgrading your Dwarven Bunker!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Default Buildings\\Fishing Shack",{
 description="This guide will walk you through creating and upgrading the Fishing Shack Garrison building.",
+condition_suggested=function() return level >= 94 and level <= 100 and not completedq(36611) end,
 },[[
 step
 Reach level 94 |ding 94
@@ -3343,6 +3365,7 @@ Congratulations, you've finished upgrading your Fishing Shack!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Default Buildings\\Lunarfall Excavation",{
 description="This guide will walk you through creating and upgrading the Lunarfall Excavation Garrison building.",
+condition_suggested=function() return level >= 92 and level <= 100 end,
 },[[
 step
 Reach level 92 |ding 92
@@ -3419,6 +3442,7 @@ Congratulations, you've finished upgrading your Lunarfall Excavation!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Default Buildings\\Herb Garden",{
 description="This guide will walk you through creating and upgrading the Herb Garden Garrison building.",
+condition_suggested=function() return level >= 96 and level <= 100 end,
 },[[
 step
 Reach level 96 |ding 96
@@ -3483,6 +3507,7 @@ Congratulations, you've finished upgrading your Herb Garden!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Default Buildings\\Menagerie",{
 description="This guide will walk you through creating and upgrading the Menagerie Garrison building.",
+condition_suggested=function() return level == 100 end,
 },[[
 step
 Reach Level 100 |ding 100
@@ -3630,6 +3655,7 @@ Congratulations, you've finished upgrading your Menagerie!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Buildings\\Default Buildings\\Lunarfall Shipyard",{
 description="This guide will walk you through creating and upgrading the Lunarfall Shipyard Garrison building.",
+condition_suggested=function() return level == 100 and not completedq(39068) end,
 },[[
 step
 Reach Level 100 |ding 100
@@ -3982,6 +4008,7 @@ Congratulations, you've finished upgrading your Lunarfall Shipyard!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Garrison Quest Guide",{
 description="This guide will walk you through completing the quests found in your Garrison.",
+condition_suggested=function() return level >= 90 and level <= 100 and not completedq(38408) end,
 },[[
 step
 #include "Garrison_KenLoggin"
@@ -4097,7 +4124,7 @@ step
 Click the _Quest Complete_ Box:
 turnin New Goods##38408
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Followers\\FOLLOWERS STARTER GUIDE",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Garrisons\\Followers\\Follower Starter Guide",{
 description="This guide will provide a tutorial for Garrison Followers.",
 },[[
 step

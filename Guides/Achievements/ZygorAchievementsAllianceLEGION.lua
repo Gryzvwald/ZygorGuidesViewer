@@ -8251,13 +8251,13 @@ step
 Congratulations!
 You have earned the _Black Rook Hold_ achievement
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Legion Dungeon\\Boom Boom",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Legion Dungeon\\Boom Bloom",{
 achieveid={11768},
 author="support@zygorguides.com",
 startlevel=110,
 endlevel=110,
 keywords={"Boom"},
-description="This guide will walk you through completing the \"Boom Boom\" Achievement.",
+description="This guide will walk you through completing the \"Boom Bloom\" Achievement.",
 },[[
 step
 Enter the _Cathedral of Eternal Night_ dungeon on _Mythic_ difficulty |scenariostart
@@ -8268,10 +8268,10 @@ Engage the boss _Agronox_
 |tip The Budding Seeds can be found on the edges of this room, along the walls.
 |tip Once on top of these seeds, players must allow the lashers to explode.
 |tip Once 4 of these Budding Seeds are destroyed, you may defeat the boss.
-Earn the _Boom Boom_ achievement |achieve 11768
+Earn the _Boom Bloom_ achievement |achieve 11768
 step
 Congratulations!
-You have earned the _Boom Boom_ achievement
+You have earned the _Boom Bloom_ achievement
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Legion Dungeon\\Broken Isles Keymaster",{
 achieveid={11181},

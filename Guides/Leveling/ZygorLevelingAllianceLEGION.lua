@@ -6,7 +6,7 @@ ZygorGuidesViewer.GuideMenuTier = "LEG"
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Death Knight Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('DeathKnight') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('DeathKnight') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('DeathKnight') end,
 condition_valid_msg="You must be a Death Knight to complete this guide!",
@@ -734,7 +734,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Death Knight Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('DeathKnight') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('DeathKnight') and not completedq(46031) end,
 condition_valid=function() return raceclass('DeathKnight') end,
 condition_valid_msg="You must be a Death Knight to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -1487,7 +1487,7 @@ turnin Investigate the Broken Shore##46031 |goto 49.66,51.25
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Death Knight 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('DeathKnight') end,
+condition_suggested=function() return level == 110 and raceclass('DeathKnight') and not completedq(46813) end,
 condition_valid=function() return raceclass('DeathKnight') end,
 condition_valid_msg="You must be a Death Knight to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -1978,7 +1978,7 @@ turnin The Lost Glacier##46813
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Demon Hunter Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Demon Hunter quests and unlocking the Havoc and Vengeance artifacts.",
-condition_suggested=function() return raceclass('DemonHunter') and level>=98 end,
+condition_suggested=function() return raceclass('DemonHunter') and level >= 98 and level <= 110 end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('DemonHunter') end,
 condition_valid_msg="You must be a Demon Hunter to complete this guide!",
@@ -2960,7 +2960,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Demon Hunter Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return raceclass('DemonHunter') and level>=101 end,
+condition_suggested=function() return raceclass('DemonHunter') and level >= 101 and level <= 110 and not completedq(45994) end,
 condition_valid=function() return raceclass('DemonHunter') end,
 condition_valid_msg="You must be a Demon Hunter to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -3968,7 +3968,7 @@ turnin Investigate the Broken Shore##45994 |goto 59.33,57.67
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Demon Hunter 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('DemonHunter') end,
+condition_suggested=function() return level == 110 and raceclass('DemonHunter') and not completedq(46334) end,
 condition_valid=function() return raceclass('DemonHunter') end,
 condition_valid_msg="You must be a Demon Hunter to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -4358,7 +4358,7 @@ turnin To Fel and Back##46334 |goto Mardum, the Shattered Abyss/2 60.03,48.87
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Druid Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Druid') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Druid') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Druid') end,
 condition_valid_msg="You must be a Druid to complete this guide!",
@@ -5447,7 +5447,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Druid Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Druid') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Druid') and not completedq(45177) end,
 condition_valid=function() return raceclass('Druid') end,
 condition_valid_msg="You must be a Druid to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -6241,7 +6241,7 @@ turnin Soul Prism of the Illidari##45175 |goto 43.29,43.16
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Druid 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Druid') end,
+condition_suggested=function() return level == 110 and raceclass('Druid') and not completedq(46319) end,
 condition_valid=function() return raceclass('Druid') end,
 condition_valid_msg="You must be a Druid to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -6804,7 +6804,7 @@ turnin You Can't Take the Sky From Me##46319 |goto The Dreamgrove/0 29.97,4.27
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Hunter Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Hunter') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Hunter') end,
 condition_valid=function() return raceclass('Hunter') end,
 condition_valid_msg="You must be a Hunter to complete this guide!",
 condition_suggested_exclusive=true,
@@ -7617,7 +7617,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Hunter Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Hunter') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Hunter') and not completedq(46023) end,
 condition_valid=function() return raceclass('Hunter') end,
 condition_valid_msg="You must be a Hunter to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -8476,7 +8476,7 @@ turnin Investigate the Broken Shore##46023 |goto 42.80,46.92
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Hunter 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Hunter') end,
+condition_suggested=function() return level == 110 and raceclass('Hunter') and not completedq(46337) end,
 condition_valid=function() return raceclass('Hunter') end,
 condition_valid_msg="You must be a Hunter to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -8951,7 +8951,7 @@ turnin Night of the Wilds##46337 |goto Trueshot Lodge/0 44.23,21.44
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Mage Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Mage') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Mage') end,
 condition_valid=function() return raceclass('Mage') end,
 condition_valid_msg="You must be a Mage to complete this guide!",
 condition_suggested_exclusive=true,
@@ -9890,7 +9890,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Mage Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Mage') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Mage') and not completedq(44207) end,
 condition_valid=function() return raceclass('Mage') end,
 condition_valid_msg="You must be a Mage to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -10710,7 +10710,7 @@ turnin Portal Full of Shiny Things##44207 |goto 82.87,56.70
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Mage 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Mage') end,
+condition_suggested=function() return level == 110 and raceclass('Mage') and not completedq(45354) end,
 condition_valid=function() return raceclass('Mage') end,
 condition_valid_msg="You must be a Mage to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -11336,7 +11336,7 @@ turnin Dispersion of the Discs##45354 |goto Hall of the Guardian/2 56.42,38.21
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Monk Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Monk') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Monk') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Monk') end,
 condition_valid_msg="You must be a Monk to complete this guide!",
@@ -12118,7 +12118,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Monk Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Monk') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Monk') and not completedq(45177) end,
 condition_valid=function() return raceclass('Monk') end,
 condition_valid_msg="You must be a Monk to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -12913,7 +12913,7 @@ turnin The Nighthold##45177 |goto Dalaran L/10 28.54,48.31
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Monk 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Monk') end,
+condition_suggested=function() return level == 110 and raceclass('Monk') and not completedq(46350) end,
 condition_valid=function() return raceclass('Monk') end,
 condition_valid_msg="You must be a Monk to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -13431,7 +13431,7 @@ turnin The Trial of Ban-Lu##46350 |goto 41.68,25.41
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Paladin Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Paladin') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Paladin') end,
 condition_valid=function() return raceclass('Paladin') end,
 condition_valid_msg="You must be a Paladin to complete this guide!",
 condition_suggested_exclusive=true,
@@ -14308,7 +14308,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Paladin Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Paladin') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Paladin') and not completedq(45177) end,
 condition_valid=function() return raceclass('Paladin') end,
 condition_valid_msg="You must be a Paladin to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -15086,7 +15086,7 @@ turnin The Nighthold##45177 |goto Dalaran L/10 28.54,48.31
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Paladin 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Paladin') end,
+condition_suggested=function() return level == 110 and raceclass('Paladin') and not completedq(45770) end,
 condition_valid=function() return raceclass('Paladin') end,
 condition_valid_msg="You must be a Paladin to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -15647,7 +15647,7 @@ turnin Stirring in the Shadows##45770 |goto Eastern Plaguelands/20 52.15,77.80
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Priest Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Priest') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Priest') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Priest') end,
 condition_valid_msg="You must be a Priest to complete this guide!",
@@ -16462,7 +16462,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Priest Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Priest') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Priest') and not completedq(46029) end,
 condition_valid=function() return raceclass('Priest') end,
 condition_valid_msg="You must be a Priest to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -17274,7 +17274,7 @@ turnin Investigate the Broken Shore##46029 |goto 51.45,45.97
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Priest 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Priest') end,
+condition_suggested=function() return level == 110 and raceclass('Priest') and not completedq(45789) end,
 condition_valid=function() return raceclass('Priest') end,
 condition_valid_msg="You must be a Priest to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -17742,7 +17742,7 @@ turnin The Sunken Vault##45789 |goto Netherlight Temple/1 49.77,20.64
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Rogue Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Rogue') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Rogue') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Rogue') end,
 condition_valid_msg="You must be a Rogue to complete this guide!",
@@ -18609,7 +18609,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Rogue Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Rogue') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Rogue') and not completedq(44195) end,
 condition_valid=function() return raceclass('Rogue') end,
 condition_valid_msg="You must be a Rogue to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -19447,7 +19447,7 @@ turnin Workorders for Armaments##44195 |goto 75.08,56.49
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Rogue 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Rogue') end,
+condition_suggested=function() return level == 110 and raceclass('Rogue') and not completedq(46089) end,
 condition_valid=function() return raceclass('Rogue') end,
 condition_valid_msg="You must be a Rogue to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -19934,7 +19934,7 @@ turnin Hiding In Plain Sight##46089 |goto Dalaran L/4 41.93,78.62
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Shaman Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Shaman') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Shaman') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Shaman') end,
 condition_valid_msg="You must be a Shaman to complete this guide!",
@@ -20784,7 +20784,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Shaman Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Shaman') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Shaman') and not completedq(45996) end,
 condition_valid=function() return raceclass('Shaman') end,
 condition_valid_msg="You must be a Shaman to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -21562,7 +21562,7 @@ turnin Investigate the Broken Shore##45996 |goto The Maelstrom L/0 33.10,60.28
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Shaman 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Shaman') end,
+condition_suggested=function() return level == 110 and raceclass('Shaman') and not completedq(46792) end,
 condition_valid=function() return raceclass('Shaman') end,
 condition_valid_msg="You must be a Shaman to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -22067,7 +22067,7 @@ turnin Gathering of the Storms##46792 |goto The Maelstrom L/0 28.35,45.12
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Warlock Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Warlock') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Warlock') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Warlock') end,
 condition_valid_msg="You must be a Warlock to complete this guide!",
@@ -22973,7 +22973,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Warlock Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Warlock') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Warlock') and not completedq(45990) end,
 condition_valid=function() return raceclass('Warlock') end,
 condition_valid_msg="You must be a Warlock to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -23740,7 +23740,7 @@ turnin Investigate the Broken Shore##45990 |goto 67.01,46.41
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Warlock 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Warlock') end,
+condition_suggested=function() return level == 110 and raceclass('Warlock') and not completedq(46243) end,
 condition_valid=function() return raceclass('Warlock') end,
 condition_valid_msg="You must be a Warlock to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -24313,7 +24313,7 @@ turnin The Wrathsteed of Xoroth##46243
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Warrior Intro & Artifacts",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the introductory Legion quests and unlocking your class artifacts.",
-condition_suggested=function() return level>=100 and raceclass('Warrior') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Warrior') end,
 condition_suggested_exclusive=true,
 condition_valid=function() return raceclass('Warrior') end,
 condition_valid_msg="You must be a Warrior to complete this guide!",
@@ -25012,7 +25012,7 @@ Complete Greymane's Mission |q 39800/1 |goto 70.70,76.23 |next "Zygor's Leveling
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Warrior Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the various quests available in your Class Order Hall.",
-condition_suggested=function() return level>=101 and raceclass('Warrior') end,
+condition_suggested=function() return level >= 101 and level <= 110 and raceclass('Warrior') and not completedq(44221) end,
 condition_valid=function() return raceclass('Warrior') end,
 condition_valid_msg="You must be a Warrior to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -25737,7 +25737,7 @@ turnin Champion Armaments##44221 |goto 62.29,26.09
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Warrior 7.2 Order Hall Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Class Order Hall quests introduced in patch 7.2.",
-condition_suggested=function() return level>=110 and raceclass('Warrior') end,
+condition_suggested=function() return level == 110 and raceclass('Warrior') and not completedq(46207) end,
 condition_valid=function() return raceclass('Warrior') end,
 condition_valid_msg="You must be a Warrior to complete this guide!",
 image=ZGV.DIR.."\\Guides\\Images\\The_Broken_Shore",
@@ -26211,6 +26211,7 @@ turnin The Trial of Rage##46207 |goto Skyhold/1 58.40,84.56
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Azsuna",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Azsuna zone in the Broken Isles.",
+condition_suggested=function() return level >= 100 and level <= 110 and not completedq(42367) end,
 image=ZGV.DIR.."\\Guides\\Images\\Azsuna",
 startlevel=100.0,
 endlevel=110.0,
@@ -27263,6 +27264,7 @@ turnin Fate of the Queen's Reprisal##40794 |goto Dalaran L/10 28.68,74.81 |next 
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Highmountain",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Highmountain zone in the Broken Isles.",
+condition_suggested=function() return level >= 100 and level <= 110 and not completedq(39780) end,
 image=ZGV.DIR.."\\Guides\\Images\\Highmountain",
 startlevel=100.0,
 endlevel=110.0,
@@ -28611,6 +28613,7 @@ accept Neltharion's Lair##39781 |goto 53.20,70.02 |next "Zygor's Leveling Guides
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Stormheim",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Stormheim zone in the Broken Isles.",
+condition_suggested=function() return level >= 100 and level <= 110 and not completedq(40005) end,
 image=ZGV.DIR.."\\Guides\\Images\\Stormheim",
 startlevel=100.0,
 endlevel=110.0,
@@ -29908,6 +29911,7 @@ turnin Put It All on Red##42483 |goto 51.42,57.35 |next "Zygor's Leveling Guides
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Suramar (110)",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Suramar zone in the Broken Isles.",
+condition_suggested=function() return level == 110 and not completedq(45420) end,
 image=ZGV.DIR.."\\Guides\\Images\\Suramar",
 startlevel=100.0,
 endlevel=110.0,
@@ -33794,6 +33798,7 @@ turnin The Eye of Aman'Thul##45420 |goto Dalaran L/12 46.22,55.94
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Val'sharah",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Val'sharah zone in the Broken Isles.",
+condition_suggested=function() return level >= 100 and level <= 110 and not completedq(38721) end,
 image=ZGV.DIR.."\\Guides\\Images\\Valsharah",
 startlevel=100.0,
 endlevel=110.0,
@@ -34707,7 +34712,7 @@ turnin The Tears of Elune##40890 |goto Dalaran L/12 45.86,65.15 |next "Zygor's L
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Balance of Power Questline",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the \"Balance of Power\" questline.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level >= 110 and not completedq(43533) end,
 condition_end=function() return completedq(43533) end,
 },[[
 step
@@ -35075,6 +35080,7 @@ You have completed the _Balance of Power_ questline
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Broken Shore Campaign",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Broken Shore Campaign story.",
+condition_suggested=function() return level == 110 and not completedq(46805) end,
 startlevel=110.0,
 },[[
 step
@@ -38473,6 +38479,7 @@ turnin The Deceiver's Downfall##46805 |goto Broken Shore/0 44.56,63.38
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Legion Invasions",{
 author="support@zygorguides.com",
 description="This guide will walk you through successfully completing the various Legion invasions.",
+condition_suggested=function() return level >= 98 and level <= 110 end,
 startlevel=110.0,
 },[[
 step
@@ -38831,7 +38838,7 @@ Click here to return to the menu |confirm |next "Menu"
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Broken Shore\\Excavator Karla Quests",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the treasure hunting quests offered by Excavator Karla on Broken Shore.",
-condition_suggested=function() return level>=110 and completedq(46734) end,
+condition_suggested=function() return level >= 110 and completedq(46734) and not completedq(46666) end,
 condition_end=function() return completedq(46666) end,
 startlevel=110.0,
 },[[
@@ -38967,6 +38974,7 @@ You have completed the Excavator Karla questline
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Broken Shore\\Anduin Wrynn Questline",{
 author="support@zygorguides.com",
+condition_suggested=function() return level == 110 and not completedq(46282) end,
 startlevel=110.0,
 },[[
 step
@@ -39052,7 +39060,7 @@ turnin The King's Path##46282 |goto 60.44,25.04
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Dalaran Postmaster Quest Line",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Dalaran Postmaster quests to unlock The Postmaster's Office.",
-condition_suggested=function() return level>=98 end,
+condition_suggested=function() return level >= 98 and level <= 110 and not completedq(50247) end,
 },[[
 step
 click Lost Mail##247797
@@ -39189,7 +39197,7 @@ turnin The Mail Must Flow##50247 |goto 37.61,40.13
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Rogue Pickpocketing Quest Line",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Rogue pickpocketing quest line.",
-condition_suggested=function() return level>=100 and level<=110 and raceclass('Rogue') end,
+condition_suggested=function() return level >= 100 and level <= 110 and raceclass('Rogue') and not completedq(47594) end,
 condition_end=function() return completedq(47594) end,
 startlevel=100.0,
 },[[
@@ -39302,7 +39310,7 @@ You have completed the Rogue Pickpocketing Quest Line!
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Meatball Order Hall Champion",{
 author="support@zygorguides.com",
 description="This guide will walk you through obtaining Meatball as a Class Order Hall champion.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level == 110 and not completedq(45312) end,
 condition_end=function() return completedq(45312) end,
 model={501},
 startlevel=110.0,
@@ -39470,7 +39478,7 @@ You have earned _Meatball_ as an Order Hall Champion
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Argus Campaign",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the new Argus zone added in patch 7.3.",
-condition_suggested=function() return level>=110 end,
+condition_suggested=function() return level == 110 and not completedq(49077) end,
 },[[
 step
 Load the "Broken Shore Campaign" Leveling Guide |confirm |next "Zygor's Leveling Guides\\Legion (100-110)\\Broken Shore Campaign"
@@ -41110,7 +41118,6 @@ ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Uuna Scenario",{
 author="support@zygorguides.com",
 description="This guide will walk you through the Uuna Scenario.",
-condition_suggested=function() return level>=110 end,
 },[[
 step
 To start this Uuna event you must first obtain the Uuna pet

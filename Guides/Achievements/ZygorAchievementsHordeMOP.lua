@@ -10019,7 +10019,36 @@ Routing to Proper Section |next "golden2" |only if not completedq(30638)
 Routing to proper Section |next "tillers" |only if completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31393 |goto Kun-Lai Summit 72.0,94.2
+step
+talk Sunwalker Dezco##64542
+turnin Temple of the White Tiger##31393 |goto Kun-Lai Summit 68.7,43.0
+accept A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+step
+Talk to Xuen |q 31395/1
+kill Spirit of Violence##64656
+Pass the First Test |q 31395/2 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31395/3 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Hatred##64742
+Pass the Third Test |q 31395/4 |goto Kun-Lai Summit 68.9,42.8
+step
+talk Sunwalker Dezco##64542
+turnin A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+accept A Witness to History##31511 |goto Kun-Lai Summit 68.7,43.0
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Kun-Lai Summit 56.0,91.4
+step
+talk Madam Vee Luo##62996
+accept A Witness to History##31511 |goto Shrine of Two Moons/1 69.3,48.9
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Vale of Eternal Blossoms 56.1,91.6
+step
+talk Madam Vee Luo##62996
+turnin A Witness to History##31511 |goto Shrine of Two Moons/1 69.2,49.0
 step
 label "tillers"
 Routing to Proper Section |next "tillers2" |only if not completedq(31945)
@@ -11308,7 +11337,36 @@ Routing to Proper Section |next "golden2" |only if not completedq(30638)
 Routing to proper Section |next "achieve" |only if completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31393 |goto Kun-Lai Summit 72.0,94.2
+step
+talk Sunwalker Dezco##64542
+turnin Temple of the White Tiger##31393 |goto Kun-Lai Summit 68.7,43.0
+accept A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+step
+Talk to Xuen |q 31395/1
+kill Spirit of Violence##64656
+Pass the First Test |q 31395/2 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31395/3 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Hatred##64742
+Pass the Third Test |q 31395/4 |goto Kun-Lai Summit 68.9,42.8
+step
+talk Sunwalker Dezco##64542
+turnin A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+accept A Witness to History##31511 |goto Kun-Lai Summit 68.7,43.0
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Kun-Lai Summit 56.0,91.4
+step
+talk Madam Vee Luo##62996
+accept A Witness to History##31511 |goto Shrine of Two Moons/1 69.3,48.9
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Vale of Eternal Blossoms 56.1,91.6
+step
+talk Madam Vee Luo##62996
+turnin A Witness to History##31511 |goto Shrine of Two Moons/1 69.2,49.0
 step
 label "achieve"
 You will have two people coming from the sides as well as two coming straight ahead of you.
@@ -11331,7 +11389,36 @@ Routing to Proper Section |next "golden2" |only if not completedq(30638)
 Routing to proper Section |next "achieve" |only if completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31393 |goto Kun-Lai Summit 72.0,94.2
+step
+talk Sunwalker Dezco##64542
+turnin Temple of the White Tiger##31393 |goto Kun-Lai Summit 68.7,43.0
+accept A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+step
+Talk to Xuen |q 31395/1
+kill Spirit of Violence##64656
+Pass the First Test |q 31395/2 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31395/3 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Hatred##64742
+Pass the Third Test |q 31395/4 |goto Kun-Lai Summit 68.9,42.8
+step
+talk Sunwalker Dezco##64542
+turnin A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+accept A Witness to History##31511 |goto Kun-Lai Summit 68.7,43.0
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Kun-Lai Summit 56.0,91.4
+step
+talk Madam Vee Luo##62996
+accept A Witness to History##31511 |goto Shrine of Two Moons/1 69.3,48.9
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Vale of Eternal Blossoms 56.1,91.6
+step
+talk Madam Vee Luo##62996
+turnin A Witness to History##31511 |goto Shrine of Two Moons/1 69.2,49.0
 step
 label "achieve"
 talk Kelari Featherfoot##58704 |goto Vale of Eternal Blossoms 18.2,63.6
@@ -11462,7 +11549,36 @@ Routing to proper section |next "revered" |only if rep("Golden Lotus")<Revered a
 Routing to proper section |next "golden2" |only if rep("Golden Lotus")<Revered and not completedq(30638)
 step
 label "golden2"
-#include "Golden_Lotus_PreQuests"
+talk Wanderer Chu##64521
+accept Temple of the White Tiger##31393 |goto Kun-Lai Summit 72.0,94.2
+step
+talk Sunwalker Dezco##64542
+turnin Temple of the White Tiger##31393 |goto Kun-Lai Summit 68.7,43.0
+accept A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+step
+Talk to Xuen |q 31395/1
+kill Spirit of Violence##64656
+Pass the First Test |q 31395/2 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Anger##64684
+Pass the Second Test |q 31395/3 |goto Kun-Lai Summit 68.9,42.8
+kill Spirit of Hatred##64742
+Pass the Third Test |q 31395/4 |goto Kun-Lai Summit 68.9,42.8
+step
+talk Sunwalker Dezco##64542
+turnin A Celestial Experience##31395 |goto Kun-Lai Summit 68.7,43.0
+accept A Witness to History##31511 |goto Kun-Lai Summit 68.7,43.0
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Kun-Lai Summit 56.0,91.4
+step
+talk Madam Vee Luo##62996
+accept A Witness to History##31511 |goto Shrine of Two Moons/1 69.3,48.9
+step
+talk Sunwalker Dezco##64853
+Tell him there is only one way to find out. |q 31511/1 |goto Vale of Eternal Blossoms 56.1,91.6
+step
+talk Madam Vee Luo##62996
+turnin A Witness to History##31511 |goto Shrine of Two Moons/1 69.2,49.0
 step
 label "revered"
 For this achievement you must be at least _Revered_ with _The Golden Lotus_.

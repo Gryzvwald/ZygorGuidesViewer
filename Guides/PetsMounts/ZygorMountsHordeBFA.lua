@@ -1035,29 +1035,29 @@ step
 _Congratulations!_
 You Collected the "Cobalt Pterrordax" Mount.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Goldmane",{
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Goldenmane Horse",{
 author="support@zygorguides.com",
 startlevel=120.0,
 keywords={"ground, mount, battle, for, azeroth"},
-mounts={275868},
-model={83664},
+mounts={260175},
+model={81690},
 description="This mount is acquired by completing Emissary World Quests.",
 },[[
 step
-collect Goldmane's Reins##163573 |n
+collect Goldenmane's Reins##163573 |n
 |tip This can drop from any mob in Stormsong Valley.
-use the Goldmane's Reins##163573
-Learn the "Goldmane" Mount |learnmount Goldmane##275868
+use the Goldenmane's Reins##163573
+Learn the "Goldenmane Horse" Mount |learnmount Goldmane##260175
 step
 _Congratulations!_
-You Collected the "Goldmane" Mount.
+You Collected the "Goldenmane Horse" Mount.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Flying Mounts\\Profession Mounts\\Mecha-Mogul Mk2",{
 author="support@zygorguides.com",
 startlevel=110.0,
 keywords={"flying, mount, battle, for, azeroth"},
 mounts={274621},
-model={73253},
+model={},
 description="This mount is acquired by a random world drop.",
 },[[
 step
@@ -1143,14 +1143,14 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mou
 author="support@zygorguides.com",
 startlevel=120.0,
 keywords={"ground, mount, battle, for, azeroth"},
-mounts={275868},
-model={83664},
+mounts={280729},
+model={},
 description="This mount is acquired by collect 400 mounts.",
 },[[
 step
 Collect 400 different mounts
 |tip Use our various mount guides to accomplish this.
-Earn the "A Horde of Hoofbeats" Achievement |achieve 12934
+Earn the "A Horde of Hoofbeats" Achievement |achieve 12933
 step
 use the Frenzied Feltalon##163981
 Learn the "Frenzied Feltalon" Mount |learnmount Frenzied Feltalon##280729
@@ -1172,9 +1172,168 @@ Earn Exalted with 100 Reputations
 Earn the "100 Exalted Reputations" Achievement |achieve 12866
 step
 use the Pureheart Courser##163982
+|tip It is collected from a mailbox.
 Learn the "Pureheart Courser" Mount |learnmount Pureheart Courser##280730
 step
 _Congratulations!_
 You Collected the "Pureheart Courser" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Reputation Mounts\\Bloodgorged Crawg",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth, bloodgorged, crawg"},
+mounts={280730},
+model={83664},
+description="This mount is acquired by collect 400 mounts.",
+},[[
+step
+Load the "Elevator Music" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Elevator Music"
+|tip Click the line above to load the guide.
+Earn the "Elevator Music" Achievement |achieve 12937
+step
+Load the "Parental Controls" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Parental Controls"
+|tip Click the line above to load the guide.
+Earn the "Parental Controls" Achievement |achieve 12938
+step
+Load the "Thrash Mouth - All Stars" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Thrash Mouth - All Stars"
+|tip Click the line above to load the guide.
+Earn the "Thrash Mouth - All Stars" Achievement |achieve 12823
+step
+Load the "What's in the Box?" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\What's in the Box?"
+|tip Click the line above to load the guide.
+Earn the "What's in the Box?" Achievement |achieve 12828
+step
+Load the "Now We Got Bad Blood" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Now We Got Bad Blood"
+|tip Click the line above to load the guide.
+Earn the "Now We Got Bad Blood" Achievement |achieve 12772
+step
+Load the "Edgelords" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Edgelords"
+|tip Click the line above to load the guide.
+Earn the "Edgelords" Achievement |achieve 12830
+step
+Load the "Existential Crisis" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Existential Crisis"
+|tip Click the line above to load the guide.
+Earn the "Existential Crisis" Achievement |achieve 12836
+step
+Load the "Double Dribble" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Raids\\Double Dribble"
+|tip Click the line above to load the guide.
+Earn the "Double Dribble" Achievement |achieve 12551
+step
+collect Bloodgorged Crawg##163216 |n
+use the Bloodgorged Crawg##163216
+Learn the "Bloodgorged Crawg" Mount |learnmount Bloodgorged Crawg##250735
+step
+_Congratulations!_
+You Collected the "Bloodgorged Crawg" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Broken Highland Mustang",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={279457},
+model={87773},
+description="This mount is acquired from Knight-Captain Aldrin while the Horde controls the Stromgarde War Front.",
+},[[
+step
+kill Knight-Captain Aldrin##142739
+|tip He only appears when the Horde controls Stromgarde.
+collect Broken Highland Mustang##163578 |n
+use the Broken Highland Mustang##163578
+Learn the "Broken Highland Mustang" Mount |learnmount Broken Highland Mustang##279457 |goto Arathi Highlands/0 49.27,40.05
+step
+_Congratulations!_
+You Collected the "Broken Highland Mustang" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Lil' Donkey",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={279608},
+model={87773},
+description="This mount is acquired from Knight-Captain Aldrin while the Horde controls the Stromgarde War Front.",
+},[[
+step
+Enter the cave |goto Arathi Highlands/0 33.44,36.94 < 10
+kill Overseer Krix##142423
+|tip Inside the cave.
+|tip He's on a spawn timer.
+|tip He will appear once after Horde or Alliance take control of Stromgarde.
+collect Lil' Donkey##163646 |n
+use the Lil' Donkey##163646
+Learn the "Lil' Donkey" Mount |learnmount Lil'Donkey##279608 |goto 33.04,37.49
+step
+_Congratulations!_
+You Collected the "Lil' Donkey" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Skullripper",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={279611},
+model={87848},
+description="This mount is acquired from the Skullripper rare spawn within the Arathi Basin Warfront.",
+},[[
+step
+kill Skullripper##142437
+|tip He's on a spawn timer.
+|tip He will appear once after Horde or Alliance take control of Stromgarde.
+collect Skullripper##163645 |n
+use Skullripper##163645
+Learn the "Skullripper" Mount |learnmount Skullripper##279611 |goto Arathi Basin/0 57.15,45.75
+step
+_Congratulations!_
+You Collected the "Skullripper" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Swift Albino Raptor",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={279569},
+model={14345},
+description="This mount is acquired from the Skullripper rare spawn within the Arathi Basin Warfront.",
+},[[
+step
+kill Beastrider Kama##142709
+|tip He's on a spawn timer.
+|tip He will appear once after Horde or Alliance take control of Stromgarde.
+collect Skullripper##163644 |n
+use Swift Albino Raptor##163644
+Learn the "Swift Albino Raptor" Mount |learnmount Swift Albino Raptor##279569 |goto Arathi Basin/0 67.06,65.89
+step
+_Congratulations!_
+You Collected the "Swift Albino Raptor" Mount.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Dropped Mounts\\Nazjatar Blood Serpent",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={275623},
+model={14345},
+description="This mount is acquired from a series of events mostly taking place in Stormsong Valley.",
+},[[
+step
+Kill Zeth'jir enemies around this area
+collect 20 Abyssal Fragment##161344 |n
+|tip These have a low drop rate.
+|tip You can also buy these from the auction house.
+use the Abyssal Fragment##161344
+collect Abhorrent Essence of the Abyss##161345 |goto Stormsong Valley/0 31.91,41.50
+step
+Enter the cave |goto 73.63,23.35 < 5 |walk
+use the Abhorrent Essence of the Abyss##161345 |goto 74.69,21.75
+|tip Use it at the Altar of the Abyss.
+Click here to continue |confirm
+step
+Enter the mine |goto 46.53,36.11 < 5 |walk
+click Abyssal Icon
+|tip This will summon the Adherent of the Abyss.
+kill Adherent of the Abyss##140474
+|tip You will likely need a group to kill this.
+collect Nazjatar Blood Serpent##161479 |n
+use Nazjatar Blood Serpent##161479
+Learn the "Nazjatar Blood Serpent" Mount |learnmount Nazjatar Blood Serpent##275623
+step
+_Congratulations!_
+You Collected the "Nazjatar Blood Serpent" Mount.
 ]])
 ZGV.BETAEND()

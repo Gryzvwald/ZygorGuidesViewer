@@ -19,10 +19,9 @@ GuideMenu.Home={
 	{"item", text=[[Added |cfffe6100War Campaign|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\War Campaign"},
 	{"item", text=[[Added |cfffe6100Void Elf Race Unlock|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Void Elf Race Unlock",faction="A"},
 	{"item", text=[[Added |cfffe6100Lightforged Draenei Race Unlock|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Lightforged Draenei Race Unlock",faction="A"},
-	{"item", text=[[Added |cfffe6100Dark Iron Dwarf Race Unlock|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Dark Iron Dwarf Race Unlock",faction="A"},
 	{"item", text=[[Added |cfffe6100Nightborne Race Unlock|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Nightborne Race Unlock",faction="H"},
 	{"item", text=[[Added |cfffe6100Highmountain Tauren Race Unlock|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Highmountain Tauren Race Unlock",faction="H"},
-	{"item", text=[[Added |cfffe6100Mag'har Orc Race Unlock|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Allied Races\\Mag'har Orc Race Unlock",faction="H"},
+
 
 	{"section", text=[[DUNGEONS]]},
 	{"item", text=[[Added |cfffe6100Battle for Azeroth Dungeons|r.]], folder="DUNGEONS\\Battle for Azeroth Dungeons"},

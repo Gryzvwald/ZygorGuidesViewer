@@ -842,7 +842,103 @@ Click here to be taken to the reputation guide to become Exalted with The Golden
 Click here to be taken to The Golden Lotus Quartermaster to purchase the mount. |confirm |next "buy"
 step
 label "dailies"
-#include "Golden_Lotus"
+talk Kun Autumnlight##58920
+accept Mantid Under Fire##30243 |goto Vale of Eternal Blossoms/0 21.4,71.6
+accept Bloodied Skies##30266 |goto Vale of Eternal Blossoms/0 21.4,71.6
+noquest
+step
+talk Anji Autumnlight##58919
+accept The Thunder Below##30280 |goto Vale of Eternal Blossoms/0 21.4,71.6
+accept The Crumbling Hall##30277 |goto Vale of Eternal Blossoms/0 21.4,71.6
+noquest
+step
+talk Hai-Me Heavyhands##58962
+|tip He walks around the Trainees in this area.
+accept The Battle Ring##30306 |goto Vale of Eternal Blossoms/0 20.1,75.6
+step
+talk Yumi Goldenpaw##58743
+accept Survival Ring: Blades##30242 |goto Vale of Eternal Blossoms/0 18.5,71.6
+accept Survival Ring: Flame##30240 |goto Vale of Eternal Blossoms/0 18.5,71.6
+noquest
+step
+talk Kelari Featherfoot##58704
+accept Roll Club: Serpent's Spine##30261 |goto Vale of Eternal Blossoms/0 18.1,63.5
+step
+talk Kelari Featherfoot##58704
+Tell him: _"Let's roll."_ |q 30261/1 |goto Vale of Eternal Blossoms/0 18.1,63.5
+only if havequest(30261)
+step
+Hold down your right mouse button to help you maneuver through the course.
+|tip Grab as many speed boosts as you can to make it go quicker.
+Complete the Serpent's Spine Roll Course. |q 30261/2
+only if havequest(30261)
+step
+talk Kelari Featherfoot##58704
+turnin Roll Club: Serpent's Spine##30261 |goto Vale of Eternal Blossoms/0 18.1,63.5
+only if havequest(30261)
+step
+kill Shado-Pan Trainee##58992+
+Defeat 20 Shado-Pan Trainees. |q 30306/1 |goto Vale of Eternal Blossoms 19.7,74.2
+only if havequest(30306)
+step
+Stay within the circle and avoid the posts with blades surrounding them and the running pandas.
+Live through the Survival Ring for 90 seconds |q 30242/1 |goto Vale of Eternal Blossoms 19.2,67.5
+only if havequest(30242)
+step
+Stay within the circle and avoid getting hit by the fireworks.
+Live through the Survival Ring for 90 seconds |q 30240/1 |goto 19.2,67.5
+only if havequest(30240)
+step
+clicknpc Setting Sun Turret##64336 |goto Vale of Eternal Blossoms 5.4,72.3
+Mount a turret |invehicle |c
+|tip It's on the upper level of the tower here.
+only if havequest(30266)
+step
+kill 30 Krik'thik Swarmer##63973+ |q 30266/1
+only if havequest(30266)
+step
+Click the Leave Vehicle button |outvehicle
+only if havequest(30266)
+step
+clicknpc Hot Oil Cauldron##64369
+Use the abilities on your hotbar to kill 80 Krik'thik Hivelings |q 30243/1 |goto Vale of Eternal Blossoms 3.9,51.7
+|tip Use the Ignitable Oil Bucket first, followed by the Shado-Pan Torch.
+step
+Traverse the following rooms by only stepping on the _green_ or _red_ tiles, other tiles will harm you. The safe tile changes every day but will be one of the two. |goto Vale of Eternal Blossoms 22.4,26.9
+confirm
+only if havequest(30280) or havequest(30277)
+step
+kill Milau##64965 |q 30280/1 |goto Vale of Eternal Blossoms/18 53.9,68.3
+|tip Milau has several deadly abilities. He will cast a Lightning Breath in any direction, do not be in front of him when he does this. He also starts casting Lightning Pools, constantly move until he is done. Periodically he will pull you to the middle of the room and cast Lightning Sweep. While he is casting get as much distance on him as you can.
+only if havequest(30280)
+step
+click Deactivate Final Spirit Wall##214477
+Deactivate the Final Spirit Wall |q 30277/1 |goto Vale of Eternal Blossoms/18 42.1,27.2
+only if havequest(30277)
+step
+click Ancient Guo-Lai Artifact##214394
+collect Ancient Guo-Lai Artifact##87790 |q 30277/2 |goto 49.4,30.6
+only if havequest(30277)
+step
+talk Yumi Goldenpaw##58743
+turnin Survival Ring: Blades##30242 |goto Vale of Eternal Blossoms/0 18.5,71.5
+turnin Survival Ring: Flame##30240 |goto Vale of Eternal Blossoms/0 18.5,71.5
+step
+talk Hai-Me Heavyhands##58962
+|tip He walks around the Trainees in this area.
+turnin The Battle Ring##30306 |goto Vale of Eternal Blossoms/0 20.1,75.6
+step
+talk Anji Autumnlight##58919
+turnin The Thunder Below##30280 |goto Vale of Eternal Blossoms/0 21.4,71.6
+turnin The Crumbling Hall##30277 |goto Vale of Eternal Blossoms/0 21.4,71.6
+step
+talk Kun Autumnlight##58920
+turnin Mantid Under Fire##30243 |goto Vale of Eternal Blossoms/0 21.4,71.6
+turnin Bloodied Skies##30266 |goto Vale of Eternal Blossoms/0 21.4,71.6
+step
+label "end"
+You have reached the end of the guide for today
+Click here to go back to the beginning of the dailies |confirm |next "dailies"
 step
 label "buy"
 talk Jaluu the Generous##59908
@@ -1020,7 +1116,103 @@ Click here to be taken to the reputation guide to become Exalted with The Golden
 Click here to be taken to The Golden Lotus Quartermaster to purchase the mount. |confirm |next "buy"
 step
 label "dailies"
-#include "Golden_Lotus"
+talk Kun Autumnlight##58920
+accept Mantid Under Fire##30243 |goto Vale of Eternal Blossoms/0 21.4,71.6
+accept Bloodied Skies##30266 |goto Vale of Eternal Blossoms/0 21.4,71.6
+noquest
+step
+talk Anji Autumnlight##58919
+accept The Thunder Below##30280 |goto Vale of Eternal Blossoms/0 21.4,71.6
+accept The Crumbling Hall##30277 |goto Vale of Eternal Blossoms/0 21.4,71.6
+noquest
+step
+talk Hai-Me Heavyhands##58962
+|tip He walks around the Trainees in this area.
+accept The Battle Ring##30306 |goto Vale of Eternal Blossoms/0 20.1,75.6
+step
+talk Yumi Goldenpaw##58743
+accept Survival Ring: Blades##30242 |goto Vale of Eternal Blossoms/0 18.5,71.6
+accept Survival Ring: Flame##30240 |goto Vale of Eternal Blossoms/0 18.5,71.6
+noquest
+step
+talk Kelari Featherfoot##58704
+accept Roll Club: Serpent's Spine##30261 |goto Vale of Eternal Blossoms/0 18.1,63.5
+step
+talk Kelari Featherfoot##58704
+Tell him: _"Let's roll."_ |q 30261/1 |goto Vale of Eternal Blossoms/0 18.1,63.5
+only if havequest(30261)
+step
+Hold down your right mouse button to help you maneuver through the course.
+|tip Grab as many speed boosts as you can to make it go quicker.
+Complete the Serpent's Spine Roll Course. |q 30261/2
+only if havequest(30261)
+step
+talk Kelari Featherfoot##58704
+turnin Roll Club: Serpent's Spine##30261 |goto Vale of Eternal Blossoms/0 18.1,63.5
+only if havequest(30261)
+step
+kill Shado-Pan Trainee##58992+
+Defeat 20 Shado-Pan Trainees. |q 30306/1 |goto Vale of Eternal Blossoms 19.7,74.2
+only if havequest(30306)
+step
+Stay within the circle and avoid the posts with blades surrounding them and the running pandas.
+Live through the Survival Ring for 90 seconds |q 30242/1 |goto Vale of Eternal Blossoms 19.2,67.5
+only if havequest(30242)
+step
+Stay within the circle and avoid getting hit by the fireworks.
+Live through the Survival Ring for 90 seconds |q 30240/1 |goto 19.2,67.5
+only if havequest(30240)
+step
+clicknpc Setting Sun Turret##64336 |goto Vale of Eternal Blossoms 5.4,72.3
+Mount a turret |invehicle |c
+|tip It's on the upper level of the tower here.
+only if havequest(30266)
+step
+kill 30 Krik'thik Swarmer##63973+ |q 30266/1
+only if havequest(30266)
+step
+Click the Leave Vehicle button |outvehicle
+only if havequest(30266)
+step
+clicknpc Hot Oil Cauldron##64369
+Use the abilities on your hotbar to kill 80 Krik'thik Hivelings |q 30243/1 |goto Vale of Eternal Blossoms 3.9,51.7
+|tip Use the Ignitable Oil Bucket first, followed by the Shado-Pan Torch.
+step
+Traverse the following rooms by only stepping on the _green_ or _red_ tiles, other tiles will harm you. The safe tile changes every day but will be one of the two. |goto Vale of Eternal Blossoms 22.4,26.9
+confirm
+only if havequest(30280) or havequest(30277)
+step
+kill Milau##64965 |q 30280/1 |goto Vale of Eternal Blossoms/18 53.9,68.3
+|tip Milau has several deadly abilities. He will cast a Lightning Breath in any direction, do not be in front of him when he does this. He also starts casting Lightning Pools, constantly move until he is done. Periodically he will pull you to the middle of the room and cast Lightning Sweep. While he is casting get as much distance on him as you can.
+only if havequest(30280)
+step
+click Deactivate Final Spirit Wall##214477
+Deactivate the Final Spirit Wall |q 30277/1 |goto Vale of Eternal Blossoms/18 42.1,27.2
+only if havequest(30277)
+step
+click Ancient Guo-Lai Artifact##214394
+collect Ancient Guo-Lai Artifact##87790 |q 30277/2 |goto 49.4,30.6
+only if havequest(30277)
+step
+talk Yumi Goldenpaw##58743
+turnin Survival Ring: Blades##30242 |goto Vale of Eternal Blossoms/0 18.5,71.5
+turnin Survival Ring: Flame##30240 |goto Vale of Eternal Blossoms/0 18.5,71.5
+step
+talk Hai-Me Heavyhands##58962
+|tip He walks around the Trainees in this area.
+turnin The Battle Ring##30306 |goto Vale of Eternal Blossoms/0 20.1,75.6
+step
+talk Anji Autumnlight##58919
+turnin The Thunder Below##30280 |goto Vale of Eternal Blossoms/0 21.4,71.6
+turnin The Crumbling Hall##30277 |goto Vale of Eternal Blossoms/0 21.4,71.6
+step
+talk Kun Autumnlight##58920
+turnin Mantid Under Fire##30243 |goto Vale of Eternal Blossoms/0 21.4,71.6
+turnin Bloodied Skies##30266 |goto Vale of Eternal Blossoms/0 21.4,71.6
+step
+label "end"
+You have reached the end of the guide for today
+Click here to go back to the beginning of the dailies |confirm |next "dailies"
 step
 label "buy"
 talk Jaluu the Generous##59908
@@ -1115,7 +1307,103 @@ Click here to be taken to the reputation guide to become Exalted with The Golden
 Click here to be taken to The Golden Lotus Quartermaster to purchase the mount. |confirm |next "buy"
 step
 label "dailies"
-#include "Golden_Lotus"
+talk Kun Autumnlight##58920
+accept Mantid Under Fire##30243 |goto Vale of Eternal Blossoms/0 21.4,71.6
+accept Bloodied Skies##30266 |goto Vale of Eternal Blossoms/0 21.4,71.6
+noquest
+step
+talk Anji Autumnlight##58919
+accept The Thunder Below##30280 |goto Vale of Eternal Blossoms/0 21.4,71.6
+accept The Crumbling Hall##30277 |goto Vale of Eternal Blossoms/0 21.4,71.6
+noquest
+step
+talk Hai-Me Heavyhands##58962
+|tip He walks around the Trainees in this area.
+accept The Battle Ring##30306 |goto Vale of Eternal Blossoms/0 20.1,75.6
+step
+talk Yumi Goldenpaw##58743
+accept Survival Ring: Blades##30242 |goto Vale of Eternal Blossoms/0 18.5,71.6
+accept Survival Ring: Flame##30240 |goto Vale of Eternal Blossoms/0 18.5,71.6
+noquest
+step
+talk Kelari Featherfoot##58704
+accept Roll Club: Serpent's Spine##30261 |goto Vale of Eternal Blossoms/0 18.1,63.5
+step
+talk Kelari Featherfoot##58704
+Tell him: _"Let's roll."_ |q 30261/1 |goto Vale of Eternal Blossoms/0 18.1,63.5
+only if havequest(30261)
+step
+Hold down your right mouse button to help you maneuver through the course.
+|tip Grab as many speed boosts as you can to make it go quicker.
+Complete the Serpent's Spine Roll Course. |q 30261/2
+only if havequest(30261)
+step
+talk Kelari Featherfoot##58704
+turnin Roll Club: Serpent's Spine##30261 |goto Vale of Eternal Blossoms/0 18.1,63.5
+only if havequest(30261)
+step
+kill Shado-Pan Trainee##58992+
+Defeat 20 Shado-Pan Trainees. |q 30306/1 |goto Vale of Eternal Blossoms 19.7,74.2
+only if havequest(30306)
+step
+Stay within the circle and avoid the posts with blades surrounding them and the running pandas.
+Live through the Survival Ring for 90 seconds |q 30242/1 |goto Vale of Eternal Blossoms 19.2,67.5
+only if havequest(30242)
+step
+Stay within the circle and avoid getting hit by the fireworks.
+Live through the Survival Ring for 90 seconds |q 30240/1 |goto 19.2,67.5
+only if havequest(30240)
+step
+clicknpc Setting Sun Turret##64336 |goto Vale of Eternal Blossoms 5.4,72.3
+Mount a turret |invehicle |c
+|tip It's on the upper level of the tower here.
+only if havequest(30266)
+step
+kill 30 Krik'thik Swarmer##63973+ |q 30266/1
+only if havequest(30266)
+step
+Click the Leave Vehicle button |outvehicle
+only if havequest(30266)
+step
+clicknpc Hot Oil Cauldron##64369
+Use the abilities on your hotbar to kill 80 Krik'thik Hivelings |q 30243/1 |goto Vale of Eternal Blossoms 3.9,51.7
+|tip Use the Ignitable Oil Bucket first, followed by the Shado-Pan Torch.
+step
+Traverse the following rooms by only stepping on the _green_ or _red_ tiles, other tiles will harm you. The safe tile changes every day but will be one of the two. |goto Vale of Eternal Blossoms 22.4,26.9
+confirm
+only if havequest(30280) or havequest(30277)
+step
+kill Milau##64965 |q 30280/1 |goto Vale of Eternal Blossoms/18 53.9,68.3
+|tip Milau has several deadly abilities. He will cast a Lightning Breath in any direction, do not be in front of him when he does this. He also starts casting Lightning Pools, constantly move until he is done. Periodically he will pull you to the middle of the room and cast Lightning Sweep. While he is casting get as much distance on him as you can.
+only if havequest(30280)
+step
+click Deactivate Final Spirit Wall##214477
+Deactivate the Final Spirit Wall |q 30277/1 |goto Vale of Eternal Blossoms/18 42.1,27.2
+only if havequest(30277)
+step
+click Ancient Guo-Lai Artifact##214394
+collect Ancient Guo-Lai Artifact##87790 |q 30277/2 |goto 49.4,30.6
+only if havequest(30277)
+step
+talk Yumi Goldenpaw##58743
+turnin Survival Ring: Blades##30242 |goto Vale of Eternal Blossoms/0 18.5,71.5
+turnin Survival Ring: Flame##30240 |goto Vale of Eternal Blossoms/0 18.5,71.5
+step
+talk Hai-Me Heavyhands##58962
+|tip He walks around the Trainees in this area.
+turnin The Battle Ring##30306 |goto Vale of Eternal Blossoms/0 20.1,75.6
+step
+talk Anji Autumnlight##58919
+turnin The Thunder Below##30280 |goto Vale of Eternal Blossoms/0 21.4,71.6
+turnin The Crumbling Hall##30277 |goto Vale of Eternal Blossoms/0 21.4,71.6
+step
+talk Kun Autumnlight##58920
+turnin Mantid Under Fire##30243 |goto Vale of Eternal Blossoms/0 21.4,71.6
+turnin Bloodied Skies##30266 |goto Vale of Eternal Blossoms/0 21.4,71.6
+step
+label "end"
+You have reached the end of the guide for today
+Click here to go back to the beginning of the dailies |confirm |next "dailies"
 step
 label "buy"
 talk Jaluu the Generous##59908
@@ -2206,11 +2494,427 @@ description="This guide will help you acquire the Thundering August Cloud Serpen
 },[[
 step
 This mount requires you to be _Exalted_ with _The August Celestials_.
-Click here to be taken to the reputation guide to become Exalted with The August Celestials. |confirm |next "dailies"
+Click here to be taken to the reputation guide to become Exalted with The August Celestials. |confirm |next "startaug"
 Click here to be taken to The August Celestials Quartermaster to purchase the mount. |confirm |next "buy"
 step
-label "dailies"
-#include "August_Celestials"
+label "startaug"
+talk Sage Whiteheart##64032
+|tip The following quests will only be available the first time you are sent to a new area. They are random and Sage Lotusbloom will only have one at a time.
+accept Challenge At The Temple of the Red Crane##31378 |goto Vale of Eternal Blossoms 84.62,63.78 |next "crane" |or |only if not completedq(31378)
+accept Attack At The Temple of the Jade Serpent##31376 |goto Vale of Eternal Blossoms 84.62,63.78 |next "serpent" |or |only if not completedq(31377)
+accept Defense At Niuzao Temple##31382 |goto Vale of Eternal Blossoms 84.62,63.78 |next "ox" |or |only if not completedq(31382)
+accept Trial At The Temple of the White Tiger##31380 |goto Vale of Eternal Blossoms 84.62,63.78 |next "tiger" |or |only if not completedq(31380)
+|tip If no quest is available, ask her how you can help the August Celestials today. Then click on whichever spirit needs you today.
+Niuzao the Black Ox |confirm |next "ox"
+Yu'lon the Jade Serpent |confirm |next "serpent"
+Xuen the White Tiger |confirm |next "tiger"
+Chi-Ji the Red Crane |confirm |next "crane"
+step
+label "crane"
+talk Thelonius##60506
+turnin Challenge At The Temple of the Red Crane##31378 |goto Krasarang Wilds 31.3,63.4
+only if not completedq(31378)
+step
+talk Thelonius##60506
+accept Students of Chi-Ji##30718 |goto 31.3,63.4
+accept Champion of Chi-Ji##30740 |goto 31.3,63.4 |only if achieved(7287)
+step
+talk Yan Quillpaw##60529
+accept Gifts of the Great Crane##30717 |goto 31.3,63.6
+step
+talk Kuo-Na Quillpaw##60528
+accept Chasing Hope##30716 |goto 31.3,63.6
+step
+talk Champion of Chi-Ji##60546
+Let's fight!
+Defeat a Champion of Chi-Ji |q 30740/1 |goto 34.6,82.0
+|only if havequest(30740)
+step
+kill Student of Chi-Ji##60601+
+Duel #10# Students of Chi-Ji |q 30718/1 |goto 31.2,73.9
+click Cerulean Gift of the Crane##211451
+click Crimson Gift of the Crane##211453
+click Bronze Gift of the Crane##211452
+|tip The Gifts look like feathers laying around on the ground.
+collect 10 Gift of the Great Crane##80938+ |q 30717/1 |goto 31.2,73.9
+Find #3# Spirits of the Crane |q 30716/1 |goto 31.2,73.9
+|tip They look like stealthed birds roaming around the isle in set paths. Run into them.
+step
+talk Kuo-Na Quillpaw##60528
+turnin Chasing Hope##30716 |goto 31.3,63.6
+step
+talk Yan Quillpaw##60529
+turnin Gifts of the Great Crane##30717 |goto 31.3,63.6
+step
+talk Thelonius##60506
+turnin Students of Chi-Ji##30718 |goto 31.3,63.4
+accept Ellia Ravenmane##30725 |goto 31.3,63.4 |or
+accept Minh Do-Tan##30726 |goto 31.3,63.4 |or
+accept Ellia Ravenmane: Rematch##30727 |goto 31.3,63.4 |or
+accept Fat Long-Fat##30728 |goto 31.3,63.4 |or
+accept Julia Bates##30729 |goto 31.3,63.4 |or
+accept Dextrous Izissha##30730 |goto 31.3,63.4 |or
+accept Kuo-Na Quillpaw##30731 |goto 31.3,63.4 |or
+accept Ellia Ravenmane: Revenge##30732 |goto 31.3,63.4 |or
+accept Tukka-Tuk##30733 |goto 31.3,63.4 |or
+accept Huck Wheelbarrow##30734 |goto 31.3,63.4 |or
+accept Mindel Sunspeaker##30735 |goto 31.3,63.4 |or
+accept Yan Quillpaw##30736 |goto 31.3,63.4 |or
+accept Fat Long-Fat: Rematch##30737 |goto 31.3,63.4 |or
+accept Thelonius##30738 |goto 31.3,63.4 |or
+accept Ellia Ravenmane: Redemption##30739 |goto 31.3,63.4 |or
+only if not achieved(7287)
+step
+talk Thelonius##60506
+turnin Students of Chi-Ji##30718 |goto 31.3,63.4
+turnin Champion of Chi-Ji##30740 |goto 31.3,63.4
+only if achieved(7287)
+|next "end"
+step
+talk Fat Long-Fat##60534
+|tip He is on the very top of this building.
+Let's fight!
+Defeat Fat Long-Fat |q 30728/1 |goto 32.0,70.7
+|only if havequest(30728)
+step
+talk Ellia Ravenmane##60530
+Let's fight!
+Defeat Ellia Ravenmane |q 30725/1 |goto 31.8,71.2
+|only if havequest(30725)
+step
+talk Mindel Sunspeaker##60541
+Let's fight!
+Defeat Mindel Sunspeaker |q 30735/1 |goto 32.1,69.9
+|only if havequest(30735)
+step
+talk Minh Do-Tan##60532
+Let's fight!
+Defeat Minh Do-Tan |q 30726/1 |goto 32.0,76.5
+|only if havequest(30726)
+step
+talk Tukka-Tuk##60539
+Let's fight!
+Defeat Tukka-Tuk |q 30733/1 |goto 34.1,75.1
+|only if havequest(30733)
+step
+talk Ellia Ravenmane##60545
+Let's fight!
+Defeat Ellia Ravenmane |q 30739/1 |goto 36.4,75.6
+|only if havequest(30739)
+step
+talk Dextrous Izissha##60536
+Let's fight!
+Defeat Dextrous Izissha |q 30730/1 |goto 31.7,80.3
+|only if havequest(30730)
+step
+talk Fat Long-Fat##60543
+Let's fight!
+Defeat Fat Long-Fat |q 30737/1 |goto 34.8,82.6
+|only if havequest(30737)
+step
+talk Kuo-Na Quillpaw##60537
+Let's fight!
+Defeat Kuo-Na Quillpaw |q 30731/1 |goto 36.6,74.8
+|only if havequest(30731)
+step
+talk Ellia Ravenmane##60533
+Let's fight!
+Defeat Ellia Ravenmane |q 30727/1 |goto 35.2,75.1
+|only if havequest(30727)
+step
+talk Julia Bates##60535
+Let's fight!
+Defeat Julia Bates |q 30729/1 |goto 28.9,75.5
+|only if havequest(30729)
+step
+talk Huck Wheelbarrow##60540
+Let's fight!
+Defeat Huck Wheelbarrow |q 30734/1 |goto 27.9,70.3
+|only if havequest(30734)
+step
+talk Yan Quillpaw##60542
+Let's fight!
+Defeat Yan Quillpaw |q 30736/1 |goto 36.5,76.2
+|only if havequest(30736)
+step
+talk Ellia Ravenmane##60538
+Let's fight!
+Defeat Ellia Ravenmane |q 30732/1 |goto 34.5,83.3
+|only if havequest(30732)
+step
+talk Thelonius##60544
+Let's fight!
+Defeat Thelonius |q 30738/1 |goto 28.8,72.4
+|only if havequest(30738)
+step
+talk Thelonius##60506
+turnin Ellia Ravenmane##30725 |goto 31.3,63.4 |or
+turnin Minh Do-Tan##30726 |goto 31.3,63.4 |or
+turnin Ellia Ravenmane: Rematch##30727 |goto 31.3,63.4 |or
+turnin Fat Long-Fat##30728 |goto 31.3,63.4 |or
+turnin Julia Bates##30729 |goto 31.3,63.4 |or
+turnin Dextrous Izissha##30730 |goto 31.3,63.4 |or
+turnin Kuo-Na Quillpaw##30731 |goto 31.3,63.4 |or
+turnin Ellia Ravenmane: Revenge##30732 |goto 31.3,63.4 |or
+turnin Tukka-Tuk##30733 |goto 31.3,63.4 |or
+turnin Huck Wheelbarrow##30734 |goto 31.3,63.4 |or
+turnin Mindel Sunspeaker##30735 |goto 31.3,63.4 |or
+turnin Yan Quillpaw##30736 |goto 31.3,63.4 |or
+turnin Fat Long-Fat: Rematch##30737 |goto 31.3,63.4 |or
+turnin Thelonius##30738 |goto 31.3,63.4 |or
+turnin Ellia Ravenmane: Redemption##30739 |goto 31.3,63.4 |or
+|only if not achieved(7287)
+|next "end"
+step
+label "serpent"
+talk Elder Sage Tai-Feng##57324
+turnin Attack At The Temple of the Jade Serpent##31376 |goto The Jade Forest 53.9,61.9 |only if havequest(31376)
+accept Arrows of Fortune##30065 |goto The Jade Forest 53.9,61.9 |or
+accept Hidden Power##30066 |goto The Jade Forest 53.9,61.9 |or
+accept The Darkness Around Us##30006 |goto The Jade Forest 53.9,61.9 |or
+Click here when no more quests are available |confirm
+step
+talk Elder Sage Storm-Sing##57319
+accept Behind the Masks##30063 |goto 53.9,61.9 |or
+accept Saving the Sutras##30064 |goto 53.9,61.9 |or
+Click here when no more quests are available |confirm
+stickystart "defendersarrow"
+stickystart "shainvaders"
+stickystart "maskofdoubt"
+step
+click Ancient Sutra##210086
+collect 6 Ancient Sutra##77432 |q 30064/1 |goto 56.5,53.6
+|only if havequest(30064)
+step
+label "defendersarrow"
+click Defender's Arrow##210087 |only if havequest(30065)
+collect 10 Defender's Arrow##77452+ |q 30065/1 |goto 55.3,57.4 |only if havequest(30065)
+click Yu'lon Guardian##57400+, Yu'lon Adept##57316+ |only if havequest(30066)
+Use the Stack of Mantras |use Stack of Mantras##77475 |only if havequest(30066)
+Deliver #6# Ancient Mantras |q 30066/1 |goto 55.3,57.4 |only if havequest(30066)
+step
+label "maskofdoubt"
+kill Final Doubt##57330+, Lingering Doubt##57396+ |only if havequest(30063)
+collect 8 Mask of Doubt##77419+ |q 30063/1 |only if havequest(30063) |goto 54.5,54.1
+|only if havequest(30063)
+step
+label "shainvaders"
+kill Final Doubt##57330+, Lingering Doubt##57396+, Shadow Of Doubt##57389
+Kill #15# Sha Invaders |q 30006/1 |goto 53.4,54.2
+|only if havequest(30006)
+step
+talk Elder Sage Storm-Sing##57319
+turnin Behind the Masks##30063 |goto 53.9,61.9 |only if havequest(30063)
+turnin Saving the Sutras##30064 |goto 53.9,61.9 |only if havequest(30064)
+step
+talk Elder Sage Tai-Feng##57324
+turnin Arrows of Fortune##30065 |goto The Jade Forest 53.9,61.9 |only if havequest(30065)
+turnin Hidden Power##30066 |goto The Jade Forest 53.9,61.9 |only if havequest(30066)
+turnin The Darkness Around Us##30006 |goto The Jade Forest 53.9,61.9 |only if havequest(30006)
+accept Flames of the Void##30068 |goto The Jade Forest 53.9,61.9 |or
+accept The Shadow of Doubt##30067 |goto The Jade Forest 53.9,61.9 |or
+Click here when no more quests are available |confirm
+step
+kill Shadow of Doubt##57389 |q 30067/1 |goto 57.5,62.3
+|only if havequest(30067)
+step
+clicknpc War Serpent##57871
+Ride the War Serpent |invehicle |goto 54.1,60.9
+|only if havequest(30068)
+step
+Fly around the Jade Temple Grounds and extinguish Void Flames
+|tip They look like swirling black fire.
+If you run out of water you can refill it in the river here |goto 53.9,58.0
+|tip Look for small light-blue patches of swirling water and then fly over them.
+Douse #6# Void Flames |q 30068/1
+|only if havequest(30068)
+step
+Click the Leave Vehicle button |outvehicle |goto 53.9,61.9
+|only if havequest(30068)
+step
+talk Elder Sage Tai-Feng##57324
+turnin The Shadow of Doubt##30067 |goto 53.9,61.9
+turnin Flames of the Void##30068 |goto 53.9,61.9
+|next "end"
+step
+label "tiger"
+talk Xuen##60968
+turnin Trial At The Temple of the White Tiger##31380 |goto Kun-Lai Summit 67.2,55.9
+|only if havequest(31380)
+step
+talk Xuen##60968
+accept Round 1: Brewmaster Chani##30879 |goto 67.2,55.9 |or
+accept Round 1: The Streetfighter##30880 |goto 67.2,55.9 |or
+accept Contending With Bullies##31517 |goto 67.2,55.9
+|tip This quest may not be available.
+Click here if it is not available |confirm
+step
+kill Shonuf##64757 |q 31517/1 |goto 71.1,55.8
+|only if havequest(31517)
+step
+talk Brewmaster Chani##60996
+|tip Challenge her.
+|tip She has a lot of health but isn't too difficult to kill. She will toss Bitter Brew on the ground, so kite her out of it. She also has an AoE cone called The Steamer, you can avoid this by either moving out of it, or interrupting the channel.
+Defeat Brewmaster Chani |q 30879/1 |goto 71.0,51.8
+|only if havequest(30879)
+step
+talk Lun-Chi##60994
+|tip Challenge her.
+Defeat The Streetfighter |q 30880/1 |goto 71.0,51.8
+|only if havequest(30880)
+step
+talk Xuen##60968
+turnin Round 1: Brewmaster Chani##30879 |goto 70.3,51.3 |only if havequest(30879)
+turnin Round 1: The Streetfighter##30880 |goto 70.3,51.3 |only if havequest(30880)
+turnin Contending With Bullies##31517 |goto 70.3,51.3 |only if havequest(31517)
+accept Round 2: Clever Ashyo & Ken-Ken##30881 |goto 70.3,51.3 |or
+accept Round 2: Kang Bramblestaff##30882 |goto 70.3,51.3 |or
+step
+talk Kang Bramblestaff##60978
+|tip Challenge him.
+Defeat Kang Bramblestaff |q 30882/1 |goto 71.7,45.4
+|only if havequest(30882)
+step
+talk Clever Ashyo##60980
+|tip Challenge him.
+|tip Kill Ken-Ken first as he is the weaker of the two. He will cast Ken-Ken Rampage causing him to whirlwind, when he does momentarily switch to Ashyo. Ashyo will summon Water Spouts and Healing Spheres. The spheres are top priority and the Spouts are easily avoidable.
+Defeat Clever Ashyo |q 30881/1 |goto 71.7,45.4
+Defeat Ken-Ken |q 30881/2 |goto 71.7,45.4
+|only if havequest(30881)
+step
+talk Xuen##60968
+turnin Round 2: Clever Ashyo & Ken-Ken##30881 |goto 71.8,44.9 |only if havequest(30881)
+turnin Round 2: Kang Bramblestaff##30882 |goto 71.8,44.9 |only if havequest(30882)
+accept Round 3: The Wrestler##30883 |goto 71.8,44.9 |or
+accept Round 3: Master Boom Boom##30885 |goto 71.8,44.9 |or
+step
+talk Master Boom Boom##61013
+|tip Challenge him.
+|tip He will constantly toss Dynamite at you that will put a landmine on the ground if you walk over it. When he starts the fuse on his boom box, be out of the middle of the arena by the time it finishes.
+Defeat Master Boom Boom |q 30885/1 |goto 66.7,46.5
+|only if havequest(30885)
+step
+talk The Wrestler##60997
+|tip Challenge him.
+|tip Click on the chairs around the room to increase your damage and cause The Wrestler to be stunned for 10 seconds. If you space these out enough, you could potentially kill him before he can hurt you. Periodically he will grapple and throw you, it does not do much damage but it prevents control of your character. Finally, he uses a Sling Sweat ability which puts a blue puddle on the ground that reduces your movement speed and does damage.
+Defeat The Wrestler |q 30883/1 |goto 66.7,46.5
+|only if havequest(30883)
+step
+talk Xuen##60968
+turnin Round 3: The Wrestler##30883 |goto 66.4,46.3 |only if havequest(30883)
+turnin Round 3: Master Boom Boom##30885 |goto 66.4,46.3 |only if havequest(30885)
+accept Round 4: The P.U.G.##30907 |goto 66.4,46.3 |or
+accept Round 4: Master Windfur##30902 |goto 66.4,46.3 |or
+step
+talk Master Windfur##61012
+|tip Challenge him.
+Defeat Master Windfur |q 30902/1 |goto 68.8,43.8
+|only if havequest(30902)
+step
+Enter the building |goto 69.0,43.7 < 15
+talk Healiss##61004
+|tip Challenge him.
+|tip Defeat the P.U.G. by first kill Healiss. He will attempt to run away and only has one healing spell that he may try to use, it is called Jungle Remedy, save Interrupts and Stuns for this ability. Next deal with Tankiss, he has more health but is a greater threat than Hackiss, his only ability is called Ground Pummel which will knock you can and deal some damage. Finally kill Hackiss, his only ability is Backstab. This will leave a small bleed on you.
+Defeat Hackiss |q 30907/1
+Defeat Healiss |q 30907/2
+Defeat Tankiss |q 30907/3
+only if havequest(30907)
+step
+talk Xuen##60968
+turnin Round 4: The P.U.G.##30907 |goto 68.5,44.6
+turnin Round 4: Master Windfur##30902 |goto 68.5,44.6
+step
+talk Lin Tenderpaw##60981
+accept The Torch of Strength##31492 |goto Kun-Lai Summit 68.5,56.5
+Click here if this quest is unavailable |confirm |next "end"
+step
+For this quest you must go up the path, avoiding all of the tornadoes that roam around. If you mount, or touch a tornado, you will have to go back to Lin and start the quest over
+confirm
+only if havequest(31492)
+step
+Enter the first temple |goto 69.6,53.0 < 10 |walk
+Enter the second temple |goto 66.9,51.2 < 10 |walk
+click The Strong Brazier##214628
+Light the Strong Brazier |q 31492/1 |goto 68.6,46.6
+only if havequest(31492)
+step
+talk Lin Tenderpaw##60981
+turnin The Torch of Strength##31492 |goto Kun-Lai Summit 68.5,56.5
+|next "end"
+only if havequest(31492)
+step
+End of section |next "end"
+step
+label "ox"
+talk Ogo the Elder##61580
+turnin Defense At Niuzao Temple##31382 |goto Townlong Steppes 39.35,62.30 |only if havequest(31382)
+accept The Siege Swells##30956 |goto Townlong Steppes 39.35,62.30 |or
+accept The Unending Siege##30952 |goto Townlong Steppes 39.35,62.30 |or
+step
+talk Ogo the Younger##61581
+accept The Big Guns##30959 |goto 39.34,62.21 |or
+accept A Blade is a Blade##30954 |goto 39.34,62.21 |or
+step
+talk Yak-Keeper Kyana##61585
+accept Fallen Sentinels##30953 |goto 39.15,62.07
+If this quest is unavailable today, click here |confirm
+step
+talk Sentinel Commander Qipan##61584
+accept The Overwhelming Swarm##30957 |goto 39.41,61.96
+If this quest is unavailable today, click here |confirm
+step
+talk High Adept Paosha##61583
+accept In Battle's Shadow##30958 |goto 38.95,62.44 |or
+accept Paying Tribute##30955 |goto 38.95,62.44 |or
+step
+Use your Pot of Fire on Sra'thik War Wagons |use Pot of Fire##82346 |only if havequest(30959)
+Cause #3# Sri'thik War Wagons to explode |q 30959/1 |goto 40.99,60.35 |only if havequest(30959)
+kill Sra'thik Swiftclaw##61508+, Sra'thik Warcaller##61502+, Sra'thik Fleshrender##61514+ |only if havequest(30956)
+Kill #25# Sri'thik attackers |q 30956/1 |goto 40.99,60.35 |only if havequest(30956)
+kill Sra'thik Kunchong##61509+
+Kill #4# Kuchong |q 30957/1 |goto 40.99,60.35 |only if havequest(30957)
+click Loose Brick##211752 |only if havequest(30958)
+Throw #10# Loose Stones up to Niuzao Stonemasons |q 30958/1 |goto 40.99,60.35 |only if havequest(30958)
+clicknpc Wounded Niuzao Sentinel##61570 |only if havequest(30953)
+Use your Yak's Milk Flask on Wounded Niuzao Sentinels |use Yak's Milk Flask##82381 |only if havequest(30953)
+|tip Normal healing spells will also heal the Sentinels if you have them. |only if havequest(30953)
+Heal #8# Niuzao Sentinels |q 30953/1 |goto 40.99,60.35 |only if havequest(30953)
+click Niuzao Food Supply##212133 |only if havequest(30955)
+Gather #6# Food for Niuzao |q 30955/1 |goto 40.99,60.35 |only if havequest(30955)
+kill Sra'thik Warcaller##61502+, Sra'thik Swiftclaw##61508+ |only if havequest(30952)
+Kill #12# Sra'thik attackers |q 30952/1 |goto 40.99,60.35 |only if havequest(30952)
+click Sra'thik Weapon##211766 |only if havequest(30954)
+|tip After you kill a Sra'thik, a weapon may drop. |only if havequest(30954)
+collect 10 Sra'thik Weapon##82353 |q 30954/1 |goto 40.99,60.35 |only if havequest(30954)
+step
+talk Ogo the Elder##61580
+turnin The Siege Swells##30956 |goto 39.35,62.30 |only if havequest(30956)
+turnin The Unending Siege##30952 |goto 39.35,62.30 |only if havequest(30952)
+step
+talk Ogo the Younger##61581
+turnin The Big Guns##30959 |goto 39.34,62.21 |only if havequest(30959)
+turnin A Blade is a Blade##30954 |goto 39.34,62.21 |only if havequest(30954)
+step
+talk Yak-Keeper Kyana##61585
+turnin Fallen Sentinels##30953 |goto 39.15,62.07 |only if havequest(30953)
+turnin In Battle's Shadow##30958 |goto 39.15,62.07 |only if havequest(30958)
+step
+talk Sentinel Commander Qipan##61584
+turnin The Overwhelming Swarm##30957 |goto 39.41,61.96
+|only if havequest(30957)
+step
+talk High Adept Paosha##61583
+turnin Paying Tribute##30955 |goto 38.95,62.44
+|only if havequest(30955)
+step
+label "end"
+talk Sage Whiteheart##64032
+buy 1 Grand Commendation of the August Celestials##93224 |n
+Use the Commendation of the August Celestials you just purchased |condition ZGV:GetReputation("August Celestials").hasBonus |goto Vale of Eternal Blossoms 84.6,63.7 |use Grand Commendation of the August Celestials##93224
+only if rep("August Celestials")>=Revered
+step
+You have reached the end of this daily guide
+Click here to return to the start of the dailies |next "startaug" |confirm
 step
 label "buy"
 talk Instructor Windspear##64484
