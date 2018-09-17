@@ -30075,5 +30075,5 @@ ZygorGuidesViewer_L("NPCs", "enUS", function() return {
 [129440]="Harlan Sweete|",
 [138793]="Taskmaster Burlok|",
 [139141]="Commander Alvingham|",
-
+[130902]="Creepy Spider|",
 } end)

@@ -1039,8 +1039,8 @@ GOALTYPES['skillmax'] = {
 	parse = function(self,params)
 		local err = GOALTYPES['skill'].parse(self,params)
 		if err then return err end
-		local validlevels={[75]=1,[300]=1,		
-				   [150]=1,[225]=1,[375]=1,[450]=1,[525]=1,[600]=1,[700]=1,[800]=1} -- for bfa, only 75 and 300. others left for now for legacy code
+		local validlevels={[75]=1, [100]=1, [150]=1, [300]=1, -- subskills and primary skills
+				   [150]=1,[225]=1,[375]=1,[450]=1,[525]=1,[600]=1,[700]=1,[800]=1} -- left for now for legacy code
 		if not validlevels[self.skilllevel] then return "skillmax: you can't raise a skill max level to ".. self.skilllevel.."!" end
 	end,
 	iscomplete = function(self)

@@ -1360,308 +1360,250 @@ step
 confirm |next "Profession Guides\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide"
 |tip This will take you to the 500 - 600 portion of the Cooking Guides.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 1-300",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Enchanting skill from 1-300.",
+condition_end=function() return skill('Enchanting') >= 300 end,
+condition_suggested=function() return skill('Enchanting') > 0 and skill('Enchanting') < 300 end,
 },[[
 step
-#include "trainer_Enchanting"
-skillmax Enchanting,75
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Enchanting |skillmax Enchanting,300 |goto 52.90,74.45
+|tip You must be at least level 5.
 step
 talk Jessara Cordell##1318
-buy 1 Copper Rod##6217 |goto Stormwind City 52.8,74.3 |condition itemcount(6217) >= 1 or skill("Enchanting")>=75
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 1-25_ |cast Disenchant##13262
-collect 112 Strange Dust##10940 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=75
-collect 1 Lesser Magic Essence##10938 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=75
-|tip You can also buy these materials from the Auction House.
-When you reach _25 Enchanting_ you can also farm _Shadowfang Keep_ |goto Shadowfang Keep/1 69.5,61.0
-step
-create 25 Enchant Bracer - Minor Health##7418,Enchanting,75
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,150
-step
-create 15 Enchant Bracer - Minor Health##7418,Enchanting,90
-|tip You can keep enchanting the same item repeatedly.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 16-25_ |cast Disenchant##13262
-collect 9 Greater Magic Essence##10939 |condition skill("Enchanting")>=135 |goto Wailing Caverns 45.8,59.7
-|tip You can also buy these materials from the Auction House.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 51-55_ |cast Disenchant##13262
-collect 25 Lesser Eternal Essence##16202 |condition skill("Enchanting")>=135 |goto Blackfathom Deeps 44.29,10.66
-|tip You can also buy these materials from the Auction House.
+|tip Inside the building.
+buy 1 Copper Rod##6217 |goto 52.80,74.25 |only if itemcount(6218) == 0
 step
 talk Jessara Cordell##1318
-buy 9 Simple Wood##4470 |goto Stormwind City 52.8,74.3 |condition itemcount(4470) >= 9 or skill("Enchanting")>=135
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Minor Stamina##7457 |condition skill("Enchanting")>=135
-step
-create 10 Enchant Bracer - Minor Stamina##7457,Enchanting,101
-step
-#include "trainer_Enchanting"
-learn Greater Magic Wand##14807 |condition skill("Enchanting")>=135
-step
-create 9 Greater Magic Wand##14807,Enchanting,110
-step
-talk Dalria##3954
-buy 1 Formula: Enchant Bracer - Lesser Strength##11101 |goto Ashenvale 35.1,52.1 |condition _G.IsSpellKnown(13536) or itemcount(11101) >= 1 or skill("Enchanting")>=135
-step
-talk Dalria##3954
-buy 1 Formula: Enchant Cloak - Minor Agility##11039 |goto Ashenvale 35.1,52.1 |condition _G.IsSpellKnown(13419) or itemcount(11039) >= 1 or skill("Enchanting")>=135
-step
-use Formula: Enchant Cloak - Minor Agility##11039
-learn Enchant Cloak - Minor Agility##13419 |condition skill("Enchanting")>=135
-step
-create 25 Enchant Cloak - Minor Agility##13419,Enchanting,135
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,225
-|tip You must be at least level 20.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 26-45_ |cast Disenchant##13262
-collect 60 Illusion Dust##16204 |goto Razorfen Kraul 69.89,82.97 |condition skill("Enchanting")>=205
-collect 80 Lesser Eternal Essence##16202 |n
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Lesser Stamina##13501 |condition skill("Enchanting")>=205
-step
-create 20 Enchant Bracer - Lesser Stamina##13501,Enchanting,155
-step
-use Formula: Enchant Bracer - Lesser Strength##11101
-learn Enchant Bracer - Lesser Strength##13536 |condition skill("Enchanting")>=205
-step
-create 10 Enchant Bracer - Lesser Strength##13536,Enchanting,165
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Versatility##13642 |condition skill("Enchanting")>=205
-step
-create 20 Enchant Bracer - Versatility##13642,Enchanting,185
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Strength##13661 |condition skill("Enchanting")>=205
-step
-create 35 Enchant Bracer - Strength##13661,Enchanting,220
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,300
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 56-65_ |cast Disenchant##13262
-collect 305 Rich Illusion Dust##156930 |condition skill("Enchanting")>=300 |goto Razorfen Downs 23.79,18.80
-collect 100 Greater Eternal Essence##16203 |condition skill("Enchanting")>=300 |goto Razorfen Downs 23.79,18.80
-|tip Greater Eternal Essence come from Uncommon drops with an item level of 56 - 65.
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Greater Defense##13746 |condition skill("Enchanting")>=300
-step
-talk Keldric Boucher##1257
-buy 20 Crystal Vial##3371 |goto Stormwind City 62.8,75.1 |condition itemcount(3371) >= 20 or skill("Enchanting")>=300
-step
-create 5 Enchant Cloak - Greater Defense##13746,Enchanting,225
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Agility##13815 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Gloves - Agility##13815,Enchanting,230
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Stamina##13836 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Boots - Stamina##13836,Enchanting,235
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Chest: Superior Health##13858 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Chest: Superior Health##13858,Enchanting,240
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Lesser Accuracy##63746 |condition skill("Enchanting")>=300
-step
-create 10 Enchant Boots - Lesser Accuracy##63746,Enchanting,250
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Greater Strength##13939 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Bracer - Greater Strength##13939,Enchanting,255
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Greater Intellect##20008 |condition skill("Enchanting")>=300
-step
-create 20 Enchant Bracer - Greater Intellect##20008,Enchanting,265
-|tip You can keep enchanting the same item repeatedly.
-step
-talk Mythrin'dir##4229
-buy 1 Formula: Enchant Shield - Greater Stamina##16217 |condition _G.IsSpellKnown(20017) or itemcount(16217) >= 1 or skill("Enchanting")>=300
-step
-use Formula: Enchant Shield - Greater Stamina##16217
-learn Enchant Shield - Greater Stamina##20017 |goto Darnassus,58.1,34.2 |condition skill("Enchanting")>=300
-step
-create 40 Enchant Shield - Greater Stamina##20017,Enchanting,300
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,375
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 79-120_ |cast Disenchant##13262
-collect 195 Arcane Dust##22445 |condition skill("Enchanting")>=351 |goto The Shattered Halls/1 61.14,92.81
-collect 40 Lesser Planar Essence##22447 |condition skill("Enchanting")>=351 |goto The Shattered Halls/1 61.14,92.81
-collect 20 Greater Planar Essence##22446 |condition skill("Enchanting")>=351 |goto The Shattered Halls/1 61.14,92.81
-collect 10 Large Prismatic Shard##22449 |condition skill("Enchanting")>=351 |goto The Shattered Halls/1 61.14,92.81
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Lesser Assault##34002 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Bracer - Lesser Assault##34002,Enchanting,310
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Brawn##27899 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Bracer - Brawn##27899,Enchanting,320
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Chest - Major Versatility##33990 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Chest - Major Versatility##33990,Enchanting,330
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Shield - Resilience##44383 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Shield - Resilience##44383,Enchanting,340
-|tip You can keep enchanting the same item repeatedly.
-step
-talk Madame Ruby##19663
-buy 1 Formula: Superior Wizard Oil##22563 |goto Shattrath City 63.6,70.0 |condition _G.IsSpellKnown(28019) or itemcount(22563) >= 1 or skill("Enchanting")>=351
-step
-use Formula: Superior Wizard Oil##22563
-learn Superior Wizard Oil##28019 |condition skill("Enchanting")>=351
-step
-create 15 Superior Wizard Oil##28019,Enchanting,350
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,450
-|tip You must be at least level 65.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 130-200_ |cast Disenchant##13262
-collect 220 Infinite Dust##34054 |goto Halls of Lightning 7.38,53.81 |condition skill("Enchanting")>=426
-collect 11 Greater Cosmic Essence##34055 |goto Halls of Lightning 7.38,53.81 |condition skill("Enchanting")>=426
-|tip You can also buy these materials from the Auction House.
-step
-kill Ice Revenant##26283+
-collect 5 Crystallized Water##37705 |goto Dragonblight 67.2,52.2 |condition skill("Enchanting")>=426
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Speed##60609 |condition skill("Enchanting")>=426
-step
-create 25 Enchant Cloak - Speed##60609,Enchanting,375
-|tip You can keep enchanting the same item repeatedly.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Assault##60616 |condition skill("Enchanting")>=426
-step
-create 5 Enchant Bracer - Assault##60616,Enchanting,380
-step
-#include "trainer_Enchanting"
-learn Enchant Bracers - Exceptional Intellect##44555 |condition skill("Enchanting")>=426
-step
-create 3 Enchant Bracers - Exceptional Intellect##44555,Enchanting,386
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Icewalker##60623 |condition skill("Enchanting")>=426
-step
-create 5 Enchant Boots - Icewalker##60623,Enchanting,396
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Superior Agility##44500 |condition skill("Enchanting")>=426
-step
-create 3 Enchant Cloak - Superior Agility##44500,Enchanting,405
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Haste##44484 |condition skill("Enchanting")>=426
-step
-create 4 Enchant Gloves - Haste##44484,Enchanting,417
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Precision##44488 |condition skill("Enchanting")>=426
-step
-create 2 Enchant Gloves - Precision##44488,Enchanting,425
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,525
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 272-333_ |cast Disenchant##13262
-collect 342 Hypnotic Dust##52555 |goto The Vortex Pinnacle 54.12,16.81  |condition skill("Enchanting")>=525
-collect 5 Lesser Celestial Essence##52718 |n
-collect 41 Greater Celestial Essence##52719 |n
-|tip You can also buy these materials from the Auction House.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 272-333_ |cast Disenchant##13262
-collect 5 Lesser Celestial Essence##52718 |goto The Stonecore 54.27,93.90 |condition skill("Enchanting")>=525
-collect 41 Greater Celestial Essence##52719 |goto The Stonecore 54.27,93.90 |condition skill("Enchanting")>=525
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Earthen Vitality##74189 |condition skill("Enchanting")>=525
-step
-create 15 Enchant Boots - Earthen Vitality##74189,Enchanting,440
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Lesser Power##74192 |condition skill("Enchanting")>=525
-step
-create 10 Enchant Cloak - Lesser Power##74192,Enchanting,450
-step
-#include "trainer_Enchanting"
-learn Enchant Weapon - Mending##74195 |condition skill("Enchanting")>=525
-step
-create 2 Enchant Weapon - Mending##74195,Enchanting,460
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Haste##74198 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Gloves - Haste##74198,Enchanting,465
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Intellect##74202 |condition skill("Enchanting")>=525
-step
-create 10 Enchant Cloak - Intellect##74202,Enchanting,475
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Exceptional Strength##74212 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Gloves - Exceptional Strength##74212,Enchanting,480
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Major Agility##74213 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Boots - Major Agility##74213,Enchanting,485
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Greater Haste##74220 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Gloves - Greater Haste##74220,Enchanting,490
-step
-#include "trainer_Enchanting"
-learn Enchant Shield - Mastery##74226 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Shield - Mastery##74226,Enchanting,495
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Precision##74232 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Bracer - Precision##74232,Enchanting,500
-step
-confirm |next "Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide"
-|tip This will take you to the Enchanting 500 - 600 guides.
+|tip Inside the building.
+buy 1 Strange Dust##10940 |goto 52.80,74.25 |only if itemcount(6218) == 0
+step
+talk Jessara Cordell##1318
+|tip Inside the building.
+buy 1 Lesser Magic Essence##10938 |goto 52.80,74.25 |only if itemcount(6218) == 0
+step
+talk Jessara Cordell##1318
+|tip Inside the building.
+buy 310 Enchanting Vellum##38682 |goto 52.80,74.25
+step
+Open Your Enchanting Crafting Panel:
+_<Create 1 Runed Copper Rod>_
+collect 1 Runed Copper Rod##6218
+step
+collect 13 Strange Dust##10940
+|tip You can get these by disenchanting Classic level 1-44 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 13 Minor Health>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 15 Enchanting |skill Enchanting,15
+step
+collect 55 Strange Dust##10940
+|tip You can get these by disenchanting Classic level 1-44 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 55 Minor Health>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 70 Enchanting |skill Enchanting,70
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Minor Protection |learn Minor Protection##7771 |goto 52.90,74.45
+step
+collect 30 Strange Dust##10940
+|tip You can get these by disenchanting Classic level 1-44 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 10 Greater Magic Essence##10939
+|tip You can get these by disenchanting Classic level 1-44 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Minor Protection>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 80 Enchanting |skill Enchanting,80
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Minor Agilty |learn Minor Agilty##7779 |goto 52.90,74.45
+step
+collect 50 Strange Dust##10940
+|tip You can get these by disenchanting Classic level 1-39 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 25 Greater Magic Essence##10939
+|tip You can get these by disenchanting Classic level 1-39 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 25 Minor Agilty>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 105 Enchanting |skill Enchanting,105
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Minor Stamina |learn Minor Stamina##13378 |goto 52.90,74.45
+step
+collect 50 Light Illusion Dust##16204
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 25 Lesser Eternal Essence##16202
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 25 Minor Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 130 Enchanting |skill Enchanting,130
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Lesser Stamina |learn Lesser Stamina##13501 |goto 52.90,74.45
+step
+collect 40 Light Illusion Dust##16204
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 20 Lesser Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 150 Enchanting |skill Enchanting,150
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Lesser Intellect |learn Lesser Intellect##13622 |goto 52.90,74.45
+step
+collect 40 Lesser Eternal Essence##16202
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 20 Lesser Intellect>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 170 Enchanting |skill Enchanting,170
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Lesser Stamina |learn Lesser Stamina##13644 |goto 52.90,74.45
+step
+collect 40 Light Illusion Dust##16204
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Lesser Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 180 Enchanting |skill Enchanting,180
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Strength |learn Strength##13661 |goto 52.90,74.45
+step
+collect 25 Light Illusion Dust##16204
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 25 Strength>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 205 Enchanting |skill Enchanting,205
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Greater Defense |learn Greater Defense##13746 |goto 52.90,74.45
+step
+collect 30 Rich Illusion Dust##156930
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 15 Greater Defense>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 220 Enchanting |skill Enchanting,220
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Superior Health |learn Superior Health##13858 |goto 52.90,74.45
+step
+collect 90 Rich Illusion Dust##156930
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 45 Superior Health>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 255 Enchanting |skill Enchanting,255
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Greater Intellect |learn Greater Intellect##20008 |goto 52.90,74.45
+step
+collect 45 Greater Eternal Essence##16203
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 15 Greater Intellect>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 270 Enchanting |skill Enchanting,270
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Greater Agility |learn Greater Agility##20012 |goto 52.90,74.45
+step
+collect 30 Rich Illusion Dust##156930
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 30 Greater Eternal Essence##16203
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Greater Agility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 280 Enchanting |skill Enchanting,280
+step
+Enter the building |goto Stormwind City/0 53.49,73.84 < 5 |walk
+talk Lucan Cordell##1317
+|tip Inside the building.
+Train Vitality |learn Vitality##20016 |goto 52.90,74.45
+step
+collect 80 Rich Illusion Dust##156930
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+collect 60 Greater Eternal Essence##16203
+|tip You can get these by disenchanting Classic level 40-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Enchanting Crafting Panel:
+_<Create 20 Vitality>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 300 Enchanting |skill Enchanting,300
+step
+_Congratulations!_
+You Reached 300 Enchanting Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Engineering skill from 1-300.",

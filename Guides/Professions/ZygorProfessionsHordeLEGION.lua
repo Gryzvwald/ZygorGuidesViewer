@@ -346,7 +346,7 @@ collect 15 Ripe Pumpkin Juice##136674 |q 39430 |goto 43.16,56.27
 step
 Use Barm's Mortar and Pestle |use Barm's Mortar and Pestle##136675
 |tip Use it 15 times.
-collect Rivermane Remedy##136673 |q 39430/2 |goto 43.30,58.14
+collect 15 Rivermane Remedy##136673 |q 39430/2 |goto 43.30,58.14
 step
 talk Barm Stonebreaker##92242
 turnin Flasking for a Favor##39430 |goto 55.18,84.20
@@ -529,6 +529,7 @@ Defeat Grimoira |q 39341/2 |goto Vault of the Wardens/2 46.70,17.26
 accept Bendy Glass Tubes##39343 |goto Vault of the Wardens/2 46.70,17.26
 |tip You will automatically accept this quest after looting her.
 Submerge the Demonsbreath Crucible in Grimoira's Bile |q 39341/1 |goto Vault of the Wardens/2 46.70,17.26
+|tip Be sure you don't kill her too fast, her abilities need to hit you in order to Submerge the Demonsbreath Crucible.
 step
 kill Cordana Felsong##95888 |q 39341/3
 |tip Use the Vault of the Wardens dungeon guide to accomplish this.
@@ -541,6 +542,7 @@ accept Going Underground##39344 |goto Dalaran L/10 41.32,33.41
 step
 Follow the path |goto Dalaran L/11 59.79,39.17 < 15 |walk
 talk Ms. Xiulan##101492
+Tell her _"Mum."_
 Talk to Ms. Xiulan |q 39344/1 |goto Dalaran L/11 71.34,19.67
 step
 talk Ms. Xiulan##101492
@@ -834,12 +836,9 @@ kill Nythendra##103160
 |tip Enter the "Darkbough" raid.
 collect Nythendra's Heart##136820 |q 39351/1
 step
-talk Deucus Valdera##92458
-|tip Inside the building.
-turnin Rage Fire##39351 |goto 41.32,33.41
-step
 talk Alard Schmied##92183
 |tip Inside the building.
+turnin The Emerald Nightmare: Rage Fire##39351 |goto 44.17,28.68
 accept In With the New##42081 |goto Dalaran L/10 44.15,28.71
 step
 talk Deucus Valdera##92458

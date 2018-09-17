@@ -184,64 +184,8 @@ step
 create Rough Bronze Leggings##2668,Blacksmithing,125
 #include end_of_prof_trial_125
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Enchanting skill from 1-300.",
-},[[
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,75
-step
-talk Jessara Cordell##1318
-buy 1 Copper Rod##6217 |goto Stormwind City 52.8,74.3 |condition itemcount(6217) >= 1 or skill("Enchanting")>=75
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 1-25_ |cast Disenchant##13262
-collect 112 Strange Dust##10940 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=75
-collect 1 Lesser Magic Essence##10938 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=75
-|tip You can also buy these materials from the Auction House.
-When you reach _25 Enchanting_ you can also farm _Shadowfang Keep_ |goto Shadowfang Keep/1 69.5,61.0
-step
-create 25 Enchant Bracer - Minor Health##7418,Enchanting,75
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,150
-step
-create 15 Enchant Bracer - Minor Health##7418,Enchanting,90
-|tip You can keep enchanting the same item repeatedly.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 16-25_ |cast Disenchant##13262
-collect 9 Greater Magic Essence##10939 |condition skill("Enchanting")>=135 |goto Wailing Caverns 45.8,59.7
-|tip You can also buy these materials from the Auction House.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 51-55_ |cast Disenchant##13262
-collect 25 Lesser Eternal Essence##16202 |condition skill("Enchanting")>=135 |goto Blackfathom Deeps 44.29,10.66
-|tip You can also buy these materials from the Auction House.
-step
-talk Jessara Cordell##1318
-buy 9 Simple Wood##4470 |goto Stormwind City 52.8,74.3 |condition itemcount(4470) >= 9 or skill("Enchanting")>=135
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Minor Stamina##7457 |condition skill("Enchanting")>=135
-step
-create 10 Enchant Bracer - Minor Stamina##7457,Enchanting,101
-step
-#include "trainer_Enchanting"
-learn Greater Magic Wand##14807 |condition skill("Enchanting")>=135
-step
-create 9 Greater Magic Wand##14807,Enchanting,110
-step
-talk Dalria##3954
-buy 1 Formula: Enchant Bracer - Lesser Strength##11101 |goto Ashenvale 35.1,52.1 |condition _G.IsSpellKnown(13536) or itemcount(11101) >= 1 or skill("Enchanting")>=135
-step
-talk Dalria##3954
-buy 1 Formula: Enchant Cloak - Minor Agility##11039 |goto Ashenvale 35.1,52.1 |condition _G.IsSpellKnown(13419) or itemcount(11039) >= 1 or skill("Enchanting")>=135
-step
-use Formula: Enchant Cloak - Minor Agility##11039
-learn Enchant Cloak - Minor Agility##13419 |condition skill("Enchanting")>=135
-step
-create 25 Enchant Cloak - Minor Agility##13419,Enchanting,135
-#include end_of_prof_trial_125
-]])
+ZGV.BETASTART()
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Engineering skill from 1-300.",

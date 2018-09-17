@@ -3,405 +3,6 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("ProfessionsH") then return end
 ZygorGuidesViewer.GuideMenuTier = "CAT"
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Alchemy skill from 1-300.",
-},[[
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,75
-|tip You must be at least level 5.
-step
-#include "PB_SL_ER_Path"
-#include "follow_path_herbs"
-collect 54 Peacebloom##2447 |condition skill("Alchemy")>=55
-collect 54 Silverleaf##765 |condition skill("Alchemy")>=55
-|tip You can also buy these materials from the Auction House.
-step
-#include "vendor_Alchemy"
-buy 54 Crystal Vial##3371 |condition itemcount(3371) >= 54 or skill("Alchemy")>=55
-|tip You can buy more just in case.
-step
-create 55 Minor Healing Potion##2330,Alchemy,55
-Save at least _38_ for later
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,150 |goto 55.7,45.8
-|tip You must be at least level 10.
-step
-map Hillsbrad Foothills
-path 31.8,62.6		33.9,54.0		29.7,44.1
-path 35.5,37.8		34.5,28.2		39.5,21.0
-path 44.2,8.3		51.3,14.0		57.5,20.9
-path 56.1,34.3		49.9,46.2		41.2,46.6
-path 40.1,55.0		41.3,67.4		31.8,71.9
-#include "follow_path_herbs"
-collect 38 Mageroyal##785 |condition skill("Alchemy")>=125
-collect 114 Briarthorn##2450 |condition skill("Alchemy")>=125
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Alchemy"
-learn Lesser Healing Potion##2337 |condition skill("Alchemy")>=90
-step
-#include "vendor_Alchemy"
-buy 75 Crystal Vial##3371 |condition itemcount(3371) >= 75 or skill("Alchemy")>=90
-step
-create 38 Lesser Healing Potion##2337,Alchemy,90
-step
-#include "trainer_Alchemy"
-learn Elixir of Wisdom##3171 |condition skill("Alchemy")>=125
-step
-create 38 Elixir of Wisdom##3171,Alchemy,125
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,225
-|tip You must be at least level 20.
-step
-#include "MR_BW_BT_SK_Path"
-#include "follow_path_herbs"
-collect 33 Mageroyal##785 |condition skill("Alchemy")>=215
-collect 33 Stranglekelp##3820 |opt
-|tip You can also buy these materials from the Auction House.
-step
-#include "Kingsblood_Path"
-#include follow_path_herbs
-collect 20 Kingsblood##3356 |condition skill("Alchemy")>=215
-|tip You can also buy these materials from the Auction House.
-step
-#include "LR_SK_Path"
-#include follow_path_herbs
-collect 20 Liferoot##3357 |condition skill("Alchemy")>=215
-collect 33 Stranglekelp##3820 |condition skill("Alchemy")>=215
-|tip You can also buy these materials from the Auction House.
-step
-#include "GT_WS_Path"
-#include follow_path_herbs
-collect 40 Goldthorn##3821 |condition skill("Alchemy")>=215
-|tip As you move, cling to the edges of the mountain.
-collect 40 Wild Steelbloom##3355 |opt
-|tip You can also buy these materials from the Auction House.
-step
-#include "GM_KB_LR_WS_Path"
-#include follow_path_herbs
-collect 40 Wild Steelbloom##3355 |condition skill("Alchemy")>=215
-|tip You can also buy these materials from the Auction House.
-step
-map The Cape of Stranglethorn
-path follow loose;loop;ants straight;dist 45
-path 44.0,86.1		50.6,80.7		59.4,52.6
-path 51.7,8.0		40.7,17.1		39.6,24.9
-path 32.4,32.9		41.5,41.0		35.1,53.2
-path 36.8,56.2
-#include follow_path_herbs
-collect 33 Stranglekelp##3820 |condition skill("Alchemy")>=215
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Alchemy"
-learn Lesser Mana Potion##3173 |condition skill("Alchemy")>=155
-step
-#include "vendor_Alchemy"
-buy 93 Crystal Vial##3371 |condition itemcount(3371) >= 93 or skill("Alchemy")>=155
-step
-create 33 Lesser Mana Potion##3173,Alchemy,155
-step
-#include "trainer_Alchemy"
-learn Greater Healing Potion##7181 |condition skill("Alchemy")>=175
-step
-create 20 Greater Healing Potion##7181,Alchemy,175
-step
-#include "trainer_Alchemy"
-learn Elixir of Fortitude##3450 |condition skill("Alchemy")>=195
-step
-create 20 Elixir of Fortitude##3450,Alchemy,195
-step
-#include "trainer_Alchemy"
-learn Elixir of Greater Defense##11450 |condition skill("Alchemy")>=215
-step
-create 20 Elixir of Greater Defense##11450,Alchemy,215
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,300
-|tip You must be at least level 35.
-step
-#include "FL_GT_KW_BW_Path"
-#include follow_path_herbs
-collect 40 Khadgar's Whisker##3358 |condition skill("Alchemy")>=285
-collect 30 Blindweed##8839 |condition skill("Alchemy")>=285
-|tip You can also buy these materials from the Auction House.
-step
-#include "Sungrass_Path"
-#include follow_path_herbs
-collect 70 Sungrass##8838 |condition skill("Alchemy")>=285
-|tip You can also buy these materials from the Auction House.
-step
-#include "GB_Path"
-#include follow_path_herbs
-collect 40 Gromsblood##8846 |condition skill("Alchemy")>=285
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Alchemy"
-learn Superior Healing Potion##11457 |condition skill("Alchemy")>=250
-step
-#include "vendor_Alchemy"
-buy 75 Crystal Vial##3371 |condition itemcount(3371) >= 75 or skill("Alchemy")>=250
-step
-create 35 Superior Healing Potion##11457,Alchemy,250
-step
-#include "trainer_Alchemy"
-learn Elixir of Detect Demon##11478 |condition skill("Alchemy")>=270
-step
-create 20 Elixir of Detect Demon##11478,Alchemy,270
-step
-#include "trainer_Alchemy"
-learn Superior Mana Potion##17553 |condition skill("Alchemy")>=285
-step
-create 10 Superior Mana Potion##17553,Alchemy,285
-step
-#include "trainer_Alchemy"
-Learn the Master Alchemist skill |skillmax Alchemy,375
-|tip You must be at least level 50.
-step
-#include "GS_SM_Path"
-#include follow_path_herbs
-collect 50 Golden Sansam##13464 |condition skill("Alchemy")>=355
-|tip You can also buy these materials from the Auction House.
-step
-#include "FW_DG_Path"
-#include follow_path_herbs
-collect 17 Mountain Silversage##13465 |condition skill("Alchemy")>=355
-|tip These can be found tucked away in the sides of mountains, so keep an eye out for them.
-collect 30 Dreaming Glory##22786 |opt
-collect 55 Felweed##22785 |opt
-|tip You can also buy these materials from the Auction House.
-step
-#include "Terocone_Path"
-#include follow_path_herbs
-collect 15 Terocone##22789 |condition skill("Alchemy")>=355
-collect 55 Felweed##22785 |condition skill("Alchemy")>=355
-collect 30 Dreaming Glory##22786 |opt
-|tip You can also buy these materials from the Auction House.
-step
-#include "NB_DG_Path"
-#include follow_path_herbs
-collect 20 Netherbloom##22791 |condition skill("Alchemy")>=355
-collect 30 Dreaming Glory##22786 |condition skill("Alchemy")>=355
-|tip You can also buy these materials from the Auction House.
-step
-talk Daga Ramba##19837
-buy 1 Recipe: Super Mana Potion##22907 |condition _G.IsSpellKnown(28555) or itemcount(22907) >= 1 or skill("Alchemy")>=355 |goto Blade's Edge Mountains 51.0,57.8
-|tip This recipe is a limited quality item. If the vendor is not carrying it, you may need to get it from the Auction House.
-step
-#include "trainer_Alchemy"
-learn Major Healing Potion##17556 |condition skill("Alchemy")>=30
-step
-#include "vendor_Alchemy"
-buy 86 Crystal Vial##3371 |condition itemcount(3371) >= 86 or skill("Alchemy")>=300
-step
-create 31 Major Healing Potion##17556,Alchemy,300
-step
-#include "trainer_Alchemy"
-learn Volatile Healing Potion##33732 |condition skill("Alchemy")>=315
-step
-create 15 Volatile Healing Potion##33732,Alchemy,315
-step
-#include "trainer_Alchemy"
-learn Elixir of Mastery##33741 |condition skill("Alchemy")>=330
-step
-create 15 Elixir of Mastery##33741,Alchemy,330
-step
-#include "trainer_Alchemy"
-learn Super Healing Potion##28551 |condition skill("Alchemy")>=340
-step
-create 10 Super Healing Potion##28551,Alchemy,340
-step
-use Recipe: Super Mana Potion##22907
-learn Super Mana Potion##28555 |condition skill("Alchemy")>=355
-step
-create 15 Super Mana Potion##28555,Alchemy,355
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,450
-|tip You must be at least level 65.
-step
-#include "GC_DN_TL_Path"
-#include follow_path_herbs
-collect 96 Goldclover##36901 |condition skill("Alchemy")>=425
-collect 40 Deadnettle##37921 |condition skill("Alchemy")>=425
-collect 20 Tiger Lily##36904 |opt
-|tip You can also buy these materials from the Auction House.
-Save any Frost Lotus you might find
-step
-#include "T_Rose_Path"
-#include follow_path_herbs
-collect 10 Talandra's Rose##36907 |condition skill("Alchemy")>=425
-|tip You can also buy these materials from the Auction House.
-Save any Frost Lotus you might find
-step
-#include "Tiger_Lily_Path"
-#include follow_path_herbs
-collect 20 Tiger Lily##36904 |condition skill("Alchemy")>=425
-|tip You can also buy these materials from the Auction House.
-Save any Frost Lotus you might find
-step
-#include "IT_LB_Path"
-#include follow_path_herbs
-collect 40 Icethorn##36906 |condition skill("Alchemy")>=425
-collect 102 Lichbloom##36905 |condition skill("Alchemy")>=425
-|tip You can also buy these materials from the Auction House.
-Save any Frost Lotus you might find
-step
-#include "trainer_Alchemy"
-learn Wrath Elixir##53841 |condition skill("Alchemy")>=365
-step
-#include "vendor_Alchemy"
-buy 76 Crystal Vial##3371 |condition itemcount(3371) >= 76 or skill("Alchemy")>=365
-step
-create 10 Wrath Elixir##53841,Alchemy,365
-step
-#include "trainer_Alchemy"
-learn Spellpower Elixir##53842 |condition skill("Alchemy")>=375
-step
-create 10 Spellpower Elixir##53842,Alchemy,375
-step
-#include "trainer_Alchemy"
-learn Lesser Flask of Toughness##53899 |condition skill("Alchemy")>=380
-step
-create 5 Lesser Flask of Toughness##53899,Alchemy,380
-step
-#include "trainer_Alchemy"
-learn Potion of Nightmares##53900 |condition skill("Alchemy")>=385
-step
-create 5 Potion of Nightmares##53900,Alchemy,385
-step
-#include "trainer_Alchemy"
-learn Elixir of Mighty Strength##54218 |condition skill("Alchemy")>=390
-step
-create 5 Elixir of Mighty Strength##54218,Alchemy,390
-step
-#include "trainer_Alchemy"
-learn Elixir of Mighty Fortitude##53898 |condition skill("Alchemy")>=395
-step
-create 5 Elixir of Mighty Fortitude##53898,Alchemy,395
-step
-#include "trainer_Alchemy"
-learn Indestructible Potion##53905 |condition skill("Alchemy")>=415
-step
-create 20 Indestructible Potion##53905,Alchemy,415
-step
-#include "trainer_Alchemy"
-learn Runic Mana Potion##53837 |condition skill("Alchemy")>=425
-step
-create 16 Runic Mana Potion##53837,Alchemy,425
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,525
-|tip You must be at least level 75.
-step
-#include "GC_DN_TL_Path"
-#include follow_path_herbs
-collect 30 Goldclover##36901 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-Save any Frost Lotus you might find
-step
-#include "IT_LB_Path"
-#include follow_path_herbs
-collect 70 Lichbloom##36905 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-Save any Frost Lotus you might find
-step
-map Wintergrasp
-path	45.3,69.0	30.4,67.2
-collect 10 Frost Lotus##36908 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-step
-#include "SV_CB_Path"
-#include follow_path_herbs
-collect 50 Cinderbloom##52983 |condition skill("Alchemy")>=500
-collect 20 Stormvine##52984 |opt
-collect 16 Azshara's Veil##52985 |opt
-|tip You can also buy these materials from the Auction House.
-step
-#include "Stormvine_Path"
-#include follow_path_herbs
-collect 16 Azshara's Veil##52985 |condition skill("Alchemy")>=500
-collect 20 Stormvine##52984 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-step
-#include "HB_Path"
-#include "follow_path_herbs"
-collect 44 Heartblossom##52986 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-step
-#include "Whiptail_Path"
-#include "follow_path_herbs"
-collect 5 Whiptail##52988 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-step
-#include "TJ_Path"
-#include "follow_path_herbs"
-collect 10 Twilight Jasmine##52987 |condition skill("Alchemy")>=500
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Alchemy"
-learn Draught of War##93935 |condition skill("Alchemy")>=440
-step
-#include "vendor_Alchemy"
-buy 78 Crystal Vial##3371 |condition itemcount(3371) >= 78 or skill("Alchemy")>=440
-step
-create 15 Draught of War##93935,Alchemy,440
-step
-#include "trainer_Alchemy"
-learn Flask of Endless Rage##53903 |condition skill("Alchemy")>=450
-step
-create 10 Flask of Endless Rage##53903,Alchemy,450
-step
-#include "trainer_Alchemy"
-learn Ghost Elixir##80478 |condition skill("Alchemy")>=455
-step
-create 5 Ghost Elixir##80477,Alchemy,455
-step
-#include "trainer_Alchemy"
-learn Deathblood Venom##80479 |condition skill("Alchemy")>=460
-step
-create 5 Deathblood Venom##80479,Alchemy,460
-step
-#include "trainer_Alchemy"
-learn Volcanic Potion##80481 |condition skill("Alchemy")>=465
-step
-create 5 Volcanic Potion##80481,Alchemy,465
-step
-#include "trainer_Alchemy"
-learn Elixir of the Cobra##80484 |condition skill("Alchemy")>=475
-step
-create 13 Elixir of the Cobra##80484,Alchemy,475
-step
-#include "trainer_Alchemy"
-learn Elixir of Deep Earth##80488 |condition skill("Alchemy")>=480
-step
-create 5 Elixir of Deep Earth##80488,Alchemy,480
-step
-#include "trainer_Alchemy"
-learn Elixir of Impossible Accuracy##80491 |condition skill("Alchemy")>=485
-step
-create 5 Elixir of Impossible Accuracy##80491,Alchemy,485
-step
-#include "trainer_Alchemy"
-learn Potion of the Tol'vir##80495 |condition skill("Alchemy")>=490
-step
-create 5 Potion of the Tol'vir##80495,Alchemy,490
-step
-#include "trainer_Alchemy"
-learn Elixir of Mighty Speed##80493 |condition skill("Alchemy")>=498
-step
-create 5 Elixir of Mighty Speed##80493,Alchemy,495
-step
-#include "trainer_Alchemy"
-learn Mythical Healing Potion##80498 |condition skill("Alchemy")>=500
-step
-create 5 Mythical Healing Potion##80498,Alchemy,500
-step
-confirm |next "Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide" |tip This will take you to the Alchemy 500 - 600 guides.
-]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Archaeology skill from 1-600.",
@@ -4769,3 +4370,1536 @@ step
 Click here to proceed |next "Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide"
 |tip This will take you to the Tailoring 500 - 600 guides.
 ]])
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 1-300",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Classic Alchemy skill from 1-300.",
+condition_end=function() return skill('Alchemy') >= 300 end,
+condition_suggested=function() return skill('Alchemy') > 0 and skill('Alchemy') < 300 end,
+},[[
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+Train Alchemy |skillmax Alchemy,300 |goto 55.68,45.74
+|tip You must be at least level 5.
+step
+talk Kor'geld##3348
+buy 340 Crystal Vial##3371 |goto 55.24,45.86
+|only if skill("Alchemy") < 300
+step
+map Durotar
+path follow loose;loop;ants straight;dist 60
+path 46.2,17.1		38.8,16.2		38.7,22.1
+path 37.9,30.4		48.5,32.8		51.4,36.5
+path 51.7,52.0		53.6,62.4		55.6,69.7
+path 60.9,69.1		60.7,58.0		57.6,46.9
+path 55.0,32.4		57.8,26.1		53.4,12.5
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 59 Peacebloom##2447
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 60
+step
+map Durotar
+path follow loose;loop;ants straight;dist 60
+path 46.2,17.1		38.8,16.2		38.7,22.1
+path 37.9,30.4		48.5,32.8		51.4,36.5
+path 51.7,52.0		53.6,62.4		55.6,69.7
+path 60.9,69.1		60.7,58.0		57.6,46.9
+path 55.0,32.4		57.8,26.1		53.4,12.5
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 59 Silverleaf##765
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 60
+step
+Open Your Alchemy Crafting Panel:
+_<Create 59 Minor Healing Potions>_
+Reach Level 60 Alchemy |skill Alchemy,60
+step
+map Hillsbrad Foothills
+path follow loose;loop;ants straight;dist 60
+path	31.8,62.6	33.9,54.0	33.9,54.0
+path	29.7,44.1	34.5,28.2	39.5,21.0
+path	39.5,21.0	44.2,8.3 	51.3,14.0
+path	57.5,20.9	56.1,34.3	49.9,46.2
+path	43.1,50.1	38.2,49.1	40.1,55.0
+path	41.3,67.4	41.3,67.4	36.3,69.9
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 110 Briarthorn##2450
+|tip Keep any Mageroyal you find.
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 140
+step
+map Hillsbrad Foothills
+path follow loose;loop;ants straight;dist 60
+path	31.8,62.6	33.9,54.0	33.9,54.0
+path	29.7,44.1	34.5,28.2	39.5,21.0
+path	39.5,21.0	44.2,8.3 	51.3,14.0
+path	57.5,20.9	56.1,34.3	49.9,46.2
+path	43.1,50.1	38.2,49.1	40.1,55.0
+path	41.3,67.4	41.3,67.4	36.3,69.9
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 40 Mageroyal##785
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 110
+step
+map Hillsbrad Foothills
+path follow loose;loop;ants straight;dist 60
+path	31.8,62.6	33.9,54.0	33.9,54.0
+path	29.7,44.1	34.5,28.2	39.5,21.0
+path	39.5,21.0	44.2,8.3 	51.3,14.0
+path	57.5,20.9	56.1,34.3	49.9,46.2
+path	43.1,50.1	38.2,49.1	40.1,55.0
+path	41.3,67.4	41.3,67.4	36.3,69.9
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 40 Bruiseweed##2453
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 140
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Lesser Healing Potion##2337 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 45 Lesser Healing Potions>_
+|tip You may need to craft more than 45 to reach 105.
+Reach Level 105 Alchemy |skill Alchemy,105
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Wisdom##3171 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 45 Elixir of Wisdom>_
+Reach Level 110 Alchemy |skill Alchemy,110
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Healing Potion##3447 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 30 Healing Potions>_
+|tip You may need to craft more than 30 to reach 140.
+Reach Level 140 Alchemy |skill Alchemy,140
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Lesser Mana Potion##3173 |goto 55.68,45.74
+step
+map The Cape of Stranglethorn
+path follow loose;loop;ants straight;dist 45
+path	44.0,86.1	50.6,80.7	59.4,52.6
+path	51.7,8.0	40.7,17.1	39.6,24.9
+path	32.4,32.9	41.5,41.0	35.1,53.2
+path	36.8,56.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 55 Stranglekelp##3820
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 205
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Lesser Mana Potions>_
+|tip You may need to craft more than 15 to reach 155.
+Reach Level 155 Alchemy |skill Alchemy,155
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Greater Healing Potion##7181 |goto 55.68,45.74
+step
+map Western Plaguelands
+path follow loose;loop;ants straight;dist 60
+path	32.29,67.51	34.15,69.05	37.72,68.67
+path	39.01,73.99	43.24,75.29	47.27,73.61
+path	50.96,70.89	56.20,69.13	62.13,63.79
+path	67.86,62.48	62.26,82.75	57.56,80.20
+path	54.19,74.69	50.00,72.33	46.39,78.06
+path	40.17,77.54	35.38,73.50	30.74,70.77
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 liferoot##3357
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 175
+step
+map Western Plaguelands
+path follow loose;loop;ants straight;dist 60
+path	31.8,59.3	36.9,57.1	43.5,53.2
+path	45.9,44.7	45.2,35.2	49.5,35.1
+path	51.0,47.4	55.2,51.3	61.8,52.0
+path	67.2,44.5	63.6,56.0	56.6,60.1
+path	52.6,67.5	46.4,59.2	37.9,62.2
+path	33.7,62.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 30 Kingsblood##3356
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 185
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Greater Healing Potions>_
+Reach Level 175 Alchemy |skill Alchemy,175
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Mana Potion##3452 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Mana Potions>_
+Reach Level 185 Alchemy |skill Alchemy,185
+step
+map Feralas
+path follow loose;loop;ants straight;dist 60
+path	73.0,42.0	72.9,37.3	70.5,37.1	69.2,42.3	67.3,45.9
+path	63.9,48.1	59.4,46.6	59.8,54.2	56.0,60.1	55.2,66.6
+path	58.6,64.7	61.3,61.9	62.8,58.0	68.8,50.3	69.0,60.1
+path	71.4,60.0	72.1,55.5	75.9,56.6	73.3,50.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 30 Goldthorn##3821
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 215
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Agility##11449 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Elixir of Agility>_
+Reach Level 205 Alchemy |skill Alchemy,205
+step
+map Northern Stranglethorn
+path follow loose;loop;ants straight;dist 45
+path	64.2,25.4	63.9,39.4	56.2,43.2
+path	42.5,43.9	35.9,32.9	31.5,37.2
+path	23.1,32.3	17.4,24.1
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 10 Wild Steelbloom##3355
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 215
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Greater Defense##11450 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of Greater Defense>_
+Reach Level 215 Alchemy |skill Alchemy,215
+step
+map Searing Gorge
+path follow loose;loop;ants straight;dist 60
+path	66.9,43.2	58.9,53.0	55.6,68.1
+path	49.8,70.1	45.9,61.5	38.1,74.9
+path	31.0,67.8	32.1,56.9	29.4,44.8
+path	37.5,47.8	40.5,39.1	47.2,42.1
+path	53.5,35.4	77.0,19.0
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 25 Sungrass##8838
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 240
+step
+map Western Plaguelands
+path follow loose;loop;ants straight;dist 60
+path	31.8,59.3	36.9,57.1	43.5,53.2
+path	45.9,44.7	45.2,35.2	49.5,35.1
+path	51.0,47.4	55.2,51.3	61.8,52.0
+path	67.2,44.5	63.6,56.0	56.6,60.1
+path	52.6,67.5	46.4,59.2	37.9,62.2
+path	33.7,62.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 25 Kingsblood##3356
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 240
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Superior Healing Potion##11457 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 25 Superior Healing Potion>_
+Reach Level 240 Alchemy |skill Alchemy,240
+step
+map Western Plaguelands
+path follow loose;loop;ants straight;dist 60
+path	31.8,59.3	36.9,57.1	43.5,53.2
+path	45.9,44.7	45.2,35.2	49.5,35.1
+path	51.0,47.4	55.2,51.3	61.8,52.0
+path	67.2,44.5	63.6,56.0	56.6,60.1
+path	52.6,67.5	46.4,59.2	37.9,62.2
+path	33.7,62.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 10 Khadgar's Whisker##3358
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 250
+step
+map Western Plaguelands
+path follow loose;loop;ants straight;dist 60
+path	32.29,67.51	34.15,69.05	37.72,68.67
+path	39.01,73.99	43.24,75.29	47.27,73.61
+path	50.96,70.89	56.20,69.13	62.13,63.79
+path	67.86,62.48	62.26,82.75	57.56,80.20
+path	54.19,74.69	50.00,72.33	46.39,78.06
+path	40.17,77.54	35.38,73.50	30.74,70.77
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 10 Blindweed##195114
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 250
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Greater Intellect##11465 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of Greater Intellect>_
+Reach Level 250 Alchemy |skill Alchemy,250
+step
+map Felwood
+path follow loose;loop;ants straight;dist 60
+path	50.5,80.9	47.6,75.8	45.4,71.4
+path	44.9,66.4	42.9,58.3	43.6,52.1
+path	45.2,42.1	49.6,33.6	55.3,24.8
+path	57.5,15.5	54.3,14.1	42.7,21.7
+path	40.0,37.5	40.0,46.5	39.6,56.9
+path	39.1,66.2	38.9,71.3	42.7,84.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 40 Gromsblood##8846
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 250
+step
+map Felwood
+path follow loose;loop;ants straight;dist 60
+path	50.5,80.9	47.6,75.8	45.4,71.4
+path	44.9,66.4	42.9,58.3	43.6,52.1
+path	45.2,42.1	49.6,33.6	55.3,24.8
+path	57.5,15.5	54.3,14.1	42.7,21.7
+path	40.0,37.5	40.0,46.5	39.6,56.9
+path	39.1,66.2	38.9,71.3	42.7,84.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 40 Sorrowmoss##13466
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 285
+step
+map Felwood
+path follow loose;loop;ants straight;dist 60
+path	50.5,80.9	47.6,75.8	45.4,71.4
+path	44.9,66.4	42.9,58.3	43.6,52.1
+path	45.2,42.1	49.6,33.6	55.3,24.8
+path	57.5,15.5	54.3,14.1	42.7,21.7
+path	40.0,37.5	40.0,46.5	39.6,56.9
+path	39.1,66.2	38.9,71.3	42.7,84.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 15 Dreamfoil##13463
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 285
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Detect Demon##11478 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Elixir of Detect Demon>_
+Reach Level 270 Alchemy |skill Alchemy,270
+step
+Enter the building |goto Stormwind City/0 55.12,84.85 < 5 |walk
+talk Lilyssia Nightbreeze##5499
+|tip Inside the building.
+learn Elixir of the Sages##17555 |goto 55.7,86.1
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Elixir of the Sages>_
+Reach Level 285 Alchemy |skill Alchemy,285
+step
+map Swamp of Sorrows
+path follow loose;loop;ants straight;dist 60
+path	17.6,52.9	21.6,54.6	30.9,60.7
+path	39.4,56.9	51.7,59.6	64.5,67.3
+path	73.3,81.9	82.0,76.0	85.3,62.6
+path	87.6,39.9	84.9,31.2	80.1,20.6
+path	66.5,22.7	56.8,31.9	47.0,36.0
+path	36.1,39.8	26.9,42.9
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 28 Golden Sansam##13464
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 295
+step
+map Winterspring/0
+path follow loose;loop;ants straight;dist 60
+path	24.8,45.7	31.2,47.2	39.0,46.5	43.8,47.1	48.8,44.3
+path	47.5,33.0	45.9,25.7	44.8,19.5	44.9,13.5	49.6,14.2
+path	53.9,19.1	57.6,17.8	60.5,22.9	60.2,30.0	59.7,36.9
+path	59.6,42.0	59.1,44.7	64.6,49.8	66.9,52.7	67.8,59.8
+path	68.3,64.7	67.7,69.7	66.0,73.1	66.7,84.0	62.2,80.2
+path	56.0,78.8	55.2,73.2	53.5,68.2	52.9,64.4	48.3,61.2
+path	42.9,56.8	38.4,57.8	32.0,59.5	27.8,58.92	26.2,58.1
+path	24.6,62.8	22.0,62.8	22.3,57.8
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 14 Mountain Silversage##13465
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 295
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Major Healing Potion##17556 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Major Healing Potion>_
+Reach Level 295 Alchemy |skill Alchemy,295
+step
+map Winterspring/0
+path follow loose;loop;ants straight;dist 60
+path	61.06,45.79	63.52,43.80	62.98,41.66	62.86,39.25	61.10,35.87
+path	60.97,33.00	59.12,30.27	57.48,27.79	56.62,25.30	55.85,22.41
+path	54.51,21.88	53.05,23.59	52.52,25.81	53.44,28.92	53.52,30.22
+path	52.31,32.94	51.67,34.51	51.54,36.97	51.48,40.53	51.49,44.98
+path	52.35,47.06	54.32,47.13	56.60,45.67	58.63,47.59
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 10 Icecap##13467
+|tip You can also purchase them from the Auction House.
+|only if skill("Alchemy") < 300
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Purification Potion##17572 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Purification Potion>_
+Reach Level 300 Alchemy |skill Alchemy,300
+step
+_Congratulations!_
+You Reached Level 300 Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Outland Alchemy 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Outland Alchemy skill from 1-75.",
+condition_end=function() return skill('Outland Alchemy') >= 75 end,
+condition_suggested=function() return skill('Outland Alchemy') > 0 and skill('Outland Alchemy') < 75 end,
+},[[
+step
+talk Lorokeem##19052
+|tip Inside the building.
+Train Outland Alchemy |skillmax Outland Alchemy,75 |goto Shattrath City/0 45.62,21.46
+step
+talk Skreah##19074
+buy 100 Crystal Vial##3371 |goto 45.80,20.02
+step
+map Swamp of Sorrows
+path follow loose;loop;ants straight;dist 60
+path	17.6,52.9	21.6,54.6	30.9,60.7
+path	39.4,56.9	51.7,59.6	64.5,67.3
+path	73.3,81.9	82.0,76.0	85.3,62.6
+path	87.6,39.9	84.9,31.2	80.1,20.6
+path	66.5,22.7	56.8,31.9	47.0,36.0
+path	36.1,39.8	26.9,42.9
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 24 Golden Sansam##13464
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Alchemy") < 25
+step
+map Terokkar Forest
+path follow loose;loop;ants straight;dist 60
+path	34.4,8.0	37.5,16.1	41.6,19.9
+path	44.5,11.5	48.0,18.4	51.0,21.0
+path	47.5,22.9	48.4,26.9	60.2,22.5
+path	65.3,32.3	68.3,41.8	73.1,45.3
+path	61.5,48.6	54.0,37.1	48.0,33.5
+path	39.0,34.8	39.2,44.4	47.3,50.0
+path	47.0,79.8	33.5,76.9	19.6,77.8
+path	20.3,71.0	21.5,60.7	31.4,39.9
+path	37.4,30.1
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 44 Felweed##22785
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Alchemy") < 40
+step
+Open Your Alchemy Crafting Panel:
+_<Create 14 Volatile Healing Potion>_
+Reach Level 15 Outland Alchemy |skill Outland Alchemy,15
+step
+map Terokkar Forest
+path follow loose;loop;ants straight;dist 60
+path	34.4,8.0	37.5,16.1	41.6,19.9
+path	44.5,11.5	48.0,18.4	51.0,21.0
+path	47.5,22.9	48.4,26.9	60.2,22.5
+path	65.3,32.3	68.3,41.8	73.1,45.3
+path	61.5,48.6	54.0,37.1	48.0,33.5
+path	39.0,34.8	39.2,44.4	47.3,50.0
+path	47.0,79.8	33.5,76.9	19.6,77.8
+path	20.3,71.0	21.5,60.7	31.4,39.9
+path	37.4,30.1
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 80 Dreaming Glory##22786
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Alchemy") < 75
+step
+talk Lorokeem##19052
+|tip Inside the building.
+learn Elixir of Healing Power##28545 |goto Shattrath City/0 45.62,21.46
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of Healing Power>_
+Reach Level 25 Outland Alchemy |skill Outland Alchemy,25
+step
+map Terokkar Forest
+path follow loose;loop;ants straight;dist 60
+path	34.4,8.0	37.5,16.1	41.6,19.9
+path	44.5,11.5	48.0,18.4	51.0,21.0
+path	47.5,22.9	48.4,26.9	60.2,22.5
+path	65.3,32.3	68.3,41.8	73.1,45.3
+path	61.5,48.6	54.0,37.1	48.0,33.5
+path	39.0,34.8	39.2,44.4	47.3,50.0
+path	47.0,79.8	33.5,76.9	19.6,77.8
+path	20.3,71.0	21.5,60.7	31.4,39.9
+path	37.4,30.1
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+#include "follow_path_herbs"
+|tip You can also purchase them from the Auction House.
+collect 10 Terocone##22789
+|only if skill("Outland Alchemy") < 35
+step
+talk Lorokeem##19052
+|tip Inside the building.
+learn Elixir of Draenic Wisdom##39638 |goto Shattrath City/0 45.62,21.46
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of Draenic Wisdom>_
+Reach Level 35 Outland Alchemy |skill Outland Alchemy,35
+step
+map Netherstorm
+path follow loose;loop;ants straight;dist 60
+path 31.5,51.4		25.6,63.5		19.5,67.7
+path 20.3,77.1		40.2,77.2		46.2,82.6
+path 48.0,86.9		58.9,88.8		61.4,79.4
+path 51.6,75.7		46.0,72.1		34.5,55.8
+path 40.1,52.9		50.2,69.0		67.1,60.7
+path 50.8,54.8		46.5,47.1		55.0,39.9
+path 58.5,47.2		62.7,50.3		73.4,40.5
+path 73.2,35.2		62.1,30.5		55.6,31.6
+path 49.8,35.9		48.8,25.5		57.1,24.3
+path 55.5,17.3		49.7,17.4		48.9,12.5
+path 44.9,19.8		42.5,16.2		39.5,15.7
+path 35.7,19.8		32.1,29.2		38.5,42.4
+path 31.1,38.1		23.5,35.4		22.9,44.1
+path 30.2,43.3
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 10 Netherbloom##22791
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Alchemy") < 40
+step
+talk Lorokeem##19052
+|tip Inside the building.
+learn Super Healing Potion##28551 |goto Shattrath City/0 45.62,21.46
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Super Healing Potion>_
+Reach Level 40 Outland Alchemy |skill Outland Alchemy,40
+step
+talk Lorokeem##19052
+|tip Inside the building.
+learn Super Mana Potion##28555 |goto Shattrath City/0 45.62,21.46
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Super Mana Potion>_
+Reach Level 55 Outland Alchemy |skill Outland Alchemy,55
+step
+talk Daga Ramba##19837
+|tip Inside the building.
+buy Recipe: Major Dreamless Sleep Potion##22911 |n
+|tip This is a limited supply recipe.
+|tip You may need to wait for it to show up again.
+use the Recipe: Major Dreamless Sleep Potion##22911
+learn Major Dreamless Sleep Potion##28562 |goto Blade's Edge Mountains/0 51.07,57.81
+step
+map Shadowmoon Valley
+path follow loose;loop;ants straight;dist 60
+path	22.0,34.7	26.0,35.5	29.5,38.0	28.6,45.5	28.1,51.6
+path	31.6,53.8	37.8,44.7	41.8,49.5	45.9,50.0	47.4,54.5
+path	47.8,62.2	50.3,62.7	51.5,66.4	54.3,69.1	61.2,68.1
+path	61.8,58.5	65.2,61.5	68.5,58.0	67.8,53.5	67.9,47.2
+path	72.2,45.5	71.5,40.6	66.3,39.3	67.7,35.5	66.3,29.6
+path	66.0,21.8	61.7,22.6	58.0,23.6	55.5,29.5	52.5,21.6
+path	52.3,18.5	47.5,22.3	43.7,32.4	39.7,34.6	33.7,34.1
+path	27.3,31.8
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 40 Nightmare Vine##22792
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Alchemy") < 60
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Super Mana Potion>_
+Reach Level 75 Outland Alchemy |skill Outland Alchemy,75
+step
+_Congratulations!_
+You Reached Level 75 Outland Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Northrend Alchemy 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Northrend Alchemy skill from 1-75.",
+condition_end=function() return skill('Northrend Alchemy') >= 75 end,
+condition_suggested=function() return skill('Northrend Alchemy') > 0 and skill('Northrend Alchemy') < 75 end,
+},[[
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+Train Northrend Alchemy |skillmax Northrend Alchemy,75 |goto 42.65,32.07
+step
+talk Patricia Egan##28725
+buy 100 Crystal Vial##3371 |goto 41.52,33.31
+step
+map Zul'Drak
+path follow loose;loop;ants straight;dist 60
+path 21.3,84.1		31.2,68.2		39.3,63.7
+path 29.7,52.6		37.1,40.8		43.6,46.7
+path 43.0,62.9		50.7,62.4		58.2,73.5
+path 52.2,83.3		39.5,87.0
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Talandra's Rose##36907
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 10
+step
+Open Your Alchemy Crafting Panel:
+_<Create 4 Icy Mana Potion>_
+Reach Level 5 Northrend Alchemy |skill Northrend Alchemy,5
+step
+map Sholazar Basin
+path follow loose;loop;ants straight;dist 60
+path 32.0,58.2		36.1,65.3		43.9,57.7
+path 44.5,63.9		39.5,66.3		40.4,71.7
+path 32.8,82.3		36.1,84.4		42.6,76.0
+path 46.8,62.5		51.0,62.0		60.0,73.9
+path 55.7,85.9		66.4,82.3		69.3,65.8
+path 55.2,57.1		48.9,55.0		55.4,48.1
+path 58.1,38.3		34.8,31.4		30.1,43.4
+path 32.1,48.5		26.6,55.4		23.7,60.3
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Goldclover##36901
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 10
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+learn Potion of Nightmares##53900  |goto 42.65,32.07
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Potion of Nightmares>_
+Reach Level 10 Northrend Alchemy |skill Northrend Alchemy,10
+step
+map Sholazar Basin
+path follow loose;loop;ants straight;dist 60
+path 32.0,58.2		36.1,65.3		43.9,57.7
+path 44.5,63.9		39.5,66.3		40.4,71.7
+path 32.8,82.3		36.1,84.4		42.6,76.0
+path 46.8,62.5		51.0,62.0		60.0,73.9
+path 55.7,85.9		66.4,82.3		69.3,65.8
+path 55.2,57.1		48.9,55.0		55.4,48.1
+path 58.1,38.3		34.8,31.4		30.1,43.4
+path 32.1,48.5		26.6,55.4		23.7,60.3
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Tiger Lily##36904
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 20
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+learn Elixir of Mighty Strength##54218  |goto 42.65,32.07
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of Mighty Strength>_
+Reach Level 20 Northrend Alchemy |skill Northrend Alchemy,20
+step
+map Sholazar Basin
+path follow loose;loop;ants straight;dist 60
+path 32.0,58.2		36.1,65.3		43.9,57.7
+path 44.5,63.9		39.5,66.3		40.4,71.7
+path 32.8,82.3		36.1,84.4		42.6,76.0
+path 46.8,62.5		51.0,62.0		60.0,73.9
+path 55.7,85.9		66.4,82.3		69.3,65.8
+path 55.2,57.1		48.9,55.0		55.4,48.1
+path 58.1,38.3		34.8,31.4		30.1,43.4
+path 32.1,48.5		26.6,55.4		23.7,60.3
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 24 Goldclover##36901
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 30
+step
+map Sholazar Basin
+path follow loose;loop;ants straight;dist 60
+path 32.0,58.2		36.1,65.3		43.9,57.7
+path 44.5,63.9		39.5,66.3		40.4,71.7
+path 32.8,82.3		36.1,84.4		42.6,76.0
+path 46.8,62.5		51.0,62.0		60.0,73.9
+path 55.7,85.9		66.4,82.3		69.3,65.8
+path 55.2,57.1		48.9,55.0		55.4,48.1
+path 58.1,38.3		34.8,31.4		30.1,43.4
+path 32.1,48.5		26.6,55.4		23.7,60.3
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 24 Adder's Tongue##36903
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 30
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+learn Elixir of Mighty Agility##53840 |goto 42.65,32.07
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of Mighty Agility>_
+Reach Level 30 Northrend Alchemy |skill Northrend Alchemy,30
+step
+map The Storm Peaks
+path follow loose;loop;ants straight;dist 60
+path 31.4,83.1		33.0,93.8		40.0,82.3
+path 52.2,69.5		56.9,71.0		63.0,59.6
+path 65.0,73.2		66.9,58.5		77.2,72.8
+path 77.0,61.3		72.8,53.1		70.9,47.2
+path 64.1,54.1		65.7,41.5		52.5,53.2
+path 47.7,36.0		34.6,40.4		30.4,50.5
+path 29.1,37.4		22.2,36.7		24.3,56.4
+path 30.7,64.5		24.6,72.5		36.3,72.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Icethorn##36906
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 40
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+learn Indestructible Potion##53905 |goto 42.65,32.07
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Indestructible Potion>_
+Reach Level 40 Northrend Alchemy |skill Northrend Alchemy,40
+step
+map The Storm Peaks
+path follow loose;loop;ants straight;dist 60
+path 31.4,83.1		33.0,93.8		40.0,82.3
+path 52.2,69.5		56.9,71.0		63.0,59.6
+path 65.0,73.2		66.9,58.5		77.2,72.8
+path 77.0,61.3		72.8,53.1		70.9,47.2
+path 64.1,54.1		65.7,41.5		52.5,53.2
+path 47.7,36.0		34.6,40.4		30.4,50.5
+path 29.1,37.4		22.2,36.7		24.3,56.4
+path 30.7,64.5		24.6,72.5		36.3,72.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 30 Lichbloom##36905
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 55
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+learn Runic Mana Potion##53837 |goto 42.65,32.07
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Runic Mana Potion>_
+Reach Level 55 Northrend Alchemy |skill Northrend Alchemy,55
+step
+collect 5 Dark Jade##36932
+|tip These come from Jewelcrafting via prospecting.
+|tip You can also purchase them from the Auction House.
+step
+collect 5 Huge Citrine##36929
+|tip These come from Jewelcrafting via prospecting.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Transmute: Earthsiege Diamond>_
+Reach Level 60 Northrend Alchemy |skill Northrend Alchemy,60
+step
+map The Storm Peaks
+path follow loose;loop;ants straight;dist 60
+path 31.4,83.1		33.0,93.8		40.0,82.3
+path 52.2,69.5		56.9,71.0		63.0,59.6
+path 65.0,73.2		66.9,58.5		77.2,72.8
+path 77.0,61.3		72.8,53.1		70.9,47.2
+path 64.1,54.1		65.7,41.5		52.5,53.2
+path 47.7,36.0		34.6,40.4		30.4,50.5
+path 29.1,37.4		22.2,36.7		24.3,56.4
+path 30.7,64.5		24.6,72.5		36.3,72.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 105 Lichbloom##36905
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 75
+step
+map The Storm Peaks
+path follow loose;loop;ants straight;dist 60
+path 31.4,83.1		33.0,93.8		40.0,82.3
+path 52.2,69.5		56.9,71.0		63.0,59.6
+path 65.0,73.2		66.9,58.5		77.2,72.8
+path 77.0,61.3		72.8,53.1		70.9,47.2
+path 64.1,54.1		65.7,41.5		52.5,53.2
+path 47.7,36.0		34.6,40.4		30.4,50.5
+path 29.1,37.4		22.2,36.7		24.3,56.4
+path 30.7,64.5		24.6,72.5		36.3,72.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 15 Frost Lotus##36908
+|tip You can also purchase them from the Auction House.
+|tip These are rare herbs.
+|only if skill("Northrend Alchemy") < 75
+step
+kill Living Lasher##30845
+collect 45 Crystallized Life##37704 |goto Wintergrasp 13,65
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Alchemy") < 75
+step
+Enter the building |goto Dalaran/1 41.80,31.44
+talk Linzy Blackbolt##28703
+learn Flask of Stoneblood##53902 |goto 42.65,32.07
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Flask of Stoneblood>_
+Reach Level 75 Northrend Alchemy |skill Northrend Alchemy,75
+step
+_Congratulations!_
+You Reached Level 75 Northrend Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Cataclysm Alchemy 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Cataclysm Alchemy skill from 1-75.",
+condition_end=function() return skill('Cataclysm Alchemy') >= 75 end,
+condition_suggested=function() return skill('Cataclysm Alchemy') > 0 and skill('Cataclysm Alchemy') < 75 end,
+},[[
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+Train Cataclysm Alchemy |skillmax Cataclysm Alchemy,75 |goto 55.68,45.74
+step
+talk Kor'geld##3348
+buy 100 Crystal Vial##3371 |goto 55.24,45.86
+|only if skill("Cataclysm Alchemy") < 75
+step
+map Mount Hyjal
+path follow loose;loop;ants straight;dist 60
+path 68.2,23.9		59.2,31.6		57.0,38.9
+path 57.9,17.5		51.5,16.9		52.6,35.5
+path 48.7,36.5		44.0,24.5		39.8,32.5
+path 36.5,21.7		32.3,25.2		34.6,36.9
+path 43.5,42.6		36.2,44.9		25.3,37.8
+path 24.1,31.9		11.8,31.6		14.3,47.0
+path 19.0,58.5		25.6,62.0		31.9,46.7
+path 33.1,65.2		36.9,53.5		42.3,55.9
+path 33.8,65.0		31.3,76.5		33.8,98.2
+path 57.1,80.9		59.2,84.5		59.8,77.8
+path 55.8,74.7		59.8,71.6		49.1,51.6
+path 61.9,60.5		67.1,53.5		74.3,58.8
+path 71.9,68.5		77.3,63.2		83.0,64.2
+path 89.9,49.8		80.9,51.8		77.5,59.5
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 85 Cinderbloom##52983
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 65
+step
+Open Your Alchemy Crafting Panel:
+_<Create 4 Draught of War>_
+Reach Level 5 Cataclysm Alchemy |skill Cataclysm Alchemy,5
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Ghost Elixir##80477 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Ghost Elixir>_
+Reach Level 10 Cataclysm Alchemy |skill Cataclysm Alchemy,10
+step
+map Shimmering Expanse
+path	42.2,55.2	37.7,67.1	48.2,81.4	57.8,83.2	58.5,69.6
+path	49.6,59.1	68.0,49.7	63.9,39.4	57.9,39.8	50.6,35.3
+path	41.3,34.8	38.1,44.7	32.5,54.7
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 15 Azshara's Veil##52985
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 25
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Volcanic Potion##80481 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Volcanic Potion>_
+Reach Level 15 Cataclysm Alchemy |skill Cataclysm Alchemy,15
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of the Cobra##80484 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 10 Elixir of the Cobra>_
+Reach Level 25 Cataclysm Alchemy |skill Cataclysm Alchemy,25
+step
+map Deepholm
+path follow loose;loop;ants straight;dist 60
+path 69.4,56.0		74.7,61.1		75.8,67.5
+path 70.5,61.9		71.1,70.6		66.0,68.5
+path 58.0,73.2		47.4,67.3		37.0,53.3
+path 37.6,44.7		26.8,41.5		23.1,35.3
+path 28.9,35.6		27.8,27.0		31.2,32.0
+path 36.6,28.9		33.0,19.1		47.8,12.9
+path 45.9,21.1		43.6,25.1		44.5,28.6
+path 49.1,33.6		56.7,38.3		73.8,32.7
+path 75.2,41.9		69.6,46.4
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 25 Heartblossom##52986
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 45
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Deep Earth##80488 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Elixir of Deep Earth>_
+Reach Level 30 Cataclysm Alchemy |skill Cataclysm Alchemy,30
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Elixir of Impossible Accuracy##80491 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Elixir of Impossible Accuracy>_
+Reach Level 35 Cataclysm Alchemy |skill Cataclysm Alchemy,35
+step
+map Uldum
+path follow loose;loop;ants straight;dist 60
+path 58.4,31.3		56.2,22.6		57.8,14.5
+path 61.5,14.0		57.1,44.7		60.5,58.3
+path 69.8,76.5		65.9,75.9		60.0,83.2
+path 59.0,58.8		55.3,45.8		52.0,45.6
+path 50.8,42.5		50.8,36.0
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 60 Whiptail##52988
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 75
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Mythical Mana Potion##80494 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Mythical Mana Potion>_
+Reach Level 40 Cataclysm Alchemy |skill Cataclysm Alchemy,40
+step
+map Uldum
+path follow loose;loop;ants straight;dist 60
+path 58.4,31.3		56.2,22.6		57.8,14.5
+path 61.5,14.0		57.1,44.7		60.5,58.3
+path 69.8,76.5		65.9,75.9		60.0,83.2
+path 59.0,58.8		55.3,45.8		52.0,45.6
+path 50.8,42.5		50.8,36.0
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+|tip Volatile Life only comes from picking herbs.
+|tip Whiptail tends to yield better results.
+collect 45 Volatile Life##52329
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 65
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Golemblood Potion##80496 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Golemblood Potion>_
+Reach Level 45 Cataclysm Alchemy |skill Cataclysm Alchemy,45
+step
+map Twilight Highlands
+path	71.7,48.9	68.1,41.8	61.9,36.0
+path 	53.9,32.0	47.3,40.3	45.6,45.2
+path 	45.3,36.1	41.3,52.0	48.7,54.5
+path 	51.5,45.6	58.2,48.0	59.1,40.1
+path 	70.9,64.8	73.5,64.0	73.7,72.2
+path	69.8,64.7	63.1,60.8	59.5,63.6
+path 	55.3,50.4	57.0,77.5	53.0,79.8
+path 	49.0,70.0	44.2,70.6	47.9,63.4
+path 	33.6,49.9	29.0,40.3	28.6,30.5
+path	46.3,23.2	57.5,27.2	69.1,38.2
+path 	72.9,47.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 45 Twilight Jasmine##52987
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 70
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Mythical Healing Potion##80498 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 15 Mythical Healing Potion>_
+Reach Level 60 Cataclysm Alchemy |skill Cataclysm Alchemy,60
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Flask of Titanic Strength##80723 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Flask of Titanic Strength>_
+Reach Level 65 Cataclysm Alchemy |skill Cataclysm Alchemy,65
+step
+collect 15 Nightstone##52180
+|tip These come from mining.
+|tip These also come from Prospecting Ore.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 70
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Transmute: Demonseye##80248 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Elixir of the Cobra>_
+Reach Level 70 Cataclysm Alchemy |skill Cataclysm Alchemy,70
+step
+collect 15 Alicite##52179
+|tip These come from mining.
+|tip These also come from Prospecting Ore.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 75
+step
+Enter the building |goto Orgrimmar/1 55.58,46.70 |walk
+talk Yelmak##3347
+|tip Inside the building.
+learn Transmute: Amberjewel##80247 |goto 55.68,45.74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 5 Elixir of the Cobra>_
+Reach Level 75 Cataclysm Alchemy |skill Cataclysm Alchemy,75
+step
+_Congratulations!_
+You Reached Level 75 Cataclysm Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Pandaria Alchemy 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Pandaria Alchemy skill from 1-75.",
+condition_end=function() return skill('Pandaria Alchemy') >= 75 end,
+condition_suggested=function() return skill('Pandaria Alchemy') > 0 and skill('Pandaria Alchemy') < 75 end,
+},[[
+step
+talk Ni Gentlepaw##56777
+Train Pandaria Alchemy |skillmax Pandaria Alchemy,75 |goto The Jade Forest/0 46.55,46.02
+step
+talk Ni Gentlepaw##56777
+buy 100 Crystal Vial##3371 |goto The Jade Forest/0 46.55,46.02
+step
+map Valley of the Four Winds
+path follow loose;loop;ants straight;dist 60
+path	81.4,21.5	76.4,29.2	73.9,29.9
+path	72.3,33.4	70.8,34.4	70.6,41.8
+path	65.1,60.1	57.6,65.6	50.8,58.6
+path	47.4,64.9	46.9,61.3	42.5,54.3
+path	33.6,62.1	28.1,72.7	25.7,78.4
+path	24.4,56.0	21.9,53.9	12.8,44.7
+path	14.3,41.2	14.8,35.8	19.6,34.4
+path	21.4,36.6	22.4,37.8	27.3,49.6
+path	30.7,52.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 45 Green Tea Leaf##72234
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 9 Master Healing Potion>_
+Reach Level 10 Pandaria Alchemy |skill Pandaria Alchemy,10
+step
+Open Your Alchemy Crafting Panel:
+|tip You should have learned one of 3 elixir recipes.
+|tip Since it is random, it is difficult to properly guide you.
+_<Create 45 of the learned Elixir>_
+Reach Level 55 Pandaria Alchemy |skill Pandaria Alchemy,55
+step
+map Kun-Lai Summit
+path follow loose;loop;ants straight;dist 60
+path	39.4,77.3	38.0,75.5	40.1,71.8
+path	43.7,64.5	42.9,60.8	41.1,59.3
+path	33.9,54.9	36.0,75.5
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Snow Lily##79010
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 74
+step
+map Dread Wastes
+path follow loose;loop;ants straight;dist 60
+path	40.4,56.5	43.9,59.5	43.1,64.4
+path	40.5,69.7	37.4,69.2	33.0,66.4
+path	33.4,61.6	30.0,56.5	35.5,55.1
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Fool's Cap##79011
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 74
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Master Mana Potion>_
+Reach Level 75 Pandaria Alchemy |skill Pandaria Alchemy,75
+step
+_Congratulations!_
+You Reached Level 75 Pandaria Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Draenor Alchemy 1-100",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Alchemy skill from 1-100.",
+condition_end=function() return skill('Draenor Alchemy') >= 100 end,
+condition_suggested=function() return skill('Draenor Alchemy') > 0 and skill('Draenor Alchemy') < 100 end,
+},[[
+step
+talk Joshua Alvarez##87542
+buy A Treatise on the Alchemy of Draenor##109558 |n
+use A Treatise on the Alchemy of Draenor##109558
+Train Draenor Alchemy |skillmax Draenor Alchemy,100 ||goto Warspear/0 60.98,27.37
+step
+map Frostfire Ridge
+path follow loose;loop;ants straight;dist 60
+path	31.1,53.3	26.1,53.7	24.2,49.0
+path	23.2,45.2	20.7,39.5	22.2,33.9
+path	21.8,29.7	20.9,25.4	23.1,23.6
+path	25.1,24.6	27.2,22.3	29.7,21.4
+path	31.2,22.0	32.8,21.7	35.1,19.5
+path	36.9,24.3	38.1,26.8	40.8,28.9
+path	41.6,30.6	42.8,29.9	42.9,31.1
+path	44.4,31.1	46.2,31.7	48.9,34.4
+path	51.6,36.9	53.7,35.1	54.5,30.3
+path	56.5,26.1	59.1,28.4	60.0,31.9
+path	61.2,34.9	63.1,40.9	63.4,45.0
+path	60.9,46.9	62.2,52.4	60.3,55.3
+path	57.9,57.5	53.8,55.8	50.6,54.7
+path	47.7,55.6	45.9,58.9	43.1,60.8
+path	40.3,62.1	37.7,58.7	36.5,56.5
+path	35.5,53.3	33.6,49.2	31.1,51.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 5 Frostweed##109124
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Alchemy") < 2
+step
+Open Your Alchemy Crafting Panel:
+_<Create 1 Secret of Draenor Alchemy>_
+Reach Level 2 Draenor Alchemy |skill Draenor Alchemy,2
+step
+talk Joshua Alvarez##87542
+buy Recipe: Draenic Agility Potion##112038 |n
+use the Recipe: Draenic Agility Potion##112038
+learn Draenic Agility Potion##156577 |goto Warspear/0 60.97,27.36
+step
+map Frostfire Ridge
+path follow loose;loop;ants straight;dist 60
+path	31.1,53.3	26.1,53.7	24.2,49.0
+path	23.2,45.2	20.7,39.5	22.2,33.9
+path	21.8,29.7	20.9,25.4	23.1,23.6
+path	25.1,24.6	27.2,22.3	29.7,21.4
+path	31.2,22.0	32.8,21.7	35.1,19.5
+path	36.9,24.3	38.1,26.8	40.8,28.9
+path	41.6,30.6	42.8,29.9	42.9,31.1
+path	44.4,31.1	46.2,31.7	48.9,34.4
+path	51.6,36.9	53.7,35.1	54.5,30.3
+path	56.5,26.1	59.1,28.4	60.0,31.9
+path	61.2,34.9	63.1,40.9	63.4,45.0
+path	60.9,46.9	62.2,52.4	60.3,55.3
+path	57.9,57.5	53.8,55.8	50.6,54.7
+path	47.7,55.6	45.9,58.9	43.1,60.8
+path	40.3,62.1	37.7,58.7	36.5,56.5
+path	35.5,53.3	33.6,49.2	31.1,51.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 350 Fireweed##109125
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Alchemy") < 55
+step
+Open Your Alchemy Crafting Panel:
+_<Create 53 Draenic Agility Potions>_
+Reach Level 55 Draenor Alchemy |skill Draenor Alchemy,55
+step
+talk Joshua Alvarez##87542
+buy Recipe: Draenic Agility Flask##112024 |n
+use the Recipe: Draenic Agility Flask##112024
+learn Draenic Agility Flask##156561 |goto Warspear/0 60.97,27.36
+step
+map Shadowmoon Valley D
+path follow loose;loop;ants straight;dist 60
+path	26.6,8.0	27.4,12.7	27.4,15.6
+path	26.2,17.1	26.8,19.8	27.5,22.1
+path	29.3,27.4	31.4,26.3	32.3,23.8
+path	34.6,27.2	36.0,24.1	37.2,21.6
+path	39.5,19.9	40.6,23.3	40.6,24.9
+path	41.5,26.7	42.8,28.1	45.0,28.8
+path	47.5,28.1	48.7,26.8	50.7,28.8
+path	53.3,31.1	54.5,32.7	56.0,35.5
+path	58.6,36.0	62.3,32.0	63.5,31.0
+path	65.9,31.7	66.3,34.2	65.0,36.0
+path	63.1,36.6	62.3,39.4	60.2,42.4
+path	59.1,45.2	58.0,47.7	58.8,50.8
+path	62.5,53.0	64.7,55.5	65.9,56.7
+path	65.7,57.4	64.7,59.4	61.4,57.7
+path	59.6,58.0	58.8,58.6	59.9,61.4
+path	60.5,63.9	62.0,62.2	62.7,64.2
+path	61.6,65.3	61.9,67.4	61.4,69.3
+path	59.8,67.0	58.1,64.1	57.9,63.4
+path	57.4,59.5	55.3,59.0	54.5,61.8
+path	53.3,63.7	53.0,65.6	52.2,67.0
+path	54.0,69.9	56.0,70.2	56.0,72.4
+path	55.0,74.4	54.0,74.3	52.7,72.9
+path	51.7,70.8	51.1,68.7	49.1,68.3
+path	45.6,68.3	42.9,73.0	41.6,74.7
+path	38.2,73.4	37.0,71.5	38.3,67.7
+path	38.1,66.4	37.4,60.8	36.4,59.6
+path	36.9,56.8	40.7,57.6	42.9,57.0
+path	43.2,54.8	41.7,53.6	41.2,50.1
+path	42.0,48.6	43.1,46.7	42.6,43.6
+path	40.2,43.4	39.0,39.8	37.0,35.7
+path	34.7,32.4	32.9,31.0	31.1,32.4
+path	28.3,32.9	26.4,31.7	25.4,28.8
+path	24.1,26.7	22.7,26.1	21.4,24.8
+path	22.3,24.2	23.7,23.1	25.1,20.8
+path	24.3,19.0	23.4,18.1	23.4,16.3
+path	22.8,14.5	23.7,10.2
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 180 Starflower##109127
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Alchemy") < 99
+step
+Open Your Alchemy Crafting Panel:
+_<Create 53 Draenic Agility Flasks>_
+Reach Level 100 Draenor Alchemy |skill Draenor Alchemy,100
+step
+_Congratulations!_
+You Reached Level 100 Draenor Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Legion Alchemy 1-100",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Legion Alchemy skill from 1-100.",
+condition_end=function() return skill('Legion Alchemy') >= 100 end,
+condition_suggested=function() return skill('Legion Alchemy') > 0 and skill('Legion Alchemy') < 100 end,
+},[[
+step
+Enter the building |goto Dalaran L/10 41.28,31.54 < 5 |walk
+talk Linzy Blackbolt##92456
+Train Legion Alchemy |skillmax Legion Alchemy,100|goto 42.03,31.79
+step
+Load the "Legion Alchemy Quest Line" Guide |confirm |next "Zygor's Profession Guides\\Alchemy\\Quest Guides\\Legion Alchemy Quest Line"
+|tip Click the line above to load the guide.
+|tip After completing the Legion Alchemy Quest Line, you should be around level 45 Legion Alchemy.
+Complete the Legion Alchemy Quest Line |q 42081
+step
+Enter the Eye of Azshara Dungeon |goto Eye of Azshara/1 47.59,87.41 < 10000 |noway |c |q 39331
+|only if skill("Legion Alchemy") < 70
+step
+kill Wrath of Azshara##96028
+collect Recipe: Leytorrent Potion##127929 |n
+use the Recipe: Leytorrent Potion##127929
+learn Leytorrent Potion (Rank 2)##188335
+step
+collect 25 Starlight Rose##124105
+|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 70
+step
+collect 50 Aethril##124101
+|tip Use the Aethril farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 70
+step
+collect 50 Dreamleaf##124102
+|tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 70
+step
+Open Your Alchemy Crafting Panel:
+_<Create 20 Leytorrent Potions>_
+Reach Level 70 Legion Alchemy |skill Legion Alchemy,70
+step
+collect 420 Starlight Rose##124105
+|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 99
+step
+collect 600 Aethril##124101
+|tip Use the Aethril farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 99
+step
+collect 600 Dreamleaf##124102
+|tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 99
+step
+Open Your Alchemy Crafting Panel:
+_<Create 30 Flask of Ten Thousand Scars>_
+Reach Level 100 Legion Alchemy |skill Legion Alchemy,100
+step
+_Congratulations!_
+You Reached Level 100 Legion Alchemy Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 1-300",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Tailoring skill from 1-300.",
+condition_end=function() return skill('Tailoring') >= 300 end,
+condition_suggested=function() return skill('Tailoring') > 0 and skill('Tailoring') < 300 end,
+},[[
+step
+talk Magar##3363
+|tip Inside the building.
+Train Tailoring |skillmax Tailoring,300 |goto Orgrimmar/1 60.74,59.14
+|tip You must be at least level 5.
+step
+Kil enemies around this area
+collect 120 Linen Cloth##2589 |goto Mulgore 60.6,47.7
+|tip You can also purchase them from the Auction House.
+|only if skill("Tailoring") < 80
+step
+Open Your Tailoring Crafting Panel:
+_<Create 49 Linen Bandages>_
+Reach Level 50 Tailoring |skill Tailoring,50
+step
+talk Mender Jessara##133109
+learn Heavy Linen Bandage##3276 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 30 Heavy Linen Bandages>_
+Reach Level 80 Tailoring |skill Tailoring,80
+step
+Kill enemies around this area
+collect 100 Wool Cloth##2592 |goto Wetlands/0 67.4,47.4
+|tip You can also purchase them from the Auction House.
+|only if skill("Tailoring") < 150
+step
+talk Mender Jessara##133109
+learn Wool Bandage##3277 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 50 Wool Bandages>_
+Reach Level 130 Tailoring |skill Tailoring,130
+step
+talk Mender Jessara##133109
+learn Heavy Wool Bandage##3278 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 20 Heavy Wool Bandages>_
+Reach Level 150 Tailoring |skill Tailoring,150
+step
+Kill Death's Step enemies around this area
+collect 90 Silk Cloth##4306 |goto Eastern Plaguelands/0 18.33,78.45
+|tip You can also purchase them from the Auction House.
+|only if skill("Tailoring") < 210
+step
+talk Mender Jessara##133109
+learn Silk Bandage##7928 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 40 Silk Bandages>_
+Reach Level 190 Tailoring |skill Tailoring,190
+step
+talk Mender Jessara##133109
+learn Heavy Silk Bandage##7929 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 20 Heavy Silk Bandages>_
+Reach Level 210 Tailoring |skill Tailoring,210
+step
+kill Irontree Chopper##48453+
+collect 70 Mageweave Cloth##4338 |goto Felwood/0 63.4,20.7
+|tip You can also purchase them from the Auction House.
+|only if skill("Tailoring") < 260
+step
+talk Mender Jessara##133109
+learn Mageweave Bandage##10840 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 30 Mageweave Bandages>_
+Reach Level 240 Tailoring |skill Tailoring,240
+step
+talk Mender Jessara##133109
+learn Heavy Mageweave Bandage##10841 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 20 Mageweave Bandages>_
+Reach Level 260 Tailoring |skill Tailoring,260
+step
+label "Time_Travel_On"
+talk Zidormi##128607
+|tip She is at the top of the ramp leading from Un'Goro Crater to Silithus.
+Ask her _"Can you show me what Silithus was like before the Wound in the World?"_
+Gain the Time Travelling buff |havebuff Time Travelling##609811 |goto Silithus/0 78.93,21.97
+step
+map Silithus
+path follow loose;loop off;ants straight;dist 100
+path	45.8,38.2	35.7,32.5	29.5,73.4
+path	66.1,20.3
+Kill Twilight enemies around this area
+collect 50 Runecloth##14047
+|tip You can also purchase them from the Auction House.
+|only if skill("Tailoring") < 300
+step
+talk Mender Jessara##133109
+learn Runecloth Bandage##18629 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 30 Runecloth Bandages>_
+Reach Level 290 Tailoring |skill Tailoring,290
+step
+talk Mender Jessara##133109
+learn Heavy Runecloth Bandage##18630 |goto Orgrimmar/1 38.50,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 10 Heavy Runecloth Bandages>_
+Reach Level 300 Tailoring |skill Tailoring,300
+step
+_Congratulations!_
+You Reached Level 300 Tailoring Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Outland Tailoring 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Outland Tailoring skill from 1-75.",
+condition_end=function() return skill('Outland Tailoring') >= 75 end,
+condition_suggested=function() return skill('Outland Tailoring') > 0 and skill('Outland Tailoring') < 75 end,
+},[[
+step
+clicknpc Tailoring##33613
+Train Outland Tailoring |skillmax Outland Tailoring,75 |goto Shattrath City/0 44.00,90.89
+step
+map Shadowmoon Valley/0
+path follow loose;loop;ants straight;dist 60
+path	51.68,59.01	52.79,59.06	53.18,59.92	53.02,62.70	52.76,63.66
+path	52.82,65.92	52.80,69.38	51.98,68.13	51.63,65.36	51.65,63.89
+path	51.22,62.25	51.31,60.45
+collect 300 Netherweave Cloth##21877
+|tip You can also purchase them from the Auction House.
+|only if skill("Outlland Tailoring") < 74
+step
+clicknpc Bandage Recipes##33621
+learn Netherweave Bandage##27032 |goto Shattrath City/0 43.72,91.40
+step
+Open Your Tailoring Crafting Panel:
+_<Create 39 Netherweave Bandage>_
+Reach Level 40 Outland Tailoring |skill Outland Tailoring,40
+step
+clicknpc Bandage Recipes##33621
+learn Heavy Netherweave Bandage##27033 |goto Shattrath City/0 43.72,91.40
+step
+Open Your Tailoring Crafting Panel:
+_<Create 35 Heavy Netherweave Bandage>_
+Reach Level 40 Outland Tailoring |skill Outland Tailoring,40
+step
+_Congratulations!_
+You Reached Level 75 Outland Tailoring Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Northrend Tailoring 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Northrend Tailoring skill from 1-75.",
+condition_end=function() return skill('Northrend Tailoring') >= 75 end,
+condition_suggested=function() return skill('Northrend Tailoring') > 0 and skill('Northrend Tailoring') < 75 end,
+},[[
+step
+talk Charles Worth##28699
+|tip Inside the building.
+Train Northrend Tailoring |skillmax Northrend Tailoring,75|goto Dalaran/1 36.12,33.54
+step
+Kill enemies around this area
+collect 220 Frostweave Cloth##33470 |goto Icecrown 61.8,20.8
+|only if skill("Northrend Tailoring") < 74
+step
+talk Olisarra the Kind##28706
+|tip Inside the building.
+learn Frostweave Bandage##45545 |goto Dalaran/1 36.56,37.33
+step
+Open Your Tailoring Crafting Panel:
+_<Create 19 Frostweave Bandages>_
+Reach Level 20 Outland Tailoring |skill Northrend Tailoring,20
+step
+talk Olisarra the Kind##28706
+|tip Inside the building.
+learn Heavy Frostweave Bandage##45546 |goto Dalaran/1 36.56,37.33
+step
+Open Your Tailoring Crafting Panel:
+_<Create 55 Frostweave Bandages>_
+Reach Level 75 Outland Tailoring |skill Northrend Tailoring,75
+step
+_Congratulations!_
+You Reached Level 75 Northrend Tailoring Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Cataclysm Tailoring 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Cataclysm Tailoring skill from 1-75.",
+condition_end=function() return skill('Cataclysm Tailoring') >= 75 end,
+condition_suggested=function() return skill('Cataclysm Tailoring') > 0 and skill('Cataclysm Tailoring') < 75 end,
+},[[
+step
+talk Leyweaver Aurielle##133239
+Train Cataclysm Tailoring |skillmax Cataclysm Tailoring,75 |goto Orgrimmar/1 38.30,87.14
+step
+Kill Twilight enemies around this area
+collect 200 Embersilk Cloth##53010 |goto Mount Hyjal 55.8,68.0
+|only if skill("Cataclysm Tailoring") < 74
+step
+talk Mender Jessara##133109
+learn Embersilk Bandage##74556 |goto Orgrimmar/1 38.49,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 24 Embersilk Bandages>_
+Reach Level 25 Outland Tailoring |skill Cataclysm Tailoring,25
+step
+talk Mender Jessara##133109
+learn Heavy Embersilk Bandage##74557 |goto Orgrimmar/1 38.49,86.41
+step
+Open Your Tailoring Crafting Panel:
+_<Create 50 Heavy Embersilk Bandages>_
+Reach Level 75 Outland Tailoring |skill Cataclysm Tailoring,75
+step
+_Congratulations!_
+You Reached Level 75 Cataclysm Tailoring Skill.
+]])
+ZGV.BETAEND()

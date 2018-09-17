@@ -1336,4 +1336,128 @@ step
 _Congratulations!_
 You Collected the "Nazjatar Blood Serpent" Mount.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Mounts\\Ground Mounts\\Achievement Mounts\\Obsidian Krolusk",{
+author="support@zygorguides.com",
+startlevel=120.0,
+keywords={"ground, mount, battle, for, azeroth"},
+mounts={239049},
+model={75600},
+description="This mount is acquired from a series of events taking place during Mythic Dungeons.",
+},[[
+step
+Load the "Pecking Order" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Pecking Order"
+|tip Click the line above to load the guide.
+Earn the "Pecking Order" Achievement |achieve 12550
+step
+Load the "I'm in Charge Now!" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\I'm in Charge Now!"
+|tip Click the line above to load the guide.
+Earn the "I'm in Charge Now!" Achievement |achieve 12548
+step
+Load the "That Sweete Booty" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\That Sweete Booty"
+|tip Click the line above to load the guide.
+Earn the "That Sweete Booty" Achievement |achieve 12998
+step
+Load the "Losing My Profession" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Losing My Profession"
+|tip Click the line above to load the guide.
+Earn the "Losing My Profession" Achievement |achieve 12489
+step
+Load the "Run Wild Like a Man On Fire" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Run Wild Like a Man On Fire"
+|tip Click the line above to load the guide.
+Earn the "Run Wild Like a Man On Fire" Achievement |achieve 12495
+step
+Load the "Alchemical Romance" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Alchemical Romance"
+|tip Click the line above to load the guide.
+Earn the "Alchemical Romance" Achievement |achieve 12490
+step
+Load the "Breath of the Shrine" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Breath of the Shrine"
+|tip Click the line above to load the guide.
+Earn the "Breath of the Shrine" Achievement |achieve 12600
+step
+Load the "The Void Lies Sleeping" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\The Void Lies Sleeping"
+|tip Click the line above to load the guide.
+Earn the "The Void Lies Sleeping" Achievement |achieve 12601
+step
+Load the "Trust No One" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Trust No One"
+|tip Click the line above to load the guide.
+Earn the "Trust No One" Achievement |achieve 12602
+step
+Load the "Bringing Hexy Back" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Bringing Hexy Back"
+|tip Click the line above to load the guide.
+Earn the "Bringing Hexy Back" Achievement |achieve 12270
+step
+Load the "Gold Fever" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Gold Fever"
+|tip Click the line above to load the guide.
+Earn the "Gold Fever" Achievement |achieve 12272
+step
+Load the "It's Lit!" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\It's Lit!"
+|tip Click the line above to load the guide.
+Earn the "It's Lit!" Achievement |achieve 12273
+step
+Load the "Not a Fun Guy" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Not a Fun Guy"
+|tip Click the line above to load the guide.
+Earn the "Not a Fun Guy" Achievement |achieve 12549
+step
+Load the "Taint Nobody Got Time For That" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Taint Nobody Got Time For That"
+|tip Click the line above to load the guide.
+Earn the "Taint Nobody Got Time For That" Achievement |achieve 12498
+step
+Load the "Sporely Alive" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Sporely Alive"
+|tip Click the line above to load the guide.
+Earn the "Sporely Alive" Achievement |achieve 12499
+step
+Load the "Snake Eyes" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Snake Eyes"
+|tip Click the line above to load the guide.
+Earn the "Snake Eyes" Achievement |achieve 12503
+step
+Load the "Snake Eater" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Snake Eater"
+|tip Click the line above to load the guide.
+Earn the "Snake Eater" Achievement |achieve 12507
+step
+Load the "Good Night, Sweet Prince" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Good Night, Sweet Prince"
+|tip Click the line above to load the guide.
+Earn the "Good Night, Sweet Prince" Achievement |achieve 12508
+step
+Load the "Remix to Ignition" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Remix to Ignition"
+|tip Click the line above to load the guide.
+Earn the "Remix to Ignition" Achievement |achieve 12457
+step
+Load the "Shot Through the Heart" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Shot Through the Heart"
+|tip Click the line above to load the guide.
+Earn the "Shot Through the Heart" Achievement |achieve 12462
+step
+Load the "Pitch Invasion" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Pitch Invasion"
+|tip Click the line above to load the guide.
+Earn the "Pitch Invasion" Achievement |achieve 12855
+step
+Load the "Ready for Raiding VI" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Ready for Raiding VI"
+|tip Click the line above to load the guide.
+Earn the "Ready for Raiding VI" Achievement |achieve 12854
+step
+Load the "Stand by Me" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Stand By Me"
+|tip Click the line above to load the guide.
+Earn the "Stand by Me" Achievement |achieve 12727
+step
+Load the "A Fish Out of Water" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\A Fish Out of Water"
+|tip Click the line above to load the guide.
+Earn the "A Fish Out of Water" Achievement |achieve 12726
+step
+Load the "It Belongs In a Mausoleum!" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\It Belongs in a Mausoleum!"
+|tip Click the line above to load the guide.
+Earn the "It Belongs In a Mausoleum!" Achievement |achieve 12722
+step
+Load the "How to Keep a Mummy" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\How to Keep a Mummy"
+|tip Click the line above to load the guide.
+Earn the "How to Keep a Mummy" Achievement |achieve 12723
+step
+Load the "Wrap God" Achievement Guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Battle for Azeroth Dungeon\\Wrap God"
+|tip Click the line above to load the guide.
+Earn the "Wrap God" Achievement |achieve 12721
+step
+collect Reins of the Obsidian Krolusk##161215 |n
+use the Reins of the Obsidian Krolusk##161215
+Learn the "Obsidian Krolusk" Mount |learnmount Obsidian Krolusk##239049
+step
+_Congratulations!_
+You Collected the "Obsidian Krolusk" Mount.
+]])
 ZGV.BETAEND()

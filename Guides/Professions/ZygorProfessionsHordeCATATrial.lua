@@ -3,57 +3,6 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("ProfessionsH") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Alchemy skill from 1-300.",
-},[[
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,75
-|tip You must be at least level 5.
-step
-#include "PB_SL_ER_Path"
-#include "follow_path_herbs"
-collect 54 Peacebloom##2447 |condition skill("Alchemy")>=55
-collect 54 Silverleaf##765 |condition skill("Alchemy")>=55
-|tip You can also buy these materials from the Auction House.
-step
-#include "vendor_Alchemy"
-buy 54 Crystal Vial##3371 |condition itemcount(3371) >= 54 or skill("Alchemy")>=55
-|tip You can buy more just in case.
-step
-create 55 Minor Healing Potion##2330,Alchemy,55
-Save at least _38_ for later
-step
-#include "trainer_Alchemy"
-skillmax Alchemy,150 |goto 55.7,45.8
-|tip You must be at least level 10.
-step
-map Hillsbrad Foothills
-path 31.8,62.6		33.9,54.0		29.7,44.1
-path 35.5,37.8		34.5,28.2		39.5,21.0
-path 44.2,8.3		51.3,14.0		57.5,20.9
-path 56.1,34.3		49.9,46.2		41.2,46.6
-path 40.1,55.0		41.3,67.4		31.8,71.9
-#include "follow_path_herbs"
-collect 38 Mageroyal##785 |condition skill("Alchemy")>=125
-collect 114 Briarthorn##2450 |condition skill("Alchemy")>=125
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Alchemy"
-learn Lesser Healing Potion##2337 |condition skill("Alchemy")>=90
-step
-#include "vendor_Alchemy"
-buy 75 Crystal Vial##3371 |condition itemcount(3371) >= 75 or skill("Alchemy")>=90
-step
-create 38 Lesser Healing Potion##2337,Alchemy,90
-step
-#include "trainer_Alchemy"
-learn Elixir of Wisdom##3171 |condition skill("Alchemy")>=125
-step
-create 38 Elixir of Wisdom##3171,Alchemy,125
-#include end_of_prof_trial_125
-]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Archaeology skill from 1-600.",
@@ -893,3 +842,5 @@ step
 create 161 Bolt of Silk Cloth##3839,Tailoring,161 total |n
 skill Tailoring,145
 ]])
+ZGV.BETASTART()
+ZGV.BETAEND()

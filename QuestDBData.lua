@@ -5742,9 +5742,6 @@ ZGV.Quest_Cache_Ally = {
 ["PROFESSIONS\\Blacksmithing\\Leveling Guides\\Blacksmithing 1-600 Leveling Guide"] = {
 	includes = {"Iron_Ore_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_mine","Thorium_Ore_Path","#includeCopper_Path","Saronite_Path","Adamantite_Path","vendor_Tailoring","Tin_Path","Obsidium_Path","trainer_Blacksmithing","trainer_Blacksmithing_Shatt","vendor_Blacksmithing","Cobalt_Path","maincity_anvil","Copper_Path","shatt_anvil","trainer_Mining","Fel_Iron_Path","Mithril_Ore_Path"},
 },
-["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide"] = {
-	includes = {"--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Enchanting"},
-},
 ["PROFESSIONS\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide"] = {
 	includes = {"Tin_Path","--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Mining","Mithril_Ore_Path","vendor_Blacksmithing","Fel_Iron_Path","follow_path_mine","Copper_Path","maincity_anvil","trainer_Engineering","Adamantite_Path","Iron_Ore_Path"},
 },
@@ -5780,6 +5777,9 @@ ZGV.Quest_Cache_Ally = {
 },
 ["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 1-300"] = {
 	includes = {"FW_DG_Path","follow_path_herbs"},
+},
+["PROFESSIONS\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide"] = {
+	includes = {"--@@TRIALONLYLINE end_of_prof_trial_125","trainer_Enchanting"},
 },
 ["PETSMOUNTS\\Battle Pets\\Aquatic Pets\\Slithershock Elver"] = {
 	{ids="38299"},
@@ -11104,9 +11104,6 @@ ZGV.Quest_Cache_Horde = {
 ["PETSMOUNTS\\Battle Pets\\Humanoid Pets\\Sunfur Panda"] = {
 	includes = {"H_Beasts_of_Fable_D","H_Beasts_of_Fable","H_Battlepet_quests"},
 },
-["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide"] = {
-	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","vendor_Alchemy","GB_Path","LR_SK_Path","GS_SM_Path","Sungrass_Path","GT_WS_Path","HB_Path","trainer_Alchemy","IT_LB_Path","TJ_Path","Kingsblood_Path","SV_CB_Path","PB_SL_ER_Path","Whiptail_Path","GC_DN_TL_Path","NB_DG_Path","FL_GT_KW_BW_Path","GM_KB_LR_WS_Path","Terocone_Path","FW_DG_Path"},
-},
 ["PROFESSIONS\\Archaeology\\Leveling Guides\\Archaeology 1-600 Leveling Guide"] = {
 	includes = {"--@@TRIALONLYLINE end_of_prof_trial_150","trainer_Archaeology"},
 },
@@ -11148,6 +11145,12 @@ ZGV.Quest_Cache_Horde = {
 },
 ["PROFESSIONS\\Tailoring\\Leveling Guides\\Tailoring 1-600 Leveling Guide"] = {
 	includes = {"trainer_Tailoring","--@@TRIALONLYLINE end_of_prof_trial_150","vendor_Tailoring"},
+},
+["PROFESSIONS\\Alchemy\\Leveling Guides\\Outland Alchemy 1-75"] = {
+	includes = {"follow_path_herbs"},
+},
+["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 1-600 Leveling Guide"] = {
+	includes = {"Stormvine_Path","MR_BW_BT_SK_Path","--@@TRIALONLYLINE end_of_prof_trial_125","follow_path_herbs","T_Rose_Path","Tiger_Lily_Path","vendor_Alchemy","GB_Path","LR_SK_Path","GS_SM_Path","Sungrass_Path","GT_WS_Path","HB_Path","trainer_Alchemy","IT_LB_Path","TJ_Path","Kingsblood_Path","SV_CB_Path","PB_SL_ER_Path","Whiptail_Path","GC_DN_TL_Path","NB_DG_Path","FL_GT_KW_BW_Path","GM_KB_LR_WS_Path","Terocone_Path","FW_DG_Path"},
 },
 ["PROFESSIONS\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide"] = {
 	includes = {"follow_path_herbs","vendor_Alchemy","trainer_Alchemy"},
