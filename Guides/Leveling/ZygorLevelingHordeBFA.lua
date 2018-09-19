@@ -306,9 +306,7 @@ label "Fresh_Start_BFA"
 accept Hour of Reckoning##53372
 |tip You will automatically accept this quest.
 step
-Enter the building |goto Orgrimmar/1 49.88,75.54 < 5 |walk
-Follow the path |goto Orgrimmar/1 49.93,74.55 < 3 |walk
-Run up the stairs |goto Orgrimmar/1 49.36,74.02 < 3 |walk
+Enter the building |goto Orgrimmar/1 49.88,75.54 < 10 |walk
 talk High Overlord Saurfang##14720
 |tip Inside the building.
 turnin Hour of Reckoning##53372 |goto Orgrimmar/1 48.52,70.73
@@ -317,41 +315,31 @@ step
 talk Isabella##139093
 |tip Inside the building.
 Tell her _"I am ready to go to the Undercity."_
-Speak with Isabella |q 51796/1 |goto 47.80,71.70
+Travel to Lordaeron |scenariostart |goto 47.79,71.69 |q 51796 |or |next "Intro_Scenario"
 |tip It may take a moment to enter the scenario.
+_Or_
+Tell her _"I've heard this tale before... <Skip the scenario and begin your next mission.>"_
+|tip This will allow you to skip the intro scenario if you've already completed it on another character.
+Skip the Battle for Lordaeron |condition readyq(51796) |goto 47.79,71.69 |or |future |next "Intro_Scenario_Completed"
 step
-Begin the "Under Siege" Scenario |scenariostart |q 51796
-step
-Run down the stairs |goto Undercity BFA/0 85.25,17.89 < 5 |walk
-Run down the stairs |goto Undercity BFA/0 85.90,20.07 < 5 |walk
+label "Intro_Scenario"
 Watch the dialogue
 Report to High Overlord Saurfang |scenariogoal 1/38253 |goto Undercity BFA/0 84.42,25.60 |q 51796
 step
-Follow the path |goto 84.48,28.66 < 7 |walk
-Follow the path |goto 82.64,29.67 < 5 |walk
-Run up the stairs |goto 79.99,26.33 < 3 |walk
-Cross the bridge |goto 78.83,25.28 < 3 |walk
-Jump down here |goto 76.15,28.99 < 5 |walk
-talk Friendly NPC's
+talk Friendly NPCs
 |tip They have various names, and are highlighted around this area inside the building.
 |tip They appear on your minimap as yellow dots.
 Tell them "_The Undercity is under attack! Get to the mage portal!"_
 kill SI:7 Operative##131137+
 Secure the Mage Distrct |scenariostage 2 |goto 75.33,30.32 |q 51796
 step
-Follow the path |goto 78.45,34.22 < 7 |walk
-Follow the path |goto 79.68,38.34 < 5 |walk
-Continue following the path |goto 79.81,43.61 < 7 |walk
-Continue following the path |goto 78.43,44.31 < 5 |walk
-Continue following the path |goto 73.69,44.45 < 5 |walk
-Continue following the path |goto 70.80,50.62 < 5 |walk
+Follow the path |goto 79.69,43.74 < 15 |only if walking
 Watch the dialogue
 |tip Follow High Overlord Saurfang as he walks.
 Follow Saurfang to the Heart of the City |scenariogoal 3/38468 |goto 69.60,49.58 |q 51796
 step
-talk Friendly NPC's
+talk Friendly NPCs
 |tip They have various names, and are highlighted around this area inside the building.
-|tip They appear on your minimap as yellow dots.
 Tell them "_The Undercity is under attack! Get to the mage portal!"_
 Evacuate the Remainder of Undercity |scenariostage 4 |goto 67.21,46.18 |q 51796
 step
@@ -359,10 +347,6 @@ clicknpc Portal to Lordaeron##131087 |goto 67.08,45.95
 |tip Inside the building.
 Teleport to the Ruins of Lordaeron |goto Ruins of Lordaeron/0 48.08,74.52 < 10 |noway |c |q 51796
 step
-Follow the path |goto 47.75,72.76 < 5 |only if walking
-Run up the stairs |goto 48.12,71.28 < 5 |walk
-Enter the building |goto 48.12,70.80 < 5 |walk
-Leave the building |goto 48.14,69.35 < 3 |walk
 Watch the dialogue
 |tip Follow High Overlord Saurfang as he walks.
 Follow Saurfang to Battle |scenariogoal 5/39077 |goto 48.13,68.72 |q 51796
@@ -385,17 +369,12 @@ Kill enemies around this area
 clicknpc Wounded Horde Soldier##127065+
 |tip They look like Alliance soldiers standing with huge partially filled red bubbles above their heads around this area.
 |tip They will appear on your minimap as yellow dots.
-Use Blight on Alliance Forces to Drive Them Away |scenariostage 8 |goto 48.34,59.90 |q 51796
+Use the Blight on Alliance Forces to Drive Them Away |scenariostage 8 |goto 48.34,59.90 |q 51796
 step
-Run up the stairs |goto 48.99,72.25 < 5 |only if walking
-Run up the stairs |goto 49.14,72.77 < 5 |only if walking
-Follow the path |goto 50.22,72.79 < 5 |only if walking
-Follow the path |goto 51.19,73.08 < 5 |only if walking
-Jump down here |goto 51.53,74.33 < 5 |only if walking
-Follow the path |goto 51.87,76.16 < 7 |only if walking
-Continue following the path |goto 51.72,81.96 < 7 |only if walking
-Continue following the path |goto 51.67,86.69 < 7 |only if walking
-Continue following the path |goto 49.74,89.09 < 10 |only if walking
+Run up the stairs |goto 49.01,72.28 < 10 |only if walking
+Follow the path |goto 50.27,72.78 < 15 |only if walking
+Follow the path |goto 51.94,75.98 < 30 |only if walking
+Continue following the path |goto 51.61,86.86 < 30 |only if walking
 Watch the dialogue
 |tip Follow Nathanos Blightcaller as he runs.
 Follow Nathanos to the Keep |scenariostage 9 |goto 46.53,89.24 |q 51796
@@ -404,31 +383,23 @@ Watch the dialogue
 Intercept the Alliance |scenariostage 10 |goto 46.53,89.24 |q 51796
 step
 Kill enemies around this area
-Defeat King Anduin Wrynn and His Allies |scenariostage 11 |goto 47.59,88.80 |q 51796
+Defeat King Anduin Wrynn and His Allies |scenariostage 11 |goto 46.82,89.35 |q 51796
 step
-Follow the path |goto 51.80,86.61 < 10 |only if walking
-Continue following the path |goto 51.70,81.40 < 10 |only if walking
-Continue following the path |goto 51.92,74.87 < 10 |only if walking
-Run up the stairs |goto 51.91,74.65 < 5 |only if walking
-Run up the stairs |goto 51.75,74.16 < 5 |only if walking
-Follow the path |goto 51.45,74.02 < 5 |only if walking
-Follow the path |goto 50.98,72.86 < 5 |only if walking
-Run down the stairs |goto 49.38,72.79 < 5 |only if walking
+Run up the stairs |goto 51.91,74.60 < 10 |only if walking
+Follow the path |goto 50.81,72.81 < 15 |only if walking
 Watch the dialogue
 |tip Follow Nathanos Blightcaller as he walks.
 Follow Nathanos to Safety |scenariostage 12 |goto 48.18,74.28 |q 51796
 step
-Cross the bridge |goto 48.09,74.78 < 7 |only if walking
-Follow the path |goto 48.29,75.69 < 7 |only if walking
-Enter the building |goto 48.71,76.64 < 5 |walk
-Run down the stairs |goto 48.50,77.29 < 5 |walk
-Follow the path |goto 48.09,77.65 < 5 |walk
+Enter the building |goto 48.71,76.64 < 10 |walk
 Watch the dialogue
 Follow Sylvanas Windrunner |scenarioend |goto 48.10,78.26 |q 51796
 step
-Return to Orgrimmar |goto Orgrimmar/1 49.02,91.80 < 7 |c |q 51796 |notravel
+Return to Orgrimmar |goto Orgrimmar/1 49.02,91.80 < 10 |c |q 51796 |notravel
 step
+label "Intro_Scenario_Completed"
 talk Nathanos Blightcaller##140176
+|tip On top of the building.
 turnin The Battle for Lordaeron##51796 |goto 48.90,91.51
 step
 accept A Dying World##53028 |goto 48.90,91.51
@@ -437,7 +408,7 @@ step
 click Portal to Uldum
 Take the Portal to Uldum to Get Closer to Silithus |q 53028/1 |goto 48.87,38.55
 step
-Reach Silithus |q 53028/2 |goto Silithus/0 72.36,71.90
+Reach Silithus |q 53028/2 |goto Silithus/0 42.22,44.27
 step
 talk Magni Bronzebeard##142322
 turnin A Dying World##53028 |goto 42.22,44.27
@@ -448,8 +419,6 @@ Use the Device in Silithus to Travel to the Chamber of the Heart |q 51211/1 |got
 step
 Travel to the Chamber of Heart |goto Chamber Of Heart/0 50.12,30.35 < 10 |noway |c |q 51211
 step
-Run up the stairs |goto 50.28,43.78 < 5 |walk
-Follow the path |goto 50.25,48.90 < 5 |walk
 click Titan Console
 |tip Inside the building.
 Choose _(View events that led to Azeroth's wound)_
@@ -485,7 +454,6 @@ talk Magni Bronzebeard##136907
 turnin Infusing the Heart##52428 |goto 50.14,53.75
 accept The Speaker's Imperative##53031 |goto 50.14,53.75
 step
-Follow the path |goto 50.06,48.84 < 5 |walk
 click Teleport Pad
 |tip Inside the building.
 Return to Orgrimmar |q 53031/1 |goto 50.12,30.40
@@ -495,16 +463,13 @@ talk Nathanos Blightcaller##140176
 turnin The Speaker's Imperative##53031 |goto Orgrimmar/1 48.91,91.51
 accept Mission Statement##51443 |goto Orgrimmar/1 48.91,91.51
 step
-Enter the building |goto 49.88,75.54 < 5 |walk
-Follow the path |goto 49.93,74.55 < 3 |walk
+Enter the building |goto 49.88,75.54 < 10 |walk
 Watch the dialogue
 |tip Inside the building.
 Speak to Warchief Sylvanas Windrunner |q 51443/1 |goto 49.36,74.06
 step
-Follow the path |goto 49.16,73.48 < 5 |walk
-Follow the path |goto 49.90,74.47 < 3 |walk
-Leave the building |goto 49.87,75.51 < 3 |walk
-Enter the building |goto 53.46,78.85 < 5 |walk
+Leave the building |goto 49.87,75.51 < 10 |walk
+Enter the building |goto 53.46,78.85 < 10 |walk
 Watch the dialogue
 |tip Inside the building.
 Meet Your Team |q 51443/2 |goto 54.43,78.43
@@ -517,9 +482,19 @@ accept The Stormwind Extraction##50769 |goto 54.44,78.42
 step
 click Blightcaller's Easy Death##289645
 |tip Inside the building.
-Take a Potion |q 50769/1 |goto 54.58,78.36
+Take a Potion |q 50769/1 |goto 54.58,78.36 |or |next "Stormwind_Jail_Break"
+_Or_
+Click Here to Skip the Stormwind Extraction Scenario |or |confirm |next "Skip_Stormwind_Jail_Break"
+|tip This will allow you to skip the intro scenario if you've already completed it on another character.
 step
-Leave the building |goto 53.43,78.86 < 3 |walk
+label "Skip_Stormwind_Jail_Break"
+talk Nathanos Blightcaller##135205
+|tip Inside the building.
+Tell him _"I have heard this story before. (Skip the Scenario and port to Zuldazar Harbor in Zandalar)"_
+Skip the Stormwind Extraction |condition readyq(50769) |goto 54.44,78.42 |or |future |next "Stormwind_Jail_Break_Completed"
+step
+label "Stormwind_Jail_Break"
+Leave the building |goto 53.43,78.86 < 10 |walk
 clicknpc Skyhorn Eagle##135211
 |tip On top of the building.
 Begin Flying with the Skyhorn Eagle |invehicle |goto 49.67,93.66 |q 50769
@@ -540,34 +515,23 @@ Enter the Stockades |scenariogoal 2/39766 |goto 46.27,58.09 |q 50769
 step
 Enter the Stormwind Stockades |goto Stockcades Scenario/0 25.18,52.52 < 7 |noway |c |q 50769
 step
-Follow the path |goto 26.41,56.78 < 3 |walk
-Follow the path |goto 31.80,62.16 < 3 |walk
-Continue following the path |goto 39.01,58.88 < 5 |walk
-Run up the stairs |goto 46.50,52.68 < 5 |walk
-Follow the path |goto 52.33,45.55 < 5 |walk
+Follow the path |goto 31.80,62.16 < 10 |walk
+Run up the stairs |goto 46.51,52.52 < 15 |walk
 Meet Up With Rokhan |scenariostage 3 |goto 52.11,40.12 |q 50769
 step
-Click the Cell Door and follow the path |goto 51.06,39.60 < 3 |walk
 talk High Overlord Saurfang##134120
 |tip Inside the building.
+|tip Click the Cell Door to be able to reach him.
 Ask him _"What do you mean?"_
 Watch the dialogue
 Release Saurfang |scenariostage 4 |goto 48.01,33.48 |q 50769
 step
-Follow the path |goto 50.79,39.01 < 3 |walk
-Continue following the path |goto 54.35,45.79 < 5 |walk
-Follow the path |goto 59.80,59.49 < 3 |walk
+Follow the path |goto 59.80,59.49 < 10 |walk
 click Cell Door
 |tip Inside the building.
 Release the Other Prisoners |scenariogoal 5/39781 |goto 55.98,64.10 |q 50769
 step
-Follow the path |goto 59.75,59.62 < 3 |walk
-Follow the path |goto 54.77,46.53 < 5 |walk
-Run down the stairs |goto 55.83,41.61 < 5 |walk
-Follow the path |goto 60.87,35.62 < 5 |walk
-Continue following the path |goto 67.99,29.47 < 5 |walk
-Continue following the path |goto 75.39,26.45 < 3 |walk
-Continue following the path |goto 84.25,23.91 < 3 |walk
+Run down the stairs |goto 55.83,41.61 < 10 |walk
 Watch the dialogue
 |tip Follow your allies as they walk.
 clicknpc Stormwind Sewer Access##139948
@@ -591,54 +555,30 @@ step
 Kill the enemies that attack
 Defeat the Worgen Ambush |scenariogoal 7/39795 |goto 55.81,56.85 |q 50769
 step
-Follow the path |goto 54.91,57.23 < 7 |only if walking
-Continue following the path |goto 51.80,55.33 < 7 |only if walking
-Continue following the path |goto 50.08,52.45 < 7 |only if walking
-Continue following the path |goto 47.59,51.61 < 7 |only if walking
-Continue following the path |goto 46.55,49.47 < 7 |only if walking
-Continue following the path |goto 47.50,46.89 < 5 |only if walking
-Run up the stairs |goto 47.88,45.57 < 5 |only if walking
-Follow the path |goto 48.46,44.52 < 5 |only if walking
-Follow the path |goto 49.11,42.55 < 5 |only if walking
-Run down the stairs |goto 48.15,41.86 < 5 |only if walking
-Follow the path |goto 47.20,41.63 < 5 |only if walking
 Watch the dialogue
 |tip Follow your allies as they walk.
 talk Nathanos Blightcaller##134039
 Tell him _"I'm ready."_
 Escape Cathedral Square |scenariostage 7 |goto 45.44,43.18 |q 50769
 step
-Follow the path |goto 43.66,43.29 < 5 |only if walking
-Jump down here |goto 43.23,42.47 < 5 |only if walking
-Follow the path |goto 41.04,43.79 < 5 |only if walking
 Watch the dialogue
 |tip Follow your allies as they walk.
 kill Icy Barrier##134881
 Escape Jaina's Wrath |scenariostage 8 |goto 39.76,40.63 |q 50769
 step
-Follow the path down |goto 39.32,39.47 < 5 |only if walking
-Run down the stairs |goto 36.96,35.54 < 7 |only if walking
-Follow the path |goto 34.11,34.03 < 7 |only if walking
-Run down the stairs |goto 31.43,31.78 < 5 |only if walking
-Follow the path |goto 30.38,31.62 < 5 |only if walking
-Continue following the path |goto 29.71,30.13 < 7 |only if walking
-Continue following the path |goto 29.03,27.30 < 7 |only if walking
-Continue following the path |goto 27.15,25.72 < 7 |only if walking
 Watch the dialogue
 |tip Follow your allies as they walk.
 Reach Talanji's Ship |scenariostage 9 |goto 20.60,25.75 |q 50769
 step
-Follow the path |goto 19.31,26.72 < 5 |only if walking
-Follow the path |goto 19.31,28.46 < 5 |only if walking
-Run up the stairs |goto 20.09,28.73 < 3 |only if walking
-Follow the path |goto 20.31,29.57 < 3 |only if walking
 Watch the dialogue
 talk Princess Talanji##134092
+|tip At the top of the ship.
 Tell her _"Not at all."_
 Escape Stormwind Harbor |scenarioend |goto 20.54,28.94 |q 50769
 step
-Complete the "The Stormwind Extraction" Scenario |q 50769/3
+Complete the "The Stormwind Extraction" Scenario |q 50769/3 |next "Stormwind_Jail_Break_Completed"
 step
+label "Stormwind_Jail_Break_Completed"
 Travel to Zuldazar |goto Zuldazar/0 57.98,62.80 < 10 |noway |c |q 50769
 step
 talk Nathanos Blightcaller##121210
@@ -647,12 +587,6 @@ step
 talk Princess Talanji##132332
 accept Welcome to Zuldazar##46957 |goto 57.95,62.46
 step
-Follow the path |goto Dazar'alor/0 50.02,95.99 < 7 |only if walking
-Run up the stairs |goto Dazar'alor/0 50.73,92.75 < 5 |only if walking
-Follow the path |goto Dazar'alor/0 50.30,90.92 < 5 |only if walking
-Run up the stairs |goto Dazar'alor/0 50.01,88.70 < 7 |only if walking
-Follow the path |goto Dazar'alor/0 49.81,85.89 < 5 |only if walking
-Follow the path |goto Dazar'alor/0 49.15,83.71 < 7 |only if walking
 Watch the dialogue
 |tip Follow Princess Talanji as she walks.
 Follow Princess Talanji |q 46957/1 |goto Dazar'alor/0 49.98,82.60
@@ -661,75 +595,55 @@ talk General Jakra'zet##122661
 turnin Welcome to Zuldazar##46957 |goto 49.98,82.33
 accept Rastakhan##46930 |goto 49.98,82.33
 step
-Follow the path |goto 50.77,83.44 < 7 |only if walking
-Continue following the path |goto 51.17,86.02 < 7 |only if walking
-Continue following the path |goto 51.37,88.77 < 7 |only if walking
+Follow the path |goto 51.21,86.29 < 15 |only if walking
 talk Ripa the Wind Ripper##121252
 fpath Port of Zandalar |goto 52.10,90.12
 step
-Follow the path |goto 51.30,88.53 < 7 |only if walking
-Follow the path |goto 51.07,84.38 < 7 |only if walking
 clicknpc Enforcer's Pterrordax##135438
 Ride the Enforcer's Pterrordax to the Throne |q 46930/1 |goto 49.98,82.17
 step
+Watch the dialogue
 Ride to the Throne |goto 48.03,44.45 < 7 |c |q 46930 |notravel
 step
 talk Princess Talanji##135440
+|tip On top of the building.
 Tell her _"Take me to King Rastakhan."_
 Speak with Princess Talanji |q 46930/2 |goto 48.82,44.64
 step
 Watch the dialogue
 talk King Rastakhan##120740
+|tip On top of the building.
 turnin Rastakhan##46930 |goto 49.91,42.72
 accept Speaker of the Horde##46931 |goto 49.91,42.72
 step
-Run down the stairs |goto 49.35,44.51 < 5 |only if walking
-Follow the path |goto 48.89,44.55 < 5 |only if walking
-Follow the path |goto Dazar'alor/2 29.17,59.39 < 3 |walk
-Follow the path |goto Dazar'alor/2 28.94,68.51 < 3 |walk
+Enter the building |goto Dazar'alor/2 29.17,59.39 < 10 |walk
 Watch the dialogue
 |tip Follow Zolani as she walks.
 Follow Zolani |q 46931/1 |goto Dazar'alor/2 25.91,73.81
 step
-Ride the elevator down |goto 22.77,72.12 < 5 |walk
-Run down the stairs |goto 40.93,57.43 < 3 |only if walking
-Follow the path |goto Dazar'alor/1 42.89,45.68 < 5 |walk
-Leave the building |goto Dazar'alor/0 49.94,42.14 < 5 |walk
-Run up the stairs |goto Dazar'alor/0 49.92,40.60 < 5 |only if walking
 click Horde Banner
 Summon the Horde |q 46931/2 |goto Dazar'alor/0 49.93,39.49
 step
-Enter the building |goto 49.94,42.14 < 5 |walk
-Follow the path |goto Dazar'alor/1 51.05,29.49 < 5 |walk
-Follow the path |goto Dazar'alor/1 58.02,35.85 < 3 |walk
-Run down the stairs |goto Dazar'alor/1 66.84,53.35 < 5 |walk
+Enter the building |goto 49.94,42.14 < 10 |walk
+Follow the path |goto Dazar'alor/1 58.14,35.76 < 10 |walk
 Watch the dialogue
 |tip Inside the building.
-Explore the Hall of Ancient Paths |q 46931/4 |goto 66.92,72.06
+Explore the Hall of Ancient Paths |q 46931/4 |goto Dazar'alor/1 66.92,72.06
 step
-Run up the stairs |goto 60.34,70.34 < 5 |walk
 Watch the dialogue
 |tip Inside the building.
 Explore the Great Seal |q 46931/3 |goto 49.09,70.79
 step
-Run down the stairs |goto 43.52,70.28 < 5 |walk
 Watch the dialogue
 |tip Inside the building.
 Explore the Royal Treasury |q 46931/5 |goto Dazar'alor/0 48.76,45.89 |notravel
 step
-Run up the stairs |goto Dazar'alor/0 49.21,45.92 < 3 |walk
-Follow the path |goto Dazar'alor/1 43.34,70.12 < 5 |walk |notravel
-Run down the stairs |goto Dazar'alor/1 47.78,64.45 < 5 |walk
-Follow the path |goto Dazar'alor/1 46.36,43.95 < 5 |walk
-Follow the path |goto Dazar'alor/1 39.12,35.73 < 3 |walk
+Follow the path |goto Dazar'alor/1 39.43,35.47 < 10 |walk
 talk Chronicler To'kini##120168
 |tip Inside the building.
-turnin Speaker of the Horde##46931 |goto 33.03,43.37
-accept To Matters at Hand##52139 |goto 33.03,43.37
+turnin Speaker of the Horde##46931 |goto Dazar'alor/1 32.99,43.38
+accept To Matters at Hand##52139 |goto Dazar'alor/1 32.99,43.38
 step
-Follow the path |goto 39.43,35.86 < 3 |walk
-Run up the stairs |goto 42.01,46.47 < 5 |walk
-Follow the path |goto Dazar'alor/2 41.14,56.50 < 3 |walk
 talk Princess Talanji##133050
 |tip Inside the building.
 turnin To Matters at Hand##52139 |goto Dazar'alor/2 41.14,66.73
@@ -786,28 +700,20 @@ talk Brillin the Beauty##122690
 |tip Inside the building.
 home The Great Seal |goto Dazar'alor/1 48.86,72.64 |q 47226 |future
 step
-Ride the Elevator Up |goto Dazar'alor/2 22.58,72.07 < 5 |walk
-Leave the building |goto Dazar'alor/0 48.70,45.18 < 3 |walk
-Run up the stairs |goto Dazar'alor/0 48.90,44.49 < 5 |only if walking
+Ride the Elevator Up |goto Dazar'alor/2 22.58,72.07 < 10 |walk
 talk King Rastakhan##120740
-|tip Upstairs inside the building.
+|tip Outside, on top of the building.
 turnin Trust of a King##49615 |goto Dazar'alor/0 49.93,46.61
 accept Tal'gurub##49488 |goto Dazar'alor/0 49.93,46.61
 step
 talk Zolani##122915
-|tip Upstairs inside the building.
+|tip Outside, on top of the building.
 accept The Port of Zandalar##50835 |goto 49.81,46.56
 step
 talk Yazma##122641
-|tip Upstairs inside the building.
+|tip Outside, on top of the building.
 accept The Zanchuli Council##47445 |goto 49.72,46.51
 step
-Run down the stairs |goto 49.37,44.52 < 7 |only if walking
-Enter the building |goto 48.69,45.18 < 3 |walk
-Ride the Elevator Down |goto Dazar'alor/2 22.70,72.09 < 5 |c |q 50835
-step
-Run down the stairs |goto 41.11,56.74 < 3 |walk
-Leave the building |goto Dazar'alor/0 49.94,42.13 < 5 |walk
 talk Paku'ai Rokota##122689
 fpath The Great Seal |goto Dazar'alor/0 51.91,41.20
 step
@@ -823,20 +729,18 @@ accept The Red Market##48452 |goto 44.25,82.15
 stickystart "Collect_Dark_Fetishes"
 step
 Run down the stairs |goto 42.83,80.86 < 10 |only if walking
-Follow the path |goto 41.83,78.98 < 10 |only if walking
-Enter the building |goto 42.80,83.58 < 5 |walk
+Follow the path |goto 41.83,78.98 < 15 |only if walking
+Enter the building |goto 42.80,83.58 < 10 |walk
 click Chalice of Calling
 |tip Inside the building.
 Destroy the Chalice of Calling |q 48452/2 |goto 43.08,83.14
-step
-Leave the building |goto 42.81,83.58 < 3 |c |q 48452
 step
 label "Collect_Dark_Fetishes"
 Kill Crimson enemies around this area
 collect 3 Dark Fetishes##152461 |q 48452/1 |goto 42.29,83.76
 step
-Run up the stairs |goto 42.81,78.72 < 7 |only if walking
-Run up the stairs |goto 43.43,81.69 < 7 |only if walking
+Run up the stairs |goto 42.81,78.72 < 10 |only if walking
+Run up the stairs |goto 43.43,81.69 < 10 |only if walking
 talk Witch Doctor Jala##126148
 turnin The Red Market##48452 |goto 44.25,82.15
 accept Evidence of Evil##48454 |goto 44.25,82.15
@@ -2943,7 +2847,7 @@ talk Princess Talanji##133050
 |tip Inside the building.
 accept Journey to Nazmir##47103 |goto Dazar'alor/2 41.18,66.77
 step
-Leave the building |goto Dazar'alor/0 49.97,42.15 < 5 |walk
+Leave the building |goto Dazar'alor/0 49.97,42.15 < 10 |walk
 talk Rokhan##126549
 turnin Journey to Nazmir##47103 |goto Dazar'alor/0 51.66,41.29
 accept Nazmir, the Forbidden Swamp##48535 |goto Dazar'alor/0 51.66,41.29

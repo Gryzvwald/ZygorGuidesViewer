@@ -8083,16 +8083,18 @@ description="This guide section will walk you through completing the quest for t
 },[[
 step
 talk Wagner Hammerstrike##15011
-accept Honoring a Hero##8149 |goto Dun Morogh,59.7,34.3
+accept Honoring a Hero##8149 |goto Dun Morogh/0 59.74,34.26
 step
-Use Uther's Tribute in front of Uther's statue |use Uther's Tribute##19850
-Place a Tribute at Uther's Tomb |q 8149/1 |goto Western Plaguelands 52.0,83.4
+Enter the building |goto Western Plaguelands/0 52.06,83.15 < 5 |walk
+Use Uther's Tribute |use Uther's Tribute##19850
+|tip Inside the building.
+Place a Tribute at Uther's Tomb |q 8149/1 |goto 52.11,83.43
 step
 talk Wagner Hammerstrike##15011
-turnin Honoring a Hero##8149 |goto Dun Morogh 59.7,34.3
+turnin Honoring a Hero##8149 |goto Dun Morogh/0 59.74,34.26
 step
-You can click special food items on the table |goto Dun Morogh 59.9,34.8
-|tip Once you have completed the Honoring a Hero quest you will get an item called Bounty of the Harvest in the mail
+You Can Now Use the Food at the Table Here |goto 59.97,34.77
+|tip Once you have completed the Honoring a Hero quest you will get an item called Bounty of the Harvest in the mail.
 confirm
 step
 Congratulations, you've completed the _Harvest Festival_!

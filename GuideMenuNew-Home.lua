@@ -6,7 +6,12 @@ local GuideMenu = ZGV.GuideMenu
 GuideMenu.HomeVersion = 1
 GuideMenu.Home={
 	{"banner", image=ZGV.DIR.."\\Skins\\banner"},
-	{"title", text=[[Welcome To Zygor Guide Viewer 7]]},
+
+	{"title", text=[[Featured Content]]},
+	{"section", text=[[EVENTS]]},
+	{"item", text=[[Added |cfffe6100Harvest Festival Quest|r.]], guide="EVENTS\\Harvest Festival\\Harvest Festival Quest"},
+
+	{"title", text=[[Battle for Azeroth Content]]},
 
 	{"section", text=[[LEVELING]]},
 	{"item", text=[[Added |cfffe6100Intro & Quest Zone Choice|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"},

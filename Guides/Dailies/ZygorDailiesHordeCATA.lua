@@ -11180,19 +11180,20 @@ description="This guide section will walk you through completing the Harvest Fes
 },[[
 step
 talk Javnir Nashak##15012
-accept Honoring a Hero##8150 |goto Durotar 46.2,15.1
+accept Honoring a Hero##8150 |goto Durotar/0 46.25,15.10
 step
-Use Grom's Tribute in front of Grom's statue |use Grom's Tribute##19851
-Place a tribute at Grom's Tomb |q 8150/1 |goto Ashenvale 82.9,79.1
+use Grom's Tribute##19851
+Place a Tribute at Grom's Tomb |q 8150/1 |goto Ashenvale/0 82.85,79.04
 step
 talk Javnir Nashak##15012
-turnin Honoring a Hero##8150 |goto Durotar 46.2,15.1
+turnin Honoring a Hero##8150 |goto Durotar/0 46.25,15.10
 step
-You can click special food items on the table |goto Durotar 46.4,14.9
-|tip Once you have completed the Honoring a Hero quest you will get an item called Bounty of the Harvest in the mail
+You Can Now Use the Food at the Table Here |goto 46.53,14.80
+|tip Once you have completed the Honoring a Hero quest you will get an item called Bounty of the Harvest in the mail.
 confirm
 step
-Congratulations, you've completed the _Harvest Festival_!
+_Congratulations!_
+You Have Completed the Harvest Festival.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Brewfest\\Brewfest Quests",{
 author="support@zygorguides.com",

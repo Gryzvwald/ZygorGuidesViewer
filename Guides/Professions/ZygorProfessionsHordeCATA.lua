@@ -5633,7 +5633,7 @@ step
 Load the "Legion Alchemy Quest Line" Guide |confirm |next "Zygor's Profession Guides\\Alchemy\\Quest Guides\\Legion Alchemy Quest Line"
 |tip Click the line above to load the guide.
 |tip After completing the Legion Alchemy Quest Line, you should be around level 45 Legion Alchemy.
-Complete the Legion Alchemy Quest Line |q 42081
+Complete the Legion Alchemy Quest Line |q 42081 |future
 step
 Enter the Eye of Azshara Dungeon |goto Eye of Azshara/1 47.59,87.41 < 10000 |noway |c |q 39331
 |only if skill("Legion Alchemy") < 70
@@ -5858,7 +5858,7 @@ learn Frostweave Bandage##45545 |goto Dalaran/1 36.56,37.33
 step
 Open Your Tailoring Crafting Panel:
 _<Create 19 Frostweave Bandages>_
-Reach Level 20 Outland Tailoring |skill Northrend Tailoring,20
+Reach Level 20 Northrend Tailoring |skill Northrend Tailoring,20
 step
 talk Olisarra the Kind##28706
 |tip Inside the building.
@@ -5866,7 +5866,7 @@ learn Heavy Frostweave Bandage##45546 |goto Dalaran/1 36.56,37.33
 step
 Open Your Tailoring Crafting Panel:
 _<Create 55 Frostweave Bandages>_
-Reach Level 75 Outland Tailoring |skill Northrend Tailoring,75
+Reach Level 75 Northrend Tailoring |skill Northrend Tailoring,75
 step
 _Congratulations!_
 You Reached Level 75 Northrend Tailoring Skill.
@@ -5890,16 +5890,117 @@ learn Embersilk Bandage##74556 |goto Orgrimmar/1 38.49,86.41
 step
 Open Your Tailoring Crafting Panel:
 _<Create 24 Embersilk Bandages>_
-Reach Level 25 Outland Tailoring |skill Cataclysm Tailoring,25
+Reach Level 25 Cataclysm Tailoring |skill Cataclysm Tailoring,25
 step
 talk Mender Jessara##133109
 learn Heavy Embersilk Bandage##74557 |goto Orgrimmar/1 38.49,86.41
 step
 Open Your Tailoring Crafting Panel:
 _<Create 50 Heavy Embersilk Bandages>_
-Reach Level 75 Outland Tailoring |skill Cataclysm Tailoring,75
+Reach Level 75 Cataclysm Tailoring |skill Cataclysm Tailoring,75
 step
 _Congratulations!_
 You Reached Level 75 Cataclysm Tailoring Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Pandaria Tailoring 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Pandaria Tailoring skill from 1-75.",
+condition_end=function() return skill('Pandaria Tailoring') >= 75 end,
+condition_suggested=function() return skill('Pandaria Tailoring') > 0 and skill('Pandaria Tailoring') < 75 end,
+},[[
+step
+talk Silkmaster Tsai##57405
+Train Pandaria Tailoring |skillmax Pandaria Tailoring,75 |goto Valley of the Four Winds/0 62.67,59.75
+step
+map Townlong Steppes/0
+path follow loose;loop;ants straight;dist 60
+path	26.2,40.7	26.0,45.4	24.2,48.9
+path	23.4,52.3	21.4,54.3	18.4,50.7
+path	17.8,46.0	17.5,41.8	20.9,40.3
+Kill enemies around this area
+collect 390 Windwool Cloth##72988
+|tip You can also buy these from the Auction House.
+|only if skill("Pandaria Tailoring") < 74
+step
+map Townlong Steppes/0
+path follow loose;loop;ants straight;dist 60
+path	26.2,40.7	26.0,45.4	24.2,48.9
+path	23.4,52.3	21.4,54.3	18.4,50.7
+path	17.8,46.0	17.5,41.8	20.9,40.3
+Kill enemies around this area
+collect 10 Mote of Harmony##89112 |n
+use the Mote of Harmony##89112
+collect 1 Spirit of Harmony##76061
+|only if skill("Pandaria Tailoring") < 74
+step
+talk Silkmaster Tsai##57405
+learn Bolt of Windwool Cloth##125551 |goto Valley of the Four Winds/0 62.67,59.75
+step
+Open Your Tailoring Crafting Panel:
+_<Create 225 Bolts of Windwool Cloth>_
+Reach Level 10 Pandaria Tailoring |skill Pandaria Tailoring,10
+step
+talk Ala'thinel##65862
+|tip Inside the building.
+learn Windwool Bandage##125551 |goto Shrine of Two Moons/1 29.39,75.85
+step
+Open Your Tailoring Crafting Panel:
+_<Create 15 Windwool Bandages>_
+Reach Level 25 Pandaria Tailoring |skill Pandaria Tailoring,25
+step
+talk Ala'thinel##65862
+|tip Inside the building.
+learn Heavy Windwool Bandage##102698 |goto Shrine of Two Moons/1 29.39,75.85
+step
+Open Your Tailoring Crafting Panel:
+_<Create 35 Heavy Windwool Bandages>_
+Reach Level 60 Pandaria Tailoring |skill Pandaria Tailoring,60
+step
+talk Esha the Loommaiden##64051
+buy Pattern: Contender's Satin Cuffs##86365 |n
+use the Pattern: Contender's Satin Cuffs##86365
+learn Contender's Satin Cuffs##125544 |goto Shrine of Two Moons/1 33.01,53.87
+step
+Open Your Tailoring Crafting Panel:
+_<Create 15 Contender's Satin Cuffs>_
+Reach Level 75 Pandaria Tailoring |skill Pandaria Tailoring,75
+step
+_Congratulations!_
+You Reached Level 75 Pandaria Tailoring Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Draenor Tailoring 1-100",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Tailoring skill from 1-100.",
+condition_end=function() return skill('Draenor Tailoring') >= 100 end,
+condition_suggested=function() return skill('Draenor Tailoring') > 0 and skill('Draenor Tailoring') < 100 end,
+},[[
+step
+talk Petir Starocean##87543
+buy Draenor Tailoring##115357 |n
+use Draenor Tailoring##115357
+Train Draenor Tailoring |skillmax Draenor Tailoring,100 |goto Warspear/0 59.29,43.42
+step
+map Spires of Arak/0
+path follow strict; loop on; ants curved;dist 60
+path	44.8,65.1	44.7,67.7	45.8,68.6
+path	47.8,73.5	49.9,77.1	51.6,77.6
+path	52.5,77.3	51.0,75.8	49.2,74.8
+path	48.4,73.4	48.1,70.0	46.9,68.2
+path	46.0,66.6
+Kill enemies around this area
+collect 2945 Sumptuous Fur##111557
+|tip You can also buy these from the Auction House.
+step
+talk Petir Starocean##87543
+buy Pattern: Hexweave Embroidery##114852 |n
+use the Pattern: Hexweave Embroidery##114852
+learn Hexweave Embroidery##168836 |goto Warspear/0 59.29,43.42
+step
+Open Your Tailoring Crafting Panel:
+_<Create 98 Hexweave Embroidery>_
+Reach Level 100 Draenor Tailoring |skill Draenor Tailoring,100
+step
+_Congratulations!_
+You Reached Level 100 Draenor Tailoring Skill.
 ]])
 ZGV.BETAEND()

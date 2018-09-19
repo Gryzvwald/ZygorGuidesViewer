@@ -790,18 +790,16 @@ Overtake the Gilnean Camp |q 51754/1 |goto 66.42,27.42
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51706
-Follow the road |goto Drustvar/0 26.58,64.16 < 15 |only if walking
-accept Deadwood##51706 |goto Drustvar/0 22.97,62.11
+accept Deadwood##51706 |goto Drustvar/0 27.19,57.91
 |tip You will accept this quest automatically.
 step
-Follow the path down |goto 23.82,59.63 < 15 |only if walking
 use the Greater Control Charm##160584
 |tip Use it next to the Crimson Demolisher.
 Control the Crimson Demolisher |q 51706/1 |goto 27.19,57.91
 step
 Kill enemies around this area
 |tip Use the abilities on your action bar.
-Destroy the Witch Forces |q 51706/2 |goto 25.31,56.41
+Destroy the Witch Forces |q 51706/2 |goto 21.35,56.33
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51747
@@ -3748,6 +3746,7 @@ kill 8 Flowing Honey##131663 |q 52924/1 |goto 69.74,69.32
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52880
+Follow the path up |goto Stormsong Valley/0 52.92,75.44 < 15 |only if walking and Alliance
 accept Milden Mud Snout##52880 |goto Stormsong Valley/0 50.00,79.18
 |tip You will accept this quest automatically.
 step
@@ -4162,16 +4161,10 @@ Defeat Ellie Vern |q 52316/1 |goto 65.02,50.82
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52315
-Follow the road |goto Stormsong Valley/0 29.31,68.58 < 10 |only if walking
-Follow the path up |goto 27.86,69.90 < 10 |only if walking
-Follow the path |goto 26.11,70.21 < 10 |only if walking
-Follow the path up |goto 23.63,71.30 < 10 |only if walking
-accept Severus the Outcast##52315 |goto Stormsong Valley/0 22.58,73.21
+accept Severus the Outcast##52315 |goto Stormsong Valley/0 21.75,71.40
 |tip You will accept this quest automatically.
 step
-Jump down here |goto 22.20,71.11 < 7 |only if walking
-Follow the path up |goto 21.70,71.57 < 10 |only if walking
-Continue up the path |goto 22.05,72.58 < 7 |only if walking
+Follow the path up |goto 21.75,71.40 < 20 |only if walking
 kill Severus the Outcast##140997 |q 52315/1 |goto 22.58,73.21
 |next "Tortollan_Seekers_WQ"
 step
@@ -5266,17 +5259,15 @@ collect "Sea Dog" Grog##152667 |q 52145/1 |goto 77.04,76.27
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51245
-Follow the path up |goto Tiragarde Sound/0 67.32,22.82 < 7 |only if walking
-Continue following the path |goto 67.60,21.40 < 7 |only if walking
 accept I'm a Lumberjack and I'm Okay##51245 |goto Tiragarde Sound/0 68.31,18.42
 |tip You will accept this quest automatically.
-stickystart "Slay_Wicker_Invaders"
+stickystart "Slay_Wicker_Invaders_51245"
 step
 clicknpc Entangled Lumberjack##143791+
-|tip They look like humans tangled in vines on the ground around this area.
+|tip They look like standing humans trapped in brown tree roots on the ground around this area.
 Free #4# Entangled Lumberjacks |q 51245/1 |goto 68.31,18.42
 step
-label "Slay_Wicker_Invaders"
+label "Slay_Wicker_Invaders_51245"
 Kill enemies around this area
 Slay #8# Wicker Invaders |q 51245/2 |goto 68.31,18.42
 |next "Tortollan_Seekers_WQ"
@@ -6360,6 +6351,17 @@ step
 talk Delia Hanako##141292
 Tell her _"Begin pet battle."_
 Defeat Delia Hanako |q 52471/1 |goto 59.58,33.31
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51622
+accept Tidal Teachings##51622 |goto Boralus/0 61.78,84.81
+|tip You will accept this quest automatically.
+step
+Kill enemies around this area
+|tip Kill the ones channeling on the water around this area.
+kill Grasp from Beyond##136248
+|tip It appears in the water after you kill all of the channeling enemies around this area.
+Stop the Ritual |q 51622/1 |goto 61.78,84.81
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51621
@@ -8267,6 +8269,7 @@ kill Dark Chronicler##136428 |q 51084/1 |goto 44.12,76.51
 |next "Tortollan_Seekers_WQ"
 step
 label quest-50875
+Follow the path |goto Zuldazar/0 62.43,16.06 < 20 |only if walking
 accept Darkspeaker Jo'la##50875 |goto Zuldazar/0 65.38,10.24
 |tip You will accept this quest automatically.
 step

@@ -135,7 +135,7 @@ condition_suggested=function() return skill('Legion Alchemy') > 0 and level >= 1
 step
 talk Deucus Valdera##92458
 |tip Inside the building.
-Learn the Alchemy Profession |condition skill("Alchemy")>=1 |goto Dalaran L/10 41.32,33.41
+Learn the Alchemy Profession |condition skill("Legion Alchemy")>=1 |goto Dalaran L/10 41.32,33.41
 step
 talk Deucus Valdera##92458
 |tip Inside the building.
@@ -1641,7 +1641,7 @@ condition_suggested=function() return skill('Legion Blacksmithing') > 0 and leve
 step
 talk Alard Schmied##92183
 |tip Inside the building.
-Learn the Blacksmithing Profession |condition skill("Blacksmithing")>=1 |goto Dalaran L/10 44.15,28.71
+Learn the Blacksmithing Profession |condition skill("Legion Blacksmithing")>=1 |goto Dalaran L/10 44.15,28.71
 step
 talk Alard Schmied##92183
 |tip Inside the building.
@@ -2302,7 +2302,7 @@ condition_suggested=function() return skill('Legion Blacksmithing') > 0 and leve
 step
 talk Alard Schmied##92183
 |tip Inside the building.
-Learn the Blacksmithing Profession |condition skill("Blacksmithing")>=1 |goto Dalaran L/10 44.15,28.71
+Learn the Blacksmithing Profession |condition skill("Legion Blacksmithing")>=1 |goto Dalaran L/10 44.15,28.71
 step
 talk Khamir##125341
 accept Empyrial Strength##48055 |goto Krokuun/2 42.85,77.75
@@ -2876,7 +2876,7 @@ condition_suggested=function() return skill('Enchanting') > 0 and level >= 100 a
 step
 talk Enchanter Nalthanis##93531
 |tip Inside the building.
-Learn the Enchanting Profession |condition skill("Enchanting")>=1 |goto Dalaran L/10 38.28,40.33
+Learn the Enchanting Profession |condition skill("Legion Enchanting")>=1 |goto Dalaran L/10 38.28,40.33
 step
 talk Enchanter Nalthanis##93531
 |tip Inside the building.
@@ -3506,7 +3506,7 @@ condition_suggested=function() return skill('Legion Engineering') > 0 and level 
 step
 talk Timofey Oshenko##92194
 |tip Inside the building.
-Learn the Engineering Profession |condition skill("Engineering")>=1 |goto Dalaran L/10 37.89,26.10
+Learn the Engineering Profession |condition skill("Legion Engineering")>=1 |goto Dalaran L/10 37.89,26.10
 step
 talk Hobart Grapplehammer##93539
 |tip Inside the building.
@@ -3943,7 +3943,7 @@ condition_suggested=function() return skill('Legion Engineering') > 0 and level 
 step
 talk Timofey Oshenko##92194
 |tip Inside the building.
-Learn the Engineering Profession |condition skill("Engineering")>=1 |goto Dalaran L/10 37.89,26.10
+Learn the Engineering Profession |condition skill("Legion Engineering")>=1 |goto Dalaran L/10 37.89,26.10
 step
 Complete the Quest _"The Defiler's Legacy"_ |condition completedq(47690)
 |tip This is part of the Argus campaign guide.
@@ -4522,7 +4522,7 @@ condition_suggested=function() return skill('Legion Herbalism') > 0 and level >=
 step
 talk Kuhuine Tenderstride##92464
 |tip Inside the building.
-Learn the Herbalism Profession |condition skill("Herbalism")>=1 |goto Dalaran L/10 43.02,33.37
+Learn the Herbalism Profession |condition skill("Legion Herbalism")>=1 |goto Dalaran L/10 43.02,33.37
 step
 map Azsuna/0
 path	follow smart; loop on; ants curved; dist 20
@@ -5305,7 +5305,7 @@ condition_suggested=function() return skill('Legion Herbalism') > 0 and level >=
 step
 talk Kuhuine Tenderstride##92464
 |tip Inside the building.
-Learn the Herbalism Profession |condition skill("Herbalism")>=1 |goto Dalaran L/10 43.02,33.37
+Learn the Herbalism Profession |condition skill("Legion Herbalism")>=1 |goto Dalaran L/10 43.02,33.37
 step
 map Krokuun/0
 path	follow smart; loop on; ants curved; dist 20
@@ -5445,7 +5445,7 @@ condition_suggested=function() return skill('Legion Inscription') > 0 and level 
 step
 talk Professor Pallin##92195
 |tip Inside the building.
-Learn the Inscription Profession |condition skill("Inscription")>=1 |goto Dalaran L/10 41.27,37.02
+Learn the Inscription Profession |condition skill("Legion Inscription")>=1 |goto Dalaran L/10 41.27,37.02
 step
 talk Professor Pallin##92195
 |tip Inside the building.
@@ -6054,7 +6054,7 @@ condition_suggested=function() return skill('Legion Jewelcrafting') > 0 and leve
 step
 talk Timothy Jones##93527
 |tip Inside the building.
-Learn the Jewelcrafting Profession |condition skill("Jewelcrafting")>=1 |goto Dalaran L/10 40.06,35.30
+Learn the Jewelcrafting Profession |condition skill("Legion Jewelcrafting")>=1 |goto Dalaran L/10 40.06,35.30
 step
 talk Tiffany Cartier##93526
 |tip Inside the building.
@@ -6605,7 +6605,7 @@ condition_suggested=function() return skill('Legion Jewelcrafting') > 0 and leve
 step
 talk Timothy Jones##93527
 |tip Inside the building.
-Learn the Jewelcrafting Profession |condition skill("Jewelcrafting")>=1 |goto Dalaran L/10 40.06,35.30
+Learn the Jewelcrafting Profession |condition skill("Legion Jewelcrafting")>=1 |goto Dalaran L/10 40.06,35.30
 step
 Complete the Quest _"The Path Forward"_ |condition completedq(46941)
 |tip This is part of the Argus campaign guide.
@@ -6766,7 +6766,7 @@ condition_suggested=function() return skill('Legion Leatherworking') > 0 and lev
 step
 talk Namha Moonwater##93523
 |tip Inside the building.
-Learn the Leatherworking Profession |condition skill("Leatherworking")>=1 |goto Dalaran L/10 35.06,29.40
+Learn the Leatherworking Profession |condition skill("Legion Leatherworking")>=1 |goto Dalaran L/10 35.06,29.40
 step
 talk Namha Moonwater##93523
 |tip Inside the building.
@@ -7432,7 +7432,7 @@ condition_suggested=function() return skill('Legion Leatherworking') > 0 and lev
 step
 talk Namha Moonwater##93523
 |tip Inside the building.
-Learn the Leatherworking Profession |condition skill("Leatherworking")>=1 |goto Dalaran L/10 35.06,29.40
+Learn the Leatherworking Profession |condition skill("Legion Leatherworking")>=1 |goto Dalaran L/10 35.06,29.40
 step
 talk Enstraa##125349
 accept Counterbalancing##48078 |goto Krokuun/2 38.85,73.63
@@ -7701,7 +7701,7 @@ condition_suggested=function() return skill('Legion Mining') > 0 and level >= 10
 step
 talk Mama Diggs##93189
 |tip Upstairs inside the building.
-Learn the Mining Profession |condition skill("Mining")>=1 |goto Dalaran L/10 46.06,26.67
+Learn the Mining Profession |condition skill("Legion Mining")>=1 |goto Dalaran L/10 46.06,26.67
 step
 map Val'sharah/0
 path	follow smart; loop on; ants curved; dist 20
@@ -8168,7 +8168,7 @@ condition_suggested=function() return skill('Legion Mining') > 0 and level >= 11
 step
 talk Mama Diggs##93189
 |tip Upstairs inside the building.
-Learn the Mining Profession |condition skill("Mining")>=1 |goto Dalaran L/10 46.06,26.67
+Learn the Mining Profession |condition skill("Legion Mining")>=1 |goto Dalaran L/10 46.06,26.67
 step
 map Krokuun/0
 path	follow smart; loop on; ants curved; dist 20
@@ -8376,7 +8376,7 @@ condition_suggested=function() return skill('Legion Skinning') > 0 and level >= 
 step
 talk Kondal Huntsworn##93541
 |tip Inside the building.
-Learn the Skinning Profession |condition skill("Skinning")>=1 |goto Dalaran L/10 36.04,27.96
+Learn the Skinning Profession |condition skill("Legion Skinning")>=1 |goto Dalaran L/10 36.04,27.96
 step
 Reach Level 675 Skinning |skill Skinning,675
 |tip Use the Skinning 1-700 guide to accomplish this.
@@ -8785,7 +8785,7 @@ condition_suggested=function() return skill('Legion Skinning') > 0 and level >= 
 step
 talk Kondal Huntsworn##93541
 |tip Inside the building.
-Learn the Skinning Profession |condition skill("Skinning")>=1 |goto Dalaran L/10 36.04,27.96
+Learn the Skinning Profession |condition skill("Legion Skinning")>=1 |goto Dalaran L/10 36.04,27.96
 step
 Follow the path |goto Krokuun/0 61.70,46.61 < 15 |only if walking
 Follow the path |goto 62.84,44.72 < 15 |only if walking
@@ -8968,11 +8968,7 @@ condition_suggested=function() return skill('Legion Tailoring') > 0 and level >=
 step
 talk Tanithria##93542
 |tip Inside the building.
-Learn the Tailoring Profession |condition skill("Tailoring")>=1 |goto Dalaran L/10 34.97,34.63
-step
-talk Tanithria##93542
-|tip Inside the building.
-accept Sew It Begins##38944 |goto 34.99,34.61
+accept Sew It Begins##38944 |goto Dalaran L/10 34.99,34.61
 step
 collect 10 Shal'dorei Silk##124437 |q 38944/1
 |tip Use the "Shal'dorei Silk" farming guide to accomplish this.
@@ -9001,7 +8997,8 @@ collect 20 Tanithria's Silkweave##127286 |goto 35.39,33.81 |q 38945
 step
 click Tanithria's Finishing Table
 _<Create 1 Handcrafted Silkweave Robe>_
-Craft a Silkweave Robe at Tanithria's Finishing Table |q 38945/1 |goto 35.13,33.86
+|tip It will be under the "Training" section.
+Craft a Silkweave Robe at Tanithria's Finishing Table |q 38945/5 |goto 35.13,33.86
 step
 talk Tanithria##93542
 |tip Inside the building.
@@ -9066,6 +9063,7 @@ accept The Wayward Tailor##38950 |goto 60.08,34.87
 step
 talk Lalla Brightweave##93524
 |tip Inside the building.
+Tell her _"I need somebody summoned up to Dalaran. Can you help me?"_
 Speak with Lalla Brightweave |q 38950/1 |goto Dalaran L/10 36.07,32.92
 step
 talk Tanithria##93542
@@ -9091,6 +9089,7 @@ accept Meticulous Precision##38952 |goto Dalaran L/10 35.00,34.59
 step
 talk Tiffany Cartier##93526
 |tip Inside the building.
+Tell her _"I was told you can sharpen these needles for me."_
 Watch the dialogue
 collect Sharpened Spritethorn##127043 |q 38952/1 |goto 40.27,34.68
 step
@@ -9115,6 +9114,10 @@ step
 click Tanithria's Green Dye##242639
 |tip It looks like a small glass bottle with green liquid in it on the shelf.
 collect Tanithria's Green Dye##127292 |goto 35.30,34.99 |q 38953
+step
+collect 20 Shal'dorei Silk##124437 |q 38953
+|tip Use the "Shal'dorei Silk" farming guide to accomplish this.
+|tip You can also purchase them from the Auction House.
 step
 click Tanithria's Finishing Table
 _<Create 1 Basic Silkweave Robe>_
@@ -9168,6 +9171,10 @@ step
 click Tanithria's Blue Dye##242637
 |tip It looks like a small glass bottle with blue liquid in it on the shelf.
 collect Tanithria's Blue Dye##127290 |goto 35.46,34.94 |q 38955
+step
+collect 20 Shal'dorei Silk##124437 |q 38955
+|tip Use the "Shal'dorei Silk" farming guide to accomplish this.
+|tip You can also purchase them from the Auction House.
 step
 click Tanithria's Finishing Table
 _<Create 1 Handcrafted Silkweave Bag>_
@@ -9731,7 +9738,7 @@ condition_suggested=function() return skill('Legion Tailoring') > 0 and level >=
 step
 talk Tanithria##93542
 |tip Inside the building.
-Learn the Tailoring Profession |condition skill("Tailoring")>=1 |goto Dalaran L/10 34.97,34.63
+Learn the Tailoring Profession |condition skill("Legion Tailoring")>=1 |goto Dalaran L/10 34.97,34.63
 step
 Complete the Quest _"The Sigil of Awakening"_ |condition completedq(48107)
 |tip This is part of the Argus campaign guide.
