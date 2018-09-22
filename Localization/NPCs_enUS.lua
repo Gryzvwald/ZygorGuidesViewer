@@ -30076,4 +30076,15 @@ ZygorGuidesViewer_L("NPCs", "enUS", function() return {
 [138793]="Taskmaster Burlok|",
 [139141]="Commander Alvingham|",
 [130902]="Creepy Spider|",
+[134106]="Lumbergrasp Sentinel|",
+[141553]="Trapped Hatchling|",
+[133531]="Xu'ba|",
+[134125]="Feng|",
+[134126]="Pao-me|",
+[134117]="Chao|",
+[140871]="Alliance Footman|",
+[111998]="Horde Grunt|",
+[140810]="Horde Grunt|",
+[107543]="Armored Snowy Gryphon|",
+
 } end)

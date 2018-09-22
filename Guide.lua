@@ -236,9 +236,10 @@ function Guide:GetCompletion(mode)
 	elseif mode=="steps" then
 		local count,comp = 0,0
 		for si,step in ipairs(self.steps) do
-			if not step:IsAuxiliary() and step:AreRequirementsMet() then
+			local iscomplete, ispossible = step:IsComplete()
+			if (iscomplete or ispossible) and not step:IsAuxiliary() and step:AreRequirementsMet() then
 				count=count+1
-				if step:IsComplete() then comp=comp+1 end
+				if iscomplete then comp=comp+1 end
 			end
 		end
 		return count>0 and comp/count or 0, comp,count

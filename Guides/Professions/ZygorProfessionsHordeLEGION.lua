@@ -3,128 +3,73 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("ProfessionsHLEGION") then return end
 ZygorGuidesViewer.GuideMenuTier = "LEG"
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 700-800 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Legion Alchemy 1-100",{
 author="support@zygorguides.com",
-description="This guide will walk you through leveling your Alchemy profession from 700-800.",
-startlevel=100.0,
+description="This guide will walk you through leveling your Legion Alchemy skill from 1-100.",
 condition_end=function() return skill('Legion Alchemy') >= 100 end,
-condition_suggested=function() return skill('Legion Alchemy') > 0 and skill('Legion Alchemy') < 100 and level >= 100 end,
+condition_suggested=function() return skill('Legion Alchemy') > 0 and skill('Legion Alchemy') < 100 end,
 },[[
 step
-_Before Starting This Guide:_
-Complete the "Alchemy Quest Line" Guide
-Click Here to Continue |confirm
+Enter the building |goto Dalaran L/10 41.28,31.54 < 5 |walk
+talk Linzy Blackbolt##92456
+Train Legion Alchemy |skillmax Legion Alchemy,100|goto 42.03,31.79
 step
-talk Patricia Egan##92457
-|tip Inside the building.
-buy Recipe: Ancient Healing Potion##127935 |n
-Use the Recipe: Ancient Healing Potion |use Recipe: Ancient Healing Potion##127935
-Learn the Rank 2 Recipe for Ancient Healing Potion |learn Ancient Healing Potion##188300
+Load the "Legion Alchemy Quest Line" Guide |confirm |next "Zygor's Profession Guides\\Alchemy\\Quest Guides\\Legion Alchemy Quest Line"
+|tip Click the line above to load the guide.
+|tip After completing the Legion Alchemy Quest Line, you should be around level 45 Legion Alchemy.
+Complete the Legion Alchemy Quest Line |q 42081 |future
 step
-talk Patricia Egan##92457
-|tip Inside the building.
-buy 600 Crystal Vial##3371 |n
-|tip They're cheap, so just stock up on a lot now, so you don't have to buy more constantly.
-collect 600 Crystal Vial##3371 |goto Dalaran L/10 42.18,32.31
+Enter the Eye of Azshara Dungeon |goto Eye of Azshara/1 47.59,87.41 < 10000 |noway |c |q 39331
+|only if skill("Legion Alchemy") < 70
 step
-collect 80 Yseralline Seed##128304
-|tip You get these by gathering any herb in Legion, if you have Herbalism.
-|tip Use the farming guides for Aethril, Dreamleaf, Foxflower, Fjarnskaggl, or Starlight Rose to accomplish this.
-|tip You can also purchase them from the Auction House.
+kill Wrath of Azshara##96028
+collect Recipe: Leytorrent Potion##127929 |n
+use the Recipe: Leytorrent Potion##127929
+learn Leytorrent Potion (Rank 2)##188335
 step
-Open Your Alchemy Crafting Panel:
-_<Create 20 Ancient Healing Potion>_
-Reach Level 720 Alchemy |skill Legion Alchemy,720
-step
-Open Your Alchemy Crafting Panel:
-_<Create Ancient Healing Potion>_
-|tip You will need 4 Yseralline Seeds per potion.
-|tip The number you will need to create is random, since you will discover the recipe randomly while crafting.
-|tip Use the farming guides for Aethril, Dreamleaf, Foxflower, Fjarnskaggl, or Starlight Rose to gather
-|tip Yseralline Seeds, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|tip A good method would be to make 100 potions at a time until you discover the Rank 3 recipe.
-collect Recipe: Ancient Healing Potion##127935 |n
-|tip This item will randomly be placed in your bags at some point while crafting Rank 2 Ancient Healing Potions.
-Use Recipe: Ancient Healing Potion |use Recipe: Ancient Healing Potion##127935
-Learn the Rank 3 Recipe for Ancient Healing Potion |learn Ancient Healing Potion##188300
-step
-collect 80 Yseralline Seed##128304
-|tip You get these by gathering any herb in Legion, if you have Herbalism.
-|tip Use the farming guides for Aethril, Dreamleaf, Foxflower, Fjarnskaggl, or Starlight Rose to accomplish this.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Alchemy Crafting Panel:
-_<Create 20 Ancient Healing Potion>_
-Reach Level 740 Alchemy |skill Alchemy,740
-step
-collect 70 Aethril##124101
-|tip Use the Aethril farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 70 Dreamleaf##124102
-|tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-step
-collect 49 Starlight Rose##124105
+collect 25 Starlight Rose##124105
 |tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 70
 step
-Open Your Alchemy Crafting Panel:
-_<Create 7 Flask of Ten Thousand Scars>_
-Reach Level 761 Alchemy |skill Alchemy,761
-step
-Open Your Alchemy Crafting Panel:
-_<Create Ancient Healing Potion>_
-|tip You will need 7 Starlight Rose, 10 Aethril, and 10 Dreamleaf per potion.
-|tip The number you will need to create is random, since you will discover the recipe randomly while crafting.
-|tip Use the farming guides for Aethril, Dreamleaf, and Starlight Rose to gather them, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|tip A good method would be to make 100 potions at a time until you discover the Rank 3 recipe.
-collect Recipe: Flask of Ten Thousand Scars##127951 |n
-|tip This item will randomly be placed in your bags at some point while crafting Rank 2 Flasks of Ten Thousand Scars.
-Use Recipe: Flask of Ten Thousand Scars |use Recipe: Flask of Ten Thousand Scars##127951
-Learn the Rank 3 Recipe for Flask of Ten Thousand Scars |learn Flask of Ten Thousand Scars##188348
-step
-collect 70 Aethril##124101
+collect 50 Aethril##124101
 |tip Use the Aethril farming guide to gather these, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 70
 step
-collect 70 Dreamleaf##124102
+collect 50 Dreamleaf##124102
 |tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
-step
-collect 49 Starlight Rose##124105
-|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 70
 step
 Open Your Alchemy Crafting Panel:
-_<Create 7 Flask of Ten Thousand Scars>_
-Reach Level 782 Alchemy |skill Alchemy,782
+_<Create 20 Leytorrent Potions>_
+Reach Level 70 Legion Alchemy |skill Legion Alchemy,70
 step
-collect 400 Aethril##124101
+collect 420 Starlight Rose##124105
+|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 99
+step
+collect 600 Aethril##124101
 |tip Use the Aethril farming guide to gather these, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 99
 step
-collect 400 Dreamleaf##124102
+collect 600 Dreamleaf##124102
 |tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
-step
-collect 280 Starlight Rose##124105
-|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
+|only if skill("Legion Alchemy") < 99
 step
 Open Your Alchemy Crafting Panel:
-|tip You may have to make a few more or less, depending on your luck.
-|tip The recipe will turn green and stop giving a guaranteed skill up each time you make it.
-_<Create 40 Flask of Ten Thousand Scars>_
-|tip If you need more, use the farming guides for Aethril, Dreamleaf, and Starlight Rose to gather them, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-Reach Level 800 Alchemy |skill Alchemy,800
+_<Create 30 Flask of Ten Thousand Scars>_
+Reach Level 100 Legion Alchemy |skill Legion Alchemy,100
 step
 _Congratulations!_
-You reached level 800 with the Alchemy profession.
+You Reached Level 100 Legion Alchemy Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Alchemy\\Quest Guides\\Legion Alchemy Quest Line",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Alchemy quest line.",
@@ -8826,6 +8771,130 @@ step
 _Congratulations!_
 You completed the Argus Skinning questline.
 ]])
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Legion Tailoring 1-100",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Legion Tailoring skill from 1-100.",
+condition_end=function() return skill('Legion Tailoring') >= 100 end,
+condition_suggested=function() return skill('Legion Tailoring') > 0 and skill('Legion Tailoring') < 100 end,
+},[[
+step
+talk Tanithria##93542
+|tip Inside the building.
+Train Legion Tailoring |skillmax Legion Tailoring,100 |goto Dalaran L/10 34.99,34.61
+step
+Load the "Legion Tailoring Quest Line" Guide |confirm |next "Zygor's Profession Guides\\Tailoring\\Quest Guides\\Legion Tailoring Quest Line"
+|tip Click the line above to load the guide.
+|tip After completing the Legion Tailoring Quest Line, you should be around level 45 Legion Tailoring.
+Complete the Legion Tailoring Quest Line |q 38974 |future
+step
+collect 600 Shal'dorei Silk##124437
+|tip Use the "Shal'dorei Silk" farming guide to accomplish this.
+|tip You can also purchase them from the Auction House.
+If You Have "Blood of Sargeras", You Can Also Trade One For 10 Cloth Here [Dalaran L/10 44.79,31.91]
+|only if skill("Legion Tailoring") < 40
+step
+talk Olisarra the Kind##93529
+|tip Inside the building.
+learn Silkweave Bandage##202853 |goto Dalaran L/10 35.96,37.53
+step
+Open Your Tailoring Crafting Panel:
+_<Create 29 Silkweave Bandages>_
+Reach Level 30 Legion Tailoring |skill Legion Tailoring,30
+step
+talk Lalla Brightweave##93524
+|tip Inside the building.
+buy Pattern: Silkweave Pantaloons##137956 |n
+use the Pattern: Silkweave Pantaloons##137956
+learn Silkweave Pantaloons Rank 2##185937 |goto Dalaran L/10 36.07,32.93
+step
+Open Your Tailoring Crafting Panel:
+_<Create 10 Silkweave Pantaloons>_
+Reach Level 40 Legion Tailoring |skill Legion Tailoring,40
+step
+talk Lalla Brightweave##93524
+|tip Inside the building.
+buy 10 Runic Catgut##127037 |goto Dalaran L/10 36.05,32.89
+step
+Open Your Tailoring Crafting Panel:
+_<Create 10 Silkweave Bracers>_
+Reach Level 50 Legion Tailoring |skill Legion Tailoring,50
+step
+collect 30 Arkhana##124440 |c
+|tip You can get these by disenchanting Legion level Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+If You Have "Blood of Sargeras", You Can Also Trade One For 10 Arkhana Here [Dalaran L/10 44.79,31.91]
+|only if skill("Legion Tailoring") < 60
+step
+Open Your Tailoring Crafting Panel:
+_<Create 10 Imbued Silkweaves>_
+Reach Level 60 Legion Tailoring |skill Legion Tailoring,60
+step
+talk Olisarra the Kind##93529
+|tip Inside the building.
+learn Silkweave Splint##202854 |goto Dalaran L/10 35.96,37.53
+step
+collect 95 Leystone Ore##123918 |c
+|tip Use the "Leystone Ore & Felslate (Mining Route)" guide to gather them, if you have Mining.
+|tip You can also purchase them from the Auction House.
+If You Have "Blood of Sargeras", You Can Also Trade One For 10 Ore Here [Dalaran L/10 44.79,31.91]
+|only if skill("Legion Tailoring") < 90
+step
+Open Your Tailoring Crafting Panel:
+_<Create 30 Silkweave Splints>_
+Reach Level 90 Legion Tailoring |skill Legion Tailoring,90
+step
+talk Lalla Brightweave##93524
+|tip Inside the building.
+buy Pattern: Imbued Silkweave Bracers##137965 |n
+use the Pattern: Imbued Silkweave Bracers##137965
+learn Silkweave Bracers##185946 |goto Dalaran L/10 36.05,32.89
+step
+Load "The Nightfallen" Reputation Guide |confirm |next "Zygor's Reputations Guides\\Legion Reputations\\The Nightfallen"
+|tip Click the line above to load the guide.
+Gain Exalted Reputation with The Nighfallen |condition rep("The Nighfallen")>=Exalted
+step
+talk First Arcanist Thalyssra##115736
+buy Pattern: Imbued Silkweave Bracers##137973 |n
+use the Pattern: Imbued Silkweave Bracers##137973
+learn Imbued Silkweave Bracers##185954 |goto Suramar/0 36.49,45.83
+step
+collect 850 Shal'dorei Silk##124437
+|tip Use the "Shal'dorei Silk" farming guide to accomplish this.
+|tip You can also purchase them from the Auction House.
+If You Have "Blood of Sargeras", You Can Also Trade One For 10 Cloth Here [Dalaran L/10 44.79,31.91]
+|only if skill("Legion Tailoring") < 100
+step
+collect 30 Arkhana##124440 |c
+|tip You can get these by disenchanting Legion level Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+If You Have "Blood of Sargeras", You Can Also Trade One For 10 Arkhana Here [Dalaran L/10 44.79,31.91]
+|only if skill("Legion Tailoring") < 100
+step
+collect 800 Stormscale##124115
+|tip Use the "Stormscale" farming guide to accomplish this.
+|tip You can also purchase them from the Auction House.
+If You Have "Blood of Sargeras", You Can Also Trade One For 10 Scales Here [Dalaran L/10 44.79,31.91]
+|only if skill("Legion Tailoring") < 100
+step
+talk Lalla Brightweave##93524
+|tip Inside the building.
+buy 10 Runic Catgut##127037 |goto Dalaran L/10 36.05,32.89
+|only if skill("Legion Tailoring") < 100
+step
+Open Your Tailoring Crafting Panel:
+_<Create 85 Imbued Silkweaves>_
+collect 85 Imbued Silkweave##127004
+|only if skill("Legion Tailoring") < 100
+step
+Open Your Tailoring Crafting Panel:
+_<Create 10 Imbued Silkweave Bracers>_
+Reach Level 100 Legion Tailoring |skill Legion Tailoring,100
+step
+_Congratulations!_
+You Reached Level 100 Legion Tailoring Skill.
+]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Farming Guides\\Lightweave Cloth",{
 author="support@zygorguides.com",
 description="This guide will walk you through farming Lightweave Cloth for various Tailoring recipes.",
@@ -8885,78 +8954,6 @@ kill Crawliac Hagfeather##95266+, Crawliac Deathscreamer##95265+, Skywhisker Loy
 |tip You can create the enchant, if you have Enchanting.
 |tip You can also purchase it from the Auction House.
 collect Shal'dorei Silk##124437 |n
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 700-800 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Tailoring profession from 700-800.",
-startlevel=100.0,
-condition_end=function() return skill('Legion Tailoring') >= 100 end,
-condition_suggested=function() return skill('Legion Tailoring') > 0 and skill('Legion Tailoring') < 100 and level >= 100 end,
-},[[
-step
-_Before Starting This Guide:_
-Complete the "Tailoring Quest Line" Guide
-Click Here to Continue |confirm
-step
-collect 650 Shal'dorei Silk##124437 |c |skill Tailoring,800
-|tip Use the "Shal'dorei Silk" farming guide to accomplish this.
-|tip You can also purchase them from the Auction House.
-step
-collect 165 Arkhana##124440 |c |skill Tailoring,800
-|tip You can get these by disenchanting Legion level Uncommon (green) armor and weapons, if you have Enchanting.
-|tip You can also purchase them from the Auction House.
-step
-Open Your Tailoring Crafting Panel:
-_<Create 55 Imbued Silkweave>_
-Reach Level 755 Tailoring |skill Tailoring,755
-collect 550 Imbued Silkweave##127004 |c |skill Tailoring,800
-step
-Follow the path up |goto Val'sharah/0 68.45,48.55 < 20 |only if walking
-talk Leyweaver Erenyi##93974
-buy 1 Pattern: Imbued Silkweave Cinch##127022 |n
-|tip This pattern costs 100 Shal'dorei Silk.
-Use the Pattern: Imbued Silkweave Cinch |use Pattern: Imbued Silkweave Cinch##127022
-Learn the Rank 1 Pattern for Imbued Silkweave Cinch |learn Imbued Silkweave Cinch##185927 |goto Val'sharah/0 70.45,46.40
-step
-talk Raethan##97359
-|tip For 5 gold, you can hire a bodyguard that will prevent you from attacking, or being attacked by, other players.
-|tip The bodyguard lasts for 5 minutes.
-Kill enemies around this area
-|tip Named enemies will appear throughtout the Underbelly.
-|tip You can see them on your minimap as gold star icons.
-|tip You can also kill other players, if you enjoy PvP.
-|tip If you have the "No Guards" debuff, this means the area is currently free-for-all PvP.
-|tip When the guards are present, the named PvE enemies will appear.
-collect 750 Sightless Eyes |condition curcount(1149) >= 750 |goto Dalaran L/11 68.95,58.41
-step
-Follow the path down |goto 64.41,58.55 < 15 |walk
-Run up the stairs |goto 59.34,76.48 < 15 |walk
-talk Strap Bucklebolt##107760
-buy Pattern: Imbued Silkweave Cinch##137966 |n
-Use the Pattern: Imbued Silkweave Cinch |use Pattern: Imbued Silkweave Cinch##137966
-Learn the Rank 2 Pattern for Imbued Silkweave Cinch |learn Imbued Silkweave Cinch##185947 |goto 66.42,81.48
-step
-talk Strap Bucklebolt##107760
-buy Pattern: Imbued Silkweave Cinch##137974 |n
-Use the Pattern: Imbued Silkweave Cinch |use Pattern: Imbued Silkweave Cinch##137974
-Learn the Rank 3 Pattern for Imbued Silkweave Cinch |learn Imbued Silkweave Cinch##185955 |goto 66.42,81.48
-step
-collect 120 Blood of Sargeras##124124 |c |skill Tailoring,800
-|tip You can get these as rewards for certain world quests or killing dungeon bosses.
-|tip Use the "World Quests" guide and dungeon guides to accomplish this.
-|tip You can also get them by gathering with gathering professions at rank 2 or higher.
-|tip Use the Farming guides to accomplish this.
-step
-Open Your Tailoring Crafting Panel:
-|tip You may have to make a few more or less, depending on your luck.
-|tip The recipe will turn green and stop giving a guaranteed skill up each time you make it.
-_<Create 60 Imbued Silkweave Cinch>_
-|tip If you need to make more, craft more Imbued Silkweave.
-|tip You can also purchase them from the Auction House.
-Reach Level 800 Tailoring |skill Tailoring,800
-step
-_Congratulations!_
-You reached level 800 with the Tailoring profession.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Tailoring\\Quest Guides\\Legion Tailoring Quest Line",{
 author="support@zygorguides.com",

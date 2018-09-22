@@ -3,26 +3,18 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("ProfessionsHWOD") then return end
 ZygorGuidesViewer.GuideMenuTier = "WOD"
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 600-700 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Draenor Alchemy 1-100",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Draenor Alchemy skill from 1-100.",
 condition_end=function() return skill('Draenor Alchemy') >= 100 end,
-condition_suggested=function() return skill('Draenor Alchemy') > 0 and skill('Draenor Alchemy') < 100 and level >= 90 end,
+condition_suggested=function() return skill('Draenor Alchemy') > 0 and skill('Draenor Alchemy') < 100 end,
 },[[
 step
-Before you continue, open your Alchemy window to detect your profession |cast Alchemy##2259
-skillmax Alchemy,600
-step
-#include "Garrison_ArchitectTable"
-Select the _Small_ tab at the top
-Drag _Alchemy Lab_ to a _Small Plot_
-Build your Alchemy Lab |havebuilding Alchemy
-step
-#include "Garrison_Small_Building",action="talk Albert de Hyde##79813",building="Alchemy"
-buy A Treatise on the Alchemy of Draenor##109558 |condition skillmax("Alchemy")>=700
-step
+talk Joshua Alvarez##87542
+buy A Treatise on the Alchemy of Draenor##109558 |n
 use A Treatise on the Alchemy of Draenor##109558
-skillmax Alchemy,700
+Train Draenor Alchemy |skillmax Draenor Alchemy,100 ||goto Warspear/0 60.98,27.37
 step
 map Frostfire Ridge
 path follow loose;loop;ants straight;dist 60
@@ -42,10 +34,20 @@ path	57.9,57.5	53.8,55.8	50.6,54.7
 path	47.7,55.6	45.9,58.9	43.1,60.8
 path	40.3,62.1	37.7,58.7	36.5,56.5
 path	35.5,53.3	33.6,49.2	31.1,51.2
-Follow the path and gather Frostweed
-|tip Make sure you have find herbs turned on.
-collect 50 Frostweed##109124 |condition skill("Alchemy")>=700
-|tip You can also buy these materials from the Auction House.
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 5 Frostweed##109124
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Alchemy") < 2
+step
+Open Your Alchemy Crafting Panel:
+_<Create 1 Secret of Draenor Alchemy>_
+Reach Level 2 Draenor Alchemy |skill Draenor Alchemy,2
+step
+talk Joshua Alvarez##87542
+buy Recipe: Draenic Agility Potion##112038 |n
+use the Recipe: Draenic Agility Potion##112038
+learn Draenic Agility Potion##156577 |goto Warspear/0 60.97,27.36
 step
 map Frostfire Ridge
 path follow loose;loop;ants straight;dist 60
@@ -65,10 +67,20 @@ path	57.9,57.5	53.8,55.8	50.6,54.7
 path	47.7,55.6	45.9,58.9	43.1,60.8
 path	40.3,62.1	37.7,58.7	36.5,56.5
 path	35.5,53.3	33.6,49.2	31.1,51.2
-Follow the path and gather Fireweed
-|tip Make sure you have find herbs turned on.
-collect 396 Fireweed##109125 |condition skill("Alchemy")>=700
-|tip You can also buy these materials from the Auction House.
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 350 Fireweed##109125
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Alchemy") < 55
+step
+Open Your Alchemy Crafting Panel:
+_<Create 53 Draenic Agility Potions>_
+Reach Level 55 Draenor Alchemy |skill Draenor Alchemy,55
+step
+talk Joshua Alvarez##87542
+buy Recipe: Draenic Agility Flask##112024 |n
+use the Recipe: Draenic Agility Flask##112024
+learn Draenic Agility Flask##156561 |goto Warspear/0 60.97,27.36
 step
 map Shadowmoon Valley D
 path follow loose;loop;ants straight;dist 60
@@ -108,36 +120,20 @@ path	24.1,26.7	22.7,26.1	21.4,24.8
 path	22.3,24.2	23.7,23.1	25.1,20.8
 path	24.3,19.0	23.4,18.1	23.4,16.3
 path	22.8,14.5	23.7,10.2
-Follow the path and gather Starflower
-|tip Make sure you have find herbs turned on.
-collect 396 Starflower##109127 |condition skill("Alchemy")>=700
-|tip You can also buy these materials from the Auction House.
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 180 Starflower##109127
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Alchemy") < 99
 step
-#include "Garrison_Small_Building",action="talk Albert de Hyde##79813",building="Alchemy"
-accept Your First Inscription Work Order##37568 |condition skill("Alchemy")>=700
+Open Your Alchemy Crafting Panel:
+_<Create 53 Draenic Agility Flasks>_
+Reach Level 100 Draenor Alchemy |skill Draenor Alchemy,100
 step
-#include "Garrison_Small_Building",action="talk Keyana Tone##79814",building="Alchemy"
-Tell her _"I would like to place a work order."_ |q Your First Inscription Work Order##37568/1
-step
-#include "Garrison_Small_Building",action="click Alchemy Work Order##",building="Alchemy"
-Gather your first work order |q Your First Inscription Work Order##37568/2
-step
-#include "Garrison_Small_Building",action="talk Keyana Tone##79814",building="Alchemy"
-turnin Your First Inscription Work Order##37568
-step
-create Secrets of Draenor Alchemy##175880,Alchemy,1 total |n
-collect 1 Secrets of Draenor Alchemy##120132 |condition skill("Alchemy")>=700
-step
-#include "Garrison_Small_Building",action="talk Albert de Hyde##79813",building="Alchemy"
-buy Recipe: Draenic Agility Flask##112024 |condition _G.IsSpellKnown(156561) or skill("Alchemy")>=700
-step
-use Recipe: Draenic Agility Flask##112024
-learn Draenic Agility Flask##156561 |condition skill("Alchemy")>=700
-step
-create Draenic Agility Flask##156561,Alchemy,700
-step
-Congratulations! You are now a Draenor Master Alchemist!
+_Congratulations!_
+You Reached Level 100 Draenor Alchemy Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 600-700 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Archaeology skill from 600-700.",
@@ -1300,26 +1296,18 @@ path	78.6,58.7	80.1,54.5	82.4,59.6
 Follow the path, killing and skinning any beasts you come across.
 skill Skinning,700
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 600-700 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Draenor Tailoring 1-100",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Draenor Tailoring skill from 1-100.",
 condition_end=function() return skill('Draenor Tailoring') >= 100 end,
-condition_suggested=function() return skill('Draenor Tailoring') > 0 and skill('Draenor Tailoring') < 100 and level >= 90 end,
+condition_suggested=function() return skill('Draenor Tailoring') > 0 and skill('Draenor Tailoring') < 100 end,
 },[[
 step
-Before you continue, open your Tailoring window to detect your profession |cast Tailoring##3908
-skillmax Tailoring,600
-step
-#include "Garrison_ArchitectTable"
-Select the _Small_ tab at the top
-Drag _Tailoring Emporium_ to a _Small Plot_
-Build your Tailoring Emporium |havebuilding Tailoring
-step
-#include "Garrison_Small_Building",action="talk Warra the Weaver##79864",building="Tailoring"
-buy Draenor Tailoring##115357 |condition skillmax("Tailoring") >= 700 or itemcount(115357) >= 1
-step
+talk Petir Starocean##87543
+buy Draenor Tailoring##115357 |n
 use Draenor Tailoring##115357
-learn Secrets of Draenor Tailoring##176058 |condition skillmax("Tailoring") >= 700
+Train Draenor Tailoring |skillmax Draenor Tailoring,100 |goto Warspear/0 59.29,43.42
 step
 map Spires of Arak/0
 path follow strict; loop on; ants curved;dist 60
@@ -1328,33 +1316,20 @@ path	47.8,73.5	49.9,77.1	51.6,77.6
 path	52.5,77.3	51.0,75.8	49.2,74.8
 path	48.4,73.4	48.1,70.0	46.9,68.2
 path	46.0,66.6
-Kill _Bloodmane enemies_ along the path
-|tip They look like golden cats walking on two legs.
-collect 1025 Sumptuous Fur##111557 |condition skill("Tailoring")>=700
-|tip You can also buy these materials from the Auction House.
+Kill enemies around this area
+collect 2945 Sumptuous Fur##111557
+|tip You can also buy these from the Auction House.
 step
-#include "Garrison_Small_Building",action="talk Warra the Weaver##79864",building="Tailoring"
-accept Your First Tailoring Work Order##37575 |condition skill("Tailoring")>=700
+talk Petir Starocean##87543
+buy Pattern: Hexweave Embroidery##114852 |n
+use the Pattern: Hexweave Embroidery##114852
+learn Hexweave Embroidery##168836 |goto Warspear/0 59.29,43.42
 step
-#include "Garrison_Small_Building",action="talk Turga##79863",building="Tailoring"
-Tell her _"I would like to place a work order"_ |q Your First Tailoring Work Order##37575/1
+Open Your Tailoring Crafting Panel:
+_<Create 98 Hexweave Embroidery>_
+Reach Level 100 Draenor Tailoring |skill Draenor Tailoring,100
 step
-#include "Garrison_Small_Building",action="click Tailoring Work Order",building="Tailoring"
-Collect 1 Tailoring Work Order |q Your First Tailoring Work Order##37575/2
-step
-#include "Garrison_Small_Building",action="talk Turga##79863",building="Tailoring"
-turnin Your First Tailoring Work Order##37575
-step
-create 1 Secrets of Draenor Tailoring##176058,Tailoring,1 total |n
-collect 1 Secrets of Draenor Tailoring##118722 |condition skill("Tailoring")>=700
-step
-#include "Garrison_Small_Building",action="talk Warra the Weaver##79864",building="Tailoring"
-buy 1 Recipe: Hexweave Embroidery##114852 |condition _G.IsSpellKnown(168836) or itemcount(114852) >= 1 or skill("Tailoring")>=700
-step
-use Recipe: Hexweave Embroidery##114852
-learn Hexweave Embroidery##168836 |condition skill("Tailoring")>=700
-step
-create Hexweave Embroidery##168836,Tailoring,700
-step
-Congratulations, you have reached level 700 in Tailoring!
+_Congratulations!_
+You Reached Level 100 Draenor Tailoring Skill.
 ]])
+ZGV.BETAEND()

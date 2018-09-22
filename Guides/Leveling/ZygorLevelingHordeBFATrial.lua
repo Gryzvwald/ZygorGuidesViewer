@@ -287,3 +287,9 @@ _Lordaeron is under attack!_
 Click Here to Load the "Battle for Lordaeron" Leveling Guide |confirm |next "Zygor's Events Guides\\World Events\\Battle for Azeroth (110-120)\\The Battle for Lordaeron"
 |only if not completedq(51796)
 ]])
+ZGV.BETASTART()
+ZGV.BETAEND()
+ZGV.BETASTART()
+ZGV.BETAEND()
+ZGV.BETASTART()
+ZGV.BETAEND()

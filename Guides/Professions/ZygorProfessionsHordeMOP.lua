@@ -3,16 +3,19 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("ProfessionsHMoP") then return end
 ZygorGuidesViewer.GuideMenuTier = "MOP"
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 500-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Pandaria Alchemy 1-75",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Pandaria Alchemy skill from 1-75.",
 condition_end=function() return skill('Pandaria Alchemy') >= 75 end,
-condition_suggested=function() return skill('Pandaria Alchemy') > 0 and skill('Pandaria Alchemy') < 75 and level >= 85 end,
+condition_suggested=function() return skill('Pandaria Alchemy') > 0 and skill('Pandaria Alchemy') < 75 end,
 },[[
 step
-#include "trainer_Alchemy"
-skillmax Alchemy,600
-|tip You must be at least level 85.
+talk Ni Gentlepaw##56777
+Train Pandaria Alchemy |skillmax Pandaria Alchemy,75 |goto The Jade Forest/0 46.55,46.02
+step
+talk Ni Gentlepaw##56777
+buy 100 Crystal Vial##3371 |goto The Jade Forest/0 46.55,46.02
 step
 map Valley of the Four Winds
 path follow loose;loop;ants straight;dist 60
@@ -25,75 +28,52 @@ path	24.4,56.0	21.9,53.9	12.8,44.7
 path	14.3,41.2	14.8,35.8	19.6,34.4
 path	21.4,36.6	22.4,37.8	27.3,49.6
 path	30.7,52.2
-#include "follow_path_herbs"
-collect 150 Green Tea Leaf##72234 |condition skill("Alchemy")>=600
-|tip You can also buy these materials from the Auction House.
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 45 Green Tea Leaf##72234
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 74
 step
-map Dread Wastes
-path follow loose;loop;ants straight;dist 60
-path	40.4,56.5	43.9,59.5	43.1,64.4
-path	40.5,69.7	37.4,69.2	33.0,66.4
-path	33.4,61.6	30.0,56.5	35.5,55.1
-#include follow_path_herbs
-collect 75 Fool's Cap##79011 |condition skill("Alchemy")>=600
-|tip You can also buy these materials from the Auction House.
+Open Your Alchemy Crafting Panel:
+_<Create 9 Master Healing Potion>_
+Reach Level 10 Pandaria Alchemy |skill Pandaria Alchemy,10
+step
+Open Your Alchemy Crafting Panel:
+|tip You should have learned one of 3 elixir recipes.
+|tip Since it is random, it is difficult to properly guide you.
+_<Create 45 of the learned Elixir>_
+Reach Level 55 Pandaria Alchemy |skill Pandaria Alchemy,55
 step
 map Kun-Lai Summit
 path follow loose;loop;ants straight;dist 60
 path	39.4,77.3	38.0,75.5	40.1,71.8
 path	43.7,64.5	42.9,60.8	41.1,59.3
 path	33.9,54.9	36.0,75.5
-#include follow_path_herbs
-collect 75 Snow Lily##79010 |condition skill("Alchemy")>=600
-|tip You can also buy these materials from the Auction House.
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Snow Lily##79010
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 74
 step
-#include "trainer_Alchemy"
-learn Draught of War##93935 |condition skill("Alchemy")>=600
+map Dread Wastes
+path follow loose;loop;ants straight;dist 60
+path	40.4,56.5	43.9,59.5	43.1,64.4
+path	40.5,69.7	37.4,69.2	33.0,66.4
+path	33.4,61.6	30.0,56.5	35.5,55.1
+Pick Herbs Along the Path
+|tip Make sure to enable Find Herbs.
+collect 20 Fool's Cap##79011
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Alchemy") < 74
 step
-#include "vendor_Alchemy"
-buy 150 Crystal Vial##3371 |condition skill("Alchemy")>=600
+Open Your Alchemy Crafting Panel:
+_<Create 20 Master Mana Potion>_
+Reach Level 75 Pandaria Alchemy |skill Pandaria Alchemy,75
 step
-#include "trainer_Alchemy"
-learn Master Healing Potion##114752 |condition skill("Alchemy")>=600
-step
-create 25 Master Healing Potion##114752,Alchemy,525
-While you create these, you will discover random Pandaria Recipes. Keep making potions until you discover _Mantid Elixir_ or _Master Mana Potion_.
-learn Mantid Elixir##114755 |or |next "mantid" |condition skill("Alchemy")>=600
-learn Master Mana Potion##114775 |or |next "mana2" |condition skill("Alchemy")>=600
-step
-label "mantid"
-create 25 Mantid Elixir##114755,Alchemy,560
-Create these until you learn one of the recipes listed
-learn Virmen's Bite##114765 |next "virmen" |or |condition skill("Alchemy")>=600
-learn Elixir of Perfection##114762 |next "perfect" |or |condition skill("Alchemy")>=600
-learn Elixir of the Rapids##114759 |next "rapids" |or |condition skill("Alchemy")>=600
-learn Master Mana Potion##114775 |next "mana" |or |condition skill("Alchemy")>=600
-step
-label "virmen"
-create 10 Virmen's Bite##114765,Alchemy,575
-Create these until you learn the following recipe
-learn Master Mana Potion##114775 |next "mana" |condition skill("Alchemy")>=600
-step
-label "perfect"
-create 10 Elixir of Perfection##114762,Alchemy,575
-Create these until you learn the following recipe
-learn Master Mana Potion##114775 |next "mana" |condition skill("Alchemy")>=600
-step
-label "rapids"
-create 10 Elixir of the Rapids##114759,Alchemy,575
-Create these until you learn the following recipe
-learn Master Mana Potion##114775 |next "mana" |condition skill("Alchemy")>=600
-step
-label "mana"
-create 25 Master Mana Potion##114775,Alchemy,600
-|next "alch_600"
-step
-label "mana2"
-create 75 Master Mana Potion##114775,Alchemy,600
-step
-label "alch_600"
-Congratulations, you are now a Zen Master Alchemist!
+_Congratulations!_
+You Reached Level 75 Pandaria Alchemy Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Archaeology\\Leveling Guides\\Archaeology 525-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Archaeology skill from 525-600.",
@@ -1606,63 +1586,71 @@ step
 label "skn_600"
 Congratulations, you are now a Zen Master Skinner!
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Pandaria Tailoring 1-75",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Pandaria Tailoring skill from 1-75.",
 condition_end=function() return skill('Pandaria Tailoring') >= 75 end,
-condition_suggested=function() return skill('Pandaria Tailoring') > 0 and skill('Pandaria Tailoring') < 75 and level >= 85 end,
+condition_suggested=function() return skill('Pandaria Tailoring') > 0 and skill('Pandaria Tailoring') < 75 end,
 },[[
 step
-#include "trainer_Tailoring"
-skillmax Tailoring,600 |tip You must be at least level 80.
-step
-#include "trainer_Tailoring"
-learn Bolt of Windwool Cloth##125551 |condition skill("Tailoring")>=600
+talk Silkmaster Tsai##57405
+Train Pandaria Tailoring |skillmax Pandaria Tailoring,75 |goto Valley of the Four Winds/0 62.67,59.75
 step
 map Townlong Steppes/0
 path follow loose;loop;ants straight;dist 60
 path	26.2,40.7	26.0,45.4	24.2,48.9
 path	23.4,52.3	21.4,54.3	18.4,50.7
 path	17.8,46.0	17.5,41.8	20.9,40.3
-Kill the Sra'thik mobs along the path
-collect 345 Windwool Cloth##72988 |condition skill("Tailoring")>=600
+Kill enemies around this area
+collect 390 Windwool Cloth##72988
+|tip You can also buy these from the Auction House.
+|only if skill("Pandaria Tailoring") < 74
+step
+map Townlong Steppes/0
+path follow loose;loop;ants straight;dist 60
+path	26.2,40.7	26.0,45.4	24.2,48.9
+path	23.4,52.3	21.4,54.3	18.4,50.7
+path	17.8,46.0	17.5,41.8	20.9,40.3
+Kill enemies around this area
 collect 10 Mote of Harmony##89112 |n
-Combine 10 Motes of Harmony into a Spirit of Harmony |use Mote of Harmony##89112
-collect 1 Spirit of Harmony##76061 |condition skill("Tailoring")>=600
+use the Mote of Harmony##89112
+collect 1 Spirit of Harmony##76061
+|only if skill("Pandaria Tailoring") < 74
 step
-create Bolt of Windwool Cloth##125551,Tailoring,69 total |n
-collect 69 Bolt of Windwool Cloth##82441 |condition skill("Tailoring")>=600
-skill Tailoring,535
+talk Silkmaster Tsai##57405
+learn Bolt of Windwool Cloth##125551 |goto Valley of the Four Winds/0 62.67,59.75
 step
-#include "trainer_Tailoring"
-learn Pearlescent Spellthread##125552 |condition skill("Tailoring")>=600
+Open Your Tailoring Crafting Panel:
+_<Create 225 Bolts of Windwool Cloth>_
+Reach Level 10 Pandaria Tailoring |skill Pandaria Tailoring,10
 step
-create 5 Pearlescent Spellthread##125552,Tailoring,555
+talk Ala'thinel##65862
+|tip Inside the building.
+learn Windwool Bandage##125551 |goto Shrine of Two Moons/1 29.39,75.85
 step
-#include "trainer_Tailoring"
-learn Windwool Hood##125523 |condition skill("Tailoring")>=600
+Open Your Tailoring Crafting Panel:
+_<Create 15 Windwool Bandages>_
+Reach Level 25 Pandaria Tailoring |skill Pandaria Tailoring,25
 step
-create 5 Windwool Hood##125523,Tailoring,580
+talk Ala'thinel##65862
+|tip Inside the building.
+learn Heavy Windwool Bandage##102698 |goto Shrine of Two Moons/1 29.39,75.85
 step
-talk Raishen the Needle##64052
-buy Pattern: Contender's Satin Amice##86361 |goto Vale of Eternal Blossoms/3 64.7,44.2 |condition _G.IsSpellKnown(125540) or skill("Tailoring")>=600
-only Alliance
-step
-use Pattern: Contender's Satin Amice##86361
-learn Contender's Satin Amice##125540 |condition skill("Tailoring")>=600
-only Alliance
+Open Your Tailoring Crafting Panel:
+_<Create 35 Heavy Windwool Bandages>_
+Reach Level 60 Pandaria Tailoring |skill Pandaria Tailoring,60
 step
 talk Esha the Loommaiden##64051
-buy Pattern: Contender's Satin Amice##86361 |goto Shrine of Two Moons/1 32.5,54.0 |condition _G.IsSpellKnown(125540) or skill("Tailoring")>=600
-only Alliance
-only Horde
+buy Pattern: Contender's Satin Cuffs##86365 |n
+use the Pattern: Contender's Satin Cuffs##86365
+learn Contender's Satin Cuffs##125544 |goto Shrine of Two Moons/1 33.01,53.87
 step
-use Pattern: Contender's Satin Amice##86361
-learn Contender's Satin Amice##125540 |condition skill("Tailoring")>=600
-only Horde
+Open Your Tailoring Crafting Panel:
+_<Create 15 Contender's Satin Cuffs>_
+Reach Level 75 Pandaria Tailoring |skill Pandaria Tailoring,75
 step
-create Contender's Satin Amice##125540,Tailoring,600
-step
-label "tl_600"
-Congratulations! You have leveled Tailoring to 600!
+_Congratulations!_
+You Reached Level 75 Pandaria Tailoring Skill.
 ]])
+ZGV.BETAEND()

@@ -4058,318 +4058,6 @@ kill Springtail Leaper##57415+, Springtail Gnasher##57413+ |goto Valley of the F
 Click here to pick a different cloth |confirm |next "start"
 only if ZGV.guidesets['ProfessionsHMoP']
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 1-600 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Tailoring skill from 1-300.",
-},[[
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,75
-|tip You must be at least level 5.
-step
-kill Venture Co. Supervisor##2979+, Enforcer Emilgund##5787+, Supervisor Fizsprocket##3051+, Venture Co. Worker##2978+
-collect 156 Linen Cloth##2589 |goto Mulgore 60.6,47.7 |condition skill("Tailoring")>=75
-|tip You can also buy these materials from the Auction House.
-step
-create Bolt of Linen Cloth##2963,Tailoring,78 total |n
-skill Tailoring,35
-step
-#include "trainer_Tailoring"
-learn Heavy Linen Gloves##3840 |condition skill("Tailoring")>=75
-step
-#include "vendor_Tailoring"
-buy 40 Coarse Thread##2320 |condition itemcount(2320) >= 40 or skill("Tailoring")>=75
-step
-create 21 Heavy Linen Gloves##3840,Tailoring,70
-step
-#include "trainer_Tailoring"
-learn Reinforced Linen Cape##2397 |condition skill("Tailoring")>=75
-step
-create 5 Reinforced Linen Cape##2397,Tailoring,75
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,150
-|tip You must be level 10.
-step
-#include "trainer_Tailoring"
-learn Bolt of Woolen Cloth##2964 |condition skill("Tailoring")>=125
-step
-kill Dragonmaw Whelpstealer##42041+, Ebon Slavehunter##42043+
-collect 110 Linen Cloth##2589 |only itemcount(2996)<24 |goto Wetlands 66.67,47.11 |condition skill("Tailoring")>=125
-collect 135 Wool Cloth##2592 |goto Wetlands 66.67,47.11 |condition skill("Tailoring")>=125
-|tip You can also buy these materials from the Auction House.
-step
-create 55 Bolt of Linen Cloth##2963,Tailoring,55 total |n
-collect 55 Linen Cloth##2996 |condition skill("Tailoring")>=125
-step
-create 45 Bolt of Woolen Cloth##2964,Tailoring,45 total |n
-skill Tailoring,100
-step
-#include "trainer_Tailoring"
-learn Simple Kilt##12046 |condition skill("Tailoring")>=125
-step
-#include "vendor_Tailoring"
-buy 45 Fine Thread##2321 |condition itemcount(2321) >= 45 or skill("Tailoring")>=125
-step
-create Simple Kilt##12046,Tailoring,110
-step
-#include "trainer_Tailoring"
-learn Double-stitched Woolen Shoulders##3848 |condition skill("Tailoring")>=125
-step
-create 15 Double-stitched Woolen Shoulders##3848,Tailoring,125
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,225
-|tip You must be at least level 20.
-step
-#include "trainer_Tailoring"
-learn Bolt of Silk Cloth##3839 |condition skill("Tailoring")>=200
-step
-kill Death's Step Putrifier##45443+, Death's Step Miscreation##45444+
-collect 644 Silk Cloth##4306 |goto Eastern Plaguelands/0 18.33,78.45 |condition skill("Tailoring")>=200
-|tip You may potentially be flagged farming here. Avoid attacking Feralas Sentinels.
-step
-kill Dunemaul Enforcer##5472+, Dunemaul Ogre##5471+, Dunemaul Brute##5474+, Dunemaul Warlock##5475+
-collect 480 Mageweave Cloth##4338 |goto Tanaris/0 40.49,55.80 |condition skill("Tailoring")>=200
-|tip You can also buy these materials from the Auction House.
-step
-create 161 Bolt of Silk Cloth##3839,Tailoring,161 total |n
-skill Tailoring,145
-step
-#include "trainer_Tailoring"
-learn Azure Silk Hood##8760 |condition skill("Tailoring")>=200
-step
-create Azure Silk Hood##8760,Tailoring,160
-step
-#include "trainer_Tailoring"
-learn Silk Headband##8762 |condition skill("Tailoring")>=200
-step
-create 10 Silk Headband##8762,Tailoring,170
-step
-#include "trainer_Tailoring"
-learn Formal White Shirt##3871 |condition skill("Tailoring")>=200
-step
-create 5 Formal White Shirt##3871,Tailoring,175
-step
-#include "trainer_Tailoring"
-learn Bolt of Mageweave##3865 |condition skill("Tailoring")>=200
-step
-create Bolt of Mageweave##3865,Tailoring,120 total |n
-skill Tailoring,185
-step
-#include "trainer_Tailoring"
-learn Crimson Silk Vest##8791 |condition skill("Tailoring")>=200
-step
-create 15 Crimson Silk Vest##8791,Tailoring,200
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,300
-|tip You must be at least level 35.
-step
-#include "trainer_Tailoring"
-learn Crimson Silk Pantaloons##8799 |condition skill("Tailoring")>=300
-step
-create 15 Crimson Silk Pantaloons##8799,Tailoring,215
-step
-#include "trainer_Tailoring"
-learn Black Mageweave Leggings##12049 |condition skill("Tailoring")>=300
-step
-create 5 Black Mageweave Leggings##12049,Tailoring,220
-step
-#include "trainer_Tailoring"
-learn Black Mageweave Gloves##12053 |condition skill("Tailoring")>=300
-step
-create 10 Black Mageweave Gloves##12053,Tailoring,230
-step
-#include "trainer_Tailoring"
-learn Black Mageweave Headband##12072 |condition skill("Tailoring")>=300
-step
-create Black Mageweave Headband##12072,Tailoring,250
-step
-kill Twilight Keeper Havunth##11804+, Twilight Geolord##11881+, Twilight Avenger##11880+, Twilight Stonecaller##11882
-collect 800 Runecloth##14047 |goto Silithus 45.8,38.2 |condition skill("Tailoring")>=300
-|tip You can also buy these materials from the Auction House.
-You can find more Twilight enemies here [35.7,32.5]
-You can find more Twilight enemies here [29.5,73.4]
-You can find more Twilight enemies here [66.1,20.3]
-step
-#include "trainer_Tailoring"
-learn Bolt of Runecloth##18401 |condition skill("Tailoring")>=300
-step
-create Bolt of Runecloth##18401,Tailoring,200 total |n
-skill Tailoring,260
-step
-#include "vendor_Tailoring"
-buy 65 Rune Thread##14341 |condition itemcount(14341) >= 65 or skill("Tailoring")>=300
-step
-#include "trainer_Tailoring"
-learn Runecloth Belt##18402 |condition skill("Tailoring")>=300
-step
-create Runecloth Belt##18402,Tailoring,275
-step
-#include "trainer_Tailoring"
-learn Runecloth Gloves##18417 |condition skill("Tailoring")>=300
-step
-create 23 Runecloth Gloves##18417,Tailoring,295
-step
-#include "trainer_Tailoring"
-learn Runecloth Headband##18444 |condition skill("Tailoring")>=300
-step
-create 5 Runecloth Headband##18444,Tailoring,300
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,375
-|tip You must be at least level 50.
-step
-#include "trainer_Tailoring"
-learn Bolt of Netherweave##26745 |condition skill("Tailoring")>=350
-step
-Kill _Sunfury enemies_ around the area
-collect 800 Netherweave Cloth##21877 |goto Netherstorm 26.3,68.1 |condition skill("Tailoring")>=350
-step
-talk Eiin##19213
-buy Pattern: Netherweave Tunic##21897 |goto Shattrath City 66.3,69.3 |condition _G.IsSpellKnown(26774) or itemcount(21897) >= 1 or skill("Tailoring")>=350
-step
-talk Auctioneer Lyrsara##50140 |goto Shattrath City/0 56.7,62.4 |only if rep ('The Scryers') >= Friendly
-talk Auctioneer Braku##50145 |goto Shattrath City/0 51.4,27.4 |only if rep ('The Aldor') >= Neutral
-buy 20 Knothide Leather##21887 |condition itemcount(21887) >= 20 or skill("Tailoring")>=350
-step
-create Bolt of Netherweave##26745,Tailoring,160 total |n
-skill Tailoring,325
-step
-#include "trainer_Tailoring"
-learn Netherweave Pants##26771 |condition skill("Tailoring")>=350
-step
-#include "vendor_Tailoring"
-buy 30 Rune Thread##14341 |condition itemcount(14341) >= 30 or skill("Tailoring")>=350
-step
-create 10 Netherweave Pants##26771,Tailoring,335
-step
-#include "trainer_Tailoring"
-learn Netherweave Boots##26772 |condition skill("Tailoring")>=350
-step
-create 10 Netherweave Boots##26772,Tailoring,345
-step
-use Pattern: Netherweave Tunic##21897
-learn Netherweave Tunic##26774 |condition skill("Tailoring")>=350
-step
-create 5 Netherweave Tunic##26774,Tailoring,350
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,450
-|tip You must be at least level 65.
-step
-#include "trainer_Tailoring"
-learn Bolt of Frostweave##55899 |condition skill("Tailoring")>=425
-step
-talk Raenah##26969
-accept Cloth Scavenging##13270 |instant |goto Borean Tundra 41.6,53.4 |condition skill("Tailoring")>=425
-step
-kill Dark Zealot##34728+, Dark Ritualist##34734+
-collect 1875 Frostweave Cloth##33470 |n |goto Icecrown 61.8,20.8
-create Bolt of Frostweave##55899,Tailoring, 340 total |condition skill("Tailoring")>=425
-|tip You can also buy these materials from the Auction House.
-step
-create Bolt of Frostweave##55899,Tailoring,375 total |n
-skill Tailoring,375
-step
-#include "trainer_Tailoring"
-learn Frostwoven Belt##55908 |condition skill("Tailoring")>=425
-step
-#include "vendor_Tailoring"
-buy 50 Eternium Thread##38426 |condition itemcount(38426) >= 50 or skill("Tailoring")>=425
-step
-create 5 Frostwoven Belt##55908,Tailoring,380
-step
-#include "trainer_Tailoring"
-learn Frostwoven Boots##55906 |condition skill("Tailoring")>=425
-step
-create 5 Frostwoven Boots##55906,Tailoring,385
-step
-#include "trainer_Tailoring"
-learn Frostwoven Cowl##55907 |condition skill("Tailoring")>=425
-step
-create 5 Frostwoven Cowl##55907,Tailoring,395
-step
-#include "trainer_Tailoring"
-learn Duskweave Belt##55914 |condition skill("Tailoring")>=425
-step
-create 13 Duskweave Belt##55914,Tailoring,405
-step
-#include "trainer_Tailoring"
-learn Duskweave Wristwraps##55920 |condition skill("Tailoring")>=425
-step
-create 5 Duskweave Wristwraps##55920,Tailoring,410
-step
-#include "trainer_Tailoring"
-learn Duskweave Gloves##55922 |condition skill("Tailoring")>=425
-step
-create 5 Duskweave Gloves##55922,Tailoring,415
-step
-#include "trainer_Tailoring"
-learn Duskweave Boots##55924 |condition skill("Tailoring")>=425
-step
-create 13 Duskweave Boots##55924,Tailoring,425
-step
-#include "trainer_Tailoring"
-skillmax Tailoring,525
-|tip You must be at least level 75.
-step
-learn Bolt of Embersilk Cloth##74964 |condition skill("Tailoring")>=500
-step
-kill Twilight Augur##40713+, Twilight Retainer##40767+
-collect 1025 Embersilk Cloth##53010 |condition skill("Tailoring")>=500 |goto Mount Hyjal 55.8,68.0 |or
-create Bolt of Embersilk Cloth##74964,Tailoring,205 total |or
-step
-create Bolt of Embersilk Cloth##74964,Tailoring,205 total |n
-skill Tailoring,450
-step
-#include "vendor_Tailoring"
-buy 100 Eternium Thread##38426 |condition itemcount(38426) >= 100 or skill("Tailoring")>=500
-step
-#include "trainer_Tailoring"
-learn Deathsilk Bracers##75249 |condition skill("Tailoring")>=500
-step
-create 5 Deathsilk Bracers##75249,Tailoring,455
-step
-#include "trainer_Tailoring"
-learn Deathsilk Boots##75252 |condition skill("Tailoring")>=500
-step
-create 5 Deathsilk Boots##75252,Tailoring,460
-step
-#include "trainer_Tailoring"
-learn Deathsilk Leggings##75254 |condition skill("Tailoring")>=500
-step
-create 5 Deathsilk Leggings##75254,Tailoring,465
-step
-#include "trainer_Tailoring"
-learn Deathsilk Cowl##75256 |condition skill("Tailoring")>=500
-step
-create 5 Deathsilk Cowl##75256,Tailoring,470
-step
-#include "trainer_Tailoring"
-learn Spiritmend Belt##75258 |condition skill("Tailoring")>=500
-step
-create 5 Spiritmend Belt##75258,Tailoring,475
-step
-#include "trainer_Tailoring"
-learn Spiritmend Boots##75261 |condition skill("Tailoring")>=500
-step
-create 5 Spiritmend Boots##75261,Tailoring,480
-step
-#include "trainer_Tailoring"
-learn Spiritmend Leggings##75263 |condition skill("Tailoring")>=500
-step
-create 5 Spiritmend Leggings##75263,Tailoring,485
-step
-#include "trainer_Tailoring"
-learn Spiritmend Robe##75267 |condition skill("Tailoring")>=500
-step
-create 15 Spiritmend Robe##75267,Tailoring,500
-step
-Click here to proceed |next "Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 500-600 Leveling Guide"
-|tip This will take you to the Tailoring 500 - 600 guides.
-]])
 ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Alchemy 1-300",{
 author="support@zygorguides.com",
@@ -5421,269 +5109,6 @@ step
 _Congratulations!_
 You Reached Level 75 Cataclysm Alchemy Skill.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Pandaria Alchemy 1-75",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Pandaria Alchemy skill from 1-75.",
-condition_end=function() return skill('Pandaria Alchemy') >= 75 end,
-condition_suggested=function() return skill('Pandaria Alchemy') > 0 and skill('Pandaria Alchemy') < 75 end,
-},[[
-step
-talk Ni Gentlepaw##56777
-Train Pandaria Alchemy |skillmax Pandaria Alchemy,75 |goto The Jade Forest/0 46.55,46.02
-step
-talk Ni Gentlepaw##56777
-buy 100 Crystal Vial##3371 |goto The Jade Forest/0 46.55,46.02
-step
-map Valley of the Four Winds
-path follow loose;loop;ants straight;dist 60
-path	81.4,21.5	76.4,29.2	73.9,29.9
-path	72.3,33.4	70.8,34.4	70.6,41.8
-path	65.1,60.1	57.6,65.6	50.8,58.6
-path	47.4,64.9	46.9,61.3	42.5,54.3
-path	33.6,62.1	28.1,72.7	25.7,78.4
-path	24.4,56.0	21.9,53.9	12.8,44.7
-path	14.3,41.2	14.8,35.8	19.6,34.4
-path	21.4,36.6	22.4,37.8	27.3,49.6
-path	30.7,52.2
-Pick Herbs Along the Path
-|tip Make sure to enable Find Herbs.
-collect 45 Green Tea Leaf##72234
-|tip You can also purchase them from the Auction House.
-|only if skill("Cataclysm Alchemy") < 74
-step
-Open Your Alchemy Crafting Panel:
-_<Create 9 Master Healing Potion>_
-Reach Level 10 Pandaria Alchemy |skill Pandaria Alchemy,10
-step
-Open Your Alchemy Crafting Panel:
-|tip You should have learned one of 3 elixir recipes.
-|tip Since it is random, it is difficult to properly guide you.
-_<Create 45 of the learned Elixir>_
-Reach Level 55 Pandaria Alchemy |skill Pandaria Alchemy,55
-step
-map Kun-Lai Summit
-path follow loose;loop;ants straight;dist 60
-path	39.4,77.3	38.0,75.5	40.1,71.8
-path	43.7,64.5	42.9,60.8	41.1,59.3
-path	33.9,54.9	36.0,75.5
-Pick Herbs Along the Path
-|tip Make sure to enable Find Herbs.
-collect 20 Snow Lily##79010
-|tip You can also purchase them from the Auction House.
-|only if skill("Cataclysm Alchemy") < 74
-step
-map Dread Wastes
-path follow loose;loop;ants straight;dist 60
-path	40.4,56.5	43.9,59.5	43.1,64.4
-path	40.5,69.7	37.4,69.2	33.0,66.4
-path	33.4,61.6	30.0,56.5	35.5,55.1
-Pick Herbs Along the Path
-|tip Make sure to enable Find Herbs.
-collect 20 Fool's Cap##79011
-|tip You can also purchase them from the Auction House.
-|only if skill("Cataclysm Alchemy") < 74
-step
-Open Your Alchemy Crafting Panel:
-_<Create 20 Master Mana Potion>_
-Reach Level 75 Pandaria Alchemy |skill Pandaria Alchemy,75
-step
-_Congratulations!_
-You Reached Level 75 Pandaria Alchemy Skill.
-]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Draenor Alchemy 1-100",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Draenor Alchemy skill from 1-100.",
-condition_end=function() return skill('Draenor Alchemy') >= 100 end,
-condition_suggested=function() return skill('Draenor Alchemy') > 0 and skill('Draenor Alchemy') < 100 end,
-},[[
-step
-talk Joshua Alvarez##87542
-buy A Treatise on the Alchemy of Draenor##109558 |n
-use A Treatise on the Alchemy of Draenor##109558
-Train Draenor Alchemy |skillmax Draenor Alchemy,100 ||goto Warspear/0 60.98,27.37
-step
-map Frostfire Ridge
-path follow loose;loop;ants straight;dist 60
-path	31.1,53.3	26.1,53.7	24.2,49.0
-path	23.2,45.2	20.7,39.5	22.2,33.9
-path	21.8,29.7	20.9,25.4	23.1,23.6
-path	25.1,24.6	27.2,22.3	29.7,21.4
-path	31.2,22.0	32.8,21.7	35.1,19.5
-path	36.9,24.3	38.1,26.8	40.8,28.9
-path	41.6,30.6	42.8,29.9	42.9,31.1
-path	44.4,31.1	46.2,31.7	48.9,34.4
-path	51.6,36.9	53.7,35.1	54.5,30.3
-path	56.5,26.1	59.1,28.4	60.0,31.9
-path	61.2,34.9	63.1,40.9	63.4,45.0
-path	60.9,46.9	62.2,52.4	60.3,55.3
-path	57.9,57.5	53.8,55.8	50.6,54.7
-path	47.7,55.6	45.9,58.9	43.1,60.8
-path	40.3,62.1	37.7,58.7	36.5,56.5
-path	35.5,53.3	33.6,49.2	31.1,51.2
-Pick Herbs Along the Path
-|tip Make sure to enable Find Herbs.
-collect 5 Frostweed##109124
-|tip You can also purchase them from the Auction House.
-|only if skill("Draenor Alchemy") < 2
-step
-Open Your Alchemy Crafting Panel:
-_<Create 1 Secret of Draenor Alchemy>_
-Reach Level 2 Draenor Alchemy |skill Draenor Alchemy,2
-step
-talk Joshua Alvarez##87542
-buy Recipe: Draenic Agility Potion##112038 |n
-use the Recipe: Draenic Agility Potion##112038
-learn Draenic Agility Potion##156577 |goto Warspear/0 60.97,27.36
-step
-map Frostfire Ridge
-path follow loose;loop;ants straight;dist 60
-path	31.1,53.3	26.1,53.7	24.2,49.0
-path	23.2,45.2	20.7,39.5	22.2,33.9
-path	21.8,29.7	20.9,25.4	23.1,23.6
-path	25.1,24.6	27.2,22.3	29.7,21.4
-path	31.2,22.0	32.8,21.7	35.1,19.5
-path	36.9,24.3	38.1,26.8	40.8,28.9
-path	41.6,30.6	42.8,29.9	42.9,31.1
-path	44.4,31.1	46.2,31.7	48.9,34.4
-path	51.6,36.9	53.7,35.1	54.5,30.3
-path	56.5,26.1	59.1,28.4	60.0,31.9
-path	61.2,34.9	63.1,40.9	63.4,45.0
-path	60.9,46.9	62.2,52.4	60.3,55.3
-path	57.9,57.5	53.8,55.8	50.6,54.7
-path	47.7,55.6	45.9,58.9	43.1,60.8
-path	40.3,62.1	37.7,58.7	36.5,56.5
-path	35.5,53.3	33.6,49.2	31.1,51.2
-Pick Herbs Along the Path
-|tip Make sure to enable Find Herbs.
-collect 350 Fireweed##109125
-|tip You can also purchase them from the Auction House.
-|only if skill("Draenor Alchemy") < 55
-step
-Open Your Alchemy Crafting Panel:
-_<Create 53 Draenic Agility Potions>_
-Reach Level 55 Draenor Alchemy |skill Draenor Alchemy,55
-step
-talk Joshua Alvarez##87542
-buy Recipe: Draenic Agility Flask##112024 |n
-use the Recipe: Draenic Agility Flask##112024
-learn Draenic Agility Flask##156561 |goto Warspear/0 60.97,27.36
-step
-map Shadowmoon Valley D
-path follow loose;loop;ants straight;dist 60
-path	26.6,8.0	27.4,12.7	27.4,15.6
-path	26.2,17.1	26.8,19.8	27.5,22.1
-path	29.3,27.4	31.4,26.3	32.3,23.8
-path	34.6,27.2	36.0,24.1	37.2,21.6
-path	39.5,19.9	40.6,23.3	40.6,24.9
-path	41.5,26.7	42.8,28.1	45.0,28.8
-path	47.5,28.1	48.7,26.8	50.7,28.8
-path	53.3,31.1	54.5,32.7	56.0,35.5
-path	58.6,36.0	62.3,32.0	63.5,31.0
-path	65.9,31.7	66.3,34.2	65.0,36.0
-path	63.1,36.6	62.3,39.4	60.2,42.4
-path	59.1,45.2	58.0,47.7	58.8,50.8
-path	62.5,53.0	64.7,55.5	65.9,56.7
-path	65.7,57.4	64.7,59.4	61.4,57.7
-path	59.6,58.0	58.8,58.6	59.9,61.4
-path	60.5,63.9	62.0,62.2	62.7,64.2
-path	61.6,65.3	61.9,67.4	61.4,69.3
-path	59.8,67.0	58.1,64.1	57.9,63.4
-path	57.4,59.5	55.3,59.0	54.5,61.8
-path	53.3,63.7	53.0,65.6	52.2,67.0
-path	54.0,69.9	56.0,70.2	56.0,72.4
-path	55.0,74.4	54.0,74.3	52.7,72.9
-path	51.7,70.8	51.1,68.7	49.1,68.3
-path	45.6,68.3	42.9,73.0	41.6,74.7
-path	38.2,73.4	37.0,71.5	38.3,67.7
-path	38.1,66.4	37.4,60.8	36.4,59.6
-path	36.9,56.8	40.7,57.6	42.9,57.0
-path	43.2,54.8	41.7,53.6	41.2,50.1
-path	42.0,48.6	43.1,46.7	42.6,43.6
-path	40.2,43.4	39.0,39.8	37.0,35.7
-path	34.7,32.4	32.9,31.0	31.1,32.4
-path	28.3,32.9	26.4,31.7	25.4,28.8
-path	24.1,26.7	22.7,26.1	21.4,24.8
-path	22.3,24.2	23.7,23.1	25.1,20.8
-path	24.3,19.0	23.4,18.1	23.4,16.3
-path	22.8,14.5	23.7,10.2
-Pick Herbs Along the Path
-|tip Make sure to enable Find Herbs.
-collect 180 Starflower##109127
-|tip You can also purchase them from the Auction House.
-|only if skill("Draenor Alchemy") < 99
-step
-Open Your Alchemy Crafting Panel:
-_<Create 53 Draenic Agility Flasks>_
-Reach Level 100 Draenor Alchemy |skill Draenor Alchemy,100
-step
-_Congratulations!_
-You Reached Level 100 Draenor Alchemy Skill.
-]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Legion Alchemy 1-100",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Legion Alchemy skill from 1-100.",
-condition_end=function() return skill('Legion Alchemy') >= 100 end,
-condition_suggested=function() return skill('Legion Alchemy') > 0 and skill('Legion Alchemy') < 100 end,
-},[[
-step
-Enter the building |goto Dalaran L/10 41.28,31.54 < 5 |walk
-talk Linzy Blackbolt##92456
-Train Legion Alchemy |skillmax Legion Alchemy,100|goto 42.03,31.79
-step
-Load the "Legion Alchemy Quest Line" Guide |confirm |next "Zygor's Profession Guides\\Alchemy\\Quest Guides\\Legion Alchemy Quest Line"
-|tip Click the line above to load the guide.
-|tip After completing the Legion Alchemy Quest Line, you should be around level 45 Legion Alchemy.
-Complete the Legion Alchemy Quest Line |q 42081 |future
-step
-Enter the Eye of Azshara Dungeon |goto Eye of Azshara/1 47.59,87.41 < 10000 |noway |c |q 39331
-|only if skill("Legion Alchemy") < 70
-step
-kill Wrath of Azshara##96028
-collect Recipe: Leytorrent Potion##127929 |n
-use the Recipe: Leytorrent Potion##127929
-learn Leytorrent Potion (Rank 2)##188335
-step
-collect 25 Starlight Rose##124105
-|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|only if skill("Legion Alchemy") < 70
-step
-collect 50 Aethril##124101
-|tip Use the Aethril farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|only if skill("Legion Alchemy") < 70
-step
-collect 50 Dreamleaf##124102
-|tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|only if skill("Legion Alchemy") < 70
-step
-Open Your Alchemy Crafting Panel:
-_<Create 20 Leytorrent Potions>_
-Reach Level 70 Legion Alchemy |skill Legion Alchemy,70
-step
-collect 420 Starlight Rose##124105
-|tip Use the Starlight Rose farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|only if skill("Legion Alchemy") < 99
-step
-collect 600 Aethril##124101
-|tip Use the Aethril farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|only if skill("Legion Alchemy") < 99
-step
-collect 600 Dreamleaf##124102
-|tip Use the Dreamleaf farming guide to gather these, if you have Herbalism.
-|tip You can also purchase them from the Auction House.
-|only if skill("Legion Alchemy") < 99
-step
-Open Your Alchemy Crafting Panel:
-_<Create 30 Flask of Ten Thousand Scars>_
-Reach Level 100 Legion Alchemy |skill Legion Alchemy,100
-step
-_Congratulations!_
-You Reached Level 100 Legion Alchemy Skill.
-]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Tailoring 1-300",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Tailoring skill from 1-300.",
@@ -5902,105 +5327,327 @@ step
 _Congratulations!_
 You Reached Level 75 Cataclysm Tailoring Skill.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Pandaria Tailoring 1-75",{
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Cooking 1-300",{
 author="support@zygorguides.com",
-description="This guide will walk you through leveling your Pandaria Tailoring skill from 1-75.",
-condition_end=function() return skill('Pandaria Tailoring') >= 75 end,
-condition_suggested=function() return skill('Pandaria Tailoring') > 0 and skill('Pandaria Tailoring') < 75 end,
+description="This guide will walk you through leveling your Cooking skill from 1-300.",
+condition_end=function() return skill('Cooking') >= 300 end,
+condition_suggested=function() return skill('Cooking') > 0 and skill('Cooking') < 300 end,
 },[[
 step
-talk Silkmaster Tsai##57405
-Train Pandaria Tailoring |skillmax Pandaria Tailoring,75 |goto Valley of the Four Winds/0 62.67,59.75
+talk Arugi##46709
+|tip She walks around inside the building.
+Train Cooking |skillmax Cooking,300 |goto Orgrimmar/1 56.16,61.69
+|tip You must be at least level 5.
 step
-map Townlong Steppes/0
-path follow loose;loop;ants straight;dist 60
-path	26.2,40.7	26.0,45.4	24.2,48.9
-path	23.4,52.3	21.4,54.3	18.4,50.7
-path	17.8,46.0	17.5,41.8	20.9,40.3
-Kill enemies around this area
-collect 390 Windwool Cloth##72988
-|tip You can also buy these from the Auction House.
-|only if skill("Pandaria Tailoring") < 74
+talk Suja##46708
+buy 60 Simple Flour##30817 |goto 56.42,61.01
+|only if skill("Cooking") < 40
 step
-map Townlong Steppes/0
-path follow loose;loop;ants straight;dist 60
-path	26.2,40.7	26.0,45.4	24.2,48.9
-path	23.4,52.3	21.4,54.3	18.4,50.7
-path	17.8,46.0	17.5,41.8	20.9,40.3
-Kill enemies around this area
-collect 10 Mote of Harmony##89112 |n
-use the Mote of Harmony##89112
-collect 1 Spirit of Harmony##76061
-|only if skill("Pandaria Tailoring") < 74
+talk Suja##46708
+buy 60 Mild Spices##2678 |goto 56.42,61.01
+|only if skill("Cooking") < 40
 step
-talk Silkmaster Tsai##57405
-learn Bolt of Windwool Cloth##125551 |goto Valley of the Four Winds/0 62.67,59.75
+talk Arugi##46709
+|tip She walks around inside the building.
+learn Spice Bread##37836 |goto 56.16,61.69
+|only if skill("Cooking") < 40
 step
-Open Your Tailoring Crafting Panel:
-_<Create 225 Bolts of Windwool Cloth>_
-Reach Level 10 Pandaria Tailoring |skill Pandaria Tailoring,10
+Open Your Cooking Crafting Panel:
+_<Create 60 Spice Bread>_
+|tip The recipe will be green by level 35 cooking.
+|tip You may not need to craft 60.
+Reach Level 40 Cooking |skill Cooking,40 |goto 56.10,61.33
 step
-talk Ala'thinel##65862
+talk Zidormi##141489
+Ask her _"Can you show me what the world was like before the burning of Teldrassil?"_
+Gain the Time Travelling buff |havebuff Time Travelling##609811 |goto Darkshore/0 48.07,25.67
+|only if skill("Cooking") < 80
+step
+Kill Bear enemies around this area
+collect 40 Bear Meat##3173  |goto 41.05,77.01
+|tip You can also purchase them from the Auction House.
+You can find more around [40.72,81.58]
+You can find more around [44.41,79.17]
+|only if skill("Cooking") < 80
+step
+talk Andrew Hilbert##3556
 |tip Inside the building.
-learn Windwool Bandage##125551 |goto Shrine of Two Moons/1 29.39,75.85
+buy Recipe: Smoked Bear Meat##6892 |n
+use the Recipe: Smoked Bear Meat##6892
+learn Smoked Bear Meat##8607 |goto Silverpine Forest/0 43.22,40.67
+|only if skill("Cooking") < 80
 step
-Open Your Tailoring Crafting Panel:
-_<Create 15 Windwool Bandages>_
-Reach Level 25 Pandaria Tailoring |skill Pandaria Tailoring,25
+Open Your Cooking Crafting Panel:
+_<Create 40 Smoked Bear Meats>_
+Reach Level 80 Cooking |skill Cooking,80 |goto 77.58,52.85
 step
-talk Ala'thinel##65862
+talk Zidormi##141489
+Ask her _"Can you show me what the world was like before the burning of Teldrassil?"_
+Gain the Time Travelling buff |havebuff Time Travelling##609811 |goto Darkshore/0 48.07,25.67
+|only if skill("Cooking") < 135
+step
+map Darkshore/0
+path loop off; follow strict; dist 40
+path	36.96,64.39	37.28,67.03	37.91,69.20	36.88,71.44	37.76,73.92
+path	39.04,74.72	38.59,77.78	38.25,80.50	35.95,82.80	36.40,86.66
+kill Encrusted Tide Crawler##2233+
+|tip They are generally in the water.
+collect 60 Crawler Meat##2674 |goto Darkshore/0 36.8,64.0
+|tip You can also purchase them from the Auction House.
+|only if skill("Cooking") < 135
+step
+talk Arugi##46709
+|tip She walks around inside the building.
+learn Crab Cake##2544 |goto Orgrimmar/1 56.16,61.69
+|only if skill("Cooking") < 135
+step
+Open Your Cooking Crafting Panel:
+_<Create 55 Crab Cakes>_
+Reach Level 135 Cooking |skill Cooking,135 |goto 56.10,61.33
+step
+talk Keena##2821
+buy Recipe: Curiously Tasty Omelet##3682 |n
+use the Recipe: Curiously Tasty Omelet##3682
+learn Curiously Tasty Omelet##3376 |goto Arathi Highlands/0 69.2,33.6
+|only if skill("Cooking") < 175
+step
+talk Keena##2821
+buy Recipe: Roast Raptor##12228 |goto Arathi Highlands/0 69.2,33.6
+|tip Save this for later.
+|only if skill("Cooking") < 225
+stickystart "Collect_Raptor_Flesh"
+step
+Kill Highland enemies around this area
+collect 50 Raptor Egg##3685 |goto Arathi Highlands/0 46,68
+|tip You can also purchase them from the Auction House.
+You can find more around [47.20,45.75]
+|only if skill("Cooking") < 175
+step
+label "Collect_Raptor_Flesh"
+Kill Highland enemies around this area
+collect 50 Raptor Flesh##12184 |goto Arathi Highlands/0 46,68
+|tip You can also purchase them from the Auction House.
+You can find more around [47.20,45.75]
+|only if skill("Cooking") < 225
+step
+Open Your Cooking Crafting Panel:
+_<Create 40 Curiously Tasty Omelets>_
+Reach Level 175 Cooking |skill Cooking,175 |goto Orgrimmar/1 56.10,61.33
+step
+use the Recipe: Roast Raptor##12228
+learn Roast Raptor##15855
+|only if skill("Cooking") < 225
+step
+Open Your Cooking Crafting Panel:
+_<Create 50 Roast Raptors>_
+Reach Level 225 Cooking |skill Cooking,225 |goto 56.10,61.33
+step
+talk Himmik##11187
 |tip Inside the building.
-learn Heavy Windwool Bandage##102698 |goto Shrine of Two Moons/1 29.39,75.85
+buy Recipe: Monster Omelet##16110 |n
+use the Recipe: Monster Omelet##16110
+learn Monster Omelet##15933 |goto Winterspring/0 59.82,51.57
+|only if skill("Cooking") < 250
+stickystart "Collect_Bear_Flanks"
 step
-Open Your Tailoring Crafting Panel:
-_<Create 35 Heavy Windwool Bandages>_
-Reach Level 60 Pandaria Tailoring |skill Pandaria Tailoring,60
+map Winterspring
+path loop on; follow strict; dist 40
+path	55.4,36.6	52.4,30.8	58.8,31.2
+path	60.0,34.2	65.0,39.6	67.2,43.6
+path	65.0,75.8	64.6,80.8	54.8,40.1
+Kill enemies around this area
+collect 25 Giant Egg##12207
+|tip They come from owls.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cooking") < 250
+stickystop "Collect_Bear_Flanks"
 step
-talk Esha the Loommaiden##64051
-buy Pattern: Contender's Satin Cuffs##86365 |n
-use the Pattern: Contender's Satin Cuffs##86365
-learn Contender's Satin Cuffs##125544 |goto Shrine of Two Moons/1 33.01,53.87
+Open Your Cooking Crafting Panel:
+_<Create 25 Monster Omelets>_
+Reach Level 250 Cooking |skill Cooking,250 |goto Orgrimmar/1 56.10,61.33
 step
-Open Your Tailoring Crafting Panel:
-_<Create 15 Contender's Satin Cuffs>_
-Reach Level 75 Pandaria Tailoring |skill Pandaria Tailoring,75
+label "Collect_Bear_Flanks"
+map Winterspring
+path loop on; follow strict; dist 40
+path	55.4,36.6	52.4,30.8	58.8,31.2
+path	60.0,34.2	65.0,39.6	67.2,43.6
+path	65.0,75.8	64.6,80.8	54.8,40.1
+Kill Shardtooth enemies around this area
+collect 60 Bear Flank##35562
+|tip You can also purchase them from the Auction House.
+|only if skill("Cooking") < 285
+step
+talk Arugi##46709
+|tip She walks around inside the building.
+learn Charred Bear Kabobs##46684 |goto Orgrimmar/1 56.16,61.69
+|only if skill("Cooking") < 285
+step
+Open Your Cooking Crafting Panel:
+_<Create 25 Charred Bear Kabobs>_
+|tip You will likely need to create more than 25.
+Reach Level 285 Cooking |skill Cooking,285 |goto Orgrimmar/1 56.10,61.33
+step
+talk Sheendra Tallgrass##8145
+buy Recipe: Baked Salmon##13949 |n
+use the Recipe: Baked Salmon##13949
+learn Baked Salmon##18247 |goto Feralas/0 74.49,42.72
+|only if skill("Cooking") < 300
+step
+Fish from the Lake here
+|tip You can fish from any water in the Tainted Forest.
+collect 15 Raw Whitescale Salmon##13889 |goto Blasted Lands/0 43.0,72.3
+|tip You can also purchase them from the Auction House.
+|only if skill("Cooking") < 300
+step
+Open Your Cooking Crafting Panel:
+_<Create 15 Baked Salmon>_
+Reach Level 300 Cooking |skill Cooking,300 |goto Orgrimmar/1 56.10,61.33
 step
 _Congratulations!_
-You Reached Level 75 Pandaria Tailoring Skill.
+You Reached Level 300 Cooking Skill.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Draenor Tailoring 1-100",{
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Outland Cooking 1-75",{
 author="support@zygorguides.com",
-description="This guide will walk you through leveling your Draenor Tailoring skill from 1-100.",
-condition_end=function() return skill('Draenor Tailoring') >= 100 end,
-condition_suggested=function() return skill('Draenor Tailoring') > 0 and skill('Draenor Tailoring') < 100 end,
+description="This guide will walk you through leveling your Outland Cooking skill from 1-75.",
+condition_end=function() return skill('Outland Cooking') >= 75 end,
+condition_suggested=function() return skill('Outland Cooking') > 0 and skill('Outland Cooking') < 75 end,
 },[[
 step
-talk Petir Starocean##87543
-buy Draenor Tailoring##115357 |n
-use Draenor Tailoring##115357
-Train Draenor Tailoring |skillmax Draenor Tailoring,100 |goto Warspear/0 59.29,43.42
+talk Allison##49789
+|tip Inside the building.
+Train Outland Cooking |skillmax Outland Cooking,75 |goto Hellfire Peninsula/0 56.81,37.38
 step
-map Spires of Arak/0
-path follow strict; loop on; ants curved;dist 60
-path	44.8,65.1	44.7,67.7	45.8,68.6
-path	47.8,73.5	49.9,77.1	51.6,77.6
-path	52.5,77.3	51.0,75.8	49.2,74.8
-path	48.4,73.4	48.1,70.0	46.9,68.2
-path	46.0,66.6
-Kill enemies around this area
-collect 2945 Sumptuous Fur##111557
-|tip You can also buy these from the Auction House.
+talk Cookie One-Eye##16585
+buy Recipe: Ravager Dog##27688 |n
+use the Recipe: Ravager Dog##27688
+learn Ravager Dog##33284 |goto 54.62,41.21
+|only if skill("Outland Cooking") < 25
 step
-talk Petir Starocean##87543
-buy Pattern: Hexweave Embroidery##114852 |n
-use the Pattern: Hexweave Embroidery##114852
-learn Hexweave Embroidery##168836 |goto Warspear/0 59.29,43.42
+map Terokkar Forest/0
+path loop off; follow strict; dist 40
+path	61.23,10.00	58.99,11.76	57.51,13.30	56.11,12.94	53.73,12.74
+path	51.87,11.58	50.31,10.13	49.00,8.68	46.96,6.08	45.42,4.69
+kill Razorthorn Ravager##24922
+collect 30 Ravager Flesh##27674 |goto Terokkar Forest/0 52,12
+|only if skill("Outland Cooking") < 25
 step
-Open Your Tailoring Crafting Panel:
-_<Create 98 Hexweave Embroidery>_
-Reach Level 100 Draenor Tailoring |skill Draenor Tailoring,100
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 24 Ravager Flesh>_
+Reach Level 25 Cooking |skill Outland Cooking,25
+step
+Load "The Mag'har" Reputation Guide |confirm |next "Zygor's Reputations Guides\\Burning Crusade Reputations\\Mag'har"
+|tip Click the line above to load the guide.
+Earn Neutral Status with The Mag'har |condition rep("The Mag'har")==Neutral
+step
+talk Nula the Butcher##20097
+|tip Inside the building.
+buy Recipe: Talbuk Steak##27693 |n
+use the Recipe: Talbuk Steak##27693
+learn Talbuk Steak##33289 |goto Nagrand/0 58.0,35.6
+|only if skill("Outland Cooking") < 55
+step
+map Nagrand/0
+path loop on; follow strict; dist 40
+path	53.83,31.31	52.92,29.15	51.38,26.84	48.38,27.04	47.30,30.27
+path	48.26,33.27	49.13,37.97	50.13,39.28	51.37,38.48	50.58,36.74
+path	52.29,33.21
+kill Talbuk Thorngrazer##17131+
+collect 40 Talbuk Venison##27682
+|only if skill("Outland Cooking") < 55
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 40 Ravager Flesh>_
+Reach Level 55 Cooking |skill Outland Cooking,55
+step
+talk Xerintha Ravenoak##20916
+buy Recipe: Mok'Nathal Shortribs##31675 |n
+use the Recipe: Mok'Nathal Shortribs##31675
+learn Mok'Nathal Shortribs##38867 |goto Blade's Edge Mountains/0 62.48,40.34
+|only if skill("Outland Cooking") < 75
+step
+map Blade's Edge Mountains/0
+path loop on; follow strict; dist 40
+path	62.00,55.54	65.96,57.01	66.51,59.83	66.37,63.86	67.39,66.46
+path	67.69,71.59	69.27,71.36	68.95,65.95	68.53,63.09	68.54,60.21
+path	68.26,57.12	67.14,53.92	68.20,49.52
+kill Daggermaw Lashtail##20751+
+collect 60 Raptor Ribs##31670
+|only if skill("Outland Cooking") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 60 Ravager Flesh>_
+Reach Level 75 Cooking |skill Outland Cooking,75
 step
 _Congratulations!_
-You Reached Level 100 Draenor Tailoring Skill.
+You Reached Level 75 Outland Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Northrend Cooking 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Northrend Cooking skill from 1-75.",
+condition_end=function() return skill('Northrend Cooking') >= 75 end,
+condition_suggested=function() return skill('Northrend Cooking') > 0 and skill('Northrend Cooking') < 75 end,
+},[[
+step
+Enter the building |goto Dalaran/1 63.75,32.77 < 5 |walk
+talk Awilo Lon'gomba##29631
+|tip Inside the building.
+Train Northrend Cooking |skillmax Northrend Cooking,75 |goto 69.96,39.00
+step
+map Howling Fjord/0
+path loop on; follow strict; dist 40
+path	76.46,63.42	75.33,60.39	74.58,56.11	74.85,52.58	75.59,50.19
+path	75.46,46.56	74.30,44.99	73.01,47.07	73.61,48.52	72.89,52.59
+path	72.70,56.77	73.53,58.71	73.21,60.59	72.12,63.28
+Kill Shoveltusk enemies around this area
+collect 50 Shoveltusk Flank##43009
+|only if skill("Northrend Cooking") < 25
+step
+Enter the building |goto Dalaran/1 63.75,32.77 < 5 |walk
+talk Awilo Lon'gomba##29631
+|tip Inside the building.
+learn Shoveltusk Steak##45550 |goto 69.96,39.00
+|only if skill("Northrend Cooking") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 24 Shoveltusk Flank>_
+Reach Level 25 Northrend Cooking |skill Northrend Cooking,25
+step
+Load the "Dalaran Cooking Daily Guide" |confirm |next "Zygor's Dailies Guides\\Cooking\\Dalaran Cooking Daily Guide"
+|tip Click the line above to load the guide.
+Load the "Main City Cooking Daily Guide" |confirm |next "Zygor's Dailies Guides\\Classic Dailies\\Main Cities\\Main City Cooking Dailies"
+|tip Click the line above to load the guide.
+earn 6 Epicurean's Award##81 |n
+|tip These will be used to purchase 60 Northern Spices.
+|tip You will generally obtain 3 to 6 a day.
+collect 60 Northern Spices##43007 |goto Dalaran/1 69.90,38.35
+|only if skill("Northrend Cooking") < 75
+step
+map Howling Fjord/0
+path loop on; follow strict; dist 40
+path	76.46,63.42	75.33,60.39	74.58,56.11	74.85,52.58	75.59,50.19
+path	75.46,46.56	74.30,44.99	73.01,47.07	73.61,48.52	72.89,52.59
+path	72.70,56.77	73.53,58.71	73.21,60.59	72.12,63.28
+Kill Shoveltusk enemies around this area
+collect 100 Shoveltusk Flank##43009
+|tip The extra will be for the last few levels, as the recipe turns green around 62.
+|only if skill("Northrend Cooking") < 75
+step
+Enter the building |goto Dalaran/1 63.75,32.77 < 5 |walk
+talk Awilo Lon'gomba##29631
+|tip Inside the building.
+learn Tracker Snacks##57443 |goto 69.96,39.00
+|only if skill("Northrend Cooking") < 75
+step
+Open Your Cooking Crafting Panel:
+_<Create 100 Tracker Snacks>_
+|tip You may not need to create this many.
+Reach Level 75 Northrend Cooking |skill Northrend Cooking,75 |goto 70.41,39.52
+step
+_Congratulations!_
+You Reached Level 75 Northrend Cooking Skill.
 ]])
 ZGV.BETAEND()

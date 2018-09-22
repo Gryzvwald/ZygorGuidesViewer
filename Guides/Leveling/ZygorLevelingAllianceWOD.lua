@@ -7,7 +7,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Tana
 next="Zygor's Leveling Guides\\Draenor (90-100)\\Shadowmoon Valley (90-100)",
 condition_suggested=function() return level >= 90 and level <= 100 and not completedq(35884) end,
 image=ZGV.DIR.."\\Guides\\Images\\TanaanJungle",
-condition_suggested_exclusive=true,
 startlevel=90,
 },[[
 step
@@ -335,7 +334,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Shad
 next="Zygor's Leveling Guides\\Draenor (90-100)\\Gorgrond (92-100)",
 condition_suggested=function() return level >= 90 and level <= 100 and not completedq(33256) end,
 image=ZGV.DIR.."\\Guides\\Images\\ShadowmoonValleyDraenor",
-condition_suggested_exclusive=true,
 startlevel=90.5,
 },[[
 step
@@ -1723,7 +1721,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Gorg
 next="Zygor's Leveling Guides\\Draenor (90-100)\\Talador (94-100)",
 condition_suggested=function() return level >= 92 and level <= 100 and not completedq(33269) end,
 image=ZGV.DIR.."\\Guides\\Images\\Gorgrond",
-condition_suggested_exclusive=true,
 startlevel=92,
 },[[
 step
@@ -5316,7 +5313,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Spir
 next="Zygor's Leveling Guides\\Draenor (90-100)\\Nagrand (98-100)",
 condition_suggested=function() return level >= 96 and level <= 100 and not completedq(35704) end,
 image=ZGV.DIR.."\\Guides\\Images\\SpiresOfArak",
-condition_suggested_exclusive=true,
 startlevel=96,
 },[[
 step

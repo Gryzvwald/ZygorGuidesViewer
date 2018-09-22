@@ -3026,7 +3026,6 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Draenor (90-100)\\Tala
 next="Zygor's Leveling Guides\\Draenor (90-100)\\Spires of Arak (96-100)",
 condition_suggested=function() return level >= 94 and level <= 100 and not completedq(34706) end,
 image=ZGV.DIR.."\\Guides\\Images\\Talador",
-condition_suggested_exclusive=true,
 startlevel=94,
 },[[
 step

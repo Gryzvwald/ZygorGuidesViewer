@@ -3,6 +3,195 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("DailiesHCATA") then return end
 ZygorGuidesViewer.GuideMenuTier = "CAT"
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Classic Dailies\\Main Cities\\Orgrimmar Cooking Daily Quests",{
+author="support@zygorguides.com",
+description="Walks you through completing the Cooking daily quests in Orgrimmar. You must be at least level 10 to complete the quests in this guide.",
+},[[
+step
+label "start"
+talk Marogg##42506
+|tip You will only be able to complete 1 of the following quests per day.
+accept Careful, This Fruit Bites Back##26227 |goto Orgrimmar/1 56.53,62.48 |or
+accept Crawfish Creole##26226 |goto 56.53,62.48 |or
+accept Even Thieves Get Hungry##26235 |goto 56.53,62.48 |or
+accept Everything Is Better with Bacon##26220 |goto 56.53,62.48 |or
+accept Stealing From Our Own##26234 |goto 56.53,62.48 |only Troll |or
+accept Stealing From Our Own##26233 |goto 56.53,62.48 |only Orc,Scourge,Tauren,BloodElf,Goblin,Pandaren |or
+step
+click Prickly Pear Fruit##203969
+|tip They look like smaller cactus plants with red round fruit on top of them.
+|tip They are usually found next to walls all around Orgrimmar.
+collect 8 Prickly Pear Fruit##57766 |q 26227/1 |goto 52.81,62.11
+|only if havequest(26227)
+stickystart "hordeinfant"
+step
+clicknpc Muddy Crawfish##42548+
+|tip They look like tiny lobsters in the water around this area.
+collect 10 Muddy Crawfish##57765 |q 26226/1 |goto 65.26,43.47
+|only if havequest(26226)
+step
+label "hordeinfant"
+kill Orgrimmar Thief##42594+
+|tip They are stealthed near wooden crates.
+|tip They are all around Orgrimmar, so you can walk around and find them everywhere.
+|tip They won't be next to every pile of crates, so you'll need to search for them.
+collect 3 Horde Infantry Rations##57879 |q 26235/1 |goto 65.77,39.62
+|only if havequest(26235)
+step
+Kill enemies around this area
+collect 6 Swine Belly##57758 |q 26220/1 |goto Durotar/0 48.71,16.00
+|only if havequest(26220)
+step
+click Barrels of Kezan Rice##9664+
+|tip They look like light brown wooden barrels around this area.
+collect 6 Barrel of Kezan Rice##57878 |q 26234/1 |goto Orgrimmar/1 35.11,69.70
+|only Troll
+|only if havequest(26234)
+step
+click Barrels of Darkspear Rice##6037+
+|tip They looks like dark brown wooden barrels around this area.
+collect 6 Barrel of Darkspear Rice##57877 |q 26233/1 |goto Orgrimmar/1 35.11,69.70
+|only Orc,Scourge,Tauren,BloodElf,Goblin
+|only if havequest(26233)
+step
+talk Marogg##42506
+|tip You will only be able to complete 1 of the following quests per day.
+turnin Careful, This Fruit Bites Back##26227 |goto Orgrimmar/1 56.53,62.48 |only if havequest(26227)
+turnin Crawfish Creole##26226 |goto Orgrimmar/1 56.53,62.48 |only if havequest(26226)
+turnin Even Thieves Get Hungry##26235 |goto Orgrimmar/1 56.53,62.48 |only if havequest(26235)
+turnin Everything Is Better with Bacon##26220 |goto Orgrimmar/1 56.53,62.48 |only if havequest(26220)
+turnin Stealing From Our Own##26234 |goto Orgrimmar/1 56.53,62.48 |only Troll |only if havequest(26234)
+turnin Stealing From Our Own##26233 |goto Orgrimmar/1 56.53,62.48 |only Orc,Scourge,Tauren,BloodElf,Goblin,Pandaren |only if havequest(26233)
+step
+You Have Reached the End of the Daily Quests Available in the Orgrimmar Today
+Click Here to Return to the Start of the Daily Quest Guide |confirm |next "start"
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Classic Dailies\\Main Cities\\Thunder Bluff Cooking Daily Quests",{
+author="support@zygorguides.com",
+description="Walks you through completing the Cooking daily quests in Thunder Bluff. You must be at least level 10 to complete the quests in this guide.",
+},[[
+step
+label "start"
+talk Aska Mistrunner##3026
+accept Pining for Nuts##29358 |goto Thunder Bluff/0 50.72,53.11 |or
+accept "Magic" Mushrooms##29362 |goto 50.72,53.11 |or
+accept Mulgore Spice Bread##29363 |goto 50.72,53.11 |or
+accept Corn Mash##29364 |goto 50.72,53.11 |or
+accept Perfectly Pickled Portions##29365 |goto 50.72,53.11 |or
+step
+click Mulgore Pine Cone##208875
+|tip They look like sparkling pine cones on the ground next to the base of moss trees in Thunder Bluff.
+_<Create a Cooking Fire>_
+use the Mulgore Pine Cones##69990
+collect 30 Pine Nut##69988 |q 29358/1 |goto 48.52,62.16
+|only if havequest(29358)
+step
+Enter the cave |goto 29.49,29.82 < 5
+click "Magic" Mushroom##208878
+|tip They look like pale grey mushrooms grouped in fours all around the cave.
+collect 6 "Magic" Mushroom##69994 |q 29362/1 |goto 26.16,22.18
+|only if havequest(29362)
+step
+talk Naal Mistrunner##3027
+buy 5 Simple Flour##30817 |q 29363 |goto 51.01,52.46
+buy 5 Mild Spices##2678 |q 29363 |goto 51.01,52.46
+|only if havequest(29363)
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Spice Bread>_
+collect 5 Spice Bread##30816 |q 29363/1
+|only if havequest(29363)
+step
+use the Mulgore Spices##69997
+collect 5 Fresh Mulgore Spice Bread##69996 |q 29363/1
+|only if havequest(29363)
+step
+Click the bowls of Corn Kernels
+|tip They look like little bowls of yellow corn in almost all the huts in Thunderbluff.
+Grind #6# Bowls of Corn Kernels |q 29364/1 |goto 52.00,45.53
+|only if havequest(29364)
+step
+collect Succulent Sweet Potatoes##70000 |q 29365/1 |goto 47.96,43.08
+|tip They look like baskets in this little hut.
+|only if havequest(29365)
+step
+collect Savory Spices##70001 |q 29365/2 |goto 49.71,41.54
+|tip It looks like a bag with weeds in it
+|only if havequest(29365)
+step
+collect Fresh-Caught Fish##70002 |q 29365/3 |goto 56.01,44.47
+|tip It looks like a rope hanging down with a bunch of fish on it inside of the tent.
+|only if havequest(29365)
+step
+collect Fresh-Hunted Fowl##70003 |q 29365/4 |goto 51.02,47.12
+|tip It looks like a bird hanging upside down at the side of the tent.
+|only if havequest(29365)
+step
+talk Aska Mistrunner##3026
+turnin Pining for Nuts##29358 |goto 50.72,53.11 |or |only if havequest(29358)
+turnin "Magic" Mushrooms##29362 |goto 50.72,53.11 |or |only if havequest(29362)
+turnin Mulgore Spice Bread##29363 |goto 50.72,53.11 |or |only if havequest(29363)
+turnin Corn Mash##29364 |goto 50.72,53.11 |or |only if havequest(29364)
+turnin Perfectly Pickled Portions##29365 |goto 50.72,53.11 |or |only if havequest(29365)
+step
+You Have Reached the End of the Daily Quests Available in the Thunder Bluff Today
+Click Here to Return to the Start of the Daily Quest Guide |confirm |next "start"
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Classic Dailies\\Main Cities\\Undercity Cooking Daily Quests",{
+author="support@zygorguides.com",
+description="Walks you through completing the Cooking daily quests in Undercity. You must be at least level 10 to complete the quests in this guide.",
+},[[
+step
+label "start"
+talk Eunice Burch##4552
+accept Roach Coach##29334 |goto Undercity/0 62.15,44.89 |or
+accept Escargot A Go-Go##29333 |goto 62.15,44.89 |or
+accept Would You Like Some Flies With That?##29360 |goto 62.15,44.89 |or
+accept Lily, Oh Lily##29332 |goto 62.15,44.89 |or
+accept Fungus Among Us##29315 |goto 62.15,44.89 |or
+step
+click Cockrach Cabin##336+
+|tip Look in corners and behind crates.
+|tip They are hidden all around Undercity.
+collect 20 Plump Cockroach##69919 |q 29334/1 |goto 61.28,34.06
+|only if havequest(29334)
+step
+click Fly Covered "Meat"##208876
+|tip You will find the fly meat around the wagons in this area.
+collect 25 Bloated Fly##69989 |q 29360/1 |goto 69.26,52.38
+You can find more around [57.08,17.01]
+|only if havequest(29360)
+step
+clicknpc Brightwater Snail##53526+
+|tip They are underneath the water around the area.
+collect 8 Brightwater Snail##69918 |q 29333/1 |goto Tirisfal Glades/0 70.72,39.55
+|only if havequest(29333)
+step
+click Sewer Cap##208816
+|tip They spawn near walls around this area.
+collect 12 Sewer Cap##208816 |q 29315/1 |goto Undercity/0 36.24,30.34
+|only if havequest(29315)
+step
+click Stillwater Lily##208833
+|tip They are floating along the edge of the lake around this area.
+collect 10 Stillwater Lily##69917 |q 29332/1 |goto Tirisfal Glades/0 50.86,55.57
+|only if havequest(29332)
+step
+talk Chef Audrey##53528
+turnin Roach Coach##29334 |goto Undercity/0 62.68,35.51
+step
+talk Eunice Burch##4552
+turnin Escargot A Go-Go##29333 |goto 62.15,44.89 |only if havequest(29333)
+turnin Would You Like Some Flies With That?##29360 |goto 62.15,44.89 |only if havequest(29360)
+turnin Fungus Among Us##29315 |goto 62.15,44.89 |only if havequest(29315)
+turnin Lily, Oh Lily##29332 |goto 62.15,44.89 |only if havequest(29332)
+step
+You Have Reached the End of the Daily Quests Available in the Undercity Today
+Click Here to Return to the Start of the Daily Quest Guide |confirm |next "start"
+]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Classic Dailies\\Main Cities\\Main City Cooking Dailies",{
 author="support@zygorguides.com",
 description="Walks you through completing the Cooking daily quests in Orgrimmar, Thunder Bluff and Undercity. You must be at least level 10 to complete the quests in this guide.",

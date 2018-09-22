@@ -1604,572 +1604,631 @@ _Congratulations!_
 You Reached 300 Enchanting Skill.
 ]])
 ZGV.BETAEND()
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 1-300 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Engineering skill from 1-300.",
+condition_end=function() return skill('Engineering') >= 300 end,
+condition_suggested=function() return skill('Engineering') > 0 and skill('Engineering') < 300 end,
 },[[
 step
-#include "trainer_Engineering"
-skillmax Engineering,75
+talk Lilliam Sparkspindle##5518
+Train Engineering |skillmax Engineering,300 |goto Stormwind City/0 62.84,31.97
+|tip You must be at least level 5.
 step
 talk Billibub Cogspinner##5519
-buy 1 Blacksmith Hammer##5956 |goto Stormwind City 63.1,32.0 |condition itemcount(5956) >= 1 or skill("Engineering")>=75
+buy 1 Blacksmith Hammer##5956 |goto 63.07,31.99
 step
-#include "Copper_Path"
-#include "follow_path_mine"
-collect 38 Rough Stone##2835 |condition skill("Engineering")>=75
-collect 60 Copper Ore##2770 |condition skill("Engineering")>=75
-collect 4 Linen Cloth##2589 |condition skill("Engineering")>=75
-collect Tigerseye##818 |n
-|tip You can also buy these materials from the Auction House.
+collect 60 Rough Stone##2835
+|tip Use the "Ore" farming guide to gather copper ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Copper Bar##2657,Mining,58 total |n
-collect 58 Copper Bar##2840 |condition skill("Engineering")>=75
-|tip Keep any extra Copper Bar you have for making items later.
+Open Your Engineering Crafting Panel:
+_<Create 60 Rough Blasting Powder>_
+Reach Level 30 Engineering |skill Engineering,30
+|tip Craft all 60 of them, you'll probably get a little higher than level 30.
 step
-create Rough Blasting Powder##3918,Engineering,40
+talk Lilliam Sparkspindle##5518
+Train Handful of Copper Bolts |learn Handful of Copper Bolts##3922 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Handful of Copper Bolts##3922 |condition skill("Engineering")>=75
+collect 36 Copper Bar##2840
+|tip Use the "Ore" farming guide to gather and smelt copper, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Handful of Copper Bolts##3922,Engineering,50
-|tip Save Handfuls of Copper Bolts to use later.
+Open Your Engineering Crafting Panel:
+_<Create 30 Handful of Copper Bolts>_
+Reach Level 50 Engineering |skill Engineering,50 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Rough Copper Bomb##3923 |condition skill("Engineering")>=75
+talk Lilliam Sparkspindle##5518
+Train Arclight Spanner |learn Arclight Spanner##7430 |goto 62.84,31.97
 step
-#include "maincity_anvil"
-create 20 Rough Copper Bomb##3923,Engineering,70
+talk Lilliam Sparkspindle##5518
+Train Rough Copper Bomb |learn Rough Copper Bomb##3923 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Arclight Spanner##7430 |condition skill("Engineering")>=75
+Open Your Engineering Crafting Panel:
+_<Create 1 Arclight Spanner>_
+collect Arclight Spanner##6219 |goto 63.66,36.64
 step
-#include "maincity_anvil"
-create Arclight Spanner##7430,Engineering,71
+Open Your Engineering Crafting Panel:
+_<Create 30 Rough Copper Bomb>_
+Reach Level 75 Engineering |skill Engineering,75 |goto 63.66,36.64
 step
-#include "maincity_anvil"
-create Coarse Dynamite##3931,Engineering,75
+talk Lilliam Sparkspindle##5518
+Train Coarse Blasting Powder |learn Coarse Blasting Powder##3929 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-skillmax Engineering,150
-|tip You must be at least level 10.
+collect 20 Coarse Stone##2836
+|tip Use the "Ore" farming guide to gather, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-kill Riverpaw Bandit##452+, Riverpaw Brute##124+, Riverpaw Herbalist##501+
-collect 5 Linen Cloth##2589 |goto Westfall 50.8,53.0 |condition skill("Engineering")>=130
-|tip You can also buy these materials from the Auction House.
+Open Your Engineering Crafting Panel:
+_<Create 20 Coarse Blasting Powder>_
+Reach Level 90 Engineering |skill Engineering,90 |goto 63.66,36.64
 step
-#include "Copper_Path"
-#include "follow_path_mine"
-collect 50 Copper Ore##2770 |condition skill("Engineering")>=130
-|tip You can also buy these materials from the Auction House.
+talk Lilliam Sparkspindle##5518
+Train Coarse Dynamite |learn Coarse Dynamite##3931 |goto 62.84,31.97
 step
-#include "Tin_Path"
-#include "follow_path_mine"
-collect 20 Coarse Stone##2836 |condition skill("Engineering")>=130
-collect 50 Tin Ore##2771 |condition skill("Engineering")>=130
-|tip You can also buy these materials from the Auction House.
+collect 20 Linen Cloth##2589
+|tip Use the "Linen Cloth/Wool Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Tin Bar##3304,Mining,48 total |n
-collect 48 Tin Bar##3576 |condition skill("Engineering")>=130
+Open Your Engineering Crafting Panel:
+_<Create 20 Coarse Dynamite>_
+Reach Level 100 Engineering |skill Engineering,100 |goto 63.66,36.64
 step
-#include "maincity_anvil"
-create Copper Bar##2657,Mining,48 total |n
-collect 48 Copper Bar##2840 |condition skill("Engineering")>=130
+talk Lilliam Sparkspindle##5518
+Train Clockwork Box |learn Clockwork Box##8334 |goto 62.84,31.97
 step
-#include "maincity_anvil"
-create Silver Bar##2658,Mining,10 total |n
-collect Silver Bar##2842 |condition skill("Engineering")>=130
+collect 39 Bronze Bar##2841
+|tip Use the "Ore" farming guide to gather and smelt copper and tin, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Bronze Bar##2659,Mining,48 total |n
-collect 96 Bronze Bar##2841 |condition skill("Engineering")>=130
+Open Your Engineering Crafting Panel:
+_<Create 13 Clockwork Box>_
+Reach Level 113 Engineering |skill Engineering,113 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Coarse Blasting Powder##3929 |condition skill("Engineering")>=130
+use the Clockwork Box##6712
+Reach Level 125 Engineering |skill Engineering,125
 step
-create 35 Coarse Blasting Powder##3929,Engineering,95
-|tip Keep at least 20 of these to craft a later item.
+talk Lilliam Sparkspindle##5518
+Train Flying Tiger Goggles |learn Flying Tiger Goggles##3934 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Silver Contact##3973 |condition skill("Engineering")>=130
+collect 8 Bronze Bar##2841
+|tip Use the "Ore" farming guide to gather and smelt copper and tin, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create 10 Silver Contact##3973,Engineering,105
+collect 2 Tigerseye##818
+|tip Use the "Ore" farming guide to gather these from copper ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-learn Clockwork Box##8334 |condition skill("Engineering")>=130
+Open Your Engineering Crafting Panel:
+_<Create 1 Flying Tiger Goggles>_
+Reach Level 130 Engineering |skill Engineering,130 |goto 63.66,36.64
 step
-#include "maincity_anvil"
-create 5 Clockwork Box##8334,Engineering,110
+talk Lilliam Sparkspindle##5518
+Train Heavy Blasting Powder |learn Heavy Blasting Powder##3945 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Bronze Tube##3938 |condition skill("Engineering")>=130
+talk Lilliam Sparkspindle##5518
+Train Whirring Bronze Gizmo |learn Whirring Bronze Gizmo##3942 |goto 62.84,31.97
 step
-create 5 Bronze Tube##3938,Engineering,115
-|tip Keep 5 Bronze Tubes to make more items later.
+collect 30 Heavy Stone##2838
+|tip Use the "Ore" farming guide to gather these from iron ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-learn Flying Tiger Goggles##3934 |condition skill("Engineering")>=130
+collect 30 Bronze Bar##2841
+|tip Use the "Ore" farming guide to gather and smelt copper and tin, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create 3 Flying Tiger Goggles##3934,Engineering,130
+collect 15 Wool Cloth##2592
+|tip Use the "Linen Cloth/Wool Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-skillmax Engineering,225
-|tip You must be at least level 20.
+Open Your Engineering Crafting Panel:
+_<Create 30 Heavy Blasting Powder>_
+|tip Make all 30 of these, you'll need them later.
+Reach Level 142 Engineering |skill Engineering,142 |goto 63.66,36.64
 step
-kill Anquished Spirit##45614+, Forlorn Spirit##43923+
-collect 25 Wool Cloth##2592 |goto Duskwood,22.6,68.6 |condition skill("Engineering")>=210
-|tip You can also buy these materials from the Auction House.
+Open Your Engineering Crafting Panel:
+_<Create 15 Whirring Bronze Gizmo>_
+Reach Level 150 Engineering |skill Engineering,150 |goto 63.66,36.64
 step
-#include "Iron_Ore_Path"
-#include "follow_path_mine"
-collect 20 Heavy Stone##2838 |condition skill("Engineering")>=210
-collect 50 Iron Ore##2772 |condition skill("Engineering")>=210
-|tip You can also buy these materials from the Auction House.
+talk Lilliam Sparkspindle##5518
+Train Bronze Framework |learn Bronze Framework##3953 |goto 62.84,31.97
 step
-#include "Mithril_Ore_Path"
-#include "follow_path_mine"
-collect 132 Solid Stone##7912 |condition skill("Engineering")>=210
-collect 220 Mithril Ore##3858 |condition skill("Engineering")>=210
-collect 10 Gold Ore##2776 |condition skill("Engineering")>=210
-|tip You can also buy these materials from the Auction House.
+collect 30 Bronze Bar##2841
+|tip Use the "Ore" farming guide to gather and smelt copper and tin, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-kill Irontree Chopper##48453+
-collect 35 Mageweave Cloth##4338 |goto Felwood,63.4,20.7 |condition skill("Engineering")>=210
-|tip You can also buy these materials from the Auction House.
+collect 15 Medium Leather##2319
+|tip Use the "Light Leather/Medium Leather/Light Hide/Medium Hide" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-#include "vendor_Blacksmithing"
-buy 4 Coal##3857 |condition itemcount(3857) >= 4 or skill("Engineering")>=210
+collect 15 Wool Cloth##2592
+|tip Use the "Linen Cloth/Wool Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Iron Bar##3307,Mining,50 total |n
-collect 50 Iron Bar##3575 |condition skill("Engineering")>=210
+Open Your Engineering Crafting Panel:
+_<Create 15 Bronze Framework>_
+Reach Level 160 Engineering |skill Engineering,160 |goto 63.66,36.64
 step
-#include "maincity_anvil"
-create Steel Bar##3569,Mining,4 total |n
-collect Steel Bar##3859 |condition skill("Engineering")>=210
+talk Lilliam Sparkspindle##5518
+Train Explosive Sheep |learn Explosive Sheep##3955 |goto 62.84,31.97
 step
-#include "maincity_anvil"
-create Mithril Bar##10097,Mining,220 total |n
-collect 220 Mithril Bar##3860 |condition skill("Engineering")>=210
+collect 30 Wool Cloth##2592
+|tip Use the "Linen Cloth/Wool Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Gold Bar##3308,Mining,10 total |n
-collect 10 Gold Bar##3577 |condition skill("Engineering")>=210
+Open Your Engineering Crafting Panel:
+_<Create 15 Explosive Sheep>_
+Reach Level 175 Engineering |skill Engineering,175 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Heavy Blasting Powder##3945 |condition skill("Engineering")>=210
+talk Lilliam Sparkspindle##5518
+Train Gyromatic Micro-Adjustor |learn Gyromatic Micro-Adjustor##12590 |goto 62.84,31.97
 step
-create Heavy Blasting Powder##3945,Engineering,135
+talk Lilliam Sparkspindle##5518
+Train Solid Blasting Powder |learn Solid Blasting Powder##12585 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Whirring Bronze Gizmo##3942 |condition skill("Engineering")>=210
+collect 4 Steel Bar##3859
+|tip Use the "Ore" farming guide to gather and smelt iron and coal, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-create Whirring Bronze Gizmo##3942,Engineering,150
+Open Your Engineering Crafting Panel:
+_<Create 1 Gyromatic Micro-Adjustor>_
+collect Gyromatic Micro-Adjustor##10498 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Gold Power Core##12584 |condition skill("Engineering")>=210
+collect 120 Solid Stone##7912
+|tip Use the "Ore" farming guide to gather mithril ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "maincity_anvil"
-create Gold Power Core##12584,Engineering,160
+Open Your Engineering Crafting Panel:
+_<Create 60 Solid Blasting Powder>_
+|tip Make all 60 of these, you'll need them later.
+Reach Level 195 Engineering |skill Engineering,195 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Iron Strut##3958 |condition skill("Engineering")>=210
+talk Lilliam Sparkspindle##5518
+Train Mithril Tube |learn Mithril Tube##12589 |goto 62.84,31.97
 step
-create Iron Strut##3958,Engineering,170
+collect 21 Mithril Bar##3860
+|tip Use the "Ore" farming guide to gather and smelt mithril ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-learn Gyrochronatom##3961 |condition skill("Engineering")>=210
+Open Your Engineering Crafting Panel:
+_<Create 7 Mithril Tube>_
+Reach Level 200 Engineering |skill Engineering,200 |goto 63.66,36.64
 step
-create Gyrochronatom##3961,Engineering,180
+talk Lilliam Sparkspindle##5518
+Train Unstable Trigger |learn Unstable Trigger##12591 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Gyromatic Micro-Adjustor##12590 |condition skill("Engineering")>=210
+collect 20 Mithril Bar##3860
+|tip Use the "Ore" farming guide to gather and smelt mithril ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-learn Solid Blasting Powder##12585 |condition skill("Engineering")>=210
+collect 20 Mageweave Cloth##4338
+|tip Use the "Mageweave Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-create 1 Gyromatic Micro-Adjustor##12590,Engineering,1 total |n
-collect Gyromatic Micro-Adjustor##10498 |condition skill("Engineering")>=210
-|tip You will need this to make more Engineering items, do not sell.
+Open Your Engineering Crafting Panel:
+_<Create 20 Unstable Trigger>_
+Reach Level 216 Engineering |skill Engineering,216 |goto 63.66,36.64
 step
-create Solid Blasting Powder##12585,Engineering,195
-collect 66 Solid Blasting Powder##10505 |condition skill("Engineering")>=210
-|tip You will need to keep 66 Solid Blasting Powder to make items later.
+talk Lilliam Sparkspindle##5518
+Train Mithril Casing |learn Mithril Casing##12599 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Mithril Tube##12589 |condition skill("Engineering")>=210
+collect 120 Mithril Bar##3860
+|tip Use the "Ore" farming guide to gather and smelt mithril ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-create 22 Mithril Tube##12589,Engineering,210
+Open Your Engineering Crafting Panel:
+_<Create 40 Mithril Casing>_
+|tip Make all 40 of these, you'll need them later.
+Reach Level 238 Engineering |skill Engineering,238 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-skillmax Engineering,300
-|tip You must be at least level 35.
+talk Lilliam Sparkspindle##5518
+Train Hi-Explosive Bomb |learn Hi-Explosive Bomb##12619 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Unstable Trigger##12591 |condition skill("Engineering")>=280
+Open Your Engineering Crafting Panel:
+_<Create 20 Hi-Explosive Bomb>_
+Reach Level 250 Engineering |skill Engineering,250 |goto 63.66,36.64
 step
-create Unstable Trigger##12591+,Engineering,22 total |n
-|tip Save 22 Unstable Triggers in your bags, you will need them later to create items.
-skill Engineering,225
+talk Lilliam Sparkspindle##5518
+Train Dense Blasting Powder |learn Dense Blasting Powder##19788 |goto 62.84,31.97
 step
-#include "trainer_Engineering"
-learn Mithril Casing##12599 |condition skill("Engineering")>=280
+collect 60 Dense Stone##12365
+|tip Use the "Ore" farming guide to gather thorium ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-create 44 Mithril Casing##12599+,Engineering,44 total |n
-|tip Save 44 Mithril Casings in your bags, you will need them later to create items.
-skill Engineering,240
+Open Your Engineering Crafting Panel:
+_<Create 30 Dense Blasting Powder>_
+Reach Level 260 Engineering |skill Engineering,260 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Hi-Explosive Bomb##12619 |condition skill("Engineering")>=280
+talk Lilliam Sparkspindle##5518
+Train Thorium Widget |learn Thorium Widget##19791 |goto 62.84,31.97
 step
-create 22 Hi-Explosive Bomb##12619,Engineering,250
+collect 75 Thorium Bar##12359
+|tip Use the "Ore" farming guide to gather and smelt thorium ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-learn Dense Blasting Powder##19788 |condition skill("Engineering")>=280
+collect 25 Runecloth##14047
+|tip Use the "Runecloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-map Silithus
-path loop on; follow loose; dist 30
-path	54.8,26.8	52.3,22.8	50.5,15.3
-path	55.8,12.5	61.8,12.5	68.3,15.6
-path	69.7,19.7	68.4,26.3	72.3,27.9
-path	72.5,39.5	70.0,43.5	66.7,44.7
-path	64.6,45.0	67.1,55.0	67.0,59.8
-path	67.3,63.0	69.5,69.6	68.1,74.1
-path	66.3,81.9	65.7,83.4	56.8,76.1
-path	56.6,81.2	50.6,80.3	44.6,80.2
-path	40.4,80.9	26.1,80.1	25.3,74.2
-path	26.7,69.5	33.0,66.3	30.8,62.6
-path	26.6,53.5	28.4,47.9	27.8,40.6
-path	27.6,33.9	25.2,27.1	28.5,16.2
-path	29.5,11.3	35.0,12.0	40.6,13.1
-path	45.1,16.3	47.3,19.3	47.3,26.6
-#include "follow_path_mine"
-collect 180 Thorium Ore##10620 |condition skill("Engineering")>=280
-collect 41 Dense Stone##12365 |condition skill("Engineering")>=280
-|tip You can also buy these materials from the Auction House.
+Open Your Engineering Crafting Panel:
+_<Create 25 Thorium Widget>_
+Reach Level 285 Engineering |skill Engineering,285 |goto 63.66,36.64
 step
-kill Twilight Keeper Havunth##11804+, Twilight Geolord##11881+, Twilight Avenger##11880+, Twilight Stonecaller##11882+
-collect 35 Runecloth##14047 |goto Silithus,45.8,38.2 |condition skill("Engineering")>=280
-|tip You can also buy these materials from the Auction House.
-You can find more twilight enemies here |goto 35.7,32.5
-As well as here |goto 29.5,73.4
-And here |goto 66.1,20.3
+talk Lilliam Sparkspindle##5518
+Train Thorium Tube |learn Thorium Tube##19795 |goto 62.84,31.97
 step
-#include "maincity_anvil"
-create Thorium Bar##16153,Mining,180 total |or |condition skill("Engineering")>=280
-collect 180 Thorium Bar##12359 |or |condition skill("Engineering")>=280
+collect 120 Thorium Bar##12359
+|tip Use the "Ore" farming guide to gather and smelt thorium ore, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-create 14 Dense Blasting Powder##19788,Engineering,14 total |n
-|tip Save 14 Dense Blasting Powder for making items later.
-skill Engineering,255
+Open Your Engineering Crafting Panel:
+_<Create 20 Thorium Tube>_
+Reach Level 300 Engineering |skill Engineering,300 |goto 63.66,36.64
 step
-#include "trainer_Engineering"
-learn Dense Dynamite##23070 |condition skill("Engineering")>=280
-step
-create 7 Dense Dynamite##23070,Engineering,260
-step
-#include "trainer_Engineering"
-learn Thorium Widget##19791 |condition skill("Engineering")>=280
-step
-#include "maincity_anvil"
-create 20 Thorium Widget##19791,Engineering,280
-step
-#include "trainer_Engineering"
-skillmax Engineering,375
-|tip You must be at least level 50.
-step
-#include "trainer_Engineering"
-learn Thorium Tube##19795 |condition skill("Engineering")>=280
-step
-#include "maincity_anvil"
-create 23 Thorium Tube##19795,Engineering,300
-step
-#include "Fel_Iron_Path"
-#include "follow_path_mine"
-collect 220 Fel Iron Ore##23424 |condition skill("Engineering")>=350
-collect 40 Eternium Ore##23427 |n
-|tip You can also buy these materials from the Auction House.
-step
-#include "Adamantite_Path"
-#include "follow_path_mine"
-collect 80 Adamantite Ore##23425 |condition skill("Engineering")>=350
-collect 10 Mote of Fire##22574 |condition skill("Engineering")>=350
-collect 20 Mote of Earth##22573 |condition skill("Engineering")>=350
-collect 40 Eternium Ore##23427 |condition skill("Engineering")>=350
-|tip You can also buy these materials from the Auction House.
-step
-kill Boulderfist Mystic##17135+, Boulderfist Crusher##17134+
-collect 18 Netherweave Cloth##21877 |goto Nagrand,73.3,69.7 |condition skill("Engineering")>=350
-|tip You can also buy these materials from the Auction House.
-step
-#include "maincity_anvil"
-create Fel Iron Bar##29356,Mining,110 total |condition skill("Engineering")>=350
-create Adamantite Bar##29358,Mining,40 total |condition skill("Engineering")>=350
-create Eternium Bar##29359,Mining,20 total |condition skill("Engineering")>=350
-step
-#include "maincity_anvil"
-create Felsteel Bar##29360,Mining,10 total |condition skill("Engineering")>=350
-step
-#include "trainer_Engineering"
-learn Handful of Fel Iron Bolts##30305 |condition skill("Engineering")>=350
-step
-#include "maincity_anvil"
-create 44 Handful of Fel Iron Bolts##30305,Engineering,44 total |n
-|tip Save 44 Fel Iron Bolts for making items later.
-skill Engineering,310
-step
-#include "trainer_Engineering"
-learn Elemental Blasting Powder##30303 |condition skill("Engineering")>=350
-step
-#include "trainer_Engineering"
-learn Fel Iron Casing##30304 |condition skill("Engineering")>=350
-step
-#include "maincity_anvil"
-create Elemental Blasting Powder##30303,Engineering,10 total |n
-|tip These will give you 4 at a time, you will need 40 total.
-collect 40 Elemental Blasting Powder##23781 |condition skill("Engineering")>=350
-step
-create 12 Fel Iron Casing##30304,Engineering,12 total |n
-|tip You will need to keep 12 Fel Iron Casing for making items later.
-skill Engineering,315
-step
-#include "trainer_Engineering"
-learn Fel Iron Bomb##30310 |condition skill("Engineering")>=350
-step
-#include "maincity_anvil"
-create 12 Fel Iron Bomb##30310,Engineering,325
-step
-#include "trainer_Engineering"
-learn Adamantite Grenade##30311 |condition skill("Engineering")>=350
-step
-#include "maincity_anvil"
-create 10 Adamantite Grenade##30311,Engineering,335
-step
-talk Wind Trader Lathrai##18484
-buy 1 Schematic: White Smoke Flare##23811 |goto Shattrath City 72.2,30.7 |condition _G.IsSpellKnown(30341) or itemcount(23811) >= 1 or skill("Engineering")>=350
-step
-use Schematic: White Smoke Flare##23811
-learn White Smoke Flare##30341 |condition skill("Engineering")>=350
-step
-create 30 White Smoke Flare##30341,Engineering,345
-step
-#include "trainer_Engineering"
-learn Felsteel Stabilizer##30309 |condition skill("Engineering")>=350
-step
-#include "maincity_anvil"
-create 5 Felsteel Stabilizer##30309,Engineering,350
-step
-#include "trainer_Engineering"
-skillmax Engineering,450
-|tip You must be at least level 65.
-step
-#include "trainer_Engineering"
-learn Handful of Cobalt Bolts##56349 |condition skill("Engineering")>=425
-step
-map Borean Tundra
-path	29.6,20.6	24.7,22.2	23.5,31.6
-path	39.5,42.9	34.5,48.2	30.2,54.8
-path	33.1,57.3	35.2,65.9	39.4,68.2
-path	44.1,66.0	46.3,62.0	50.0,62.4
-path	50.8,71.7	53.6,72.0	60.5,59.2
-path	67.2,47.4	83.0,44.8	91.8,39.7
-path	73.9,20.6	63.9,12.6	59.9,19.0
-path	42.5,14.8	46.8,40.4
-#include "follow_path_mine"
-collect 200 Cobalt Ore##36909 |condition skill("Engineering")>=425
-collect 47 Crystallized Water##37705 |condition skill("Engineering")>=425
-|tip You can also buy these materials from the Auction House.
-step
-map Sholazar Basin
-path follow loose;dist 40
-path	77.9,63.8	78.7,52.4	74.3,48.6
-path	58.9,53.9	63.5,44.4	66.7,40.3
-path	65.1,30.5	58.9,27.8	58.9,21.1
-path	40.8,20.8	48.0,33.2	53.8,37.0
-path	47.8,43.1	46.8,39.7	39.6,32.8
-path	32.9,32.8	23.3,48.4	33.5,46.6
-path	35.8,49.9	40.0,50.9	38.0,54.9
-path	30.5,55.3	20.8,56.1	20.4,76.6
-path	22.6,78.5	22.5,84.0	34.2,78.4
-path	33.8,73.4	33.0,67.9	40.9,70.1
-path	34.5,88.9	50.9,88.8	51.5,82.1
-path	46.0,60.9	52.5,68.9	58.7,88.2
-path	62.3,74.5	63.6,84.4
-#include "follow_path_mine"
-collect 388 Saronite Ore##36912 |condition skill("Engineering")>=425
-collect 13 Crystallized Earth##37701 |condition skill("Engineering")>=425
-|tip You can also buy these materials from the Auction House.
-step
-kill Dark Ritualist##34734+, Dark Zealot##34728+
-collect 6 Frostweave Cloth##33470 |goto Icecrown,61.8,20.8 |condition skill("Engineering")>=425
-|tip You can also buy these materials from the Auction House.
-step
-kill Ice Revenant##26283+
-collect 56 Crystallized Water##37705 |goto Dragonblight 67.2,52.2 |condition skill("Engineering")>=425
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Mining"
-learn Smelt Saronite##49258 |condition skill("Engineering")>=425
-|tip You can also buy these materials from the Auction House.
-step
-#include "maincity_anvil"
-create Saronite Bar##49258,Mining,194 total |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create Cobalt Bar##49252,Mining,220 total |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create 25 Handful of Cobalt Bolts##56349,Engineering,370
-collect 20 Handful of Cobalt Bolts##39681 |condition skill("Engineering")>=425
-|tip Save 20 Cobalt Bolts for crafting more items.
-step
-#include "trainer_Engineering"
-learn Volatile Blasting Trigger##53281 |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create 15 Volatile Blasting Trigger##53281,Engineering,375
-collect 30 Volatile Blasting Trigger##39690 |condition skill("Engineering")>=425
-|tip Save 30 Volatile Blasting Trigger for crafting more items later.
-step
-#include "trainer_Engineering"
-learn Overcharged Capacitor##56464 |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create 13 Overcharged Capacitor##56464,Engineering,385
-step
-#include "trainer_Engineering"
-learn Explosive Decoy##56463 |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create 6 Explosive Decoy##56463,Engineering,390
-step
-#include "trainer_Engineering"
-learn Froststeel Tube##56471 |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create 13 Froststeel Tube##56471,Engineering,400
-collect 8 Froststeel Tube##39683 |condition skill("Engineering")>=425
-|tip Save 8 Froststeel Tubes for crafting more items later.
-step
-#include "trainer_Engineering"
-learn Diamond-cut Refractor Scope##61471 |condition skill("Engineering")>=425
-step
-create 7 Diamond-cut Refractor Scope##61471,Engineering,405
-step
-#include "trainer_Engineering"
-learn Box of Bombs##56468 |condition skill("Engineering")>=425
-step
-create 13 Box of Bombs##56468,Engineering,415
-step
-#include "trainer_Engineering"
-learn Mana Injector Kit##56477 |condition skill("Engineering")>=425
-step
-#include "maincity_anvil"
-create 13  Mana Injector Kit##56477,Engineering,425
-step
-#include "trainer_Engineering"
-skillmax Engineering,525
-|tip You must be at least level 75.
-step
-#include "trainer_Engineering"
-learn Handful of Obsidium Bolts##84403 |condition skill("Engineering")>=500
-step
-map Mount Hyjal
-path follow loose;loop;ants straight;dist 60
-path	23.8,36.2	9.4,35.9	17.0,56.4
-path	35.2,64.9	33.3,74.8	31.3,84.3
-path	34.5,95.3	52.7,60.2	57.2,58.4
-path	73.6,63.9	85.0,64.6	81.5,53.8
-path	78.4,58.9	58.3,55.5	54.6,54.4
-path	36.7,51.9	25.0,40.2	35.7,34.3
-path	33.5,26.4
-#include "follow_path_mine"
-collect 212 Obsidium Ore##53038 |condition skill("Engineering")>=500
-|tip You can also buy these materials from the Auction House.
-step
-kill Twilight Augur##40713+, Twilight Retainer##40767
-collect 20 Embersilk Cloth##53010 |goto Mount Hyjal 60.0,70.8 |condition skill("Engineering")>=500
-|tip You can also buy these materials from the Auction House.
-step
-map Twilight Highlands
-path follow loose;loop;ants straight;dist 60
-path	71.4,50.3	54.0,37.6	41.3,56.6
-path	37.5,58.2	24.5,56.9	30.0,42.8
-path	26.9,28.7	32.3,27.1	31.5,40.1
-path	38.6,41.2	39.6,30.4	39.0,19.7
-path	46.2,20.1	53.8,24.8	61.5,32.4
-path	68.5,37.9
-#include "follow_path_mine"
-collect 152 Elementium Ore##52185 |condition skill("Engineering")>=500
-|tip You can also buy these materials from the Auction House.
-step
-kill Obsidian Stoneslave##47226+
-collect 52 Volatile Earth##52327 |goto Twilight Highlands 57.9,31.2 |condition skill("Engineering")>=500
-|tip You can also buy these materials from the Auction House.
-step
-kill Enslaved Tempest##46328+
-collect 30 Volatile Air##52328 |goto 34.6,69.2 |condition skill("Engineering")>=500
-|tip You can also buy these materials from the Auction House.
-You can find more around this area |goto 39.5,85.7
-step
-#include "maincity_anvil"
-create Elementium Bar##74530,Mining,76 total |n
-collect 76 Elementium Bar##52186 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create Obsidium Bar##84038,Mining,106 total |n
-collect 106 Obsidium Bar##54849 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create 38 Handful of Obsidium Bolts##84403,Engineering,38 total |n
-skill Engineering,442
-step
-#include "trainer_Engineering"
-learn Electrostatic Condenser##95703 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create Electrostatic Condenser##95703,Engineering,1 total |n
-Electrostatic Condenser##67494 |condition skill("Engineering")>=500
-|tip Keep this in your bags, it will help you farm Volatile Air as you mine more.
-step
-#include "trainer_Engineering"
-learn Electrified Ether##94748 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create Electrified Ether##94748,Engineering,460
-|tip Hold on to any extra Electrified Ether for now.
-step
-#include "trainer_Engineering"
-learn Safety Catch Removal Kit##84410 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create Safety Catch Removal Kit##84410,Engineering,470
-step
-#include "trainer_Engineering"
-learn High-Powered Bolt Gun##84411 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create High-Powered Bolt Gun##84411,Engineering,475
-step
-#include "trainer_Engineering"
-learn Elementium Toolbox##84416 |condition skill("Engineering")>=500
-step
-create Elementium Toolbox##84416,Engineering,495
-step
-#include "trainer_Engineering"
-learn Elementium Dragonling##84418 |condition skill("Engineering")>=500
-step
-#include "maincity_anvil"
-create Elementium Dragonling##84418,Engineering,500
-step
-confirm |next "Profession Guides\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide"
-|tip This will take you to the Engineering 500 - 600 guides.
+_Congratulations!_
+You Reached 300 Engineering Skill.
 ]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Outland Engineering 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Outland Engineering skill from 1-75.",
+condition_end=function() return skill('Outland Engineering') >= 75 end,
+condition_suggested=function() return skill('Outland Engineering') > 0 and skill('Outland Engineering') < 75 end,
+},[[
+step
+Enter the building |goto Shattrath City/0 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Outland Engineering |skillmax Outland Engineering,75 |goto 43.49,90.36
+|tip You must be at least level 58.
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Outland Engineering |skillmax Outland Engineering,75 |goto 37.76,31.80
+|tip You must be at least level 58.
+only if rep ('The Aldor') >= Neutral
+step
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Fel Iron Casing |learn Fel Iron Casing##30304 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Fel Iron Casing |learn Fel Iron Casing##30304 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+collect 294 Fel Iron Bar##23445
+|tip Use the "Ore" farming guide to gather and smelt fel iron, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 20 Mote of Earth##22573
+|tip Use the "Mote of Earth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+collect 10 Mote of Fire##22574
+|tip Use the "Mote of Fire" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 10 Elemental Blasting Powder>_
+collect 40 Elemental Blasting Powder##23781 |goto 69.36,42.91
+step
+Open Your Engineering Crafting Panel:
+_<Create 56 Fel Iron Casing>_
+collect 56 Fel Iron Casing##23782 |goto 69.36,42.91
+step
+Open Your Engineering Crafting Panel:
+_<Create 126 Handful of Fel Iron Bolts>_
+collect 126 Handful of Fel Iron Bolts##23783 |goto 69.36,42.91
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Fel Iron Bomb |learn Fel Iron Bomb##30310 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Fel Iron Bomb |learn Fel Iron Bomb##30310 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+Open Your Engineering Crafting Panel:
+_<Create 5 Fel Iron Bomb>_
+Reach Level 25 Outland Engineering |skill Outland Engineering,25 |goto 69.36,42.91
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Adamantite Frame |learn Adamantite Frame##30306 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Adamantite Frame |learn Adamantite Frame##30306 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+collect 136 Adamantite Bar##23446
+|tip Use the "Ore" farming guide to gather and smelt adamantite, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 34 Primal Earth##22452
+|tip Use the "Mote of Earth" farming guide to gather these and then combine them together.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 34 Adamantite Frame>_
+|tip Make all 34 of these, you'll need them later.
+Reach Level 35 Outland Engineering |skill Outland Engineering,35 |goto 69.36,42.91
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train White Smoke Flare |learn White Smoke Flare##30341 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train White Smoke Flare |learn White Smoke Flare##30341 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+collect 35 Netherweave Cloth##21877
+|tip Use the "Netherweave Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 35 White Smoke Flare>_
+Reach Level 55 Outland Engineering |skill Outland Engineering,55 |goto 69.36,42.91
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Khorium Power Core |learn Khorium Power Core##30308 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Khorium Power Core |learn Khorium Power Core##30308 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+collect 6 Khorium Bar##23449
+|tip Use the "Khorium Ore" farming guide to gather and smelt these, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 6 Primal Fire##21884
+|tip Use the "Mote of Fire" farming guide to gather these and then combine them together.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 6 Khorium Power Core>_
+Reach Level 60 Outland Engineering |skill Outland Engineering,60 |goto 69.36,42.91
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Adamantite Rifle |learn Adamantite Rifle##30313 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Adamantite Rifle |learn Adamantite Rifle##30313 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+Open Your Engineering Crafting Panel:
+_<Create 17 Adamantite Rifle>_
+Reach Level 70 Outland Engineering |skill Outland Engineering,70 |goto 69.36,42.91
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Engineering##33611
+|tip Inside the building.
+Train Field Repair Bot 110G |learn Field Repair Bot 110G##44391 |goto 43.49,90.36
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 37.15,29.46 < 5 |walk
+talk Technician Mihila##33677
+|tip Inside the building.
+Train Field Repair Bot 110G |learn Field Repair Bot 110G##44391 |goto 37.76,31.80
+only if rep ('The Aldor') >= Neutral
+step
+collect 48 Adamantite Bar##23446
+|tip Use the "Ore" farming guide to gather and smelt adamantite, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 6 Field Repair Bot 110G>_
+Reach Level 75 Outland Engineering |skill Outland Engineering,75 |goto 69.36,42.91
+step
+_Congratulations!_
+You Reached 75 Outland Engineering Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Northrend Engineering 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Northrend Engineering skill from 1-75.",
+condition_end=function() return skill('Northrend Engineering') >= 75 end,
+condition_suggested=function() return skill('Northrend Engineering') > 0 and skill('Northrend Engineering') < 75 end,
+},[[
+step
+Enter the building |goto Dalaran/1 39.05,27.14 < 5 |walk
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Northrend Engineering |skillmax Northrend Engineering,75 |goto 38.51,25.84
+|tip You must be at least level 58.
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Overcharged Capacitor |learn Overcharged Capacitor##56464 |goto 38.51,25.84
+step
+collect 140 Cobalt Bar##36916
+|tip Use the "Ore" farming guide to gather and smelt cobalt, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 10 Crystallized Water##37705
+|tip Use the "Eternal Water, Crystallized Water" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+collect 10 Crystallized Earth##37701
+|tip Use the "Eternal Earth, Crystallized Earth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 39.05,27.14 < 5 |walk
+Open Your Engineering Crafting Panel:
+_<Create 35 Handful of Cobalt Bolts>_
+collect 50 Handful of Cobalt Bolts##39681 |goto 39.65,26.40
+step
+Open Your Engineering Crafting Panel:
+_<Create 10 Volatile Blasting Trigger>_
+collect 20 Volatile Blasting Trigger##39690 |goto 39.65,26.40
+step
+Open Your Engineering Crafting Panel:
+_<Create 10 Overcharged Capacitor>_
+collect 10 Overcharged Capacitor##39682 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Explosive Decoy |learn Explosive Decoy##56463 |goto 38.51,25.84
+step
+collect 6 Frostweave Cloth##33470
+|tip Use the "Frostweave Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 39.05,27.14 < 5 |walk
+Open Your Engineering Crafting Panel:
+_<Create 6 Explosive Decoy>_
+Reach Level 15 Northrend Engineering |skill Northrend Engineering,15 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Froststeel Tube |learn Froststeel Tube##56471 |goto 38.51,25.84
+step
+collect 120 Cobalt Bar##36916
+|tip Use the "Ore" farming guide to gather and smelt cobalt, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 15 Crystallized Water##37705
+|tip Use the "Eternal Water, Crystallized Water" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 39.05,27.14 < 5 |walk
+Open Your Engineering Crafting Panel:
+_<Create 15 Froststeel Tube>_
+|tip Make all 15 of these, you'll need them later.
+Reach Level 26 Northrend Engineering |skill Northrend Engineering,26 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Diamond-cut Refractor Scope |learn Diamond-cut Refractor Scope##61471 |goto 38.51,25.84
+step
+Open Your Engineering Crafting Panel:
+_<Create 5 Diamond-cut Refractor Scope>_
+Reach Level 30 Northrend Engineering |skill Northrend Engineering,30 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Nitro Boosts |learn Nitro Boosts##55016 |goto 38.51,25.84
+step
+talk Bryan Landers##28722
+|tip Inside the building.
+buy 15 Tinker's Kit##90146 |goto 38.93,24.56
+step
+Open Your Engineering Crafting Panel:
+_<Create 15 Nitro Boosts>_
+Reach Level 35 Northrend Engineering |skill Northrend Engineering,35 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Mind Amplification Dish |learn Mind Amplification Dish##67839 |goto 38.51,25.84
+step
+talk Bryan Landers##28722
+|tip Inside the building.
+buy 30 Tinker's Kit##90146 |goto 38.93,24.56
+step
+Open Your Engineering Crafting Panel:
+_<Create 30 Mind Amplification Dish>_
+Reach Level 45 Northrend Engineering |skill Northrend Engineering,45 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Mana Injector Kit |learn Mana Injector Kit##56477 |goto 38.51,25.84
+step
+collect 60 Saronite Bar##36913
+|tip Use the "Ore" farming guide to gather and smelt saronite, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 10 Crystallized Water##37705
+|tip Use the "Eternal Water, Crystallized Water" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 39.05,27.14 < 5 |walk
+Open Your Engineering Crafting Panel:
+_<Create 5 Mana Injector Kit>_
+Reach Level 50 Northrend Engineering |skill Northrend Engineering,50 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Mechanized Snow Goggles |learn Mechanized Snow Goggles##61482 |goto 38.51,25.84
+step
+collect 40 Saronite Bar##36913
+|tip Use the "Ore" farming guide to gather and smelt saronite, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 10 Borean Leather##33568
+|tip Use the "Borean Leather" farming guide to gather these, if you have Skinning.
+|tip You can also purchase them from the Auction House.
+step
+collect 5 Eternal Shadow##35627
+|tip Use the "Eternal Shadow, Crystallized Shadow" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 39.05,27.14 < 5 |walk
+Open Your Engineering Crafting Panel:
+_<Create 5 Mechanized Snow Goggles>_
+Reach Level 55 Northrend Engineering |skill Northrend Engineering,55 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Noise Machine |learn Noise Machine##56467 |goto 38.51,25.84
+step
+Open Your Engineering Crafting Panel:
+_<Create 5 Noise Machine>_
+Reach Level 60 Northrend Engineering |skill Northrend Engineering,60 |goto 39.65,26.40
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+Train Gnomish Army Knife |learn Gnomish Army Knife##56462 |goto 38.51,25.84
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+buy 25 Mining Pick##2901 |goto 38.93,24.56
+step
+talk Timofey Oshenko##28697
+|tip Inside the building.
+buy 25 Blacksmith Hammer##5956 |goto 38.93,24.56
+step
+Enter the building |goto 36.87,29.77 < 5 |walk
+talk Ranid Glowergold##28718
+|tip Inside the building.
+buy 25 Skinning Knife##7005 |goto 36.62,27.85
+step
+collect 250 Saronite Bar##36913
+|tip Use the "Ore" farming guide to gather and smelt saronite, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 39.05,27.14 < 5 |walk
+Open Your Engineering Crafting Panel:
+_<Create 25 Gnomish Army Knife>_
+Reach Level 75 Northrend Engineering |skill Northrend Engineering,75 |goto 39.65,26.40
+step
+_Congratulations!_
+You Reached 75 Northrend Engineering Skill.
+]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Fishing skill from 1-300.",
