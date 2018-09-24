@@ -517,6 +517,24 @@ Heal #5# Azeroth Wounds |q 51609/1 |goto 40.58,37.85
 |tip It appears as a button on the screen.
 |next "Tortollan_Seekers_WQ"
 step
+label quest-51832
+accept Beat Around The Bush##51832 |goto Drustvar/0 25.15,47.58
+|tip You will accept this quest automatically.
+stickystart "Kill_Exposed_Operatives_51832"
+stickystart "Slay_Witch_Forces_51832"
+step
+kill Captain McCann##139092 |q 51832/3 |goto 25.15,47.58
+step
+label "Kill_Exposed_Operatives_51832"
+click Inconspicuious Bush+
+|tip They look like leafy brown bushes on the ground around this area.
+kill 5 Exposed Operative##139079 |q 51832/1 |goto 23.84,51.00
+step
+label "Slay_Witch_Forces_51832"
+Kill enemies around this area
+Slay #10# Witch Forces |q 51832/2 |goto 23.84,51.00
+|next "Tortollan_Seekers_WQ"
+step
 label quest-51469
 accept Betsy##51469 |goto Drustvar/0 58.47,33.17
 |tip You will accept this quest automatically.
@@ -822,6 +840,17 @@ step
 talk Emily Mayville##129995
 Ask her _"Why are you crying?"_
 kill Emily Mayville##129995 |q 51919/1 |goto 63.41,40.10
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51887
+accept Fungi Trio##51887 |goto Drustvar/0 24.18,21.90
+|tip You will accept this quest automatically.
+step
+Enter the cave |goto 24.18,21.90 < 10 |walk
+kill Mack##138866 |q 51887/1 |goto 24.50,22.02
+kill Mick##138870 |q 51887/2 |goto 24.50,22.02
+kill Ernie##138871 |q 51887/3 |goto 24.50,22.02
+|tip Inside the cave.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51761
@@ -1770,6 +1799,14 @@ worldquestzone=863,
 step
 label "Choose_World_Quest"
 #include "BFA_Choose_World_Quests"
+step
+label quest-50570
+accept Azerite Infused Elemental##50570 |goto Nazmir/0 54.07,81.09
+|tip You will accept this quest automatically.
+step
+kill Azerite-Infused Elemental##134298 |q 50570/1 |goto 54.07,81.09
+|tip He walks around this area.
+|next "Tortollan_Seekers_WQ"
 step
 label quest-51064
 accept Azerite Wounds##51064 |goto Nazmir/0 23.78,62.87
@@ -3625,31 +3662,27 @@ kill The Lichen King##136189 |q 52476/1 |goto 51.78,79.77
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52941
-Cross the bridge |goto Stormsong Valley/0 66.23,47.14 < 7 |only if walking
-accept Light in the Darkness##52941 |goto Stormsong Valley/0 67.13,45.58
+accept Light in the Darkness##52941 |goto Stormsong Valley/0 67.13,45.61
 |tip You will accept this quest automatically.
 step
 click Abyssal Beacon##294126
-collect Abyssal Beacon##162635 |q 52941/1 |goto 67.13,45.58
-stickystart "Slay_Assembly_Forces"
+collect Abyssal Beacon##162635 |q 52941/1 |goto 67.13,45.61
+stickystart "Slay_Assembly_Forces_52941"
 step
 use the Abyssal Beacon##162635
+|tip Use it on the Writhing Grasp.
 Dispel the Southerm Grasp |q 52941/2 |goto 67.44,44.37
 step
-Follow the path |goto 66.00,44.33 < 7 |only if walking
-Continue following the path |goto 65.96,42.96 < 7 |only if walking
-Run up the stairs |goto 66.26,42.38 < 5 |only if walking
-Follow the path |goto 65.79,42.18 < 5 |only if walking
+Run up the stairs |goto 65.95,44.62 < 10 |only if walking
 use the Abyssal Beacon##162635
+|tip Use it on the Writhing Grasp.
 Dispel the Western Grasp |q 52941/3 |goto 66.02,41.86
 step
-Jump down here |goto 66.13,41.95 < 3 |only if walking
-Follow the path |goto 66.46,42.20 < 7 |only if walking
-Continue following the path |goto 67.26,42.15 < 7 |only if walking
 use the Abyssal Beacon##162635
+|tip Use it on the Writhing Grasp.
 Dispel the Eastern Grasp |q 52941/4 |goto 67.66,42.33
 step
-label "Slay_Assembly_Forces"
+label "Slay_Assembly_Forces_52941"
 Kill enemies around this area
 Slay #12# Assembly Forces |q 52941/5 |goto 66.84,41.09
 |next "Tortollan_Seekers_WQ"
@@ -3816,6 +3849,13 @@ accept Overgrown Anchor Weed##53288 |goto Stormsong Valley/0 72.64,30.84
 step
 click Overgrown Anchor Weed
 collect Overgrown Anchor Weed##163601 |q 53288/1 |goto 72.64,30.84
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52474
+accept Poacher Zane##52474 |goto Stormsong Valley/0 34.65,67.98
+|tip You will accept this quest automatically.
+step
+kill Poacher Zane##141286 |q 52474/1 |goto 34.65,67.98
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51886
@@ -4318,6 +4358,21 @@ accept Supplies Needed: Frenzied Fangtooth##52380 |goto Stormsong Valley/0 59.28
 step
 talk Sister Lilyana##135800
 turnin Supplies Needed: Frenzied Fangtooth##52380 |goto 59.28,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52968
+accept Time for a Little Blood##52968 |goto Stormsong Valley/0 67.24,42.15
+|tip You will accept this quest automatically.
+stickystart "Slay_Assembly_Forces_52968"
+step
+kill Frothing Tideblood##130116+
+click Sealed Tideblood+
+|tip They look like wooden barrels on the ground around this area.
+collect 20 Tideblood##162649 |q 52968/1 |goto 67.24,42.15
+step
+label "Slay_Assembly_Forces_52968"
+Kill enemies around this area
+Slay #12# Assembly Forces |q 52968/2 |goto 67.24,42.15
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52198
@@ -4984,16 +5039,10 @@ kill Broodmother Razora##130508 |q 51665/1 |goto 83.54,44.83
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51848
-Follow the path |goto Tiragarde Sound/0 42.06,22.42 < 7 |only if walking
-Continue down the path |goto 41.60,22.39 < 7 |only if walking
-Continue following the path |goto 40.73,22.97 < 7 |only if walking
-Continue following the path |goto 38.92,22.21 < 7 |only if walking
-Enter the cave |goto 38.73,21.86 < 7 |walk
-accept Captain Wintersail##51848 |goto Tiragarde Sound/0 38.82,22.03
+accept Captain Wintersail##51848 |goto Tiragarde Sound/0 38.73,21.86
 |tip You will accept this quest automatically.
 step
-Enter the cave |goto 38.73,21.86 < 7 |walk
-Follow the path |goto 38.52,20.95 < 5 |walk
+Enter the cave |goto 38.73,21.86 < 10 |walk
 click Smuggler's Cache##280649
 |tip Inside the cave.
 Watch the dialogue
@@ -6026,9 +6075,21 @@ step
 clicknpc Riding Macaw##143068
 Mount the Riding Macaw |invehicle |goto 77.06,82.62 |q 53196
 step
-Kill enemies around this area
-|tip Use the "Vile Bombardment" ability on your action bar to accomplish this.
-Bomb #100# Pirates |q 53196/1 |goto 76.41,83.52
+Bomb #100# Pirates |q 53196/1
+|tip Use the ability on your action bar.
+|tip They are on the ground around this area as you fly.
+|next "Tortollan_Seekers_WQ"
+step
+label quest-52159
+accept Swab This!##52159 |goto Tiragarde Sound/0 77.06,82.91
+|tip You will accept this quest automatically.
+step
+clicknpc Riding Macaw##143068
+Mount the Riding Macaw |invehicle |goto 77.06,82.62 |q 52159
+step
+Bomb #100# Pirates |q 52159/1
+|tip Use the ability on your action bar.
+|tip They are on the ground around this area as you fly.
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52751
@@ -6267,18 +6328,6 @@ step
 kill Barbtail Stingray##128676+
 |tip Underwater.
 collect 6 Intact Venomous Barb##153486 |q 51385/1 |goto 41.09,29.54
-|next "Tortollan_Seekers_WQ"
-step
-label quest-52159
-accept Swab This!##52159 |goto Tiragarde Sound/0 77.06,82.91
-|tip You will accept this quest automatically.
-step
-clicknpc Riding Macaw##143068
-Mount the Riding Macaw |invehicle |goto 77.06,82.62 |q 52159
-step
-Kill enemies around this area
-|tip Use the "Vile Bombardment" ability on your action bar to accomplish this.
-Bomb #100# Pirates |q 52159/1 |goto 76.41,83.52
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51891
@@ -7454,7 +7503,7 @@ kill Relic Hunter Hazaak##136340 |q 51124/1 |goto 48.88,72.11
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51330
-accept Resilient Seeds##51330 |goto Vol'dun/0 43.40,78.82
+accept Resilient Seeds##51330 |goto Vol'dun/0 43.46,80.61
 |tip You will accept this quest automatically.
 step
 Kill Withered enemies around this area
@@ -9531,6 +9580,7 @@ clicknpc Old K'zlotec##135908
 Climb Aboard Old K'zlotec |q 50957/1 |goto 73.19,28.33
 step
 Kill enemies around this area
+|tip Use the abilities on your action bar.
 Deliver Rezan's Wrath |q 50957/2 |goto 73.67,25.42
 |next "Tortollan_Seekers_WQ"
 step

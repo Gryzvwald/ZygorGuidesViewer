@@ -121,7 +121,7 @@ data.taxipoints = {
 	['Drustvar']={
 		-- Alliance --
 		{name="Hangman's Point",faction="A",npc="Aaron Ridgeley",npcid=128576,x=71.06,y=40.88},
-		{name="Fletcher's Hollow",faction="A",npc="Bridget Bran",npcid=126724,x=70.21,y=60.45,taxinodeID=2035},
+		{name="Fletcher's Hollow",faction="A",npc="Bridget Bran",npcid=126724,x=70.21,y=60.45},
 		{name="Falconhurst",faction="A",npc="Viviana Swailes",npcid=134866,x=26.98,y=72.38},
 		{name="Arom's Stand",faction="A",npc="Jess Albury",npcid=135023,x=38.14,y=52.53},
 		{name="Watchman's Rise",faction="A",npc="Ensign Wallace",npcid=135024,x=31.87,y=30.45,quest=50003},

@@ -30086,5 +30086,11 @@ ZygorGuidesViewer_L("NPCs", "enUS", function() return {
 [111998]="Horde Grunt|",
 [140810]="Horde Grunt|",
 [107543]="Armored Snowy Gryphon|",
+[141286]="Poacher Zane|",
+[138871]="Ernie|",
+[138870]="Mick|",
+[138866]="Mack|",
+[139092]="Captain McCann|",
+[139079]="Exposed Operative|",
 
 } end)
