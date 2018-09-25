@@ -10123,6 +10123,7 @@ talk Sister Adrianna##133974
 Ask her _"Can you tell me anything about the missing fleet?"_
 Question Sister Adrianna |q 51487/1 |goto 68.44,74.23
 step
+Follow the path |goto 63.62,82.76 < 15 |only if walking
 talk Brother Darrel##133976
 Ask him _"Can you tell me anything about the missing fleet?"_
 Question Brother Darrel |q 51487/2 |goto 60.49,85.25
@@ -10140,7 +10141,7 @@ talk Brother Alen##133951
 Ask him _"Can you tell me anything about the missing fleet?"_
 Question Brother Alen |q 51488/1 |goto 68.40,81.49
 step
-Run down the stairs |goto 66.97,80.35 < 10 |only if walking
+Run down the stairs |goto 66.97,80.35 < 7 |only if walking
 Watch the dialogue
 |tip Follow Brother Alen as he walks.
 Follow Brother Alen into the Archives |q 51488/2 |goto Tiragarde Sound/0 73.72,39.54
@@ -10159,7 +10160,7 @@ talk Taelia
 turnin Archived Knowledge##51488
 accept Time to Leave##51489
 step
-Leave the building |goto Boralus/0 66.97,80.36 < 10 |walk
+Leave the building |goto Boralus/0 66.97,80.36 < 7 |walk
 Locate Galeheart |goto 71.78,78.90 < 10 |c |q 51489
 |tip At the top of the tower.
 step

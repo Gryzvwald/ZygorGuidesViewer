@@ -1430,8 +1430,7 @@ pet=153,
 step
 You can only obtain this pet during the Brewfest event.
 confirm
-step
-#include "Brewfest_Dailies"
+leechsteps "Zygor's Events Guides\\Brewfest\\Brewfest Dailies"
 step
 Complete the Brewfest daily quests each day until you have 200 Brewfest Prize Tokens
 collect 200 Brewfest Prize Token##37829 |achieve 2796

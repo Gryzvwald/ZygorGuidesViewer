@@ -11391,107 +11391,121 @@ description="This guide section will walk you through completing the quests for 
 },[[
 step
 talk Tapper Swindlekeg##24711
-accept Welcome to Brewfest!##11447 |instant |goto Durotar/0 41.6,18.5
+accept Welcome to Brewfest!##11447 |instant |goto Durotar/0 41.58,18.45
 step
-talk Ram Master Ray##24497 |goto Durotar 42.6,17.8
-accept Now This is Ram Racing... Almost.##11409 |goto Durotar 42.6,17.8
+talk Ram Master Ray##24497
+accept Now This is Ram Racing... Almost.##11409 |goto 42.61,17.84
 step
 As you run around on the ram:
-Use the _Giddyup!_ temporary ability
-|tip It will appear on your screen when mounted with the quest mount.
-|tip The ram runs slow by default. You have to use the Giddyup! ability to make it run at certain speeds for 8 seconds. The make the ram Trot for 8 seconds, use the Giddyup! ability every 2 seconds or so to keep the ram running at the speed just above the slow default speed.  To make the Ram Canter for 8 seconds, use the Giddyup! ability a little more often than when you made the Ram Trot. To make the Ram Gallop, just spam use the Giddyup! ability.
+|tip Use the Giddyup! ability to trot for 8 seconds.
+|tip The ram runs slow by default.
+|tip You have to use the Giddyup! ability to make it run at certain speeds for 8 seconds.
+|tip To make the ram Trot for 8 seconds, use the Giddyup! ability every 2 seconds or so to keep the ram running at the speed just above the slow default speed.
 Maintain a Trot for 8 seconds |q 11409/1
+step
+As you run around on the ram:
+|tip Use the Giddyup! ability to trot for 8 seconds.
+|tip The ram runs slow by default.
+|tip You have to use the Giddyup! ability to make it run at certain speeds for 8 seconds.
+|tip To make the Ram Canter for 8 seconds, use the Giddyup! ability a little more often than when you made the Ram Trot.
 Maintain a Canter for 8 seconds |q 11409/2
+step
+As you run around on the ram:
+|tip Use the Giddyup! ability to trot for 8 seconds.
+|tip The ram runs slow by default.
+|tip You have to use the Giddyup! ability to make it run at certain speeds for 8 seconds.
+|tip To make the Ram Gallop, just spam use the Giddyup! ability.
 Maintain a Gallop for 8 seconds |q 11409/3
 step
 talk Ram Master Ray##24497
-turnin Now This is Ram Racing... Almost.##11409 |goto Durotar 42.6,17.9
-accept There and Back Again##11412 |goto Durotar 42.6,17.9
+turnin Now This is Ram Racing... Almost.##11409 |goto 42.61,17.84
+accept There and Back Again##11412 |goto 42.61,17.84
 step
-Use the _Giddyup!_ temporary ability
-|tip It will appear on your screen when mounted with the quest mount.
-|tip Run as fast as you can without making your Ram stop from being too tired. Stop at every bucket of apples you see on the side of the road to refresh your Ram's fatigue level, allowing the Ram to run faster for longer.
-Get a keg from Bok Dropcertain |goto Durotar/0 50.6,13.5 < 10
+Get a Keg From Bok Dropcertain Here [50.62,13.48]
+|tip Use the Giddyup! ability.
+|tip Run as fast as you can without making your Ram stop from being too tired.
+|tip Stop at every bucket of apples you see on the side of the road to refresh your Ram's fatigue level.
 |tip He will throw you a keg when you get close.
-Click here and run back to turn in the keg |goto 42.6,17.7
-|tip Just get near him and you will throw the keg to him.
-Deliver 3 Kegs |q 11412/1 |goto 42.6,17.7
+|tip Just get near him and you will throw the keg to him automatically.
+Deliver 3 Kegs |q 11412/1 |goto 42.69,17.72
 step
 talk Ram Master Ray##24497
-turnin There and Back Again##11412 |goto Durotar 42.6,17.8
+turnin There and Back Again##11412 |goto 42.61,17.84
 step
 talk Driz Tumblequick##24510
-accept A New Supplier of Souvenirs##29396 |or |goto Durotar 42.7,17.7
-accept Another Year, Another Souvenir.##13931 |or |goto Durotar 42.7,17.7
+accept A New Supplier of Souvenirs##29396 |goto 42.69,17.71 |or
+accept Another Year, Another Souvenir.##13931 |goto 42.69,17.71 |or
 |tip These quests may not be available to you if you have a stein already.
 step
 talk Bizzle Quicklift##27216
-accept Chug and Chuck!##12191 |goto Durotar 41.6,17.7
+accept Chug and Chuck!##12191 |goto 41.57,17.67
 step
 click Alcohol-Free Brewfest Sampler##186189
 |tip They looks like mugs of beer on the small tables on either side of you.
-use Alcohol-Free Brewfest Sampler##33096
-Hit the S.T.O.U.T. #5# Times |q 12191/1 |goto Durotar 41.5,17.5
+use the Alcohol-Free Brewfest Sampler##33096
+Hit the S.T.O.U.T. #5# Times |q 12191/1 |goto 41.57,17.60
 step
 talk Bizzle Quicklift##27216
-turnin Chug and Chuck!##12191 |goto 41.6,17.7
+turnin Chug and Chuck!##12191 |goto 41.57,17.67
 step
 talk Glodrak Huntsniper##24657
-accept Catch the Wild Wolpertinger!##11431 |goto 41.2,18.5
-accept Pink Elekks On Parade##11120 |goto 41.2,18.5
+accept Catch the Wild Wolpertinger!##11431 |goto 41.23,18.53
+accept Pink Elekks On Parade##11120 |goto 41.23,18.53
 step
 talk Glodrak Huntsniper##24657
 Ask him _"What are Synthebrew Goggles?"_
-collect Synthebrew Goggles##46735 |q 11431 |goto 41.2,18.5
+collect Synthebrew Goggles##46735 |q 11431 |goto 41.23,18.53
 step
 talk Blix Fixwidget##24495
-turnin A New Supplier of Souvenirs##29396 |or |goto 40.3,17.9
-turnin Another Year, Another Souvenir.##13931 |or |goto 40.3,17.9
+turnin A New Supplier of Souvenirs##29396 |or |goto 40.31,17.89
+turnin Another Year, Another Souvenir.##13931 |or |goto 40.31,17.89
 step
-use Synthebrew Goggles##46735
+use the Synthebrew Goggles##46735
 Equip the Synthebrew Goggles |havebuff 135977 |q 11431
 step
 clicknpc Wild Wolpertinger##23487
-use Wolpertinger Net##32907
+use the Wolpertinger Net##32907
 |tip They look like rabbits with antlers and wings running around on the ground around this area.
-collect 5 Stunned Wolpertinger##32906 |q 11431/1 |goto Durotar 41.2,18.1
+collect 5 Stunned Wolpertinger##32906 |q 11431/1 |goto 41.19,18.12
 step
 talk Glodrak Huntsniper##24657
-turnin Catch the Wild Wolpertinger!##11431 |goto Durotar 41.2,18.5
-Earn Does Your Wolpertinger Linger? achievement |achieve 1683/6 |goto Durotar 41.2,18.5
+turnin Catch the Wild Wolpertinger!##11431 |goto 41.23,18.53
+Earn Does Your Wolpertinger Linger? achievement |achieve 1683/6 |goto 41.23,18.53
 step
-Follow the path |goto Undercity/0 70.72,41.50 |walk
-Follow the path |goto 72.67,40.17 |walk
-Ride the elevator |goto 72.57,44.20 |walk
-Follow the path |goto 66.96,44.22 |walk
-Follow the path |goto 66.58,42.64 |walk
-Follow the path |goto 66.00,32.94 |walk
+talk Zidormi##141488
+|tip In order to complete the Brewfest questline, you will need to speak with Zidormi to change the zone back to normal.
+Ask her _"Can you show me what Tirisfal Glades was like before the Battle for Lordaeron?"_ |havebuff 609811 |goto Tirisfal Glades/0 69.45,62.80
+|only if not ZGV.InPhase("Old Undercity")
+step
 clicknpc Tirisfal Pink Elekk##23530
-use Elekk Dispersion Ray##32960
+use the Elekk Dispersion Ray##32960
+|tip Make sure you have the Synthebrew Goggles equipped.
 |tip They are found above Undercity, in Tirisfal Glades.
-kill 3 Tirisfal Pink Elekk##23530 |q 11120/3 |goto Tirisfal Glades/0 62.9,67.7
+kill 3 Tirisfal Pink Elekk##23530 |q 11120/3 |goto Tirisfal Glades/0 62.45,67.47
 step
 clicknpc Eversong Pink Elekk##23531
 use Elekk Dispersion Ray##32960
-kill 3 Eversong Pink Elekk##23531 |q 11120/1 |goto Eversong Woods 57.0,53.1
+|tip Make sure you have the Synthebrew Goggles equipped.
+kill 3 Eversong Pink Elekk##23531 |q 11120/1 |goto Eversong Woods/0 56.97,53.14
 step
 clicknpc Mulgore Pink Elekk##23529
 use Elekk Dispersion Ray##32960
-kill 3 Mulgore Pink Elekk##23529 |q 11120/2 |goto Thunder Bluff 34.7,74.7
+|tip Make sure you have the Synthebrew Goggles equipped.
+kill 3 Mulgore Pink Elekk##23529 |q 11120/2 |goto Thunder Bluff/0 34.66,74.60
 step
 talk Glodrak Huntsniper##24657
-turnin Pink Elekks On Parade##11120 |goto Durotar 41.2,18.5
+turnin Pink Elekks On Parade##11120 |goto Durotar/0 41.23,18.53
 step
 Use the Dungeon Finder (press _I_) to queue for Coren Direbrew
 |tip You will need to at least be level 46.
 kill Coren Direbrew##23872
 collect Direbrew's Dire Brew##38281 |n
-use Direbrew's Dire Brew##38281
+use the Direbrew's Dire Brew##38281
 accept Direbrew's Dire Brew##12492
-achieve 1683/3
+Earn the  "Direbrewfest" Achievement |achieve 1683/3
 step
 talk Tapper Swindlekeg##24711
-turnin Direbrew's Dire Brew##12492 |goto Durotar 41.6,18.5
+turnin Direbrew's Dire Brew##12492 |goto 41.57,18.46
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Brewfest\\Brewfest Dailies",{
 author="support@zygorguides.com",
@@ -11499,7 +11513,94 @@ condition_suggested=function() return isevent('Brewfest') end,
 description="This guide section will walk you through completing the daily quests for the Brewfest event.",
 },[[
 step
-#include "Brewfest_Dailies"
+talk Cort Gorestein##24498
+accept Bark for Drohn's Distillery!##11407 |goto Durotar/0 40.56,18.18
+Click Here if This Quest Isn't Available |confirm
+step
+talk Ja'ron##24499
+accept Bark for T'chali's Voodoo Brewery!##11408 |goto 40.20,17.08
+Click Here if This Quest Isn't Available |confirm
+step
+Ride Your Ram into Orgrimmar |goto Orgrimmar/1 50.93,90.90 < 20 |c |q 11407
+|tip Use the _Giddyup!_ ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+|only if havequest(11407)
+step
+Bark Outside the Auction House |q 11407/1 |goto 51.63,78.97
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Bark in the Valley of Honor |q 11407/2 |goto 67.02,48.19
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Bark in the Valley of Wisdom |q 11407/3 |goto 44.26,49.07
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Bark in the Valley of Spirits |q 11407/4 |goto 37.68,75.48
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Ride Your Ram into Orgrimmar |goto 50.93,90.90 < 20 |c |q 11408
+|tip Use the _Giddyup!_ ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+|only if havequest(11408)
+step
+Bark Outside the Auction House |q 11408/1 |goto 51.63,78.97
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Bark in the Valley of Honor |q 11408/2 |goto 67.02,48.19
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Bark in the Valley of Wisdom |q 11408/3 |goto 44.26,49.07
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+Bark in the Valley of Spirits |q 11408/4 |goto 37.68,75.48
+|tip Use the _Giddyup!_ temporary ability as you run.
+|tip Just keep a Trot pace most of the time, and only sometimes keep a Canter pace.
+|tip If you go too much faster than that, your ram will get tired and you will run out of time.
+step
+talk Cort Gorestein##24498
+turnin Bark for Drohn's Distillery!##11407 |goto Durotar/0 40.56,18.18
+step
+talk Ja'ron##24499
+turnin Bark for T'chali's Voodoo Brewery!##11408 |goto 40.20,17.08
+step
+click Dark Iron Mole Machine Wreckage
+|tip You have to defend the three kegs at these locations in order for it to show up.
+Click the Complimentary Brewfest Sampler Here [40.11,17.48]
+Click the Complimentary Brewfest Sampler Here [40.33,16.81]
+use the Complimentary Brewfest Sampler##33096
+|tip Throw the Sampler's at the Dark Iron Dwarves and the Mole Machines.
+accept This One Time, When I Was Drunk...##12192 |goto 40.80,17.51
+step
+talk Bizzle Quicklift##27216
+turnin This One Time, When I Was Drunk...##12192 |goto 41.57,17.67
+Earn the "Down With The Dark Iron" Achievement |achieve 1186
+step
+talk Ram Master Ray##24497
+accept Brew For Brewfest##29393 |instant |goto 42.61,17.83 < 10
+step
+Get a Keg From Bok Dropcertain Here |goto 50.48,13.57
+|tip Use the Giddyup! ability.
+|tip Run as fast as you can without making your Ram stop from being too tired.
+|tip Stop at every bucket of apples you see on the side of the road to refresh your Ram's fatigue level.
+|tip He will throw you a keg when you get close.
+|tip Just get near him and you will throw the keg to him automatically.
+Deliver As Many Kegs As You Can Within 4 Minutes to Ram Master Ray |goto 42.61,17.83
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Brewfest\\Brewfest Achievements",{
 author="support@zygorguides.com",
@@ -11508,61 +11609,69 @@ description="This guide section will walk you through completing the achievement
 },[[
 step
 talk Uta Roughdough##23603
-buy The Essential Brewfest Pretzel##33043 |condition itemcount() > 0 or achieved(1185) |goto Durotar 41.0,18.3
-step
+buy The Essential Brewfest Pretzel##33043 |n
 use The Essential Brewfest Pretzel##33043
-achieve 1185/7
+Eat "The Essential Brewfest Pretzel" |achieve 1185/7 |goto Durotar/0 41.05,18.35
 step
 talk Agnes Farwithers##23604
-buy Spiced Onion Cheese##34065 |achieve 1185 |goto 40.2,17.7
-step
-Click the Spiced Onion Cheese in your bags |use Spiced Onion Cheese##34065
-Eat the Spiced Onion Cheese |achieve 1185/4
+buy Spiced Onion Cheese##34065 |n
+use the Spiced Onion Cheese##34065
+Eat the "Spiced Onion Cheese" |achieve 1185/4  |goto 40.23,17.67
 step
 talk Bron##23605
-buy Dried Sausage##34063 |achieve 1185 |goto 41.2,17.3
-buy Succulent Sausage##34064 |achieve 1185 |goto 41.2,17.3
-buy Savory Sausage##33023 |achieve 1185 |goto 41.2,17.3
-buy Pickled Sausage##33024 |achieve 1185 |goto 41.2,17.3
-buy Spicy Smoked Sausage##33025 |achieve 1185 |goto 41.2,17.3
-buy The Golden Link##33026 |achieve 1185 |goto 41.2,17.3
+buy Dried Sausage##34063 |n
+use the Dried Sausage##34063
+Eat the "Dried Sausage" |achieve 1185/1 |goto 41.23,17.26
 step
-Do the following:
-use Dried Sausage##34063
-Eat the Dried Sausage |achieve 1185/1
-use Succulent Sausage##34064
-Eat the Succulent Sausage |achieve 1185/6
-use Savory Sausage##33023
-Eat the Savory Sausage |achieve 1185/3
-use Pickled Sausage##33024
-Eat the Pickled Sausage |achieve 1185/2
-use Spicy Smoked Sausage##33025
-Eat Spicy Smoked Sausage |achieve 1185/5
-use The Golden Link##33026
-Eat The Golden Link |achieve 1185/8
-Earn The Brewfest Diet achievement |achieve 1683/3
+talk Bron##23605
+buy Succulent Sausage##34064 |n
+use the Succulent Sausage##34064
+Eat the "Succulent Sausage" |achieve 1185/6 |goto 41.23,17.26
+step
+talk Bron##23605
+buy Savory Sausage##33023 |n
+use the Savory Sausage##33023
+Eat the "Savory Sausage" |achieve 1185/3 |goto 41.23,17.26
+step
+talk Bron##23605
+buy Pickled Sausage##33024 |n
+use the Pickled Sausage##33024
+Eat the "Pickled Sausage" |achieve 1185/2 |goto 41.23,17.26
+step
+talk Bron##23605
+buy Spicy Smoked Sausage##33025 |n
+use the Spicy Smoked Sausage##33025
+Eat the "Spicy Smoked Sausage" |achieve 1185/5 |goto 41.23,17.26
+step
+talk Bron##23605
+buy The Golden Link##33026 |n
+use the The Golden Link##33026
+Eat "The Golden Link" |achieve 1185/8 |goto 41.23,17.26
+step
+Earn "The Brewfest Diet" Achievement |achieve 1185
 step
 talk Blix Fixwidget##24495
-buy Fresh Brewfest Hops##37750 |achieve 303 |goto 40.3,17.9
+buy Fresh Brewfest Hops##37750 |n
 |tip You must be at least level 20 to buy these.
+use the Fresh Brewfest Hops##37750
+Earn the "Have Keg, Will Travel" Achievement |achieve 303 |goto 40.32,17.89
 step
-use Fresh Brewfest Hops##37750
-Make your Mount Festive for Brewfest!
-Earn Have Keg, Will Travel |achieve 303
-step
-Complete the Brewfest daily quests each day until you have 200 Brewfest Prize Tokens
-collect 200 Brewfest Prize Token##37829 |achieve 2796
+Load the "Brewfest Dailies" Guide |confirm |next "Zygor's Events Guides\\Brewfest\\Brewfest Dailies"
+|tip Click the line above to load the guide.
+|tip These are earned by doing Brewfest Dailies.
+collect 200 Brewfest Prize Token##37829
 step
 talk Blix Fixwidget##24495
 buy "Brew of the Month" Club Membership Form##37599 |n
-use "Brew of the Month" Club Membership Form##37599
-accept Brew of the Month Club##12306 |goto 40.3,17.9
+use the "Brew of the Month" Club Membership Form##37599
+accept Brew of the Month Club##12306 |goto 40.32,17.89
 step
 talk Ray'ma##27489
-turnin Brew of the Month Club##12306 |goto Orgrimmar 50.4,73.5
-Earn the Brew of the Month achievement |achieve 2796 |goto Orgrimmar 50.4,73.5
+turnin Brew of the Month Club##12306 |goto Orgrimmar/1 50.35,73.49
+Earn the "Brew of the Month" Achievement |achieve 2796 |goto 50.35,73.49
 step
-Congratulations, you are a Brewmaster! |achieve 1683
+_Congratulations!_
+You Earned the _Brewmaster_ Title.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Hallow's End\\Hallow's End Quests",{
 author="support@zygorguides.com",

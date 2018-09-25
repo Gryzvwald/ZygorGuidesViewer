@@ -30092,5 +30092,7 @@ ZygorGuidesViewer_L("NPCs", "enUS", function() return {
 [138866]="Mack|",
 [139092]="Captain McCann|",
 [139079]="Exposed Operative|",
+[139296]="Warscout Dagra|",
+[139150]="7th Legion Warstrider|",
 
 } end)

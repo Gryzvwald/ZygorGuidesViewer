@@ -8105,118 +8105,131 @@ condition_suggested=function() return isevent('Brewfest') end,
 description="This guide section will walk you through completing the quests for the Brewfest event.",
 },[[
 step
+talk Dwarf Commoner##19148
+accept Brewfest!##11441 |goto Ironforge/0 30.87,71.97
+step
 talk Ipfelkofer Ironkeg##24710
-accept Welcome to Brewfest!##11442 |instant |goto Dun Morogh 55.1,38.1
-step
-talk Goldark Snipehunter##23486
-|tip If you are on an EU server, you will be unable to accept these 2 quests.
-|tip So, just skip them, and also skip the guide steps where you complete the quest goals for these quests.
-accept Brewfest!##11441 |goto 55.1,37.7
-accept Brewfest!##11441 |goto 55.1,37.7
-step
-talk Goldark Snipehunter##23486
-|tip Ask him if there's another way you can help out if you don't like drinking, then ask for a pair of Synthebrew Goggles
-collect Synthebrew Goggles##46735 |q 11117 |goto 55.1,37.7
+turnin Brewfest!##11441 |goto Dun Morogh/0 55.12,38.08
 step
 talk Boxey Boltspinner##27215
-accept Chug and Chuck!##12022 |goto 54.7,38.1
+accept Chug and Chuck!##12022 |goto 54.67,38.10
 step
-Click the Alcohol-Free Brewfest Sampler
-|tip They looks like mugs of beer on the small tables on either side of you.
-Use your Complimentary Brewfest Samplers |use Alcohol-Free Brewfest Sampler##33096
-Hit S.T.O.U.T. 5 Times |q 12022/1 |goto 54.8,37.9
+click Alcohol-Free Brewfest Sampler##186189+
+|tip They look like mugs of beer on the small tables inside this tent.
+use the Alcohol-Free Brewfest Sampler##33096
+Hit S.T.O.U.T. #5# Times |q 12022/1 |goto 54.74,37.92
 step
 talk Boxey Boltspinner##27215
-turnin Chug and Chuck!##12022 |goto 54.7,38.1
+turnin Chug and Chuck!##12022 |goto 54.67,38.10
 step
 talk Neill Ramstein##23558
-accept Now This is Ram Racing... Almost.##11318 |goto 53.7,38.6
+accept Now This is Ram Racing... Almost.##11318 |goto 53.68,38.55
 step
 As you run around on the ram:
-Use your Ram Racing Reins |use Ram Racing Reins##33306
-|tip The ram runs slow by default. You have to use the Ram Racing Reins to make it run at certain speeds for 8 seconds. To make the ram Trot for 8 seconds, use the Ram Racing Reins every 2 seconds or so to keep the ram running at the speed just above the slow default speed.  To make the Ram Canter for 8 seconds, use the Ram Racing Reins a little more often than when you made the Ram Trot. To make the Ram Gallop, just spam use the Ram Racing Reins.
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip The ram runs slow by default. You have to use the Giddyup! ability to make it run at certain speeds for 8 seconds. To make the ram Trot for 8 seconds, use the Giddyup! ability every 2 seconds or so.
 Maintain a Trot for 8 seconds |q 11318/1
+step
+As you run around on the ram:
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip To make the ram Canter for 8 seconds, use the Giddyup! ability a little more often than when you made the ram Trot.
 Maintain a Canter for 8 seconds |q 11318/2
+step
+As you run around on the ram:
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip To make the ram Gallop, just spam the Giddyup! ability.
 Maintain a Gallop for 8 seconds |q 11318/3
 step
 talk Neill Ramstein##23558
 turnin Now This is Ram Racing... Almost.##11318
-accept There and Back Again##11122 |goto 53.7,38.6
+accept There and Back Again##11122 |goto 53.68,38.55
 step
-map Dun Morogh
+map Dun Morogh/0
 path follow strict;loop;ants straight
 path	54.6,43.3	54.5,47.4	53.1,51.3
 path	53.7,51.8	54.5,47.7	54.6,43.4
 path	53.6,38.5
-Use your Ram Racing Reins as you run |use Ram Racing Reins##33306
-|tip Stop at every bucket of apples you see on the side of the road to refresh your Ram's fatigue level, allowing the Ram to run faster for longer.
-_FOLLOW THE WAYPOINT PATH_ Flynn Firebrew will throw you a keg when you get close
+Follow the waypoint path:
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Stop at every bucket of apples you see on the side of the road to refresh your Ram's fatigue level, allowing the ram to run faster for longer.
+Flynn Firebrew will throw you a keg when you get close
 Once you have a keg, run back and turn it in to Pol Amberstill
 |tip Just get near him and you will throw the keg to him.
 Deliver 3 Kegs in Under 4 Minutes |q 11122/1
 step
 talk Neill Ramstein##23558
-turnin There and Back Again##11122 |goto 53.7,38.6
+turnin There and Back Again##11122 |goto 53.68,38.55
 step
 talk Goldark Snipehunter##23486
-accept Catch the Wild Wolpertinger!##11117 |goto 55.1,37.7
+accept Catch the Wild Wolpertinger!##11117 |goto 55.13,37.71
 step
 talk Goldark Snipehunter##23486
-Tell him: "I'd like a pair of Synthebrew Goggles."
-collect Synthebrew Goggles##46735 |goto 55.1,37.7
+Ask him _"What are Synthebrew Goggles?"_
+collect Synthebrew Goggles##46735 |goto 55.13,37.71 |q 11117
 step
-Use your Synthebrew Goggles |use Synthebrew Goggles##46735
+use the Synthebrew Goggles##46735
 Equip the Synthebrew Goggles |havebuff 135977 |q 11117
 step
-Use your Wolpertinger Net on Wild Wolpertingers |use Wolpertinger Net##32907
-|tip They look like rabbits with antlers and wings running around on the ground around this area.
+use the Wolpertinger Net##32907
+|tip Use it on Wild Wolpertingers.
+|tip They look like small rabbits with antlers and wings running around on the ground around this area.
 collect 5 Stunned Wolpertinger##32906 |q 11117/1 |goto 54.5,38.5
 step
 talk Goldark Snipehunter##23486
-turnin Catch the Wild Wolpertinger!##11117 |goto 55.1,37.7
-collect Wolpertinger's Tankard##32233 |n
-use Wolpertinger's Tankard##32233
-Does Your Wolpertinger Linger? |achieve 1936
-|tip If you are on the EU server you will be able to achieve this in the Achievments Guide.
+turnin Catch the Wild Wolpertinger!##11117 |goto 55.13,37.71
+accept Pink Elekks On Parade##11118 |goto 55.13,37.71
 step
-talk Goldark Snipehunter##23486
-accept Pink Elekks On Parade##11118 |goto 55.1,37.7
+talk Pol Amberstill##24468
+accept A New Supplier of Souvenirs##29397 |goto 53.54,38.57
 step
 talk Belbi Quikswitch##23710
-turnin Another Year, Another Souvenir.##13932 |or
-turnin A New Supplier of Souvenirs##29396 |or |goto 56.4,37.8
+turnin A New Supplier of Souvenirs##29397 |goto 56.39,37.84
 step
-Use your Synthebrew Goggles |use Synthebrew Goggles##46735
-Equip the Synthebrew Goggles |havebuff 135977  |q 11118
-Use your Elekk Dispersion Ray on Elwynn Pink Elekks |use Elekk Dispersion Ray##32960 |goto Elwynn Forest 33.5,50.7
-kill 3 Elwynn Pink Elekk |q 11118/2
-step
-Use your Synthebrew Goggles |use Synthebrew Goggles##46735
+use the Synthebrew Goggles##46735
 Equip the Synthebrew Goggles |havebuff 135977 |q 11118
-Use your Elekk Dispersion Ray on Teldrassil Pink Elekks |use Elekk Dispersion Ray##32960 |goto Darnassus 67.3,46.1
-kill 3 Azuremyst Pink Elekk |q 11118/3
 step
-Use your Synthebrew Goggles |use Synthebrew Goggles##46735
+use the Elekk Dispersion Ray##32960
+|tip Use it on Elwynn Pink Elekks around this area.
+|tip They look like pink elephants with four horns around this area.
+kill 3 Elwynn Pink Elekk |q 11118/2 |goto Elwynn Forest/0 33.59,51.44
+step
+talk Zidormi##141489
+Ask her _"Can you show me what the world was like before the burning of Teldrassil?"_
+Time Travel to Before the Burning of Teldrassil |havebuff 609811 |goto Darkshore/0 48.06,25.67 |q 11118
+|only if not ZGV.InPhase("Old Darnassus")
+step
+use the Synthebrew Goggles##46735
 Equip the Synthebrew Goggles |havebuff 135977 |q 11118
-Use your Elekk Dispersion Ray on Azuremyst Pink Elekks |use Elekk Dispersion Ray##32960 |goto The Exodar 78.4,57.4
-kill 3 Teldrassil Pink Elekk |q 11118/1
+step
+use the Elekk Dispersion Ray##32960
+|tip Use it on Teldrassil Pink Elekks around this area.
+|tip They look like pink elephants with four horns around this area.
+kill 3 Azuremyst Pink Elekk |q 11118/3 |goto Darnassus/0 67.00,46.37
+step
+use the Synthebrew Goggles##46735
+Equip the Synthebrew Goggles |havebuff 135977 |q 11118
+step
+use the Elekk Dispersion Ray##32960
+|tip Use it on Azuremyst Pink Elekks around this area.
+|tip They look like pink elephants with four horns around this area.
+kill 3 Teldrassil Pink Elekk |q 11118/1 |goto The Exodar/0 79.18,57.47
 step
 talk Goldark Snipehunter##23486
-turnin Pink Elekks On Parade##11118 |goto Dun Morogh 55.1,37.7
+turnin Pink Elekks On Parade##11118 |goto Dun Morogh/0 55.13,37.71
 step
-Use the Dungeon Finder (press I) to queue for Coren Direbrew
-|tip You must be level 46 or above to queue for this dungeon
-You will fight Coren Direbrew
+Press _I_ and Queue for Coren Direbrew or Enter the Dungeon with your Group |goto Blackrock Depths/2 0.00,0.00 < 1000 |q 12491 |future
+|tip You must be level 46 or above to queue for this dungeon.
+step
 kill Coren Direbrew##23872
-collect Direbrew's Dire Brew##38280 |n
-Click Direbrew's Dire Brew in your bags |use Direbrew's Dire Brew##38280
 accept Direbrew's Dire Brew##12491
-step
-Click the green eye on the edge of your minimap
-Teleport Out of the Dungeon and go to Dun Morogh |goto Dun Morogh |noway |c
+|tip You will automatically accept this quest after looting.
 step
 talk Ipfelkofer Ironkeg##24710
-turnin Direbrew's Dire Brew##12491 |goto 55.1,38.1
+turnin Direbrew's Dire Brew##12491 |goto Dun Morogh/0 55.13,38.07
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Brewfest\\Brewfest Dailies",{
 author="support@zygorguides.com",
@@ -8224,7 +8237,110 @@ condition_suggested=function() return isevent('Brewfest') end,
 description="This guide section will walk you through completing the daily quests for the Brewfest event.",
 },[[
 step
-#include "Brewfest_Dailies"
+talk Becan Barleybrew##23627
+accept Bark for the Barleybrews!##11293 |or |goto Dun Morogh/0 56.13,38.06
+talk Daran Thunderbrew##23628
+accept Bark for the Thunderbrews!##11294 |or |goto 56.58,36.91
+|tip You will only be able to accept one of these quests per day.
+step
+Ride your ram into Ironforge |goto Ironforge |noway |c |q 11293
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+only if havequest (11293)
+step
+Ride your ram into Ironforge |goto Ironforge |noway |c |q 11294
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+only if havequest (11294)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark Outside the Bank |q 11293/1 |goto Ironforge/0 31.76,66.83
+only if havequest (11293)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark in the Military Ward |q 11293/2 |goto 61.12,80.00
+only if havequest (11293)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark in the Hall of Explorers |q 11293/3 |goto 65.54,24.24
+only if havequest (11293)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark in the Mystic Ward |q 11293/4 |goto 29.46,14.44
+only if havequest (11293)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark Outside the Bank |q 11294/1 |goto 31.76,66.83
+only if havequest (11294)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark in the Military Ward |q 11294/2 |goto 61.12,80.00
+only if havequest (11294)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark in the Hall of Explorers |q 11294/3 |goto 65.54,24.24
+only if havequest (11294)
+step
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Just keep a Trot pace most of the time and only sometimes keep a Canter pace. If you go too much faster than that, your ram will get tired and you will run out of time.
+Bark in the Mystic Ward |q 11294/4 |goto 29.46,14.44
+only if havequest (11294)
+step
+talk Becan Barleybrew##23627
+turnin Bark for the Barleybrews!##11293 |goto Dun Morogh/0 56.13,38.06
+only if havequest (11293)
+step
+talk Daran Thunderbrew##23628
+turnin Bark for the Thunderbrews!##11294 |goto 56.58,36.91
+only if havequest (11294)
+step
+Wait for the Dark Iron Defense event to start
+|tip You have to defend the three kegs at these locations in order to complete it.
+Click the Alcohol-Free Brewfest Sampler here |goto 55.31,37.28
+Click the Alcohol-Free Brewfest Sampler here |goto 55.73,38.17
+use the Alcohol-Free Brewfest Sampler##33096
+|tip Use it to throw it at the Dark Iron Dwarves and the Mole Machines around this area.
+click Dark Iron Mole Machine Wreckage##189989
+|tip It looks like a big metal gear laying on ground in the middle of the festival.
+|tip It appears after the Dark Iron dwarves attack the Brewfest festival, so you may have to wait for it to appear.
+accept This One Time, When I Was Drunk...##12020 |goto 56.01,37.06
+step
+talk Boxey Boltspinner##27215
+turnin This One Time, When I Was Drunk...##12020 |goto 54.67,38.10
+step
+talk Neill Ramstein##23558
+accept Brew For Brewfest##29394 |instant |goto 53.68,38.55
+step
+map Dun Morogh/0
+path follow strict;loop;ants straight
+path	54.6,43.3	54.5,47.4	53.1,51.3
+path	53.7,51.8	54.5,47.7	54.6,43.4
+path	53.6,38.5
+Follow the waypoint path:
+Use the "Giddyup!" ability
+|tip It appears as a button on the screen.
+|tip Stop at every bucket of apples you see on the side of the road to refresh your Ram's fatigue level, allowing the ram to run faster for longer.
+Flynn Firebrew will throw you a keg when you get close
+Once you have a keg, run back and turn it in to Pol Amberstill
+|tip Just get near him and you will throw the keg to him.
+Deliver as many kegs as you can within 4 minutes
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Brewfest\\Brewfest Achievements",{
 author="support@zygorguides.com",
@@ -8233,94 +8349,113 @@ description="This guide section will walk you through completing the achievement
 },[[
 step
 talk Arlen Lochlan##23522
-buy 1 The Essential Brewfest Pretzel##33043 |n |goto Dun Morogh,55.6,38.2
-Eat The Essential Brewfest Pretzels |achieve 1185/7 |use The Essential Brewfest Pretzel##33043
+buy 1 The Essential Brewfest Pretzel##33043 |n
+use The Essential Brewfest Pretzel##33043
+Eat The Essential Brewfest Pretzels |achieve 1185/7 |goto Dun Morogh/0 55.61,38.15
 step
 talk Anne Summers##23521
-buy 1 Spiced Onion Cheese##34065 |n |goto 56.5,37.7
-Eat the Spiced Onion Cheese |achieve 1185/4 |use Spiced Onion Cheese##34065
+buy 1 Spiced Onion Cheese##34065 |n
+use Spiced Onion Cheese##34065
+Eat the Spiced Onion Cheese |achieve 1185/4 |goto 56.46,37.71
 step
-talk Keiran Donoghue##23481 |goto 56.0,36.4
+talk Keiran Donoghue##23481
 buy 1 Dried Sausage##34063 |n
-Eat the Dried Sausage |achieve 1185/1 |use Dried Sausage##34063
-buy 1 Succulent Sausage##34064 |n
-Eat the Succulent Sausage |achieve 1185/6 |use Succulent Sausage##34064
-buy 1 Savory Sausage##33023 |n
-Eat the Savory Sausage |achieve 1185/3 |use Savory Sausage##33023
-buy 1 Pickled Sausage##33024 |n
-Eat the Pickled Sausage |achieve 1185/2 |use Pickled Sausage##33024
-buy 1 Spicy Smoked Sausage##33025 |n
-Eat Spicy Smoked Sausage |achieve 1185/5 |use Spicy Smoked Sausage##33025
-buy 1 The Golden Link##33026 |n
-Eat The Golden Link |achieve 1185/8 |use The Golden Link##33026
+use Dried Sausage##34063
+Eat the Dried Sausage |achieve 1185/1 |goto 56.01,36.39
 step
-Eat all of the Brewfest Foods!
-achieve 1185
+talk Keiran Donoghue##23481
+buy 1 Succulent Sausage##34064 |n
+use Succulent Sausage##34064
+Eat the Succulent Sausage |achieve 1185/6 |goto 56.01,36.39
+step
+talk Keiran Donoghue##23481
+buy 1 Savory Sausage##33023 |n
+use Savory Sausage##33023
+Eat the Savory Sausage |achieve 1185/3 |goto 56.01,36.39
+step
+talk Keiran Donoghue##23481
+buy 1 Pickled Sausage##33024 |n
+use Pickled Sausage##33024
+Eat the Pickled Sausage |achieve 1185/2 |goto 56.01,36.39
+step
+talk Keiran Donoghue##23481
+buy 1 Spicy Smoked Sausage##33025 |n
+use Spicy Smoked Sausage##33025
+Eat Spicy Smoked Sausage |achieve 1185/5 |goto 56.01,36.39
+step
+talk Keiran Donoghue##23481
+buy 1 The Golden Link##33026 |n
+use The Golden Link##33026
+Eat The Golden Link |achieve 1185/8 |goto 56.01,36.39
+step
+Eat All of the Brewfest Foods |achieve 1185 |goto 56.01,36.39
 step
 talk Belbi Quikswitch##23710
-buy 1 Fresh Brewfest Hops##37750 |achieve 303 |goto 56.4,37.8
-|tip You must be at least level 20 to buy these.
+buy 1 Fresh Brewfest Hops##37750 |n
+|tip You must be at least level 20 to buy this.
+use the Fresh Brewfest Hops##37750
+Make your Mount Festive for Brewfest! |achieve 303 |goto 56.39,37.83
 step
-Use your Fresh Brewfest Hops |use Fresh Brewfest Hops##37750
-Make your Mount Festive for Brewfest!
-achieve 303
-step
-Wait here for the darkiron event |goto Dun Morogh 56.0,37.2
-|tip This event will happen every 30 minutes, you will know when it's about to begin when drills come out from the ground.
-Click the Alcohol-Free Brewfest Sampler
-|tip They looks like mugs of beer on the small tables on either side of you.
-Use your Complimentary Brewfest Samplers |use Alcohol-Free Brewfest Sampler##33096
-|tip Try facing toward the darkiron mobs that come out of the drills.
-|tip At the end of the event a wheel will drop to the ground.
-confirm
-step
-click the Dark Iron Mole Machine Wreckage##189990 |goto 56.0,37.2
-accept This One Time, When I Was Drunk....##12020
+Wait for the Dark Iron Defense event to start
+|tip You have to defend the three kegs at these locations in order to complete it.
+Click the Alcohol-Free Brewfest Sampler here |goto 55.31,37.28
+Click the Alcohol-Free Brewfest Sampler here |goto 55.73,38.17
+use the Alcohol-Free Brewfest Sampler##33096
+|tip Use it to throw it at the Dark Iron Dwarves and the Mole Machines around this area.
+click Dark Iron Mole Machine Wreckage##189989
+|tip It looks like a big metal gear laying on ground in the middle of the festival.
+|tip It appears after the Dark Iron dwarves attack the Brewfest festival, so you may have to wait for it to appear.
+accept This One Time, When I Was Drunk...##12020 |goto 56.01,37.06
 step
 talk Boxey Boltspinner##27215
-turnin This One Time, When I Was Drunk...##12020 |goto Dun Morogh,54.7,38.1
-achieve 1186
+turnin This One Time, When I Was Drunk...##12020 |goto 54.67,38.10
+step
+achieve 1186 |goto 54.67,38.10
 step
 Complete the Brewfest daily quests each day until you have 200 Brewfest Prize Tokens
 collect 200 Brewfest Prize Token##37829 |achieve 2796
 step
 talk Belbi Quikswitch##23710
 buy "Brew of the Month" Club Membership Form##37736 |n
-Click the "Brew of the Month" Club Membership Form in your bags |use "Brew of the Month" Club Membership Form##37736
-accept Brew of the Month Club##12420 |goto 56.4,37.9
+use the "Brew of the Month" Club Membership Form##37736
+accept Brew of the Month Club##12420 |goto 56.39,37.83
 step
+Enter the building |goto Ironforge/0 20.67,53.21 < 5 |walk
 talk Larkin Thunderbrew##27478
-turnin Brew of the Month Club##12420 |goto Ironforge 18.8,53.1
-achieve 2796
+|tip Inside the building.
+turnin Brew of the Month Club##12420 |goto 18.77,53.29
+step
+achieve 2796 |goto 18.77,53.29
 step
 If you are on the EU servers go here to buy your Wolpertinger Pet
-buy Wolpertinger's Tankard##32233 |n |goto Dun Morogh 56.4,37.8
-Does Your Wopertinger Linger? |achieve 1936
+buy Wolpertinger's Tankard##32233 |n
+Does Your Wopertinger Linger? |achieve 1936 |goto Dun Morogh/0 56.39,37.83
 step
-Queue for the dungeon Coren Direbrew, to do this press "I" and select "Coren Direbrew"
-|tip You must be level 46 or above to queue for this dungeon
+Press _I_ and Queue for Coren Direbrew or Enter the Dungeon with your Group |goto Blackrock Depths/2 0.00,0.00 < 1000 |q 12491 |future
+|tip You must be level 46 or above to queue for this dungeon.
+step
 kill Coren Direbrew##23872
 achieve 295
 step
 Earn the Brewmaster title |achieve 1683
 step
-Use your Synthebrew Goggles |use Synthebrew Goggles##46735
-Equip the Synthebrew Goggles |havebuff 135977
-Fall from a high place
+use the Synthebrew Goggles##46735
+Equip the Synthebrew Goggles |havebuff 135977 |condition achieved(1260)
+step
+Fall from a high place without dying
 |tip You must fall at least 65 yards and not die to recieve this achievement (flying up in the air and dismounting is a good way to do this.)
 achieve 1260
 step
-Disturbing the Peace
-|tip Wear 3 pieces of brewfest gear, get drunk, and /dance in Dalaran.
-talk Belbi Quikswitch##23710
-|tip Buying these 3 pieces will cost 350 coins.
 collect 350 Brewfest Prize Token##37829
-|tip buy any brew from the vendors at brewfest.
-Then go to Dalarn and equip the items you bought, drink some brew and /dance
+talk Belbi Quikswitch##23710 |goto Dun Morogh/0 56.39,37.83
+|tip Buying these 3 pieces will cost 350 coins.
+|tip Buy 3 pieces of Brewfest gear.
+Wear 3 pieces of brewfest gear, get drunk, and /dance in Dalaran.
+Go to Dalarn and equip the items you bought, drink some brew and /dance
 achieve 293
 step
 Brew of the Year
-|tip This achievement is givin to players that are apart of the Brew of the Month Club. |achieve 2796
+|tip This achievement is given to players that have earned the Brew of the Month Club achievement.
 |tip Every month these players will recieve a brew in the mail, simply take this brew out and drink it then you will be one step closer to getting this achievement.
 |tip This achievment takes a year to get.
 achieve 1183

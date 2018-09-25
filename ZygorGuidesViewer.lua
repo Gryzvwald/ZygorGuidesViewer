@@ -6419,7 +6419,7 @@ function ZGV.InPhase(phasename)
 	if phasename=="olddarnassus" then
 		return has_timetravel or UnitLevel('player')<110
 	elseif phasename=="oldundercity" then
-		return has_timetravel or not PlayerCompletedQuest(52981)
+		return has_timetravel or not (PlayerCompletedQuest(51795) or PlayerCompletedQuest(51796))
 	elseif phasename=="oldsilithius" then
 		return has_timetravel
 	elseif phasename=="oldblastedlands" then

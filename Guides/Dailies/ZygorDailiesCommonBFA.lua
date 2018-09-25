@@ -3267,7 +3267,7 @@ Slay the Corrupted Tideskipper |q 52310/1 |goto 67.11,49.71
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52306
-accept Croaker##52306 |goto Stormsong Valley/0 62.81,35.30
+accept Croaker##52306 |goto Stormsong Valley/0 62.93,32.83
 |tip You will accept this quest automatically.
 step
 kill Croaker##140938 |q 52306/1 |goto 62.93,32.83
@@ -4358,6 +4358,26 @@ accept Supplies Needed: Frenzied Fangtooth##52380 |goto Stormsong Valley/0 59.28
 step
 talk Sister Lilyana##135800
 turnin Supplies Needed: Frenzied Fangtooth##52380 |goto 59.28,69.33
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51827
+accept They Came From Behind!##51827 |goto Stormsong Valley/0 51.36,25.52
+|tip You will accept this quest automatically.
+stickystart "Shoot_Down_7th_Legion_Bombers_51827"
+stickystart "Slay_7th_Legion_Forces_51827"
+step
+Follow the path |goto 50.70,24.52 < 20 |only if walking
+kill Siege Engineer Silvercog##139149 |q 51827/3 |goto 49.45,24.47
+step
+label "Shoot_Down_7th_Legion_Bombers_51827"
+use the Goblin Rocket Launcher##160739
+|tip Use it on 7th Legion Bombers.
+|tip They are flying in the air around this area.
+Shoot Down #5# 7th Legion Bombers |q 51827/2 |goto 51.36,25.52
+step
+label "Slay_7th_Legion_Forces_51827"
+Kill 7th Legion enemies around this area
+Slay #10# 7th Legion Forces |q 51827/1 |goto 51.36,25.52
 |next "Tortollan_Seekers_WQ"
 step
 label quest-52968
@@ -5585,8 +5605,7 @@ Feed #6# Runaway Macaws |q 51646/1 |goto 77.35,84.75
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51660
-Enter the cave |goto 39.88,14.90 < 10 |walk
-accept Pack Leader Asenya##51660 |goto Tiragarde Sound/0 69.20,47.08
+accept Pack Leader Asenya##51660 |goto Tiragarde Sound/0 39.88,14.90
 |tip You will accept this quest automatically.
 step
 Enter the cave |goto 39.88,14.90 < 10 |walk
@@ -6820,17 +6839,17 @@ kill Ashmane##130439 |q 51095/1 |goto 54.70,15.14
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51238
-accept Abandoned in the Burrows##51238 |goto Vol'dun/0 63.47,30.08
+accept Abandoned in the Burrows##51238 |goto Vol'dun/0 63.60,33.03
 |tip You will accept this quest automatically.
-stickystart "Slay_Sethrak"
+stickystart "Slay_Sethraks_51238"
 step
 click Sethrak Cage##277876+
 |tip They look like large round cages on the ground around this area.
 Rescue #6# Vulpera Captives |q 51238/1 |goto 63.60,33.03
 step
-label "Slay_Sethrak"
+label "Slay_Sethraks_51238"
 Kill Sethrak enemies around this area
-Slay #12# Sethrak |q 51238/2 |goto 63.60,33.03
+Slay #12# Sethraks |q 51238/2 |goto 63.60,33.03
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51105
@@ -7518,6 +7537,13 @@ Follow the path down |goto 45.39,60.25 < 20 |only if walking
 Kill enemies around this area
 |tip Three waves of enemies will attack.
 Protect Arcanist Elleryn |q 51804/1 |goto Vol'dun/1 58.14,16.74
+|next "Tortollan_Seekers_WQ"
+step
+label quest-51831
+accept Swift Strike##51831 |goto Vol'dun/0 61.90,43.74
+|tip You will accept this quest automatically.
+step
+kill Warscout Dagra##139296 |q 51831/1 |goto 61.90,43.74
 |next "Tortollan_Seekers_WQ"
 step
 label quest-51122
@@ -8502,8 +8528,6 @@ kill Gurubashi Attacker##136699+
 |tip Each buff lasts for 45 seconds.
 Slay #100# Gurubashi Attackers |q 51178/1 |goto 65.51,30.15
 |next "Tortollan_Seekers_WQ"
-step
-label quest-51501
 step
 label quest-50845
 Enter the tunnel |goto Zuldazar/0 61.93,62.78 < 15 |walk |only if Alliance
