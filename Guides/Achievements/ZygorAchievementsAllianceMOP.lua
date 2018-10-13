@@ -816,6 +816,23 @@ Earn the _Sanguinarian_ achievement |achieve 6396
 step
 Congratulations, you have earned the Sanguinarian Achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Dungeon\\School's Out Forever",{
+achieveid={6821},
+keywords={"Pandaria","Dungeon","Heroic","Scholomance","School's","Out","Forever"},
+description="This guilde will walk you through obtaining the School's Out Forever Achievement.",
+},[[
+step
+kill Darkmaster Gandling##59080
+|tip You will need a group of five for this.
+|tip He will cast Harsh Lesson on a party member.
+|tip Eventually, he will cast it again on another party member.
+|tip When all five group members have been teleported, kill the Expired Test Subjects quickly.
+|tip Group up in the center room if you are having trouble killing them.
+Earn the "School's Out Forever" Achievement |achieve 6821/1
+step
+_Congratulations!_
+You Earned the "School's Out Forever" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Dungeon\\Seeds of Doubt",{
 achieveid={6671},
 description="You will need a Gear Score of 440 Heroic Temple of the Jade Serpent",
@@ -867,6 +884,72 @@ kill Commander Vo'jak##61634
 Defeat Commander Vo'jak |achieve 6688 |goto Siege of Niuzao Temple 44.0,74.0
 step
 Congratulations, you have earned the Where's My Air Support? Achievement!
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\And... It's Good!",{
+achieveid={7933},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","And...","It's","Good!"},
+description="This guilde will walk you through obtaining the And... It's Good! Achievement.",
+},[[
+step
+kill Elegon##60410
+|tip Ignore the boss.
+|tip Keep one Mogu'shan Warden alive.
+|tip Have the Mogu'shan Warden face the console.
+|tip Stand on the console.
+|tip If you are max level, sit to ensure that you get hit.
+Earn the "And... It's Good!" Achievement |achieve 7933
+step
+_Congratulations!_
+You Earned the "And... It's Good!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Anything You Can Do, I Can Do Better...",{
+achieveid={6674},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","Anything","You","Can","Do","I","Can","Do","Better"},
+description="This guilde will walk you through obtaining the Anything You Can Do, I Can Do Better... Achievement.",
+},[[
+step
+kill Feng the Accursed##60009
+|tip Remove any item that passive attacks the enemy before starting.
+|tip You need 2 tanks in the group, with a proper tank specialization on each as well as one addition group member.
+|tip Have a tank remove their weapon and auto attack the boss, pulling it to face the center of the room.
+|tip Have a designated person that isn't the second tank stand behind the first.
+|tip When the Blue Diamond appears, the second tank will click it.
+|tip This tank will mimic two moves during the first phase.
+|tip When the boss uses Epicenter, use your action button on the first tank to gain the ability.
+|tip Then, run up to the boss and use Epicenter.
+|tip Next, the boss will use Lightning Fist aimed at the 1st tank.
+|tip It will pass through and hit the person who was supposed to be behind the tank, that person will be stunned if done correctly.
+|tip The stunned person gains Lightning Fist, and should move to the boss and use it.
+|tip Next, have the unarmed tank damage the boss to 65% health.
+|tip Tank 2 will channel Wild Fire Spark from the player being targeted by the boss.
+|tip Once you gain the ability, use it on the boss.
+|tip Once that is done, damage the boss to 30% health.
+|tip Tank 2 will channel Arcane Resonance from the targeted player.
+|tip Run up to the boss and use this once you attain it.
+|tip Tank 2 then channels Arcane Velocity from Tank 1 when the boss uses the ability.
+|tip Run up to the boss and use this on him once you attain it.
+|tip After all of that, kill the boss.
+Earn the "Anything You Can Do, I Can Do Better..." Achievement |achieve 6674
+step
+_Congratulations!_
+You Earned the "Anything You Can Do, I Can Do Better..." Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Candle in the Wind",{
+achieveid={6936},
+keywords={"Pandaria","Raid","Heart","of","Fear","Candle","in","the","Wind"},
+description="This guilde will walk you through obtaining the Candle in the Wind Achievement.",
+},[[
+step
+kill Blade Lord Ta'yak##62543
+|tip When Blade Lord Ta'yak is at 20% health, go to the center of the room and click one of the braziers.
+|tip Then, follow the wind and light the two torches at the end of the room.
+|tip Go back to the center of the room and click the brazier again.
+|tip Then, go against the wind and light the two torches at the end of the room.
+|tip Kill Blade Lord Ta'yak after for the achivement.
+Earn the "Candle in the Wind" Achievement |achieve 6936
+step
+_Congratulations!_
+You Earned the "Candle in the Wind" Achievement.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Celestial Challenge",{
 achieveid={8535},
@@ -935,6 +1018,267 @@ step
 label "end"
 Congratulations, you have obtained the _Celestial Challenge_ achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Extinction Event",{
+author="support@zygorguides.com",
+achieveid={6517},
+description="Defeat Salyis's Warband in Valley of the Four Winds.",
+},[[
+step
+This achievement is gained by _defeating Salyis's Warband_ in Valley of the Four Winds
+kill Galleon##62346
+|tip If it was recently killed it will respawn in about 20 minutes.
+Extinction Event |achieve 6517 |goto Valley of the Four Winds 70.64,63.65
+step
+_Congratulations!_
+You Earned the "Extinction Event" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Face Clutchers",{
+achieveid={6824},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Face","Clutchers"},
+description="This guilde will walk you through obtaining the Face Clutchers Achievement.",
+},[[
+step
+kill Lei Shi##62983
+|tip During the encounter, jump into the water surrounding the platform Lei Shi is on.
+|tip Parasitioid Sha will cast Parasitic Clutch on you.
+|tip Make sure you aren't mounted in any way before starting the encounter.
+Get the Parasitic Clutch Buff |havebuff 136174 |achieve 6824
+|tip Once you have Parasitic Clutch buff, kill Lei Shi.
+|tip Avoid using AoE spells as they could accidentally kill the parasite.
+|tip Use a pet or another player to stand on the platform so Lei Shi doesn't despawn.
+Earn the "Face Clutchers" Achievement |achieve 6824
+step
+_Congratulations!_
+You Earned the "Face Clutchers" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Gamon Will Save Us!",{
+achieveid={8448},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Protectors","of","the","Endless"},
+description="This guilde will walk you through obtaining the Gamon Will Save Us! Achievement.",
+},[[
+step
+kill General Nazgrim##71515
+|tip You will need to unchain Gamon before going to the General Nazgrim encounter.
+|tip He is chained up at a giant tree near the entrance to "The Drag".
+|tip Once you free him, run ahead of him and kill anything that would otherwise attack him.
+|tip Burst General Nazgrim down as fast as possible.
+Earn the "Gamon Will Save Us!" Achievement |achieve 8448
+step
+_Congratulations!_
+You Earned the "Gamon Will Save Us!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Getting Hot In Here",{
+achieveid={6687},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","Getting","Hot","In","Here"},
+description="This guilde will walk you through obtaining the Getting Hot In Here Achievement.",
+},[[
+step
+Defeat the Spirit Kings
+|tip You will need a full group to accomplish this.
+|tip Stand together and wait for Pillage to be cast on the raid.
+|tip Once you are under the affects of Pillage, use /target Subtai the Swift follow by /dance.
+|tip Once preformed, beat the encounter.
+|tip Note that everyone in the raid will need to do this for credit.
+Earn the "Getting Hot In Here" Achievement |achieve 6687
+step
+_Congratulations!_
+You Earned the "Getting Hot In Here" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Blade Lord Ta'yak",{
+achieveid={6726},
+keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Blade","Lord","Ta'yak"},
+description="This guilde will walk you through obtaining the Heroic: Blade Lord Ta'yak Achievement.",
+},[[
+step
+kill Blade Lord Ta'yak##62543
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Blade Lord Ta'yak" Achievement |achieve 6726
+step
+_Congratulations!_
+You Earned the "Heroic: Blade Lord Ta'yak" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Elegon",{
+author="support@zygorguides.com",
+achieveid={6723},
+description="Defeat Elegon in the Mogu'shan Vaults raid on Heroic mode.",
+},[[
+step
+kill Elegon##60410
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Elegon" Achievement |achieve 6723 |goto Mogu'shan Vaults/3 20.7,51.1
+step
+_Congratulations!_
+You Earned the "Heroic: Elegon" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Feng the Accursed",{
+author="support@zygorguides.com",
+achieveid={6720},
+description="Defeat Feng the Accursed in the Mogu'shan Vaults raid on Heroic mode.",
+},[[
+step
+kill Feng the Accursed##60009
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Feng the Accursed" Achievement |achieve 6720 |goto Mogu'shan Vaults 31.9,32.8
+step
+_Congratulations!_
+You Earned the "Heroic: Feng the Accursed" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Four Kings",{
+author="support@zygorguides.com",
+achieveid={6722},
+description="Defeat the Spirit Kings in the Mogu'shan Vaults raid on Heroic mode.",
+},[[
+step
+kill Qiang the Merciless##60709
+kill Subetai the Swift##60710
+kill Meng the Demented##60708
+kill Zian of the Endless Shadow##60701
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Four Kings" Achievement |achieve 6722 |goto Mogu'shan Vaults/2 18.9,51.5
+step
+_Congratulations!_
+You Earned the "Heroic: Four Kings" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Gara'jal the Spiritbinder",{
+author="support@zygorguides.com",
+achieveid={6721},
+description="Defeat Gara'jal the Spiritbinder in the Mogu'shan Vaults raid on Heroic mode.",
+},[[
+step
+kill Gara'jal the Spiritbinder##60143
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Heroic: Gara'jal the Spiritbinder |achieve 6721 |goto Mogu'shan Vaults/2 77.8,34.4
+step
+_Congratulations!_
+You Earned the "Heroic: Gara'jal the Spiritbinder" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Garalon",{
+achieveid={6727},
+keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Garalon"},
+description="This guilde will walk you through obtaining the Heroic: Garalon Achievement.",
+},[[
+step
+kill Garalon##62164
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Garalon" Achievement |achieve 6727
+step
+_Congratulations!_
+You Earned the "Heroic: Garalon" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Imperial Vizier Zor'lok",{
+achieveid={6725},
+keywords={"Pandaria","Raid","Heart","of","Fear","Springs","Heroic","Imperial","Vizier","Zor'lok"},
+description="This guilde will walk you through obtaining the Heroic: Imperial Vizier Zor'lok Achievement.",
+},[[
+step
+kill Imperial Vizier Zor'lok##62980
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Imperial Vizier Zor'lok" Achievement |achieve 6725
+step
+_Congratulations!_
+You Earned the "Heroic: Imperial Vizier Zor'lok" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Lei Shi",{
+achieveid={6733},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Lei","Shi"},
+description="This guilde will walk you through obtaining the Heroic: Lei Shi Achievement.",
+},[[
+step
+kill Lei Shi##62983
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Lei Shi" Achievement |achieve 6733 |goto Terrace of Endless Spring 58.6,48.6
+step
+_Congratulations!_
+You Earned the "Heroic: Lei Shi" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Protectors of the Endless",{
+achieveid={6731},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Protectors","of","the","Endless"},
+description="This guilde will walk you through obtaining the Heroic: Protectors of the Endless Achievement.",
+},[[
+step
+kill Elder Regail##60585
+kill Elder Asani##60586
+kill Protector Kaolan##60583
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Protectors of the Endless" Achievement |achieve 6731 |goto Terrace of Endless Spring 78.5,48.9
+step
+_Congratulations!_
+You Earned the "Heroic: Protectors of the Endless" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Stone Guard",{
+author="support@zygorguides.com",
+achieveid={6719},
+description="Defeat the Stone Guard in the Mogu'shan Vaults raid on Heroic mode.",
+},[[
+step
+kill Amethyst Guardian##60047
+kill Cobalt Guardian##60051
+kill Jade Guardian##60043
+kill Jasper Guardian##59915
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Stone Guard" Achievement |achieve 6719 |goto Mogu'shan Vaults 45.9,64.1
+step
+_Congratulations!_
+You Earned the "Heroic: Stone Guard" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Tsulong",{
+achieveid={6732},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Tsulong"},
+description="This guilde will walk you through obtaining the Heroic: Tsulong Achievement.",
+},[[
+step
+kill Tsulong##62442
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Tsulong" Achievement |achieve 6732 |goto Terrace of Endless Spring 78.5,48.9
+step
+_Congratulations!_
+You Earned the "Heroic: Tsulong" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Will of the Emperor",{
+author="support@zygorguides.com",
+achieveid={6724},
+description="Defeat the Will of the Emperor in the Mogu'shan Vaults raid on Heroic mode.",
+},[[
+step
+kill Jan-xi##60400
+kill Qin-xi##60399
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Will of the Emperor" Achievement |achieve 6724 |goto Mogu'shan Vaults/3 68.8,82.2
+step
+_Congratulations!_
+You Earned the "Heroic: Will of the Emperor" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Wind Lord Mel'jarak",{
+achieveid={6728},
+keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Wind","Lord","Mel'jarak"},
+description="This guilde will walk you through obtaining the Heroic: Wind Lord Mel'jarak Achievement.",
+},[[
+step
+kill Wind Lord Mel'jarak##62397
+|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
+Earn the "Heroic: Wind Lord Mel'jarak" Achievement |achieve 6728
+step
+_Congratulations!_
+You Earned the "Heroic: Wind Lord Mel'jarak" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\I Heard You Like Amber...",{
+achieveid={6518},
+keywords={"Pandaria","Raid","Heart","of","Fear","I","Heard","You","Like","Amber..."},
+description="This guilde will walk you through obtaining the Timing is Everything Achievement.",
+},[[
+step
+kill 8 Living Amber##62691
+|tip You will need at least one other person in your group for this.
+|tip Don't touch the boss until you stack 8 pools.
+|tip Use raid markers to designate an area to kill the Oozes.
+|tip The player who is transformed must not consume any amber.
+kill Amber-Shaper Un'sok##62511
+Earn the "I Heard You Like Amber..." Achievement |achieve 6518
+step
+_Congratulations!_
+You Earned the "I Heard You Like Amber..." Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\The Immortal Vanguard",{
 achieveid={8530},
 description="This guide will walk you through how to get The Immortal Vanguard achievement.",
@@ -981,6 +1325,35 @@ Last Stand of the Zandalari |achieve 8069
 step
 Congratulations, you have earned the Last Stand of the Zandalari achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Less Than Three",{
+achieveid={6683},
+keywords={"Pandaria","Raid","Heart","of","Fear","Less","Than","Three"},
+description="This guilde will walk you through obtaining the Less Than Three Achievement.",
+},[[
+step
+kill Wind Lord Mel'jarak##62397
+|tip Kill him without using more than 2 crowd controlling mechanics on swarms.
+|tip Kill an Amber Shaper, then the boss.
+Earn the "Less Than Three" Achievement |achieve 6683
+step
+_Congratulations!_
+You Earned the "Less Than Three" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Like an Arrow to the Face",{
+achieveid={6553},
+keywords={"Pandaria","Raid","Heart","of","Fear","Like","an","Arrow","to","the","Face"},
+description="This guilde will walk you through obtaining the Like an Arrow to the Face Achievement.",
+},[[
+step
+kill Garalon##62164
+|tip Kill Garalon without destroying any of his legs.
+|tip Use single target dps abilities to accomplish this.
+|tip Be sure to remove any items that cause AoE damage.
+Earn the "Like an Arrow to the Face" Achievement |achieve 6553
+step
+_Congratulations!_
+You Earned the "Like an Arrow to the Face" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Millions of Years of Evolution vs. My Fist",{
 author="support@zygorguides.com",
 achieveid={8123},
@@ -995,6 +1368,75 @@ kill Oondasta##69161 |achieve 8123 |goto Isle of Giants 50.5,59.4
 step
 Congratulations, you have achieved the _Millions of Years of Evolution vs. My Fist_ achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\The Mind-Killer",{
+achieveid={6825},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","The","Mind-Killer"},
+description="This guilde will walk you through obtaining The Mind-Killer Achievement.",
+},[[
+step
+kill Sha of Fear##60999
+|tip Stand in in the Light Wall at all times.
+|tip When the Crossbowmen are spawned, avoid them and their Dread Bolt spell.
+|tip DPS the Sha of Fear as quickly as possible.
+Earn "The Mind-Killer" Achievement |achieve 6825
+step
+_Congratulations!_
+You Earned "The Mind-Killer" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Must Love Dogs",{
+achieveid={6823},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","Must","Love","Dogs"},
+description="This guilde will walk you through obtaining the Must Love Dogs Achievement.",
+},[[
+step
+Kill the Stone Guard encounter
+|tip Defeat this encounter while accompanied by a dog battle pet.
+|tip Use the Perky Pug, Core Hound Pup, Fox Kit or Crate of Kidnapped Puppies to accomplish this.
+|tip If a raid member dies, they must be battle ressed AND resummon their battle pet or the achievement will fail.
+Earn the "Must Love Dogs" Achievement |achieve 6823
+step
+_Congratulations!_
+You Earned the "Must Love Dogs" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Overzealous",{
+achieveid={6936},
+keywords={"Pandaria","Raid","Heart","of","Fear","Overzealous"},
+description="This guilde will walk you through obtaining the Overzealous Achievement.",
+},[[
+step
+kill Imperial Vizier Zor'lok##62980
+|tip Everyone in the raid will need to be afflicted with the Zealous Parasite debuff.
+|tip To get the debuff, slowly damage him until he moves to the 3rd platform.
+|tip Loot the bug on the ground for the debuff before killing Imperial Vizier Zor'lok.
+Earn the "Overzealous" Achievement |achieve 6937
+step
+_Congratulations!_
+You Earned the "Overzealous" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Power Overwhelming",{
+achieveid={6717},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Power","Overwhelming"},
+description="This guilde will walk you through obtaining the Power Overwhelming Achievement.",
+},[[
+step
+kill Protector Kaolan##60583
+|tip It will take 3 weeks to earn this achievement.
+|tip Kill them last for credit.
+Slay Protector Kaolan Last During the Protectors of the Endless Encounter |achieve 6717/1
+step
+kill Elder Regail##60585
+|tip It will take 3 weeks to earn this achievement.
+|tip Kill them last for credit.
+Slay Elder Regail Last During the Protectors of the Endless Encounter |achieve 6717/2
+step
+kill Elder Asani##60586
+|tip It will take 3 weeks to earn this achievement.
+|tip Kill them last for credit.
+Earn the "Power Overwhelming" Achievement |achieve 6717/3
+step
+_Congratulations!_
+You Earned the "Power Overwhelming" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Praise the Sun!",{
 achieveid={8028},
 description="Defeat Nalak, the Storm Lord, on the Isle of Thunder.",
@@ -1008,6 +1450,75 @@ kill Nalak##69099+ |achieve 8028 |goto Isle of Thunder/0 60.0,37.6
 step
 Congratulations, you have achieved the _Praise the Sun!_ achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Settle Down, Bro",{
+author="support@zygorguides.com",
+achieveid={6480},
+description="Defeat the Sha of Anger in Kun-Lai Summit.",
+},[[
+step
+This achievement is gained by _defeating the Sha of Anger_ in Kun-Lai Summit
+kill Sha of Anger##60491
+|tip If it was recently killed you may have to wait a few minutes for it to respawn.
+Settle Down, Bro |achieve 6480 |goto Kun-Lai Summit 53.80,64.67
+step
+_Congratulations!_
+You Earned the "Settle Down, Bro" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Show Me Your Moves!",{
+achieveid={6455},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","Show","Me","Your","Moves!"},
+description="This guilde will walk you through obtaining the Show Me Your Moves! Achievement.",
+},[[
+step
+kill Jan-xi##60400
+|tip Avoid being hit by the boss's combos.
+|tip Pay attention to the blue lines from the boss to know which way to avoid the combos.
+|tip There will be a Center Slash which you need to be directly behind him to avoid.
+|tip The Left Slash attacks players on the left, so move out of the radius.
+|tip The Rich Arch lines means you need to be away from the right side.
+|tip For Stomp, you need to be in the range of stomp in order for credit.
+|tip Stomp will appear as an "X".
+|tip If you did it correctly, you will gain access to the Opportunistic Strike ability.
+|tip Hit the boss with it then kill him.
+Earn the "Show Me Your Moves!" Achievement |achieve 6455
+step
+_Congratulations!_
+You Earned the "Show Me Your Moves!" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Sorry, Were You Looking for This?",{
+achieveid={7056},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","Sorry","Were","You","Looking","for","This?"},
+description="This guilde will walk you through obtaining the Sorry, Were You Looking for This? Achievement.",
+},[[
+step
+kill Gara'jal the Spiritbinder##60143
+|tip During the encounter, activate the Ancient Mogu Artifact to earn this achievement.
+|tip You need at least 5 players, at least one with a pet that can taunt.
+|tip Have the pet set to passive, then move it on top of the boss for it to gain aggro.
+|tip No one should heal the pet.
+|tip The rest will be on standby for the Spirit Totems.
+|tip 4 Players, specifically ones who aren't controlling the pets, should move into range of the totems.
+|tip Once in range, kill they will kill the totems, entering the Spirit Realm.
+|tip The players in the spirit realm must then click the artifacts at the center of the room.
+Earn the "Sorry, Were You Looking for This?" Achievement |achieve 7056
+step
+_Congratulations!_
+You Earned the "Sorry, Were You Looking for This?" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Straight Six",{
+achieveid={6686},
+keywords={"Pandaria","Raid","Mogu'shan","Vaults","Straight","Six"},
+description="This guilde will walk you through obtaining the Straight Six Achievement.",
+},[[
+step
+kill Elegon##60410
+|tip Damage Elegon until the encounter enters the pillar stage.
+|tip Kill six Empyreal Focuses within 10 seconds of each other, then kill Elegon.
+Earn the "Straight Six" Achievement |achieve 6686
+step
+_Congratulations!_
+You Earned the "Straight Six" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Swallow Your Pride",{
 achieveid={8521},
 description="This guide will walk you through how to get the Swallow Your Pride achievement.",
@@ -1019,6 +1530,36 @@ kill Sha of Pride##71734
 Swallow Your Pride |achieve 8521 |goto Siege of Orgrimmar/3 29.3,66.9
 step
 Congratulations, you have earned the Swallow Your Pride achievement!
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Timing is Everything",{
+achieveid={6922},
+keywords={"Pandaria","Raid","Heart","of","Fear","Timing","is","Everything"},
+description="This guilde will walk you through obtaining the Timing is Everything Achievement.",
+},[[
+step
+kill 2 Kor'thik Reaver##63591+
+|tip Kill them within 10 seconds of each other.
+kill Grand Empress Shek'zeer##62837
+Earn the "Timing is Everything" Achievement |achieve 6922
+step
+_Congratulations!_
+You Earned the "Timing is Everything" Achievement.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Who's Got Two Green Thumbs?",{
+achieveid={6933},
+keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Who's","Got","Two","Green","Thumbs?"},
+description="This guilde will walk you through obtaining the Who's Got Two Green Thumbs? Achievement.",
+},[[
+step
+kill Tsulong##62442
+|tip During the encounter, a NPC named Enchanted Plant spawns.
+|tip It takes damage during the Night Phase of the encounter.
+|tip Keep it healed up.
+|tip Kill Tsulong with the tree intact.
+Earn the "Who Has Two Green Thumbs?" Achievement |achieve 6933
+step
+_Congratulations!_
+You Earned the "Who Has Two Green Thumbs?" Achievement.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Scenario\\A Brewing Storm",{
 author="support@zygorguides.com",
@@ -13430,8 +13971,7 @@ This part can only be done if the Darkmoon Faire is in town.
 |confirm
 OR
 Click here to go back to the menu if the Darkmoon Faire isn't in town.
-step
-#include "Darkmoon_Faire_Dailies"
+leechsteps "Zygor's Events Guides\\Darkmoon Faire\\Darkmoon Faire Dailies"
 step
 Open up the Darkmoon Game Prizes you received from the games.
 collect 1 Well-Worn Blindfold##97987
@@ -13577,118 +14117,3 @@ Teleport to Orgrimmar |goto Orgrimmar |noway |c
 step
 Congratulations, you have obtained the _Rabble Rabble Rabble_ achievement!
 ]])
-ZGV.BETASTART()
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Extinction Event",{
-author="support@zygorguides.com",
-achieveid={6517},
-description="Defeat Salyis's Warband in Valley of the Four Winds.",
-},[[
-step
-This achievement is gained by _defeating Salyis's Warband_ in Valley of the Four Winds
-kill Galleon##62346
-|tip If it was recently killed it will respawn in about 20 minutes.
-Extinction Event |achieve 6517 |goto Valley of the Four Winds 70.64,63.65
-step
-_Congratulations!_
-You Earned the "Extinction Event" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Elegon",{
-author="support@zygorguides.com",
-achieveid={6723},
-description="Defeat Elegon in the Mogu'shan Vaults raid on Heroic mode.",
-},[[
-step
-kill Elegon##60410
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Elegon" Achievement |achieve 6723 |goto Mogu'shan Vaults/3 20.7,51.1
-step
-_Congratulations!_
-You Earned the "Heroic: Elegon" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Feng the Accursed",{
-author="support@zygorguides.com",
-achieveid={6720},
-description="Defeat Feng the Accursed in the Mogu'shan Vaults raid on Heroic mode.",
-},[[
-step
-kill Feng the Accursed##60009
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Feng the Accursed" Achievement |achieve 6720 |goto Mogu'shan Vaults 31.9,32.8
-step
-_Congratulations!_
-You Earned the "Heroic: Feng the Accursed" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Four Kings",{
-author="support@zygorguides.com",
-achieveid={6722},
-description="Defeat the Spirit Kings in the Mogu'shan Vaults raid on Heroic mode.",
-},[[
-step
-kill Qiang the Merciless##60709
-kill Subetai the Swift##60710
-kill Meng the Demented##60708
-kill Zian of the Endless Shadow##60701
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Four Kings" Achievement |achieve 6722 |goto Mogu'shan Vaults/2 18.9,51.5
-step
-_Congratulations!_
-You Earned the "Heroic: Four Kings" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Gara'jal the Spiritbinder",{
-author="support@zygorguides.com",
-achieveid={6721},
-description="Defeat Gara'jal the Spiritbinder in the Mogu'shan Vaults raid on Heroic mode.",
-},[[
-step
-kill Gara'jal the Spiritbinder##60143
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Heroic: Gara'jal the Spiritbinder |achieve 6721 |goto Mogu'shan Vaults/2 77.8,34.4
-step
-_Congratulations!_
-You Earned the "Heroic: Gara'jal the Spiritbinder" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Stone Guard",{
-author="support@zygorguides.com",
-achieveid={6719},
-description="Defeat the Stone Guard in the Mogu'shan Vaults raid on Heroic mode.",
-},[[
-step
-kill Amethyst Guardian##60047
-kill Cobalt Guardian##60051
-kill Jade Guardian##60043
-kill Jasper Guardian##59915
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Stone Guard" Achievement |achieve 6719 |goto Mogu'shan Vaults 45.9,64.1
-step
-_Congratulations!_
-You Earned the "Heroic: Stone Guard" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Heroic: Will of the Emperor",{
-author="support@zygorguides.com",
-achieveid={6724},
-description="Defeat the Will of the Emperor in the Mogu'shan Vaults raid on Heroic mode.",
-},[[
-step
-kill Jan-xi##60400
-kill Qin-xi##60399
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Will of the Emperor" Achievement |achieve 6724 |goto Mogu'shan Vaults/3 68.8,82.2
-step
-_Congratulations!_
-You Earned the "Heroic: Will of the Emperor" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Settle Down, Bro",{
-author="support@zygorguides.com",
-achieveid={6480},
-description="Defeat the Sha of Anger in Kun-Lai Summit.",
-},[[
-step
-This achievement is gained by _defeating the Sha of Anger_ in Kun-Lai Summit
-kill Sha of Anger##60491
-|tip If it was recently killed you may have to wait a few minutes for it to respawn.
-Settle Down, Bro |achieve 6480 |goto Kun-Lai Summit 53.80,64.67
-step
-_Congratulations!_
-You Earned the "Settle Down, Bro" Achievement.
-]])
-ZGV.BETAEND()

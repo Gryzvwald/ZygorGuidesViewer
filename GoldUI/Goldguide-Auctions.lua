@@ -329,7 +329,7 @@ function Auctions:GetTooltipData()
 	for ai,auc in ipairs(self.tooltip) do
 		table.insert(self.cached_tooltip.items,{
 			count=auc.count,
-			title="|cff"..auc.color..auc.name,
+			title="|cff"..auc.color..(auc.name or "..."),
 			--worth=M(self.targetprice),
 			curpri=M(auc.price),
 			buyall=M(auc.totalcost),

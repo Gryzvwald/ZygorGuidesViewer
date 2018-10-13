@@ -261,72 +261,8 @@ collect Briarthorn##2450 |n
 skill Herbalism,125
 #include end_of_prof_trial_150
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 1-600 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Inscription skill from 1-300.",
-},[[
-step
-#include "trainer_Inscription"
-skillmax Inscription,75
-|tip You must be at least level 5.
-step
-#include "vendor_Inscription"
-buy 1 Virtuoso Inking Set##39505 |condition itemcount(39505) >= 1 or skill("Inscription")>=75
-buy 30 Light Parchment##39354 |condition itemcount(39354) >= 30 or skill("Inscription")>=75
-step
-map Elwynn Forest
-path follow loose;loop;ants straight
-path	43.4,58.9	48.7,62.6	58.0,65.6
-path	64.9,63.5	78.6,63.0	79.6,80.4
-path	79.6,80.4	59.1,78.3	50.8,85.2
-path	46.8,81.1	37.3,87.6	26.2,89.0
-path	30.1,76.1	33.2,66.5
-#include "follow_path_herbs"
-You need about 120 herbs total
-collect Silverleaf##765 |n
-collect Peacebloom##2447 |n
-collect Earthroot##2449 |n
-Gather around _{_G.max(0 , (170-itemcount(765,2447,2449,22710)))}_ herbs
-Mill the herbs you gathered
-collect 84 Alabaster Pigment##39151 |condition skill("Inscription")>=75
-|tip You can also buy these materials from the Auction House.
-step
-label "ins_1-50_skill"
-create 42 Moonglow Ink##52843,Inscription,60
-step
-create Research: Moonglow Ink##165564,Inscription,75
-step
-#include "trainer_Inscription"
-skillmax Inscription,150
-|tip You must be at least level 10.
-step
-map Hillsbrad Foothills
-path	31.8,62.6	33.9,54.0	29.7,44.1
-path	35.5,37.8	34.5,28.2	39.5,21.0
-path	44.2,8.3	51.3,14.0	57.5,20.9
-path	56.1,34.3	49.9,46.2	41.2,46.6
-path	40.1,55.0	41.3,67.4	31.8,71.9
-#include "follow_path_herbs"
-You will need {_G.max(0 , (80-itemcount(2450,2453,785,3820,2452)))} herbs
-collect Mageroyal##785 |n
-collect Bruiseweed##2453 |n
-collect Briarthorn##2450 |n
-Mill the 80 herbs you gathered into Dusky Pigment
-collect 42 Dusky Pigment##39334 |condition skill("Inscription")>=128
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Inscription"
-learn Midnight Ink##53462 |condition skill("Inscription")>=128
-step
-create 21 Midnight Ink##53462,Inscription,21 total |condition skill("Inscription")>=128
-step
-#include "vendor_Inscription"
-buy 59 Light Parchment##39354 |condition itemcount(39354) >= 59 or skill("Inscription")>=128
-step
-create Research: Moonglow Ink##165564,Inscription,107
-step
-create Research: Midnight Ink##165304,Inscription,128
-]])
+ZGV.BETASTART()
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Jewelcrafting skill from 1-300.",

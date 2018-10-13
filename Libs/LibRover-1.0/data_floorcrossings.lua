@@ -20,54 +20,6 @@ data.basenodes.FloorCrossings = {
 			-- Winterchill Mine, Indoor Floor Cross
 				"Tiragarde Sound/4 47.06,61.74 -x- Tiragarde Sound/3 55.34,30.26 {title_atob:Follow the path up} {title_btoa:Follow the path down}",
 		},
-		
-		["Stormsong Valley"] = {
-			-- Abyssal Melody Ship Entrance #1
-				"Stormsong Valley/0 67.83,43.21 -x- Stormsong Valley/1 67.85,43.20 {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-			
-			-- Abyssal Melody Ship Entrance #2		
-				"Stormsong Valley/0 67.05,43.36 -x- Stormsong Valley/1 37.78,49.32 {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-			
-			-- Abyssal Melody Ship Interior Floor Crossing			
-				"Stormsong Valley/1 67.81,49.94 -x- Stormsong Valley/2 66.94,39.70 {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-		
-			-- Thornheart Cave
-				"Stormsong Valley/0 45.94,74.29 -x- Stormsong Valley/3 86.74,28.13 {template:cave}",
-
-			-- Saltstone Mine
-				"Stormsong Valley/0 46.68,36.29 -x- Stormsong Valley/4 76.24,41.60 {template:mine}",
-		},
-
-		["Dazar'Alor"] = {
-				
-			-- Zanchul Bottom Floor Entrance
-				"Dazar'alor/0 40.95,11.28 <radius:5> -x- Dazar'alor/4 39.25,58.20 <radius:5> {fac:H} {template:building}",
-
-			-- Zanchul Bottom to Top Floor Crossing
-				"Dazar'alor/4 45.42,16.87 <radius:5> -x- Dazar'alor/3 39.13,27.80 <radius:5> {fac:H} {title_atob:Run Up the Stairs} {title_btoa:Run Down the Stairs}",
-
-			-- Zanchul Upstairs Exit
-				"Dazar'alor/0 45.29,13.26 -x- Dazar'alor/3 79.42,84.04 {fac:H} {template:building}",
-		},
-
-		["Zuldazar"] = {
-			-- Top Floor to Middle Floor Crossing of Ship Off Coast Near Zeb'Ahari
-				"Zuldazar/0 81.21,20.16 <radius:3> -x- Zuldazar/1 53.24,27.22 <radius:3> {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-			
-			-- Middle Floor to Bottom Floor Crossing of Ship Off Coast Near Zeb'Ahari
-				"Zuldazar/1 45.02,75.68 <radius:3> -x- Zuldazar/2 44.00,80.88 <radius:3> {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- Breath of Pa'ku Ship Top Floor to Middle Floor
-				"Zuldazar/0 51.86,87.10 <radius:3> -x- Zuldazar/3 27.45,32.86 <radius:3> {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-
-			-- Breath of Pa'ku Ship Middle Floor to Bottom Floor
-				"Zuldazar/3 68.32,64.03 <radius:3> -x- Zuldazar/4 71.98,67.55 <radius:3> {title_atob:Run down the stairs} {title_btoa:Run up the stairs}",
-		},
-
-		["Vol'dun"] = {
-			-- Atul'Aman Cave Entrance
-				"Vol'dun/0 43.07,68.05 <radius:5> -x- Vol'dun/1 31.10,81.42 <radius:3> {template:cave}",
-		},
 
 	-- Old Dalaran
 		["Dalaran"] = {
@@ -227,10 +179,6 @@ data.basenodes.FloorCrossings = {
 			"Elwynn Forest/0 38.9,82.3 -x- Elwynn Forest/1 39.9,88.0 {template:mine}", --Fargodeep Mine
 			"Elwynn Forest/1 55.4,36.3 -x- Elwynn Forest/2 56.3,26.0", --Fargodeep Mine Lower
 			"Elwynn Forest/0 38.5,81.5 -x- Elwynn Forest/2 35.2,68.4 {template:mine}", --Fargodeep Mine Lower
-		},
-		["Ghostlands"] = {
-			"Ghostlands/0 66.4,28.5 -x- Ghostlands/1 94.0,35.6 {template:tunnel}", -- Amani Catacombs
-			"Ghostlands/0 58.3,27.5 -x- Ghostlands/1 10.0,26.0 {template:tunnel}", -- Amani Catacombs
 		},
 		["Gilneas 2"] = {
 			"Gilneas 2/0 29.03,51.66 -x- Gilneas 2/2 66.89,58.26 {template:building}", -- Greymane Manor Main Floor

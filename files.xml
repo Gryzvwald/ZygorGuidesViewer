@@ -106,12 +106,15 @@
 	<Script file="CreatureDetector.lua" />
 	
 	<Script file="Item-DataTables.lua" />
+	<!--
 	<Script file="Item-ItemScore.lua" />
-	<Script file="Item-ProcScore.lua" />
+	<Script file="Item-GearFinder.lua" />
+	-->
+
+	<Script file="Item-ItemScore.lua" />
+	<Script file="Item-Upgrades.lua" />
 	<Script file="Item-GearFinder.lua" />
 	<Script file="Item-Quest.lua" />
-	<Script file="Item-AutoEquip.lua" />
-	<Script file="Item-Events.lua" />
 
 	<Include file="GoldUI\Gold.xml" />
 

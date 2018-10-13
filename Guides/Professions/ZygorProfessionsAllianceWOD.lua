@@ -396,74 +396,71 @@ create Mark of the Shattered Hand##159236,Enchanting,700
 step
 Congratulations! You are now a Draenor Master Enchanter
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 600-700 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Draenor Engineering 1-100 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Draenor Engineering skill from 1-100.",
 condition_end=function() return skill('Draenor Engineering') >= 100 end,
 condition_suggested=function() return skill('Draenor Engineering') > 0 and skill('Draenor Engineering') < 100 and level >= 90 end,
 },[[
 step
-Before you can continue, open your Engineering window to detect your skill |cast Engineering##4036
-skillmax Engineering,600
+talk Sean Catchpole##87065
+buy Draenor Engineering##111921 |n
+use the Draenor Engineering##111921
+Train Draenor Engineering |skillmax Draenor Engineering,100 |goto Stormshield/0 47.87,39.90
+|tip You must be at least level 90.
 step
-#include "Garrison_ArchitectTable"
-Select the _Small_ tab at the top
-Drag _Engineering Works_ to a _Small Plot_
-Build your Engineering Works |havebuilding Engineering
+collect 65 Blackrock Ore##109118
+|tip Use the "Blackrock/True Iron Ore" farming guide to gather blackrock, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "Garrison_Small_Building",action="talk Zaren Hoffle##77365",building="Engineering"
-buy Draenor Engineering##111921 |condition skillmax("Engineering") >= 700 or itemcount(111921) >= 1
+collect 80 True Iron Ore##109119
+|tip Use the "Blackrock/True Iron Ore" farming guide to gather true iron, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-use Draenor Engineering##111921
-skillmax Engineering,700
+Open Your Engineering Crafting Panel:
+_<Create 1 Gearspring Parts>_
+|tip You can only do this once per day.
+collect 5 Gearspring Parts##111366 |goto 46.22,42.69
 step
-map Shadowmoon Valley D
-path follow loose; loop; ants straight
-path	47.7,25.9	54.5,30.9	57.2,33.0
-path	66.2,30.2	66.9,34.5	63.6,36.6
-path	60.9,48.5	62.8,49.8	66.1,58.2
-path	61.3,57.7	58.1,60.3	62.4,62.4
-path	61.4,69.4	55.5,61.1	53.4,64.5
-path	53.6,69.0	56.8,72.8	54.5,75.1
-path	49.3,67.2	43.0,72.4	38.1,73.9
-path	37.1,66.9	34.4,63.4	38.2,57.2
-path	41.7,52.2	40.1,46.7	39.3,41.2
-path	35.1,35.5	30.9,36.5	26.7,31.2
-path	25.0,28.7	21.5,25.1	24.4,21.9
-path	25.5,19.6	24.0,15.9	24.3,8.3
-path	29.1,13.2	26.9,14.6	31.6,19.3
-path	33.2,22.7	33.9,26.6	37.5,21.8
-path	43.0,27.4
-|tip Make sure you are tracking minerals.
-collect 1525 True Iron Ore##109119 |condition skill("Engineering")>=700
-collect 1520 Blackrock Ore##109118 |condition skill("Engineering")>=700
-|tip You can also buy these materials from the Auction House.
+Open Your Engineering Crafting Panel:
+_<Create 1 Secrets of Draenor Engineering>_
+|tip You can only do this once per day.
+collect 1 Secrets of Draenor Engineering##119299 |goto 46.22,42.69
 step
-#include "Garrison_Small_Building",action="talk Zaren Hoffle##77365",building="Engineering"
-accept Your First Engineering Work Order##36646
+Open Your Engineering Crafting Panel:
+_<Create 1 Ultimate Gnomish Army Knife>_
+collect 1 Ultimate Gnomish Army Knife##114943 |goto 46.22,42.69
 step
-#include "Garrison_Small_Building",action="talk Helayn Whent##77831",building="Engineering"
-Tell her: _"I would like to place a work order."_ |q Your First Engineering Work Order##36646/1
+collect 60 Nagrand Arrowbloom##109128
+|tip Use the "Nagrand Arrowbloom" farming guide to gather true iron, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-#include "Garrison_Small_Building",action="click Engineering Work Order##86117",building="Engineering"
-Engineering Work Order Collected |q Your First Engineering Work Order##36646/2
+Open Your Engineering Crafting Panel:
+_<Create 30 Stealthman 54>_
+Reach Level 30 Draenor Engineering |skill Draenor Engineering,30 |goto 46.22,42.69
 step
-#include "Garrison_Small_Building",action="talk Helayn Whent##77831",building="Engineering"
-turnin Your First Engineering Work Order##36646
+talk Sean Catchpole##87065
+buy Schematic: Didi's Delicate Assembly##118493 |n
+use the Schematic: Didi's Delicate Assembly##118493
+Train Didi's Delicate Assembly |learn Didi's Delicate Assembly##169078 |goto 47.87,39.90
 step
-create Secret of Draenor Engineering##177054,Engineering,1 total |n
-create Gearspring Parts##169080,Engineering,1 total |condition skill("Engineering")>=700
+collect 1050 Blackrock Ore##109118
+|tip Use the "Blackrock/True Iron Ore" farming guide to gather blackrock, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "Garrison_Small_Building",action="talk Zaren Hoffle##77365 ",building="Engineering"
-buy 1 Schematic: Didi's Delicate Assembly##118493 |condition _G.IsSpellKnown(169078) or itemcount(118493) >= 1 or skill("Engineering")>=700
+collect 1050 True Iron Ore##109119
+|tip Use the "Blackrock/True Iron Ore" farming guide to gather true iron, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-use Schematic: Didi's Delicate Assembly##118493
-learn Didi's Delicate Assembly##169078 |condition skillmax("Engineering") >= 700
+Open Your Engineering Crafting Panel:
+_<Create 70 Didi's Delicate Assembly>_
+Reach Level 100 Draenor Engineering |skill Draenor Engineering,100 |goto 46.22,42.69
 step
-create Didi's Delicate Assembly##169078,Engineering,700
-step
-Congratulations! You are now a Draenor Master Engineer
+_Congratulations!_
+You Reached 100 Draenor Engineering Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 600-700 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Draenor Fishing skill from 1-100.",
@@ -1106,100 +1103,49 @@ collect Frostweed##109124 |n
 collect Starflower##109127 |n
 skill Herbalism,700
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 600-700 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Draenor Inscription 1-100 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Draenor Inscription skill from 1-100.",
 condition_end=function() return skill('Draenor Inscription') >= 100 end,
 condition_suggested=function() return skill('Draenor Inscription') > 0 and skill('Draenor Inscription') < 100 and level >= 90 end,
 },[[
 step
-Before you continue, open your Inscription window to detect your profession |cast Inscription##45357
-skillmax Inscription,600
+Enter the building |goto Stormshield/0 62.35,37.20 < 5 |walk
+talk Joao Calhandro##87063
+|tip Upstairs inside the building.
+buy Draenor Inscription##111923 |n
+use the Draenor Inscription##111923
+Train Draenor Inscription |skillmax Draenor Inscription,100 |goto 62.00,33.46
+|tip You must be at least level 90.
 step
-#include "Garrison_ArchitectTable"
-Select the _Small_ tab at the top
-Drag _Scribe's Quarters_ to a _Small Plot_
-Build your Scribe's Quarters |havebuilding Inscription
+talk Trader Caerel##85950
+buy 1 Virtuoso Inking Set##39505 |n
+collect 1 Virtuoso Inking Set##39505 |goto 40.99,59.56
 step
-#include "Garrison_Small_Building",action="talk Eric Broadoak##77372",building="Inscription"
-buy Draenor Inscription##111923 |condition skillmax("Engineering") >= 700 or itemcount(111923) >= 1
+collect 1176 Cerulean Pigment##114931
+|tip Use the "Cerulean Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-use Draenor Inscription##111923
-skillmax Inscription,700
+Open Your Inscription Crafting Panel:
+_<Create 1 Secrets of Draenor Inscription>_
+Reach Level 2 Draenor Inscription |skill Draenor Inscription,2
 step
-map Shadowmoon Valley D
-path follow loose; loop; ants curved
-path	26.6,8.0	27.4,12.7	27.4,15.6
-path	26.2,17.1	26.8,19.8	27.5,22.1
-path	29.3,27.4	31.4,26.3	32.3,23.8
-path	34.6,27.2	36.0,24.1	37.2,21.6
-path	39.5,19.9	40.6,23.3	40.6,24.9
-path	41.5,26.7	42.8,28.1	45.0,28.8
-path	47.5,28.1	48.7,26.8	50.7,28.8
-path	53.3,31.1	54.5,32.7	56.0,35.5
-path	58.6,36.0	62.3,32.0	63.5,31.0
-path	65.9,31.7	66.3,34.2	65.0,36.0
-path	63.1,36.6	62.3,39.4	60.2,42.4
-path	59.1,45.2	58.0,47.7	58.8,50.8
-path	62.5,53.0	64.7,55.5	65.9,56.7
-path	65.7,57.4	64.7,59.4	61.4,57.7
-path	59.6,58.0	58.8,58.6	59.9,61.4
-path	60.5,63.9	62.0,62.2	62.7,64.2
-path	61.6,65.3	61.9,67.4	61.4,69.3
-path	59.8,67.0	58.1,64.1	57.9,63.4
-path	57.4,59.5	55.3,59.0	54.5,61.8
-path	53.3,63.7	53.0,65.6	52.2,67.0
-path	54.0,69.9	56.0,70.2	56.0,72.4
-path	55.0,74.4	54.0,74.3	52.7,72.9
-path	51.7,70.8	51.1,68.7	49.1,68.3
-path	45.6,68.3	42.9,73.0	41.6,74.7
-path	38.2,73.4	37.0,71.5	38.3,67.7
-path	38.1,66.4	37.4,60.8	36.4,59.6
-path	36.9,56.8	40.7,57.6	42.9,57.0
-path	43.2,54.8	41.7,53.6	41.2,50.1
-path	42.0,48.6	43.1,46.7	42.6,43.6
-path	40.2,43.4	39.0,39.8	37.0,35.7
-path	34.7,32.4	32.9,31.0	31.1,32.4
-path	28.3,32.9	26.4,31.7	25.4,28.8
-path	24.1,26.7	22.7,26.1	21.4,24.8
-path	22.3,24.2	23.7,23.1	25.1,20.8
-path	24.3,19.0	23.4,18.1	23.4,16.3
-path	22.8,14.5	23.7,10.2
-Make sure you have find herbs turned on
-collect Frostweed##109124 |n
-collect Starflower##109127 |n
-Mill the herbs you get |cast Milling##51005
-collect 1188 Cerulean Pigment##114931 |condition skill("Inscription")>=700
-|tip You can also buy these materials from the Auction House.
+Enter the building |goto 62.35,37.20 < 5 |walk
+talk Joao Calhandro##87063
+|tip Upstairs inside the building.
+buy 1 Technique: Volatile Crystal##118614 |n
+use the Technique: Volatile Crystal##118614
+Train Technique: Volatile Crystal |learn Technique: Volatile Crystal##166432 |goto 62.00,33.46
 step
-#include "Garrison_Small_Building",action="talk Eric Broadoak##77372",building="Inscription"
-accept Your First Inscription Work Order##36647
+Open Your Inscription Crafting Panel:
+_<Create 98 Volatile Crystal>_
+Reach Level 100 Draenor Inscription |skill Draenor Inscription,100
 step
-#include "Garrison_Small_Building",action="talk Kurt Broadoak##77372",building="Inscription"
-Tell him _"I would like to place a work order."_ |q Your First Inscription Work Order##36647/1
-step
-#include "Garrison_Small_Building",action="click Inscription Work Order##116846",building="Inscription"
-Gather your first work order |q Your First Inscription Work Order##36647/2
-step
-#include "Garrison_Small_Building",action="talk Eric Broadoak##77372",building="Inscription"
-turnin Your First Inscription Work Order##36647
-step
-create 1 Secrets of Draenor Inscription##177045,Inscription,1 total |n
-|tip This can be done daily in order to get more recipes
-collect 1 Secret of Draenor Inscription##119297 |condition skill("Inscription")>=700
-step
-#include "Garrison_Small_Building",action="talk Eric Broadoak##77372",building="Inscription"
-buy 1 Technique: Volatile Crystal##118614 |condition _G.IsSpellKnown(166432) or itemcount(118614) >= 1 or skill("Inscription")>=700
-step
-use Technique: Volatile Crystal##118614
-learn Volatile Crystal##166432 |condition skill("Inscription")>=700
-step
-create Volatile Crystal##166432,Inscription,1 total |n
-create Card of Omens##166669,Inscription,1 total |n
-skill Inscription,700
-step
-Congratulations! You are now a Draenor Master Inscriptionist
+_Congratulations!_
+You Reached 100 Draenor Inscription Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 600-700 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Draenor Jewelcrafting skill from 1-100.",

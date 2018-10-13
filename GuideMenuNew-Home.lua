@@ -8,8 +8,25 @@ GuideMenu.Home={
 	{"banner", image=ZGV.DIR.."\\Skins\\banner"},
 
 	{"title", text=[[Featured Content]]},
+
+	{"section", text=[[LEVELING]]},
+	{"item", text=[[Updated |cfffe6100Drustvar Loremaster (Story Quest Only)|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Kul Tiras\\Drustvar Loremaster (Story Quest Only)",faction="A"},
+	{"item", text=[[Updated |cfffe6100Stormsong Valley Loremaster (Story Quest Only)|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Kul Tiras\\Stormsong Valley Loremaster (Story Quest Only)",faction="A"},
+	{"item", text=[[Updated |cfffe6100Tiragarde Sound Loremaster (Story Quest Only)|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Kul Tiras\\Tiragarde Sound Loremaster (Story Quest Only)",faction="A"},
+	{"item", text=[[Updated |cfffe6100Nazmir Loremaster (Story Quest Only)|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Zandalar\\Nazmir Loremaster (Story Quest Only)",faction="H"},
+	{"item", text=[[Updated |cfffe6100Vol'dun Loremaster (Story Quest Only)|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Zandalar\\Vol\'dun Loremaster (Story Quest Only)",faction="H"},
+	{"item", text=[[Updated |cfffe6100Zuldazar Loremaster (Story Quest Only)|r.]], guide="LEVELING\\Battle for Azeroth (110-120)\\Zandalar\\Zuldazar Loremaster (Story Quest Only)",faction="H"},
+
 	{"section", text=[[EVENTS]]},
-	{"item", text=[[Added |cfffe6100Harvest Festival Quest|r.]], guide="EVENTS\\Harvest Festival\\Harvest Festival Quest"},
+	{"item", text=[[Updated |cfffe6100Brewfest Quests|r.]], guide="EVENTS\\Brewfest\\Brewfest Quests"},
+	{"item", text=[[Updated |cfffe6100Brewfest Dailies|r.]], guide="EVENTS\\Brewfest\\Brewfest Dailies"},
+	{"item", text=[[Updated |cfffe6100Brewfest Achievements|r.]], guide="EVENTS\\Brewfest\\Brewfest Achievements"},
+
+	{"section", text=[[PETSMOUNTS]]},
+	{"item", text=[[Updated |cfffe6100Wolpertinger|r.]], guide="PETSMOUNTS\\Battle Pets\\Critter Pets\\Wolpertinger"},
+
+	{"section", text=[[TITLES]]},
+	{"item", text=[[Updated |cfffe6100Brewfest Achievements|r.]], guide="TITLES\\Wrath of the Lich King Titles\\World Events\\Brewmaster\\Brewfest Achievements"},
 
 	{"title", text=[[Battle for Azeroth Content]]},
 

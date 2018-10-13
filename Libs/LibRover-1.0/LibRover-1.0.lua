@@ -1058,8 +1058,6 @@ do
 
 			punchStartupTime("start")
 
-			TaxiFrame:HookScript("OnShow",function() Lib:HighlightTaxiDestination() end)
-
 			Lib.frame:RegisterEvent("ACHIEVEMENT_EARNED")
 			Lib.frame:RegisterEvent("RECEIVED_ACHIEVEMENT_LIST")
 			Lib.frame:RegisterEvent("LEARNED_SPELL_IN_TAB")
@@ -1074,6 +1072,7 @@ do
 			Lib.frame:RegisterEvent("ZONE_CHANGED_INDOORS")
 			Lib.frame:RegisterEvent("NEW_WMO_CHUNK")  -- subzone change, or entering a building
 			Lib.frame:RegisterEvent("LOADING_SCREEN_DISABLED")
+			Lib.frame:RegisterEvent("TAXIMAP_OPENED")
 			Lib.frame:SetScript("OnUpdate", function(frame,elapsed) Lib:OnUpdate(elapsed) end)
 
 			--punchStartupTime("sha2")
@@ -1995,12 +1994,12 @@ do
 				local title
 				return true,"OUTLAND_LOCKED","You can't get to Outland if you're below level 58."
 
-			elseif ZGV.GetMapContinent(destmap)==424 and level<85 and not (IsQuestFlaggedCompleted(31736) or IsQuestFlaggedCompleted(31767))  then
+			elseif ZGV.GetMapContinent(destmap)==424 and level<80 and not (IsQuestFlaggedCompleted(31736) or IsQuestFlaggedCompleted(31767))  then
 				--Pandaria
 				local title
 				local questdata = ZGV.Localizers:GetQuestData(fac=="Alliance" and 29548 or 29690)
 				title = questdata and questdata.title
-				return true,"PANDARIA_LOCKED","You can't get to Pandaria if you're below level 85 and haven't completed the " .. (title and "quest \""..title.."\"" or "initial quest")
+				return true,"PANDARIA_LOCKED","You can't get to Pandaria if you're below level 80 and haven't completed the " .. (title and "quest \""..title.."\"" or "initial quest")
 
 			elseif ZGV.GetMapContinent(destmap)==572 and level<90  then
 				--Draenor
@@ -4034,8 +4033,12 @@ do
 
 			if not Lib.ready then return end
 
-			if event=="ADDON_LOADED" and arg1=="Blizzard_FlightMap" then Lib.DebugHighlightHooked = true
-				FlightMapFrame:HookScript("OnShow",function() Lib:HighlightFlightMapDestination() end)
+			if event=="TAXIMAP_OPENED" then
+				if (arg1 == Enum.UIMapSystem.Taxi) then
+					Lib:HighlightTaxiDestination()
+				else
+					Lib:HighlightFlightMapDestination()
+				end
 			end
 
 			if event=="ACHIEVEMENT_EARNED" or event=="LEARNED_SPELL_IN_TAB" or event=="RECEIVED_ACHIEVEMENT_LIST" then

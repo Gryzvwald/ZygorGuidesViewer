@@ -362,8 +362,6 @@ keywords={"Cooking","Way","of","the","Grill"},
 description="This guide will walk you through completing the \"Way of the Grill\" Cooking path.",
 },[[
 step
-_Before Starting This Guide:_
-Reach at least 530 Cooking Skill
 Click here to load the Cooking Leveling Guide |confirm |next "Profession Guides\\Cooking\\Leveling Guides\\Cooking 1-520 Leveling Guide"
 You will also need to unlock the farm through "The Tillers" faction
 Click here to load The Tillers Dailies guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"

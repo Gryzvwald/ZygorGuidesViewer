@@ -1182,83 +1182,65 @@ create 5 Enchant Chest - Glorious Stats##104395,Enchanting,600
 step
 Congratulations, you are now a Zen Master Enchanter!
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 500-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Pandaria Engineering 1-75 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Pandaria Engineering skill from 1-75.",
 condition_end=function() return skill('Pandaria Engineering') >= 75 end,
 condition_suggested=function() return skill('Pandaria Engineering') > 0 and skill('Pandaria Engineering') < 75 and level >= 85 end,
 },[[
 step
-#include "trainer_Engineering"
-skillmax Engineering,600
-|tip You must be at least level 80.
+talk Sally Fizzlefury##55143
+Train Pandaria Engineering |skillmax Pandaria Engineering,75 |goto Valley of the Four Winds/0 16.06,83.14
+|tip You must be at least level 78.
 step
-#include "trainer_Engineering"
-learn Ghost Iron Bolts##127113 |condition skill("Engineering")>=600
+collect 406 Ghost Iron Bar##72096
+|tip Use the "Ore" farming guide to gather and smelt ghost iron, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Engineering"
-learn High-Explosive Gunpowder##127114 |condition skill("Engineering")>=600
+collect 60 Windwool Cloth##72988
+|tip Use the "Windwool Cloth" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
 step
-map Valley of the Four Winds
-path follow loose;loop;ants straight;dist 40
-path	47.4,45.7	47.4,50.8	42.8,54.2
-path	39.2,52.9	34.9,54.1	33.3,58.6
-path	29.4,58.6	27.3,51.5	30.0,44.9
-path	26.9,35.1	28.8,30.3	32.4,28.3
-path	39.4,34.6	35.4,40.2	37.1,44.8
-path	42.7,42.1	46.0,25.1	52.2,25.3
-path	53.8,26.8	57.3,27.6	59.3,32.5
-path	63.7,29.9	63.9,34.5	59.8,42.1
-path	52.3,43.6
-#include "follow_path_mine"
-collect 766 Ghost Iron Ore##72092 |condition skill("Engineering")>=600
-|tip You can also buy these materials from the Auction House.
+collect 26 Spirit of Harmony##76061
+|tip These can drop off of any enemy in Pandaria.
+|tip A good place to farm them is from the trash in the Heart of Fear raid or in the Timeless Isle.
+|tip You can also purchase them from the Auction House.
 step
-kill Suspicious Snow Pile##59967+
-collect 74 Windwool Cloth##72988 |goto Kun-Lai Summit/8 59.7,75.0 |condition skill("Engineering")>=600
-collect 20 Mote of Harmony##89112 |n |use Mote of Harmony##89112 |goto Kun-Lai Summit/8 59.7,75.0
-|tip Turn 10 Mote of Harmony into a Spirit of Harmony
-collect 2 Spirit of Harmony##76061 |goto Kun-Lai Summit/8 59.7,75.0 |condition skill("Engineering")>=600
-|tip You can also buy these materials from the Auction House.
+Open Your Engineering Crafting Panel:
+_<Create 112 Ghost Iron Bolts>_
+collect 224 Ghost Iron Bolts##77467 |goto 15.96,83.17
 step
-#include "maincity_anvil"
-create 383 Ghost Iron Bar##102165,Mining,383 total |condition skill("Engineering")>=600
-|tip You can also buy these materials from the Auction House.
+Open Your Engineering Crafting Panel:
+_<Create 70 High-Explosive Gunpowder>_
+|tip Make all of these, you'll need them later.
+Reach Level 25 Pandaria Engineering |skill Pandaria Engineering,25 |goto 15.96,83.17
 step
-#include "maincity_anvil"
-create Ghost Iron Bolts##127113,Engineering,94 total |n
-collect 188 Ghost Iron Bolts##77467 |condition skill("Engineering")>=600
+talk Sally Fizzlefury##55143
+Train Tinker's Kit |learn Tinker's Kit##131563 |goto 16.06,83.14
 step
-create High-Explosive Gunpowder##127114,Engineering,101 total |n
-collect 202 High-Explosive Gunpowder##77468 |condition skill("Engineering")>=600
-skill Engineering,550
+Open Your Engineering Crafting Panel:
+_<Create 30 Tinker's Kit>_
+Reach Level 55 Pandaria Engineering |skill Pandaria Engineering,55 |goto 15.96,83.17
 step
-#include "trainer_Engineering"
-learn Mist-Piercing Goggles##127130 |condition skill("Engineering")>=600
+talk Sally Fizzlefury##55143
+Train Thermal Anvil |learn Thermal Anvil##127131 |goto 16.06,83.14
 step
-#include "trainer_Engineering"
-learn Thermal Anvil##127131 |condition skill("Engineering")>=600
+Open Your Engineering Crafting Panel:
+_<Create 10 Thermal Anvil>_
+Reach Level 62 Pandaria Engineering |skill Pandaria Engineering,62 |goto 15.96,83.17
 step
-#include "trainer_Engineering"
-learn Tinker's Kit##131563 |condition skill("Engineering")>=600
+talk Sally Fizzlefury##55143
+Train Mist-Piercing Goggles |learn Mist-Piercing Goggles##127130 |goto 16.06,83.14
 step
-#include "trainer_Engineering"
-learn Ghost Iron Dragonling##127134 |condition skill("Engineering")>=600
+Open Your Engineering Crafting Panel:
+_<Create 13 Mist-Piercing Goggles>_
+Reach Level 75 Pandaria Engineering |skill Pandaria Engineering,75 |goto 15.96,83.17
 step
-#include "maincity_anvil"
-create Ghost Iron Dragonling##127134,Engineering,575
-step
-#include "maincity_anvil"
-create Tinker's Kit##131563,Engineering,580
-step
-#include "maincity_anvil"
-create Thermal Anvil##127131,Engineering,595
-step
-#include "maincity_anvil"
-create Mist-Piercing Goggles##127130,Engineering,600
-step
-Congratulations, you are now a Zen Master Engineer!
+_Congratulations!_
+You Reached 75 Pandaria Engineering Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 525-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Pandaria Fishing skill from 1-75.",
@@ -1328,44 +1310,56 @@ skill Herbalism,600
 step
 Congratulations, you are now a Zen Master Herbalist!
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Pandaria Inscription 1-75 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Pandaria Inscription skill from 1-75.",
 condition_end=function() return skill('Pandaria Inscription') >= 75 end,
 condition_suggested=function() return skill('Pandaria Inscription') > 0 and skill('Pandaria Inscription') < 75 and level >= 85 end,
 },[[
 step
-#include "trainer_Inscription"
-skillmax Inscription,600
-|tip You must be at least level 85.
+Enter the building |goto Vale of Eternal Blossoms/0 81.45,31.90 < 5 |walk
+talk Lorewalker Huynh##64691
+|tip Inside the building.
+Train Pandaria Inscription |skillmax Pandaria Inscription,75 |goto 81.90,29.31
+|tip You must be at least level 78.
 step
-#include "trainer_Inscription"
-learn Ink of Dreams##111645 |condition skill("Inscription")>=600
+talk Lorewalker Huynh##64691
+|tip Inside the building.
+Train Ink of Dreams |learn Ink of Dreams##111645 |goto 81.90,29.31
 step
-#include "vendor_Inscription"
-buy 68 Light Parchment##39354 |condition skill("Inscription")>=600
+collect 330 Shadow Pigment##79251
+|tip Use the "Misty Pigment/Shadow Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-#include "GT_SW_Path"
-#include "follow_path_herbs"
-collect Green Tea leaf##72234 |n
-collect Silkweed##72235 |n
-Gather around _{_G.max(0 , (250-itemcount(72234,72235)))}_ herbs in stacks of 5
-Mill the herbs you gathered |cast Milling##51005
-collect 136 Shadow Pigment##79251 |condition skill("Inscription")>=600
+Open Your Inscription Crafting Panel:
+_<Create 165 Ink of Dreams>_
+|tip Make all of these, you'll need them later.
+Reach Level 20 Pandaria Inscription |skill Pandaria Inscription,20
 step
-create 68 Ink of Dreams##111645,Inscription,68 total |n
-create 12 Starlight Ink##111646 |condition skill("Inscription")>=600
-skill Inscription,545
+Enter the building |goto Vale of Eternal Blossoms/0 85.59,67.44 < 5 |walk
+talk Kergan Swiftbeard##64077
+|tip Inside the building.
+buy 150 Light Parchment##39354 |n
+collect 150 Light Parchment##39354 |goto Vale of Eternal Blossoms/3 41.61,75.08
 step
-create 22 Research: Ink of Dreams##165467,Inscription,596
+Open Your Inscription Crafting Panel:
+_<Create 50 Research: Ink of Dreams>_
+Reach Level 70 Pandaria Inscription |skill Pandaria Inscription,70
 step
-#include "trainer_Inscription"
-learn Greater Tiger Fang Inscription##121192 |condition skill("Inscription")>=600
+Enter the building |goto Vale of Eternal Blossoms/0 81.45,31.90 < 5 |walk
+talk Lorewalker Huynh##64691
+|tip Inside the building.
+Train Secret Crane Wing Inscription |learn Secret Crane Wing Inscription##127023 |goto 81.90,29.31
 step
-create 2 Greater Tiger Fang Inscription##121192,Inscription,600
+Open Your Inscription Crafting Panel:
+_<Create 5 Secret Crane Wing Inscription>_
+Reach Level 75 Pandaria Inscription |skill Pandaria Inscription,75
 step
-Congratulations, you are now a Zen Master Inscriptionist!
+_Congratulations!_
+You Reached 75 Pandaria Inscription Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 500-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Pandaria Jewelcrafting skill from 1-75.",

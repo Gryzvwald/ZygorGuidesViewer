@@ -490,293 +490,293 @@ This mount drops off a rare spawn called Dormus the Camel-Hoarder. You get to hi
 Check all the waypoints in each step for a chance to find the Camel Figurine.
 confirm
 step
-Next to this table in the inn. |goto 22.0,64.2
-confirm
+Next to this table in the inn.
+confirm |goto Uldum/0 22.0,64.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Under the this tent, next to some boxes. |goto 22.2,64.0
-confirm
+Under the this tent, next to some boxes.
+confirm |goto 22.2,64.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-In between the wagon and the stone rock. |goto 24.2,59.8
-confirm
+In between the wagon and the stone rock.
+confirm |goto 24.2,59.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Behind this wagon. |goto 24.6,60.0
-confirm
+Behind this wagon.
+confirm |goto 24.6,60.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this tall wooden post. |goto 25.4,65.6
-confirm
+Next to this tall wooden post.
+confirm |goto 25.4,65.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to the boxes with nets over them. |goto 25.6,65.8
-confirm
+Next to the boxes with nets over them.
+confirm |goto 25.6,65.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this wagon with the back down. |goto 26.2,64.8
-confirm
+Next to this wagon with the back down.
+confirm |goto 26.2,64.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this light colored log in the sand. |goto 26.2,65.2
-confirm
+Next to this light colored log in the sand.
+confirm |goto 26.2,65.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to the stairs at this wall. |goto 28.6,63.6
-confirm
+Next to the stairs at this wall.
+confirm |goto 28.6,63.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to the corner of this wall. |goto 30.2,62.8
-confirm
+Next to the corner of this wall.
+confirm |goto 30.2,62.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this tall and wide pillar. |goto 30.4,60.6
-confirm
+Next to this tall and wide pillar.
+confirm |goto 30.4,60.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the bottom of these stairs. |goto 30.8,67.4
-confirm
+At the bottom of these stairs.
+confirm |goto 30.8,67.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the top of these stairs, next to the stone ramp and pillar. |goto 31.0,66.2
-confirm
+At the top of these stairs, next to the stone ramp and pillar.
+confirm |goto 31.0,66.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this pillar, near the stairs going down. |goto 31.6,69.2
-confirm
+Next to this pillar, near the stairs going down.
+confirm |goto 31.6,69.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this tall wide pillar. |goto 33.0,59.8
-confirm
+Next to this tall wide pillar.
+confirm |goto 33.0,59.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the top of these stairs. |goto 33.0,67.6
-confirm
+At the top of these stairs.
+confirm |goto 33.0,67.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-On this platform in the water. |goto 33.0,71.8
-confirm
+On this platform in the water.
+confirm |goto 33.0,71.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this door and small stairway. |goto 33.2,62.8
-confirm
+Next to this door and small stairway.
+confirm |goto 33.2,62.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this pillar and ledge. |goto 37.0,64.2
-confirm
+Next to this pillar and ledge.
+confirm |goto 37.0,64.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the bottom of these stairs. |goto 38.2,60.4
-confirm
+At the bottom of these stairs.
+confirm |goto 38.2,60.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the edge of this small cliff. |goto 38.6,54.8
-confirm
+At the edge of this small cliff.
+confirm |goto 38.6,54.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this bench. |goto 47.2,76.8
-confirm
+Next to this bench.
+confirm |goto 47.2,76.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the top of these stairs. |goto 49.0,75.8
-confirm
+At the top of these stairs.
+confirm |goto 49.0,75.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this tree. |goto 49.2,75.8
-confirm
+Next to this tree.
+confirm |goto 49.2,75.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these carts with items inside. |goto 50.2,73.4
-confirm
+Next to these carts with items inside.
+confirm |goto 50.2,73.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these tables with weapons on them. |goto 50.4,73.6
-confirm
+Next to these tables with weapons on them.
+confirm |goto 50.4,73.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these tables with weapons on them. |goto 50.4,72.4
-confirm
+Next to these tables with weapons on them.
+confirm |goto 50.4,72.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these tables with weapons on them. |goto 50.6,72.2
-confirm
+Next to these tables with weapons on them.
+confirm |goto 50.6,72.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these wagons and this table with weapons. |goto 51.0,79.6
-confirm
+Next to these wagons and this table with weapons.
+confirm |goto 51.0,79.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these square stones. |goto 51.8,70.6
-confirm
+Next to these square stones.
+confirm |goto 51.8,70.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Inside this room, check all 4 corners. |goto 73.4,73.8
-confirm
+Inside this room, check all 4 corners.
+confirm |goto 73.4,73.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Look around both sets of stairs here. |goto 70.0,58.2
-confirm
+Look around both sets of stairs here.
+confirm |goto 70.0,58.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this little stone house. |goto 72.0,44.0
-confirm
+Next to this little stone house.
+confirm |goto 72.0,44.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-In this corner with piles of sand. |goto 64.6,30.4
-confirm
+In this corner with piles of sand.
+confirm |goto 64.6,30.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-On the edge of this tile in a star formation. |goto 52.4,28.0
-confirm
+On the edge of this tile in a star formation.
+confirm |goto 52.4,28.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this pillar and rocks on the ground. |goto 52.2,27.8
-confirm
+Next to this pillar and rocks on the ground.
+confirm |goto 52.2,27.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this tropical tree. |goto 50.6,31.6
-confirm
+Next to this tropical tree.
+confirm |goto 50.6,31.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this burried pillar. |goto 45.2,15.8
-confirm
+Next to this burried pillar.
+confirm |goto 45.2,15.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this tent with a bonfire nearby. |goto 34.2,21.4
-confirm
+Next to this tent with a bonfire nearby.
+confirm |goto 34.2,21.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this wall. |goto 34.2,19.6
-confirm
+Next to this wall.
+confirm |goto 34.2,19.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this group of tents. |goto 33.8,25.4
-confirm
+Next to this group of tents.
+confirm |goto 33.8,25.4
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-On top of this pillar. |goto 33.2,28.8
-confirm
+On top of this pillar.
+confirm |goto 33.2,28.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-In this rubble, next to the building. |goto 33.2,28.2
-confirm
+In this rubble, next to the building.
+confirm |goto 33.2,28.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-In between these two trees with shrubbery. |goto 29.8,25.0
-confirm
+In between these two trees with shrubbery.
+confirm |goto 29.8,25.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this Rock and Tree. |goto 29.8,20.6
-confirm
+Next to this Rock and Tree.
+confirm |goto 29.8,20.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this group of trees. |goto 51.8,49.6
-confirm
+Next to this group of trees.
+confirm |goto 51.8,49.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-In this middle area of these houses. |goto 52.0,51.0
-confirm
+In this middle area of these houses.
+confirm |goto 52.0,51.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this small building. |goto 51.4,51.2
-confirm
+Next to this small building.
+confirm |goto 51.4,51.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the bottom of this ramp. |goto 50.6,50.6
-confirm
+At the bottom of this ramp.
+confirm |goto 50.6,50.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this group of trees, on this cliff. |goto 48.0,46.6
-confirm
+Next to this group of trees, on this cliff.
+confirm |goto 48.0,46.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to these group of trees. |goto 46.2,44.8
-confirm
+Next to these group of trees.
+confirm |goto 46.2,44.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this rock formation. |goto 40.8,49.8
-confirm
+Next to this rock formation.
+confirm |goto 40.8,49.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-In the middle of this rubble. |goto 40.2,43.2
-confirm
+In the middle of this rubble.
+confirm |goto 40.2,43.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this very little doorway with a triangle on it. |goto 40.0,44.8
-confirm
+Next to this very little doorway with a triangle on it.
+confirm |goto 40.0,44.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this large pillar and wall with birds on it. |goto 40.0,38.6
-confirm
+Next to this large pillar and wall with birds on it.
+confirm |goto 40.0,38.6
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-At the bottom of these stairs. |goto 32.6,47.8
-confirm
+At the bottom of these stairs.
+confirm |goto 32.6,47.8
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to the Pile of bones and this small cliff. |goto 32.0,45.0
-confirm
+Next to the Pile of bones and this small cliff.
+confirm |goto 32.0,45.0
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step
-Next to this wagon with items inside it. |goto 25.4,51.2
-confirm
+Next to this wagon with items inside it.
+confirm |goto 25.4,51.2
 _
 If you found the correct figurine, click here |confirm |next "camel"
 step

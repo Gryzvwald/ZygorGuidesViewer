@@ -39661,7 +39661,6 @@ step
 Congratulations!
 You have completed the _Argus Campaign_ guide
 ]])
-ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Legion (100-110)\\Uuna Scenario",{
 author="support@zygorguides.com",
 description="This guide will walk you through the Uuna Scenario.",
@@ -39804,4 +39803,3 @@ Click here to continue |confirm
 step
 You have now completed A Dark Place scenario!
 ]])
-ZGV.BETAEND()

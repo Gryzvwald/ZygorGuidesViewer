@@ -3187,32 +3187,24 @@ startlevel=1,
 endlevel=10,
 },[[
 step
-Run down the stairs |goto Sunstrider Isle/0 58.19,45.08 < 7 |only if walking
-Follow the road |goto Sunstrider Isle/0 53.24,61.21 < 10 |only if walking
-Continue following the road |goto Sunstrider Isle/0 57.19,67.32 < 10 |only if walking
-Cross the bridge |goto Sunstrider Isle/0 63.47,73.27 < 7 |only if walking
+Cross the bridge |goto Sunstrider Isle/0 63.47,73.27 < 20 |only if walking
 talk Outrunner Alarion##15301
 turnin Aiding the Outrunners##8347 |goto Eversong Woods/0 40.42,32.21 |only if havequest(8347) or completedq(8347)
 accept Slain by the Wretched##9704 |goto Eversong Woods/0 40.42,32.21
 step
-Follow the road |goto 41.35,33.73 < 7 |only if walking
 clicknpc Slain Outrunner##17849
 turnin Slain by the Wretched##9704 |goto 42.03,35.66
 accept Package Recovery##9705 |goto 42.03,35.66
 step
-Follow the road |goto 41.32,33.70 < 7 |only if walking
 talk Outrunner Alarion##15301
 turnin Package Recovery##9705 |goto 40.42,32.21
 accept Completing the Delivery##8350 |goto 40.42,32.21
 step
-Follow the road |goto 41.33,33.74 < 7 |only if walking
-Continue following the road |goto 42.23,36.49 < 7 |only if walking
-Continue following the road |goto 44.48,41.93 < 7 |only if walking
-Continue following the road |goto 45.47,44.55 < 7 |only if walking
+Cross the bridge |goto 42.28,36.41 < 20 |only if walking
 talk Magister Jaronis##15418
 accept Major Malfunction##8472 |goto 47.25,46.31
 step
-Enter the building |goto 47.77,47.31 < 5 |walk
+Enter the building |goto 47.77,47.31 < 10 |walk
 talk Innkeeper Delaniel##15433
 |tip Inside the building.
 turnin Completing the Delivery##8350 |goto 48.16,47.66
@@ -3221,7 +3213,7 @@ talk Innkeeper Delaniel##15433
 |tip Inside the building.
 home Falconwing Inn |goto 48.16,47.66 |q 8472 |future
 step
-Leave the building |goto 47.77,47.31 < 3 |walk
+Leave the building |goto 47.77,47.31 < 10 |walk
 click Wanted: Thaelis the Hungerer##180918
 accept Wanted: Thaelis the Hungerer##8468 |goto 48.16,46.30
 step
@@ -3233,16 +3225,12 @@ fpath Falconwing Square |goto 46.24,46.79
 stickystart "Collect_Unstable_Mana_Crystals"
 stickystart "Collect_Arcane_Cores"
 step
-Follow the road |goto 46.19,45.78 < 7 |only if walking
-Follow the path down |goto 44.24,40.92 < 7 |only if walking
-Follow the path |goto 44.88,39.04 < 7 |only if walking
-Enter the building |goto 45.00,38.32 < 5 |walk
+Enter the building |goto 45.00,38.32 < 15 |walk
 kill Thaelis the Hungerer##15949
 |tip Inside the building.
 collect Thaelis's Head##21781 |q 8468/1 |goto 45.03,37.68
 step
 label "Collect_Unstable_Mana_Crystals"
-Leave the building |goto 45.00,38.27 < 5 |walk
 click Unstable Mana Crystal Crate##180600+
 |tip They look like yellow glowing light brown wooden boxes on the ground around this area.
 collect 6 Unstable Mana Crystal##20743 |q 8463/1 |goto 45.51,39.96
@@ -3264,19 +3252,14 @@ talk Aeldon Sunbrand##15403
 turnin Unstable Mana Crystals##8463 |goto 48.17,46.00
 accept Darnassian Intrusions##9352 |goto 48.17,46.00
 step
-Follow the path |goto 46.56,48.05 < 7 |only if walking
-Run down the stairs |goto 46.54,49.34 < 7 |only if walking
-Follow the path |goto 45.54,51.48 < 10 |only if walking
+Follow the path |goto 46.56,48.05 < 20 |only if walking
 talk Ley-Keeper Caidanis##15405
 turnin Delivery to the North Sanctum##8895 |goto 44.63,53.13
 accept Malfunction at the West Sanctum##9119 |goto 44.63,53.13
 step
-Follow the path |goto 45.00,55.07 < 10 |only if walking
 talk Apprentice Ralen##15941
 accept Roadside Ambush##9035 |goto 45.19,56.43
 step
-Follow the road |goto 44.80,58.20 < 7 |only if walking
-Follow the path |goto 44.69,60.08 < 7 |only if walking
 talk Apprentice Meledor##15945
 turnin Roadside Ambush##9035 |goto 44.88,61.03
 accept Soaked Pages##9062 |goto 44.88,61.03
@@ -3289,11 +3272,6 @@ talk Apprentice Meledor##15945
 turnin Soaked Pages##9062 |goto 44.88,61.03
 accept Taking the Fall##9064 |goto 44.88,61.03
 step
-Follow the path |goto 44.79,60.44 < 7 |only if walking
-Follow the road |goto 43.19,57.70 < 10 |only if walking
-Follow the road |goto 41.89,55.39 < 10 |only if walking
-Cross the bridge |goto 39.15,56.60 < 7 |only if walking
-Follow the road |goto 38.12,56.87 < 7 |only if walking
 talk Ley-Keeper Velania##15401
 turnin Malfunction at the West Sanctum##9119 |goto 36.70,57.44
 accept Arcane Instability##8486 |goto 36.70,57.44
@@ -3301,10 +3279,6 @@ stickystart "Accept_Incriminating_Documents"
 stickystart "Kill_Manawraiths"
 stickystart "Kill_Mana_Stalkers"
 step
-Run down the stairs |goto 36.24,57.73 < 7 |only if walking
-Follow the path |goto 35.90,58.47 < 7 |only if walking
-Continue following the path |goto 35.73,59.67 < 7 |only if walking
-Run up the stairs |goto 34.53,61.10 < 7 |only if walking
 kill Darnassian Scout##15968+
 Defeat an Intruder |q 9352/1 |goto 33.90,61.53
 step
@@ -3314,31 +3288,22 @@ accept Incriminating Documents##8482 |goto 33.90,61.53
 |tip You will eventually automatically accept this quest after looting.
 step
 label "Kill_Manawraiths"
-Run down the stairs |goto 34.34,61.45 < 7 |only if walking
 kill 5 Manawraith##15648 |q 8486/1 |goto 35.18,60.37
 step
 label "Kill_Mana_Stalkers"
 kill 5 Mana Stalker##15647 |q 8486/2 |goto 35.18,60.37
 step
-Run up the stairs |goto 36.05,57.89 < 7 |only if walking
 talk Ley-Keeper Velania##15401
-turnin Arcane Instability##8486 |goto 36.70,57.44
 turnin Darnassian Intrusions##9352 |goto 36.70,57.44
+turnin Arcane Instability##8486 |goto 36.70,57.44
 step
-Run down the stairs |goto 36.24,57.72 < 7 |only if walking
-Follow the path |goto 35.91,58.45 < 7 |only if walking
-Continue following the path |goto 35.82,59.52 < 7 |only if walking
-Run up the stairs |goto 34.50,61.14 < 7 |only if walking
-Follow the path |goto 33.94,61.70 < 7 |only if walking
-Follow the path |goto 32.84,60.63 < 7 |only if walking
-Continue following the path |goto 31.39,60.96 < 7 |only if walking
+Follow the path up |goto 33.46,57.74 < 15 |only if walking
+Jump down here |goto 31.76,58.19 < 10 |only if walking
 talk Hathvelion Sungaze##15920
 |tip He walks around this area.
 accept Fish Heads, Fish Heads...##8884 |goto 30.08,58.38
 stickystart "Accept_Captain_Kelisendras_Lost_Rutters"
 step
-Jump down here |goto 29.57,58.47 < 7 |only if walking
-Follow the path |goto 28.89,59.00 < 10 |only if walking
 Kill Grimscale enemies around this area
 collect 8 Grimscale Murloc Head##21757 |q 8884/1 |goto 26.66,61.70
 step
@@ -3347,95 +3312,69 @@ Kill Grimscale enemies around this area
 accept Captain Kelisendra's Lost Rutters##8887 |goto 26.66,61.70
 |tip You will eventually automatically accept this quest after looting.
 step
-Follow the path |goto 27.71,63.46 < 15 |only if walking
-Follow the path up |goto 29.95,63.16 < 7 |only if walking
-Follow the path up |goto 30.56,61.00 < 7 |only if walking
-Follow the road |goto 30.77,59.56 < 7 |only if walking
 talk Hathvelion Sungaze##15920
 |tip He walks around this area.
 turnin Fish Heads, Fish Heads...##8884 |goto 30.08,58.38
 accept The Ring of Mmmrrrggglll##8885 |goto 30.08,58.38
 step
-Leave the building |goto 47.77,47.30 < 3 |walk
-Follow the path |goto 47.74,46.64 < 7 |only if walking
+Leave the building |goto 47.77,47.30 < 10 |walk
 talk Aeldon Sunbrand##15403
 turnin Incriminating Documents##8482 |goto 48.17,46.00
 accept The Dwarven Spy##8483 |goto 48.17,46.00
 step
-Follow the path |goto 46.56,48.03 < 7 |only if walking
-Follow the path |goto 46.54,49.20 < 7 |only if walking
-Continue following the path |goto 45.60,51.68 < 10 |only if walking
-talk Prospector Anvilward##15420
-|tip He walks around this area and inside the building.
-Tell him _"I need a moment of your time, sir."_
-Watch the dialogue
-|tip Follow him as he walks.
-kill Prospector Anvilward##15420
-collect Prospector Anvilward's Head##20764 |q 8483/1 |goto 44.57,53.30
+Follow the path |goto 46.56,48.03 < 20 |only if walking
+Locate Prospector Anvilward |goto 44.57,53.31 < 5 |c |q 8483
 step
-Leave the building |goto 44.49,53.18 < 3 |walk
-Follow the path |goto 45.79,51.79 < 7 |only if walking
-Continue following the path |goto 46.55,49.19 < 7 |only if walking
-Continue following the path |goto 46.55,48.01 < 7 |only if walking
+talk Prospector Anvilward##15420
+Tell him _"I need a moment of your time, sir."_
+Begin Following Prospector Anvilward |goto 44.57,53.30 > 10 |c |q 8483
+step
+Watch the dialogue
+|tip Follow Prospector Anvilward as he walks.
+kill Prospector Anvilward##15420
+|tip Inside the building.
+collect Prospector Anvilward's Head##20764 |q 8483/1 |goto 44.07,53.31
+step
+Follow the path |goto 46.55,49.09 < 20 |only if walking
 talk Aeldon Sunbrand##15403
 turnin The Dwarven Spy##8483 |goto 48.17,46.00
 accept Fairbreeze Village##9256 |goto 48.17,46.00
 step
-Follow the path |goto 46.54,48.08 < 7 |only if walking
-Follow the path |goto 46.56,49.25 < 7 |only if walking
-Continue following the path |goto 47.82,51.15 < 10 |only if walking
-Continue following the path |goto 49.37,51.03 < 10 |only if walking
+Follow the path |goto 46.54,48.08 < 20 |only if walking
 talk Ranger Jaela##15416
 accept The Dead Scar##8475 |goto 50.33,50.77
 step
-Follow the path |goto 50.31,52.33 < 10 |only if walking
 kill 8 Plaguebone Pillager##15654 |q 8475/1 |goto 50.37,56.51
 step
-Follow the path |goto 50.31,52.33 < 10 |only if walking
 talk Ranger Jaela##15416
 turnin The Dead Scar##8475 |goto 50.33,50.77
 step
-Follow the path |goto 50.98,51.45 < 10 |only if walking
-Continue following the path |goto 51.80,52.61 < 7 |only if walking
-Continue following the path |goto 54.07,53.78 < 10 |only if walking
 talk Instructor Antheol##15970
 turnin Taking the Fall##9064 |goto 55.70,54.51
 accept Swift Discipline##9066 |goto 55.70,54.51
 step
-Follow the path |goto 54.82,52.31 < 10 |only if walking
 talk Skymistress Gloaming##16192
 fpath Silvermoon City |goto 54.37,50.73
 step
-Follow the path |goto 52.34,53.61 < 10 |only if walking
-Follow the road |goto 49.08,55.72 < 10 |only if walking
-Continue following the road |goto 47.01,54.69 < 7 |only if walking
-Continue following the road |goto 46.18,55.03 < 7 |only if walking
 use Antheol's Disciplinary Rod##22473
 |tip Use it on Apprentice Ralen.
 Discipline Apprentice Ralen |q 9066/2 |goto 45.19,56.43
 step
-Follow the road |goto 44.81,58.21 < 7 |only if walking
-Follow the path |goto 44.66,60.00 < 7 |only if walking
 use Antheol's Disciplinary Rod##22473
 |tip Use it on Apprentice Meledor.
 Discipline Apprentice Meledor |q 9066/1 |goto 44.87,61.03
 step
-Follow the path up |goto 44.82,62.44 < 7 |only if walking
-Follow the road |goto 44.70,65.25 < 10 |only if walking
-Follow the road up |goto 43.99,67.70 < 10 |only if walking
-Follow the path |goto 44.17,69.28 < 7 |only if walking
+Follow the road up |goto 43.99,67.38 < 30 |only if walking
 talk Velan Brightoak##15417
 accept Pelt Collection##8491 |goto 44.72,69.62
 step
 talk Skymaster Brightdawn##44036
 fpath Fairbreeze Village |goto 43.95,69.98
 step
-Follow the path up |goto 44.15,70.57 < 5 |only if walking
 talk Magistrix Landra Dawnstrider##16210
 accept Saltheril's Haven##9395 |goto 44.03,70.76
 accept The Wayward Apprentice##9254 |goto 44.03,70.76
 step
-Enter the building |goto 43.82,71.04 < 5 |walk
 talk Marniel Amberlight##15397
 |tip Inside the building.
 accept Ranger Sareyn##9358 |goto 43.67,71.31
@@ -3453,9 +3392,7 @@ talk Sathiel##16261
 accept Goods from Silvermoon City##9130 |goto 43.70,71.56
 |only if BloodElf
 step
-Leave the building |goto 43.83,71.01 < 3 |walk
-Run up the ramp |goto 43.77,70.73 < 3 |only if walking
-Run up the ramp |goto 43.60,70.65 < 3 |only if walking
+Run up the ramp |goto 43.77,70.73 < 10 |only if walking
 talk Ranger Degolien##15939
 |tip On the balcony of the building.
 turnin Fairbreeze Village##9256 |goto 43.35,70.82
@@ -3467,85 +3404,46 @@ accept Fly to Silvermoon City##9133 |goto 43.95,69.98
 |only if BloodElf
 step
 talk Skymaster Brightdawn##44036 |goto 43.95,69.98
-Take a Flight to Silvermoon City |goto 54.38,50.76 < 10 |noway |c |q 9133
+Take a Flight to Silvermoon City |goto 54.38,50.76 < 20 |noway |c |q 9133
 |only if BloodElf
 step
-Follow the path |goto 54.76,52.24 < 10 |only if walking
 talk Instructor Antheol##15970
 turnin Swift Discipline##9066 |goto 55.70,54.50
 step
-Follow the path |goto 56.41,53.58 < 10 |only if walking
-Continue following the path |goto 56.65,51.44 < 7 |only if walking
-Continue following the path |goto 56.75,49.52 < 5 |only if walking
-Continue following the path |goto 57.12,49.33 < 3 |only if walking
-Continue following the path |goto Silvermoon City/0 74.04,86.27 < 3 |only if walking
-Follow the path |goto 72.49,85.32 < 5 |only if walking
-Run up the stairs |goto 70.65,77.45 < 7 |only if walking
-Enter the building |goto 69.25,77.02 < 5 |walk
-Follow the path |goto 68.60,76.75 < 3 |walk
-Follow the path |goto 68.36,74.10 < 3 |walk
-Follow the path |goto 66.60,73.52 < 3 |walk
-Leave the building |goto 65.57,72.57 < 3 |walk
-Follow the path |goto 60.83,71.15 < 10 |only if walking
-Enter the building |goto 55.31,71.04 < 5 |walk
+Follow the path |goto 56.67,49.60 < 20 |only if walking
+Enter the building |goto Silvermoon City/0 69.26,77.08 < 10 |only if walking
+Leave the building |goto Silvermoon City/0 65.64,72.55 < 10 |only if walking
+Enter the building |goto Silvermoon City/0 55.34,71.05 < 10 |walk
 talk Sathren Azuredawn##16191
 |tip Inside the building.
 turnin Fly to Silvermoon City##9133 |goto Silvermoon City/0 53.93,71.00
 accept Skymistress Gloaming##9134 |goto Silvermoon City/0 53.93,71.00
 |only if BloodElf
 step
-Leave the building |goto 55.32,71.03 < 3 |walk
-Follow the path |goto 60.97,71.19 < 10 |only if walking
-Enter the building |goto 65.64,72.55 < 5 |walk
-Follow the path |goto 66.62,73.40 < 3 |walk
-Follow the path |goto 68.44,74.09 < 3 |walk
-Follow the path |goto 68.63,76.94 < 3 |walk
-Leave the building |goto 69.26,77.01 < 3 |walk
-Follow the path |goto 71.60,78.38 < 7 |only if walking
-Follow the path |goto 71.90,85.87 < 5 |only if walking
-Continue following the path |goto 70.52,86.38 < 3 |only if walking
-Continue following the path |goto Eversong Woods/0 56.26,49.36 < 3 |only if walking
-Continue following the path |goto 56.58,49.56 < 5 |only if walking
-Run down the stairs |goto 56.41,50.19 < 5 |only if walking
-Follow the path |goto 56.24,50.74 < 7 |only if walking
-Follow the path |goto 55.24,50.96 < 10 |only if walking
+Enter the building |goto 65.63,72.54 < 10 |only if walking
+Leave the building |goto 69.20,77.01 < 10 |only if walking
+Follow the path |goto 72.46,85.26 < 20 |only if walking
 talk Skymistress Gloaming##16192
 turnin Skymistress Gloaming##9134 |goto Eversong Woods/0 54.37,50.73
 accept Return to Sathiel##9135 |goto Eversong Woods/0 54.37,50.73
 |only if BloodElf
 step
-Follow the path up |goto 44.16,70.58 < 5 |only if walking
-Enter the building |goto 43.82,71.04 < 5 |walk
+Enter the building |goto 43.82,71.04 < 10 |walk
 talk Sathiel##16261
 |tip Inside the building.
 turnin Return to Sathiel##9135 |goto 43.70,71.56
 |only if BloodElf
 step
-Follow the path |goto 54.80,52.33 < 10 |c |q 8491
-|only if not BloodElf
-step
-Leave the building |goto 43.83,71.02 < 3 |walk
-Follow the road |goto 44.34,70.16 < 7 |c |q 8491
-|only if BloodElf
-step
-Follow the path |goto 44.17,68.89 < 7 |only if walking
-Jump down here |goto 44.44,68.19 < 7 |only if walking
 kill Springpaw Stalker##15651+
-|tip You can find more to the west.
 collect 6 Springpaw Pelt##20772 |q 8491/1 |goto 45.68,65.78
 step
-Follow the road |goto 42.06,67.87 < 15 |only if walking
-Follow the path |goto 40.69,70.35 < 10 |only if walking
-Enter the building |goto 38.23,73.21 < 5 |walk
+Follow the road |goto 41.67,68.48 < 30 |only if walking
+Enter the building |goto 38.23,73.21 < 10 |walk
 talk Lord Saltheril##16144
 |tip Inside the building.
 turnin Saltheril's Haven##9395 |goto 38.14,73.56
 accept The Party Never Ends##9067 |goto 38.14,73.56
 step
-Leave the building |goto 38.23,73.21 < 3 |walk
-Follow the path |goto 38.33,71.81 < 10 |only if walking
-Follow the road down |goto 38.00,69.47 < 7 |only if walking
-Follow the path |goto 37.39,67.88 < 7 |only if walking
 talk Velendris Whitemorn##15404
 accept Lost Armaments##8480 |goto 36.36,66.78
 step
@@ -3555,9 +3453,6 @@ accept Grimscale Pirates!##8886 |goto 36.36,66.63
 stickystart "Kill_Wretched_Thugs"
 stickystart "Kill_Wretched_Hooligans"
 step
-Follow the road |goto 36.17,67.87 < 7 |only if walking
-Follow the road |goto 34.10,70.60 < 7 |only if walking
-Continue following the road |goto 32.86,71.65 < 7 |only if walking
 click Weapon Container##181107+
 |tip They look like wooden crates on the ground and inside the building around this area.
 collect 8 Sin'dorei Armaments##22413 |q 8480/1 |goto 32.79,70.50
@@ -3569,10 +3464,6 @@ label "Kill_Wretched_Hooligans"
 kill 5 Wretched Hooligan##16162 |q 8892/2 |goto 32.79,70.50
 stickystart "Collect_Captain_Kelisendras_Cargo"
 step
-Follow the path |goto 30.14,69.49 < 10 |only if walking
-Continue following the path |goto 28.99,69.50 < 10 |only if walking
-Continue following the path |goto 27.24,68.71 < 10 |only if walking
-Continue following the path |goto 25.83,69.73 < 10 |only if walking
 kill Mmmrrrggglll##15937
 |tip He looks like a larger orange murloc that walks along the beach around this area.
 collect Ring of Mmmrrrggglll##21770 |q 8885/1 |goto 24.54,72.30
@@ -3582,20 +3473,10 @@ click Captain Kelisendra's Cargo##180917+
 |tip They look like wooden barrels on the ground next to murloc huts around this area.
 collect 6 Captain Kelisendra's Cargo##21771 |q 8886/1 |goto 24.79,69.28
 step
-Follow the path |goto 26.26,66.77 < 10 |only if walking
-Continue following the path |goto 26.62,64.39 < 7 |only if walking
-Follow the path up |goto 29.96,63.28 < 7 |only if walking
-Follow the path up |goto 30.63,60.52 < 7 |only if walking
-Follow the path |goto 30.73,59.49 < 7 |only if walking
 talk Hathvelion Sungaze##15920
 |tip He walks around this area.
 turnin The Ring of Mmmrrrggglll##8885 |goto 30.10,58.32
 step
-Follow the path down |goto 31.25,60.92 < 10 |only if walking
-Follow the path |goto 31.17,63.80 < 7 |only if walking
-Continue following the path |goto 32.15,64.74 < 7 |only if walking
-Continue following the path |goto 33.46,64.31 < 10 |only if walking
-Continue following the path |goto 36.33,66.35 < 7 |only if walking
 talk Captain Kelisendra##15921
 turnin Grimscale Pirates!##8886 |goto 36.36,66.61
 step
@@ -3603,49 +3484,22 @@ talk Velendris Whitemorn##15404
 turnin Lost Armaments##8480 |goto 36.36,66.77
 accept Wretched Ringleader##9076 |goto 36.36,66.77
 step
-Follow the road |goto 36.17,67.87 < 7 |only if walking
-Follow the road |goto 34.10,70.60 < 7 |only if walking
-Run up the ramp |goto 32.82,71.19 < 7 |only if walking
-Follow the path |goto 32.77,68.70 < 5 |only if walking
-Run up the ramp |goto 32.62,68.44 < 5 |c |q 9076
-step
-Run up the ramp |goto 32.12,69.13 < 5 |only if walking
-Run up the ramp |goto 32.20,70.00 < 5 |only if walking
-Follow the path |goto 32.57,70.46 < 5 |only if walking
-Follow the path |goto 32.80,70.24 < 3 |only if walking
-Continue following the path |goto 32.62,69.52 < 5 |only if walking
-Continue following the path |goto 32.75,68.89 < 3 |only if walking
-Run up the ramp |goto 32.93,68.76 < 3 |c |q 9076
-step
-Run up the ramp |goto 33.21,69.18 < 3 |only if walking
-Continue up the ramp |goto 33.19,69.77 < 3 |only if walking
-Follow the path |goto 32.73,70.09 < 5 |only if walking
+Enter the building |goto 32.82,71.08 < 15 |only if walking
 kill Aldaron the Reckless##16294
 |tip He walks around this area at the top of the building.
 collect Aldaron's Head##22487 |q 9076/1 |goto 32.80,69.40
 step
-Jump down carefully into the water here |goto 32.76,68.54 < 5 |only if walking
-Follow the path |goto 33.84,66.18 < 7 |only if walking
-Continue following the path |goto 34.72,65.98 < 7 |only if walking
-Follow the path |goto 36.32,66.35 < 5 |only if walking
 talk Velendris Whitemorn##15404
 turnin Wretched Ringleader##9076 |goto 36.36,66.77
 step
-Follow the road |goto 36.24,67.76 < 7 |only if walking
-Follow the road |goto 33.00,71.92 < 10 |only if walking
-Continue following the road |goto 32.97,74.37 < 10 |only if walking
-Continue following the road |goto 33.15,76.35 < 10 |only if walking
-Continue following the road |goto 33.27,79.53 < 10 |only if walking
-Enter the building |goto 33.86,80.03 < 5 |walk
+Follow the road |goto 33.13,76.55 < 30 |only if walking
+Enter the building |goto 33.86,80.03 < 10 |walk
 talk Larianna Riverwind##15398
 |tip Inside the building.
 turnin The Scorched Grove##9258 |goto 34.06,80.02
 accept A Somber Task##8473 |goto 34.06,80.02
 stickystart "Kill_Withered_Green_Keepers"
 step
-Leave the building |goto 33.87,80.03 < 3 |walk
-Follow the path |goto 33.74,80.69 < 7 |only if walking
-Follow the path |goto 34.46,81.54 < 7 |only if walking
 kill Old Whitebark##15409
 |tip He walks around this area.
 accept Old Whitebark's Pendant##8474 |goto 35.08,84.02
@@ -3654,29 +3508,23 @@ step
 label "Kill_Withered_Green_Keepers"
 kill 10 Withered Green Keeper##15637 |q 8473/1 |goto 34.96,85.03
 step
-Follow the path |goto 33.56,81.45 < 15 |only if walking
-Enter the building |goto 33.87,80.03 < 5 |walk
+Enter the building |goto 33.87,80.03 < 10 |walk
 talk Larianna Riverwind##15398
 |tip Inside the building.
 turnin A Somber Task##8473 |goto 34.06,80.02
 turnin Old Whitebark's Pendant##8474 |goto 34.06,80.02
 accept Whitebark's Memory##10166 |goto 34.06,80.02
 step
-Leave the building |goto 33.86,80.03 < 3 |walk
-Follow the path |goto 33.80,80.67 < 7 |only if walking
-Continue following the path |goto 35.85,84.07 < 10 |only if walking
 use Old Whitebark's Pendant##28209
 kill Whitebark's Spirit##19456
 |tip He will eventually surrender.
 talk Whitebark's Spirit##19456
 turnin Whitebark's Memory##10166 |goto 37.53,86.22
 step
-Leave the building |goto 43.83,71.03 < 3 |walk
 talk Magistrix Landra Dawnstrider##16210
 accept Missing in the Ghostlands##9144 |goto 44.03,70.76
 step
-Run up the ramp |goto 43.77,70.74 < 3 |only if walking
-Run up the ramp |goto 43.62,70.66 < 3 |only if walking
+Run up the ramp |goto 43.77,70.74 < 10 |only if walking
 talk Ranger Degolien##15939
 |tip On the balcony of the building.
 turnin Situation at Sunsail Anchorage##8892 |goto 43.35,70.83
@@ -3688,36 +3536,24 @@ step
 talk Velan Brightoak##15417
 turnin Pelt Collection##8491 |goto 44.72,69.63
 step
-Follow the road |goto 45.66,70.88 < 10 |only if walking
 talk Ranger Sareyn##15942
 turnin Ranger Sareyn##9358 |goto 46.93,71.79
 accept Defending Fairbreeze Village##9252 |goto 46.93,71.79
 stickystart "Kill_Darkwraiths"
 step
-Follow the road |goto 46.84,73.48 < 7 |only if walking
-Continue following the path |goto 47.51,74.15 < 7 |only if walking
-Continue following the path |goto 48.62,76.78 < 10 |only if walking
-Follow the path |goto 49.70,78.16 < 10 |only if walking
 kill 4 Rotlimb Marauder##15658 |q 9252/1 |goto 51.00,79.18
 step
 label "Kill_Darkwraiths"
 kill 4 Darkwraith##15657 |q 9252/2 |goto 51.00,79.18
 step
-Follow the path |goto 51.12,76.44 < 15 |only if walking
-Continue following the path |goto 51.91,73.65 < 15 |only if walking
-Continue following the path |goto 52.66,71.93 < 15 |only if walking
-Run up the stairs |goto 53.90,70.94 < 7 |only if walking
 talk Apprentice Mirveda##15402
 turnin The Wayward Apprentice##9254 |goto 54.28,70.97
 accept Corrupted Soil##8487 |goto 54.28,70.97
 step
-Follow the path |goto 53.02,71.18 < 7 |only if walking
 click Tainted Soil Sample##180921+
 |tip They look like green glowing piles of dirt on the ground around this area.
 collect 8 Tainted Soil Sample##20771 |q 8487/1 |goto 51.48,69.91
 step
-Follow the path |goto 52.56,71.13 < 15 |only if walking
-Run up the stairs |goto 53.90,70.95 < 7 |only if walking
 talk Apprentice Mirveda##15402
 turnin Corrupted Soil##8487 |goto 54.28,70.97
 step
@@ -3728,58 +3564,29 @@ step
 Kill the enemies that attack
 kill Gharsul the Remorseless##15958 |q 8488/2 |goto 53.88,70.17
 step
-Run up the stairs |goto 54.11,70.63 < 7 |only if walking
 talk Apprentice Mirveda##15402
 turnin Unexpected Results##8488 |goto 54.28,70.97
 accept Research Notes##9255 |goto 54.28,70.97
 step
-Follow the path |goto 53.81,71.79 < 10 |only if walking
-Continue following the path |goto 52.83,73.21 < 10 |only if walking
-Follow the path up |goto 49.85,73.64 < 7 |only if walking
-Follow the path |goto 48.67,74.91 < 10 |only if walking
-Follow the road |goto 47.38,74.08 < 7 |only if walking
-Continue following the road |goto 46.77,73.18 < 7 |only if walking
+Follow the path |goto 48.70,74.89 < 20 |only if walking
 talk Ranger Sareyn##15942
 turnin Defending Fairbreeze Village##9252 |goto 46.93,71.79
 accept Runewarden Deryan##9253 |goto 46.93,71.79
 step
-Follow the road |goto 46.33,71.16 < 7 |only if walking
-Run up the ramp |goto 44.17,70.59 < 5 |only if walking
 talk Magistrix Landra Dawnstrider##16210
 turnin Research Notes##9255 |goto 44.03,70.76
 step
-Follow the path |goto 55.30,50.95 < 10 |only if walking
-Run up the stairs |goto 56.39,50.51 < 5 |only if walking |notravel
-Follow the path |goto 56.43,50.16 < 5 |only if walking |notravel
-Follow the path |goto 56.83,49.46 < 5 |only if walking |notravel
-Continue following the path |goto 57.14,49.26 < 3 |only if walking
-Continue following the path |goto Silvermoon City/0 74.15,86.36 < 3 |walk |notravel
-Continue following the path |goto Silvermoon City/0 72.75,85.24 < 3 |walk
-Follow the road |goto Silvermoon City/0 72.89,60.06 < 7 |only if walking
-Follow the path |goto Silvermoon City/0 74.52,56.15 < 3 |only if walking
-Continue following the path |goto Silvermoon City/0 75.55,58.78 < 5 |only if walking
-Enter the building |goto Silvermoon City/0 78.24,59.27 < 3 |walk
-Follow the path |goto Silvermoon City/0 79.18,60.18 < 3 |walk
+Follow the path |goto 56.65,49.61 < 20 |only if walking
+Follow the path |goto Silvermoon City/0 73.49,59.26 < 20 |only if walking
+Enter the building |goto Silvermoon City/0 78.19,59.29 < 10 |walk
 talk Vinemaster Suntouched##16442
 |tip Inside the building.
 buy Suntouched Special Reserve##22775 |q 9067/1 |goto Silvermoon City/0 79.5,58.5
 step
-Follow the path |goto 79.25,60.23 < 3 |walk
-Leave the building |goto 78.17,59.29 < 3 |walk
-Follow the path |goto 75.39,58.46 < 5 |only if walking
-Continue following the path |goto 74.48,56.37 < 3 |only if walking
-Continue following the path |goto 73.31,59.29 < 5 |only if walking
-Follow the road |goto 72.25,61.59 < 7 |only if walking
-Follow the path |goto 72.92,85.66 < 5 |only if walking |notravel
-Continue following the path |goto 74.39,86.54 < 3 |only if walking |notravel
-Continue following the path |goto Eversong Woods/0 57.09,49.35 < 3 |only if walking |notravel
-Continue following the path |goto Eversong Woods/0 56.70,49.62 < 5 |only if walking |notravel
-Follow the road |goto Eversong Woods/0 56.75,52.74 < 7 |only if walking |notravel
-Continue following the road |goto Eversong Woods/0 58.49,54.40 < 7 |only if walking
-Follow the road up |goto Eversong Woods/0 59.94,54.85 < 7 |only if walking
-Follow the road |goto Eversong Woods/0 60.95,58.06 < 7 |only if walking
-Run up the ramp |goto Eversong Woods/0 60.31,61.09 < 5 |only if walking
-Enter the building |goto Eversong Woods/0 60.32,61.43 < 3 |walk
+Leave the building |goto 78.22,59.30 < 10 |walk
+Follow the path |goto 75.46,59.23 < 20 |only if walking
+Follow the path |goto 72.47,85.17 < 20 |only if walking
+Enter the building |goto Eversong Woods/0 60.32,61.39 < 10 |walk
 talk Zalene Firstlight##16443
 |tip Inside the building.
 buy Springpaw Appetizers##22776 |q 9067/2 |goto Eversong Woods/0 60.41,62.46
@@ -3789,42 +3596,30 @@ talk Lieutenant Dawnrunner##15399
 turnin Farstrider Retreat##9359 |goto 60.32,62.76
 accept Amani Encroachment##8476 |goto 60.32,62.76
 step
-Leave the building |goto 59.95,62.44 < 3 |walk
 talk Arathel Sunforge##15400
 |tip On a balcony inside the building.
 accept The Spearcrafter's Hammer##8477 |goto 59.53,62.60
 step
-Run up the ramp |goto 59.41,62.46 < 3 |only if walking
-Run up the ramp |goto 59.58,62.00 < 3 |only if walking
-Follow the path |goto 60.01,61.79 < 3 |only if walking
+Run up the ramp |goto 59.41,62.46 < 5 |only if walking
 talk Magister Duskwither##15951
-|tip Upstairs on a balcony inside the building.
+|tip Upstairs on the balcony of the building.
 accept The Magister's Apprentice##8888 |goto 60.31,61.38
 step
-Follow the path up |goto 61.20,60.41 < 10 |only if walking
-Follow the road up |goto 63.43,58.72 < 7 |only if walking
-Continue following the road |goto 64.91,58.46 < 7 |only if walking
-Continue following the road |goto 66.56,58.58 < 7 |only if walking
+Follow the road |goto 63.91,58.56 < 30 |only if walking
 talk Apprentice Loralthalis##15924
 |tip She walks around this small area.
 turnin The Magister's Apprentice##8888 |goto 67.80,56.55
 accept Deactivating the Spire##8889 |goto 67.80,56.55
 accept Where's Wyllithen?##9394 |goto 67.80,56.55
 step
-Run up the stairs |goto 68.49,52.37 < 7 |only if walking
+Run up the stairs |goto 68.49,52.37 < 15 |only if walking
 click Orb of Translocation##184500 |goto 68.92,51.97
-Teleport Up to the Building |goto 67.5,52.1 < 10 |noway |c |q 8889
+Teleport Up to the Building |goto 67.5,52.1 < 20 |noway |c |q 8889
 step
-Run up the stairs |goto 68.17,51.46 < 5 |only if walking
-Follow the path |goto 68.69,51.60 < 5 |only if walking
 click Duskwither Spire Power Source##180920
 |tip On the floating platform.
 Deactivate the First Power Source |q 8889/1 |goto 68.95,51.93
 step
-Run up the stairs |goto 69.14,52.14 < 3 |walk
-Run up the stairs |goto 69.15,51.75 < 3 |walk
-Run up the stairs |goto 68.80,51.71 < 3 |walk
-Follow the path |goto 68.77,52.07 < 3 |walk
 click Duskwither Spire Power Source##180920
 |tip Upstairs inside the floating building.
 Deactivate the Second Power Source |q 8889/2 |goto 68.96,51.97
@@ -3833,20 +3628,14 @@ click Magister Duskwither's Journal##181011
 |tip Upstairs inside the floating building.
 accept Abandoned Investigations##8891 |goto 69.24,52.10
 step
-Leave the building |goto 69.34,51.98 < 3 |walk
-Run up the stairs |goto 69.53,52.00 < 3 |only if walking
-Run up the stairs |goto 69.88,52.40 < 5 |only if walking
-Follow the path |goto 69.79,53.08 < 5 |only if walking
 click Duskwither Spire Power Source##180920
 |tip On the floating platform.
 Deactivate the Third Power Source |q 8889/3 |goto 69.65,53.33
 step
 click Orb of Translocation##184500 |goto 69.63,53.42
 |tip On the floating platform.
-Teleport to the Ground |goto 68.90,52.00 < 10 |noway |c |q 8889
+Teleport to the Ground |goto 68.90,52.00 < 20 |noway |c |q 8889
 step
-Follow the road |goto 68.00,52.54 < 7 |only if walking
-Continue following the road |goto 67.55,47.90 < 7 |only if walking
 talk Groundskeeper Wyllithen##15969
 turnin Where's Wyllithen?##9394 |goto 68.71,46.95
 accept Cleaning up the Grounds##8894 |goto 68.71,46.95
@@ -3860,27 +3649,14 @@ step
 talk Groundskeeper Wyllithen##15969
 turnin Cleaning up the Grounds##8894 |goto 68.71,46.95
 step
-Follow the road up |goto 67.56,48.05 < 7 |only if walking
-Follow the road up |goto 67.76,51.34 < 7 |only if walking
-Continue following the road |goto 68.38,54.22 < 7 |only if walking
+Follow the road up |goto 67.56,48.05 < 20 |only if walking
 talk Apprentice Loralthalis##15924
 |tip She walks around this small area.
 turnin Deactivating the Spire##8889 |goto 67.80,56.55
 accept Word from the Spire##8890 |goto 67.80,56.55
 step
-Follow the road |goto 66.61,58.54 < 7 |only if walking
-Continue following the road |goto 65.56,58.65 < 7 |only if walking
-Continue following the road |goto 64.01,58.46 < 7 |only if walking
-Follow the path down |goto 62.10,59.91 < 10 |only if walking
-Run up the ramp |goto 60.31,61.10 < 5 |only if walking
-Enter the building |goto 60.32,61.43 < 5 |c |q 8890
-step
-Follow the path |goto 60.30,62.33 < 3 |walk
-Leave the building |goto 59.91,62.45 < 3 |walk
-Run up the stairs |goto 59.73,62.55 < 3 |only if walking
-Run up the ramp |goto 59.40,62.50 < 3 |only if walking
-Run up the ramp |goto 59.61,61.99 < 3 |only if walking
-Follow the path |goto 60.00,61.80 < 3 |only if walking
+Enter the building |goto 60.32,61.43 < 10 |walk
+Run up the ramp |goto 59.40,62.50 < 5 |only if walking
 talk Magister Duskwither##15951
 |tip Upstairs on the balcony of the building.
 turnin Word from the Spire##8890 |goto 60.31,61.38
@@ -3888,48 +3664,20 @@ turnin Abandoned Investigations##8891 |goto 60.31,61.38
 stickystart "Kill_Amani_Berserkers"
 stickystart "Kill_Amani_Axe_Throwers"
 step
-Jump down here |goto 60.63,61.53 < 3 |only if walking
-Follow the path |goto 61.30,61.62 < 7 |only if walking
-Continue following the path |goto 61.30,63.45 < 7 |only if walking
-Follow the path up |goto 61.07,64.17 < 5 |only if walking
-Follow the path |goto 61.35,64.68 < 7 |only if walking
-Continue following the path |goto 64.98,67.28 < 7 |only if walking
-Continue following the path |goto 66.70,69.93 < 7 |only if walking
-Continue following the path |goto 67.28,71.72 < 7 |only if walking
-Continue following the path |goto 69.49,72.26 < 10 |only if walking
+Follow the path up |goto 61.07,64.16 < 15 |only if walking
 kill Spearcrafter Otembe##15408
 collect Otembe's Hammer##20759 |q 8477/1 |goto 70.09,72.28
 step
 talk Ven'jashi##15406
 accept Zul'Marosh##8479 |goto 70.50,72.33
 step
-Follow the path |goto 69.53,73.78 < 10 |only if walking
-Continue following the path |goto 69.32,75.47 < 7 |only if walking
-Continue following the path |goto 66.82,79.16 < 7 |only if walking
-Continue following the path |goto 64.59,77.99 < 7 |only if walking
-Run up the stairs |goto 62.89,79.48 < 5 |only if walking
-Enter the building |goto 62.55,79.69 < 5 |c |q 8479
-step
-Run up the stairs |goto 62.34,80.09 < 3 |walk
-Follow the path |goto 62.12,80.04 < 3 |walk
-Run up the stairs |goto 61.82,79.94 < 3 |only if walking
-Follow the path |goto 61.93,79.47 < 3 |walk
+Enter the building |goto 62.55,79.69 < 10 |walk
 kill Chieftain Zul'Marosh##15407
 |tip Upstairs on top of the building.
 collect Chieftain Zul'Marosh's Head##20760 |q 8479/1 |goto 62.51,79.68
-step
-kill Chieftain Zul'Marosh##15407
-|tip Inside the building.
 accept Amani Invasion##9360 |goto 62.51,79.68
 |tip You will automatically accept this quest after looting.
 step
-Jump down here |goto 61.98,79.38 < 3 |only if walking
-Follow the path |goto 62.49,78.72 < 7 |only if walking
-Continue following the path |goto 63.34,78.38 < 7 |only if walking
-Continue following the path |goto 64.60,78.75 < 7 |only if walking
-Continue following the path |goto 66.80,79.02 < 7 |only if walking
-Continue following the path |goto 68.86,76.12 < 10 |only if walking
-Continue following the path |goto 69.63,73.56 < 10 |only if walking
 talk Ven'jashi##15406
 turnin Zul'Marosh##8479 |goto 70.50,72.33
 step
@@ -3939,61 +3687,34 @@ step
 label "Kill_Amani_Axe_Throwers"
 kill 5 Amani Axe Thrower##15641 |q 8476/2 |goto 69.48,74.13
 step
-Follow the path |goto 68.66,71.98 < 7 |only if walking
-Continue following the path |goto 67.07,71.51 < 7 |only if walking
-Continue following the path |goto 66.46,69.31 < 7 |only if walking
-Continue following the path |goto 64.81,67.23 < 7 |only if walking
-Continue following the path |goto 61.51,64.92 < 10 |only if walking
-Run up the ramp |goto 60.48,64.16 < 5 |only if walking
-Enter the building |goto 60.46,63.84 < 5 |only if walking
+Enter the building |goto 60.46,63.84 < 10 |only if walking
 talk Lieutenant Dawnrunner##15399
 |tip Inside the building.
 turnin Amani Encroachment##8476 |goto 60.32,62.77
 turnin Amani Invasion##9360 |goto 60.32,62.77
 accept Warning Fairbreeze Village##9363 |goto 60.32,62.77
 step
-Leave the building |goto 59.93,62.44 < 3 |walk
 talk Arathel Sunforge##15400
 |tip On the balcony of the building.
 turnin The Spearcrafter's Hammer##8477 |goto 59.52,62.60
 step
-Leave the building |goto 43.82,71.03 < 3 |walk
-Run up the ramp |goto 43.77,70.71 < 3 |only if walking
-Run up the ramp |goto 43.60,70.68 < 3 |only if walking
+Run up the ramp |goto 43.77,70.71 < 10 |only if walking
 talk Ranger Degolien##15939
 |tip On the balcony of the building.
 turnin Warning Fairbreeze Village##9363 |goto 43.35,70.83
 step
-Follow the path |goto 42.48,71.43 < 7 |only if walking
-Follow the path down |goto 40.82,72.11 < 10 |only if walking
-Follow the path |goto 39.39,72.16 < 7 |only if walking
-Run up the ramp |goto 38.28,73.00 < 5 |only if walking
-Enter the building |goto 38.23,73.22 < 5 |walk
+Enter the building |goto 38.23,73.22 < 10 |walk
 talk Lord Saltheril##16144
 |tip Inside the building.
 turnin The Party Never Ends##9067 |goto 38.14,73.56
 step
-Leave the building |goto 38.23,73.23 < 3 |walk
-Follow the road |goto 39.30,69.72 < 10 |only if walking
-Continue following the road |goto 41.26,68.83 < 10 |only if walking
-Follow the path up |goto 43.85,67.74 < 7 |only if walking
-Continue up the path |goto 44.28,69.86 < 10 |only if walking
-Continue up the path |goto 46.06,70.96 < 10 |only if walking
-Follow the road |goto 46.75,72.09 < 7 |only if walking
-Follow the road |goto 46.82,73.79 < 7 |only if walking
-Continue following the road |goto 47.80,75.20 < 7 |only if walking
-Continue following the road |goto 49.28,77.75 < 10 |only if walking
-Continue following the road |goto 49.29,81.40 < 10 |only if walking
-Follow the path |goto 48.28,82.82 < 7 |only if walking
-Continue following the path |goto 45.53,85.57 < 7 |only if walking
+Follow the road |goto 44.01,69.51 < 30 |only if walking
+Follow the road |goto 49.38,77.94 < 30 |only if walking
+Follow the path |goto 48.34,82.83 < 30 |only if walking
 talk Runewarden Deryan##16362
 turnin Runewarden Deryan##9253 |goto 44.20,85.47
 accept Powering our Defenses##8490 |goto 44.20,85.47
 step
-Follow the path |goto 45.47,85.69 < 7 |only if walking
-Continue following the path |goto 46.86,85.37 < 10 |only if walking
-Continue following the path |goto 49.67,85.74 < 10 |only if walking
-Continue following the path |goto 53.29,84.60 < 10 |only if walking
 use the Infused Crystal##22693
 Kill the enemies that attack
 |tip Protect the Infused Crystal.
@@ -4001,11 +3722,6 @@ Kill the enemies that attack
 |tip This will take 1 minute.
 Energize the Runestone |q 8490/1 |goto 55.19,84.23
 step
-Follow the path down |goto 53.88,84.68 < 10 |only if walking
-Follow the path |goto 51.67,82.81 < 10 |only if walking
-Follow the path up |goto 49.96,82.17 < 10 |only if walking
-Follow the path |goto 48.27,82.85 < 7 |only if walking
-Continue following the path |goto 45.53,85.52 < 7 |only if walking
 talk Runewarden Deryan##16362
 turnin Powering our Defenses##8490 |goto 44.20,85.47
 ]])
@@ -4018,9 +3734,6 @@ startlevel=10,
 endlevel=60,
 },[[
 step
-Follow the path |goto Eversong Woods/0 45.50,85.57 < 10 |only if walking
-Continue following the path |goto Eversong Woods/0 46.90,85.28 < 10 |only if walking
-Follow the road |goto Eversong Woods/0 48.71,87.15 < 10 |only if walking
 talk Courier Dawnstrider##16183
 turnin Missing in the Ghostlands##9144 |goto Eversong Woods/0 48.98,88.99
 |only if havequest(9144)
@@ -4028,23 +3741,15 @@ step
 talk Apothecary Thedra##16196
 accept The Fallen Courier##9147 |goto 49.02,89.04
 step
-Cross the bridge |goto 48.62,91.52 < 7 |only if walking
-Follow the path |goto Ghostlands/0 48.31,12.66 < 7 |only if walking
 Kill enemies around this area
 collect 4 Plagued Blood Sample##22570 |q 9147/1 |goto Ghostlands/0 48.99,16.55
 step
-Cross the bridge |goto 48.35,12.51 < 7 |only if walking
-Follow the path |goto Eversong Woods/0 48.66,91.45 < 10 |only if walking
 talk Apothecary Thedra##16196
 turnin The Fallen Courier##9147 |goto Eversong Woods/0 49.01,89.05
 step
 talk Courier Dawnstrider##16183
 accept Delivery to Tranquillien##9148 |goto 48.98,89.00
 step
-Cross the bridge |goto 48.63,91.49 < 7 |only if walking
-Follow the road |goto Ghostlands/0 48.31,12.64 < 7 |only if walking
-Continue following the road |goto Ghostlands/0 46.62,18.62 < 7 |only if walking
-Continue following the road |goto Ghostlands/0 46.60,25.61 < 7 |only if walking
 talk Arcanist Vandril##16197
 |tip He walks around this area.
 turnin Delivery to Tranquillien##9148 |goto Ghostlands/0 46.50,28.37
@@ -4052,45 +3757,34 @@ turnin Delivery to Tranquillien##9148 |goto Ghostlands/0 46.50,28.37
 accept The Forsaken##9327 |goto Ghostlands/0 46.50,28.37 |or
 accept the Forsaken##9329 |goto Ghostlands/0 46.50,28.37 |or
 step
-Follow the road |goto 46.51,31.19 < 10 |only if walking
-Enter the building |goto 45.17,32.37 < 5 |walk
+Enter the building |goto 45.17,32.37 < 10 |walk
 talk High Executor Mavren##16252
 |tip Inside the building.
 turnin The Forsaken##9329 |goto 44.77,32.45 |only if havequest(9329) or completedq(9329)
 turnin The Forsaken##9327 |goto 44.77,32.45 |only if havequest(9327) or completedq(9327)
 accept Return to Arcanist Vandril##9758 |goto 44.77,32.45
 step
-Leave the building |goto 45.17,32.36 < 3 |walk
 talk Ranger Lethvalin##16213
 accept Help Ranger Valanna!##9145 |goto 45.48,32.45
 step
 talk Skymaster Sunwing##16189
 fpath Tranquillien |goto 45.42,30.53
 step
-Follow the road |goto 46.21,29.46 < 10 |only if walking
 talk Arcanist Vandril##16197
 |tip He walks around this area.
 turnin Return to Arcanist Vandril##9758 |goto 46.50,28.37
 accept Suncrown Village##9138 |goto 46.50,28.37
 step
-Follow the path |goto 46.68,30.46 < 7 |only if walking
-Run up the ramp |goto 47.74,31.49 < 5 |only if walking
-Enter the building |goto 48.34,31.97 < 5 |walk
+Enter the building |goto 48.34,31.97 < 10 |walk
 talk Innkeeper Kalarin##16542
 |tip Inside the building.
 home Tranquillien |goto 48.91,32.42 |q 9621 |future
 step
-Leave the building |goto 48.34,31.97 < 3 |walk
-Follow the road |goto 46.58,30.55 < 7 |only if walking
-Follow the road |goto 46.72,24.01 < 7 |only if walking
-Continue following the road |goto 49.13,20.80 < 7 |only if walking
-Continue following the road |goto 54.99,18.57 < 10 |only if walking
-Continue following the road |goto 56.43,17.36 < 7 |only if walking
+Follow the road |goto 46.72,24.01 < 30 |only if walking
 talk Dying Blood Elf##16601
 accept Anok'suten##9315 |goto 57.54,14.93
 stickystart "Kill_Nerubis_Guards"
 step
-Follow the path |goto 59.79,13.88 < 10 |only if walking
 kill Anok'suten##16357 |q 9315/1 |goto 61.69,14.37
 |tip He looks like a larger spider that walks around this area.
 |tip You may need help with this.
@@ -4098,31 +3792,22 @@ step
 label "Kill_Nerubis_Guards"
 kill 10 Nerubis Guard##16313 |q 9138/1 |goto 61.69,14.37
 step
-Follow the path |goto 63.66,12.18 < 15 |only if walking
-Continue following the path |goto 66.99,14.75 < 10 |only if walking
 talk Ranger Valanna##16219
 turnin Help Ranger Valanna!##9145 |goto 69.40,15.18
 accept Dealing with Zeb'Sora##9143 |goto 69.40,15.18
 step
-Follow the path |goto 74.94,12.44 < 7 |only if walking
 Kill Shadowpine enemies around this area
 collect 6 Zeb'Sora Troll Ear##22639 |q 9143/1 |goto 76.73,12.23
 step
-Follow the path |goto 75.67,14.84 < 15 |only if walking
 talk Ranger Valanna##16219
 turnin Dealing with Zeb'Sora##9143 |goto 69.40,15.18
 accept Report to Captain Helios##9146 |goto 69.40,15.18
 step
-Follow the path |goto 68.14,17.55 < 7 |only if walking
-Continue following the path |goto 69.14,23.04 < 10 |only if walking
-Continue following the path |goto 69.36,27.82 < 7 |only if walking
-Run up the ramp |goto 70.76,31.99 < 5 |only if walking
-Enter the building |goto 71.10,32.03 < 5 |walk
+Enter the building |goto 71.10,32.03 < 10 |walk
 talk Farstrider Sedina##16202
 |tip Inside the building.
 accept Bearers of the Plague##9158 |goto 72.49,32.13
 step
-Leave the building |goto 72.58,31.12 < 3 |walk
 talk Captain Helios##16220
 |tip On the balcony of the building.
 turnin Report to Captain Helios##9146 |goto 72.37,29.64
@@ -4132,11 +3817,7 @@ talk Ranger Krenn'an##16462
 |tip On the balcony of the building.
 accept Spirits of the Drowned##9274 |goto 72.21,29.78
 step
-Run up the ramp |goto 72.01,29.92 < 3 |only if walking
-Continue up the ramp |goto 71.54,30.53 < 3 |only if walking
-Follow the path |goto 71.42,31.33 < 3 |only if walking
-Continue following the path |goto 71.14,31.70 < 3 |only if walking
-Continue following the path |goto 71.21,32.53 < 3 |only if walking
+Run up the ramp |goto 72.01,29.92 < 5 |only if walking
 talk Ranger Vynna##16203
 |tip Upstairs inside the building.
 accept Investigate the Amani Catacombs##9193 |goto 71.95,32.64
@@ -4145,26 +3826,17 @@ talk Farstrider Solanna##16463
 |tip Inside the building.
 accept Attack on Zeb'Tela##9276 |goto 72.32,31.25
 step
-Leave the building |goto 72.59,31.02 < 3 |walk
-Run up the ramp |goto 72.56,29.91 < 3 |only if walking
-Continue up the ramp |goto 73.09,30.48 < 3 |only if walking
-Follow the path |goto 73.11,31.41 < 3 |only if walking
-Follow the path |goto 72.85,31.54 < 3 |only if walking
+Run up the ramp |goto 72.56,29.91 < 5 |only if walking
 talk Apothecary Venustus##16464
 |tip Upstairs inside the building.
 accept Troll Juju##9199 |goto 72.62,31.57
 step
-Leave the building |goto 72.03,33.09 < 3 |walk
-Jump down here |goto 71.41,34.57 < 5 |only if walking
 kill 10 Ghostclaw Lynx##16348 |q 9158/1 |goto 68.45,40.93
 |tip If you can't find any, kill the Vampiric Mistbats also.
 stickystart "Collect_Headhunter_Axes"
 stickystart "Kill_Shadowpine_Shadowcasters"
 stickystart "Kill_Shadowpine_Headhunters"
 step
-Follow the path up |goto 70.09,42.88 < 15 |only if walking
-Continue following the path |goto 73.51,39.51 < 10 |only if walking
-Continue following the path |goto 74.79,38.28 < 7 |only if walking
 kill Shadowpine Shadowcaster##16469+
 collect 3 Shadowcaster Mace##23167 |q 9214/2 |goto 77.57,37.69
 step
@@ -4178,11 +3850,7 @@ step
 label "Kill_Shadowpine_Headhunters"
 kill 8 Shadowpine Headhunter##16344 |q 9276/2 |goto 77.57,37.69
 step
-Follow the path |goto 77.17,36.65 < 15 |only if walking
-Continue following the path |goto 75.07,34.72 < 10 |only if walking
-Continue following the path |goto 73.63,34.25 < 7 |only if walking
-Run up the stairs |goto 72.71,33.82 < 5 |only if walking
-Enter the building |goto 72.53,33.13 < 5 |walk
+Enter the building |goto 72.53,33.13 < 15 |walk
 talk Farstrider Sedina##16202
 |tip Inside the building.
 turnin Bearers of the Plague##9158 |goto 72.49,32.14
@@ -4197,23 +3865,13 @@ click Wanted Poster: Kel'gash the Wicked##181153
 |tip Inside the building.
 accept Bring Me Kel'gash's Head!##9215 |goto 72.23,31.17
 step
-Leave the building |goto 72.59,31.02 < 3 |walk
-Run up the ramp |goto 72.56,29.91 < 3 |only if walking
-Continue up the ramp |goto 73.09,30.48 < 3 |only if walking
-Follow the path |goto 73.11,31.41 < 3 |only if walking
-Follow the path |goto 72.85,31.54 < 3 |only if walking
+Run up the ramp |goto 72.56,29.91 < 5 |only if walking
 talk Apothecary Venustus##16464
 |tip Upstairs inside the building.
 accept A Little Dash of Seasoning##9275 |goto 72.62,31.57
 stickystart "Kill_Ravening_Apparitions"
 stickystart "Kill_Vengeful_Apparitions"
 step
-Leave the building |goto 72.59,31.01 < 3 |walk
-Jump down here |goto 72.37,29.58 < 5 |only if walking
-Follow the path |goto 71.77,27.06 < 7 |only if walking
-Follow the path |goto 71.48,24.03 < 10 |only if walking
-Continue following the path |goto 71.91,21.00 < 7 |only if walking
-Continue following the path |goto 71.63,19.78 < 7 |only if walking
 talk Geranis Whitemorn##16201
 accept Forgotten Rituals##9157 |goto 72.29,19.09
 step
@@ -4242,11 +3900,8 @@ kill 8 Vengeful Apparition##16328 |q 9274/2 |goto 70.86,18.87
 stickystart "Collect_Troll_Juju"
 stickystart "Burn_Mummified_Troll_Remains"
 step
-Follow the path |goto 69.83,23.56 < 10 |only if walking
-Follow the path |goto 68.35,25.99 < 7 |only if walking
-Enter the crypt |goto 66.31,28.56 < 5 |walk
-Follow the path |goto Ghostlands/1 65.67,37.25 < 5 |walk
-Continue following the path |goto Ghostlands/1 59.70,59.55 < 5 |walk
+Enter the crypt |goto 66.31,28.56 < 10 |walk
+Follow the path |goto Ghostlands/1 64.82,38.89 < 10 |walk
 Investigate the Amani Catacombs |q 9193/2 |goto Ghostlands/1 59.77,66.25
 step
 label "Collect_Troll_Juju"
@@ -4256,23 +3911,14 @@ collect 8 Troll Juju##22633 |q 9199/1 |goto 59.77,66.25
 step
 label "Burn_Mummified_Troll_Remains"
 click Mummified Troll Remains##181148+
-|tip They look like mummies on the ground around this area inside the crypt.
+|tip They look like bodies wrapped in white cloth on the ground around this area inside the crypt.
 Burn #10# Mummified Troll Remains |q 9193/1 |goto 59.77,66.25
 step
 talk Ranger Lilatha##16295
 |tip Inside the crypt.
 accept Escape from the Catacombs##9212 |goto 59.97,81.65
 step
-Follow the path |goto 59.60,59.80 < 5 |walk
-Follow the path down |goto 66.07,52.35 < 5 |walk
-Follow the path up |goto 74.03,47.55 < 5 |walk
-Follow the path |goto 74.13,38.20 < 5 |walk
-Leave the crypt |goto Ghostlands/0 66.30,28.58 < 3 |walk
-Follow the path |goto Ghostlands/0 67.74,28.88 < 7 |only if walking
-Run up the ramp |goto Ghostlands/0 70.75,31.98 < 5 |only if walking
-Enter the building |goto Ghostlands/0 71.10,32.02 < 5 |walk
-Follow the path |goto Ghostlands/0 71.96,31.84 < 5 |walk
-Leave the building |goto Ghostlands/0 72.08,31.00 < 3 |walk
+Leave the crypt |goto Ghostlands/0 66.30,28.58 < 10 |walk
 Watch the dialogue
 |tip Follow Ranger Lilatha and protect her as she walks.
 Escort Ranger Lilatha back to Farstrider Enclave |q 9212/1 |goto Ghostlands/0 72.24,30.11
@@ -4285,26 +3931,16 @@ talk Captain Helios##16220
 |tip On the balcony of the building.
 turnin Escape from the Catacombs##9212 |goto 72.37,29.63
 step
-Run up the ramp |goto 72.01,29.92 < 3 |only if walking
-Continue up the ramp |goto 71.54,30.53 < 3 |only if walking
-Follow the path |goto 71.42,31.33 < 3 |only if walking
-Continue following the path |goto 71.14,31.70 < 3 |only if walking
-Continue following the path |goto 71.21,32.53 < 3 |only if walking
+Run up the ramp |goto 72.01,29.92 < 5 |only if walking
 talk Ranger Vynna##16203
 |tip Upstairs inside the building.
 turnin Investigate the Amani Catacombs##9193 |goto 71.95,32.64
 step
-Leave the building |goto 72.59,31.02 < 3 |walk
-Run up the ramp |goto 72.56,29.91 < 3 |only if walking
-Continue up the ramp |goto 73.09,30.48 < 3 |only if walking
-Follow the path |goto 73.11,31.41 < 3 |only if walking
-Follow the path |goto 72.85,31.54 < 3 |only if walking
+Run up the ramp |goto 72.56,29.91 < 5 |only if walking
 talk Apothecary Venustus##16464
 |tip Upstairs inside the building.
 turnin Troll Juju##9199 |goto 72.62,31.57
 step
-Leave the building |goto 72.03,33.09 < 3 |walk
-Jump down here |goto 71.41,34.57 < 5 |only if walking
 kill 10 Vampiric Mistbat##16354 |q 9159/1 |goto 68.45,40.93
 |tip If you can't find any, kill the Ghostclaw Lynxes also.
 stickystart "Kill_Shadowpine_Catlords"
@@ -4312,48 +3948,23 @@ stickystart "Collect_Catlord_Claws"
 stickystart "Kill_Shadowpine_Hexxers"
 stickystart "Collect_Hexxer_Staves"
 step
-Follow the path |goto 66.29,44.24 < 15 |only if walking
-Continue following the path |goto 67.24,49.65 < 7 |only if walking
-Continue following the path |goto 67.41,53.90 < 7 |only if walking
-Run up the stairs |goto 67.16,58.25 < 5 |only if walking
-Enter the building |goto 67.50,58.11 < 5 |walk
+Enter the building |goto 67.50,58.11 < 10 |walk
 click Fresh Fish Rack##181252
 |tip Inside the building.
 Poison the Fresh Fish Rack |q 9275/3 |goto 68.24,57.82
 step
-Leave the building |goto 67.50,58.12 < 3 |walk
-Follow the path up |goto 64.41,60.35 < 5 |only if walking
-Follow the road |goto 64.57,61.42 < 7 |only if walking
-Continue following the road |goto 66.17,62.39 < 7 |only if walking
-Continue following the road |goto 68.58,63.15 < 7 |only if walking
-Follow the path |goto 74.03,64.91 < 7 |only if walking
+Follow the road |goto 64.46,61.32 < 15 |only if walking
 talk Kiz Coilspanner##24851
 fpath Zul'Aman |goto 74.77,67.15
 step
-Follow the path down |goto 74.05,65.61 < 7 |only if walking
-Follow the road |goto 73.09,64.31 < 7 |only if walking
-Continue following the road |goto 68.60,63.06 < 7 |only if walking
-Follow the path down |goto 65.61,62.53 < 5 |only if walking
-Follow the path |goto 65.06,65.28 < 5 |only if walking
-Follow the path |goto 64.70,66.13 < 5 |only if walking
+Follow the road |goto 73.09,64.31 < 30 |only if walking
 click Raw Meat Rack##181250
 Poison the Raw Meat Rack |q 9275/1 |goto 65.07,66.68
 step
-Follow the path |goto 64.41,66.34 < 7 |only if walking
-Continue following the path |goto 63.38,68.44 < 10 |only if walking
-Continue following the path |goto 63.06,72.36 < 7 |only if walking
-Continue following the path |goto 62.52,74.64 < 7 |only if walking
 click Smoked Meat Rack##181251
 Poison the Smoked Meat Rack |q 9275/2 |goto 62.98,74.97
 step
-Follow the path |goto 62.94,76.16 < 7 |only if walking
-Run up the stairs |goto 64.85,78.87 < 5 |only if walking
-Enter the building |goto 65.13,79.22 < 5 |walk
-Run up the stairs |goto 65.75,79.58 < 3 |walk
-Follow the path |goto 65.86,80.07 < 3 |walk
-Run up the stairs |goto 65.97,80.72 < 3 |only if walking
-Follow the path |goto 65.47,80.79 < 5 |c |q 9215
-step
+Enter the building |goto 65.13,79.22 < 10 |walk
 kill Kel'gash the Wicked##16358
 |tip On top of the building.
 |tip You may need help with this.
@@ -4375,36 +3986,22 @@ step
 label "Collect_Hexxer_Staves"
 collect 3 Hexxer Stave##23166 |q 9214/4 |goto 62.11,73.98
 step
-Follow the path |goto 63.67,64.11 < 10 |only if walking
-Follow the path |goto 62.85,61.68 < 7 |only if walking
-Continue following the path |goto 65.19,55.70 < 7 |only if walking
-Continue following the path |goto 65.45,54.33 < 7 |only if walking
-Continue following the path |goto 65.14,51.96 < 10 |only if walking
-Follow the path up |goto 66.29,46.09 < 10 |only if walking
-Follow the path up |goto 66.82,39.39 < 10 |only if walking
-Continue up the path |goto 68.24,35.18 < 10 |only if walking
-Follow the path |goto 70.12,33.66 < 10 |only if walking
-Run up the stairs |goto 71.87,33.77 < 5 |only if walking
-Enter the building |goto 71.99,33.10 < 5 |walk
+Follow the path |goto 63.67,64.11 < 40 |only if walking
+Enter the building |goto 71.99,33.10 < 15 |walk
 talk Farstrider Solanna##16463
 |tip Inside the building.
 turnin Assault on Zeb'Nowa##9277 |goto 72.32,31.25
 step
-Leave the building |goto 72.59,31.06 < 3 |walk
 talk Captain Helios##16220
 |tip On the balcony of the building.
 turnin Shadowpine Weaponry##9214 |goto 72.37,29.64
 turnin Bring Me Kel'gash's Head!##9215 |goto 72.37,29.64
 step
-Run up the ramp |goto 72.64,29.92 < 3 |only if walking
-Continue up the ramp |goto 73.11,30.46 < 3 |only if walking
-Follow the path |goto 73.12,31.37 < 3 |only if walking
-Follow the path |goto 72.86,31.56 < 3 |walk
+Run up the ramp |goto 72.64,29.92 < 5 |only if walking
 talk Apothecary Venustus##16464
 |tip Upstairs inside the building.
 turnin A Little Dash of Seasoning##9275 |goto 72.62,31.57
 step
-Leave the building |goto 48.33,31.98 < 3 |walk
 talk Arcanist Vandril##16197
 |tip He walks around this area.
 turnin Suncrown Village##9138 |goto 46.34,28.33
@@ -4414,14 +4011,12 @@ step
 talk Rathis Tomber##16224
 accept Tomber's Supplies##9152 |goto 47.24,28.56
 step
-Follow the path |goto 47.03,30.23 < 7 |only if walking
 talk Master Chef Mouldier##16253
 accept Culinary Crunch##9171 |goto 48.42,30.93
 step
 click Wanted Poster##181147
 accept Wanted: Knucklerot and Luzran##9156 |goto 48.34,31.64
 step
-Follow the path |goto 47.54,31.43 < 7 |only if walking
 talk Apothecary Renzithen##16198
 accept The Plagued Coast##9149 |goto 47.67,34.87
 step
@@ -4431,7 +4026,7 @@ step
 talk Magister Darenis##16199
 accept Salvaging the Past##9150 |goto 46.03,31.95
 step
-Enter the building |goto 45.17,32.37 < 5 |walk
+Enter the building |goto 45.17,32.37 < 10 |walk
 talk Dame Auriferous##16231
 |tip Inside the building.
 accept Investigate An'daroth##9160 |goto 44.88,32.51
@@ -4441,17 +4036,11 @@ talk Deathstalker Maltendis##16251
 accept Trouble at the Underlight Mines##9192 |goto 44.74,32.29
 stickystart "Kill_Gangled_Cannibals"
 step
-Leave the building |goto 45.15,32.37 < 3 |walk
-Follow the road down |goto 45.78,29.39 < 10 |only if walking
-Follow the road down |goto 44.82,27.92 < 10 |only if walking
-Follow the path |goto 41.92,28.58 < 10 |only if walking
 kill 10 Risen Hungerer##16301 |q 9155/1 |goto 39.28,35.54
 step
 label "Kill_Gangled_Cannibals"
 kill 10 Gangled Cannibal##16309 |q 9155/2 |goto 39.28,35.54
 step
-Follow the path |goto 37.05,39.03 < 10 |only if walking
-Continue following the path |goto 33.48,44.59 < 10 |only if walking
 talk Apprentice Shatharia##16293
 accept Underlight Ore Samples##9207 |goto 31.44,48.33
 stickystart "Kill_Blackpaw_Gnolls"
@@ -4471,8 +4060,7 @@ label "Kill_Blackpaw_Shamans"
 kill 4 Blackpaw Shaman##16337 |q 9192/3 |goto 29.47,47.93
 stickystart "Kill_Spindleweb_Lurkers"
 step
-Follow the path up |goto 30.83,48.06 < 7 |only if walking
-Follow the path |goto 31.91,47.04 < 7 |only if walking
+Follow the path up |goto 31.33,47.80 < 15 |only if walking
 kill Spindleweb Lurker##16351+
 |tip If you can't find any, kill the Vampiric Mistbats also.
 collect 5 Crunchy Spider Leg##22644 |q 9171/1 |goto 27.6,31.1
@@ -4480,46 +4068,31 @@ step
 label "Kill_Spindleweb_Lurkers"
 kill 8 Spindleweb Lurker##16351 |q 9159/2 |goto 27.6,31.1
 step
-Jump down here |goto 32.03,36.33 < 7 |only if walking
 Kill enemies around this area
 collect 8 Crystallized Mana Essence##22580 |q 9150/1 |goto 32.20,34.23
 step
-Run up the stairs |goto 34.64,30.83 < 7 |only if walking
 click Rathis Tomber's Supplies##181133
 collect Rathis Tomber's Supplies##22583 |q 9152/1 |goto 33.57,26.51
 stickystart "Kill_Sentinel_Spies"
 step
-Follow the road |goto 33.77,23.66 < 10 |only if walking
-Follow the path |goto 35.63,23.25 < 10 |only if walking
-Follow the path up |goto 37.04,21.75 < 7 |only if walking
-Follow the path |goto 38.13,20.54 < 7 |only if walking
-Continue following the path |goto 38.02,18.60 < 10 |only if walking
+Follow the path |goto 38.02,20.59 < 20 |only if walking
 Investigate An'daroth |q 9160/2 |goto 37.07,16.00
 step
 label "Kill_Sentinel_Spies"
 kill 12 Sentinel Spy##16330 |q 9160/1 |goto 36.47,15.43
 stickystart "Kill_Queldorei_Wraiths"
 step
-Jump down carefully here |goto 35.39,16.62 < 7 |only if walking
-Follow the road |goto 33.35,23.53 < 10 |only if walking
-Continue following the road |goto 30.28,23.34 < 7 |only if walking
-Cross the bridge |goto 29.31,21.09 < 7 |only if walking
-Follow the path |goto 28.44,19.28 < 7 |only if walking
 kill 6 Quel'dorei Ghost##16325 |q 9139/1 |goto 25.70,15.93
 step
 label "Kill_Queldorei_Wraiths"
 kill 4 Quel'dorei Wraith##16326 |q 9139/2 |goto 25.70,15.93
 step
-Follow the path |goto 25.35,17.83 < 15 |only if walking
-Continue following the path |goto 22.25,19.28 < 15 |only if walking
 Kill Grimscale enemies around this area.
 collect 6 Plagued Murloc Spine##22579 |q 9149/1 |goto 19.72,21.36
 step
-Leave the building |goto 48.34,31.98 < 3 |walk
 talk Master Chef Mouldier##16253
 turnin Culinary Crunch##9171 |goto 48.42,30.94
 step
-Follow the path down |goto 47.94,30.12 < 7 |only if walking
 talk Rathis Tomber##16224
 |tip He walks around this area.
 turnin Tomber's Supplies##9152 |goto 47.17,28.65
@@ -4529,11 +4102,10 @@ talk Arcanist Vandril##16197
 turnin Goldenmist Village##9139 |goto 46.21,28.35
 accept Windrunner Village##9140 |goto 46.21,28.35
 step
-Follow the road |goto 46.57,30.82 < 7 |only if walking
 talk Magister Darenis##16199
 turnin Salvaging the Past##9150 |goto 46.02,31.96
 step
-Enter the building |goto 45.17,32.37 < 5 |walk
+Enter the building |goto 45.17,32.37 < 10 |walk
 talk Dame Auriferous##16231
 |tip Inside the building.
 turnin Investigate An'daroth##9160 |goto 44.88,32.51
@@ -4547,30 +4119,20 @@ talk Deathstalker Maltendis##16251
 |tip Inside the building.
 turnin Trouble at the Underlight Mines##9192 |goto 44.74,32.29
 step
-Leave the building |goto 45.17,32.37 < 3 |walk
 talk Deathstalker Rathiel##16200
 turnin Down the Dead Scar##9155 |goto 46.02,33.57
 step
 talk Apothecary Renzithen##16198
 turnin The Plagued Coast##9149 |goto 47.67,34.87
 step
-Follow the path up |goto 47.59,33.66 < 7 |only if walking
-Follow the path |goto 47.61,31.33 < 7 |only if walking
-Run up the ramp |goto 48.73,30.82 < 3 |only if walking
-Continue up the ramp |goto 49.43,31.54 < 3 |only if walking
-Follow the path |goto 49.16,32.35 < 3 |only if walking
+Run up the ramp |goto 48.73,30.90 < 10 |only if walking
 talk Magistrix Aminel##16205
 |tip Upstairs on the balcony of the building.
 accept Spinal Dust##9218 |goto 48.92,31.32
 accept Rotting Hearts##9216 |goto 48.92,31.32
 stickystart "Collect_Rotting_Hearts"
 step
-Follow the road |goto 46.87,31.39 < 7 |only if walking
-Continue following the road |goto 46.47,36.34 < 10 |only if walking
-Continue following the road |goto 46.05,39.96 < 10 |only if walking
-Continue following the road |goto 43.15,44.27 < 7 |only if walking
-Continue following the road |goto 39.92,46.39 < 7 |only if walking
-Follow the path |goto 38.33,48.53 < 7 |only if walking
+Follow the path |goto 43.05,50.91 < 40 |only if walking
 Kill enemies around this area
 |tip Only Dreadbone and Deathcage enemies will drop this quest item.
 collect 10 Spinal Dust##22642 |q 9218/1 |goto 37.91,58.35
@@ -4581,14 +4143,7 @@ collect 10 Rotting Heart##22641 |q 9216/1 |goto 37.91,58.35
 stickystart "Kill_Fallen_Rangers"
 stickystart "Accept_The_Ladys_Necklace"
 step
-Follow the road |goto 36.04,51.81 < 7 |only if walking
-Continue following the road |goto 33.86,52.33 < 7 |only if walking
-Continue following the road |goto 31.80,54.98 < 7 |only if walking
-Continue following the road |goto 27.85,55.39 < 7 |only if walking
-Follow the road |goto 25.67,55.41 < 7 |only if walking
-Follow the road |goto 21.57,58.33 < 7 |only if walking
-Follow the path up |goto 17.13,58.29 < 7 |only if walking
-Continue up the path |goto 15.20,56.48 < 7 |only if walking
+Follow the road up |goto 18.68,58.41 < 20 |only if walking
 kill 8 Deatholme Acolyte##16315 |q 9173/1 |goto 13.73,56.66
 step
 label "Kill_Fallen_Rangers"
@@ -4600,23 +4155,15 @@ accept The Lady's Necklace##9175 |goto 13.73,56.66
 |tip You will eventually automatically accept this quest after looting.
 stickystart "Collect_Gargoyle_Fragments"
 step
-Follow the path down |goto 14.12,56.58 < 7 |only if walking
-Follow the path down |goto 15.44,56.59 < 7 |only if walking
-Continue down the path |goto 17.28,58.37 < 7 |only if walking
-Follow the road |goto 21.52,58.25 < 7 |only if walking
-Follow the road |goto 25.62,54.92 < 7 |only if walking
-Follow the path |goto 22.34,48.46 < 7 |only if walking
+Follow the path down |goto 14.12,56.58 < 20 |only if walking
 kill Phantasmal Seeker##16323+
+|tip Inside the buildings around this area.
 collect 6 Phantasmal Substance##22566 |q 9140/1 |goto 20.56,46.26
 step
 label "Collect_Gargoyle_Fragments"
 kill Stonewing Slayer##16324+
 collect 4 Gargoyle Fragment##22567 |q 9140/2 |goto 20.56,46.26
 step
-Follow the path |goto 18.21,43.04 < 15 |only if walking
-Continue following the path |goto 17.47,40.23 < 10 |only if walking
-Continue following the path |goto 15.34,31.93 < 15 |only if walking
-Follow the path |goto 14.52,27.92 < 10 |only if walking
 click Night Elf Plans: An'daroth##181138
 collect Night Elf Plans: An'daroth##22590 |q 9163/1 |goto 12.54,26.51
 step
@@ -4624,34 +4171,25 @@ click Night Elf Plans: An'owyn##181139
 |tip Inside the tent.
 collect Night Elf Plans: An'owyn##22591 |q 9163/2 |goto 12.80,25.09
 step
-Follow the path |goto 11.77,25.49 < 7 |only if walking
-Run up the ramp |goto 10.46,24.39 < 5 |only if walking
-Run up the stairs |goto 9.91,23.24 < 5 |only if walking
-Follow the path |goto 10.08,22.88 < 5 |only if walking
-Run up the stairs |goto 10.21,22.29 < 3 |only if walking
-Follow the path |goto 10.34,22.04 < 3 |only if walking
+Run up the ramp |goto 10.46,24.39 < 10 |only if walking
 click Night Elf Plans: Scrying on the Sin'dorei##181140
+|tip At the top of the ship.
 collect Night Elf Plans: Scrying on the Sin'dorei##22592 |q 9163/3 |goto 10.44,22.58
 step
-Leave the building |goto 48.32,31.98 < 3 |walk
-Run up the ramp |goto 48.74,30.81 < 5 |only if walking
-Run up the ramp |goto 49.36,31.37 < 3 |only if walking
-Follow the path |goto 49.21,32.37 < 3 |only if walking
+Run up the ramp |goto 48.74,30.81 < 10 |only if walking
 talk Magistrix Aminel##16205
 |tip Upstairs on the balcony of the building.
 turnin Spinal Dust##9218 |goto 48.91,31.32
 turnin Rotting Hearts##9216 |goto 48.91,31.32
 step
-Follow the path |goto 47.71,30.37 < 10 |only if walking
 talk Arcanist Vandril##16197
 |tip He walks around this area.
 turnin Windrunner Village##9140 |goto 46.48,28.38
 step
-Follow the road |goto 46.56,31.13 < 7 |only if walking
 talk Magister Darenis##16199
 accept The Sanctum of the Sun##9151 |goto 46.03,31.95
 step
-Enter the building |goto 45.17,32.38 < 5 |walk
+Enter the building |goto 45.17,32.38 < 10 |walk
 talk Dame Auriferous##16231
 |tip Inside the building.
 turnin Into Occupied Territory##9163 |goto 44.88,32.51
@@ -4664,24 +4202,14 @@ turnin The Lady's Necklace##9175 |goto 44.77,32.45
 accept Journey to Undercity##9177 |goto 44.77,32.45 |only if not BloodElf
 accept Journey to Undercity##9180 |goto 44.77,32.45 |only if BloodElf
 step
-Leave the building |goto 45.18,32.35 < 3 |walk
-Follow the path up |goto 48.67,35.24 < 7 |only if walking
-Follow the path |goto 50.30,37.89 < 5 |only if walking
-Continue following the path |goto 51.24,38.20 < 5 |only if walking
-Follow the path down |goto 51.67,38.98 < 5 |only if walking
-Follow the path down |goto 53.74,40.95 < 5 |only if walking
-Follow the path down |goto 54.82,41.67 < 5 |only if walking
-Follow the path |goto 55.77,46.11 < 7 |only if walking
-Continue following the path |goto 54.33,48.05 < 7 |only if walking
-Continue following the path |goto 54.33,49.35 < 5 |only if walking
-Enter the building |goto 54.75,49.46 < 5 |walk
+Follow the path up |goto 48.70,35.32 < 15 |only if walking
+Follow the path |goto 55.49,44.67 < 30 |only if walking
+Enter the building |goto 54.75,49.46 < 10 |walk
 talk Magister Quallestis##16291
 |tip Inside the building.
 turnin Underlight Ore Samples##9207 |goto 54.95,48.51
 step
-Run up the ramp |goto 55.46,48.84 < 3 |walk
-Run up the ramp |goto 55.35,48.24 < 3 |walk
-Follow the path |goto 55.00,48.29 < 3 |walk
+Run up the ramp |goto 55.46,48.84 < 5 |walk
 talk Magister Idonis##16204
 |tip Upstairs inside the building.
 turnin The Sanctum of the Sun##9151 |goto 54.87,48.54
@@ -4690,148 +4218,79 @@ talk Magister Kaendris##16239
 |tip Inside the building.
 accept The Farstrider Enclave##9282 |goto 55.07,48.83
 step
-Leave the building |goto 54.73,49.51 < 3 |walk
-Follow the path |goto 55.12,50.22 < 7 |only if walking
-Continue following the path |goto 55.97,49.33 < 7 |only if walking
-Continue following the path |goto 55.99,46.97 < 7 |only if walking
-Follow the path down |goto 56.51,45.33 < 7 |only if walking
-Follow the path up |goto 59.74,43.95 < 7 |only if walking
-Follow the path up |goto 60.62,42.48 < 7 |only if walking
-Follow the path |goto 60.94,38.82 < 7 |only if walking
+Leave the building |goto 54.73,49.51 < 10 |walk
+Follow the path |goto 56.55,45.35 < 20 |only if walking
+Follow the path up |goto 60.62,42.36 < 20 |only if walking
 talk Magister Sylastor##16237
 turnin Deliver the Plans to An'telas##9166 |goto 60.29,35.63
 accept Deactivate An'owyn##9169 |goto 60.29,35.63
 step
-Follow the path down |goto 60.99,38.62 < 10 |only if walking
-Follow the path down |goto 60.61,41.90 < 10 |only if walking
-Follow the road |goto 61.01,51.02 < 10 |only if walking
-Follow the path |goto 57.97,58.49 < 10 |only if walking
+Follow the road |goto 61.01,51.02 < 40 |only if walking
 kill Sentinel Infiltrator##16333+
 collect Crystal Controlling Orb##23191 |goto 58.29,64.51 |q 9169
 step
 click Night Elf Moon Crystal##181359
 Deactivate the Night Elf Moon Crystal |q 9169/1 |goto 58.22,64.93
 step
-Follow the path up |goto 58.05,60.68 < 10 |only if walking
-Follow the road |goto 58.01,58.29 < 7 |only if walking
-Continue following the road |goto 60.74,52.74 < 10 |only if walking
-Follow the path up |goto 60.66,43.37 < 10 |only if walking
-Follow the path |goto 60.89,38.90 < 7 |only if walking
+Follow the path up |goto 60.66,43.37 < 20 |only if walking
 talk Magister Sylastor##16237
 turnin Deactivate An'owyn##9169 |goto 60.29,35.63
 step
-Follow the path down |goto 61.92,39.54 < 7 |only if walking
-Follow the path up |goto 64.67,42.00 < 7 |only if walking
-Continue up the path |goto 66.20,40.18 < 7 |only if walking
-Continue up the path |goto 68.38,35.12 < 7 |only if walking
-Follow the path |goto 69.98,33.59 < 7 |only if walking
-Run up the stairs |goto 71.72,33.78 < 5 |only if walking
-Enter the building |goto 71.99,33.09 < 5 |walk
+Follow the path |goto 65.00,41.85 < 30 |only if walking
+Enter the building |goto 71.99,33.09 < 15 |walk
 talk Farstrider Sedina##16202
 |tip Inside the building.
 turnin Curbing the Plague##9159 |goto 72.49,32.14
 step
-Leave the building |goto 72.58,31.07 < 3 |walk
-Run up the ramp |goto 72.10,29.90 < 3 |only if walking
-Run up the ramp |goto 71.61,30.34 < 3 |only if walking
-Follow the path |goto 71.45,31.29 < 3 |walk
-Continue following the path |goto 71.16,31.66 < 3 |walk
-Continue following the path |goto 71.18,32.47 < 3 |walk
-Continue following the path |goto 71.74,32.62 < 3 |walk
+Run up the ramp |goto 72.10,29.90 < 5 |only if walking
 talk Ranger Vynna##16203
 |tip Upstairs inside the building.
 turnin The Farstrider Enclave##9282 |goto 71.96,32.63
 accept The Traitor's Shadow##9161 |goto 71.96,32.63
 step
-Leave the building |goto 72.61,31.07 < 3 |walk
-Jump down here |goto 73.10,30.60 < 5 |only if walking
-Follow the path |goto 73.80,30.04 < 7 |only if walking
-Continue following the path |goto 75.07,26.88 < 10 |only if walking
-Follow the path up |goto 77.14,23.73 < 10 |only if walking
-Follow the path |goto 77.82,22.32 < 7 |only if walking
-Run up the ramp |goto 78.44,19.85 < 5 |only if walking
-Enter the building |goto 78.81,19.82 < 5 |walk
-Run up the ramp |goto 79.94,20.77 < 3 |walk
-Run up the ramp |goto 80.33,19.85 < 3 |walk
-Follow the path |goto 79.96,18.95 < 3 |walk
-Leave the building |goto 79.63,18.60 < 3 |walk
+Enter the building |goto 78.81,19.82 < 10 |walk
+Run up the ramp |goto 79.92,20.78 < 10 |walk
 click Dusty Journal##194341
 |tip Upstairs on the balcony of the building.
 turnin The Traitor's Shadow##9161 |goto 79.63,17.56
 accept Hints of the Past##9162 |goto 79.63,17.56
 step
-Follow the path |goto 78.34,18.81 < 7 |only if walking
-Follow the path down |goto 77.81,22.54 < 7 |only if walking
-Follow the path |goto 74.65,27.52 < 10 |only if walking
-Run up the ramp |goto 73.82,32.18 < 5 |walk
-Enter the building |goto 73.50,32.17 < 5 |walk
-Follow the path |goto 72.64,31.96 < 5 |walk
-Leave the building |goto 72.58,31.07 < 3 |walk
-Run up the ramp |goto 72.10,29.90 < 3 |only if walking
-Run up the ramp |goto 71.61,30.34 < 3 |only if walking
-Follow the path |goto 71.45,31.29 < 3 |walk
-Continue following the path |goto 71.16,31.66 < 3 |walk
-Continue following the path |goto 71.18,32.47 < 3 |walk
-Continue following the path |goto 71.74,32.62 < 3 |walk
+Enter the building |goto 73.50,32.17 < 15 |walk
+Run up the ramp |goto 72.10,29.90 < 5 |only if walking
 talk Ranger Vynna##16203
 |tip Upstairs inside the building.
 turnin Hints of the Past##9162 |goto 71.96,32.63
 accept Report to Magister Kaendris##9172 |goto 71.96,32.63
 step
-Leave the building |goto 72.01,33.18 < 3 |walk
-Jump down here |goto 71.37,34.59 < 7 |only if walking
-Follow the path |goto 67.63,40.04 < 15 |only if walking
-Continue following the path |goto 64.72,41.69 < 10 |only if walking
-Continue following the path |goto 61.00,43.82 < 10 |only if walking
-Follow the path up |goto 57.47,44.57 < 7 |only if walking
-Follow the path |goto 56.25,45.70 < 7 |only if walking
-Continue following the path |goto 56.03,47.43 < 7 |only if walking
-Continue following the path |goto 55.83,49.71 < 7 |only if walking
-Run up the stairs |goto 54.85,50.02 < 5 |only if walking
-Enter the building |goto 54.75,49.46 < 5 |walk
+Follow the path |goto 65.16,41.61 < 30 |only if walking
+Follow the path |goto 56.76,45.16 < 20 |only if walking
+Enter the building |goto 54.75,49.46 < 10 |walk
 talk Magister Kaendris##16239
 |tip Inside the building.
 turnin Report to Magister Kaendris##9172 |goto 55.07,48.83
 accept The Twin Ziggurats##9176 |goto 55.07,48.83
 step
-Leave the building |goto 54.73,49.49 < 3 |walk
-Follow the road |goto 53.41,52.84 < 10 |only if walking
-Follow the road |goto 50.85,57.04 < 10 |only if walking
-Continue following the road |goto 48.27,58.32 < 10 |only if walking
-Follow the path |goto 47.59,57.34 < 7 |only if walking
 talk Apprentice Vor'el##16480
+|tip He may take a while to appear.
 accept Clearing the Way##9281 |goto 46.40,56.42
 stickystart "Kill_Ghostclaw_Ravagers"
 step
-Follow the path |goto 47.46,57.74 < 7 |only if walking
-kill 10 Greater Spindleweb##16352 |q 9281/1 |goto 46.9,60.4
+kill 10 Greater Spindleweb##16352 |q 9281/1 |goto 50.06,61.10
 step
 label "Kill_Ghostclaw_Ravagers"
-kill 10 Ghostclaw Ravager##16349 |q 9281/2 |goto 46.9,60.4
+kill 10 Ghostclaw Ravager##16349 |q 9281/2 |goto 50.06,61.10
 step
-Follow the path |goto 47.59,57.34 < 7 |only if walking
 talk Apprentice Vor'el##16480
+|tip He may take a while to appear.
 turnin Clearing the Way##9281 |goto 46.40,56.42
 step
-Follow the path |goto 45.96,56.53 < 7 |only if walking
-Continue following the path |goto 44.06,54.33 < 10 |only if walking
-Continue following the path |goto 41.30,47.99 < 7 |only if walking
-Run up the stairs |goto 40.68,47.89 < 5 |only if walking
-Enter the building |goto 40.55,48.62 < 5 |walk
-Follow the path down |goto 40.35,49.43 < 3 |walk
-Follow the path |goto 40.07,49.57 < 3 |walk
-Follow the path |goto 40.00,50.01 < 3 |walk
-Run up the ramp |goto 40.27,50.26 < 3 |walk
+Enter the building |goto 40.55,48.62 < 10 |walk
 click Worn Chest##181239
 |tip Inside the building.
 collect Stone of Flame##22599 |q 9176/1 |goto 40.37,49.76
 stickystart "Collect_Kucklerots_Head"
 step
-Follow the path up |goto 40.07,49.57 < 3 |walk
-Follow the path |goto 40.43,49.33 < 3 |walk
-Leave the building |goto 40.56,48.56 < 3 |walk
-Jump down here |goto 40.59,47.45 < 5 |only if walking
-Follow the road |goto 39.37,47.10 < 7 |only if walking
+Leave the building |goto 40.56,48.56 < 10 |walk
 kill Luzran##16245
 |tip He looks like an abomination that walks along the road around this area.
 |tip You may need help with this.
@@ -4843,37 +4302,22 @@ kill Knucklerot##16246
 |tip You may need help with this.
 collect Knucklerot's Head##22894 |q 9156/1 |goto 37.69,49.35
 step
-Follow the road |goto 36.03,51.79 < 7 |only if walking
-Follow the path up |goto 34.26,51.62 < 7 |only if walking
-Run up the stairs |goto 34.37,49.63 < 5 |only if walking
-Enter the building |goto 34.35,48.85 < 5 |walk
-Follow the path down |goto 34.37,47.99 < 3 |walk
-Follow the path |goto 34.62,47.65 < 3 |walk
-Follow the path |goto 34.56,47.19 < 3 |walk
-Run up the ramp |goto 34.30,47.18 < 3 |walk
+Follow the path up |goto 34.77,51.83 < 20 |only if walking
+Enter the building |goto 34.35,48.85 < 10 |walk
 click Dented Chest##181238
 |tip Inside the building.
 collect Stone of Light##22598 |q 9176/2 |goto 34.30,47.66
 step
-Follow the path up |goto 34.62,47.76 < 3 |walk
-Follow the path |goto 34.32,48.11 < 3 |walk
-Leave the building |goto 34.35,48.90 < 3 |walk
-Follow the path down |goto 34.32,49.99 < 7 |only if walking
-Follow the path |goto 35.75,53.50 < 10 |only if walking
-Continue following the path |goto 40.23,55.38 < 10 |only if walking
-Continue following the path |goto 43.89,56.62 < 15 |only if walking
-Follow the road |goto 45.87,58.66 < 7 |only if walking
-Continue following the road |goto 48.43,58.43 < 10 |only if walking
-Follow the road |goto 51.18,56.69 < 7 |only if walking
-Run up the stairs |goto 53.83,51.68 < 7 |only if walking
-Enter the building |goto 54.75,49.45 < 5 |walk
+Leave the building |goto 34.35,48.90 < 10 |walk
+Follow the path |goto 43.24,44.36 < 30 |only if walking
+Follow the path |goto 52.99,48.92 < 20 |only if walking
+Enter the building |goto 54.75,49.45 < 10 |walk
 talk Magister Kaendris##16239
 |tip Inside the building.
 turnin The Twin Ziggurats##9176 |goto 55.07,48.83
 accept The Traitor's Destruction##9167 |goto 55.07,48.83
 step
-Run up the ramp |goto 55.46,48.82 < 3 |walk
-Run up the ramp |goto 55.32,48.24 < 3 |walk
+Run up the ramp |goto 55.46,48.82 < 5 |walk
 talk Arcanist Janeda##16240
 |tip Upstairs inside the building.
 accept Captives at Deatholme##9164 |goto 54.83,48.36
@@ -4886,21 +4330,9 @@ stickystart "Kill_Eyes_Of_DarKhan"
 stickystart "Kill_Wailers"
 stickystart "Kill_Nerubis_Centurions"
 step
-Follow the path |goto 54.90,49.18 < 3 |walk
-Leave the building |goto 54.73,49.52 < 3 |walk
-Follow the path |goto 53.87,51.81 < 10 |only if walking
-Follow the road |goto 50.93,56.98 < 7 |only if walking
-Continue following the road |goto 48.22,58.36 < 10 |only if walking
-Jump down here |goto 44.56,59.38 < 7 |only if walking
-Follow the path |goto 42.26,64.87 < 15 |only if walking
-Continue following the path |goto 38.47,69.27 < 15 |only if walking
-Follow the path |goto 36.14,71.23 < 7 |only if walking
-Follow the road |goto 34.80,75.23 < 7 |only if walking
-Follow the path |goto 32.89,75.18 < 7 |only if walking
-Enter the crypt |goto 31.69,73.63 < 5 |c |q 9170
-step
-Run down the stairs |goto 31.84,72.91 < 3 |walk
-Run down the stairs |goto 32.20,73.11 < 3 |walk
+Follow the road |goto 50.93,56.98 < 40 |only if walking
+Follow the path |goto 36.06,71.52 < 20 |only if walking
+Enter the crypt |goto 31.69,73.63 < 10 |walk
 kill Jurion the Deceiver##16248 |q 9170/3 |goto 32.10,74.46
 |tip Inside the crypt.
 step
@@ -4909,25 +4341,12 @@ talk Apothecary Enith##16208
 Choose _<Administer the restorative draught.>_
 Rescue Apothecary Enith |q 9164/1 |goto 32.14,73.96
 step
-Run up the stairs |goto 32.17,73.51 < 3 |walk
-Run up the stairs |goto 32.14,72.97 < 3 |walk
-Run up the stairs |goto 31.74,73.05 < 3 |walk
-Leave the crypt |goto 31.70,73.68 < 3 |walk
-Follow the road |goto 32.01,75.31 < 7 |only if walking
-Follow the road |goto 35.29,75.41 < 7 |only if walking
-Run up the stairs |goto 36.53,78.34 < 5 |only if walking
-Enter the building |goto 37.00,78.97 < 5 |walk
+Leave the crypt |goto 31.70,73.68 < 7 |walk
 kill Mirdoran the Fallen##16250 |q 9170/1 |goto 37.35,79.33
 |tip Inside the building.
 step
-Leave the building |goto 37.30,80.27 < 3 |walk
-Follow the path up |goto 37.00,83.71 < 7 |only if walking
-Continue up the path |goto 37.67,84.31 < 7 |only if walking
-Run up the stairs |goto 39.58,83.48 < 5 |only if walking
-Enter the building |goto 39.80,83.43 < 5 |walk
-Run down the stairs |goto 40.15,83.42 < 3 |walk
-Run down the stairs |goto 40.37,83.70 < 3 |walk
-Follow the path |goto 40.57,83.21 < 3 |walk
+Follow the path up |goto 37.53,84.22 < 20 |only if walking
+Enter the building |goto 39.80,83.43 < 10 |walk
 talk Apprentice Varnis##16206
 |tip Inside the building.
 Choose _<Administer the restorative draught.>_
@@ -4938,41 +4357,18 @@ kill Borgoth the Bloodletter##16247 |q 9170/2 |goto 41.26,83.03
 He can also be inside another building at [32.63,90.89]
 step
 label "Kill_Nerubis_Centurions"
-Follow the path |goto 40.61,83.18 < 3 |walk
-Run up the stairs |goto 40.38,83.69 < 3 |walk
-Follow the path |goto 40.07,83.33 < 3 |walk
-Leave the building |goto 39.77,83.43 < 3 |walk
 kill 6 Nerubis Centurion##16319 |q 9220/2 |goto 36.67,85.53
 step
-Run up the stairs |goto 34.83,87.55 < 5 |only if walking
-Enter the building |goto 35.20,88.21 < 5 |walk
-Follow the path down |goto 35.54,88.91 < 3 |walk
-Follow the path |goto 35.47,89.34 < 3 |walk
-Follow the path |goto 35.72,89.71 < 3 |walk
-Run up the ramp |goto 35.94,89.42 < 3 |walk
-kill Masophet the Black##16249 |q 9170/4 |goto 35.8,89.1
+Enter the building |goto 35.20,88.21 < 10 |walk
+kill Masophet the Black##16249 |q 9170/4 |goto 35.77,89.11
 |tip Inside the building.
 He can also be inside another building at [29.27,88.89]
 step
-Follow the path up |goto 35.47,89.31 < 3 |walk
-Follow the path |goto 35.55,88.76 < 3 |walk
-Leave the building |goto 35.19,88.17 < 3 |walk
-Follow the road |goto 34.48,87.23 < 7 |only if walking
-Run up the stairs |goto 32.86,87.81 < 5 |only if walking
-Enter the building |goto 32.83,88.18 < 5 |walk
-Run down the stairs |goto 32.73,88.68 < 3 |walk
-Run down the stairs |goto 32.51,88.95 < 3 |walk
-Follow the path |goto 32.75,89.34 < 3 |walk
+Enter the building |goto 32.83,88.18 < 10 |walk
 talk Ranger Vedoran##16209
 |tip Inside the building.
 Choose _<Administer the restorative draught.>_
 Rescue Ranger Vedoran |q 9164/3 |goto 32.79,89.93
-step
-Follow the path |goto 32.75,89.43 < 3 |walk
-Run up the stairs |goto 32.51,88.90 < 3 |walk
-Follow the path |goto 32.80,88.53 < 3 |walk
-Leave the building |goto 32.83,88.14 < 3 |walk
-Follow the road |goto 34.54,85.75 < 10 |c |q 9220
 step
 label "Kill_Eyes_Of_DarKhan"
 kill 5 Eye of Dar'Khan##16320 |q 9220/1 |goto 36.19,81.39
@@ -4980,45 +4376,26 @@ step
 label "Kill_Wailers"
 kill 6 Wailer##16321 |q 9220/3 |goto 36.19,81.39
 step
-Follow the road |goto 35.83,81.16 < 10 |only if walking
-Follow the road |goto 34.37,81.35 < 7 |only if walking
-Run up the stairs |goto 34.09,82.61 < 5 |only if walking
-Run up the stairs |goto 33.84,82.95 < 5 |only if walking
-Enter the building |goto 33.28,82.67 < 5 |walk
-Follow the path down |goto 32.78,82.51 < 3 |walk
-Follow the path |goto 32.57,83.13 < 3 |walk
-Continue following the path |goto 32.26,82.96 < 3 |walk
-Continue following the path |goto 32.11,82.48 < 3 |walk
-Follow the path down |goto 32.24,82.16 < 3 |c |q 9167
-step
-Run down the stairs |goto 32.81,82.32 < 3 |walk
+Run up the stairs |goto 34.10,82.63 < 10 |only if walking
+Enter the building |goto 33.28,82.67 < 10 |walk
 kill Dar'Khan Drathir##16329
 |tip Downstairs inside the building.
 |tip You may need help with this.
 collect Dar'Khan's Head##22653 |q 9167/1 |goto 33.03,81.26
 step
-Leave the building |goto 48.33,31.98 < 3 |walk
-Follow the path |goto 47.31,32.50 < 7 |only if walking
 talk Deathstalker Rathiel##16200
 turnin Wanted: Knucklerot and Luzran##9156 |goto 46.02,33.58
 step
-Follow the path up |goto 48.75,35.35 < 7 |only if walking
-Continue up the path |goto 50.29,37.94 < 7 |only if walking
-Follow the path |goto 51.18,38.09 < 7 |only if walking
-Follow the path down |goto 51.71,38.94 < 7 |only if walking
-Follow the path down |goto 54.81,41.67 < 7 |only if walking
-Follow the path |goto 55.80,46.09 < 7 |only if walking
-Continue following the path |goto 55.88,49.55 < 7 |only if walking
-Run up the stairs |goto 54.77,50.00 < 5 |only if walking
-Enter the building |goto 54.74,49.46 < 5 |walk
+Follow the path up |goto 48.70,35.32 < 15 |only if walking
+Follow the path |goto 55.49,44.67 < 30 |only if walking
+Enter the building |goto 54.75,49.46 < 10 |walk
 talk Magister Kaendris##16239
 |tip Inside the building.
 turnin The Traitor's Destruction##9167 |goto 55.07,48.83
 accept Hero of the Sin'dorei##9328 |goto 55.07,48.83 |only if BloodElf
 accept Friend of the Sin'dorei##9811 |goto 55.07,48.83 |only if not BloodElf
 step
-Run up the ramp |goto 55.46,48.83 < 3 |walk
-Run up the ramp |goto 55.30,48.24 < 3 |walk
+Run up the ramp |goto 55.46,48.83 < 5 |walk
 talk Arcanist Janeda##16240
 |tip Upstairs inside the building.
 turnin Captives at Deatholme##9164 |goto 54.82,48.36
@@ -5028,37 +4405,12 @@ talk Magister Idonis##16204
 turnin War on Deatholme##9220 |goto 54.87,48.55
 turnin Dar'Khan's Lieutenants##9170 |goto 54.87,48.55
 step
-Follow the path |goto 54.90,49.17 < 3 |walk
-Leave the building |goto 54.73,49.51 < 3 |walk
-Follow the path |goto 54.31,49.43 < 5 |only if walking
-Follow the path down |goto 54.35,46.01 < 7 |only if walking
-Follow the path up |goto 55.06,43.37 < 7 |only if walking
-Follow the path up |goto 54.75,41.53 < 7 |only if walking
-Follow the path |goto 51.63,38.93 < 7 |only if walking
-Continue following the path |goto 50.82,37.98 < 7 |only if walking
-Follow the path down |goto 49.95,37.85 < 7 |only if walking
-Follow the path |goto 48.86,35.35 < 7 |only if walking
-Continue following the path |goto 46.66,33.15 < 10 |only if walking
-Follow the path |goto Eversong Woods/0 55.25,50.97 < 7 |c |q 9328
-step
-Run up the stairs |goto 56.40,50.50 < 5 |only if walking
-Follow the path |goto 56.44,50.13 < 5 |only if walking
-Follow the path |goto 56.84,49.45 < 5 |only if walking
-Continue following the path |goto 57.14,49.26 < 5 |only if walking
-Continue following the path |goto Silvermoon City/0 74.06,86.22 < 5 |only if walking
-Follow the path |goto Silvermoon City/0 72.73,85.25 < 5 |only if walking
-Follow the road |goto Silvermoon City/0 72.60,61.17 < 7 |only if walking
-Follow the path |goto Silvermoon City/0 74.47,56.24 < 3 |only if walking
-Follow the path |goto Silvermoon City/0 75.67,58.68 < 5 |only if walking
-Run up the ramp |goto Silvermoon City/0 76.46,55.42 < 5 |only if walking
-Follow the path |goto Silvermoon City/0 75.86,51.94 < 5 |only if walking
-Follow the path |goto Silvermoon City/0 72.83,43.97 < 7 |only if walking
-Continue following the path |goto Silvermoon City/0 71.40,38.17 < 5 |only if walking
-Run up the stairs |goto Silvermoon City/0 68.72,34.60 < 5 |only if walking
-Follow the path |goto Silvermoon City/0 69.04,32.81 < 5 |only if walking
-Continue following the path |goto Silvermoon City/0 66.82,31.06 < 5 |only if walking
-Run up the ramp |goto Silvermoon City/0 63.80,32.35 < 5 |only if walking
-Enter the building |goto Silvermoon City/0 57.52,24.57 < 5 |walk
+Leave the building |goto 54.71,49.52 < 10 |walk
+Follow the path up |goto 55.03,42.70 < 20 |only if walking
+Follow the path |goto Eversong Woods/0 56.67,49.60 < 20 |only if walking
+Follow the path |goto Silvermoon City/0 73.54,59.11 < 20 |only if walking
+Run up the ramp |goto Silvermoon City/0 63.81,32.39 < 15 |only if walking
+Enter the building |goto Silvermoon City/0 57.52,24.57 < 10 |walk
 talk Lor'themar Theron##16802
 |tip Inside the building.
 turnin Hero of the Sin'dorei##9328 |goto Silvermoon City/0 53.82,20.24 |only if BloodElf
@@ -5066,61 +4418,24 @@ turnin Friend of the Sin'dorei##9811 |goto Silvermoon City/0 53.82,20.24 |only i
 accept Envoy to the Horde##9621 |goto Silvermoon City/0 53.82,20.24 |only if BloodElf
 accept Envoy to the Horde##9812 |goto Silvermoon City/0 53.82,20.24 |only if not BloodElf
 step
-Run up the ramp |goto 55.45,18.22 < 3 |walk
-Run up the ramp |goto 54.23,17.04 < 3 |walk
-Follow the path |goto 51.93,18.06 < 3 |walk
-Run up the ramp |goto 51.12,17.75 < 3 |walk
-Run up the ramp |goto 49.78,17.76 < 3 |walk
-Run up the ramp |goto 48.63,15.23 < 3 |walk
-Follow the path |goto 49.36,13.85 < 3 |walk
-Teleport to the Ruins of Lordaeron |goto Tirisfal Glades/0 59.89,67.47 < 10 |c |q 9621 |only if havequest(9621) or completedq(9621)
-Teleport to the Ruins of Lordaeron |goto Tirisfal Glades/0 59.89,67.47 < 10 |c |q 9812 |only if havequest(9812) or completedq(9812)
+Run up the ramp |goto 55.45,18.22 < 5 |walk
+Run up the ramp |goto 51.12,17.75 < 5 |walk
+Teleport to the Ruins of Lordaeron |goto Tirisfal Glades/0 59.89,67.47 < 20 |c |q 9621 |only if havequest(9621) or completedq(9621)
+Teleport to the Ruins of Lordaeron |goto Tirisfal Glades/0 59.89,67.47 < 20 |c |q 9812 |only if havequest(9812) or completedq(9812)
 step
-Follow the path |goto 60.52,67.47 < 5 |only if walking
-Run down the stairs |goto 61.00,67.42 < 5 |only if walking
-Follow the path |goto 61.83,68.81 < 5 |only if walking
-Follow the path |goto 61.95,69.37 < 5 |only if walking
-Continue following the path |goto 62.26,70.05 < 5 |walk
-Continue following the path |goto Undercity/0 67.32,24.78 < 5 |walk
-Follow the path |goto 66.06,26.82 < 5 |walk
-Follow the path |goto 66.03,33.75 < 5 |walk
-Continue following the path |goto 67.31,38.77 < 3 |walk
-Continue following the path |goto 67.88,40.33 < 5 |walk
-Continue following the path |goto 66.52,42.83 < 5 |walk
-Follow the path |goto 66.00,45.70 < 3 |walk
-Follow the path |goto 65.95,50.45 < 3 |walk
-Ride the elevator down |goto 65.91,52.11 < 3 |c |q 9621 |only if havequest(9621) or completedq(9621)
-Ride the elevator down |goto 65.91,52.11 < 3 |c |q 9812 |only if havequest(9812) or completedq(9812)
-step
-Follow the path |goto 65.93,54.83 < 3 |walk
-Follow the path |goto 68.75,53.83 < 5 |walk
-Follow the path |goto 67.62,49.87 < 5 |walk
-Jump down here |goto 63.67,47.95 < 5 |walk
 talk Michael Garrett##4551
 |tip Upstairs inside Undercity.
-fpath Undercity |goto 63.25,48.55
+fpath Undercity |goto Undercity/0 63.25,48.55
 step
-Run down the ramp |goto 65.80,49.25 < 3 |walk
-Jump down here |goto 65.26,45.66 < 3 |walk
-Follow the path |goto 62.09,49.62 < 3 |walk
-Continue following the path |goto 60.63,49.91 < 5 |walk
-Follow the path |goto 57.47,43.95 < 5 |walk
-Follow the path |goto 47.83,46.31 < 5 |walk
-Continue following the path |goto 47.74,50.78 < 5 |walk
-Continue following the path |goto 49.09,58.06 < 5 |walk
-Follow the path |goto 52.35,64.23 < 5 |walk
-Continue following the path |goto 46.28,72.93 < 5 |walk
-Continue following the path |goto 45.26,78.49 < 5 |walk
-Continue following the path |goto 46.22,83.92 < 5 |walk
-Continue following the path |goto 49.02,87.96 < 5 |walk
-Run up the stairs |goto 54.19,90.13 < 5 |walk
-Run up the stairs |goto 56.39,95.63 < 5 |walk
+Cross the bridge |goto 67.79,46.81 < 15 |walk
+Follow the path |goto 65.89,56.68 < 15 |walk
+Follow the path |goto 52.08,64.43 < 10 |walk
 talk Lady Sylvanas Windrunner##10181
 |tip Inside Undercity.
+turnin Envoy to the Horde##9621 |goto 58.05,91.79 |only if havequest(9621) or completedq(9621)
+turnin Envoy to the Horde##9812 |goto 58.05,91.79 |only if havequest(9812) or completedq(9812)
 turnin Journey to Undercity##9177 |goto 58.05,91.79 |only if not BloodElf
 turnin Journey to Undercity##9180 |goto 58.05,91.79 |only if BloodElf
-turnin Envoy to the Horde##9621 |goto Undercity/0 58.05,91.79 |only if havequest(9621) or completedq(9621)
-turnin Envoy to the Horde##9812 |goto Undercity/0 58.05,91.79 |only if havequest(9812) or completedq(9812)
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Classic (10-60)\\Eastern Kingdoms\\Silverpine Forest (10-60)",{
 author="support@zygorguides.com",
@@ -5137,7 +4452,6 @@ talk Grand Executor Mortuus##44615
 turnin Warchief's Command: Silverpine Forest!##26964 |goto Silverpine Forest/0 57.4,10.1 |only if havequest(26964) or completedq(26964)
 accept The Warchief Cometh##26965 |goto Silverpine Forest/0 57.41,10.14
 step
-Follow the path |goto 57.69,9.84 < 10 |only if walking
 talk Bat Handler Maggotbreath##44825
 fpath Forsaken High Command |goto 57.90,8.70
 step
@@ -5148,8 +4462,6 @@ talk Grand Executor Mortuus##44615
 turnin The Warchief Cometh##26965 |goto 57.41,10.14
 accept The Gilneas Liberation Front##26989 |goto 57.41,10.14
 step
-Follow the path |goto 56.80,10.90 < 10 |only if walking
-Follow the road up |goto 56.09,9.36 < 7 |only if walking
 talk High Apothecary Shana T'veen##44784
 accept Guts and Gore##26995 |goto 56.26,8.40
 step
@@ -5158,7 +4470,6 @@ accept Agony Abounds##26992 |goto 56.76,9.19
 stickystart "Collect_Clean_Beast_Guts"
 stickystart "Collect_Ferocious_Doomweed"
 step
-Jump down here |goto 56.90,9.64 < 5 |only if walking
 kill 10 Worgen Renegade##44793 |q 26989/1 |goto 56.69,13.51
 step
 label "Collect_Clean_Beast_Guts"
@@ -5171,19 +4482,17 @@ click Ferocious Doomweed##205099+
 |tip They look like purple and blue spiky plants on the ground around this area.
 collect 8 Ferocious Doomweed##60741 |q 26992/1 |goto 58.00,15.50
 step
-Follow the path |goto 56.92,13.26 < 10 |only if walking
-Continue following the path |goto 56.74,10.76 < 10 |only if walking
-Follow the road up |goto 56.09,9.37 < 7 |only if walking
+talk Grand Executor Mortuus##44615
+turnin The Gilneas Liberation Front##26989 |goto 57.41,10.12
+step
+talk High Apothecary Shana T'veen##44784
+turnin Guts and Gore##26995 |goto 56.27,8.41
+step
 talk Apothecary Witherbloom##44778
 turnin Agony Abounds##26992 |goto 56.77,9.19
 step
 talk High Apothecary Shana T'veen##44784
-turnin Guts and Gore##26995 |goto 56.27,8.41
 accept Iterating Upon Success##26998 |goto 56.27,8.41
-step
-Jump down here |goto 56.90,9.64 < 5 |only if walking
-talk Grand Executor Mortuus##44615
-turnin The Gilneas Liberation Front##26989 |goto 57.41,10.12
 step
 talk Bat Handler Maggotbreath##44825
 Tell him _"I need to take a bat to the Dawning Isles."_
@@ -5194,32 +4503,26 @@ Kill Vile Fin enemies around this area
 |tip They are on the ground around this area as you fly.
 Slay #50# Vile Fin Murlocs |q 26998/2 |goto 76.85,19.66
 step
-Return to Forsaken High Command |goto 57.90,8.95 < 10 |c |q 26998
+Return to Forsaken High Command |goto 57.90,8.95 < 20 |c |notravel |q 26998
 step
-Follow the road up |goto 56.82,7.98 < 7 |only if walking
 talk High Apothecary Shana T'veen##44784
 turnin Iterating Upon Success##26998 |goto 56.27,8.41
 step
-Follow the path |goto 56.87,8.01 < 7 |only if walking
 talk Deathstalker Commander Belmont##44789
 accept Dangerous Intentions##27039 |goto 58.08,8.98
 step
-Follow the path |goto 56.66,12.79 < 10 |only if walking
 click Abandoned Outhouse##205143
 turnin Dangerous Intentions##27039 |goto 53.89,12.96
 accept Waiting to Exsanguinate##27045 |goto 53.89,12.96
 step
-Enter the building |goto 53.40,13.26 < 5 |walk
+Enter the building |goto 53.40,13.26 < 10 |walk
 clicknpc Armoire##44894
 |tip Upstairs inside the building.
 Watch the dialogue
 |tip This quest objective will not complete if you cancel the cinematic.
 Learn of Darius Crowley's Plans |q 27045/1 |goto 53.30,12.56
 step
-Leave the building |goto 53.40,13.26 < 3 |walk
-Follow the path |goto 54.10,13.62 < 10 |only if walking
-Continue following the path |goto 56.25,11.73 < 10 |only if walking
-Continue following the path |goto 56.51,11.11 < 5 |only if walking
+Follow the path |goto 55.14,12.18 < 30 |only if walking
 talk Deathstalker Commander Belmont##44789
 turnin Waiting to Exsanguinate##27045 |goto 58.08,8.99
 accept Belmont's Report##27056 |goto 58.08,8.99
@@ -5228,16 +4531,10 @@ talk Lady Sylvanas Windrunner##44365
 turnin Belmont's Report##27056 |goto 57.37,10.19
 accept The Warchief's Fleet##27065 |goto 57.37,10.19
 step
-Follow the path |goto 57.98,11.53 < 7 |only if walking
-Continue following the path |goto 57.90,12.38 < 10 |only if walking
-Follow the road |goto 55.87,14.58 < 10 |only if walking
-Continue following the road |goto 51.85,22.62 < 10 |only if walking
-Follow the path |goto 48.99,21.63 < 7 |only if walking
-Continue following the path |goto 46.84,20.64 < 10 |only if walking
+Follow the road |goto 55.87,14.58 < 30 |only if walking
 talk Franny Mertz##50463
 fpath Forsaken Rear Guard |goto 45.93,21.87
 step
-Follow the path |goto 45.54,21.28 < 10 |only if walking
 talk Admiral Hatchet##44916
 turnin The Warchief's Fleet##27065 |goto 44.01,21.35
 accept Steel Thunder##27069 |goto 44.01,21.35
@@ -5248,19 +4545,15 @@ step
 talk Apothecary Wormcrud##44912
 accept Playing Dirty##27082 |goto 44.80,20.91
 step
-Enter the building |goto 44.42,20.73 < 5 |walk
+Enter the building |goto 44.42,20.73 < 10 |walk
 talk Commander Hickley##45496
 |tip Inside the building.
 home Forsaken Rear Guard |goto 44.35,20.33 |q 27073
 step
-Leave the building |goto 44.40,20.67 < 3 |walk
-Follow the path |goto 43.81,21.42 < 10 |only if walking
 Kill enemies around this area
 collect 8 Diseased Organ##60793 |q 27082/1 |goto 41.75,18.39
 stickystart "Slay_Bloodfang_Scavengers"
 step
-Follow the path up |goto 41.86,20.72 < 10 |only if walking
-Follow the path |goto 41.75,23.19 < 10 |only if walking
 click Sea Dog Crate##44915+
 |tip They look like small brown and gray boxes with the Horde symbol on them sitting on the ground around this area.
 Recover #5# Sea Dog Crates |q 27069/1 |goto 38.69,27.82
@@ -5268,8 +4561,6 @@ step
 label "Slay_Bloodfang_Scavengers"
 kill 10 Bloodfang Scavenger##44549 |q 27073/1 |goto 39.16,30.08
 step
-Follow the path |goto 40.78,24.78 < 10 |only if walking
-Follow the road |goto 42.33,22.43 < 10 |only if walking
 talk Warlord Torok##44917
 turnin Give 'em Hell!##27073 |goto 44.00,21.29
 step

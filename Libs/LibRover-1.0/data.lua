@@ -4,7 +4,7 @@ addon.LibRoverData = addon.LibRoverData or {}
 local data=addon.LibRoverData
 
 data.version={
-	nodes_version = 203,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
+	nodes_version = 209,  -- Increase this when working on the nodes. Bake the connections using the Debug menu when you're done.
 }
 
 -- These are kept strictly unique. Make up bogus names if you need to.
@@ -779,31 +779,83 @@ data.basenodes.setup = {
 
 -- These zone pairs see directly into each other, as they share "green" borders.
 data.greenborders = {
-	{"Elwynn Forest","Duskwood"},
-	{"Westfall","Duskwood"},
-	{"Eversong Woods","Ghostlands"},
 
-	{"Kelp'thar Forest","Shimmering Expanse"},
-	{"Shimmering Expanse","Abyssal Depths"},
-	{"Abyssal Depths","Kelp'thar Forest"},
+----------------------
+-- EASTERN KINGDOMS --
+----------------------
 
-	{"Tiragarde Sound","Boralus"},
-	{"Zuldazar","Dazar'alor"},
+-- Main Zone Borders
+	{"Elwynn Forest/0","Duskwood/0"},
+	{"Westfall/0","Duskwood/0"},
+	{"Eversong Woods/0","Ghostlands/0"},
+
+-- Ghostlands
+	{"Ghostlands/0","Ghostlands/1"},
+
+
+---------------
+-- CATACLYSM --
+---------------
+
+-- Main Zone Borders
+	{"Kelp'thar Forest/0","Shimmering Expanse/0"},
+	{"Shimmering Expanse/0","Abyssal Depths/0"},
+	{"Abyssal Depths/0","Kelp'thar Forest/0"},
+
+
+------------------------
+-- BATTLE FOR AZEROTH --
+------------------------
+
+-- Main Zone Borders
+	{"Tiragarde Sound/0","Boralus/0"},
+	{"Zuldazar/0","Dazar'alor/0"},
+	{"Drustvar/0","Tiragarde Sound/0"},
+
+-- Dazar'alor
 	{"Dazar'alor/0","Dazar'alor/1"},
 	{"Dazar'alor/0","Dazar'alor/2"},
+	{"Dazar'alor/0","Dazar'alor/3"},
+	{"Dazar'alor/0","Dazar'alor/4"},
 	{"Dazar'alor/1","Dazar'alor/2"},
-	{"Drustvar/0","Tiragarde Sound/0"},
+	{"Dazar'alor/4","Dazar'alor/3"},
+
+-- Tiragarde Sound
 	{"Tiragarde Sound/3","Tiragarde Sound/4"},
 	{"Tiragarde Sound/0","Tiragarde Sound/3"},
 	{"Tiragarde Sound/0","Tiragarde Sound/4"},
 	{"Tiragarde Sound/1","Tiragarde Sound/2"},
 	{"Tiragarde Sound/0","Tiragarde Sound/1"},
 	{"Tiragarde Sound/0","Tiragarde Sound/2"},
+
+-- Stormsong Valley
 	{"Stormsong Valley/0","Stormsong Valley/4"},
 	{"Stormsong Valley/0","Stormsong Valley/1"},
 	{"Stormsong Valley/0","Stormsong Valley/2"},
 	{"Stormsong Valley/1","Stormsong Valley/2"},
+	{"Stormsong Valley/0","Stormsong Valley/3"},
+
+-- Zuldazar
+	{"Zuldazar/0","Zuldazar/4"},
+	{"Zuldazar/0","Zuldazar/1"},
+	{"Zuldazar/0","Zuldazar/2"},
+	{"Zuldazar/1","Zuldazar/2"},
+	{"Zuldazar/0","Zuldazar/3"},
+
+-- Vol'dun
+	{"Vol'dun/0","Vol'dun/1"},
 }
+
+
+
+
+
+
+
+
+
+
+
 
 data.walls = {
 	["Tirisfal Glades"] = {

@@ -173,12 +173,21 @@ function Pointer:Startup()
 		--:RegisterForClicks("AnyUp")
 		:Hide()
 		.__END
+		self.OverlayFrame.WQDebugButton = ZGV.ChainCall(CreateFrame("BUTTON","ZGVPointerDebugButton",worldMap_TargetFrame_UI,"UIPanelButtonTemplate"))
+		:SetPoint("TOP",self.OverlayFrame.PathDebugButton,"BOTTOM")
+		:SetSize(100,30)
+		:SetText("WQ")
+		:SetScript("OnClick",function() ZGV.Testing:ReportMissingWorldQuests() end)
+		--:RegisterForClicks("AnyUp")
+		:Hide()
+		.__END
 
 		if ZGV.db.profile.debug_display then
 			self.OverlayFrame.ZygorCoordsDEV:Show()
 			self.OverlayFrame.LibRoverButton:Show()
 			self.OverlayFrame.PointerDebugButton:Show()
 			self.OverlayFrame.PathDebugButton:Show()
+			self.OverlayFrame.WQDebugButton:Show()
 		end
 	end
 
@@ -1243,38 +1252,14 @@ end
 local insanity=0
 -- makes sure we're not using a waypoint from an old/wrong goal or guide or poi
 function Pointer:ResetWaypointIfOrphaned()
-	--[[ unreachable code
-	local function IsStepVisible(step)
-		for k,sf in ipairs(ZGV.stepframes) do  if sf:IsShown() and sf.step==step then return true end  end
-		return false
-		-- Keep in mind this ACTUALLY checks if the step in question is DISPLAYED. If somehow a step is displayed when it shouldn't, or otherwise, it'll break this. But that would be insane.
-	end
-	--]]
-
 	local way = self.ArrowFrame and self.ArrowFrame.waypoint
 	local goal = way and (way.goal or (way.pathnode and way.pathnode.waypoint and way.pathnode.waypoint.goal))
 	
 	if not goal then return end
+	if goal:IsVisible() then return end
 
-	--[[	--failed attempts' graveyard
-		local guide = step.parentGuide
-		or (guide==ZGV.Poi.Guide and (not ZGV.Poi.ActivePoiStep or ZGV.Poi.ActivePoiStep~=goal.parentStep))  -- this is a goal for a POI, but NOT the currently selected one
-		or (guide~=ZGV.Poi.Guide and (
-			(guide~=ZGV.CurrentGuide) -- well WHAT guide is this goal for!?
-			or (goal.parentStep~=ZGV.CurrentStep and not goal.parentStep.is_sticky)
-		or (goal.parentStep~=
-	--]]
-	if (goal.condition_visible and not goal:IsVisible())  -- it went invisible for whatever reason
-	--or not IsStepVisible(goal.parentStep)
-	or not goal.parentStep.isFocused
-	then
-		insanity=insanity+1
-		if insanity>5 then ZGV:Debug("Pointer keeps resetting! ZGV:ShowWaypoints keeps making a waypoint for a bad goal..?") end
-		self:Debug("Waypoint was orphaned. Euthanize it.")
-		ZGV:ShowWaypoints()  -- make sure this NEVER EVER creates waypoints for bad goals.
-	else
-		insanity=0
-	end
+	ZGV.CurrentStep:CycleWaypoint()
+	ZGV:ShowWaypoints()
 end
 
 function Pointer:UpdateWaypoints()

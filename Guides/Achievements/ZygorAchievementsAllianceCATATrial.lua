@@ -2261,4 +2261,3 @@ step
 label "end"
 Congratulations, you have earned the You'll Feel Right as Rain achievement!
 ]])
-ZGV.BETAEND()

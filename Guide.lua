@@ -190,6 +190,7 @@ function Guide:GetCompletion(mode)
 		or (self.type=="DUNGEONS" and "none")
 		or (self.headerdata and self.headerdata.mounts and "mounts")
 		or (self.headerdata and self.headerdata.pet and "battlepet")
+		or (self.headerdata and self.headerdata.playertitle and "playertitle")
 		or (type(self.condition_end)=="function" and "function_end")
 		or "steps"
 	local mode = mode or self.completionmode
@@ -291,6 +292,8 @@ function Guide:GetCompletion(mode)
 	elseif mode=="battlepet" then
 		local c,m = C_PetJournal.GetNumCollectedInfo(self.headerdata.pet)
 		return c>0 and 1 or 0		
+	elseif mode=="playertitle" then
+		return IsTitleKnown(self.headerdata.playertitle) and 1 or 0		
 	end
 	-- other completions might not need a full parse.
 	return "error","we don't know if this guide completes or not"

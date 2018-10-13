@@ -1144,17 +1144,17 @@ GOALTYPES['equipped'] = {
 		self.target,self.targetid = ParseID(params)
 	end,
 	iscomplete = function(self)
-		if GetItemCount(self.targetid)==0 then return false,false end  -- not even in the bags
+		if GetItemCount(self.targetid or self.itemid)==0 then return false,false,0 end  -- not even in the bags
 		for i,slot in pairs(invslots) do
 			local slotid,_ = GetInventorySlotInfo(slot)
 			if slotid then
 				local id = GetInventoryItemID("player",slotid)
-				if id and id==self.targetid then
-					return true,true  -- equipped!
+				if id and id==(self.targetid or self.itemid) then
+					return true,true,1  -- equipped!
 				end
 			end
 		end
-		return false,true  -- in bags, not equipped
+		return false,true,1  -- in bags, not equipped
 	end,
 	gettext = function(self) return L["stepgoal_equipped"]:format(self.target) end,
 }
@@ -2232,6 +2232,22 @@ GOALTYPES['itemset'] = {
 	end, 
 }
 
+GOALTYPES['playertitle'] = {
+	parse = function(self,params)
+		_,self.titleid = ParseID(params)
+		self.title = GetTitleName(self.titleid):sub(0,-2)
+	end,
+	iscomplete = function(self)
+		return IsTitleKnown(self.titleid),true
+	end,
+	gettext = function(self) return L["stepgoal_title"]:format(COLOR_ITEM(self.title)) end,
+}
+
+GOALTYPES['polish'] = {
+	parse = function(self,params,step)
+		step.polish = true
+	end,
+}
 
 GOALTYPES['image'] = {
 	parse = function(self,params,step)

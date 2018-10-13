@@ -179,7 +179,7 @@ data.basenodes.inns = {
 	},
 	['Eversong Woods']={
 		{name="Falconwing Inn",faction="H",npc="Innkeeper Delaniel",npcid=15433,x=48.1,y=47.7},
-		{name="Fairbreeze Village",faction="H",npc="Thersa Windsong",npcid=8393,x=49.6,y=70.6},
+		{name="Fairbreeze Village",faction="H",npc="Marniel Amberlight",npcid=15397,x=43.67,y=71.32},
 	},
 	['Orgrimmar']={
 		{name="Orgrimmar",faction="H",npc="Innkeeper Gryshka",npcid=6929,x=53.6,y=78.8},

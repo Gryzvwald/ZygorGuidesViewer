@@ -12,7 +12,6 @@
 		<!-- NEUTRAL -->
 		<Script file="Includes\Achievements\N_Achievements_Includes.lua"/>
 		<Script file="Includes\Dailies\N_Dailies_Includes.lua"/>
-		<Script file="Includes\Dailies\N_Events_Includes.lua"/>
 		<Script file="Includes\General\N_General_Includes.lua"/>
 		<Script file="Includes\General\N_Quest_Includes.lua"/>
 		<Script file="Includes\Leveling\N_Garrisons_Includes.lua"/>
@@ -25,7 +24,6 @@
 		<!-- ALLIANCE -->
 		<Script file="Includes\Achievements\A_Achievements_Includes.lua"/>
 		<Script file="Includes\Dailies\A_Dailies_Includes.lua"/>
-		<Script file="Includes\Dailies\A_Events_Includes.lua"/>
 		<Script file="Includes\General\A_General_Includes.lua"/>
 		<Script file="Includes\General\A_Quest_Includes.lua"/>
 		<Script file="Includes\Leveling\A_Garrisons_Includes.lua"/>
@@ -39,7 +37,6 @@
 		<!-- HORDE -->
 		<Script file="Includes\Achievements\H_Achievements_Includes.lua"/>
 		<Script file="Includes\Dailies\H_Dailies_Includes.lua"/>
-		<Script file="Includes\Dailies\H_Events_Includes.lua"/>
 		<Script file="Includes\General\H_General_Includes.lua"/>
 		<Script file="Includes\General\H_Quest_Includes.lua"/>
 		<Script file="Includes\Leveling\H_Garrisons_Includes.lua"/>
@@ -491,6 +488,13 @@
 
 		<Script file="Reputations\ZygorReputationsHordeBFA.lua"/>
 		<Script file="Reputations\ZygorReputationsHordeBFATrial.lua"/>
+
+	<!-- EVENTS -->
+		<Script file="Events\ZygorEventsAlliance.lua"/>
+		<Script file="Events\ZygorEventsAllianceTrial.lua"/>
+
+		<Script file="Events\ZygorEventsHorde.lua"/>
+		<Script file="Events\ZygorEventsHordeTrial.lua"/>
 
 		<!-- GOLD -->
 		<Script file="Gold\CraftingTablesScrolls.lua" />

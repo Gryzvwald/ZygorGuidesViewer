@@ -51,6 +51,7 @@ PetBattle.petType = {
 --I know these could be done without listing out the 1-10, just easier to see which number corresponds to each type.
 
 PetBattle.AbilityModifer = {
+	[0]= { strong=0, weak=0, }, -- fallback for typeless abilities
 	--Human does 50% more damage to Dragonkin and 33% less to Beast
 	[1]= { strong=2, weak=8, },
 	[2]= { strong=6,  weak=4, },
@@ -283,11 +284,12 @@ function PetBattle:MainFrameUpdate()
 				ability:SetText(link.."|cffff0000".." is available")
 			end
 
-			local modifers = p.AbilityModifer[abilityPetType]
+			local modifers = p.AbilityModifer[abilityPetType or 0]
 			local strongcolor="|cffffffff"
 			local weakcolor="|cffffffff"
 			if modifers.strong==userTypeNum then strongcolor="|cffff0000" elseif modifers.weak==userTypeNum then weakcolor="|cff00ff00" end
-			local effect=strongcolor.."\nExtra damage to "..ptype[modifers.strong].."."..weakcolor.."\nReduced damage to "..ptype[modifers.weak]..".|r"
+			local effect = ""
+			if abilityPetType then effect=strongcolor.."\nExtra damage to "..ptype[modifers.strong].."."..weakcolor.."\nReduced damage to "..ptype[modifers.weak]..".|r" end
 
 			abilitylabel:SetText("|cffFFE87C"..text.."|r"..effect)
 
@@ -387,7 +389,7 @@ function PetBattle:EnemyFrameUpdate()
 
 					ability:SetText(ability:GetText().." |T"..icon..":0|t "..link)
 
-					local modifers = p.AbilityModifer[abilityPetType]
+					local modifers = p.AbilityModifer[abilityPetType or 0]
 
 					ability:SetScript("OnHyperlinkClick",function(self,link)
 						FloatingPetBattleAbilityTooltip:Hide()--Hide any old ones
@@ -544,6 +546,7 @@ function PetBattle:AllyFrameUpdate()
 end
 
 local function IsDamageAbility(description,abilityType)
+	if not abilityType then return false end
 	local text=description
 
 	if not text then return end

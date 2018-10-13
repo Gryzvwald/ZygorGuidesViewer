@@ -138,6 +138,12 @@ ZGVP.tradeskills = {
 		[74] = {name="Northrend Cooking", skill=2546},
 		[73] = {name="Outland Cooking", skill=2547},
 		[72] = {name="Cooking", skill=2548},
+		[64] = {name="Way of the Grill", skill=975},
+		[65] = {name="Way of the Wok", skill=976},
+		[66] = {name="Way of the Pot", skill=977},
+		[67] = {name="Way of the Steamer", skill=978},
+		[68] = {name="Way of the Oven", skill=979},
+		[69] = {name="Way of the Brew", skill=980},
 	}},
 	[356] = {name="Fishing",subs={
 		[1114] = {name="Zandalari Fishing", skill=2585},

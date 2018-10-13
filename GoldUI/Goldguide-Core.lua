@@ -198,7 +198,7 @@ function Goldguide:Update()
 	if tab=="Gathering" then 
 		if results==0 then
 			if #Goldguide.Chores.Gathering==0 then
-				resultstatus = L["gold_gathering_no_results"]
+				resultstatus = L["gold_gathering_no_results"]..L["gold_general_open_window1"]
 			else
 				local type = Goldguide.Gathering_Frame.TypeDropdown:GetCurrentSelectedItem():GetText()
 				local profstrings = "" 
@@ -207,6 +207,7 @@ function Goldguide:Update()
 				for k,prof in pairs(gatheringprofs) do
 					local skill=ZGV.Professions:GetSkill(prof).level
 					if skill>0 then 
+						print("add")
 						profstrings = profstrings .. "\n" .. L["gold_gathering_error_prof"]:format(prof,skill)
 					end
 				end
@@ -214,15 +215,18 @@ function Goldguide:Update()
 				if type~="All" then
 					local level = ZGV.Professions:GetSkill(type).level
 					if level==0 then
-						resultstatus = L["gold_gathering_error_one_noskillin"]:format(type,profstrings)
+						resultstatus = L["gold_gathering_error_one_noskillin"]:format(type) .. L["gold_general_open_window1"]
+						if profstrings~="" then
+							resultstatus = resultstatus..L["gold_gathering_error_one_noskillin_skills"]:format(profstrings)
+						end
 					else
 						resultstatus = L["gold_gathering_error_one_noresults"]:format(type)
 					end
 				else
 					if profstrings~="" then
-						resultstatus = L["gold_gathering_error_one_nothing"]:format(profstrings)
+						resultstatus = L["gold_gathering_error_one_nothing"]:format(profstrings) .. L["gold_general_open_window2"]
 					else
-						resultstatus = L["gold_gathering_error_all_noprofessions"]
+						resultstatus = L["gold_gathering_error_all_noprofessions"] .. L["gold_general_open_window1"]
 					end
 				end
 			end

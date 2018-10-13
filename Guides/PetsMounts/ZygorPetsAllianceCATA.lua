@@ -4808,7 +4808,7 @@ description="This guide will walk you through obtaining the Flying pet: Plump Tu
 model={45968},
 pet=201,
 },[[
-#include "Pilgrim's_Bounty_Dailies"
+leechsteps "Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Daily Quests"
 step
 Check your mailbox for your Turkey Cage.
 collect Turkey Cage##44810
@@ -5670,9 +5670,9 @@ Click here for directions to the vendor |confirm |next "vendor"
 Click here for our guide on getting the Coins of Ancestry |confirm |next "coins"
 step
 label "coins"
-#include "Lunar_Festival_Main_Quests"
-step
-#include "Lunar_Festival_Elder_Paths"
+Continuing...
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Main Questline"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Optimized Elders Path"
 step
 label "vendor"
 talk Valadar Starsong##15864
@@ -5712,9 +5712,9 @@ Click here for directions to the vendor |confirm |next "vendor"
 Click here for our guide on getting the Coins of Ancestry |confirm |next "coins"
 step
 label "coins"
-#include "Lunar_Festival_Main_Quests"
-step
-#include "Lunar_Festival_Elder_Paths"
+Continuing...
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Main Questline"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Optimized Elders Path"
 step
 label "vendor"
 talk Valadar Starsong##15864

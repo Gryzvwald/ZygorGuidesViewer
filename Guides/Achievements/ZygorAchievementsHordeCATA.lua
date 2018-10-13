@@ -1197,6 +1197,166 @@ Defeat Eadric with His Own Hammer |achieve 3803 |goto Trial of the Champion 51.3
 step
 Congratulations, you have earned The Faceroller achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Glory of the Hero",{
+achieveid={2136},
+description="This guide will walk you through getting the Glory of the Hero achievement.",
+},[[
+step
+Load the "On The Rocks" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\On The Rocks"
+|tip Click the line above to load the guide.
+Earn the "On The Rocks" Achievement |achieve 2136/1
+step
+Load the "Split Personality" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Split Personality"
+|tip Click the line above to load the guide.
+Earn the "Split Personality" Achievement |achieve 2136/2
+step
+Load the "Intense Cold" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Intense Cold"
+|tip Click the line above to load the guide.
+Earn the "Intense Cold" Achievement |achieve 2136/3
+step
+Load the "Chaos Theory" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Chaos Theory"
+|tip Click the line above to load the guide.
+Earn the "Chaos Theory" Achievement |achieve 2136/4
+step
+Load the "Watch Him Die" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Watch Him Die"
+|tip Click the line above to load the guide.
+Earn the "Watch Him Die" Achievement |achieve 2136/5
+step
+Load the "Hadronox Denied" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Hadronox Denied"
+|tip Click the line above to load the guide.
+Earn the "Hadronox Denied" Achievement |achieve 2136/6
+step
+Load the "Gotta Go!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Gotta Go!"
+|tip Click the line above to load the guide.
+Earn the "Gotta Go!" Achievement |achieve 2136/7
+step
+Load the "Volazj's Quick Demise" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Volazj's Quick Demise"
+|tip Click the line above to load the guide.
+Earn the "Volazj's Quick Demise" Achievement |achieve 2136/8
+step
+Load the "Respect Your Elders" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Respect Your Elders"
+|tip Click the line above to load the guide.
+Earn the "Respect Your Elders" Achievement |achieve 2136/9
+step
+Load the "Volunteer Work" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Volunteer Work"
+|tip Click the line above to load the guide.
+Earn the "Volunteer Work" Achievement |achieve 2136/10
+step
+Load the "Consumption Junction" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Consumption Junction"
+|tip Click the line above to load the guide.
+Earn the "Consumption Junction" Achievement |achieve 2136/11
+step
+Load the "Better Off Dred" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Better Off Dred"
+|tip Click the line above to load the guide.
+Earn the "Better Off Dred" Achievement |achieve 2136/12
+step
+Load the "Oh Novos!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Oh Novos!"
+|tip Click the line above to load the guide.
+Earn the "Oh Novos!" Achievement |achieve 2136/13
+step
+Load the "Defenseless" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Defenseless"
+|tip Click the line above to load the guide.
+Earn the "Defenseless" Achievement |achieve 2136/14
+step
+Load the "Lockdown!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Lockdown!"
+|tip Click the line above to load the guide.
+Earn the "Lockdown!" Achievement |achieve 2136/15
+step
+Load the "Dehydration" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Dehydration"
+|tip Click the line above to load the guide.
+Earn the "Dehydration" Achievement |achieve 2136/16
+step
+Load the "A Void Dance" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\A Void Dance"
+|tip Click the line above to load the guide.
+Earn the "A Void Dance" Achievement |achieve 2136/17
+step
+Load the "What the Eck?" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\What the Eck?"
+|tip Click the line above to load the guide.
+Earn the "What the Eck?" Achievement |achieve 2136/18
+step
+Load the "Share The Love" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Share The Love"
+|tip Click the line above to load the guide.
+Earn the "Share The Love" Achievement |achieve 2136/19
+step
+Load the "Less-rabi" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Less-rabi"
+|tip Click the line above to load the guide.
+Earn the "Less-rabi" Achievement |achieve 2136/20
+step
+Load the "Snakes. Why'd It Have To Be Snakes?" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Snakes. Why'd It Have To Be Snakes?"
+|tip Click the line above to load the guide.
+Earn the "Snakes. Why'd It Have To Be Snakes?" Achievement |achieve 2136/21
+step
+Load the "Good Grief" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Good Grief"
+|tip Click the line above to load the guide.
+Earn the "Good Grief" Achievement |achieve 2136/22
+step
+Load the "Brann Spankin' New" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Brann Spankin' New"
+|tip Click the line above to load the guide.
+Earn the "Brann Spankin' New" Achievement |achieve 2136/23
+step
+Load the "Abuse the Ooze" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Abuse the Ooze"
+|tip Click the line above to load the guide.
+Earn the "Abuse the Ooze" Achievement |achieve 2136/24
+step
+Load the "Timely Death" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Timely Death"
+|tip Click the line above to load the guide.
+Earn the "Timely Death" Achievement |achieve 2136/25
+step
+Load the "Lightning Struck" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Lightning Struck"
+|tip Click the line above to load the guide.
+Earn the "Lightning Struck" Achievement |achieve 2136/26
+step
+Load the "Shatter Resistant" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Shatter Resistant"
+|tip Click the line above to load the guide.
+Earn the "Shatter Resistant" Achievement |achieve 2136/27
+step
+Load "The Culling of Time" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\The Culling of Time"
+|tip Click the line above to load the guide.
+Earn "The Culling of Time" Achievement |achieve 2136/28
+step
+Load the "Zombiefest!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Zombiefest!"
+|tip Click the line above to load the guide.
+Earn the "Zombiefest!" Achievement |achieve 2136/29
+step
+Load the "The Incredible Hulk" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\The Incredible Hulk"
+|tip Click the line above to load the guide.
+Earn the "The Incredible Hulk" Achievement |achieve 2136/30
+step
+Load the "Lodi Dodi We Loves the Skadi" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Lodi Dodi We Loves the Skadi"
+|tip Click the line above to load the guide.
+Earn the "Lodi Dodi We Loves the Skadi" Achievement |achieve 2136/31
+step
+Load the "My Girl Loves to Skadi All the Time" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\My Girl Loves to Skadi All the Time"
+|tip Click the line above to load the guide.
+Earn the "My Girl Loves to Skadi All the Time" Achievement |achieve 2136/32
+step
+Load the "King's Bane" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\King's Bane"
+|tip Click the line above to load the guide.
+Earn the "King's Bane" Achievement |achieve 2136/33
+step
+Load the "Experienced Drake Rider" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Experienced Drake Rider"
+|tip Click the line above to load the guide.
+Earn the "Experienced Drake Rider" Achievement |achieve 2136/34
+step
+Load the "Make It Count" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Make It Count"
+|tip Click the line above to load the guide.
+Earn the "Make It Count" Achievement |achieve 2136/35
+step
+Load the "Ruby Void" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Ruby Void"
+|tip Click the line above to load the guide.
+Earn the "Ruby Void" Achievement |achieve 2136/36
+step
+Load the "Emerald Void" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Emerald Void"
+|tip Click the line above to load the guide.
+Earn the "Emerald Void" Achievement |achieve 2136/37
+step
+Load the "Amber Void" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Amber Void"
+|tip Click the line above to load the guide.
+Earn the "Amber Void" Achievement |achieve 2136/38
+step
+_Congratulations!_
+You Earned the "Glory of the Hero" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Good Grief",{
 achieveid={1866},
 description="This guide will walk you through getting the Good Grief achievement.",
@@ -4655,6 +4815,126 @@ step
 _Congratulations!_
 You Earned the "Faster Than the Speed of Light" Achievement.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Glory of the Cataclysm Hero",{
+achieveid={4845},
+description="This guide will walk you through getting the Glory of the Cataclysm Hero achievement.",
+},[[
+step
+Load the "Cataclysm Dungeon Hero" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon Hero"
+|tip Click the line above to load the guide.
+Earn the "Cataclysm Dungeon Hero" Achievement |achieve 4845/1
+step
+Load the "Crushing Bones and Cracking Skulls" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Crushing Bones and Cracking Skulls"
+|tip Click the line above to load the guide.
+Earn the "Crushing Bones and Cracking Skulls" Achievement |achieve 4845/2
+step
+Load the "Arrested Development" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Arrested Development"
+|tip Click the line above to load the guide.
+Earn the "Arrested Development" Achievement |achieve 4845/3
+step
+Load the "Too Hot to Handle" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Too Hot to Handle"
+|tip Click the line above to load the guide.
+Earn the "Too Hot to Handle" Achievement |achieve 4845/4
+step
+Load the "Ascendant Descending" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Ascendant Descending"
+|tip Click the line above to load the guide.
+Earn the "Ascendant Descending" Achievement |achieve 4845/5
+step
+Load the "Old Faithful" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Old Faithful"
+|tip Click the line above to load the guide.
+Earn the "Old Faithful" Achievement |achieve 4845/6
+step
+Load the "Prince of Tides" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Prince of Tides"
+|tip Click the line above to load the guide.
+Earn the "Prince of Tides" Achievement |achieve 4845/7
+step
+Load the "Rotten to the Core" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Rotten to the Core"
+|tip Click the line above to load the guide.
+Earn the "Rotten to the Core" Achievement |achieve 4845/8
+step
+Load the "No Static at All" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\No Static at All"
+|tip Click the line above to load the guide.
+Earn the "No Static at All" Achievement |achieve 4845/9
+step
+Load the "Extra Credit Bonus Stage" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Extra Credit Bonus Stage"
+|tip Click the line above to load the guide.
+Earn the "Extra Credit Bonus Stage" Achievement |achieve 4845/10
+step
+Load the "Kill It With Fire!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Kill It With Fire!"
+|tip Click the line above to load the guide.
+Earn the "Killing It With Fire!" Achievement |achieve 4845/11
+step
+Load the "Acrocalypse Now" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Acrocalypse Now"
+|tip Click the line above to load the guide.
+Earn the "Acrocalypse Now" Achievement |achieve 4845/12
+step
+Load the "Headed South" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Headed South"
+|tip Click the line above to load the guide.
+Earn the "Headed South" Achievement |achieve 4845/13
+step
+Load the "I Hate That Song" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\I Hate That Song"
+|tip Click the line above to load the guide.
+Earn the "I Hate That Song" Achievement |achieve 4845/14
+step
+Load the "Straw That Broke the Camel's Back" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Straw That Broke the Camel's Back"
+|tip Click the line above to load the guide.
+Earn the "Straw That Broke the Camel's Back" Achievement |achieve 4845/15
+step
+Load the "Sun of a...." guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Sun of a...."
+|tip Click the line above to load the guide.
+Earn the "Sun of a...." Achievement |achieve 4845/16
+step
+Load the "Faster Than the Speed of Light" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Faster Than the Speed of Light"
+|tip Click the line above to load the guide.
+Earn the "Faster Than the Speed of Light" Achievement |achieve 4845/17
+step
+Load the "Umbrage for Umbriss" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Umbrage for Umbriss"
+|tip Click the line above to load the guide.
+Earn the "Umbrage for Umbriss" Achievement |achieve 4845/18
+step
+Load the "Ready for Raiding" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Ready for Raiding"
+|tip Click the line above to load the guide.
+Earn the "Ready for Raiding" Achievement |achieve 4845/19
+step
+Load the "Rat Pack" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Rat Pack"
+|tip Click the line above to load the guide.
+Earn the "Rat Pack" Achievement |achieve 4845/20
+step
+Load the "Prototype Prodigy" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Prototype Prodigy"
+|tip Click the line above to load the guide.
+Earn the "Prototype Prodigy" Achievement |achieve 4845/21
+step
+Load the "It's Frost Damage" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\It's Frost Damage"
+|tip Click the line above to load the guide.
+Earn the "It's Frost Damage" Achievement |achieve 4845/22
+step
+Load the "I'm on a Diet" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\I'm on a Diet"
+|tip Click the line above to load the guide.
+Earn the "I'm on a Diet" Achievement |achieve 4845/23
+step
+Load the "Vigorous VanCleef Vindicator" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Vigorous VanCleef Vindicator"
+|tip Click the line above to load the guide.
+Earn the "Vigorous VanCleef Vindicator" Achievement |achieve 4845/24
+step
+Load the "Pardon Denied" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Classic\\Pardon Denied"
+|tip Click the line above to load the guide.
+Earn the "Pardon Denied" Achievement |achieve 4845/25
+step
+Load the "To the Ground!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Classic\\To the Ground!"
+|tip Click the line above to load the guide.
+Earn the "To the Ground!" Achievement |achieve 4845/26
+step
+Load the "Bullet Time" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Bullet Time"
+|tip Click the line above to load the guide.
+Earn the "Bullet Time" Achievement |achieve 4845/27
+step
+Load the "Don't Need to Break Eggs to Make an Omelet" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Don't Need to Break Eggs to Make an Omelet"
+|tip Click the line above to load the guide.
+Earn the "Don't Need to Break Eggs to Make an Omelet" Achievement |achieve 4845/28
+step
+_Congratulations!_
+You Earned the "Glory of the Cataclysm Hero" Achievement.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Gurubashi Headhunter",{
 achieveid={5744},
 description="This guide will walk you through how to get the Gurubashi Headhunter achievement.",
@@ -5677,6 +5957,19 @@ Heroic: Lord Rhyolith |achieve 5808 |goto Firelands 65.3,75.0
 step
 Congratulations, you have earned the Heroic: Lord Rhyolith achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Madness of Deathwing",{
+achieveid={6116},
+description="Defeat Deathwing in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by defeating _Deathwing in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Deathwing##53879
+Heroic: Madness of Deathwing |achieve 6116 |goto Dragon Soul/7 47.8,53.8
+step
+_Congratulations!_
+You Earned the "Heroic: Madness of Deathwing" Achievement
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Magmaw",{
 achieveid={5094},
 description="This guide will walk you through how to get the Heroic: Magmaw achievement.",
@@ -5712,6 +6005,19 @@ kill Maloriak##41378
 Heroic: Maloriak |achieve 5108 |goto Blackwing Descent/2 71.4,70.2
 step
 Congratulations, you have earned the Heroic: Maloriak achievement!
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Morchok",{
+achieveid={6109},
+description="Defeat Morchok in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by defeating _Morchok in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Morchok##55265
+Heroic: Morchok |achieve 6109 |goto Dragon Soul 50.3,69.2
+step
+_Congratulations!_
+You Earned the "Heroic: Morchok" Achievement
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Nefarian",{
 achieveid={5116},
@@ -5775,6 +6081,32 @@ Heroic: Sinestra |achieve 5121 |goto The Bastion of Twilight/3 49.0,34.2
 step
 Congratulations, you have earned the Heroic: Sinestra achievement!
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Spine of Deathwing",{
+achieveid={6115},
+description="Complete the Spine of Deathwing encounter in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by completing the _Spine of Deathwing encounter in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Deathwing##53879
+Heroic: Spine of Deathwing |achieve 6115 |goto Dragon Soul/6 33.2,85.2
+step
+_Congratulations!_
+You Earned the "Heroic: Spine of Deathwing" Achievement
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Ultraxion",{
+achieveid={6113},
+description="Defeat Ultraxion in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by defeating _Ultraxion in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Ultraxion##55294
+Heroic: Ultraxion |achieve 6113 |goto Dragon Soul 50.0,45.8
+step
+_Congratulations!_
+You Earned the "Heroic: Ultraxion" Achievement
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Valiona and Theralion",{
 achieveid={5117},
 description="This guide will walk you through how to get the Heroic: Valiona and Theralion achievement.",
@@ -5785,6 +6117,60 @@ kill Valiona##45992, Theralion##45993
 Heroic: Valiona and Theralion |achieve 5117 |goto The Bastion of Twilight 53.9,78.4
 step
 Congratulations, you have earned the Heroic: Valiona and Theralion achievement!
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Warlord Zon'ozz",{
+achieveid={6110},
+description="Defeat Warlord Zon'ozz in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by defeating _Warlord Zon'ozz in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Warlord Zon'ozz##55308
+Heroic: Warlord Zon'ozz |achieve 6110 |goto Dragon Soul/2 50.9,53.0
+step
+_Congratulations!_
+You Earned the "Heroic: Warlord Zon'ozz" Achievement
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Warmaster Blackhorn",{
+achieveid={6114},
+description="Defeat Warmaster Blackhorn in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by defeating _Warmaster Blackhorn in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Warmaster Blackhorn##56427
+Heroic: Warmaster Blackhorn |achieve 6114 |goto Dragon Soul/5 48.3,16.8
+step
+_Congratulations!_
+You Earned the "Heroic: Warmaster Blackhorn" Achievement
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Yor'sahj the Unsleeping",{
+achieveid={6111},
+description="Defeat Yor'sahj the Unsleeping in the Dragon Soul raid on Heroic Difficulty.",
+},[[
+step
+This achievement is gained by defeating _Yor'sahj the Unsleeping in Dragon Soul on Heroic Difficulty_
+|tip Use our raid guides to accomplish this.
+kill Yor'sahj the Unsleeping##55312
+Heroic: Yor'sahj the Unsleeping |achieve 6111 |goto Dragon Soul/3 46.8,49.9
+step
+_Congratulations!_
+You Earned the "Heroic: Yor'sahj the Unsleeping" Achievement
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Holding Hands",{
+achieveid={6175},
+description="Destroy the final Crystal Conductor during Hagara's lightning phase on Normal or Heroic Difficulty, while all players are part of the final Lightning Conduit.",
+},[[
+step
+This achievement is gained by _destroying the final Crystal Conductor during Hagara's lightning phase_ on Normal or Heroic Difficulty
+|tip This achievement cannot be done solo unless you have a pet. It is also easier on Heroic because of the extra cystal conductors.
+|tip Weaken Hagara to 85% and wait for the Lightning Phase to start. A Bound Lightning Elemental will spawn, kill it near one of the Crystal Conductors to charge it.
+|tip You and your friend/pet must stand between two conductors so the lightning channels through you and moves to the next conductor. Repeat this process until all conductors are changed and you'll get the achievement.
+kill Hagara the Stormbinder##55689
+Holding Hands |achieve 6175 |goto Dragon Soul/4 52.7,52.0
+step
+_Congratulations!_
+You Earned the "Holding Hands" Achievement
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Keeping it in the Family",{
 achieveid={4849},
@@ -20249,819 +20635,3 @@ step
 Congratulations!
 You have earned the Triumphant Turtle Tossing achievement!
 ]])
-ZGV.BETASTART()
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Madness of Deathwing",{
-achieveid={6116},
-description="Defeat Deathwing in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by defeating _Deathwing in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Deathwing##53879
-Heroic: Madness of Deathwing |achieve 6116 |goto Dragon Soul/7 47.8,53.8
-step
-_Congratulations!_
-You Earned the "Heroic: Madness of Deathwing" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Morchok",{
-achieveid={6109},
-description="Defeat Morchok in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by defeating _Morchok in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Morchok##55265
-Heroic: Morchok |achieve 6109 |goto Dragon Soul 50.3,69.2
-step
-_Congratulations!_
-You Earned the "Heroic: Morchok" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Spine of Deathwing",{
-achieveid={6115},
-description="Complete the Spine of Deathwing encounter in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by completing the _Spine of Deathwing encounter in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Deathwing##53879
-Heroic: Spine of Deathwing |achieve 6115 |goto Dragon Soul/6 33.2,85.2
-step
-_Congratulations!_
-You Earned the "Heroic: Spine of Deathwing" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Ultraxion",{
-achieveid={6113},
-description="Defeat Ultraxion in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by defeating _Ultraxion in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Ultraxion##55294
-Heroic: Ultraxion |achieve 6113 |goto Dragon Soul 50.0,45.8
-step
-_Congratulations!_
-You Earned the "Heroic: Ultraxion" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Warlord Zon'ozz",{
-achieveid={6110},
-description="Defeat Warlord Zon'ozz in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by defeating _Warlord Zon'ozz in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Warlord Zon'ozz##55308
-Heroic: Warlord Zon'ozz |achieve 6110 |goto Dragon Soul/2 50.9,53.0
-step
-_Congratulations!_
-You Earned the "Heroic: Warlord Zon'ozz" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Warmaster Blackhorn",{
-achieveid={6114},
-description="Defeat Warmaster Blackhorn in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by defeating _Warmaster Blackhorn in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Warmaster Blackhorn##56427
-Heroic: Warmaster Blackhorn |achieve 6114 |goto Dragon Soul/5 48.3,16.8
-step
-_Congratulations!_
-You Earned the "Heroic: Warmaster Blackhorn" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Heroic: Yor'sahj the Unsleeping",{
-achieveid={6111},
-description="Defeat Yor'sahj the Unsleeping in the Dragon Soul raid on Heroic Difficulty.",
-},[[
-step
-This achievement is gained by defeating _Yor'sahj the Unsleeping in Dragon Soul on Heroic Difficulty_
-|tip Use our raid guides to accomplish this.
-kill Yor'sahj the Unsleeping##55312
-Heroic: Yor'sahj the Unsleeping |achieve 6111 |goto Dragon Soul/3 46.8,49.9
-step
-_Congratulations!_
-You Earned the "Heroic: Yor'sahj the Unsleeping" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Raid\\Holding Hands",{
-achieveid={6175},
-description="Destroy the final Crystal Conductor during Hagara's lightning phase on Normal or Heroic Difficulty, while all players are part of the final Lightning Conduit.",
-},[[
-step
-This achievement is gained by _destroying the final Crystal Conductor during Hagara's lightning phase_ on Normal or Heroic Difficulty
-|tip This achievement cannot be done solo unless you have a pet. It is also easier on Heroic because of the extra cystal conductors.
-|tip Weaken Hagara to 85% and wait for the Lightning Phase to start. A Bound Lightning Elemental will spawn, kill it near one of the Crystal Conductors to charge it.
-|tip You and your friend/pet must stand between two conductors so the lightning channels through you and moves to the next conductor. Repeat this process until all conductors are changed and you'll get the achievement.
-kill Hagara the Stormbinder##55689
-Holding Hands |achieve 6175 |goto Dragon Soul/4 52.7,52.0
-step
-_Congratulations!_
-You Earned the "Holding Hands" Achievement
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Glory to the Hero",{
-achieveid={2136},
-description="This guide will walk you through getting the Glory to the Hero achievement.",
-},[[
-step
-Load the "On The Rocks" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\On The Rocks"
-|tip Click the line above to load the guide.
-Earn the "On The Rocks" Achievement |achieve 2136/1
-step
-Load the "Split Personality" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Split Personality"
-|tip Click the line above to load the guide.
-Earn the "Split Personality" Achievement |achieve 2136/2
-step
-Load the "Intense Cold" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Intense Cold"
-|tip Click the line above to load the guide.
-Earn the "Intense Cold" Achievement |achieve 2136/3
-step
-Load the "Chaos Theory" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Chaos Theory"
-|tip Click the line above to load the guide.
-Earn the "Chaos Theory" Achievement |achieve 2136/4
-step
-Load the "Watch Him Die" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Watch Him Die"
-|tip Click the line above to load the guide.
-Earn the "Watch Him Die" Achievement |achieve 2136/5
-step
-Load the "Hadronox Denied" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Hadronox Denied"
-|tip Click the line above to load the guide.
-Earn the "Hadronox Denied" Achievement |achieve 2136/6
-step
-Load the "Gotta Go!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Gotta Go!"
-|tip Click the line above to load the guide.
-Earn the "Gotta Go!" Achievement |achieve 2136/7
-step
-Load the "Volazj's Quick Demise" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Volazj's Quick Demise"
-|tip Click the line above to load the guide.
-Earn the "Volazj's Quick Demise" Achievement |achieve 2136/8
-step
-Load the "Respect Your Elders" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Respect Your Elders"
-|tip Click the line above to load the guide.
-Earn the "Respect Your Elders" Achievement |achieve 2136/9
-step
-Load the "Volunteer Work" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Volunteer Work"
-|tip Click the line above to load the guide.
-Earn the "Volunteer Work" Achievement |achieve 2136/10
-step
-Load the "Consumption Junction" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Consumption Junction"
-|tip Click the line above to load the guide.
-Earn the "Consumption Junction" Achievement |achieve 2136/11
-step
-Load the "Better Off Dred" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Better Off Dred"
-|tip Click the line above to load the guide.
-Earn the "Better Off Dred" Achievement |achieve 2136/12
-step
-Load the "Oh Novos!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Oh Novos!"
-|tip Click the line above to load the guide.
-Earn the "Oh Novos!" Achievement |achieve 2136/13
-step
-Load the "Defenseless" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Defenseless"
-|tip Click the line above to load the guide.
-Earn the "Defenseless" Achievement |achieve 2136/14
-step
-Load the "Lockdown!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Lockdown!"
-|tip Click the line above to load the guide.
-Earn the "Lockdown!" Achievement |achieve 2136/15
-step
-Load the "Dehydration" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Dehydration"
-|tip Click the line above to load the guide.
-Earn the "Dehydration" Achievement |achieve 2136/16
-step
-Load the "A Void Dance" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\A Void Dance"
-|tip Click the line above to load the guide.
-Earn the "A Void Dance" Achievement |achieve 2136/17
-step
-Load the "What the Eck?" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\What the Eck?"
-|tip Click the line above to load the guide.
-Earn the "What the Eck?" Achievement |achieve 2136/18
-step
-Load the "Share The Love" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Share The Love"
-|tip Click the line above to load the guide.
-Earn the "Share The Love" Achievement |achieve 2136/19
-step
-Load the "Less-rabi" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Less-rabi"
-|tip Click the line above to load the guide.
-Earn the "Less-rabi" Achievement |achieve 2136/20
-step
-Load the "Snakes. Why'd It Have To Be Snakes?" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Snakes. Why'd It Have To Be Snakes?"
-|tip Click the line above to load the guide.
-Earn the "Snakes. Why'd It Have To Be Snakes?" Achievement |achieve 2136/21
-step
-Load the "Good Grief" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Good Grief"
-|tip Click the line above to load the guide.
-Earn the "Good Grief" Achievement |achieve 2136/22
-step
-Load the "Brann Spankin' New" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Brann Spankin' New"
-|tip Click the line above to load the guide.
-Earn the "Brann Spankin' New" Achievement |achieve 2136/23
-step
-Load the "Abuse the Ooze" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Abuse the Ooze"
-|tip Click the line above to load the guide.
-Earn the "Abuse the Ooze" Achievement |achieve 2136/24
-step
-Load the "Timely Death" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Timely Death"
-|tip Click the line above to load the guide.
-Earn the "Timely Death" Achievement |achieve 2136/25
-step
-Load the "Lightning Struck" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Lightning Struck"
-|tip Click the line above to load the guide.
-Earn the "Lightning Struck" Achievement |achieve 2136/26
-step
-Load the "Shatter Resistant" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Shatter Resistant"
-|tip Click the line above to load the guide.
-Earn the "Shatter Resistant" Achievement |achieve 2136/27
-step
-Load "The Culling of Time" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\The Culling of Time"
-|tip Click the line above to load the guide.
-Earn "The Culling of Time" Achievement |achieve 2136/28
-step
-Load the "Zombiefest!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Zombiefest!"
-|tip Click the line above to load the guide.
-Earn the "Zombiefest!" Achievement |achieve 2136/29
-step
-Load the "The Incredible Hulk" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\The Incredible Hulk"
-|tip Click the line above to load the guide.
-Earn the "The Incredible Hulk" Achievement |achieve 2136/30
-step
-Load the "Lodi Dodi We Loves the Skadi" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Lodi Dodi We Loves the Skadi"
-|tip Click the line above to load the guide.
-Earn the "Lodi Dodi We Loves the Skadi" Achievement |achieve 2136/31
-step
-Load the "My Girl Loves to Skadi All the Time" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\My Girl Loves to Skadi All the Time"
-|tip Click the line above to load the guide.
-Earn the "My Girl Loves to Skadi All the Time" Achievement |achieve 2136/32
-step
-Load the "King's Bane" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\King's Bane"
-|tip Click the line above to load the guide.
-Earn the "King's Bane" Achievement |achieve 2136/33
-step
-Load the "Experienced Drake Rider" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Experienced Drake Rider"
-|tip Click the line above to load the guide.
-Earn the "Experienced Drake Rider" Achievement |achieve 2136/34
-step
-Load the "Make It Count" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Make It Count"
-|tip Click the line above to load the guide.
-Earn the "Make It Count" Achievement |achieve 2136/35
-step
-Load the "Ruby Void" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Ruby Void"
-|tip Click the line above to load the guide.
-Earn the "Ruby Void" Achievement |achieve 2136/36
-step
-Load the "Emerald Void" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Emerald Void"
-|tip Click the line above to load the guide.
-Earn the "Emerald Void" Achievement |achieve 2136/37
-step
-Load the "Amber Void" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Lich King Dungeon\\Amber Void"
-|tip Click the line above to load the guide.
-Earn the "Amber Void" Achievement |achieve 2136/38
-step
-_Congratulations!_
-You Earned the "Glory to the Hero" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Glory to the Cataclysm Hero",{
-achieveid={4845},
-description="This guide will walk you through getting the Glory to the Cataclysm Hero achievement.",
-},[[
-step
-Load the "Cataclysm Dungeon Hero" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon Hero"
-|tip Click the line above to load the guide.
-Earn the "Cataclysm Dungeon Hero" Achievement |achieve 4845/1
-step
-Load the "Crushing Bones and Cracking Skulls" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Crushing Bones and Cracking Skulls"
-|tip Click the line above to load the guide.
-Earn the "Crushing Bones and Cracking Skulls" Achievement |achieve 4845/2
-step
-Load the "Arrested Development" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Arrested Development"
-|tip Click the line above to load the guide.
-Earn the "Arrested Development" Achievement |achieve 4845/3
-step
-Load the "Too Hot to Handle" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Too Hot to Handle"
-|tip Click the line above to load the guide.
-Earn the "Too Hot to Handle" Achievement |achieve 4845/4
-step
-Load the "Ascendant Descending" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Ascendant Descending"
-|tip Click the line above to load the guide.
-Earn the "Ascendant Descending" Achievement |achieve 4845/5
-step
-Load the "Old Faithful" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Old Faithful"
-|tip Click the line above to load the guide.
-Earn the "Old Faithful" Achievement |achieve 4845/6
-step
-Load the "Prince of Tides" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Prince of Tides"
-|tip Click the line above to load the guide.
-Earn the "Prince of Tides" Achievement |achieve 4845/7
-step
-Load the "Rotten to the Core" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Rotten to the Core"
-|tip Click the line above to load the guide.
-Earn the "Rotten to the Core" Achievement |achieve 4845/8
-step
-Load the "No Static at All" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\No Static at All"
-|tip Click the line above to load the guide.
-Earn the "No Static at All" Achievement |achieve 4845/9
-step
-Load the "Extra Credit Bonus Stage" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Extra Credit Bonus Stage"
-|tip Click the line above to load the guide.
-Earn the "Extra Credit Bonus Stage" Achievement |achieve 4845/10
-step
-Load the "Kill It With Fire!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Kill It With Fire!"
-|tip Click the line above to load the guide.
-Earn the "Killing It With Fire!" Achievement |achieve 4845/11
-step
-Load the "Acrocalypse Now" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Acrocalypse Now"
-|tip Click the line above to load the guide.
-Earn the "Acrocalypse Now" Achievement |achieve 4845/12
-step
-Load the "Headed South" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Headed South"
-|tip Click the line above to load the guide.
-Earn the "Headed South" Achievement |achieve 4845/13
-step
-Load the "I Hate That Song" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\I Hate That Song"
-|tip Click the line above to load the guide.
-Earn the "I Hate That Song" Achievement |achieve 4845/14
-step
-Load the "Straw That Broke the Camel's Back" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Straw That Broke the Camel's Back"
-|tip Click the line above to load the guide.
-Earn the "Straw That Broke the Camel's Back" Achievement |achieve 4845/15
-step
-Load the "Sun of a...." guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Sun of a...."
-|tip Click the line above to load the guide.
-Earn the "Sun of a...." Achievement |achieve 4845/16
-step
-Load the "Faster Than the Speed of Light" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Faster Than the Speed of Light"
-|tip Click the line above to load the guide.
-Earn the "Faster Than the Speed of Light" Achievement |achieve 4845/17
-step
-Load the "Umbrage for Umbriss" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Umbrage for Umbriss"
-|tip Click the line above to load the guide.
-Earn the "Umbrage for Umbriss" Achievement |achieve 4845/18
-step
-Load the "Ready for Raiding" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Ready for Raiding"
-|tip Click the line above to load the guide.
-Earn the "Ready for Raiding" Achievement |achieve 4845/19
-step
-Load the "Rat Pack" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Rat Pack"
-|tip Click the line above to load the guide.
-Earn the "Rat Pack" Achievement |achieve 4845/20
-step
-Load the "Prototype Prodigy" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Prototype Prodigy"
-|tip Click the line above to load the guide.
-Earn the "Prototype Prodigy" Achievement |achieve 4845/21
-step
-Load the "It's Frost Damage" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\It's Frost Damage"
-|tip Click the line above to load the guide.
-Earn the "It's Frost Damage" Achievement |achieve 4845/22
-step
-Load the "I'm on a Diet" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\I'm on a Diet"
-|tip Click the line above to load the guide.
-Earn the "I'm on a Diet" Achievement |achieve 4845/23
-step
-Load the "Vigorous VanCleef Vindicator" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Vigorous VanCleef Vindicator"
-|tip Click the line above to load the guide.
-Earn the "Vigorous VanCleef Vindicator" Achievement |achieve 4845/24
-step
-Load the "Pardon Denied" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Classic\\Pardon Denied"
-|tip Click the line above to load the guide.
-Earn the "Pardon Denied" Achievement |achieve 4845/25
-step
-Load the "To the Ground!" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Classic\\To the Ground!"
-|tip Click the line above to load the guide.
-Earn the "To the Ground!" Achievement |achieve 4845/26
-step
-Load the "Bullet Time" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Bullet Time"
-|tip Click the line above to load the guide.
-Earn the "Bullet Time" Achievement |achieve 4845/27
-step
-Load the "Don't Need to Break Eggs to Make an Omelet" guide |confirm |next "Zygor's Achievement Guides\\Dungeons & Raids\\Cataclysm Dungeon\\Don't Need to Break Eggs to Make an Omelet"
-|tip Click the line above to load the guide.
-Earn the "Don't Need to Break Eggs to Make an Omelet" Achievement |achieve 4845/28
-step
-_Congratulations!_
-You Earned the "Glory to the Cataclysm Hero" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Power Overwhelming",{
-achieveid={6717},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Power","Overwhelming"},
-description="This guilde will walk you through obtaining the Power Overwhelming Achievement.",
-},[[
-step
-kill Protector Kaolan##60583
-|tip It will take 3 weeks to earn this achievement.
-|tip Kill them last for credit.
-Slay Protector Kaolan Last During the Protectors of the Endless Encounter |achieve 6717/1
-step
-kill Elder Regail##60585
-|tip It will take 3 weeks to earn this achievement.
-|tip Kill them last for credit.
-Slay Elder Regail Last During the Protectors of the Endless Encounter |achieve 6717/2
-step
-kill Elder Asani##60586
-|tip It will take 3 weeks to earn this achievement.
-|tip Kill them last for credit.
-Earn the "Power Overwhelming" Achievement |achieve 6717/3
-step
-_Congratulations!_
-You Earned the "Power Overwhelming" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Dungeon\\School's Out Forever",{
-achieveid={6821},
-keywords={"Pandaria","Dungeon","Heroic","Scholomance","School's","Out","Forever"},
-description="This guilde will walk you through obtaining the School's Out Forever Achievement.",
-},[[
-step
-kill Darkmaster Gandling##59080
-|tip You will need a group of five for this.
-|tip He will cast Harsh Lesson on a party member.
-|tip Eventually, he will cast it again on another party member.
-|tip When all five group members have been teleported, kill the Expired Test Subjects quickly.
-|tip Group up in the center room if you are having trouble killing them.
-Earn the "School's Out Forever" Achievement |achieve 6821/1
-step
-_Congratulations!_
-You Earned the "School's Out Forever" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\The Mind-Killer",{
-achieveid={6825},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","The","Mind-Killer"},
-description="This guilde will walk you through obtaining The Mind-Killer Achievement.",
-},[[
-step
-kill Sha of Fear##60999
-|tip Stand in in the Light Wall at all times.
-|tip When the Crossbowmen are spawned, avoid them and their Dread Bolt spell.
-|tip DPS the Sha of Fear as quickly as possible.
-Earn "The Mind-Killer" Achievement |achieve 6825
-step
-_Congratulations!_
-You Earned "The Mind-Killer" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Face Clutchers",{
-achieveid={6824},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Face","Clutchers"},
-description="This guilde will walk you through obtaining the Face Clutchers Achievement.",
-},[[
-step
-kill Lei Shi##62983
-|tip During the encounter, jump into the water surrounding the platform Lei Shi is on.
-|tip Parasitioid Sha will cast Parasitic Clutch on you.
-|tip Make sure you aren't mounted in any way before starting the encounter.
-Get the Parasitic Clutch Buff |havebuff 136174 |achieve 6824
-|tip Once you have Parasitic Clutch buff, kill Lei Shi.
-|tip Avoid using AoE spells as they could accidentally kill the parasite.
-|tip Use a pet or another player to stand on the platform so Lei Shi doesn't despawn.
-Earn the "Face Clutchers" Achievement |achieve 6824
-step
-_Congratulations!_
-You Earned the "Face Clutchers" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Who's Got Two Green Thumbs?",{
-achieveid={6933},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Who's","Got","Two","Green","Thumbs?"},
-description="This guilde will walk you through obtaining the Who's Got Two Green Thumbs? Achievement.",
-},[[
-step
-kill Tsulong##62442
-|tip During the encounter, a NPC named Enchanted Plant spawns.
-|tip It takes damage during the Night Phase of the encounter.
-|tip Keep it healed up.
-|tip Kill Tsulong with the tree intact.
-Earn the "Who Has Two Green Thumbs?" Achievement |achieve 6933
-step
-_Congratulations!_
-You Earned the "Who Has Two Green Thumbs?" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Timing is Everything",{
-achieveid={6922},
-keywords={"Pandaria","Raid","Heart","of","Fear","Timing","is","Everything"},
-description="This guilde will walk you through obtaining the Timing is Everything Achievement.",
-},[[
-step
-kill 2 Kor'thik Reaver##63591+
-|tip Kill them within 10 seconds of each other.
-kill Grand Empress Shek'zeer##62837
-Earn the "Timing is Everything" Achievement |achieve 6922
-step
-_Congratulations!_
-You Earned the "Timing is Everything" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\I Heard You Like Amber...",{
-achieveid={6518},
-keywords={"Pandaria","Raid","Heart","of","Fear","I","Heard","You","Like","Amber..."},
-description="This guilde will walk you through obtaining the Timing is Everything Achievement.",
-},[[
-step
-kill 8 Living Amber##62691
-|tip You will need at least one other person in your group for this.
-|tip Don't touch the boss until you stack 8 pools.
-|tip Use raid markers to designate an area to kill the Oozes.
-|tip The player who is transformed must not consume any amber.
-kill Amber-Shaper Un'sok##62511
-Earn the "I Heard You Like Amber..." Achievement |achieve 6518
-step
-_Congratulations!_
-You Earned the "I Heard You Like Amber..." Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Less Than Three",{
-achieveid={6683},
-keywords={"Pandaria","Raid","Heart","of","Fear","Less","Than","Three"},
-description="This guilde will walk you through obtaining the Less Than Three Achievement.",
-},[[
-step
-kill Wind Lord Mel'jarak##62397
-|tip Kill him without using more than 2 crowd controlling mechanics on swarms.
-|tip Kill an Amber Shaper, then the boss.
-Earn the "Less Than Three" Achievement |achieve 6683
-step
-_Congratulations!_
-You Earned the "Less Than Three" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Like an Arrow to the Face",{
-achieveid={6553},
-keywords={"Pandaria","Raid","Heart","of","Fear","Like","an","Arrow","to","the","Face"},
-description="This guilde will walk you through obtaining the Like an Arrow to the Face Achievement.",
-},[[
-step
-kill Garalon##62164
-|tip Kill Garalon without destroying any of his legs.
-|tip Use single target dps abilities to accomplish this.
-|tip Be sure to remove any items that cause AoE damage.
-Earn the "Like an Arrow to the Face" Achievement |achieve 6553
-step
-_Congratulations!_
-You Earned the "Like an Arrow to the Face" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Candle in the Wind",{
-achieveid={6936},
-keywords={"Pandaria","Raid","Heart","of","Fear","Candle","in","the","Wind"},
-description="This guilde will walk you through obtaining the Candle in the Wind Achievement.",
-},[[
-step
-kill Blade Lord Ta'yak##62543
-|tip When Blade Lord Ta'yak is at 20% health, go to the center of the room and click one of the braziers.
-|tip Then, follow the wind and light the two torches at the end of the room.
-|tip Go back to the center of the room and click the brazier again.
-|tip Then, go against the wind and light the two torches at the end of the room.
-|tip Kill Blade Lord Ta'yak after for the achivement.
-Earn the "Candle in the Wind" Achievement |achieve 6936
-step
-_Congratulations!_
-You Earned the "Candle in the Wind" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Overzealous",{
-achieveid={6936},
-keywords={"Pandaria","Raid","Heart","of","Fear","Overzealous"},
-description="This guilde will walk you through obtaining the Overzealous Achievement.",
-},[[
-step
-kill Imperial Vizier Zor'lok##62980
-|tip Everyone in the raid will need to be afflicted with the Zealous Parasite debuff.
-|tip To get the debuff, slowly damage him until he moves to the 3rd platform.
-|tip Loot the bug on the ground for the debuff before killing Imperial Vizier Zor'lok.
-Earn the "Overzealous" Achievement |achieve 6937
-step
-_Congratulations!_
-You Earned the "Overzealous" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Show Me Your Moves!",{
-achieveid={6455},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","Show","Me","Your","Moves!"},
-description="This guilde will walk you through obtaining the Show Me Your Moves! Achievement.",
-},[[
-step
-kill Jan-xi##60400
-|tip Avoid being hit by the boss's combos.
-|tip Pay attention to the blue lines from the boss to know which way to avoid the combos.
-|tip There will be a Center Slash which you need to be directly behind him to avoid.
-|tip The Left Slash attacks players on the left, so move out of the radius.
-|tip The Rich Arch lines means you need to be away from the right side.
-|tip For Stomp, you need to be in the range of stomp in order for credit.
-|tip Stomp will appear as an "X".
-|tip If you did it correctly, you will gain access to the Opportunistic Strike ability.
-|tip Hit the boss with it then kill him.
-Earn the "Show Me Your Moves!" Achievement |achieve 6455
-step
-_Congratulations!_
-You Earned the "Show Me Your Moves!" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\And... It's Good!",{
-achieveid={7933},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","And...","It's","Good!"},
-description="This guilde will walk you through obtaining the And... It's Good! Achievement.",
-},[[
-step
-kill Elegon##60410
-|tip Ignore the boss.
-|tip Keep one Mogu'shan Warden alive.
-|tip Have the Mogu'shan Warden face the console.
-|tip Stand on the console.
-|tip If you are max level, sit to ensure that you get hit.
-Earn the "And... It's Good!" Achievement |achieve 7933
-step
-_Congratulations!_
-You Earned the "And... It's Good!" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\Pandaria Raid\\Straight Six",{
-achieveid={6686},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","Straight","Six"},
-description="This guilde will walk you through obtaining the Straight Six Achievement.",
-},[[
-step
-kill Elegon##60410
-|tip Damage Elegon until the encounter enters the pillar stage.
-|tip Kill six Empyreal Focuses within 10 seconds of each other, then kill Elegon.
-Earn the "Straight Six" Achievement |achieve 6686
-step
-_Congratulations!_
-You Earned the "Straight Six" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Getting Hot In Here",{
-achieveid={6687},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","Getting","Hot","In","Here"},
-description="This guilde will walk you through obtaining the Getting Hot In Here Achievement.",
-},[[
-step
-Defeat the Spirit Kings
-|tip You will need a full group to accomplish this.
-|tip Stand together and wait for Pillage to be cast on the raid.
-|tip Once you are under the affects of Pillage, use /target Subtai the Swift follow by /dance.
-|tip Once preformed, beat the encounter.
-|tip Note that everyone in the raid will need to do this for credit.
-Earn the "Getting Hot In Here" Achievement |achieve 6687
-step
-_Congratulations!_
-You Earned the "Getting Hot In Here" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Sorry, Were You Looking for This?",{
-achieveid={7056},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","Sorry","Were","You","Looking","for","This?"},
-description="This guilde will walk you through obtaining the Sorry, Were You Looking for This? Achievement.",
-},[[
-step
-kill Gara'jal the Spiritbinder##60143
-|tip During the encounter, activate the Ancient Mogu Artifact to earn this achievement.
-|tip You need at least 5 players, at least one with a pet that can taunt.
-|tip Have the pet set to passive, then move it on top of the boss for it to gain aggro.
-|tip No one should heal the pet.
-|tip The rest will be on standby for the Spirit Totems.
-|tip 4 Players, specifically ones who aren't controlling the pets, should move into range of the totems.
-|tip Once in range, kill they will kill the totems, entering the Spirit Realm.
-|tip The players in the spirit realm must then click the artifacts at the center of the room.
-Earn the "Sorry, Were You Looking for This?" Achievement |achieve 7056
-step
-_Congratulations!_
-You Earned the "Sorry, Were You Looking for This?" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Anything You Can Do, I Can Do Better...",{
-achieveid={6674},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","Anything","You","Can","Do","I","Can","Do","Better"},
-description="This guilde will walk you through obtaining the Anything You Can Do, I Can Do Better... Achievement.",
-},[[
-step
-kill Feng the Accursed##60009
-|tip Remove any item that passive attacks the enemy before starting.
-|tip You need 2 tanks in the group, with a proper tank specialization on each as well as one addition group member.
-|tip Have a tank remove their weapon and auto attack the boss, pulling it to face the center of the room.
-|tip Have a designated person that isn't the second tank stand behind the first.
-|tip When the Blue Diamond appears, the second tank will click it.
-|tip This tank will mimic two moves during the first phase.
-|tip When the boss uses Epicenter, use your action button on the first tank to gain the ability.
-|tip Then, run up to the boss and use Epicenter.
-|tip Next, the boss will use Lightning Fist aimed at the 1st tank.
-|tip It will pass through and hit the person who was supposed to be behind the tank, that person will be stunned if done correctly.
-|tip The stunned person gains Lightning Fist, and should move to the boss and use it.
-|tip Next, have the unarmed tank damage the boss to 65% health.
-|tip Tank 2 will channel Wild Fire Spark from the player being targeted by the boss.
-|tip Once you gain the ability, use it on the boss.
-|tip Once that is done, damage the boss to 30% health.
-|tip Tank 2 will channel Arcane Resonance from the targeted player.
-|tip Run up to the boss and use this once you attain it.
-|tip Tank 2 then channels Arcane Velocity from Tank 1 when the boss uses the ability.
-|tip Run up to the boss and use this on him once you attain it.
-|tip After all of that, kill the boss.
-Earn the "Anything You Can Do, I Can Do Better..." Achievement |achieve 6674
-step
-_Congratulations!_
-You Earned the "Anything You Can Do, I Can Do Better..." Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Must Love Dogs",{
-achieveid={6823},
-keywords={"Pandaria","Raid","Mogu'shan","Vaults","Must","Love","Dogs"},
-description="This guilde will walk you through obtaining the Must Love Dogs Achievement.",
-},[[
-step
-Kill the Stone Guard encounter
-|tip Defeat this encounter while accompanied by a dog battle pet.
-|tip Use the Perky Pug, Core Hound Pup, Fox Kit or Crate of Kidnapped Puppies to accomplish this.
-|tip If a raid member dies, they must be battle ressed AND resummon their battle pet or the achievement will fail.
-Earn the "Must Love Dogs" Achievement |achieve 6823
-step
-_Congratulations!_
-You Earned the "Must Love Dogs" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Lei Shi",{
-achieveid={6733},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Lei","Shi"},
-description="This guilde will walk you through obtaining the Heroic: Lei Shi Achievement.",
-},[[
-step
-kill Lei Shi##62983
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Lei Shi" Achievement |achieve 6733 |goto Terrace of Endless Spring 58.6,48.6
-step
-_Congratulations!_
-You Earned the "Heroic: Lei Shi" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Tsulong",{
-achieveid={6732},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Tsulong"},
-description="This guilde will walk you through obtaining the Heroic: Tsulong Achievement.",
-},[[
-step
-kill Tsulong##62442
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Tsulong" Achievement |achieve 6732 |goto Terrace of Endless Spring 78.5,48.9
-step
-_Congratulations!_
-You Earned the "Heroic: Tsulong" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Protectors of the Endless",{
-achieveid={6731},
-keywords={"Pandaria","Raid","Terrace","of","Endless","Springs","Heroic","Protectors","of","the","Endless"},
-description="This guilde will walk you through obtaining the Heroic: Protectors of the Endless Achievement.",
-},[[
-step
-kill Elder Regail##60585
-kill Elder Asani##60586
-kill Protector Kaolan##60583
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Protectors of the Endless" Achievement |achieve 6731 |goto Terrace of Endless Spring 78.5,48.9
-step
-_Congratulations!_
-You Earned the "Heroic: Protectors of the Endless" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Gamon Will Save Us!",{
-achieveid={8448},
-keywords={"Pandaria","Raid","Seige","of","Orgrimmar","Gamon","Will","Save","Us!"},
-description="This guilde will walk you through obtaining the Gamon Will Save Us! Achievement.",
-},[[
-step
-kill General Nazgrim##71515
-|tip You will need to unchain Gamon before going to the General Nazgrim encounter.
-|tip He is chained up at a giant tree near the entrance to "The Drag".
-|tip Once you free him, run ahead of him and kill anything that would otherwise attack him.
-|tip Burst General Nazgrim down as fast as possible.
-Earn the "Gamon Will Save Us!" Achievement |achieve 8448
-step
-_Congratulations!_
-You Earned the "Gamon Will Save Us!" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Imperial Vizier Zor'lok",{
-achieveid={6725},
-keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Imperial","Vizier","Zor'lok"},
-description="This guilde will walk you through obtaining the Heroic: Imperial Vizier Zor'lok Achievement.",
-},[[
-step
-kill Imperial Vizier Zor'lok##62980
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Imperial Vizier Zor'lok" Achievement |achieve 6725
-step
-_Congratulations!_
-You Earned the "Heroic: Imperial Vizier Zor'lok" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Blade Lord Ta'yak",{
-achieveid={6726},
-keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Blade","Lord","Ta'yak"},
-description="This guilde will walk you through obtaining the Heroic: Blade Lord Ta'yak Achievement.",
-},[[
-step
-kill Blade Lord Ta'yak##62543
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Blade Lord Ta'yak" Achievement |achieve 6726
-step
-_Congratulations!_
-You Earned the "Heroic: Blade Lord Ta'yak" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Garalon",{
-achieveid={6727},
-keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Garalon"},
-description="This guilde will walk you through obtaining the Heroic: Garalon Achievement.",
-},[[
-step
-kill Garalon##62164
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Garalon" Achievement |achieve 6727
-step
-_Congratulations!_
-You Earned the "Heroic: Garalon" Achievement.
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Achievement Guides\\Dungeons & Raids\\\\Pandaria Raid\\Heroic: Wind Lord Mel'jarak",{
-achieveid={6728},
-keywords={"Pandaria","Raid","Heart","of","Fear","Heroic","Wind","Lord","Mel'jarak"},
-description="This guilde will walk you through obtaining the Heroic: Wind Lord Mel'jarak Achievement.",
-},[[
-step
-kill Wind Lord Mel'jarak##62397
-|tip Right click your character portrait and set the raid difficulty to "Heroic" before entering the raid to accomplish this.
-Earn the "Heroic: Wind Lord Mel'jarak" Achievement |achieve 6728
-step
-_Congratulations!_
-You Earned the "Heroic: Wind Lord Mel'jarak" Achievement.
-]])
-ZGV.BETAEND()

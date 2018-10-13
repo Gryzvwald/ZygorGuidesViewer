@@ -25,22 +25,6 @@ Your character had a personal rating within 100 points of the team's rating
 Your character had to have played in at least 20% of the team's total games played
 Your character had to be max level for that time
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Burning Crusade Titles\\Player versus Player\\Challenger",{
-author="support@zygorguides.com",
-},[[
-step
-This title is gained by finishing a PvP season in the top 35% of of the arena ladder
-You must also have at least 50 games won for the season
-achieve 2090
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Burning Crusade Titles\\Player versus Player\\Duelist",{
-author="support@zygorguides.com",
-},[[
-step
-This title is gained by finishing a PvP season in the top 3% of of the arena ladder
-You must also have at least 50 games won for the season
-achieve 2092
-]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Burning Crusade Titles\\Player versus Player\\Justicar",{
 author="support@zygorguides.com",
 },[[
@@ -61,14 +45,6 @@ Your team was ranked #1 in the 3v3 or 5v5 bracket
 Your character had a personal rating within 100 points of the team's rating
 Your character had to have played in at least 20% of the team's total games played
 Your character had to be max level for that time
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Burning Crusade Titles\\Player versus Player\\Rival",{
-author="support@zygorguides.com",
-},[[
-step
-This title is gained by finishing a PvP season in the top 10% of of the arena ladder
-You must also have at least 50 games won for the season
-achieve 2093
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Burning Crusade Titles\\Player versus Player\\Vengeful Gladiator",{
 author="support@zygorguides.com",
@@ -3060,24 +3036,21 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\
 keywords={"Elder"},
 author="support@zygorguides.com",
 },[[
-step
-#include "Lunar_Festival_Achievements"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Achievements"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Main Questline",{
 keywords={"Elder"},
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the main questline for the Lunar Festival event.",
 },[[
-step
-#include "Lunar_Festival_Main_Quests"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Main Questline"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Elder\\Lunar Festival Optimized Elders Path",{
 keywords={"Elder"},
 author="support@zygorguides.com",
 description="This guide section will walk you through an optimized path for honoring the elders that are spread out all over Azeroth for the Lunar Festival event. The 13 elders that are inside instances are not included in this guide section. Using this guide section, you will collect 62 of the total 75 Coins of Ancestry.",
 },[[
-step
-#include "Lunar_Festival_Elder_Paths"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Optimized Elders Path"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Flame Warden\\Midsummer Fire Festival Achievements",{
 keywords={"Flame, Warden"},
@@ -3487,37 +3460,36 @@ author="support@zygorguides.com",
 description="This guide section will walk you through completing the achievements for the Hallow's End event.",
 keywords={"The, Hallowed"},
 },[[
-#include "Hallow's_End_Achievements"
+leechsteps "Zygor's Events Guides\\Hallow's End\\Hallow's End Achievements"
+leechsteps "Zygor's Events Guides\\Hallow's End\\Hallow's End Achievements (Pandaria)"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Dailies",{
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the daily quests for the Hallow's End event.",
 keywords={"The, Hallowed"},
 },[[
-#include "Hallow's_End_Dailies"
+leechsteps "Zygor's Events Guides\\Hallow's End\\Hallow's End Dailies"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\The Hallowed\\Hallow's End Quests",{
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the quests for the Hallow's End event.",
 keywords={"The, Hallowed"},
 },[[
-#include "Hallow's_End_Quests"
+leechsteps "Zygor's Events Guides\\Hallow's End\\Hallow's End Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Achievements",{
 keywords={"Fool"},
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the Love is in the Air event achievements.",
 },[[
-step
-#include "LiitA_Achievements"
+leechsteps "Zygor's Events Guides\\Love is in the Air\\Love is in the Air Achievements"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Dailies",{
 keywords={"Fool"},
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the Love is in the Air even daily quests.",
 },[[
-step
-#include "LiitA_Dailies"
+leechsteps "Zygor's Events Guides\\Love is in the Air\\Love is in the Air Dailies"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\The Love Fool\\Love is in the Air Main Questline",{
 keywords={"Fool"},
@@ -3525,8 +3497,7 @@ author="support@zygorguides.com",
 next="Zygor's Alliance Event Guides\\Love is in the Air (February 7th - 20th)\\Love is in the Air Dailies",
 description="This guide section will walk you through completing the main questline for the Love is in the Air event.",
 },[[
-step
-#include "LiitA_Main_Questline"
+leechsteps "Zygor's Events Guides\\Love is in the Air\\Love is in the Air Main Questline"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Achievements",{
 keywords={"Matron"},
@@ -3534,8 +3505,7 @@ author="support@zygorguides.com",
 startlevel=10,
 description="This guide section will walk you through completing the Achievements for the Children's Week event.",
 },[[
-step
-#include "Children's_Week_Achievements"
+leechsteps "Zygor's Events Guides\\Children's Week\\Children's Week Achievements"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Dalaran Oracles Quests",{
 keywords={"Matron"},
@@ -3543,8 +3513,7 @@ author="support@zygorguides.com",
 startlevel=70,
 description="This guide section will walk you through completing the Dalaran Oracles questline for the Children's Week event.",
 },[[
-step
-#include "Children's_Week_Oracles_Quests"
+leechsteps "Zygor's Events Guides\\Children's Week\\Children's Week Dalaran Oracles Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Dalaran Wolvar Quests",{
 keywords={"Matron"},
@@ -3552,8 +3521,7 @@ author="support@zygorguides.com",
 startlevel=70,
 description="This guide section will walk you through completing the Dalaran Wolvar questline for the Children's Week event.",
 },[[
-step
-#include "Children's_Week_Wolvar_Quests"
+leechsteps "Zygor's Events Guides\\Children's Week\\Children's Week Dalaran Wolvar Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Shattrath Quests",{
 keywords={"Matron"},
@@ -3561,8 +3529,7 @@ author="support@zygorguides.com",
 startlevel=60,
 description="This guide section will walk you through completing the Shattrath questline for the Children's Week event.",
 },[[
-step
-#include "Children's_Week_Shattrath"
+leechsteps "Zygor's Events Guides\\Children's Week\\Children's Week Shattrath Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Matron/Patron\\Children's Week Stormwind Quests",{
 keywords={"Matron"},
@@ -3570,14 +3537,13 @@ author="support@zygorguides.com",
 startlevel=60,
 description="This guide section will walk you through completing the Stormwind questline for the Children's Week event.",
 },[[
-step
-#include "Children's_Week_Stormwind"
+leechsteps "Zygor's Events Guides\\Children's Week\\Children's Week Stormwind Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Merrymaker\\Feast of Winter Veil Achievements",{
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the achievements for the Feast of Winter Veil event.",
 },[[
-#include "FoWV_Achievements"
+leechsteps "Zygor's Events Guides\\Feast of Winter Veil\\Feast of Winter Veil Achievements"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\World Events\\Merrymaker\\Feast of Winter Veil Quests",{
 author="support@zygorguides.com",
@@ -3660,7 +3626,7 @@ ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Wrath of the Lich King Titles\\
 author="support@zygorguides.com",
 description="This title is earned by completing the following achievements:\n\"I Found One!\"\n\"Chocoholic\"\n\"Desert Rose\"\n\"Blushing Bride\"\n\"Hard Boiled\"\n\"Spring Fling\"\n\"Noble Garden\"\n\"Shake Your Bunny-Maker\"",
 },[[
-#include "Noblegarden_Achievements"
+leechsteps "Zygor's Events Guides\\Noblegarden\\Noblegarden Achievements"
 step
 Congratulations, you have earned The Noble title!
 ]])
@@ -3669,7 +3635,7 @@ keywords={"The, Pilgrim"},
 author="support@zygorguides.com",
 description="This quide will help run through the Pilgrims Bounty Dailies and Achievements to earn the Title Pilgrim.",
 },[[
-#include "Pilgrim's_Bounty_Dailies"
+leechsteps "Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Daily Quests"
 step
 Congratulations! You have earned the Title Pilgrim!
 ]])
@@ -3678,7 +3644,7 @@ keywords={"The, Pilgrim"},
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the quests for the Pilgrim's Bounty event, as well as getting your Cooking skill from 1-300.",
 },[[
-#include "Pilgrim's_Bounty_Quests"
+leechsteps "Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Quests and Cooking 1-300 Guide"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Cataclysm Titles\\Dungeons & Raids\\Blackwing's Bane",{
 author="support@zygorguides.com",

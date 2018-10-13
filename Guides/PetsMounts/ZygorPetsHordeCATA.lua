@@ -3952,9 +3952,8 @@ description="This guide will walk you through obtaining the Flying pet: Plump Tu
 model={45968},
 pet=201,
 },[[
-#include "Pilgrim's_Bounty_Quests"
-#include "Pilgrim's_Bounty_Achievements"
-#include "Pilgrim's_Bounty_Dailies"
+leechsteps "Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Quests"
+leechsteps "Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Achievements and Dailies"
 step
 Check your _mailbox_ for your _prize_!
 collect 1 Turkey Cage##44810
@@ -5236,9 +5235,9 @@ Click here for directions to the vendor |confirm |next "vendor"
 Click here for our guide on getting the Coins of Ancestry |confirm |next "coins"
 step
 label "coins"
-#include "Lunar_Festival_Main_Quests"
-step
-#include "Lunar_Festival_Elder_Paths"
+Continuing...
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Main Questline"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Optimized Elders Path"
 step
 label "vendor"
 talk Valadar Starsong##15864
@@ -5276,9 +5275,9 @@ Click here for directions to the vendor |confirm |next "vendor"
 Click here for our guide on getting the Coins of Ancestry |confirm |next "coins"
 step
 label "coins"
-#include "Lunar_Festival_Main_Quests"
-step
-#include "Lunar_Festival_Elder_Paths"
+Continuing...
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Main Questline"
+leechsteps "Zygor's Events Guides\\Lunar Festival\\Lunar Festival Optimized Elders Path"
 step
 label "vendor"
 talk Valadar Starsong##15864
@@ -5899,8 +5898,7 @@ pet=321,
 step
 This pet can only be obtained during the Hallow's End festival
 Click here to continue |confirm
-step
-#include "Hallow's_End_Quests"
+leechsteps "Zygor's Events Guides\\Hallow's End\\Hallow's End Quests"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Pets & Mounts Guide\\Battle Pets\\Undead Pets\\Fossilized Hatchling",{
 author="support@zygorguides.com",

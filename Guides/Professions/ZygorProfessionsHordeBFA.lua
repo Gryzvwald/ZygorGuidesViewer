@@ -1777,30 +1777,41 @@ step
 talk Xanjo##122698
 Train Hardened Tempest Hide |learn Hardened Tempest Hide##272278 |goto 44.07,34.63
 step
-collect 95 Tempest Hide##154722
-|tip Use the "Tempest Hide" farming guide to collect them if you have Skinning.
+collect 20 Tempest Hide##154722
+|tip Use the "Tempest Hide" farming guide to collect them, if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
-talk Aman de Child##141609
-buy 95 Amber Tanning Oil##160059 |goto 43.97,33.51
+talk Cassandra Brennor##136063
+buy 20 Amber Tanning Oil##160059 |goto 75.48,12.61
 step
 Open Your Leatherworking Crafting Panel:
-_<Create 95 Hardened Tempest Hide>_
-Reach Level 145 Leatherworking |skill Zandalari Leatherworking,145
+_<Create 20 Hardened Tempest Hide>_
+Reach Level 70 Leatherworking |skill Zandalari Leatherworking,70
 step
-talk Xanjo##122698
-Train Drums of the Maelstrom |learn Drums of the Maelstrom##256791 |goto 44.07,34.63
+talk Cassandra Brennor##136063
+Train Coarse Leather Barding |learn Coarse Leather Barding##256790 |goto 75.48,12.61
 step
-collect 100 Coarse Leather##152541
-|tip Use the "Coarse Leather" farming guide to collect them if you have Skinning.
-|tip You can also purchase them from the Auction House.
-step
-collect 50 Blood-Stained Bone##154164
-|tip Use the "Blood-Stained Bone" farming guide to collect them if you have Skinning.
+collect 375 Coarse Leather##152541
+|tip Use the "Coarse Leather" farming guides to collect them, if you have Skinning.
 |tip You can also purchase them from the Auction House.
 step
 Open Your Leatherworking Crafting Panel:
-_<Create 5 Drums of the Maelstrom>_
+_<Create 15 Coarse Leather Barding>_
+Reach Level 85 Leatherworking |skill Zandalari Leatherworking,85
+step
+talk Cassandra Brennor##136063
+Train Drums of the Maelstrom |learn Drums of the Maelstrom##256791 |goto 75.48,12.61
+step
+collect 1625 Coarse Leather##152541
+|tip Use the "Coarse Leather" farming guide to collect them, if you have Skinning.
+|tip You can also purchase them from the Auction House.
+step
+collect 650 Blood-Stained Bone##154164
+|tip Use the "Blood-Stained Bone" farming guide to collect them, if you have Skinning.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Leatherworking Crafting Panel:
+_<Create 65 Drums of the Maelstrom>_
 Reach Level 150 Leatherworking |skill Zandalari Leatherworking,150
 step
 _Congratulations!_

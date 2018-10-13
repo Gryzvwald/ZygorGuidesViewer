@@ -553,22 +553,6 @@ step
 Congratulations!
 You have earned the _Timelord_ title!
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\General\\The Unrelenting",{
-author="support@zygorguides.com",
-description="This guide will assist you in earning The Unrelenting title.",
-},[[
-step
-This title is to be a reward for Legion Challenge Mode dungeons
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\Player versus Player\\Bound by Honor",{
-author="support@zygorguides.com",
-description="This guide will assist you in earning the Bound By Honor title.",
-},[[
-step
-This title is earned by reaching Prestige level 4 in PvP
-However, it has not yet been added to the game
-|tip You gain the ability to prestige once you reach Honor level 50.
-]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\Player versus Player\\Fearless Gladiator",{
 author="support@zygorguides.com",
 description="This guide will assist you in earning the Fearless Gladiator title.",
@@ -578,18 +562,6 @@ This title is gained by finishing Legion arena PvP Season 2 in the top 0.1%
 |tip You must also win at least 50 games.
 Earn the _Fearless Gladiator_ title |achieve 11014
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\Player versus Player\\The Honorable",{
-author="support@zygorguides.com",
-description="This guide will assist you in earning The Honorable title.",
-},[[
-step
-This title is earned by reaching Prestige Level 4 in PvP
-|tip You gain the ability to prestige once you reach Honor level 50.
-Earn _The Honorable_ title |achieve 10995
-step
-Congratulations!
-You have earned _The Honorable_ title!
-]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\Player versus Player\\Patron of War",{
 author="support@zygorguides.com",
 description="This guide will assist you in earning the Patron of War.",
@@ -598,17 +570,6 @@ step
 This title was a reward for watching the Twitch streams of the World of Warcraft Championship that was held on September 30th - October 2nd 2016
 This title could also be earned if players watched the North American Regionals on October 8th - October 9th 2016
 Players that watched these Twitch streams had to have their Battle.net account connected to their Twitch account
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\Player versus Player\\The Prestigious",{
-description="This guide will assist you in earning the The Prestigious title.",
-},[[
-step
-This title is earned by reaching Prestige Level 9 in PvP
-|tip You gain the ability to prestige once you reach Honor level 50.
-Earn _The Prestigious_ title |achieve 11472
-step
-Congratulations!
-You have earned _The Prestigious_ title!
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Titles\\Legion Titles\\Player versus Player\\Vindictive Gladiator",{
 author="support@zygorguides.com",

@@ -834,7 +834,8 @@ Click here to go to the Darkmoon Faire Dailies Guide. |next "dailies"
 You can also earn reputation by turning in Darkmoon Decks. Click here to view the Darkmoon Deck statistics. |next "cards" |confirm
 step
 label "dailies"
-#include "Darkmoon_Faire_Dailies"
+Continuing...
+leechsteps "Zygor's Events Guides\\Darkmoon Faire\\Darkmoon Faire Dailies"
 step
 label "cards"
 You can now only get cards using _Inscription_, or buying them at the _Auction House_.

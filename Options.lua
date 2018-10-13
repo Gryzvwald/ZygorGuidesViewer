@@ -1428,57 +1428,33 @@ function ZGV:Options_DefineOptionTables()
 	
 	AddOptionGroup("gear","Gear","zggear")	---- OPTIONS: gear
 	do
-		AddOption('autogear',{ type = 'toggle',width="full", _default=true, set = function(i,v) Setter_Simple(i,v)  ZGV.ItemScore.AutoEquip:ToggleButton() end})
+		AddOption('autogear',{ type = 'toggle',width="full", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:UpdateSystemTab() end})
 		AddOption('autogearauto',{ type='toggle', width="full", _default=false, disabled=function() return not self.db.profile.autogear end })
-
-		--[[
-			AddOption('autogear_protectheirlooms',{ type='toggle', width="full", _default=false,
-				set = function(i,v) 
-					Setter_Simple(i,v) 
-					ZGV.ItemScore.AutoEquip:RefreshAndScan() 
-					ZGV.ItemScore.GearFinder:HideAndClean() 
-					end, 
-				disabled=function() return not self.db.profile.autogear end
-			})
-			AddOption('autogear_protectheirlooms_all',{ type='toggle', width="full", _default=false,
-				set = function(i,v) 
-					Setter_Simple(i,v) 
-					ZGV.ItemScore.AutoEquip:RefreshAndScan() 
-					ZGV.ItemScore.GearFinder:HideAndClean() 
-					end, 
-				disabled=function() return not self.db.profile.autogear end
-			})
-			AddOption('geareffects',{ type='toggle', width="full", _default=false,
-				set = function(i,v) 
-					Setter_Simple(i,v)
-					ZGV.ItemScore.AutoEquip:RefreshAndScan() 
-					ZGV.ItemScore.GearFinder:HideAndClean() 
-					end, 
-				disabled=function() return not self.db.profile.autogear end
-			})
-		--]]
 
 		AddOptionSpace()
 		AddOption('',{ type = "description", name = L["opt_gear_sources"]:format(), font=ZGV.font_dialog })
 		AddOptionSpace()
 		AddOption('',{ type = "description", name = L["opt_gear_sources_dungeons"]:format(), font=ZGV.font_dialog_gray, width="full" })
-			AddOption('gear_1',{ name=PLAYER_DIFFICULTY1,  type='toggle', width="100", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:HideAndClean() end, })
-			AddOption('gear_2',{ name=PLAYER_DIFFICULTY2,  type='toggle', width="100", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:HideAndClean() end, })
-			AddOption('gear_23',{ name=PLAYER_DIFFICULTY6,  type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:HideAndClean() end, })
-			AddOption('gear_24',{ name=PLAYER_DIFFICULTY_TIMEWALKER,  type='toggle', width="120", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:HideAndClean() end, })
+			AddOption('gear_1',{ name=PLAYER_DIFFICULTY1,  type='toggle', width="100", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:ClearResults() end, })
+			AddOption('gear_2',{ name=PLAYER_DIFFICULTY2,  type='toggle', width="100", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:ClearResults() end, })
+			AddOption('gear_23',{ name=PLAYER_DIFFICULTY6,  type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:ClearResults() end, })
+			AddOption('gear_24',{ name=PLAYER_DIFFICULTY_TIMEWALKER,  type='toggle', width="120", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:ClearResults() end, })
 			AddOptionSpace()
 		AddOption('',{ type = "description", name = L["opt_gear_sources_raids"]:format(), font=ZGV.font_dialog_gray, width="full" })
-			AddOption('gear_17',{ name=PLAYER_DIFFICULTY3, type='toggle', width="100", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:HideAndClean() end, })
-			AddOption('gear_14',{ name=PLAYER_DIFFICULTY1, type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.db.profile.gear_3=v ZGV.db.profile.gear_4=v ZGV.ItemScore.GearFinder:HideAndClean() end, }) -- also setting filters for prelfr raids
-			AddOption('gear_15',{ name=PLAYER_DIFFICULTY2, type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.db.profile.gear_5=v ZGV.db.profile.gear_6=v ZGV.ItemScore.GearFinder:HideAndClean() end, }) -- also setting filters for prelfr raids
-			AddOption('gear_16',{ name=PLAYER_DIFFICULTY6, type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.db.profile.gear_7=v ZGV.ItemScore.GearFinder:HideAndClean() end, }) -- also setting filters for prelfr raids
+			AddOption('gear_17',{ name=PLAYER_DIFFICULTY3, type='toggle', width="100", _default=true, set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore.GearFinder:ClearResults() end, })
+			AddOption('gear_14',{ name=PLAYER_DIFFICULTY1, type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.db.profile.gear_3=v ZGV.db.profile.gear_4=v ZGV.ItemScore.GearFinder:ClearResults() end, }) -- also setting filters for prelfr raids
+			AddOption('gear_15',{ name=PLAYER_DIFFICULTY2, type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.db.profile.gear_5=v ZGV.db.profile.gear_6=v ZGV.ItemScore.GearFinder:ClearResults() end, }) -- also setting filters for prelfr raids
+			AddOption('gear_16',{ name=PLAYER_DIFFICULTY6, type='toggle', width="100", _default=false, set = function(i,v) Setter_Simple(i,v) ZGV.db.profile.gear_7=v ZGV.ItemScore.GearFinder:ClearResults() end, }) -- also setting filters for prelfr raids
+			AddOptionSpace()
 
+		--[[ TODO
 		AddOption('itemBug', { guiHidden=true, type = 'execute', desc="Generate a bug report for item system with a profiling.",
 			func=function(info,val)
 				local s = "--==Verbose==--\n"..ZGV.ItemScore.AutoEquip:ShowGearReport(1,1,1).."\n\n--==Regular==--\n"..ZGV.ItemScore.AutoEquip:ShowGearReport(nil,1,1)
 				ZGV:ShowDump(s,"Zygor Gear Bug Reportx2")
 			end
 		})
+		--]]
 		--AddOption('',{ type = "header", name = L["gear_quest_reward_advisor_header"]:format(), })
 		--AddOptionSep()
 
@@ -1487,7 +1463,7 @@ function ZGV:Options_DefineOptionTables()
 		AddOption('clearnotupgrades',{
 			type = 'execute',	
 			func=function ()
-				wipe(ZGV.db.profile.badupgrade[GetSpecialization() or 1])
+				wipe(ZGV.db.char.badupgrade[GetSpecialization() or 1])
 				ZGV:Print(L['itemscore_ae_clearednotupgrade'])
 			     end,
 			 width='single',
@@ -1560,6 +1536,31 @@ function ZGV:Options_DefineOptionTables()
 			_inline=true
 		})
 
+		AddSubgroup("gear_gems",{
+			name = "",
+			font=ZGV.font_dialog,
+			inline=true,
+		})
+			AddOption('gear_maxGem',{
+				name = L['opt_gear_maxGem'],
+				desc = L['opt_gear_maxGem_desc'],
+				style = 'slider',
+				type = 'select',
+				width="double", 
+				values = {
+					[0]=NONE,
+					[2]=ITEM_QUALITY2_DESC,
+					[3]=ITEM_QUALITY3_DESC,
+					[4]=ITEM_QUALITY4_DESC,
+				},
+				set = function(i,v) Setter_Simple(i,v) ZGV.ItemScore:DelayedRefreshUserData() end, 
+				get = Getter_Simple, 
+				_default=0,
+				_inline=true,
+			})
+			AddOptionSpace()
+		EndSubgroup()
+
 		AddOptionSep()
 		AddOption('gearshowallstats',{ type = 'toggle', _default=false, width="full"})
 
@@ -1609,7 +1610,6 @@ function ZGV:Options_DefineOptionTables()
 			
 			profile[prefix..name]=tostring(tonumber(value or 0))
 
-
 			if not ZGV.ItemScore:UsesCustomWeights(class,spec) then
 				-- remove anything we have saved, user is on our defaults
 				for index=1,#ZGV.ItemScore.Keywords do
@@ -1658,8 +1658,7 @@ function ZGV:Options_DefineOptionTables()
 							get = function() return get_stat(class,specnum,stat.blizz) end,
 							set = function(i,v) 
 								set_stat(class,specnum,stat.blizz,v) 
-								ZGV.ItemScore.AutoEquip:RefreshAndScan() 
-								ZGV.ItemScore.GearFinder:HideAndClean() 
+								ZGV.ItemScore:DelayedRefreshUserData()
 							end,
 							hidden=function() return not display_stat(class,specnum,stat.blizz) end,
 							buttontext = "OK",
@@ -1684,7 +1683,7 @@ function ZGV:Options_DefineOptionTables()
 							for index,stat in pairs(ZGV.ItemScore.Keywords) do -- wipe
 								ZGV.db.profile[groupname.."_"..stat.blizz] = nil
 							end
-							ZGV.ItemScore.AutoEquip:RefreshAndScan() 
+							ZGV.ItemScore:DelayedRefreshUserData()
 						end,
 						width='single',
 					})

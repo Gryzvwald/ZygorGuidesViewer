@@ -61,209 +61,207 @@ ItemScore.rules = {
 		[1] = { --BLOOD
 			itemtypes={ TH_POLE=1, TH_AXE=1, TH_MACE=1, TH_SWORD=1, PLATE=1 },
 			stats = { STRENGTH=25.84, STAMINA=25.84, VERSATILITY=14.09, HASTE=12.81, MASTERY=12.56, CRIT=11.67 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		},
 		[2] = { --FROST
 			itemtypes={ AXE=1, SWORD=1, MACE=1, PLATE=1 },
 			stats = { STRENGTH=1.48, MASTERY=0.89, HASTE=0.77, CRIT=0.76, VERSATILITY=0.74 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		},
 		[3] = { --UNHOLY
 			itemtypes={ TH_POLE=1, TH_AXE=1, TH_MACE=1, TH_SWORD=1, PLATE=1 },
 			stats = { STRENGTH=1.45, MASTERY=0.87, CRIT=0.83, HASTE=0.80, VERSATILITY=0.78 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		}
 	},
 	["DEMONHUNTER"] = {
 		[1] = { -- HAVOC
 			itemtypes={ WARGLAIVE=1, DAGGER=1, FIST=1, AXE=1, MACE=1, SWORD=1, CLOTH=1, LEATHER=1 },
 			stats = { AGILITY=1.65, HASTE=0.98, CRIT=0.84, VERSATILITY=0.83, MASTERY=0.74 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[2] = { -- VENGEANCE
 			itemtypes={ WARGLAIVE=1,DAGGER=1, FIST=1, AXE=1, MACE=1, SWORD=1, CLOTH=1, LEATHER=1 },
 			stats = {AGILITY=25.84, STAMINA=25.84, HASTE=14.09, VERSATILITY=12.81, MASTERY=12.56, CRIT=11.67 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 	},
 	["DRUID"] = {
 		[1] = { --BALANCE
 			itemtypes={ DAGGER=1, MACE=1, MISCARM=1, TH_STAFF=1, LEATHER=1 },
 			stats = { INTELLECT=1.47, HASTE=0.98, CRIT=0.81, VERSATILITY=0.78 , MASTERY=0.66 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[2] = { --FERAL
 			itemtypes={ TH_POLE=1, TH_STAFF=1, TH_MACE=1, LEATHER=1 },
 			stats = { AGILITY=1.18, HASTE=1.10, CRIT=0.68, VERSATILITY=0.61, MASTERY=0.55 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[3] = { --GUARDIAN
 			itemtypes={ TH_POLE=1,TH_STAFF=1, TH_MACE=1, LEATHER=1 },
 			stats = { AGILITY=25.84, STAMINA=25.84, MASTERY=14.09, VERSATILITY=12.81, HASTE=12.56, CRIT=11.67 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[4] = { --RESTORATION
 			itemtypes={ DAGGER=1,MACE=1,MISCARM=1, TH_STAFF=1, LEATHER=1 },
 			stats = { INTELLECT=1.27, HASTE=0.75, CRIT=0.66, VERSATILITY=0.63 , MASTERY=0.39 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		}
 	},
 	["HUNTER"] = {
 		[1] = { -- BEAST MASTERY
 			itemtypes={BOW=1, CROSSBOW=1, GUN=1, MAIL=1 },
 			stats = { AGILITY=1.37, MASTERY=0.88, CRIT=0.80, HASTE=0.71, VERSATILITY=0.66 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[2] = { -- MARKSMANSHIP
 			itemtypes={BOW=1, CROSSBOW=1, GUN=1, MAIL=1 },
 			stats = { AGILITY=1.22, MASTERY=0.74, HASTE=0.73, CRIT=0.72, VERSATILITY=0.62 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[3] = { -- SURVIVAL
 			itemtypes={AXE=1, SWORD=1, DAGGER=1, FIST=1, TH_AXE=1, TH_SWORD=1, TH_STAFF=1, TH_POLE=1, MAIL=1 },
 			stats = { AGILITY=1.48, HASTE=1.06, CRIT=0.83, VERSATILITY=0.75, MASTERY=0.67 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 	},
 	["MAGE"] = {
 		[1] = { -- Arcane
 			itemtypes={ TH_STAFF=2, WAND=1, MISCARM=1, SWORD=1, DAGGER=1, CLOTH=1 },
 			stats = { INTELLECT=1.71, CRIT=0.91, VERSATILITY=0.90, HASTE=0.84, MASTERY=0.80 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[2] = { -- Fire
 			itemtypes={ TH_STAFF=2, WAND=1, MISCARM=1, SWORD=1, DAGGER=1, CLOTH=1 },
 			stats = { INTELLECT=1.62, MASTERY=0.93, VERSATILITY=0.87, HASTE=0.86, CRIT=0.83 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[3] = { -- Frost
 			itemtypes={ TH_STAFF=2, WAND=1, MISCARM=1, SWORD=1, DAGGER=1, CLOTH=1 },
 			stats = { INTELLECT=1.75, HASTE=0.98, CRIT=0.95, VERSATILITY=0.92 , MASTERY=0.91 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		}
 	},
 	["MONK"] = {
 		[1] = { --BREWMASTER-TANK
 			itemtypes={ TH_POLE=1, TH_STAFF=1, FIST=1, AXE=1, SWORD=1, MACE=1, LEATHER=1 },
 			stats = { AGILITY=25.84, STAMINA=25.84, VERSATILITY=14.09, CRIT=14.09, MASTERY=12.81, HASTE=12.56 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[2] = { --MISTWEAVER-HEAL
 			itemtypes={ TH_POLE=1, TH_STAFF=1, FIST=1, AXE=1, SWORD=1, MACE=1, LEATHER=1 },
 			stats = { INTELLECT=1.27, CRIT=0.75, VERSATILITY=0.66, HASTE=0.63, MASTERY=0.39 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[3] = { --WINDWALKER-DPS
 			itemtypes={ FIST=1, AXE=1, SWORD=1, MACE=1, LEATHER=1 },
 			stats = { AGILITY=1.29, VERSATILITY=0.88, HASTE=0.84, MASTERY=0.75, CRIT=0.69 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		}
 	},
 	["PALADIN"] = {
 		[1] = { --HOLY
 			itemtypes={ TH_POLE=1, TH_AXE=1, TH_MACE=1, TH_SWORD=1, AXE=1, MACE=1, SWORD=1, MISCARM=1, PLATE=1 },
 			stats = { INTELLECT=1.20, CRIT=0.77, HASTE=0.75, VERSATILITY=0.66, MASTERY=0.01 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[2] = { --PROTECTION
-			itemtypes={ TH_POLE=1, TH_AXE=1, TH_MACE=1, TH_SWORD=1, AXE=1, MACE=1, SWORD=1, SHIELD=1, PLATE=1 },
+			itemtypes={ AXE=1, MACE=1, SWORD=1, SHIELD=1, PLATE=1 },
 			stats = { STRENGTH=25.84, STAMINA=25.84, HASTE=14.09, MASTERY=13.81, VERSATILITY=11.56, CRIT=9.67 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		},
 		[3] = { --RETRIBUTION
 			itemtypes={ TH_POLE=1, TH_AXE=1, TH_MACE=1, TH_SWORD=1, PLATE=1 },
 			stats = { STRENGTH=1.59, HASTE=1.16, VERSATILITY=0.90, MASTERY=0.88, CRIT=0.87 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		}
 	},
 	["PRIEST"] = {
 		[1] = { -- DISCIPLINE
 			itemtypes={ DAGGER=1, MACE=1, TH_STAFF=2, WAND=1, MISCARM=1, CLOTH=1 },
 			stats = {  INTELLECT=0.69, HASTE=0.42, CRIT=0.38, VERSATILITY=0.34, MASTERY=0.12 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[2] = { -- HOLY
 			itemtypes={ DAGGER=1, MACE=1, TH_STAFF=2, WAND=1, MISCARM=1, CLOTH=1 },
 			stats = { INTELLECT=1.27, CRIT=0.75, VERSATILITY=0.66, HASTE=0.63, MASTERY=0.39 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[3] = { --SHADOW
 			itemtypes={ DAGGER=1, MACE=1, TH_STAFF=2, WAND=1, MISCARM=1, CLOTH=1 },
 			stats = { INTELLECT=1.49, HASTE=1.40, CRIT=0.97, MASTERY=0.81, VERSATILITY=0.79 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		}
 	},
 	["ROGUE"] = {
 		[1] = { --ASSASSINATION
 			itemtypes={ DAGGER=2,LEATHER=1 },
 			stats = { AGILITY=1.53, HASTE=1.13, CRIT=0.98, MASTERY=0.94, VERSATILITY=0.78 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[2] = { --OUTLAW
 			itemtypes={ DAGGER=2,FIST=2,AXE=2,MACE=2,SWORD=2, LEATHER=1 },
 			stats = { AGILITY=1.48, HASTE=0.88, CRIT=0.78, VERSATILITY=0.73, MASTERY=0.70 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[3] = { --SUBTLETY
 			itemtypes={ DAGGER=2,FIST=2,AXE=2,MACE=2,SWORD=2, LEATHER=1 },
 			stats = { AGILITY=1.59, CRIT=0.89, MASTERY=0.88, HASTE=0.87, VERSATILITY=0.80 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		}
 	},
 	["SHAMAN"] = {
 		[1] = { -- ELEMENTAL
 			itemtypes={ DAGGER=1, FIST=1, AXE=1, MACE=1, TH_STAFF=1, MISCARM=1, SHIELD=1, LEATHER=1, MAIL=1 },
 			stats = { INTELLECT=1.58, HASTE=1.01, MASTERY=0.98, CRIT=0.92, VERSATILITY=0.80 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[2] = { -- ENHANCEMENT:
 			itemtypes={ DAGGER=2, FIST=2, AXE=2, MACE=2, MISCARM=1, LEATHER=1, MAIL=1 },
 			stats = { AGILITY=1.62, HASTE=1.10, CRIT=0.92, MASTERY=0.82, VERSATILITY=0.80 },
+			primary = { STRENGTH=0, AGILITY=1, INTELLECT=0 },
 		},
 		[3] = { -- RESTORATION
 			itemtypes={ DAGGER=1, FIST=1, AXE=1, MACE=1, TH_STAFF=1, MISCARM=1, SHIELD=1, LEATHER=1, MAIL=1 },
 			stats = { INTELLECT=1.27, CRIT=0.75, VERSATILITY=0.66, HASTE=0.63, MASTERY=0.39 },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		}
 	},
 	["WARLOCK"] = {
 		[1] = { --AFFLICTION
 			itemtypes={ SWORD=1, DAGGER=1, TH_STAFF=1, WAND=1, MISCARM=1, CLOTH=1 },
 			stats = { INTELLECT=1.50, HASTE=1.16, MASTERY=0.96, VERSATILITY=0.83, CRIT=0.82  },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[2] = { --DEMONOLOGY
 			itemtypes={ SWORD=1, DAGGER=1, TH_STAFF=1, WAND=1, MISCARM=1, CLOTH=1 },
 			stats = { INTELLECT=1.49, HASTE=0.82, CRIT=0.82, VERSATILITY=0.78, MASTERY=0.77  },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		},
 		[3] = { --DESTRUCTION
 			itemtypes={ SWORD=1, DAGGER=1, TH_STAFF=1, WAND=1, MISCARM=1, CLOTH=1 },
 			stats = { INTELLECT=1.45, HASTE=0.95, MASTERY=0.95, CRIT=0.88, VERSATILITY=0.75  },
+			primary = { STRENGTH=0, AGILITY=0, INTELLECT=1 },
 		}
 	},
 	["WARRIOR"] = {
 		[1] = { --ARMS
 			itemtypes={ TH_POLE=1, TH_AXE=1, TH_MACE=1, TH_SWORD=1, PLATE=1 },
 			stats = { STRENGTH=1.31, CRIT=1.02, HASTE=0.86, VERSATILITY=0.86, MASTERY=0.15 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		},
 		[2] = { --FURY
 			itemtypes={ TH_POLE=1, TH_AXE=10, TH_MACE=10, TH_SWORD=10, DAGGER=1, FIST=1, AXE=1, MACE=1, SWORD=1, PLATE=1 },  -- duals...
 			stats = { STRENGTH=1.14, HASTE=1.00, MASTERY=0.86, CRIT=0.82, VERSATILITY=0.80 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		},
 		[3] = { --PROT
 			itemtypes={ DAGGER=1, FIST=1, AXE=1, MACE=1, SWORD=1, SHIELD=1, PLATE=1, SHIELD=1 },
 			stats = { STRENGTH=25.84, STAMINA=25.84, HASTE=14.09, MASTERY=12.81, VERSATILITY=12.56, CRIT=11.67 },
+			primary = { STRENGTH=1, AGILITY=0, INTELLECT=0 },
 		}
 	},
 }
-
-ItemScore.possEquipSlots = {
-	INVTYPE_WEAPON = 1,
-		INVTYPE_WEAPONMAINHAND = 1,
-			INVTYPE_RANGEDRIGHT = 1,
-			INVTYPE_2HWEAPON = 1,
-			INVTYPE_RANGED = 1,
-		INVTYPE_WEAPONOFFHAND = 1,
-			INVTYPE_SHIELD = 1,
-			INVTYPE_HOLDABLE = 1,
-
-	INVTYPE_HEAD = 1,
-	INVTYPE_NECK = 1,
-	INVTYPE_SHOULDER = 1,
-	INVTYPE_CLOAK = 1,
-	INVTYPE_CHEST = 1,
-		INVTYPE_ROBE = 1,
-	INVTYPE_WRIST = 1,
-	INVTYPE_HAND = 1,
-	INVTYPE_WAIST = 1,
-	INVTYPE_LEGS = 1,
-	INVTYPE_FEET = 1,
-	INVTYPE_FINGER = 1,
-	INVTYPE_TRINKET = 1,
-}
-
-ItemScore.HeirloomNoExpBonusSlot = { -- hlooms in those slots do not have exp bonus
-	INVTYPE_WEAPON = true,
-	INVTYPE_WEAPONMAINHAND = true,
-	INVTYPE_RANGEDRIGHT = true,
-	INVTYPE_2HWEAPON = true,
-	INVTYPE_RANGED = true,
-	INVTYPE_WEAPONOFFHAND = true,
-	INVTYPE_SHIELD = true,
-	INVTYPE_HOLDABLE = true,
-	INVTYPE_NECK = true,
-	INVTYPE_TRINKET = true,
-	}
 
 ItemScore.FixedLevelHeirloom = {
 	-- Garrosh weapons
@@ -283,330 +281,134 @@ ItemScore.HeirloomBonuses = { -- Max level depends on bonus
 	[3592] = 110,
 	[3617] = 110,
 	}
+
 setmetatable(ItemScore.HeirloomBonuses,{__index=function(t,index) return 60 end}) 
 
-ItemScore.GemMatchesSocket = {
-	BLUE = {BLUE=true,PRISMATIC=true},
-	GREEN = {BLUE=true,YELLOW=true,PRISMATIC=true},
-	META = {META=true},
-	ORANGE = {RED=true,YELLOW=true,PRISMATIC=true},
-	PURPLE = {BLUE=true,RED=true,PRISMATIC=true},
-	RED = {RED=true,PRISMATIC=true},
-	YELLOW = {YELLOW=true,PRISMATIC=true},
-	PRISMATIC = {BLUE=true,RED=true,YELLOW=true,PRISMATIC=true},
+ItemScore.Unique_Equipped_Families = { -- those items are unique equipped, but do not return GetItemUniqueness values
+	 -- wod rings
+	[10001] = {[124636]=1,[124635]=1,[124638]=1,[124634]=1,[124637]=1},
+
+	-- Legion legendary non-weapons gear
+	[357] = {[132369]=2,[132378]=2,[132410]=2,[132449]=2,[132452]=2,[132460]=2,[133973]=2,[133974]=2,[137037]=2,[137038]=2,[137039]=2,[137040]=2,[137041]=2,[137042]=2,[137043]=2,[137044]=2,[137045]=2,[137046]=2,[137047]=2,[137048]=2,[137049]=2,[137050]=2,[137051]=2,[137052]=2,[137054]=2,[137055]=2,[137220]=2,[137223]=2,[137276]=2,[137382]=2,[138854]=2,[144249]=2, [144258]=2, [144259]=2, [150936]=2,[151636]=2,[151639]=2,[151640]=2,[151641]=2,[151642]=2,[151643]=2,[151644]=2,[151646]=2,[151647]=2,[151649]=2,[151650]=2,[152626]=2}, 
+
+	-- ghost pirate ring heirlooms
+	[10002] = {[128169]=1,[128172]=1,[128173]=1},
+	}
+
+-- what stats are available on gems depending on source expansion
+ItemScore.GemStatsByExp = {
+	[1] = {"STRENGTH", "INTELLECT", "AGILITY", "STAMINA", "HASTE", "VERSATILITY", "MASTERY", "CRIT", "PARRY", "DODGE"}, -- tbc
+	[2] = {"STRENGTH", "INTELLECT", "AGILITY", "STAMINA", "HASTE", "VERSATILITY", "MASTERY", "CRIT", "PARRY", "DODGE"}, -- wotlk
+	[3] = {"STRENGTH", "INTELLECT", "AGILITY", "STAMINA", "HASTE", "VERSATILITY", "MASTERY", "CRIT", "PARRY", "DODGE"}, -- cata
+	[4] = {"STRENGTH", "INTELLECT", "AGILITY", "STAMINA", "HASTE", "VERSATILITY", "MASTERY", "CRIT", "PARRY", "DODGE"}, -- mop
+	[5] = {"MASTERY", "VERSATILITY", "HASTE", "CRIT"}, -- wod
+	[6] = {"MASTERY", "VERSATILITY", "HASTE", "CRIT"}, -- legion
+	[7] = {"MASTERY", "VERSATILITY", "HASTE", "CRIT"}, -- bfa
 }
 
--- Best gems of given combinations, per gem colour, per ilvl required
-ItemScore.GemData = {
-	[0] = {
-		["BLUE"] = {
-			[34831]={STAMINA=15},
-			[40125]={CRIT=20},
-			[40120]={SPIRIT=20},
-		},
-		["GREEN"] = {
-			[40166]={CRIT=10,DODGE=10},
-			[40177]={CRIT=10,HASTE=10},
-			[40171]={CRIT=10,SPIRIT=10},
-			[40165]={CRIT=10,STAMINA=8},
-			[40167]={DODGE=10,STAMINA=8},
-			[40169]={HASTE=10,STAMINA=8},
-			[40095]={CRIT=8,SPIRIT=8},
-		},
-		["META"] = {
-			[32409]={AGILITY=12},
-			[35503]={INTELLECT=12},
-			[41380]={STAMINA=16},
-			[41385]={HASTE=21},
-			[41376]={SPIRIT=21},
-			[25898]={DODGE=24},
-			[25890]={CRIT=28},
-		},
-		["ORANGE"] = {
-			[40160]={DODGE=10,PARRY=10},
-			[40163]={HASTE=10,DODGE=10},
-			[40147]={AGILITY=5,CRIT=10},
-			[40150]={AGILITY=5,HASTE=10},
-			[40152]={INTELLECT=5,CRIT=10},
-			[40155]={INTELLECT=5,HASTE=10},
-			[40142]={STRENGTH=5,CRIT=10},
-			[40144]={STRENGTH=5,DODGE=10},
-			[40146]={STRENGTH=5,HASTE=10},
-		},
-		["PURPLE"] = {
-			[40162]={HASTE=10,CRIT=10},
-			[40141]={HASTE=10,STAMINA=8},
-			[40139]={PARRY=10,STAMINA=8},
-			[40157]={AGILITY=5,CRIT=10},
-			[40130]={AGILITY=5,STAMINA=8},
-			[40153]={INTELLECT=5,CRIT=10},
-			[40133]={INTELLECT=5,SPIRIT=10},
-			[40164]={INTELLECT=5,STAMINA=8},
-			[40143]={STRENGTH=5,CRIT=10},
-			[40129]={STRENGTH=5,STAMINA=8},
-		},
-		["RED"] = {
-			[40112]={AGILITY=10},
-			[40113]={INTELLECT=10},
-			[40111]={STRENGTH=10},
-			[40118]={HASTE=20},
-			[40116]={PARRY=20},
-		},
-		["YELLOW"] = {
-			[40124]={CRIT=20},
-			[40115]={DODGE=20},
-			[40128]={HASTE=20},
-		},
+-- details about gems based on expansions and rarity. ilvl of socketed item required for gem to fit it, and how point budget changes with player level
+ItemScore.GemData = { -- from level [a] gem gives b points
+	[2] = { -- uncommon
+		[1] = { ilvl=1,   points={[1]=3, [59]=4}}, -- tbc
+		[2] = { ilvl=70,  points={[1]=3, [59]=4}}, -- wotlk
+		[3] = { ilvl=102, points={[1]=3, [59]=4, [81]=5}}, -- cata
+		[4] = { ilvl=114, points={[1]=3, [59]=4, [81]=5}}, -- mop
+		[5] = { ilvl=80,  points={[1]=3, [59]=4, [81]=5, [91]=6}}, -- wod
+		[6] = { ilvl=81,  points={[1]=3, [59]=4, [81]=5, [91]=6, [101]=7}}, -- legion
+		[7] = { ilvl=100, points={[1]=3, [59]=4, [81]=5, [91]=6, [101]=7, [111]=30}}, -- bfa
 	},
-	[285] = {
-		["BLUE"] = {
-			[52242]={STAMINA=12},
-			[52235]={CRIT=16},
-			[52244]={SPIRIT=16},
-		},
-		["GREEN"] = {
-			[52135]={CRIT=20},
-			[52223]={CRIT=8,STAMINA=6},
-			[52233]={DODGE=8,STAMINA=6},
-			[52227]={DODGE=8,CRIT=8},
-			[52218]={HASTE=8,STAMINA=6},
-			[52225]={HASTE=8,CRIT=8},
-			[52231]={MASTERY=8,STAMINA=6},
-			[52237]={MASTERY=8,CRIT=8},
-			[52250]={MASTERY=8,SPIRIT=8},
-		},
-		["META"] = {
-			[68778]={AGILITY=11},
-			[52296]={INTELLECT=11},
-			[68779]={STRENGTH=11},
-			[52293]={STAMINA=16},
-			[52294]={STAMINA=16},
-			[52291]={CRIT=22},
-			[52289]={MASTERY=22},
-			[52297]={SPIRIT=22},
-		},
-		["ORANGE"] = {
-			[52209]={AGILITY=4,CRIT=8},
-			[52229]={AGILITY=4,DODGE=8},
-			[52211]={AGILITY=4,HASTE=8},
-			[52204]={AGILITY=4,MASTERY=8},
-			[52239]={INTELLECT=4,CRIT=8},
-			[52208]={INTELLECT=4,HASTE=8},
-			[52205]={INTELLECT=4,MASTERY=8},
-			[52222]={STRENGTH=4,CRIT=8},
-			[52214]={STRENGTH=4,HASTE=8},
-			[52240]={STRENGTH=4,MASTERY=8},
-			[52249]={HASTE=8,DODGE=8},
-			[52224]={HASTE=8,MASTERY=8},
-			[52215]={PARRY=8,MASTERY=8},
-		},
-		["PURPLE"] = {
-			[52238]={AGILITY=4,STAMINA=6},
-			[52220]={AGILITY=4,CRIT=8},
-			[52248]={INTELLECT=4,STAMINA=6},
-			[52217]={INTELLECT=4,CRIT=8},
-			[52236]={INTELLECT=4,SPIRIT=8},
-			[52243]={STRENGTH=4,STAMINA=6},
-			[52213]={STRENGTH=4,CRIT=8},
-			[52221]={HASTE=8,STAMINA=6},
-			[52203]={HASTE=8,CRIT=8},
-			[52210]={PARRY=8,STAMINA=4},
-			[52234]={PARRY=8,CRIT=8},
-		},
-		["RED"] = {
-			[52230]={HASTE=16},
-			[52216]={PARRY=16},
-			[52212]={AGILITY=8},
-			[52207]={INTELLECT=8},
-			[52206]={STRENGTH=8},
-		},
-		["YELLOW"] = {
-			[52241]={CRIT=16},
-			[52247]={DODGE=16},
-			[52232]={HASTE=16},
-			[52219]={MASTERY=16},
-		},
+	[3] = { -- rare
+		[1] = { ilvl=1,   points={[1]=4, [59]=5}}, -- tbc
+		[2] = { ilvl=80,  points={[1]=4, [59]=5}}, -- wotlk
+		[3] = { ilvl=102, points={[1]=4, [59]=5, [81]=6}}, -- cata
+		[4] = { ilvl=114, points={[1]=4, [59]=5, [81]=6}}, -- mop
+		[5] = { ilvl=80,  points={[1]=4, [59]=5, [81]=6, [91]=7}}, -- wod
+		[6] = { ilvl=81,  points={[1]=4, [59]=5, [81]=6, [91]=7, [101]=9}}, -- legion
+		[7] = { ilvl=100, points={[1]=4, [59]=5, [81]=6, [91]=7, [101]=9, [111]=40}}, -- bfa
 	},
-	[300] = {
-		["BLUE"] = {
-			[71820]={STAMINA=15},
-			[71817]={CRIT=20},
-			[71819]={SPIRIT=20},
-		},
-		["GREEN"] = {
-			[71837]={CRIT=10,DODGE=10},
-			[71825]={CRIT=10,MASTERY=10},
-			[71834]={CRIT=10,STAMINA=8},
-			[71835]={DODGE=10,STAMINA=8},
-			[71824]={HASTE=10,CRIT=10},
-			[71833]={HASTE=10,SPIRIT=10},
-			[71836]={HASTE=10,STAMINA=8},
-			[71838]={MASTERY=10,STAMINA=8},
-			[71822]={SPIRIT=10,CRIT=10},
-			[71827]={SPIRIT=10,MASTERY=10},
-			[71823]={CRIT=20},
-		},
-		["ORANGE"] = {
-			[71841]={HASTE=10,CRIT=10},
-			[71845]={HASTE=10,DODGE=10},
-			[71853]={HASTE=10,MASTERY=10},
-			[71846]={PARRY=10,DODGE=10},
-			[71855]={PARRY=10,MASTERY=10},
-			[71840]={AGILITY=5,CRIT=10},
-			[71844]={AGILITY=5,DODGE=10},
-			[71848]={AGILITY=5,HASTE=10},
-			[71852]={AGILITY=5,MASTERY=10},
-			[71842]={INTELLECT=5,CRIT=10},
-			[71850]={INTELLECT=5,HASTE=10},
-			[71854]={INTELLECT=5,MASTERY=10},
-			[71843]={STRENGTH=5,CRIT=10},
-			[71847]={STRENGTH=5,DODGE=10},
-			[71851]={STRENGTH=5,HASTE=10},
-			[71856]={STRENGTH=5,MASTERY=10},
-		},
-		["PURPLE"] = {
-			[71863]={HASTE=10,CRIT=10},
-			[71870]={HASTE=10,STAMINA=8},
-			[71865]={PARRY=10,CRIT=10},
-			[71872]={PARRY=10,STAMINA=8},
-			[71862]={AGILITY=5,CRIT=10},
-			[71869]={AGILITY=5,STAMINA=8},
-			[71864]={INTELLECT=5,CRIT=10},
-			[71868]={INTELLECT=5,SPIRIT=10},
-			[71871]={INTELLECT=5,STAMINA=8},
-			[71866]={STRENGTH=5,CRIT=10},
-			[71873]={STRENGTH=5,STAMINA=8},
-		},
-		["RED"] = {
-			[71879]={AGILITY=10},
-			[71881]={INTELLECT=10},
-			[71883]={STRENGTH=10},
-			[71880]={HASTE=20},
-			[71882]={PARRY=20},
-		},
-		["YELLOW"] = {
-			[71874]={CRIT=20},
-			[71875]={DODGE=20},
-			[71876]={HASTE=20},
-			[71877]={MASTERY=20},
-		},
-	},
-	[417] = {
-		["BLUE"] = {
-			[76573]={STAMINA=15},
-			[76636]={CRIT=20},
-			[76638]={SPIRIT=20},
-		},
-		["GREEN"] = {
-			[93705]={CRIT=10,DODGE=10},
-			[76577]={CRIT=10,MASTERY=10},
-			[76655]={CRIT=10,STAMINA=8},
-			[76653]={DODGE=10,STAMINA=8},
-			[76642]={HASTE=10,CRIT=10},
-			[76651]={HASTE=10,SPIRIT=10},
-			[76654]={HASTE=10,STAMINA=8},
-			[76656]={MASTERY=10,STAMINA=8},
-			[76640]={SPIRIT=10,CRIT=10},
-			[76645]={SPIRIT=10,MASTERY=10},
-			[76575]={CRIT=20},
-			[76520]={CRIT=8,STAMINA=6},
-			[93706]={CRIT=8,DODGE=8},
-			[76510]={CRIT=8,MASTERY=8},
-			[76521]={DODGE=8,STAMINA=6},
-			[76522]={HASTE=8,STAMINA=6},
-			[76509]={HASTE=8,CRIT=8},
-			[76519]={HASTE=8,SPIRIT=8},
-			[76524]={MASTERY=8,STAMINA=6},
-			[76512]={SPIRIT=8,MASTERY=5},
-			[76507]={SPIRIT=8,CRIT=8},
-		},
-		["META"] = {
-			[76884]={AGILITY=14},
-			[76885]={INTELLECT=14},
-			[76886]={STRENGTH=14},
-			[76895]={STAMINA=20},
-			[76890]={CRIT=27},
-			[76896]={DODGE=27},
-			[76887]={MASTERY=27},
-			[76888]={SPIRIT=27},
-		},
-		["ORANGE"] = {
-			[76659]={HASTE=10,CRIT=10},
-			[76663]={HASTE=10,DODGE=10},
-			[76671]={HASTE=10,MASTERY=10},
-			[76664]={PARRY=10,DODGE=10},
-			[76673]={PARRY=10,MASTERY=10},
-			[76667]={HASTE=20},
-			[76658]={AGILITY=5,CRIT=10},
-			[76662]={AGILITY=5,DODGE=10},
-			[76666]={AGILITY=5,HASTE=10},
-			[76670]={AGILITY=5,MASTERY=10},
-			[76660]={INTELLECT=5,CRIT=10},
-			[76668]={INTELLECT=5,HASTE=10},
-			[76672]={INTELLECT=5,MASTERY=10},
-			[76661]={STRENGTH=5,CRIT=10},
-			[76665]={STRENGTH=5,DODGE=10},
-			[76669]={STRENGTH=5,HASTE=10},
-			[76674]={STRENGTH=5,MASTERY=10},
-			[76527]={HASTE=8,CRIT=8},
-			[76531]={HASTE=8,DODGE=8},
-			[76539]={HASTE=8,MASTERY=8},
-			[76532]={PARRY=8,DODGE=8},
-			[76541]={PARRY=8,MASTERY=8},
-		},
-		["PURPLE"] = {
-			[76681]={HASTE=10,CRIT=10},
-			[76688]={HASTE=10,STAMINA=8},
-			[76683]={PARRY=10,CRIT=10},
-			[76690]={PARRY=10,STAMINA=8},
-			[76680]={AGILITY=5,CRIT=10},
-			[76687]={AGILITY=5,STAMINA=8},
-			[76682]={INTELLECT=5,CRIT=10},
-			[76686]={INTELLECT=5,SPIRIT=10},
-			[76689]={INTELLECT=5,STAMINA=8},
-			[76684]={STRENGTH=5,CRIT=10},
-			[76691]={STRENGTH=5,STAMINA=8},
-			[76556]={HASTE=8,STAMINA=6},
-			[76549]={HASTE=8,CRIT=8},
-			[76558]={PARRY=8,STAMINA=6},
-			[76551]={PARRY=8,CRIT=8},
-		},
-		["RED"] = {
-			[76692]={AGILITY=10},
-			[76694]={INTELLECT=10},
-			[76696]={STRENGTH=10},
-			[76693]={HASTE=20},
-			[76695]={PARRY=20},
-		},
-		["YELLOW"] = {
-			[76697]={CRIT=20},
-			[76698]={DODGE=20},
-			[76699]={HASTE=20},
-			[76700]={MASTERY=20},
-		},
-	},
-	[600] = {
-		["PRISMATIC"] = { -- for low level gear, use rare gems
-			[115809]={CRIT=50},
-			[115811]={HASTE=50},
-			[115812]={MASTERY=50},
-			[115813]={MULTISTRIKE=50},
-			[115815]={STAMINA=50},
-			[115814]={VERSATILITY=50},
-		},
-	},
-	[695] = {
-		["PRISMATIC"] = { -- for high raid gear, use epic gems
-			[127760]={CRIT=75},
-			[127761]={HASTE=75},
-			[127762]={MASTERY=75},
-			[127763]={MULTISTRIKE=75},
-			[127765]={STAMINA=75},
-			[127764]={VERSATILITY=75},
-		},
-	},
+	[4] = { -- epic
+		[1] = { ilvl=1,   points={[1]=5, [59]=6}}, -- tbc
+		[2] = { ilvl=80,  points={[1]=5, [59]=6}}, -- wotlk
+		[3] = { ilvl=102, points={[1]=5, [59]=6, [81]=7}}, -- cata
+		-- no boe epics for pandas
+		[5] = { ilvl=80,  points={[1]=5, [59]=6, [81]=7, [91]=8}}, -- wod
+		[6] = { ilvl=81,  points={[1]=5, [59]=6, [81]=7, [91]=8, [101]=11}}, -- legion
+		-- no boe epics for bfa
+	}
+}
+
+ItemScore.Item_Weapon_Types = {
+	[0] = "AXE",
+	[1] = "TH_AXE",
+	[2] = "BOW",
+	[3] = "GUN",
+	[4] = "MACE",
+	[5] = "TH_MACE",
+	[6] = "TH_POLE",
+	[7] = "SWORD",
+	[8] = "TH_SWORD",
+	[9] = "WARGLAIVE",
+	[10] = "TH_STAFF",
+	[11] = "DRUID_BEAR",
+	[12] = "DRUID_CAT",
+	[13] = "FIST",
+	[14] = "MISCWEAP",
+	[15] = "DAGGER",
+	[16] = "THROWN",
+	[17] = "SPEAR",
+	[18] = "CROSSBOW",
+	[19] = "WAND",
+	[20] = "FISHPOLE",
+	}
+
+ItemScore.Item_Armor_Types = {
+	[0] = "JEWELERY", -- necklace, rings and trinkets, also some cosmetic armor
+	[1] = "CLOTH",
+	[2] = "LEATHER",
+	[3] = "MAIL",
+	[4] = "PLATE",
+	[5] = "COSMETIC",
+	[6] = "SHIELD",
+	}
+
+ItemScore.TypeToSlot = {
+	INVTYPE_WEAPON = INVSLOT_MAINHAND, -- dual wield handled in GetValidSlots
+	INVTYPE_WEAPONMAINHAND = INVSLOT_MAINHAND,
+	INVTYPE_2HWEAPON = INVSLOT_MAINHAND, -- titan fury hanndled in GetValidSlots
+	INVTYPE_WEAPONOFFHAND = INVSLOT_OFFHAND,
+	INVTYPE_SHIELD = INVSLOT_OFFHAND,
+	INVTYPE_RANGED = INVSLOT_MAINHAND,
+	INVTYPE_RANGEDRIGHT = INVSLOT_MAINHAND,
+	INVTYPE_HOLDABLE = INVSLOT_OFFHAND,
+	INVTYPE_HEAD = INVSLOT_HEAD,
+	INVTYPE_NECK = INVSLOT_NECK,
+	INVTYPE_SHOULDER = INVSLOT_SHOULDER,
+	INVTYPE_CLOAK = INVSLOT_BACK,
+	INVTYPE_CHEST = INVSLOT_CHEST,
+	INVTYPE_ROBE = INVSLOT_CHEST,
+	INVTYPE_WRIST = INVSLOT_WRIST,
+	INVTYPE_HAND = INVSLOT_HAND,
+	INVTYPE_WAIST = INVSLOT_WAIST,
+	INVTYPE_LEGS = INVSLOT_LEGS,
+	INVTYPE_FEET = INVSLOT_FEET,
+	INVTYPE_FINGER = INVSLOT_FINGER1, -- second slot handled in GetValidSlots
+	INVTYPE_TRINKET = INVSLOT_TRINKET1, -- second slot handled in GetValidSlots
 }
 
 ItemScore.KeywordsPawnToRules = {} for i,v in pairs(ItemScore.Keywords) do ItemScore.KeywordsPawnToRules[v.pawn]=v.blizz end
 ItemScore.KeywordsZygorToPawn = {} for i,v in pairs(ItemScore.Keywords) do ItemScore.KeywordsZygorToPawn[v.blizz]=v.pawn end
 ItemScore.Gear_ZygorToPawn = {} for i,v in pairs(ItemScore.Gear_PawnToZygor) do ItemScore.Gear_ZygorToPawn[v]=i end
+
+-- Build simpler defaults table for use in options
+ItemScore.Defaults = {}
+for class,specs in pairs(ItemScore.rules) do
+    ZGV.ItemScore.Defaults[class] = {}
+    for spec,data in pairs(specs) do
+	ZGV.ItemScore.Defaults[class][spec] = {}
+
+	for name,v in pairs(data.stats) do
+		table.insert(ZGV.ItemScore.Defaults[class][spec],{name=name,weight=v})
+	end
+	sort(ZGV.ItemScore.Defaults[class][spec],function(a,b) return a.name<b.name end)
+    end
+end 

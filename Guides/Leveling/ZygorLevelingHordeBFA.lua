@@ -762,12 +762,12 @@ step
 talk Yazma##126684
 accept Punishment of Tal'farrak##46928 |goto 50.05,84.76
 step
-Follow the path |goto 51.22,85.69 < 7 |only if walking
+Follow the path |goto 51.22,85.69 < 15 |only if walking
 talk Nokali the Scarred##125485
 Choose _<Show him the Word of Zul.>_
 Show Nokali the Message |q 46846/1 |goto 51.52,91.04
 step
-Jump down here |goto 53.49,89.73 < 5 |only if walking
+Jump down here |goto 53.49,89.73 < 10 |only if walking
 talk Doomsayer Volkini##125489
 Choose _<Show her the Word of Zul.>_
 Show Volkini the Message |q 46846/2 |goto 53.90,91.10
@@ -821,9 +821,9 @@ turnin The Word of Zul##46846 |goto 50.04,84.76
 accept Punishment of Tal'aman##46927 |goto 50.04,84.76
 stickystart "Collect_Amani_Heads"
 step
-Run up the stairs |goto 50.01,81.39 < 15 |only if walking
-Follow the path |goto 50.64,77.93 < 10 |only if walking
-Continue following the path |goto 56.21,81.37 < 10 |only if walking
+Run up the stairs |goto 50.01,81.39 < 20 |only if walking
+Follow the path |goto 50.64,77.93 < 15 |only if walking
+Continue following the path |goto 56.21,81.37 < 15 |only if walking
 click Ancient Gong
 Watch the dialogue
 kill Disciple of Jan'alai##120950
@@ -853,8 +853,8 @@ Kill Amani enemies around this area
 collect 6 Amani Head##160107 |q 46929/1 |goto 56.16,80.58
 stickystart "Collect_Sandfury_Heads"
 step
-Follow the path |goto 51.95,77.93 < 15 |only if walking
-Continue following the path |goto 46.84,77.05 < 15 |only if walking
+Follow the path |goto 51.95,77.93 < 20 |only if walking
+Continue following the path |goto 46.84,77.05 < 20 |only if walking
 click Ancient Gong##280611
 kill Gahz'ragon
 collect 3 Tongue of Gahz'ragon##152184 |q 46928/1 |goto 46.62,73.92
@@ -863,7 +863,7 @@ label "Collect_Sandfury_Heads"
 Kill Sandfury enemies around this area
 collect 6 Sandfury Head##158898 |q 46929/2 |goto 46.47,75.58
 step
-Run down the stairs |goto 49.72,78.71 < 15 |only if walking
+Run down the stairs |goto 49.72,78.71 < 20 |only if walking
 talk Yazma##126684
 turnin Punishment of Tal'aman##46927 |goto 50.05,84.76
 turnin Punishment of Tal'farrak##46928 |goto 50.05,84.76
@@ -872,36 +872,36 @@ talk Zolani##135441
 turnin Deterrent##46929 |goto 50.05,85.07
 accept Royal Report##50881 |goto 50.05,85.07
 step
-Ride the Elevator Up |goto Dazar'alor/2 22.52,72.25 < 5 |walk
-Leave the building |goto Dazar'alor/0 48.69,45.19 < 3 |walk
-Follow the path |goto Dazar'alor/0 49.39,44.48 < 7 |only if walking
+Ride the Elevator Up |goto Dazar'alor/2 22.52,72.25 < 7 |walk
+Leave the building |goto Dazar'alor/0 48.69,45.19 < 5 |walk
+Follow the path |goto Dazar'alor/0 49.39,44.48 < 10 |only if walking
 talk Habutu##125953
 |tip On top of the building.
 turnin Royal Report##50881 |goto Dazar'alor/0 50.04,46.54
 step
-Run down the stairs |goto 50.44,44.46 < 7 |only if walking
-Enter the building |goto 51.21,45.19 < 3 |walk
-Ride the Elevator Down |goto Dazar'alor/2 74.97,72.21 < 5 |walk
+Run down the stairs |goto 50.44,44.46 < 15 |only if walking
+Enter the building |goto 51.21,45.19 < 10 |walk
+Ride the Elevator Down |goto Dazar'alor/2 74.97,72.21 < 7 |walk
 talk Natal'hakata##131287
 |tip Inside the building.
 accept The Missing Handler##50538 |goto Dazar'alor/2 67.30,71.66
 step
-Leave the building |goto Dazar'alor/0 49.94,42.12 < 5 |walk
-Run down the stairs |goto Dazar'alor/0 50.96,40.32 < 7 |only if walking
-Run down the stairs |goto Dazar'alor/0 56.26,29.56 < 7 |only if walking
-Run down the stairs |goto Dazar'alor/0 57.29,22.65 < 7 |only if walking
-Cross the bridge |goto Dazar'alor/0 54.28,25.31 < 10 |only if walking
-Run up the stairs |goto Dazar'alor/0 51.88,20.29 < 7 |only if walking
+Leave the building |goto Dazar'alor/0 49.94,42.12 < 10 |walk
+Run down the stairs |goto Dazar'alor/0 50.96,40.32 < 15 |only if walking
+Run down the stairs |goto Dazar'alor/0 56.26,29.56 < 15 |only if walking
+Run down the stairs |goto Dazar'alor/0 57.29,22.65 < 15 |only if walking
+Cross the bridge |goto Dazar'alor/0 54.28,25.31 < 20 |only if walking
+Run up the stairs |goto Dazar'alor/0 51.88,20.29 < 15 |only if walking
 talk Zena the Feeder##133242
 fpath The Sliver |goto Dazar'alor/0 53.16,19.36
 step
-Run up the stairs |goto 51.75,19.06 < 7 |only if walking
-Run up the stairs |goto 46.29,22.58 < 7 |only if walking
+Run up the stairs |goto 51.75,19.06 < 15 |only if walking
+Run up the stairs |goto 46.29,22.58 < 15 |only if walking
 talk Wardruid Loti##126560
 turnin The Zanchuli Council##47445 |goto 45.25,24.02
 accept Forbidden Practices##47423 |goto 45.25,24.02
 step
-Follow the path |goto 42.03,23.12 < 15 |only if walking
+Follow the path |goto 42.03,23.12 < 20 |only if walking
 talk Nokano##127665
 accept Pests##47441 |goto 40.27,19.07
 step
@@ -930,9 +930,9 @@ step
 talk Jani##126334
 turnin Curse of Jani##47442 |goto 35.46,7.71
 step
-Follow the path |goto 36.49,14.63 < 15 |only if walking
-Continue following the path |goto 41.96,23.16 < 15 |only if walking
-Run down the stairs |goto 45.40,23.81 < 7 |only if walking
+Follow the path |goto 36.49,14.63 < 20 |only if walking
+Continue following the path |goto 41.96,23.16 < 20 |only if walking
+Run down the stairs |goto 45.40,23.81 < 15 |only if walking
 use Loti's Totem##152627
 |tip Use it next to NPC's around this area.
 |tip Some of them will turn into Crimson Cultists.
@@ -969,7 +969,7 @@ step
 label "Slay_Bloodraged_Pterrordaxes"
 kill 6 Bloodraged Pterrordax##126618 |q 47435/1 |goto 41.73,16.97
 step
-Follow the path |goto 39.87,12.88 < 15 |only if walking
+Follow the path |goto 39.87,12.88 < 20 |only if walking
 talk Hexlord Raal##126564
 turnin Pterrortorial Dispute##47435 |goto 40.93,11.31
 turnin Restraining Order##47434 |goto 40.93,11.31
@@ -979,23 +979,20 @@ Enter the building |goto 41.16,10.98 < 5 |walk
 kill Guardian of the Tombs##127072 |q 47437/1 |goto Dazar'alor/4 65.51,69.04
 |tip Inside the building.
 step
-Run up the stairs |goto 45.77,39.28 < 5 |walk
-Run up the stairs |goto 45.46,17.40 < 5 |walk |notravel
-Follow the path |goto Dazar'alor/3 39.15,27.74 < 5 |c |q 47437
-step
-kill Guardian of the Rites##127073 |q 47437/2 |goto 65.93,30.68
+Run up the stairs |goto 45.77,39.28 < 10 |walk
+kill Guardian of the Rites##127073 |q 47437/2 |goto Dazar'alor/3 65.93,30.68
 |tip Upstairs inside the building.
 step
-Follow the path |goto 64.21,66.43 < 3 |walk
-Leave the building |goto 77.47,87.57 < 3 |walk
+Follow the path |goto 64.21,66.43 < 10 |walk
+Leave the building |goto 77.47,87.57 < 10 |walk
 kill Guardian of the Dead##127074 |q 47437/3 |goto Dazar'alor/0 44.27,16.70
 step
-Run up the stairs |goto 46.03,16.14 < 7 |only if walking
+Run up the stairs |goto 46.03,16.14 < 15 |only if walking
 talk Wardruid Loti##126560
 turnin Competitive Devotion##47437 |goto 46.11,13.06
 accept Dire Situation##47422 |goto 46.11,13.06
 step
-Run up the stairs |goto 46.10,11.85 < 10 |only if walking
+Run up the stairs |goto 46.10,11.85 < 15 |only if walking
 kill Dregada##127079 |q 47422/1 |goto 43.63,7.38
 |tip At the top of the building.
 |tip Your allies will help you fight him.
@@ -1025,45 +1022,37 @@ label "Gonk"
 talk Wardruid Loti##126560
 accept Gonk, Lord of the Pack##47439 |goto 42.29,9.10
 step
-Jump down here |goto 41.76,9.06 < 5 |only if walking
+Jump down here |goto 41.76,9.06 < 10 |only if walking
 Jump down here |goto 38.18,7.16 < 10 |only if walking
-Follow the path up |goto 35.43,4.91 < 15 |only if walking
-Follow the path |goto Zuldazar/0 50.62,30.63 < 15 |only if walking
-Follow the path |goto Zuldazar/0 49.32,31.36 < 15 |only if walking
+Follow the path up |goto 35.43,4.91 < 20 |only if walking
+Follow the path |goto Zuldazar/0 50.62,30.63 < 20 |only if walking
+Follow the path |goto Zuldazar/0 49.32,31.36 < 20 |only if walking
 talk Gonk##127444
 Tell him _"We have a bargain."_
 Bargain with Gonk |q 47439/1 |goto 48.17,32.27
 step
-Follow the road |goto 49.42,31.28 < 15 |only if walking
-Follow the road |goto 50.80,30.58 < 15 |only if walking
-Continue following the road |goto Dazar'alor/0 36.03,5.49 < 15 |only if walking
-Continue following the road |goto Dazar'alor/0 36.53,15.17 < 15 |only if walking
-Cross the bridge |goto Dazar'alor/0 42.33,26.94 < 15 |only if walking
-Run up the stairs |goto Dazar'alor/0 44.40,30.57 < 7 |only if walking
-Run up the stairs |goto Dazar'alor/0 45.10,36.21 < 10 |only if walking
-Follow the path |goto Dazar'alor/0 47.03,37.50 < 10 |only if walking
+Follow the road |goto 49.42,31.28 < 20 |only if walking
+Follow the road |goto 50.80,30.58 < 20 |only if walking
+Continue following the road |goto Dazar'alor/0 36.03,5.49 < 20 |only if walking
+Continue following the road |goto Dazar'alor/0 36.53,15.17 < 20 |only if walking
+Cross the bridge |goto Dazar'alor/0 42.33,26.94 < 20 |only if walking
+Run up the stairs |goto Dazar'alor/0 44.40,30.57 < 15 |only if walking
+Run up the stairs |goto Dazar'alor/0 45.10,36.21 < 15 |only if walking
+Follow the path |goto Dazar'alor/0 47.03,37.50 < 15 |only if walking
 talk Wardruid Loti##127576
 turnin Gonk, Lord of the Pack##47439 |goto Dazar'alor/0 49.91,33.41
 accept The Bargain is Struck##48897 |goto Dazar'alor/0 49.91,33.41
 step
-Run up the stairs |goto 49.85,35.41 < 7 |only if walking
-Run up the stairs |goto 48.44,36.85 < 7 |only if walking
-Run up the stairs |goto 50.22,37.74 < 7 |only if walking
+Run up the stairs |goto 49.85,35.41 < 15 |only if walking
+Run up the stairs |goto 48.44,36.85 < 15 |only if walking
+Run up the stairs |goto 50.22,37.74 < 15 |only if walking
 talk Huntmaster Kil'ja##130785
 accept Nesingwary's Trek##49768 |goto 52.00,41.39
 step
-Enter the building |goto 49.98,41.92 < 5 |only if walking
-Ride the Elevator Up |goto Dazar'alor/2 22.94,72.17 < 5 |only if walking
-Leave the building |goto Dazar'alor/0 48.68,45.19 < 5 |only if walking
-Follow the path |goto Dazar'alor/0 49.38,44.43 < 7 |only if walking
-talk King Rastakhan##120740
-|tip Upstairs inside the building.
-turnin The Bargain is Struck##48897 |goto 49.93,46.61
-step
-Enter the building |goto 49.98,41.92 < 5 |only if walking
-Ride the Elevator Up |goto Dazar'alor/2 22.94,72.17 < 5 |only if walking
-Leave the building |goto Dazar'alor/0 48.68,45.19 < 5 |only if walking
-Follow the path |goto Dazar'alor/0 49.38,44.43 < 7 |only if walking
+Enter the building |goto 49.98,41.92 < 10 |only if walking
+Ride the Elevator Up |goto Dazar'alor/2 22.94,72.17 < 7 |only if walking
+Leave the building |goto Dazar'alor/0 48.68,45.19 < 7 |only if walking
+Follow the path |goto Dazar'alor/0 49.38,44.43 < 10 |only if walking
 talk King Rastakhan##120740
 |tip Upstairs inside the building.
 turnin The Bargain is Struck##48897 |goto 49.93,46.61
@@ -1078,52 +1067,38 @@ Begin Riding Ata the Winglord |invehicle |goto 42.48,10.06 |q 47440
 step
 Ride Ata the Winglord |q 47440/1 |goto Zuldazar/0 70.45,49.07 |notravel
 step
-Follow the path up |goto Zuldazar/0 70.66,48.84 < 5 |only if walking
-Follow the path up |goto 71.09,48.52 < 5 |only if walking
-Follow the path up |goto 71.31,48.61 < 5 |only if walking
+Follow the path up |goto Zuldazar/0 70.66,48.84 < 15 |only if walking
 talk Pa'ku##127377
 Bargain with Pa'ku |q 47440/2 |goto 71.50,49.32
 step
-Follow the path |goto 71.61,49.13 < 7 |only if walking
 Jump Off the Cliff |q 47440/3 |goto 71.82,49.24
 |tip You won't die.
 step
 Watch the dialogue
-Return to Dazar'alor |goto Dazar'alor/0 50.09,34.52 < 7 |c |q 47440 |notravel
+Return to Dazar'alor |goto Dazar'alor/0 49.82,34.59 < 20 |c |q 47440 |notravel
 step
 talk Hexlord Raal##127489
 turnin Pa'ku, Master of Winds##47440 |goto Dazar'alor/0 49.92,33.40
 accept The Bargain is Struck##47432 |goto Dazar'alor/0 49.92,33.40
 step
 click Totem of Pa'ku |goto 49.54,32.83
-Fly to the Top of the Building |goto 49.91,39.56 < 7 |noway |c |q 47432
+Fly to the Top of the Building |goto 49.91,39.56 < 10 |noway |c |q 47432
 step
-Enter the building |goto 49.95,42.14 < 5 |walk
-Follow the path |goto Dazar'alor/1 46.97,27.86 < 5 |walk
-Run up the stairs |goto Dazar'alor/1 42.35,46.30 < 5 |walk
-Follow the path |goto Dazar'alor/2 41.10,56.62 < 3 |walk
-Ride the Elevator Up |goto Dazar'alor/2 23.06,72.35 < 5 |c |q 47432
+Enter the building |goto 49.95,42.14 < 10 |walk
+Ride the Elevator Up |goto Dazar'alor/2 23.06,72.35 < 7 |c |q 47432
 step
-Follow the path |goto 28.81,67.48 < 3 |walk
-Leave the building |goto 29.08,59.61 < 3 |walk
-Run up the stairs |goto Dazar'alor/0 48.88,44.61 < 5 |only if walking
-Follow the path |goto Dazar'alor/0 49.44,44.65 < 5 |only if walking
-Run up the stairs |goto Dazar'alor/0 49.87,45.79 < 5 |only if walking
+Leave the building |goto 29.08,59.61 < 7 |walk
+Run up the stairs |goto Dazar'alor/0 48.88,44.61 < 10 |only if walking
 talk King Rastakhan##120740
-|tip Upstairs inside the building.
+|tip On top of the building.
 turnin The Bargain is Struck##47432 |goto 49.93,46.62
-step
-Run down the stairs |goto 50.01,45.96 < 5 |only if walking
-Run down the stairs |goto 50.46,44.53 < 5 |only if walking
-Follow the path |goto 50.96,44.39 < 5 |only if walking
-Run down the stairs |goto 51.34,43.91 < 5 |only if walking
-Jump down here |goto 51.35,42.76 < 5 |only if walking
-talk Huntmaster Kil'ja##130785
-accept Nesingwary's Trek##49768 |goto 52.00,41.39
 |next "Both_Loa_Continue"
 step
 label "Both_Loa_Continue"
-Jump down here |goto Dazar'alor/0 59.44,9.93 < 10 |only if walking
+Cross the bridge |goto Dazar'alor/0 51.54,21.33 < 20 |only if walking
+Run up the stairs |goto 54.98,25.49 < 20 |only if walking
+Run down the stairs |goto 58.16,21.93 < 20 |only if walking
+Jump down here |goto 59.44,9.93 < 10 |only if walking
 talk Zul the Prophet##129907
 turnin Tal'gurub##49488 |goto Zuldazar/0 62.82,32.56
 accept Needs a Little Body##49489 |goto Zuldazar/0 62.82,32.56
@@ -1134,22 +1109,20 @@ accept Fuel for the Voodoo##49491 |goto 63.62,31.76
 stickystart "Collect_Voodoo_Totems"
 stickystart "Gather_Ounces_of_Soul"
 step
-Run up the stairs |goto 63.65,32.07 < 7 |only if walking
-Enter the building |goto 64.93,33.11 < 3 |walk
+Run up the stairs |goto 63.65,32.07 < 15 |only if walking
+Enter the building |goto 64.93,33.11 < 10 |walk
 clicknpc Atal'jamba Ungo##130089
 |tip Inside the building.
 "Improve" the Concoction |q 49489/1 |goto 65.02,32.99 |count 1
 step
-Leave the building |goto 64.93,33.12 < 3 |walk
-Cross the bridge |goto 64.39,33.17 < 10 |only if walking
-Follow the path |goto 63.44,30.56 < 15 |only if walking
-Enter the building |goto 63.07,29.06 < 5 |walk
+Cross the bridge |goto 64.39,33.17 < 15 |only if walking
+Follow the path |goto 63.44,30.56 < 20 |only if walking
+Enter the building |goto 63.07,29.06 < 10 |walk
 clicknpc Atal'jamba Iri##130109
 |tip Inside the building.
 "Improve" the Concoction |q 49489/1 |goto 63.20,29.06 |count 2
 step
 label "Collect_Voodoo_Totems"
-Leave the building |goto 63.08,29.06 < 3 |walk
 click Voodoo Totem##154901+
 |tip They look like wooden glowing green totems on the ground around this area.
 collect 8 Voodoo Totem##154901 |q 49491/1 |goto 63.56,30.85
@@ -1198,7 +1171,7 @@ click Jambani Stockpile##290750+
 |tip They look like stacks of brown baskets on the ground around this area.
 Destroy #8# Jambani Stockpiles |q 51663/1 |goto 65.24,28.67
 step
-Run up the stairs |goto 65.32,29.09 < 15 |only if walking
+Run up the stairs |goto 65.32,29.09 < 20 |only if walking
 talk Zul the Prophet##129907
 turnin Zul's Ethical Dilemma##49493 |goto 65.71,30.21
 turnin Zuvembi Brew##49494 |goto 65.71,30.21
@@ -1324,12 +1297,12 @@ Administer the Voodoo'ed Aggression Formula |q 49870/1 |goto 63.06,37.11
 step
 Travel to Gloomtail's Cave |q 49870/2 |goto 63.99,41.94
 step
-Enter the cave |goto 64.56,42.07 < 7 |walk
+Enter the cave |goto 64.56,42.07 < 10 |walk
 kill Gloomtail##131555
 |tip Inside the cave.
 collect Gloomtail's Head##156922 |q 49870/3 |goto 65.01,42.09
 step
-Leave the cave |goto 64.51,42.07 < 7 |walk
+Leave the cave |goto 64.51,42.07 < 10 |walk
 talk Witch Doctor Jangalar##130929
 turnin Size Matters##49870 |goto 64.12,35.37
 accept The Head of Her Enemy##50297 |goto 64.12,35.37
@@ -1352,8 +1325,8 @@ step
 clicknpc Direhorn Hatchling##122939
 accept The Orphaned Hatchling##47226 |goto 65.65,41.35
 step
-Follow the road |goto 65.35,43.43 < 15 |only if walking
-Follow the road |goto 65.59,44.80 < 15 |only if walking
+Follow the road |goto 65.35,43.43 < 20 |only if walking
+Follow the road |goto 65.59,44.80 < 20 |only if walking
 Cross the bridge |goto 66.48,43.81 < 15 |only if walking
 talk Beastlord L'kala##121706
 turnin The Orphaned Hatchling##47226 |goto 66.81,42.51
@@ -1509,12 +1482,12 @@ step
 Ride the Elevator Up |goto Dazar'alor/2 74.96,72.05 < 7 |walk
 Follow the path |goto Dazar'alor/0 50.43,44.59 < 10 |only if walking
 talk King Rastakhan##120740
-|tip Upstairs inside the building.
+|tip On top of the building.
 turnin False Prophecies##49663 |goto Dazar'alor/0 49.93,46.61
 accept A Port in Peril##49122 |goto Dazar'alor/0 49.93,46.61
 step
-Follow the road |goto Zuldazar/0 70.35,29.64 < 15 |only if walking
-Follow the path up |goto Zuldazar/0 68.18,20.20 < 20 |only if walking
+Follow the road |goto Zuldazar/0 70.35,29.64 < 20 |only if walking
+Follow the path up |goto Zuldazar/0 68.18,20.20 < 30 |only if walking
 click Hunter's Board##271706
 accept Hunt for King K'tal##47706 |goto Zuldazar/0 67.44,17.92
 accept WANTED: Ten'gor and Nol'ixwan##51091 |goto Zuldazar/0 67.44,17.92
@@ -1624,7 +1597,8 @@ Follow the path up |goto 68.18,19.88 < 20 |only if walking
 talk Huntmaster Vol'ka##123019
 turnin WANTED: Ten'gor and Nol'ixwan##51091 |goto 67.50,17.62
 step
-Cross the bridge |goto Dazar'alor/0 42.59,81.74 < 15 |only if walking
+Follow the path |goto Dazar'alor/0 51.18,85.38 < 20 |only if walking
+Cross the bridge |goto Dazar'alor/0 42.59,81.74 < 20 |only if walking
 Follow the road |goto Zuldazar/0 51.07,56.32 < 20 |only if walking
 talk Zolani##127815
 turnin A Port in Peril##49122 |goto Zuldazar/0 47.92,60.44
@@ -1810,7 +1784,7 @@ Activate the Spirit Obelisk |q 49149/1 |goto 47.45,65.14 |count 4
 step
 kill Jao-Ti the Thunderous##128474 |q 49147/1 |goto 48.12,64.49
 step
-Run up the stairs |goto 47.88,66.66 < 10 |only if walking
+Run up the stairs |goto 47.88,66.66 < 15 |only if walking
 click Spirit Obelisk##277313
 Activate the Spirit Obelisk |q 49149/1 |goto 47.48,66.76 |count 5
 step
@@ -1826,7 +1800,7 @@ kill 10 Stormbound Conqueror##128447 |q 49148/1 |goto 46.99,67.08
 |tip Stand in the blue circles on the ground that appear while fighting them.
 |tip These will help you kill them faster.
 step
-Run down the stairs |goto 47.86,67.28 < 10 |only if walking
+Run down the stairs |goto 47.86,67.28 < 15 |only if walking
 talk Kaza'jin the Wavebinder##127837
 turnin Embrace the Voodoo##49149 |goto 49.59,64.48
 turnin Crumbling Apart##49148 |goto 49.59,64.48
@@ -1845,7 +1819,7 @@ step
 Watch the dialogue
 Return to The Golden Throne |goto Dazar'alor/0 49.92,39.65 < 7 |c |notravel |q 49310
 step
-Enter the building |goto Dazar'alor/0 49.94,42.14 < 5 |walk
+Enter the building |goto Dazar'alor/0 49.94,42.14 < 10 |walk
 talk Baine Bloodhoof##141555
 |tip Inside the building.
 turnin The Prophet's Ploy##49310 |goto Dazar'alor/2 41.45,72.29
@@ -1856,12 +1830,12 @@ talk Nok'tal##130932
 |tip Inside the building.
 accept Kaja'mite? Kaja'must!##49917 |goto 67.20,83.81
 step
-Leave the building |goto Dazar'alor/0 49.93,42.13 < 7 |walk
-Run down the stairs |goto Dazar'alor/0 48.83,40.32 < 10 |only if walking
-Run down the stairs |goto Dazar'alor/0 42.32,47.35 < 10 |only if walking
+Leave the building |goto Dazar'alor/0 49.93,42.13 < 10 |walk
+Run down the stairs |goto Dazar'alor/0 48.83,40.32 < 15 |only if walking
+Run down the stairs |goto Dazar'alor/0 42.32,47.35 < 15 |only if walking
 Jump down carefully here |goto Dazar'alor/0 42.41,59.54 < 10 |only if walking
-Cross the bridge |goto Dazar'alor/0 41.07,60.91 < 15 |only if walking
-Follow the road |goto Zuldazar/0 52.68,49.35 < 15 |only if walking
+Cross the bridge |goto Dazar'alor/0 41.07,60.91 < 20 |only if walking
+Follow the road |goto Zuldazar/0 52.68,49.35 < 20 |only if walking
 talk Bently Greaseflare##132267
 turnin Kaja'mite? Kaja'must!##49917 |goto Zuldazar/0 51.60,50.57
 accept Kaja'mite Ore Bust##49919 |goto Zuldazar/0 51.60,50.57
@@ -1933,15 +1907,15 @@ Follow the road up |goto 52.11,43.88 < 20 |only if walking
 talk Kaza the Skyblade##129483
 fpath Temple of the Prophet |goto 49.81,44.59
 step
-Run up the stairs |goto Dazar'alor/0 51.75,19.08 < 10 |only if walking
-Follow the path |goto Dazar'alor/0 45.37,23.80 < 10 |only if walking
+Run up the stairs |goto Dazar'alor/0 51.75,19.08 < 15 |only if walking
+Follow the path |goto Dazar'alor/0 45.37,23.80 < 15 |only if walking
 talk Kaza'jin the Wavebinder##124629
 turnin Terrace of the Chosen##47509 |goto Dazar'alor/0 42.64,21.42
 accept Zanchuli Traitors##47897 |goto Dazar'alor/0 42.64,21.42
 accept Rescuing the Taken##47915 |goto Dazar'alor/0 42.64,21.42
 stickystart "Slay_Zanchuli_Traitors"
 step
-Run up the stairs |goto 41.48,19.35 < 10 |only if walking
+Run up the stairs |goto 41.48,19.35 < 15 |only if walking
 kill Hexmother Kala##133297
 collect Fetish of Loti##156923 |q 47915/1 |goto 43.52,17.68
 step
@@ -1959,14 +1933,14 @@ accept Raal##47518
 accept Walls Have Ears##47520
 stickystart "Slay_Eyes_and_Ears_of_Yazma"
 step
-Enter the building |goto 41.10,11.05 < 5 |walk
-Run up the stairs |goto Dazar'alor/4 45.67,39.19 < 5 |walk
-Follow the path |goto Dazar'alor/3 39.28,27.61 < 5 |c |q 47518
+Enter the building |goto 41.10,11.05 < 10 |walk
+Run up the stairs |goto Dazar'alor/4 45.67,39.19 < 10 |walk
+Follow the path |goto Dazar'alor/3 39.28,27.61 < 10 |c |q 47518
 step
-Follow the path |goto 64.33,66.36 < 5 |walk
-Leave the building |goto 77.39,87.50 < 3 |walk
-Run up the stairs |goto Dazar'alor/0 46.02,15.89 < 5 |only if walking
-Run up the stairs |goto Dazar'alor/0 46.18,11.54 < 15 |only if walking
+Follow the path |goto 64.33,66.36 < 10 |walk
+Leave the building |goto 77.39,87.50 < 10 |walk
+Run up the stairs |goto Dazar'alor/0 46.02,15.89 < 15 |only if walking
+Run up the stairs |goto Dazar'alor/0 46.18,11.54 < 20 |only if walking
 kill Crazzak the Heretic##124652 |q 47518/1 |goto Dazar'alor/0 43.46,7.06
 |tip At the top of the building.
 step
@@ -2006,7 +1980,7 @@ step
 talk Gonk##124827
 turnin The Hunter##47522 |goto 48.39,32.12
 step
-Run up the stairs |goto 50.50,31.76 < 10 |only if walking
+Run up the stairs |goto 50.50,31.76 < 15 |only if walking
 kill Shadra Betrayer##133735+
 |tip Kill all of the ones channeling on Pa'ku.
 Rescue Pa'ku |q 47963/1 |goto 52.10,32.81
@@ -2025,8 +1999,8 @@ click Voodoo Pile##272401+
 Disrupt the Blood Rituals |q 47527/1 |goto 50.35,31.06
 |only if havequest(47527) or completedq(47527)
 step
-Cross the bridge |goto 49.92,29.49 < 15 |only if walking
-Enter the building |goto 47.72,28.87 < 5 |walk
+Run up the stairs |goto 49.12,30.52 < 15 |only if walking
+Enter the building |goto 47.72,28.87 < 10 |walk
 kill Vol'kaal##122866
 |tip Inside the building.
 Defeat Vol'kaal |q 47528/1 |goto 47.09,27.85
@@ -2034,7 +2008,7 @@ step
 Watch the dialogue
 Defeat Yazma |q 47528/2 |goto 47.21,27.72
 step
-Leave the building |goto 47.71,28.87 < 3 |walk
+Leave the building |goto 47.71,28.87 < 10 |walk
 talk Wardruid Loti##122760
 turnin Mistress of Lies##47528 |goto 48.58,26.78
 step
@@ -2078,16 +2052,16 @@ step
 clicknpc Laelani##132681
 collect Brutosaur Scale##156824 |q 47735/2 |goto 78.59,13.13
 step
+label "Rescue_Zebahari_Villagers"
+click Zeb'ahari NPC's
+|tip They look like friendly blue trolls on the ground and fighting enemies around this area.
+Rescue #12# Zeb'ahari Villagers |q 50235/1 |goto 80.19,14.76
+step
 talk Zeb'ahari Villager##138520
 accept The Loa-Speaker's Betrayal##47733 |goto 79.35,16.77
 step
 clicknpc Spiny Puffer##133162
 collect Envenomed Puffer Spine##156809 |q 47735/1 |goto 79.79,16.53
-step
-label "Rescue_Zebahari_Villagers"
-click Zeb'ahari NPC's
-|tip They look like friendly blue trolls on the ground and fighting enemies around this area.
-Rescue #12# Zeb'ahari Villagers |q 50235/1 |goto 80.19,14.76
 step
 kill Loa-Speaker Kihara##132979 |q 47733/1 |goto 78.53,20.28
 step
@@ -2099,8 +2073,8 @@ Kill enemies around this area
 collect 12 Traitor's Blood##156834 |q 47739/1 |goto 78.60,19.47
 step
 talk Zolani##124083
-turnin The Loa-Speaker's Betrayal##47733 |goto 76.69,16.26
 turnin No Safe Haven##50235 |goto 76.69,16.26
+turnin The Loa-Speaker's Betrayal##47733 |goto 76.69,16.26
 step
 talk Jamil Abul'housin##132637
 |tip Inside the building.
@@ -2211,18 +2185,13 @@ kill Windcaller Ula'jan##133140
 |tip At the top of the ship.
 collect Skull of Windcaller Ula'jan##156861 |q 51678/1 |goto 81.30,19.59
 step
-Follow the path |goto 81.09,20.26 < 5 |c |q 51679
-step
 click Temple of Rezan Map##290996
-|tip Inside the ship.
+|tip Inside the ship, on the deck level.
 Search the Navigation Chamber |q 51679/1 |goto 81.27,19.74
-step
-Run down the stairs |goto 81.21,20.14 < 5 |c |q 51679
 step
 Search the Hold |q 51679/2 |goto Zuldazar/1 52.51,77.91
 |tip Downstairs one level inside the ship.
 step
-Run down the stairs |goto Zuldazar/1 46.03,75.95 < 3 |walk
 clicknpc Chronicler To'kini##138728
 |tip Downstairs two levels inside the ship.
 Search the Crew Quarters |q 51679/3 |goto Zuldazar/2 47.39,44.05
@@ -2238,7 +2207,7 @@ turnin A Strange Port of Call##51679 |goto Zuldazar/0 76.66,16.13
 accept The Temple of Rezan##47737 |goto Zuldazar/0 76.66,16.13
 step
 Follow the path up |goto 77.41,16.65 < 20 |only if walking
-Follow the road |goto 75.72,20.17 < 20 |only if walking
+Follow the road |goto 75.72,20.17 < 30 |only if walking
 talk King Rastakhan##124655
 turnin The Temple of Rezan##47737 |goto 72.03,21.03
 accept House of the King##47740 |goto 72.03,21.03
@@ -2260,7 +2229,7 @@ click Corrupting Totem##281216+
 |tip There are three Corrupting Totems around this area.
 Cleanse Rezan the King |q 47740/3 |goto 73.82,22.94
 step
-Run up the stairs |goto 73.04,24.34 < 10 |only if walking
+Run up the stairs |goto 73.04,24.34 < 15 |only if walking
 click Corrupting Totem##281216+
 |tip There are three Corrupting Totems around this area.
 Cleanse Rezan the Conqueror |q 47740/2 |goto 73.68,25.76
@@ -2279,7 +2248,7 @@ click Training Gate##272388+
 Liberate the Temple of Rezan |q 47797/1 |goto 72.00,23.76 |goto 73.61,25.18
 |only if havequest(47797) or completedq(47797)
 step
-Run up the stairs |goto 74.33,24.94 < 10 |only if walking
+Run up the stairs |goto 74.33,24.94 < 15 |only if walking
 talk Zolani##124656
 turnin Heads Will Roll##47736 |goto 74.85,24.90
 step
@@ -2297,7 +2266,7 @@ talk King Rastakhan##124655
 turnin Partners in Heresy##47734 |goto 74.87,24.94
 accept To Sacrifice a Loa##47741 |goto 74.87,24.94
 step
-Run up the stairs |goto 75.31,24.55 < 10 |only if walking
+Run up the stairs |goto 75.31,24.55 < 15 |only if walking
 kill Vilnak'dor##133570 |q 47741/1 |goto 75.99,24.91
 step
 Watch the dialogue
@@ -2318,7 +2287,7 @@ step
 talk King Rastakhan##124915
 accept King or Prey##51111 |goto 70.98,29.91
 step
-Enter the building |goto Dazar'alor/0 49.99,41.88 < 7 |walk
+Enter the building |goto Dazar'alor/0 49.99,41.88 < 10 |walk
 talk Baine Bloodhoof##141555
 |tip Inside the building.
 turnin King or Prey##51111 |goto Dazar'alor/2 41.43,72.44
@@ -2712,8 +2681,7 @@ step
 click The Word of Zul III##280350
 Read The Word of Zul III |q 49424/3 |goto 48.81,42.76
 step
-Run up the stairs |goto 49.75,42.48 < 10 |only if walking
-Enter the building |goto 49.19,40.70 < 5 |walk
+Run up the stairs |goto 49.75,42.48 < 15 |only if walking
 click The Word of Zul II##280349
 |tip Inside the building.
 Read The Word of Zul II |q 49424/2 |goto 49.01,40.57
@@ -2910,12 +2878,12 @@ kill Grand Ma'da Ateena##121504
 Watch the dialogue
 Slay Grand Ma'da Ateena |q 47262/1 |goto 44.91,71.65
 step
-Follow the path |goto 45.12,71.36 < 7 |only if walking
+Watch the dialogue
 talk Princess Talanji##130844
 turnin Ending the Blood Trolls##47262 |goto 45.21,71.04
 accept A Time of Revelation##47263 |goto 45.21,71.04
 step
-Follow the path |goto 45.25,70.06 < 5 |only if walking
+Watch the dialogue
 talk Princess Talanji##131146
 Tell her _"We need to move, we shouldn't stay here."_
 Speak with Talanji at the Overlook |q 47263/1 |goto 45.57,68.65
@@ -3082,22 +3050,7 @@ kill Tojek##136381 |q 51089/1 |goto 26.98,67.13
 |tip It looks like a large yellow and brown triceratops that walks around this area.
 |tip You may need help with this.
 step
-Follow the path |goto 27.63,66.79 < 10 |only if walking
-Cross the bridge |goto 29.53,65.62 < 7 |only if walking
-Follow the path |goto 30.17,65.85 < 7 |only if walking
-Follow the path |goto 30.60,65.68 < 7 |only if walking
-Cross the bridge |goto 31.08,65.55 < 7 |only if walking
-Follow the path |goto 31.92,65.90 < 7 |only if walking
-Continue following the path |goto 33.21,65.86 < 7 |only if walking
-Cross the bridge |goto 34.32,65.13 < 7 |only if walking
-Cross the bridge |goto 34.90,64.90 < 7 |only if walking
-Follow the path |goto 36.00,64.78 < 7 |only if walking
-Follow the path down |goto 37.60,64.95 < 7 |only if walking
-Follow the path |goto 38.13,64.10 < 7 |only if walking
-Follow the path |goto 38.18,63.22 < 5 |only if walking
-Run up the stairs |goto 37.90,63.12 < 5 |only if walking
-Enter the building |goto 37.73,63.11 < 3 |walk
-click Broken Spear##271170
+Enter the building |goto 37.73,63.11 < 10 |walk		click Broken Spear##271170
 |tip Inside the building.
 Investigate the Abandoned Ruins |q 47241/2 |goto 37.50,63.06
 step
@@ -3244,7 +3197,7 @@ step
 click Drum of Spirits##270997
 Sound the Drum of Spirits |q 47880/2 |goto 39.59,31.84
 step
-Enter the building |goto 39.56,26.73 < 5 |walk
+Enter the building |goto 39.56,26.73 < 10 |walk
 Watch the dialogue
 talk Bwonsamdi##122688
 |tip Inside the building.
@@ -3255,7 +3208,7 @@ accept That Which Haunts the Dead##47247 |goto 39.57,24.66
 stickystart "Disrupt_Corrupted_Spirits"
 stickystart "Collect_Decaying_Bloodstones"
 step
-Leave the building |goto 39.59,26.56 < 5 |c |q 47247
+Leave the building |goto 39.59,26.56 < 10 |c |q 47247
 step
 accept Mark of the Damned##48934 |goto 39.58,27.25
 |tip You will accept this quest automatically.
@@ -3267,14 +3220,14 @@ step
 kill Hex Priestess Tizeja##122666 |q 47247/2 |goto 36.09,29.88
 |tip Kill the enemies channeling on her to be able to attack her.
 step
-Enter the crypt |goto 40.37,28.80 < 5 |walk
+Enter the crypt |goto 40.37,28.80 < 10 |walk
 click Ancient Urn##270991
 |tip Inside the crypt.
 collect Valjabu's Tusk Ring##150754 |q 47248/1 |goto 40.37,26.52
 stickystart "Destroy_Vile_Desecrations"
 step
-Leave the crypt |goto 40.37,28.77 < 5 |walk
-Run up the stairs |goto 39.58,29.15 < 10 |only if walking
+Leave the crypt |goto 40.37,28.77 < 10 |walk
+Run up the stairs |goto 39.58,29.15 < 15 |only if walking
 kill Warlord Malaja##122664 |q 47247/1 |goto 43.42,30.02
 step
 talk Keula##126588
@@ -3293,7 +3246,7 @@ clicknpc Seeping Corruption##127738+
 Disrupt the Corrupted Spirits |q 48934/1 |goto 42.61,29.77
 |only if havequest(48934) or completedq(48934)
 step
-Enter the crypt |goto 39.59,31.66 < 5 |walk
+Enter the crypt |goto 39.59,31.66 < 10 |walk
 click Sarcophagus Lid##278692
 |tip Inside the crypt.
 Find Keula's Mother |q 49432/1 |goto 39.59,34.95
@@ -3303,7 +3256,7 @@ kill The Matron Shaazula##126616
 |tip Inside the crypt.
 Subdue Matron Shaazula |q 49432/2 |goto 39.65,35.00
 step
-Leave the crypt |goto 39.59,31.73 < 5 |c |q 47248
+Leave the crypt |goto 39.59,31.73 < 10 |c |q 47248
 step
 label "Collect_Decaying_Bloodstones"
 Kill Horror enemies around this area
@@ -3312,7 +3265,7 @@ step
 talk Theurgist Salazae##122706
 turnin 'Til Death Do Us Part##47248 |goto 36.66,27.40
 step
-Enter the building |goto 39.56,26.73 < 5 |walk
+Enter the building |goto 39.56,26.73 < 10 |walk
 talk Bwonsamdi##122688
 |tip Inside the building.
 turnin Remnants of the Damned##47491 |goto 39.56,24.68
@@ -4640,6 +4593,7 @@ talk Krag'wa the Huge##140283
 Tell him _"I am ready to go, Krag'wa."_
 Ride with Krag'wa |invehicle |goto 45.19,60.70 |q 52073
 step
+Watch the dialogue
 Ride Krag'wa |q 52073/2 |goto 48.85,56.54
 step
 talk Princess Talanji##133476
@@ -4759,6 +4713,7 @@ accept Answering Their Attacks##47327
 accept Dressed for Battle##49676
 stickystart "Slay_Sethraks"
 step
+Follow the path up |goto 65.52,37.27 < 10 |walk
 Leave the cave |goto 64.90,36.23 < 10 |walk
 click Stolen Vulpera Banner##278686
 Find the Banner |q 49676/1 |goto 64.67,33.91
@@ -4869,6 +4824,7 @@ step
 click Rakera's Journal Page##271844
 Recover the Journal Page |q 47316/1 |goto 52.80,46.41 |count 3
 step
+Follow the path |goto 51.62,43.03 < 15 |only if walking
 click Rakera's Journal Page##271844
 Recover the Journal Page |q 47316/1 |goto 52.78,41.80 |count 4
 step
@@ -5020,10 +4976,12 @@ stickystart "Collect_Sacred_Remains"
 stickystart "Kill_Ranishu_Gorgers"
 step
 Enter the cave |goto 55.01,86.20 < 10 |walk
+Follow the path down |goto 55.75,86.01 < 10 |walk
 kill Rorgog the Devourer##134052
 |tip Inside the cave.
 collect Rorgog's Antennae##153029 |q 48993/1 |goto 56.12,83.45
 step
+Follow the path up |goto 55.75,86.01 < 10 |walk
 Leave the cave |goto 55.04,86.20 < 10 |c |q 48992
 step
 label "Collect_Sacred_Remains"
@@ -5042,6 +5000,7 @@ accept Cleanse the Mind##48887 |goto 53.18,90.29
 accept It Springs Eternal##48888 |goto 53.18,90.29
 stickystart "Slay_Redrock_Scavenger"
 step
+Follow the path down |goto 53.11,84.99 < 15 |only if walking
 Enter the cave |goto 52.16,83.78 < 10 |walk
 click Shrine of Thunder##276460
 |tip Inside the cave.
@@ -5051,6 +5010,8 @@ label "Slay_Redrock_Scavenger"
 Kill Redrock enemies around this area
 Slay #8# Redrock Scavenger |q 48888/1 |goto 52.13,84.48
 step
+Follow the path down |goto 53.12,85.01 < 20 |only if walking
+Follow the path up |goto 53.79,83.57 < 15 |only if walking
 talk Akunda the Exalted##127992
 turnin Cleanse the Mind##48887 |goto 53.18,90.30
 turnin It Springs Eternal##48888 |goto 53.18,90.30
@@ -5116,6 +5077,7 @@ talk Akunda##138382
 turnin Repairing the Past##48889 |goto 52.22,79.89
 accept Ending the Madness##48996 |goto 52.22,79.89
 step
+Follow the path |goto 53.12,89.65 < 15 |only if walking
 kill Akunda the Exalted##128147 |q 48996/1 |goto 53.18,91.25
 |tip Inside the building.
 |tip Use the "Tempest" ability.
@@ -5140,6 +5102,7 @@ talk Warguard Rakera##130660
 accept Clearing the Fog##47874 |goto 53.61,91.66
 step
 Watch the dialogue
+|tip Follow Warguard Rakera as she walks.
 talk Warguard Rakera##130667
 turnin Clearing the Fog##47874 |goto 52.81,89.24
 accept Knowledge of the Past##48896 |goto 52.81,89.24
@@ -6036,7 +5999,7 @@ Choose _<Free the slave and give them a weapon to fight with.>_
 |tip You must have a Faithless Scimitar to be able to arm them.
 Arm #8# Slaves |q 49665/1 |goto 47.60,32.31
 step
-Follow the path up |goto 47.18,33.86 < 20 |only if walking
+Follow the path up |goto 47.17,33.86 < 15 |only if walking
 talk Nisha##135090
 turnin Ready to Riot##49665 |goto 46.15,33.22
 turnin Make Them Fear Us##49666 |goto 46.15,33.22
@@ -6045,6 +6008,7 @@ step
 talk Kiro##137981
 accept Light Up the Gulch##49668 |goto 46.10,33.26
 step
+Follow the path up |goto 46.86,34.71 < 20 |only if walking
 Enter the cave |goto 47.95,35.61 < 10 |walk
 talk Vorrik##135172
 |tip Inside the cave.
@@ -6067,6 +6031,7 @@ label "Collect_Volatile_Lightning_Bombs"
 Kill Ridge enemies around this area
 collect 6 Volatile Lightning Bomb##154896 |q 50748/1 |goto 47.80,36.98
 step
+Follow the path up |goto 46.40,37.48 < 10 |only if walking
 click Faithless Trapper's Spear##278447
 |tip At the top of the mountain.
 accept Forced Grounding##49002 |goto 47.10,38.71
@@ -8612,6 +8577,2781 @@ step
 _Congratulations!_
 You Unlocked the "Mag'har Orc" Allied Race.
 ]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Zuldazar Loremaster (Story Quest Only)",{
+author="support@zygorguides.com",
+description="\nThis guide will assist you in completing the following Zuldazar storylines:\n\nAudience with the King\nPort of Zandalar\nWeb of Lies\nThe Zanchuli Council\nPortents and Prophecies\nWarport Rastari\nAmong the People\nMarch of the Loa",
+condition_suggested=function() return level >= 110 and not achieved(11861) and completedq(52131) end,
+condition_end=function() return achieved(11861) end,
+startlevel=110.0,
+endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\Zuldazar",
+},[[
+leechsteps "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice" 62-77
+step
+click Scouting Map
+|tip Inside the building.
+accept Zuldazar##47514 |goto Dazar'alor/2 41.71,69.41
+step
+talk Princess Talanji##133050
+|tip Inside the building.
+turnin Zuldazar##47514 |goto 41.14,66.73
+accept Trust of a King##49615 |goto 41.19,66.74
+step
+talk Brillin the Beauty##122690
+|tip Inside the building.
+home The Great Seal |goto Dazar'alor/1 48.86,72.64 |q 49615
+step
+Ride the Elevator Up |goto Dazar'alor/2 22.58,72.07 < 10 |walk
+talk King Rastakhan##120740
+|tip On top of the building.
+turnin Trust of a King##49615 |goto Dazar'alor/0 49.93,46.61
+accept Tal'gurub##49488 |goto Dazar'alor/0 49.93,46.61
+step
+talk Zolani##122915
+|tip On top of the building.
+accept The Port of Zandalar##50835 |goto 49.81,46.56
+step
+talk Yazma##122641
+|tip On top of the building.
+accept The Zanchuli Council##47445 |goto 49.72,46.51
+step
+talk Paku'ai Rokota##122689
+fpath The Great Seal |goto 51.91,41.20
+step
+talk Zolani##135441
+turnin The Port of Zandalar##50835 |goto 50.06,85.07
+accept Shakedown##46926 |goto 50.06,85.07
+step
+talk Yazma##126684
+accept The Word of Zul##46846 |goto 50.05,84.76
+step
+talk Witch Doctor Jala##126148
+accept The Red Market##48452 |goto 44.25,82.15
+stickystart "Collect_Dark_Fetishes"
+step
+Run down the stairs |goto 42.83,80.86 < 10 |only if walking
+Follow the path |goto 41.83,78.98 < 15 |only if walking
+Enter the building |goto 42.80,83.58 < 10 |walk
+click Chalice of Calling
+|tip Inside the building.
+Destroy the Chalice of Calling |q 48452/2 |goto 43.08,83.14
+step
+label "Collect_Dark_Fetishes"
+Kill Crimson enemies around this area
+collect 3 Dark Fetishes##152461 |q 48452/1 |goto 42.29,83.76
+step
+Run up the stairs |goto 42.81,78.72 < 10 |only if walking
+Run up the stairs |goto 43.43,81.69 < 10 |only if walking
+talk Witch Doctor Jala##126148
+turnin The Red Market##48452 |goto 44.25,82.15
+accept Evidence of Evil##48454 |goto 44.25,82.15
+stickystart "Slay_Dockside_Thugs"
+step
+talk Dockmaster Cobo##126009
+Choose _<Show him the Word of Zul.>_
+Show Dockmaster Cobo the Message |q 46846/3 |goto 45.31,79.78
+step
+label "Slay_Dockside_Thugs"
+Kill Thug enemies around this area
+Slay #15# Dockside Thugs |q 46926/1 |goto 47.91,83.03
+step
+talk Zolani##135441
+turnin Shakedown##46926 |goto 50.05,85.06
+turnin Evidence of Evil##48454 |goto 50.07,85.07
+accept Deterrent##46929 |goto 50.05,85.06
+step
+talk Yazma##126684
+accept Punishment of Tal'farrak##46928 |goto 50.05,84.76
+step
+Follow the path |goto 51.22,85.69 < 15 |only if walking
+talk Nokali the Scarred##125485
+Choose _<Show him the Word of Zul.>_
+Show Nokali the Message |q 46846/1 |goto 51.52,91.04
+step
+Jump down here |goto 53.49,89.73 < 10 |only if walking
+talk Doomsayer Volkini##125489
+Choose _<Show her the Word of Zul.>_
+Show Volkini the Message |q 46846/2 |goto 53.90,91.10
+step
+Run up the stairs |goto 50.04,88.70 < 15 |only if walking
+talk Yazma##126684
+turnin The Word of Zul##46846 |goto 50.04,84.76
+accept Punishment of Tal'aman##46927 |goto 50.04,84.76
+stickystart "Collect_Amani_Heads"
+step
+Run up the stairs |goto 50.01,81.39 < 20 |only if walking
+Follow the path |goto 50.64,77.93 < 15 |only if walking
+Continue following the path |goto 56.21,81.37 < 15 |only if walking
+click Ancient Gong
+Watch the dialogue
+kill Disciple of Jan'alai##120950
+|tip This enemy may be different.
+Defeat the Amani Disciple |q 46927/1 |goto 56.18,87.47 |count 1
+step
+click Ancient Gong
+Watch the dialogue
+kill Disciple of Halazzi##120951
+|tip This enemy may be different.
+Defeat the Amani Disciple |q 46927/1 |goto 56.18,87.47 |count 2
+step
+click Ancient Gong
+Watch the dialogue
+kill Disciple of Akil'zon##120946
+|tip This enemy may be different.
+Defeat the Amani Disciple |q 46927/1 |goto 56.18,87.47 |count 3
+step
+click Ancient Gong
+Watch the dialogue
+kill Disciple of Nalorakk##120949
+|tip This enemy may be different.
+Defeat the Amani Disciple |q 46927/1 |goto 56.18,87.47 |count 4
+step
+label "Collect_Amani_Heads"
+Kill Amani enemies around this area
+collect 6 Amani Head##160107 |q 46929/1 |goto 56.16,80.58
+stickystart "Collect_Sandfury_Heads"
+step
+Follow the path |goto 51.95,77.93 < 20 |only if walking
+Continue following the path |goto 46.84,77.05 < 20 |only if walking
+click Ancient Gong##280611
+kill Gahz'ragon
+collect 3 Tongue of Gahz'ragon##152184 |q 46928/1 |goto 46.62,73.92
+step
+label "Collect_Sandfury_Heads"
+Kill Sandfury enemies around this area
+collect 6 Sandfury Head##158898 |q 46929/2 |goto 46.47,75.58
+step
+Run down the stairs |goto 49.72,78.71 < 20 |only if walking
+talk Yazma##126684
+turnin Punishment of Tal'aman##46927 |goto 50.05,84.76
+turnin Punishment of Tal'farrak##46928 |goto 50.05,84.76
+step
+talk Zolani##135441
+turnin Deterrent##46929 |goto 50.05,85.07
+accept Royal Report##50881 |goto 50.05,85.07
+step
+Ride the Elevator Up |goto Dazar'alor/2 22.52,72.25 < 7 |walk
+Leave the building |goto Dazar'alor/0 48.69,45.19 < 5 |walk
+Follow the path |goto Dazar'alor/0 49.39,44.48 < 10 |only if walking
+talk Habutu##125953
+|tip On top of the building.
+turnin Royal Report##50881 |goto Dazar'alor/0 50.04,46.54
+step
+Run down the stairs |goto Dazar'alor/0 50.96,40.32 < 15 |only if walking
+Run down the stairs |goto Dazar'alor/0 56.26,29.56 < 15 |only if walking
+Run down the stairs |goto Dazar'alor/0 57.29,22.65 < 15 |only if walking
+Cross the bridge |goto Dazar'alor/0 54.28,25.31 < 20 |only if walking
+Run up the stairs |goto Dazar'alor/0 51.88,20.29 < 15 |only if walking
+talk Zena the Feeder##133242
+fpath The Sliver |goto Dazar'alor/0 53.16,19.36
+step
+Run up the stairs |goto 51.75,19.06 < 15 |only if walking
+Run up the stairs |goto 46.29,22.58 < 15 |only if walking
+talk Wardruid Loti##126560
+turnin The Zanchuli Council##47445 |goto 45.25,24.02
+accept Forbidden Practices##47423 |goto 45.25,24.02
+step
+use Loti's Totem##152627
+|tip Use it next to NPC's around this area.
+|tip Some of them will turn into Crimson Cultists.
+kill 9 Crimson Cultist##138249 |q 47423/1 |goto 50.68,16.48
+step
+talk Hexlord Raal##126564
+turnin Forbidden Practices##47423 |goto 51.90,11.88
+accept Offensively Defensive##47433 |goto 51.90,11.88
+step
+talk Hexlord Raal##126564
+Tell him _"Ready to patrol."_
+Speak with Hexlord Raal |q 47433/1 |goto 51.90,11.88
+step
+clicknpc Ata the Winglord##126822
+Fly the Skies with Hexlord Raal |q 47433/2 |goto 53.06,11.63
+step
+Place #6# Farseer Totems |q 47433/3 |goto 58.83,1.60 |notravel
+|tip Use the "Farseer Totem" ability on your action bar.
+|tip Use it on the yellow circles on the ground as you fly.
+step
+Watch the dialogue
+Return to Zanchul |goto 46.32,18.99 < 7 |c |q 47433 |notravel
+step
+talk Wardruid Loti##126560
+turnin Offensively Defensive##47433 |goto 46.21,19.26
+accept Pterrortorial Dispute##47435 |goto 46.21,19.26
+accept Restraining Order##47434 |goto 46.21,19.26
+stickystart "Slay_Bloodraged_Pterrordaxes"
+step
+Shoo #20# Pterrordax Hatchlings |q 47434/1 |goto 41.73,16.97
+|tip They look like smaller red dinosaur birds flying low to the ground around this area.
+|tip Walk next to them.
+step
+label "Slay_Bloodraged_Pterrordaxes"
+kill 6 Bloodraged Pterrordax##126618 |q 47435/1 |goto 41.73,16.97
+step
+Follow the path |goto 39.87,12.88 < 20 |only if walking
+talk Hexlord Raal##126564
+turnin Pterrortorial Dispute##47435 |goto 40.93,11.31
+turnin Restraining Order##47434 |goto 40.93,11.31
+accept Competitive Devotion##47437 |goto 40.93,11.31
+step
+Enter the building |goto 41.16,10.98 < 7 |walk
+kill Guardian of the Tombs##127072 |q 47437/1 |goto Dazar'alor/4 65.51,69.04
+|tip Inside the building.
+step
+Run up the stairs |goto 45.77,39.28 < 10 |walk
+kill Guardian of the Rites##127073 |q 47437/2 |goto Dazar'alor/3 65.93,30.68
+|tip Upstairs inside the building.
+step
+Follow the path |goto 64.21,66.43 < 10 |walk
+Leave the building |goto 77.47,87.57 < 10 |walk
+kill Guardian of the Dead##127074 |q 47437/3 |goto Dazar'alor/0 44.27,16.70
+step
+Run up the stairs |goto 46.03,16.14 < 15 |only if walking
+talk Wardruid Loti##126560
+turnin Competitive Devotion##47437 |goto 46.11,13.06
+accept Dire Situation##47422 |goto 46.11,13.06
+step
+Run up the stairs |goto 46.10,11.85 < 15 |only if walking
+kill Dregada##127079 |q 47422/1 |goto 43.63,7.38
+|tip At the top of the building.
+|tip Your allies will help you fight him.
+step
+talk Wardruid Loti##126560
+|tip At the top of the building.
+turnin Dire Situation##47422 |goto 42.29,9.10
+accept Picking a Side##47438 |goto 42.29,9.10
+step
+_You Must Make a Choice:_
+click Gonk
+|tip Choosing Gonk will provide you with many totems around the city to allow you to run faster and take less falling damage in Dazar'alor.
+_Or_
+click Pa'ku
+|tip Choosing Pa'ku will provide you with a few totems around the city to allow you to fly to certain locations around Dazar'alor.
+Choose a Loa |q 47438/1 |goto 42.55,9.12
+step
+talk Wardruid Loti##126560
+turnin Picking a Side##47438 |goto 42.29,9.10
+step
+_Which Loa Did You Choose?_
+|tip Click the line with the name of loa you chose.
+Gonk |confirm |next "Gonk" |or |q 47439 |future
+Pa'ku |confirm |next "Paku" |or |q 47440 |future
+step
+label "Gonk"
+talk Wardruid Loti##126560
+accept Gonk, Lord of the Pack##47439 |goto 42.29,9.10
+step
+Jump down here |goto 41.76,9.06 < 10 |only if walking
+Jump down here |goto 38.18,7.16 < 10 |only if walking
+Follow the path up |goto 35.43,4.91 < 20 |only if walking
+Follow the path |goto Zuldazar/0 50.62,30.63 < 20 |only if walking
+Follow the path |goto Zuldazar/0 49.32,31.36 < 20 |only if walking
+talk Gonk##127444
+Tell him _"We have a bargain."_
+Bargain with Gonk |q 47439/1 |goto 48.17,32.27
+step
+Follow the road |goto 49.42,31.28 < 20 |only if walking
+Follow the road |goto 50.80,30.58 < 20 |only if walking
+Continue following the road |goto Dazar'alor/0 36.03,5.49 < 20 |only if walking
+Continue following the road |goto Dazar'alor/0 36.53,15.17 < 20 |only if walking
+Cross the bridge |goto Dazar'alor/0 42.33,26.94 < 20 |only if walking
+Run up the stairs |goto Dazar'alor/0 44.40,30.57 < 15 |only if walking
+Run up the stairs |goto Dazar'alor/0 45.10,36.21 < 15 |only if walking
+Follow the path |goto Dazar'alor/0 47.03,37.50 < 15 |only if walking
+talk Wardruid Loti##127576
+turnin Gonk, Lord of the Pack##47439 |goto Dazar'alor/0 49.91,33.41
+accept The Bargain is Struck##48897 |goto Dazar'alor/0 49.91,33.41
+step
+Run up the stairs |goto 49.85,35.41 < 15 |only if walking
+Run up the stairs |goto 48.44,36.85 < 15 |only if walking
+Run up the stairs |goto 50.22,37.74 < 15 |only if walking
+talk Huntmaster Kil'ja##130785
+accept Nesingwary's Trek##49768 |goto 52.00,41.39
+step
+Enter the building |goto 49.98,41.92 < 10 |only if walking
+Ride the Elevator Up |goto Dazar'alor/2 22.94,72.17 < 7 |only if walking
+Leave the building |goto Dazar'alor/0 48.68,45.19 < 7 |only if walking
+Follow the path |goto Dazar'alor/0 49.38,44.43 < 10 |only if walking
+talk King Rastakhan##120740
+|tip Upstairs inside the building.
+turnin The Bargain is Struck##48897 |goto 49.93,46.61
+|next "Both_Loa_Continue"
+step
+label "Paku"
+talk Hexlord Raal##126564
+accept Pa'ku, Master of Winds##47440 |goto Dazar'alor/0 42.54,9.49
+step
+clicknpc Ata the Winglord##127414
+Begin Riding Ata the Winglord |invehicle |goto 42.48,10.06 |q 47440
+step
+Ride Ata the Winglord |q 47440/1 |goto Zuldazar/0 70.45,49.07 |notravel
+step
+Follow the path up |goto Zuldazar/0 70.66,48.84 < 15 |only if walking
+talk Pa'ku##127377
+Bargain with Pa'ku |q 47440/2 |goto 71.50,49.32
+step
+Jump Off the Cliff |q 47440/3 |goto 71.82,49.24
+|tip You won't die.
+step
+Watch the dialogue
+Return to Dazar'alor |goto Dazar'alor/0 49.82,34.59 < 20 |c |q 47440 |notravel
+step
+talk Hexlord Raal##127489
+turnin Pa'ku, Master of Winds##47440 |goto Dazar'alor/0 49.92,33.40
+accept The Bargain is Struck##47432 |goto Dazar'alor/0 49.92,33.40
+step
+click Totem of Pa'ku |goto 49.54,32.83
+Fly to the Top of the Building |goto 49.91,39.56 < 10 |noway |c |q 47432
+step
+Enter the building |goto 49.95,42.14 < 10 |walk
+Ride the Elevator Up |goto Dazar'alor/2 23.06,72.35 < 7 |c |q 47432
+step
+Leave the building |goto 29.08,59.61 < 7 |walk
+Run up the stairs |goto Dazar'alor/0 48.88,44.61 < 10 |only if walking
+talk King Rastakhan##120740
+|tip On top of the building.
+turnin The Bargain is Struck##47432 |goto 49.93,46.62
+|next "Both_Loa_Continue"
+step
+label "Both_Loa_Continue"
+Cross the bridge |goto Dazar'alor/0 51.54,21.33 < 20 |only if walking
+Run up the stairs |goto 54.98,25.49 < 20 |only if walking
+Run down the stairs |goto 58.16,21.93 < 20 |only if walking
+Jump down here |goto 59.44,9.93 < 10 |only if walking
+talk Zul the Prophet##129907
+turnin Tal'gurub##49488 |goto Zuldazar/0 62.82,32.56
+accept Needs a Little Body##49489 |goto Zuldazar/0 62.82,32.56
+accept The Urn of Voices##49490 |goto Zuldazar/0 62.82,32.56
+step
+talk Izita's Spirit##130706
+accept Fuel for the Voodoo##49491 |goto 63.62,31.76
+stickystart "Collect_Voodoo_Totems"
+stickystart "Gather_Ounces_of_Soul"
+step
+Run up the stairs |goto 63.65,32.07 < 15 |only if walking
+Enter the building |goto 64.93,33.11 < 10 |walk
+clicknpc Atal'jamba Ungo##130089
+|tip Inside the building.
+"Improve" the Concoction |q 49489/1 |goto 65.02,32.99 |count 1
+step
+Cross the bridge |goto 64.39,33.17 < 15 |only if walking
+Follow the path |goto 63.44,30.56 < 20 |only if walking
+Enter the building |goto 63.07,29.06 < 10 |walk
+clicknpc Atal'jamba Iri##130109
+|tip Inside the building.
+"Improve" the Concoction |q 49489/1 |goto 63.20,29.06 |count 2
+step
+label "Collect_Voodoo_Totems"
+click Voodoo Totem##154901+
+|tip They look like wooden glowing green totems on the ground around this area.
+collect 8 Voodoo Totem##154901 |q 49491/1 |goto 63.56,30.85
+step
+label "Gather_Ounces_of_Soul"
+Kill enemies around this area
+Gather #30# Ounces of Soul |q 49490/1 |goto 63.56,30.85
+step
+click Brazier##278452
+turnin Fuel for the Voodoo##49491 |goto 62.74,28.47
+step
+talk Zul the Prophet##129907
+turnin Needs a Little Body##49489 |goto 62.86,28.24
+turnin The Urn of Voices##49490 |goto 62.86,28.24
+accept Arrogance of Vol'jamba##49492 |goto 62.86,28.24
+step
+clicknpc Voice of Vol'jamba##130209
+Silence the Voice of Vol'jamba |q 49492/1 |goto 62.90,28.02
+step
+clicknpc Eyes of Vol'jamba##130208
+Blind the Eyes of Vol'jamba |q 49492/2 |goto 63.55,28.07
+step
+clicknpc Spite of Vol'jamba##130197
+Thwart the Spite of Vol'jamba |q 49492/3 |goto 64.12,28.38
+step
+Watch the dialogue
+talk Zul the Prophet##129907
+turnin Arrogance of Vol'jamba##49492 |goto 64.38,28.55
+accept Zul's Ethical Dilemma##49493 |goto 64.38,28.55
+accept Zuvembi Brew##49494 |goto 64.38,28.55
+stickystart "Free_Mindslaves"
+step
+click Jambani Stockpile##290750
+accept Preparing for the Fall##51663 |goto 65.28,28.22
+stickystart "Destroy_Jambani_Stockpiles"
+step
+kill Zuvembi Brewer Zekal##130260 |q 49494/1 |goto 64.89,27.01
+step
+label "Free_Mindslaves"
+use the Mindbreaker Chant##155458
+|tip Use it next to Mindslaved enemies around this area.
+Free #9# Mindslaves |q 49493/1 |goto 65.24,28.67
+step
+label "Destroy_Jambani_Stockpiles"
+click Jambani Stockpile##290750+
+|tip They look like stacks of brown baskets on the ground around this area.
+Destroy #8# Jambani Stockpiles |q 51663/1 |goto 65.24,28.67
+step
+Run up the stairs |goto 65.32,29.09 < 20 |only if walking
+talk Zul the Prophet##129907
+turnin Zul's Ethical Dilemma##49493 |goto 65.71,30.21
+turnin Zuvembi Brew##49494 |goto 65.71,30.21
+turnin Preparing for the Fall##51663 |goto 65.71,30.21
+accept Enforcing Fate##49495 |goto 65.71,30.21
+step
+click Gong of Command##279349
+Place the Seal of Implacable Fate |q 49495/1 |goto 65.89,31.08
+step
+click Urn of Voices##279353
+Place the Urn of Voices |q 49495/2 |goto 65.89,30.67
+step
+Watch the dialogue
+click Urn of Voices##279353
+Adjust the Urn of Voices |q 49495/3 |goto 65.86,30.65
+step
+click Mysterious Brew
+Swap the Potion |q 49495/4 |goto 65.56,31.30
+step
+talk Zul the Prophet##129907
+turnin Enforcing Fate##49495 |goto 65.70,30.21
+accept Plot Twist##49905 |goto 65.70,30.21
+step
+Watch the dialogue
+Confront Vol'jamba |q 49905/1 |goto 65.62,30.55
+step
+kill Vol'jamba##131241 |q 49905/2 |goto 65.68,31.03
+step
+talk Zul the Prophet##129907
+turnin Plot Twist##49905 |goto 65.58,30.51
+accept False Prophecies##49663 |goto 65.58,30.51
+step
+Ride the Elevator Up |goto Dazar'alor/2 23.06,72.35 < 7 |walk
+Leave the building |goto Dazar'alor/2 29.08,59.61 < 7 |walk
+Run up the stairs |goto Dazar'alor/0 48.88,44.61 < 10 |only if walking
+talk King Rastakhan##120740
+|tip On top of the building.
+turnin False Prophecies##49663 |goto Dazar'alor/0 49.93,46.61
+accept A Port in Peril##49122 |goto Dazar'alor/0 49.93,46.61
+step
+Follow the path |goto Dazar'alor/0 51.18,85.38 < 20 |only if walking
+Cross the bridge |goto Dazar'alor/0 42.59,81.74 < 20 |only if walking
+Follow the road |goto Zuldazar/0 51.07,56.32 < 20 |only if walking
+talk Zolani##127815
+turnin A Port in Peril##49122 |goto Zuldazar/0 47.92,60.44
+accept Wrath of the Zandalari##49144 |goto Zuldazar/0 47.92,60.44
+step
+talk Habutu##127814
+accept No Troll Left Behind##49145 |goto 47.87,60.44
+step
+talk Paku'ai Ja'nessa##127818
+fpath Warport Rastari |goto 48.22,60.34
+step
+Enter the tunnel |goto 47.38,59.70 < 15 |only if walking
+Leave the tunnel |goto 45.49,61.58 < 15 |only if walking
+Follow the road |goto 43.21,66.34 < 20 |only if walking
+talk Eliara Duskwing##123817
+fpath Xibala |goto 44.84,72.25
+step
+talk Kaza'jin the Wavebinder##127837
+accept Spirits' Belongings##49146 |goto 47.14,60.47
+stickystart "Rally_Rastari_Defenders"
+stickystart "Slay_Mogu_Invaders"
+step
+click Grimoire of the Other Side##277886
+collect Grimoire of the Other Side##153526 |q 49146/2 |goto 46.80,61.87
+step
+Run up the stairs |goto 46.45,61.71 < 10 |only if walking
+click Reclaimed Bijous##277444
+collect Reclaimed Bijous##153525 |q 49146/1 |goto 45.61,60.36
+step
+click Venerated Remains##277447
+collect Venerated Remains##153527 |q 49146/3 |goto 45.81,62.46
+step
+label "Rally_Rastari_Defenders"
+click Crude Barricade+
+|tip They look like wooden barriers in the entrances of buildings around this area.
+use the Rastari Skull Whistle##153524
+|tip Use it near Rastari Defenders around this area.
+|tip They look like friendly Trolls standing on the ground around this area.
+Rally #12# Rastari Defenders |q 49145/1 |goto 45.78,60.90
+step
+label "Slay_Mogu_Invaders"
+Kill enemies around this area
+Slay #8# Mogu Invaders |q 49144/1 |goto 45.78,60.90
+step
+talk Habutu##127814
+turnin No Troll Left Behind##49145 |goto 47.87,60.44
+step
+talk Zolani##127815
+turnin Wrath of the Zandalari##49144 |goto 47.92,60.44
+step
+talk Kaza'jin the Wavebinder##127837
+turnin Spirits' Belongings##49146 |goto 48.08,60.38
+accept Embrace the Voodoo##49149 |goto 48.08,60.38
+step
+talk Zolani##127815
+accept Crumbling Apart##49148 |goto 47.92,60.44
+step
+talk Habutu##127814
+accept Show of Strength##49147 |goto 47.87,60.44
+stickystart "Kill_Stormbound_Conquerors"
+step
+Follow the path |goto 47.81,61.84 < 15 |only if walking
+click Spirit Obelisk##277313
+Activate the Spirit Obelisk |q 49149/1 |goto 47.22,61.86 |count 1
+step
+click Spirit Obelisk##277313
+Activate the Spirit Obelisk |q 49149/1 |goto 47.97,63.07 |count 2
+step
+click Spirit Obelisk##277313
+Activate the Spirit Obelisk |q 49149/1 |goto 46.71,63.66 |count 3
+step
+click Spirit Obelisk##277313
+Activate the Spirit Obelisk |q 49149/1 |goto 47.45,65.14 |count 4
+step
+kill Jao-Ti the Thunderous##128474 |q 49147/1 |goto 48.12,64.49
+step
+Run up the stairs |goto 47.88,66.66 < 15 |only if walking
+click Spirit Obelisk##277313
+Activate the Spirit Obelisk |q 49149/1 |goto 47.48,66.76 |count 5
+step
+kill Subjugator Zheng##128472 |q 49147/2 |goto 45.83,66.52
+step
+label "Kill_Stormbound_Conquerors"
+kill Kao-Tien Stormbinder##127778+
+collect Condensed Thunder##153529+ |n
+|tip These will give you a "Thundering Blast" ability for a short time.
+|tip Use the "Thundering Blast" ability on Stormbound Conquerors and Inert Conquerors around this area.
+|tip It appears as a button on the screen.
+kill 10 Stormbound Conqueror##128447 |q 49148/1 |goto 46.99,67.08
+|tip Stand in the blue circles on the ground that appear while fighting them.
+|tip These will help you kill them faster.
+step
+Run down the stairs |goto 47.86,67.28 < 15 |only if walking
+talk Kaza'jin the Wavebinder##127837
+turnin Embrace the Voodoo##49149 |goto 49.59,64.48
+turnin Crumbling Apart##49148 |goto 49.59,64.48
+turnin Show of Strength##49147 |goto 49.59,64.48
+accept Thunder's Fall##49309 |goto 49.59,64.48
+step
+kill Warlord Kao##127766 |q 49309/1 |goto 50.20,65.37
+step
+talk Kaza'jin the Wavebinder##127837
+turnin Thunder's Fall##49309 |goto 49.59,64.48
+accept The Prophet's Ploy##49310 |goto 49.59,64.48
+step
+clicknpc Scarbeak##133960
+Ride Scarbeak to King Rastakhan's Throne |q 49310/1 |goto 49.51,64.35
+step
+Watch the dialogue
+Return to The Golden Throne |goto Dazar'alor/0 49.92,39.65 < 7 |c |notravel |q 49310
+step
+Enter the building |goto Dazar'alor/0 49.94,42.14 < 10 |walk
+talk Baine Bloodhoof##141555
+|tip Inside the building.
+turnin The Prophet's Ploy##49310 |goto Dazar'alor/2 41.45,72.29
+accept Terrace of the Chosen##47509 |goto Dazar'alor/2 41.45,72.29
+accept The Wounded King##51101 |goto Dazar'alor/2 41.45,72.29
+step
+Cross the bridge |goto Dazar'alor/0 39.07,26.87 < 20 |only if walking
+Cross the bridge |goto Zuldazar/0 52.68,40.69 < 20 |only if walking
+Follow the road up |goto Zuldazar/0 51.96,43.85 < 30 |only if walking
+talk Kaza the Skyblade##129483
+fpath Temple of the Prophet |goto Zuldazar/0 49.81,44.59
+step
+Run up the stairs |goto Dazar'alor/0 51.75,19.08 < 15 |only if walking
+Follow the path |goto Dazar'alor/0 45.37,23.80 < 15 |only if walking
+talk Kaza'jin the Wavebinder##124629
+turnin Terrace of the Chosen##47509 |goto Dazar'alor/0 42.64,21.42
+accept Zanchuli Traitors##47897 |goto Dazar'alor/0 42.64,21.42
+accept Rescuing the Taken##47915 |goto Dazar'alor/0 42.64,21.42
+stickystart "Slay_Zanchuli_Traitors"
+step
+Run up the stairs |goto 41.48,19.35 < 15 |only if walking
+kill Hexmother Kala##133297
+collect Fetish of Loti##156923 |q 47915/1 |goto 43.52,17.68
+step
+label "Slay_Zanchuli_Traitors"
+Kill enemies around this area
+Slay #10# Zanchuli Traitors |q 47897/1 |goto 40.91,16.06
+step
+talk Wardruid Loti##123335
+turnin Zanchuli Traitors##47897 |goto 39.29,13.84
+turnin Rescuing the Taken##47915 |goto 39.29,13.84
+step
+_Next to you:_
+talk Wardruid Loti
+accept Raal##47518
+accept Walls Have Ears##47520
+stickystart "Slay_Eyes_and_Ears_of_Yazma"
+step
+Enter the building |goto 41.10,11.05 < 10 |walk
+Run up the stairs |goto Dazar'alor/4 45.67,39.19 < 10 |walk
+Follow the path |goto Dazar'alor/3 39.28,27.61 < 10 |c |q 47518
+step
+Follow the path |goto 64.33,66.36 < 10 |walk
+Leave the building |goto 77.39,87.50 < 10 |walk
+Run up the stairs |goto Dazar'alor/0 46.02,15.89 < 15 |only if walking
+Run up the stairs |goto Dazar'alor/0 46.18,11.54 < 20 |only if walking
+kill Crazzak the Heretic##124652 |q 47518/1 |goto Dazar'alor/0 43.46,7.06
+|tip At the top of the building.
+step
+talk Hexlord Raal##133324
+turnin Raal##47518 |goto 43.62,7.35
+step
+label "Slay_Eyes_and_Ears_of_Yazma"
+Kill Yazma enemies around this area
+|tip Inside and outside the building.
+Slay #8# Eyes and Ears of Yazma |q 47520/1 |goto 43.46,7.06
+step
+_Next to you:_
+talk Wardruid Loti
+turnin Walls Have Ears##47520
+step
+talk Hexlord Raal##133324
+accept Midnight in the Garden of the Loa##47521 |goto 42.55,9.49
+step
+clicknpc Ata the Winglord##127414
+Mount Ata the Winglord |invehicle |goto 42.48,10.05 |q 47521
+step
+Ride with Ata the Winglord |q 47521/1 |goto Zuldazar/0 50.73,29.57 |notravel
+step
+Watch the dialogue
+talk Wardruid Loti##122760
+turnin Midnight in the Garden of the Loa##47521 |goto 50.70,29.65
+accept The Hunter##47522 |goto 50.70,29.65
+step
+talk Hexlord Raal##133653
+accept The Ancient One##47963 |goto 50.69,29.57
+step
+Rescue Gonk |q 47522/1 |goto 48.63,31.86
+step
+talk Gonk##124827
+turnin The Hunter##47522 |goto 48.39,32.12
+step
+Run up the stairs |goto 50.50,31.76 < 15 |only if walking
+kill Shadra Betrayer##133735+
+|tip Kill all of the ones channeling on Pa'ku.
+Rescue Pa'ku |q 47963/1 |goto 52.10,32.81
+step
+talk Pa'ku##124756
+turnin The Ancient One##47963 |goto 52.10,32.81
+step
+_Next to you:_
+talk Acolyte Mali
+accept Mistress of Lies##47528
+step
+Run up the stairs |goto 49.12,30.52 < 15 |only if walking
+Enter the building |goto 47.72,28.87 < 10 |walk
+kill Vol'kaal##122866
+|tip Inside the building.
+Defeat Vol'kaal |q 47528/1 |goto 47.09,27.85
+step
+Watch the dialogue
+Defeat Yazma |q 47528/2 |goto 47.21,27.72
+step
+Leave the building |goto 47.71,28.87 < 10 |walk
+talk Wardruid Loti##122760
+turnin Mistress of Lies##47528 |goto 48.58,26.78
+step
+talk Paku'ai Rip'nata##130787
+fpath Garden of the Loa |goto 49.72,26.27
+step
+Cross the bridge |goto 53.55,23.67 < 20 |only if walking
+Follow the road down |goto 54.60,28.16 < 30 |only if walking
+Cross the bridge |goto 58.86,22.92 < 20 |only if walking
+Follow the road |goto 61.56,24.52 < 30 |only if walking
+Follow the path |goto 64.32,21.47 < 20 |only if walking
+Follow the path |goto 64.75,20.67 < 30 |only if walking
+Follow the path |goto 67.04,21.23 < 30 |only if walking
+Follow the path up |goto 68.12,19.49 < 30 |only if walking
+talk Lasa the Galerider##123006
+fpath Nesingwary's Gameland |goto 66.19,17.60
+step
+Follow the path down |goto 67.53,18.44 < 20 |only if walking
+Follow the road |goto 70.43,22.13 < 30 |only if walking
+Follow the path |goto 76.07,19.92 < 30 |only if walking
+talk Zolani##124083
+turnin The Wounded King##51101 |goto 76.69,16.26
+accept In Bwonsamdi's Shadow##51680 |goto 76.69,16.26
+step
+talk Jamil Abul'housin##132637
+|tip Inside the building.
+Ask him _"How goes the mending?"_
+Speak to Jamil Abul'housin |q 51680/1 |goto 76.47,16.00
+step
+talk Jol the Ancient##124063
+|tip Inside the building.
+Ask him _"How goes the mending?"_
+Speak to Jol the Ancient |q 51680/2 |goto 76.44,16.16
+step
+talk Jol the Ancient##124063
+|tip Inside the building.
+turnin In Bwonsamdi's Shadow##51680 |goto 76.44,16.17
+accept Ancient Tortollan Remedies##47735 |goto 76.44,16.17
+step
+talk Jamil Abul'housin##132637
+|tip Inside the building.
+accept The Scent of Vengeance##47739 |goto 76.47,16.00
+step
+talk Zolani##124083
+accept No Safe Haven##50235 |goto 76.69,16.26
+step
+talk Paku'ai Jasi##124456
+fpath Zeb'ahari |goto 77.36,15.35
+stickystart "Rescue_Zebahari_Villagers"
+stickystart "Collect_Traitors_Bloods"
+step
+clicknpc Laelani##132681
+collect Brutosaur Scale##156824 |q 47735/2 |goto 78.59,13.13
+step
+label "Rescue_Zebahari_Villagers"
+click Zeb'ahari NPC's
+|tip They look like friendly blue trolls on the ground and fighting enemies around this area.
+Rescue #12# Zeb'ahari Villagers |q 50235/1 |goto 80.19,14.76
+step
+talk Zeb'ahari Villager##138520
+accept The Loa-Speaker's Betrayal##47733 |goto 79.35,16.77
+step
+clicknpc Spiny Puffer##133162
+collect Envenomed Puffer Spine##156809 |q 47735/1 |goto 79.79,16.53
+step
+kill Loa-Speaker Kihara##132979 |q 47733/1 |goto 78.53,20.28
+step
+kill Ol' Bubbly##132650
+collect Aged Crab Foam##156827 |q 47735/3 |goto 79.55,21.62
+step
+label "Collect_Traitors_Bloods"
+Kill enemies around this area
+collect 12 Traitor's Blood##156834 |q 47739/1 |goto 78.60,19.47
+step
+talk Zolani##124083
+turnin No Safe Haven##50235 |goto 76.69,16.26
+turnin The Loa-Speaker's Betrayal##47733 |goto 76.69,16.26
+step
+talk Jamil Abul'housin##132637
+|tip Inside the building.
+turnin The Scent of Vengeance##47739 |goto 76.47,16.00
+step
+talk Jol the Ancient##124063
+|tip Inside the building.
+turnin Ancient Tortollan Remedies##47735 |goto 76.44,16.16
+accept Mending Body and Soul##51677 |goto 76.44,16.16
+step
+talk Jol the Ancient##124063
+Tell him _"I am ready, Jol."_
+Speak to Jol |q 51677/1 |goto 76.44,16.16
+step
+Watch the dialogue
+click Astringent Spices
+|tip Inside the building.
+collect Astringent Spices##160566 |goto 76.56,15.95 |q 51677
+step
+talk Jol the Ancient##138598
+|tip Inside the building.
+Choose _<Offer Astringent Spices>_
+Assist Jol |q 51677/2 |goto 76.44,16.17 |count 18
+step
+Watch the dialogue
+click Sea Urchin Brine
+|tip Inside the building.
+collect Sea Urchin Brine##160567 |goto 76.46,16.25 |q 51677
+step
+talk Jol the Ancient##138598
+|tip Inside the building.
+Choose _<Offer Sea Urchin Brine>_
+Assist Jol |q 51677/2 |goto 76.44,16.17 |count 36
+step
+Watch the dialogue
+click Jol's Preserved Notes
+|tip Inside the building.
+collect Ancient Tortollan Scroll##160568 |goto 76.27,16.01 |q 51677
+step
+talk Jol the Ancient##138598
+|tip Inside the building.
+Choose _<Offer Ancient Tortollan Scroll>_
+Assist Jol |q 51677/2 |goto 76.44,16.17 |count 54
+step
+Watch the dialogue
+click Odoriferous Stew
+|tip Inside the building.
+Assist Jol |q 51677/2 |goto 76.49,15.93 |count 72
+step
+Watch the dialogue
+click Clotting Powder
+|tip Inside the building.
+collect Clotting Powder##160569 |goto 76.36,16.16 |q 51677
+step
+talk Jol the Ancient##138598
+|tip Inside the building.
+Choose _<Offer Clotting Powder>_
+Assist Jol |q 51677/2 |goto 76.50,16.08 |count 90
+step
+Watch the dialogue
+Assist Jol |q 51677/2 |goto 76.50,16.08 |count 100
+step
+talk Jol the Ancient##138598
+|tip Inside the building.
+turnin Mending Body and Soul##51677 |goto 76.44,16.17
+step
+talk Jamil Abul'housin##132637
+|tip Inside the building.
+accept The Will of the Loa##47738 |goto 76.47,16.00
+step
+click Idol of Rezan##281024
+Place the Idol of Rezan |q 47738/1 |goto 76.85,13.23
+step
+Watch the dialogue
+talk Rezan##133068
+Tell him _"Rastakhan is injured and will not wake. We need your help."_
+Speak to Rezan |q 47738/2 |goto 77.12,13.24
+step
+Watch the dialogue
+clicknpc King Rastakhan##133107
+Retrieve Rastakhan's Soul |q 47738/3 |goto 76.89,13.23
+step
+clicknpc King Rastakhan##132631
+|tip Inside the building.
+Restore Rastakhan's Soul to His Body |q 47738/4 |goto 76.46,16.07
+step
+Watch the dialogue
+talk King Rastakhan##124062
+turnin The Will of the Loa##47738 |goto 76.66,16.13
+accept Zul's Mutiny##47742 |goto 76.66,16.13
+accept Rastakhan's Might##51678 |goto 76.66,16.13
+step
+talk Zolani##124083
+accept A Strange Port of Call##51679 |goto 76.65,16.18
+step
+talk Jol the Ancient##124063
+|tip Inside the building.
+home Zeb'ahari Inn |goto 76.42,16.08 |q 51679
+stickystart "Slay_Mutinous_Zandalaris"
+step
+click Rope |goto 80.81,20.48
+Climb Onto the Ship |goto 80.85,20.30 < 2 |noway |c |q 51678
+step
+click Rope |goto 80.85,20.29
+Board the Ship |goto 80.88,20.39 < 2 |noway |c |q 51678
+step
+kill Windcaller Ula'jan##133140
+|tip At the top of the ship.
+collect Skull of Windcaller Ula'jan##156861 |q 51678/1 |goto 81.30,19.59
+step
+click Temple of Rezan Map##290996
+|tip Inside the ship, on the deck level.
+Search the Navigation Chamber |q 51679/1 |goto 81.27,19.74
+step
+Search the Hold |q 51679/2 |goto Zuldazar/1 52.51,77.91
+|tip Downstairs one level inside the ship.
+step
+clicknpc Chronicler To'kini##138728
+|tip Downstairs two levels inside the ship.
+Search the Crew Quarters |q 51679/3 |goto Zuldazar/2 47.39,44.05
+step
+label "Slay_Mutinous_Zandalaris"
+Kill enemies around this area
+Slay #10# Mutinous Zandalari |q 47742/1 |goto 49.68,44.95
+step
+talk King Rastakhan##124062
+turnin Zul's Mutiny##47742 |goto Zuldazar/0 76.66,16.13
+turnin Rastakhan's Might##51678 |goto Zuldazar/0 76.66,16.13
+turnin A Strange Port of Call##51679 |goto Zuldazar/0 76.66,16.13
+accept The Temple of Rezan##47737 |goto Zuldazar/0 76.66,16.13
+step
+Follow the path up |goto 77.41,16.65 < 20 |only if walking
+Follow the road |goto 75.72,20.17 < 30 |only if walking
+talk King Rastakhan##124655
+turnin The Temple of Rezan##47737 |goto 72.03,21.03
+accept House of the King##47740 |goto 72.03,21.03
+step
+talk Zolani##124656
+accept Heads Will Roll##47736 |goto 72.09,21.20
+stickystart "Collect_Traitorous_Zandalari_Heads"
+step
+click Corrupting Totem##281216+
+|tip There are three Corrupting Totems around this area.
+Cleanse Rezan the Hunter |q 47740/1 |goto 72.16,23.80
+step
+click Corrupting Totem##281216+
+|tip There are three Corrupting Totems around this area.
+Cleanse Rezan the King |q 47740/3 |goto 73.82,22.94
+step
+Run up the stairs |goto 73.04,24.34 < 15 |only if walking
+click Corrupting Totem##281216+
+|tip There are three Corrupting Totems around this area.
+Cleanse Rezan the Conqueror |q 47740/2 |goto 73.68,25.76
+step
+label "Collect_Traitorous_Zandalari_Heads"
+Kill enemies around this area
+|tip Kao-Tien enemies will not count for this quest goal.
+collect 12 Traitorous Zandalari Head##151384 |q 47736/1 |goto 73.61,25.18
+step
+Run up the stairs |goto 74.33,24.94 < 15 |only if walking
+talk Zolani##124656
+turnin Heads Will Roll##47736 |goto 74.85,24.90
+step
+talk King Rastakhan##124655
+turnin House of the King##47740 |goto 74.87,24.94
+accept Partners in Heresy##47734 |goto 74.87,24.94
+step
+kill Darkweaver Ji'tan##124085 |q 47734/1 |goto 75.16,23.16
+step
+kill Soulrender Gao'tan##124088 |q 47734/2 |goto 75.12,26.56
+|tip Inside the building.
+|tip Stand in the blue circle when he casts it beneath his feet.
+step
+talk King Rastakhan##124655
+turnin Partners in Heresy##47734 |goto 74.87,24.94
+accept To Sacrifice a Loa##47741 |goto 74.87,24.94
+step
+Run up the stairs |goto 75.31,24.55 < 15 |only if walking
+kill Vilnak'dor##133570 |q 47741/1 |goto 75.99,24.91
+step
+Watch the dialogue
+Disrupt the Loa Sacrifice Ritual |q 47741/2 |goto 76.03,24.92
+step
+talk King Rastakhan##124655
+Tell him _"Let's get out of here!"_
+Watch the dialogue
+Begin Following King Rastakhan |goto 76.06,24.90 > 10 |c |q 47741
+step
+Watch the dialogue
+|tip Follow King Rastakhan as he walks.
+Escape the Temple of Rezan |q 47741/3 |goto 73.37,28.20
+step
+talk Rezan##124948
+turnin To Sacrifice a Loa##47741 |goto 70.83,29.90
+step
+talk King Rastakhan##124915
+accept King or Prey##51111 |goto 70.98,29.91
+step
+talk Scroll of Flight##136331
+fpath Scaletrader Post |goto 70.78,29.60
+step
+Enter the building |goto Dazar'alor/0 49.99,41.88 < 10 |walk
+talk Baine Bloodhoof##141555
+|tip Inside the building.
+turnin King or Prey##51111 |goto Dazar'alor/2 41.43,72.44
+accept Hunting Zul##49421 |goto Dazar'alor/2 41.43,72.44
+step
+Leave the building |goto Dazar'alor/0 49.94,42.10 < 10 |walk
+Run up the stairs |goto Dazar'alor/0 51.75,19.10 < 15 |only if walking
+Follow the path |goto Dazar'alor/0 45.36,23.81 < 15 |only if walking
+talk King Rastakhan##129491
+turnin Hunting Zul##49421 |goto Dazar'alor/0 38.92,27.15
+accept The Warpack##49965 |goto Dazar'alor/0 38.92,27.15
+step
+Watch the dialogue
+clicknpc Wardruid Loti##134132
+Ride with Wardruid Loti |invehicle |goto 38.81,27.02 |q 49965
+step
+Watch the dialogue
+Ride with the Warpack |q 49965/1 |goto Zuldazar/0 49.19,44.79 |notravel
+step
+talk Gonk##129740
+turnin The Warpack##49965 |goto 49.27,44.32
+accept Heretics##49422 |goto 49.27,44.32
+step
+talk Wardruid Loti##129561
+accept The Full Prophecy##49424 |goto 49.34,44.35
+stickystart "Bring_Ruin"
+step
+click The Word of Zul III##280350
+Read The Word of Zul III |q 49424/3 |goto 48.81,42.76
+step
+Run up the stairs |goto 49.75,42.48 < 15 |only if walking
+click The Word of Zul II##280349
+|tip Inside the building.
+Read The Word of Zul II |q 49424/2 |goto 49.01,40.57
+step
+Cross the bridge |goto 49.73,40.44 < 15 |only if walking
+click The Word of Zul I##280348
+Read The Word of Zul I |q 49424/1 |goto 48.75,39.40
+step
+_Next to you:_
+talk Wardruid Loti##132041
+turnin The Full Prophecy##49424
+step
+label "Bring_Ruin"
+Kill enemies around this area
+clicknpc Skykiller Ballista##129540+
+|tip They look like wooden crossbow machines on the ground around this area.
+Bring Ruin |q 49422/1 |goto 49.07,39.36
+step
+talk Hexlord Raal##129703
+turnin Heretics##49422 |goto 49.65,37.98
+accept City of Gold##49425 |goto 49.65,37.98
+step
+clicknpc Ata the Winglord##129701
+Ride Ata the Winglord |q 49425/1 |goto 49.64,37.91
+step
+Watch the dialogue
+Kill enemies around this area
+|tip Use the "Explosive Wrath Totem" ability on your action bar.
+|tip They are on the ground around this area as you fly.
+Slay #75# Forces of Zul |q 49425/2 |goto 45.97,36.79
+step
+Watch the dialogue
+Travel to Atal'Dazar |goto 43.77,39.08 < 7 |c |q 49425 |notravel
+step
+talk Rezan##131049
+turnin City of Gold##49425 |goto 43.70,39.45
+accept The King's Gambit##49426 |goto 43.70,39.45
+step
+March on Atal'Dazar |q 49426/1 |goto 42.10,39.28
+step
+talk King Rastakhan##131070
+Ask him _"What now?"_
+Watch the dialogue
+Speak with King Rastakhan |q 49426/2 |goto 42.08,39.52
+step
+Run up the stairs |goto 42.10,38.71 < 15 |only if walking
+Run up the stairs |goto 42.33,37.58 < 15 |only if walking
+Watch the dialogue
+Get Rastakhan to Safety |q 49426/3 |goto 42.73,37.65
+step
+talk King Rastakhan##129757
+turnin The King's Gambit##49426 |goto 42.73,37.65
+step
+Follow the path up |goto 42.64,35.85 < 15 |only if walking
+Jump down carefully here |goto 43.79,36.93 < 15 |only if walking
+Follow the road |goto 44.33,38.54 < 20 |only if walking
+Cross the bridge |goto 46.12,38.00 < 15 |only if walking
+talk Loz the Paku'ai##130790
+fpath Atal'dazar |goto 46.16,35.81
+step
+_Congratulations!_
+You completed the Zuldazar Loremaster (Story Quest Only) leveling guide.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Nazmir Loremaster (Story Quest Only)",{
+author="support@zygorguides.com",
+description="\nThis guide will assist you in completing the following Nazmir storylines:\n\nDeep in the Swamp\nUndercover Sista\nA Friend of the Frogs\nBring the Boom\nA Pact with Death\nTurtle Power\nEverything Contained\nBleeding the Blood Trolls",
+condition_suggested=function() return level >= 110 and not achieved(11868) and completedq(52131) end,
+condition_end=function() return achieved(11868) end,
+startlevel=110.0,
+endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\Nazmir",
+},[[
+leechsteps "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice" 62-77
+step
+click Scouting Map
+|tip Inside the building.
+accept Nazmir##47512 |goto Dazar'alor/2 41.71,69.41
+step
+talk Princess Talanji##133050
+|tip Inside the building.
+turnin Nazmir##47512 |goto 41.14,66.73
+accept Journey to Nazmir##47103 |goto 41.18,66.77
+step
+Leave the building |goto Dazar'alor/0 49.97,42.15 < 10 |walk
+talk Rokhan##126549
+turnin Journey to Nazmir##47103 |goto Dazar'alor/0 51.66,41.29
+accept Nazmir, the Forbidden Swamp##48535 |goto Dazar'alor/0 51.66,41.29
+step
+talk Paku'ai Rokota##122689
+Tell her _"Get me as close as you can to Nazmir."_
+Take a Flight to Nazmir Outskirts |q 48535/1 |goto 51.91,41.20
+step
+Cross the bridge |goto Zuldazar/0 52.71,20.65 < 15 |only if walking
+Meet with Princess Talanji |q 48535/2 |goto Nazmir/0 43.36,86.52
+step
+talk Princess Talanji##120904
+turnin Nazmir, the Forbidden Swamp##48535 |goto 43.00,86.03
+accept Into The Darkness##47105 |goto 43.00,86.03
+step
+Scout Ahead |q 47105/1 |goto 46.94,80.18
+step
+Watch the dialogue
+talk Princess Talanji##130844
+turnin Into The Darkness##47105 |goto 47.25,79.74
+accept Leave None Standing##47264 |goto 47.25,79.74
+accept Improper Burial##47130 |goto 47.25,79.74
+stickystart "Slay_Blood_Trolls"
+step
+use the Ceremonial Torch##154724
+|tip Use it on Dead Zandalari around this area.
+|tip They look like Troll corpses laying on the ground around this area.
+Burn #5# Dead Zandalari |q 47130/1 |goto 48.96,78.41
+step
+label "Slay_Blood_Trolls"
+Kill Blood Troll enemies around this area
+Slay #8# Blood Trolls |q 47264/1 |goto 48.96,78.41
+step
+talk Princess Talanji##121241
+turnin Leave None Standing##47264 |goto 45.65,74.79
+turnin Improper Burial##47130 |goto 45.65,74.79
+accept Ending the Blood Trolls##47262 |goto 45.65,74.79
+step
+Run up the stairs |goto 45.61,73.48 < 15 |only if walking
+kill Grand Ma'da Ateena##121504
+|tip She will eventually escape.
+Watch the dialogue
+Slay Grand Ma'da Ateena |q 47262/1 |goto 44.91,71.65
+step
+Watch the dialogue
+talk Princess Talanji##130844
+turnin Ending the Blood Trolls##47262 |goto 45.21,71.04
+accept A Time of Revelation##47263 |goto 45.21,71.04
+step
+Watch the dialogue
+talk Princess Talanji##131146
+Tell her _"We need to move, we shouldn't stay here."_
+Speak with Talanji at the Overlook |q 47263/1 |goto 45.57,68.65
+step
+Watch the dialogue
+Travel to Zul'jan Ruins |goto 39.41,76.65 < 7 |c |q 47263 |notravel
+step
+talk Zabar##121828
+fpath Zul'jan |goto 38.85,78.14
+step
+talk Crazy Vaza##121840
+|tip Inside the building.
+home Zul'jan Ruins |goto 38.62,78.66 |q 49902 |future
+step
+talk Princess Talanji##121288
+turnin A Time of Revelation##47263 |goto 39.14,79.07
+accept The Aid of the Loa##47188 |goto 39.14,79.07
+step
+talk Princess Talanji##121288
+Tell her _"Let's discuss what we can do to fight the blood trolls."_
+Watch the dialogue
+Listen to Talanji and Rokhan |q 47188/1 |goto 39.15,79.07
+step
+talk Princess Talanji##121288
+turnin The Aid of the Loa##47188 |goto 39.15,79.07
+accept The Shadow of Death##47241 |goto 39.15,79.07
+step
+Follow the path |goto 37.50,71.21 < 30 |only if walking
+Enter the building |goto 37.73,63.11 < 10 |walk
+click Broken Spear##271170
+|tip Inside the building.
+Investigate the Abandoned Ruins |q 47241/2 |goto 37.50,63.06
+step
+click Weathered Shrine##270902
+Investigate the Weathered Shrine |q 47241/1 |goto 39.61,64.97
+step
+clicknpc Blood Scavenger##122094
+Investigate the Shrine of Bones |q 47241/3 |goto 35.62,58.58
+step
+Watch the dialogue
+talk Hanzabu##122102
+turnin The Shadow of Death##47241 |goto 36.62,53.93
+accept A Culling of Souls##47244 |goto 36.62,53.93
+step
+kill Blood Witch Najima##122204 |q 47244/1 |goto 38.55,49.98
+step
+talk Hanzabu##124428
+turnin A Culling of Souls##47244 |goto 39.52,43.83
+accept Spiritual Restoration##49278 |goto 39.52,43.83
+step
+clicknpc Drained Spirit##134363
+Restore the Drained Spirit |q 49278/1 |goto 39.04,43.90 |count 1
+step
+clicknpc Drained Spirit##134363
+Restore the Drained Spirit |q 49278/1 |goto 38.86,43.50 |count 2
+step
+talk Du'ba##122191
+fpath Zo'bal Ruins |goto 40.18,42.83
+step
+clicknpc Drained Spirit##134363
+|tip Inside the building.
+Restore the Drained Spirit |q 49278/1 |goto 40.89,43.54 |count 3
+step
+talk Du'ba##122191
+turnin Spiritual Restoration##49278 |goto 39.52,43.83
+step
+Watch the dialogue
+talk Witch Doctor Kejabu##122795
+accept Blood Troll on the Outside##49440 |goto 39.63,43.87
+step
+talk Witch Doctor Kejabu##122795
+accept The Necropolis##47868 |goto 39.52,43.83
+step
+clicknpc Blood Troll Skull##129223
+Place the Ritual Component |q 49440/1 |goto 39.41,43.53 |count 1
+step
+clicknpc Blood Troll Skull##129223
+Place the Ritual Component |q 49440/1 |goto 39.57,43.74 |count 2
+step
+clicknpc Blood Troll Skull##129223
+Place the Ritual Component |q 49440/1 |goto 39.74,43.52 |count 3
+step
+talk Witch Doctor Kejabu##122795
+Tell him _"I'm ready to begin the ritual to disguise myself as a blood troll."_
+Watch the dialogue
+Speak to Witch Doctor Kejabu to Complete the Ritual |q 49440/2 |goto 39.63,43.86
+step
+Watch the dialogue
+talk Witch Doctor Kejabu##122795
+turnin Blood Troll on the Outside##49440 |goto 39.63,43.86
+accept Sneaking into Zalamar##48699 |goto 39.63,43.86
+step
+talk Hanzabu##124513
+turnin The Necropolis##47868 |goto 39.58,32.58
+accept A Tribute for Death##47880 |goto 39.58,32.58
+step
+Draw the Ritual Circle |q 47880/1 |goto 39.58,32.35
+|tip Walk on top of the dashed lines on the ground to trace them.
+step
+click Drum of Spirits##270997
+Sound the Drum of Spirits |q 47880/2 |goto 39.59,31.84
+step
+Enter the building |goto 39.56,26.73 < 10 |walk
+Watch the dialogue
+talk Bwonsamdi##122688
+|tip Inside the building.
+turnin A Tribute for Death##47880 |goto 39.57,24.66
+accept Remnants of the Damned##47491 |goto 39.57,24.66
+accept A Desecrated Temple##49348 |goto 39.57,24.66
+accept That Which Haunts the Dead##47247 |goto 39.57,24.66
+stickystart "Collect_Decaying_Bloodstones"
+step
+Leave the building |goto 39.59,26.56 < 10 |walk
+kill Hex Priestess Tizeja##122666 |q 47247/2 |goto 36.09,29.88
+|tip Kill the enemies channeling on her to be able to attack her.
+stickystart "Destroy_Vile_Desecrations"
+step
+Follow the path |goto 37.59,28.17 < 15 |only if walking
+kill Warlord Malaja##122664 |q 47247/1 |goto 43.42,30.02
+step
+talk Keula##126588
+accept The Forlorn Soul##49432 |goto 42.58,31.46
+step
+label "Destroy_Vile_Desecrations"
+clicknpc Vile Desecration##129086+
+|tip They look like red bubbles on the walls around this area.
+Destroy #5# Vile Desecration |q 49348/1 |goto 42.61,29.77
+step
+Enter the crypt |goto 39.59,31.66 < 10 |walk
+click Sarcophagus Lid##278692
+|tip Inside the crypt.
+Find Keula's Mother |q 49432/1 |goto 39.59,34.95
+step
+Watch the dialogue
+kill The Matron Shaazula##126616
+|tip Inside the crypt.
+Subdue Matron Shaazula |q 49432/2 |goto 39.65,35.00
+step
+Leave the crypt |goto 39.59,31.73 < 10 |c |q 47491
+step
+label "Collect_Decaying_Bloodstones"
+Kill Horror enemies around this area
+collect 6 Decaying Bloodstone##150753 |q 47491/1 |goto 39.60,30.29
+step
+Enter the building |goto 39.56,26.73 < 10 |walk
+talk Bwonsamdi##122688
+|tip Inside the building.
+turnin Remnants of the Damned##47491 |goto 39.56,24.68
+turnin A Desecrated Temple##49348 |goto 39.56,24.68
+turnin That Which Haunts the Dead##47247 |goto 39.56,24.68
+turnin The Forlorn Soul##49432 |goto 39.56,24.68
+accept Soulbound##47249 |goto 39.56,24.68
+step
+Leave the building |goto 39.60,26.53 < 10 |walk
+talk Bwonsamdi##126707
+Tell him _"Let's begin."_
+Watch the dialogue
+Begin the Ritual |q 47249/1 |goto 39.58,30.21
+step
+Watch the dialogue
+kill Grand Ma'da Ateena##122711 |q 47249/2 |goto 39.57,30.96
+|tip She will eventually escape.
+step
+talk Bwonsamdi##122766
+turnin Soulbound##47249 |goto 39.58,30.22
+accept We'll Meet Again##47250 |goto 39.58,30.22
+step
+talk Hanzabu##127004
+turnin We'll Meet Again##47250 |goto 39.52,43.83
+step
+Follow the path |goto 36.94,47.53 < 30 |only if walking
+talk Bloodseeker Jo'chunga##127128
+Tell him _"Kejabu sent me."_
+Find Bloodseeker Jo'chunga |q 48699/1 |goto 32.37,46.17
+step
+talk Bloodseeker Jo'chunga##127391
+|tip Inside the building.
+turnin Sneaking into Zalamar##48699 |goto 33.35,45.74
+accept Isolating Zalamar##48801 |goto 33.35,45.74
+accept How to Be a Blood Troll##48890 |goto 33.35,45.74
+stickystart "Test_Unproven_Drudges"
+step
+talk Wardrummer Sheej##129380
+|tip At the top of the tower.
+Tell him _"Da camp be needin' more stone. Go an' recover only da purest of rocks within Nazmir. Sixty of dem."_
+Remove Wardrummer Sheej |q 48801/2 |goto 35.30,46.80
+step
+talk Wardrummer Gix##129381
+|tip At the top of the tower.
+Tell him _"We be needin' fifty pristine crocolisk hides. Go an' retrieve dem, and don' be comin' back 'til you have dem all."_
+Remove Wardrummer Gix |q 48801/3 |goto 31.16,49.75
+step
+label "Test_Unproven_Drudges"
+clicknpc Unproven Drudge##126933+
+|tip They look like blood trolls that are tied up to poles around this area.
+Test #5# Unproven Drudge |q 48890/1 |goto 31.59,45.66
+step
+talk Wardrummer Saljo##127999
+|tip At the top of the tower.
+Tell him _"Da camp be needin' more wood. Go an' retrieve thirty pieces of only da most pristine lumber!"_
+Remove Wardrummer Saljo |q 48801/1 |goto 31.49,43.26
+step
+talk Bloodseeker Jo'chunga##127391
+|tip Inside the building.
+turnin Isolating Zalamar##48801 |goto 33.35,45.74
+turnin How to Be a Blood Troll##48890 |goto 33.35,45.74
+step
+Watch the dialogue
+talk Bloodseeker Jo'chunga##127391
+|tip Inside the building.
+accept Poisoning the Brood##49078 |goto 33.35,45.74
+accept Mark of the Bat##48800 |goto 33.35,45.74
+stickystart "Poison_Tamed_Warspawns"
+step
+kill Blood Witch Yialu##126891
+|tip Inside the building.
+collect Yialu's Talisman##153671 |q 48800/1 |goto 33.65,49.33
+step
+kill Blood Priestess Zu'Anji##126890
+|tip Inside the building.
+collect Zu'Anji's Talisman##153674 |q 48800/3 |goto 32.68,49.51
+step
+kill Blood Witch Vashera##126888
+|tip Inside the building.
+collect Vashera's Talisman##153672 |q 48800/2 |goto 30.70,45.28
+step
+label "Poison_Tamed_Warspawns"
+use the Poisoned Mojo Flask##153012
+|tip Use it on Tamed Warspawns around this area.
+|tip They look like large bats hanging upside down from poles and buildings around this area.
+Poison #5# Tamed Warspawns |q 49078/1 |goto 31.02,48.14
+step
+talk Bloodseeker Jo'chunga##127391
+|tip Inside the building.
+turnin Poisoning the Brood##49078 |goto 33.35,45.74
+turnin Mark of the Bat##48800 |goto 33.35,45.74
+step
+Watch the dialogue
+talk Jo'chunga##129378
+|tip Inside the building.
+accept Hir'eek, the Bat Loa##49079 |goto 33.35,45.74
+step
+Reach the Blood Ritual Pool |goto 32.18,46.31 < 5 |c |q 49079
+step
+_Next to you:_
+talk Jo'chunga##129378
+Tell him _"Jo'chunga, I'm ready. Let's enact our plan to stop Hir'eek."_
+Watch the dialogue
+Speak with Jo'chunga Within the Blood Ritual Pool |q 49079/1 |goto 32.18,46.31
+step
+Watch the dialogue
+Weaken Hir'eek |q 49079/2 |goto 31.99,46.30
+|tip Use the ability on your action bar.
+|tip Use it repeatedly.
+step
+Watch the dialogue
+Fall into Hir'eek's Lair |goto 31.41,46.97 < 3 |c |q 49079
+step
+Watch the dialogue
+talk Jo'chunga##128276
+|tip Inside the cave.
+turnin Hir'eek, the Bat Loa##49079 |goto 31.23,46.80
+accept To Kill a Loa##49081 |goto 31.23,46.80
+step
+kill Hir'eek##128074 |q 49081/1 |goto 29.14,46.57
+|tip Inside the cave.
+step
+talk Jo'chunga##128276
+|tip Inside the cave.
+turnin To Kill a Loa##49081 |goto 31.25,46.81
+accept Upward and Onward##49082 |goto 31.25,46.81
+step
+clicknpc Hir'eek Spawnling##128291
+|tip Inside the cave.
+Secure a Flight Out of Hir'eek's Lair |q 49082/1 |goto 31.26,46.72
+step
+Reach the Outskirts of Zalamar |goto 36.11,47.65 < 7 |c |q 49082
+step
+talk Witch Doctor Kejabu##122795
+Tell him _"Jo'chunga is alive, the loa Hir'eek though..."_
+Inform Witch Doctor Kejabu |q 49082/2 |goto 39.63,43.86
+step
+talk Witch Doctor Kejabu##122795
+turnin Upward and Onward##49082 |goto 39.63,43.86
+step
+talk Princess Talanji##127961
+accept Catching Up##49185 |goto 39.39,44.00
+step
+talk Princess Talanji##127961
+Choose _(Tell Talanji about getting Bwonsamdi's aid and killing Hir'eek.)_
+Tell Talanji About Bwonsamdi and Hir'eek |q 49185/1 |goto 39.40,44.00
+step
+talk Princess Talanji##127961
+turnin Catching Up##49185 |goto 39.39,44.00
+step
+talk Lashk##127960
+accept Torga, the Turtle Loa##49064 |goto 39.45,44.02
+step
+Follow the path |goto 40.15,45.72 < 30 |only if walking
+talk Kisha##127958
+Tell her _"Lashk said you could tell me where I can find Torga."_
+Meet Kisha |q 49064/1 |goto 55.65,39.40
+step
+Locate Torga |q 49064/2 |goto 55.59,28.59
+step
+Watch the dialogue
+talk Princess Talanji##127961
+turnin Torga, the Turtle Loa##49064 |goto 56.57,26.67
+accept Beseeching Bwonsamdi##49067 |goto 56.57,26.67
+step
+talk Princess Talanji##127961
+Tell her _"I'm ready to try and summon Bwonsamdi."_
+Beseech Bwonsamdi for Aid |q 49067/1 |goto 56.57,26.67
+step
+talk Princess Talanji##127961
+turnin Beseeching Bwonsamdi##49067 |goto 56.57,26.67
+accept Cease all Summoning##49080 |goto 56.57,26.67
+step
+talk Lashk##127960
+accept Dreadtick Combustion##49071 |goto 56.51,26.65
+step
+talk Bwonsamdi##128096
+accept Souls for the Death Loa##49070 |goto 56.66,26.52
+stickystart "Blow_Up_Dreadtick_Leechers"
+stickystart "Claim_Blood_Troll_Souls"
+step
+Enter the cave |goto 58.71,24.64 < 15 |walk
+kill Summoner Yarz##127935 |q 49080/1 |goto 61.05,18.08
+|tip Inside the cave.
+step
+label "Blow_Up_Dreadtick_Leechers"
+use the Scroll of Combustion##153024
+|tip Use it on Dreadtick Leecher around this area inside the cave.
+Blow Up #5# Dreadtick Leechers |q 49071/1 |goto 60.15,21.06
+step
+label "Claim_Blood_Troll_Souls"
+Kill Loa-Gutter enemies around this area
+|tip Inside the cave.
+Claim #10# Blood Troll Souls |q 49070/1 |goto 60.15,21.06
+step
+Leave the cave |goto 58.70,24.87 < 15 |walk
+talk Bwonsamdi##128096
+turnin Souls for the Death Loa##49070 |goto 56.66,26.53
+step
+talk Princess Talanji##127961
+turnin Cease all Summoning##49080 |goto 56.57,26.67
+step
+talk Lashk##127960
+turnin Dreadtick Combustion##49071 |goto 56.52,26.65
+step
+talk Bwonsamdi##128096
+accept Speaking with the Dead##49120 |goto 56.66,26.52
+step
+talk Bwonsamdi##128096
+Tell him _"Bwonsamdi, we're ready for you to summon Torga's spirit."_
+Watch the dialogue
+Hear Torga's Wisdom |q 49120/1 |goto 56.66,26.52
+step
+talk Princess Talanji##127961
+turnin Speaking with the Dead##49120 |goto 56.57,26.67
+step
+talk Kisha##127958
+accept Negative Blood##49125 |goto 56.59,26.75
+stickystart "Destroy_Corrupted_Loa_Blood"
+step
+click Scroll of Fate's Hand##280347
+collect Damaged Scroll of Fate's Hand##156568 |q 49125/2 |goto 62.28,24.58
+step
+label "Destroy_Corrupted_Loa_Blood"
+use the Scroll of Purification##160559
+|tip Use it on Corrupted Loa Blood around this area.
+|tip They look like large red balls floating above the ground around this area.
+Destroy #8# Corrupted Loa Blood |q 49125/1 |goto 62.23,24.06
+step
+Enter the cave |goto 65.45,17.92 < 10 |walk
+talk Kisha##127958
+|tip Inside the cave.
+turnin Negative Blood##49125 |goto 65.72,17.96
+accept Forcing Fate's Hand##49126 |goto 65.72,17.96
+step
+Summon the Hand of Fate |q 49126/1 |goto 65.72,17.96
+|tip Use the "Scroll of Fate's Hand" ability.
+|tip It appears as a button on the screen.
+step
+Kill enemies around this area
+|tip Use the abilities on your action bar.
+Destroy #50# Undead |q 49126/2 |goto 63.16,15.57
+step
+Return to Kisha |goto 59.07,13.69 < 15 |c |q 49126
+step
+talk Kisha##127958
+turnin Forcing Fate's Hand##49126 |goto 58.48,13.78
+accept Loa-Free Diet##49130 |goto 58.48,13.78
+step
+talk Princess Talanji##127961
+accept Sanctifying Ground##49131 |goto 58.47,13.85
+step
+talk Lashk##127960
+accept Crushing the Skullcrushers##49132 |goto 58.52,13.88
+stickystart "Collect_Parts_Of_Torga"
+stickystart "Kill_Loa_Gutter_Skullcrushers"
+step
+clicknpc Sanctifying Totem##128179+
+|tip They look like small wooden totems with red fire swirling around them on the ground around this area.
+Place #4# Sanctifying Totem |q 49131/1 |goto 56.59,20.22
+step
+label "Collect_Parts_Of_Torga"
+Kill Loa-Gutter enemies around this area
+|tip Loa-Gutter Skullcrushers will not drop the quest item.
+collect 6 Parts of Torga##153070 |q 49130/1 |goto 56.59,20.22
+step
+label "Kill_Loa_Gutter_Skullcrushers"
+kill 4 Loa-Gutter Skullcrusher##127919 |q 49132/1 |goto 56.59,20.22
+step
+Follow the path |goto 55.31,23.72 < 20 |only if walking
+talk Lashk##127960
+turnin Crushing the Skullcrushers##49132 |goto 56.51,26.65
+step
+talk Princess Talanji##127961
+turnin Sanctifying Ground##49131 |goto 56.57,26.67
+step
+talk Kisha##127958
+turnin Loa-Free Diet##49130 |goto 56.59,26.76
+step
+talk Princess Talanji##127961
+accept Jungo, Herald of G'huun##49136 |goto 56.57,26.67
+step
+Enter the cave |goto 58.72,24.55 < 15 |walk
+Watch the dialogue
+kill Jungo, Herald of the Blood God##128184 |q 49136/1 |goto 61.13,17.68
+|tip Inside the cave.
+step
+Leave the cave |goto 58.70,24.87 < 15 |walk
+talk Princess Talanji##127961
+turnin Jungo, Herald of G'huun##49136 |goto 56.57,26.67
+step
+talk Lashk##127960
+accept Torga's Eternal Return##49160 |goto 56.51,26.65
+step
+use the Scroll of Eternal Return##153131
+Watch the dialogue
+Put Torga's Spirit to Rest |q 49160/1 |goto 56.51,26.65
+step
+talk Kisha##127958
+turnin Torga's Eternal Return##49160 |goto 56.59,26.75
+accept To Gloom Hollow##49902 |goto 56.59,26.75
+step
+Follow the path |goto 55.59,28.61 < 30 |only if walking
+talk Crez##131208
+Choose _(Tell Crez about what happened to Torga, and the chance for new stories to be told if he goes to Gloom Hollow.)_
+Recruit the Tortollan |q 49902/1 |goto 55.74,39.72 |count 1
+step
+talk Korkush##131209
+Choose _(Tell Korkush there's a great story to be had if he helps the Horde fight the blood trolls and save the Zandalari.)_
+Recruit the Tortollan |q 49902/1 |goto 60.23,46.18 |count 2
+step
+talk Yash##131210
+Choose _(Tell Yash if he wants to live a crazy story that he should go to Gloom Hollow to help stop the blood trolls and their god.)_
+Recruit the Tortollan |q 49902/1 |goto 63.87,47.74 |count 3
+step
+talk Rokhan##131213
+turnin To Gloom Hollow##49902 |goto 67.43,42.31
+accept Getting the Message##47245 |goto 67.43,42.31
+step
+talk Shadow Hunter Mutumba##122991
+accept Staying Hidden##47525 |goto 67.41,42.06
+step
+talk Korkush##131988
+|tip He walks around this area.
+home Gloom Hollow |goto 67.76,41.85 |q 47525
+step
+clicknpc Cuja##121207
+fpath Gloom Hollow |goto 66.98,43.78
+step
+click Message Rocket##272409
+Investigate the Disturbance |q 47245/1 |goto 68.52,43.82
+step
+talk Rokhan##131213
+turnin Getting the Message##47245 |goto 67.43,42.31
+accept Rendezvous with the Libation##47631 |goto 67.43,42.31
+step
+Investigate The Frogmarsh |q 47525/1 |goto 68.58,46.51
+step
+talk Witch Doctor Zentimo##124376
+turnin Staying Hidden##47525 |goto 68.59,46.74
+accept Hunt the Hunter##47659 |goto 68.59,46.74
+accept Fallen Idols##47660 |goto 68.59,46.74
+stickystart "Collect_Stolen_Idols_of_Krag'wa"
+step
+clicknpc Mag'ash the Poisonous##126039
+accept A Poisonous Touch##48402 |goto 69.16,50.46
+stickystart "Poison_Bloodhunter_Trolls"
+step
+kill Warmother Boatema##123328 |q 47659/1 |goto 68.24,51.58
+step
+label "Collect_Stolen_Idols_of_Krag'wa"
+click Stolen Idol of Krag'wa##271648+
+|tip They look like stone statues on the ground around this area.
+collect 8 Stolen Idol of Krag'wa##151113 |q 47660/1 |goto 68.45,50.66
+step
+label "Poison_Bloodhunter_Trolls"
+Kill Bloodhunter enemies around this area
+|tip Use the "Poison Tipped Dart" ability.
+|tip It appears as a button on the screen.
+Poison #6# Bloodhunter Trolls |q 48402/1 |goto 68.45,50.66
+step
+Enter the cave |goto 73.40,53.77 < 15 |walk
+talk Krag'wa the Huge##120551
+|tip Inside the cave.
+turnin Hunt the Hunter##47659 |goto 75.42,56.61
+turnin Fallen Idols##47660 |goto 75.42,56.61
+turnin A Poisonous Touch##48402 |goto 75.42,56.61
+accept The Last Witch Doctor of Krag'wa##47623 |goto 75.42,56.61
+step
+clicknpc Scepter of Rebirth##133900
+Retrieve the Scepter of Rebirth |q 47623/1 |goto 75.13,56.69
+step
+clicknpc Witch Doctor Zentimo##124559
+Perform the Ritual |q 47623/2 |goto 75.13,56.70
+step
+talk Krag'wa the Huge##120551
+|tip Inside the cave.
+turnin The Last Witch Doctor of Krag'wa##47623 |goto 75.42,56.61
+accept A True Loa Feast##47621 |goto 75.42,56.61
+accept A Magical Glow##47622 |goto 75.42,56.61
+stickystart "Collect_Chunky_Meat"
+step
+Leave the cave |goto 73.40,53.77 < 15 |walk
+Follow the path up |goto 73.75,49.87 < 20 |only if walking
+use the Glowfly Bottle##151237
+|tip Use it next to Glowflies around this area.
+|tip They look like small yellow and blue insects flying above the ground around this area.
+Collect #25# Beautiful Glowflies |q 47622/1 |goto 75.89,45.98
+step
+label "Collect_Chunky_Meat"
+Kill enemies around this area
+collect 35 Chunky Meat##151040 |q 47621/1 |goto 75.77,45.37
+step
+Follow the path down |goto 73.71,48.66 < 20 |only if walking
+Enter the cave |goto 73.40,53.77 < 15 |walk
+talk Krag'wa the Huge##120551
+|tip Inside the cave.
+turnin A True Loa Feast##47621 |goto 75.43,56.62
+turnin A Magical Glow##47622 |goto 75.43,56.62
+accept Totemic Restoration##47540 |goto 75.43,56.62
+step
+click Frog Totem Pile##272391
+|tip Inside the cave.
+Activate the Frog Totem Pile |q 47540/1 |goto 75.21,56.69 |count 1
+step
+click Frog Totem Pile##272391
+|tip Inside the cave.
+Activate the Frog Totem Pile |q 47540/1 |goto 75.33,56.38 |count 2
+step
+click Frog Totem Pile##272391
+|tip Inside the cave.
+Activate the Frog Totem Pile |q 47540/1 |goto 75.65,56.35 |count 3
+step
+talk Krag'wa the Huge##120551
+|tip Inside the cave.
+turnin Totemic Restoration##47540 |goto 75.42,56.62
+accept Krag'wa the Terrible##47696 |goto 75.43,56.62
+step
+Leave the cave |goto 73.40,53.77 < 15 |walk
+Meet Krag'wa at Razorjaw River |q 47696/1 |goto 67.14,56.16
+step
+talk Krag'wa the Huge##124637
+Tell him _"I am ready to fight the blood trolls."_
+Speak with Krag'wa the Huge |invehicle |goto 67.14,56.16 |q 47696
+stickystart "Slay_Blood_Troll_Forces"
+step
+kill Ren'Zuli##124628 |q 47696/3 |goto 60.05,53.30
+|tip He's mounted on a tyrannosaurus rex.
+|tip Use the abilities on your action bar.
+step
+label "Slay_Blood_Troll_Forces"
+Kill Bloodhunter enemies around this area
+|tip Use the abilities on your action bar.
+Slay #100# Blood Troll Forces |q 47696/2 |goto 62.13,56.73
+step
+Watch the dialogue
+Return to The Frogmarsh |goto 72.98,52.55 < 7 |c |q 47696
+step
+Enter the cave |goto 73.40,53.77 < 15 |walk
+talk Krag'wa the Huge##120551
+|tip Inside the cave.
+turnin Krag'wa the Terrible##47696 |goto 75.43,56.63
+step
+talk Shadow Hunter Mutumba##124641
+|tip Inside the cave.
+accept Krag'wa's Aid##47697 |goto 75.17,56.67
+step
+Return to Gloom Hollow |q 47697/1 |goto 67.42,42.24
+step
+talk Princess Talanji##126213
+turnin Krag'wa's Aid##47697 |goto 67.42,42.24
+step
+Locate Patch |q 47631/1 |goto 74.59,38.86
+step
+talk Patch##123178
+turnin Rendezvous with the Libation##47631 |goto 74.59,38.86
+accept No Goblin Left Behind##47597 |goto 74.59,38.86
+step
+talk Ticker##123436
+accept Revenge: Served Hot##47599 |goto 74.76,39.01
+stickystart "Kill_Vilescale_Behemoths"
+step
+click Airtight Escape Pod##271664
+Rescue Newt |q 47597/2 |goto 79.30,36.73
+step
+clicknpc Grit##123233
+Rescue Grit |q 47597/1 |goto 76.99,32.65
+step
+click Naga Cage##279661
+Rescue Volt |q 47597/3 |goto 79.97,32.39
+step
+label "Kill_Vilescale_Behemoths"
+use Ticker's Rocket Launcher##151363
+|tip Use it on Vilescale Behemoths around this area.
+kill 4 Vilescale Behemoth##123461 |q 47599/1 |goto 79.96,33.05
+step
+talk Zibir the Wingmaster##122198
+fpath Forlorn Ruins |goto 82.15,26.69
+step
+talk Patch##123544
+|tip Inside the building.
+turnin No Goblin Left Behind##47597 |goto 82.37,27.29
+step
+talk Ticker##123548
+|tip Inside the building.
+turnin Revenge: Served Hot##47599 |goto 82.39,27.20
+accept There Is No Plan "B"##47596 |goto 82.39,27.20
+step
+talk Patch##123544
+|tip Inside the building.
+accept Head of the Viper##47711 |goto 82.37,27.30
+step
+talk Newt##123545
+|tip Inside the building.
+accept Pilfering and Fencing##47598 |goto 82.28,27.41
+stickystart "Collect_Ancient_Titan_Relics"
+step
+click Broken Elevating Gear##271747
+collect Broken Elevating Gears##151209 |q 47596/2 |goto 79.15,27.43
+step
+kill Lord Slithin##123550 |q 47711/1 |goto 78.64,25.15
+step
+click Damaged Artillery Barrel##271746
+collect Damaged A.M.O.D. Barrel##151208 |q 47596/1 |goto 77.67,25.28
+step
+click Shattered Firing Mechanism##271748
+collect Shattered Firing Mechanism##151210 |q 47596/3 |goto 79.57,22.25
+step
+label "Collect_Ancient_Titan_Relics"
+Kill Vilescale enemies around this area
+collect 20 Ancient Titan Relics##151202 |q 47598/1 |goto 79.14,22.83
+step
+talk Ticker##123548
+|tip Inside the building.
+turnin There Is No Plan "B"##47596 |goto 82.39,27.20
+step
+talk Patch##123544
+|tip Inside the building.
+turnin Head of the Viper##47711 |goto 82.37,27.29
+step
+talk Newt##123545
+|tip Inside the building.
+turnin Pilfering and Fencing##47598 |goto 82.28,27.41
+step
+talk Patch##123544
+|tip Inside the building.
+accept Field Evaluation##47601 |goto 82.37,27.30
+step
+clicknpc A.M.O.D.##123637
+Mount the A.M.O.D. |q 47601/1 |goto 81.45,26.02
+step
+Watch the dialogue
+Kill Vilescale enemies around this area
+|tip Use the abilities on your action bar.
+Slay #40# Naga Forces |q 47601/2
+step
+kill Grobathan##123486
+|tip Use the abilities on your action bar.
+Slay Grobathan |q 47601/3
+step
+talk Patch##123878
+turnin Field Evaluation##47601 |goto 81.34,26.09
+accept Ready For Action##47602 |goto 81.34,26.09
+step
+Watch the dialogue
+clicknpc Newt's Emergency Rocket##125244
+Choose _Let's ride out of here._
+Obtain a Ride From Newt's Emergency Rocket |q 47602/1 |goto 81.31,26.22
+step
+Travel to Gloom Hollow |goto 67.16,43.42 < 7 |c |q 47602 |notravel
+step
+Return to Talanji |q 47602/2 |goto 67.42,42.24
+step
+talk Princess Talanji##126213
+turnin Ready For Action##47602 |goto 67.42,42.24
+step
+talk Lashk##131978
+accept Slumber No More##49932 |goto 67.49,41.96
+step
+clicknpc Deactivated Titan Keeper##131299
+Awaken the Deactivated Titan Keeper |q 49932/1 |goto 66.91,38.87
+step
+click Titan Keeper Data Core##280480
+collect Damaged Core##156593 |q 49932/2 |goto 66.95,38.79
+step
+clicknpc Deactivated Titan Keeper##131299
+Install the Core |q 49932/3 |goto 66.92,38.86
+step
+Watch the dialogue
+talk Titan Keeper Hezrel##131253
+turnin Slumber No More##49932 |goto 66.90,38.91
+accept Recovering Remnants##49937 |goto 66.90,38.91
+accept Corrupted Earth##49938 |goto 66.90,38.91
+accept How to Repair a Titan Keeper##49935 |goto 66.90,38.91
+stickystart "Kill_Blood_Infused_Lashers"
+stickystart "Collect_Titan_Plating"
+step
+click Keeper Shavras's Core##281417
+collect Keeper Shavras's Core##156521 |q 49935/1 |goto 69.25,39.77
+step
+clicknpc Titan Keeper Bolcan##131256
+Watch the dialogue
+kill Titan Keeper Bolcan##131256
+collect Keeper Bolcan's Core##156522 |q 49935/2 |goto 66.19,33.65
+step
+label "Kill_Blood_Infused_Lashers"
+kill 25 Blood-Infused Lasher##131168 |q 49938/1 |goto 66.72,34.96
+step
+label "Collect_Titan_Plating"
+kill Naz'wathan Spectre##131169+
+collect 25 Titan Plating##156524 |q 49937/1 |goto 66.72,34.96
+step
+talk Titan Keeper Hezrel##131253
+turnin Recovering Remnants##49937 |goto 68.68,35.11
+turnin Corrupted Earth##49938 |goto 68.68,35.11
+turnin How to Repair a Titan Keeper##49935 |goto 68.68,35.11
+accept Bone Procession##49941 |goto 68.68,35.11
+accept Unwelcome Undead##49949 |goto 68.68,35.11
+stickystart "Slay_Naz'wathan_Undead"
+step
+clicknpc Minor Corruption##133941
+accept Blood Purification##49950 |goto 69.25,33.81
+stickystart "Collect_Reanimated_Monstrosity_Bones"
+step
+clicknpc Corrupted Energy##131286+
+|tip They look like red orbs floating above the ground around this area.
+Destroy #4# Corrupted Energy |q 49950/1 |goto 69.77,31.30
+step
+label "Slay_Naz'wathan_Undead"
+Kill Naz'wathan enemies around this area
+Slay #15# Naz'wathan Undead |q 49949/1 |goto 69.77,31.30
+step
+label "Collect_Reanimated_Monstrosity_Bones"
+use the Titan Manipulator##156528
+|tip Use it on Reanimated Monstrosities around this area.
+kill Reanimated Monstrosity##131285+
+collect 25 Reanimated Monstrosity Bone##156527 |q 49941/1 |goto 69.77,31.30
+step
+talk Titan Keeper Hezrel##131253
+turnin Bone Procession##49941 |goto 68.68,35.11
+turnin Unwelcome Undead##49949 |goto 68.68,35.11
+turnin Blood Purification##49950 |goto 68.68,35.11
+accept Not Fit for This Plane##49955 |goto 68.68,35.11
+accept Void is Prohibited##49956 |goto 68.68,35.11
+accept Protocol Recovery##49957 |goto 68.68,35.11
+stickystart "Destroy_Faceless_Ones"
+step
+Run up the stairs |goto 70.68,31.75 < 15 |only if walking
+use the Void Disruptor##156542
+|tip Use it next to Void Portals around this area.
+|tip They look like swirling purple and black portals on the ground around this area.
+Seal #4# Void Portal |q 49956/1 |goto 71.63,30.72
+step
+label "Destroy_Faceless_Ones"
+Kill Faceless enemies around this area
+Destroy #6# Faceless Ones |q 49955/1 |goto 71.63,30.72
+step
+Enter the building |goto 71.89,30.29 < 10 |walk
+kill Overlord Kraxis##131153
+|tip Inside the building.
+collect Containment Protocol##156537 |q 49957/1 |goto 72.83,28.94
+step
+Watch the dialogue
+talk Titan Keeper Hezrel##131253
+|tip Inside the building.
+turnin Not Fit for This Plane##49955 |goto 72.47,29.37
+turnin Void is Prohibited##49956 |goto 72.47,29.37
+turnin Protocol Recovery##49957 |goto 72.47,29.37
+accept Containment Procedure##49980 |goto 72.47,29.37
+step
+talk Titan Keeper Hezrel##131253
+|tip Inside the building.
+Tell him _"Hezrel, begin your scans to find a solution to the Old God corruption with Nazmir."_
+Watch the dialogue
+Speak to Titan Keeper Hezrel |q 49980/1 |goto 72.47,29.36
+step
+kill Grand Ma'da Ateena##131515 |q 49980/2 |goto 72.82,28.92
+|tip Inside the building.
+|tip Princess Talanji will help you fight her.
+|tip Run inside the yellow bubble Titan Keeper Hezrel casts around himself during the fight.
+step
+talk Titan Keeper Hezrel##131253
+|tip Inside the building.
+turnin Containment Procedure##49980 |goto 72.47,29.36
+accept Return to Gloom Hollow##49985 |goto 72.47,29.36
+step
+clicknpc Titan Keeper Hezrel##131501
+Jump onto Titan Keeper Hezrel |invehicle |goto 71.85,30.39 |q 49985
+step
+Watch the dialogue
+Ride Titan Keeper Hezrel back to Gloom Hollow |q 49985/1 |goto 66.01,39.13 |notravel
+step
+talk Princess Talanji##126213
+turnin Return to Gloom Hollow##49985 |goto 67.43,42.24
+accept Down by the Riverside##49569 |goto 67.43,42.24
+step
+talk Patch##130056
+Tell him _"I'm ready, let's hop on this barge and get back to Zul'jan."_
+Speak with Patch to Board the Barge |q 49569/1 |goto 65.71,45.10
+step
+Watch the dialogue
+Kill enemies around this area
+|tip They are all along the river banks as you sail.
+|tip Kill the hydra in the water when you stop sailing.
+|tip Use the abilities on your action bar.
+Sail Down the River |q 49569/2
+step
+Travel to the Shattered River |goto 39.89,84.92 < 7 |noway |c |q 49569
+step
+talk Princess Talanji##121288
+turnin Down by the Riverside##49569 |goto 39.40,78.15
+accept Rally the Warriors##50076 |goto 39.40,78.15
+step
+click Ancient Gong##280611
+Ring the Ancient Gong |q 50076/1 |goto 39.37,77.48
+step
+Watch the dialogue
+Hear Talanji's Speech |q 50076/2 |goto 39.34,77.68
+step
+talk Princess Talanji##121288
+turnin Rally the Warriors##50076 |goto 39.34,77.69
+accept The Battle of Bloodfire Ravine##50138 |goto 39.34,77.69
+step
+Meet Talanji at Bloodfire Ravine |q 50138/1 |goto 42.29,72.47
+step
+_Next to you:_
+talk Princess Talanji
+accept Undying Totems##50078
+stickystart "Slay_Blood_Trolls_2"
+step
+clicknpc Reanimating Totem##132342
+Destroy the Reanimating Totem |q 50078/1 |goto 43.46,72.26 |count 1
+step
+clicknpc Reanimating Totem##132342
+Destroy the Reanimating Totem |q 50078/1 |goto 43.16,71.29 |count 2
+step
+clicknpc Reanimating Totem##132342
+Destroy the Reanimating Totem |q 50078/1 |goto 43.75,71.19 |count 3
+step
+_Next to you:_
+talk Princess Talanji##132624
+turnin Undying Totems##50078
+step
+label "Slay_Blood_Trolls_2"
+Kill Bloodfire enemies around this area
+Slay #8# Blood Trolls |q 50138/2 |goto 43.56,71.26
+step
+Watch the dialogue
+kill Warmother Molaka##132230 |q 50138/3 |goto 44.74,68.64
+step
+talk Princess Talanji##132333
+turnin The Battle of Bloodfire Ravine##50138 |goto 44.95,68.62
+accept The Road of Pain##50081 |goto 44.95,68.62
+step
+talk Patch##132988
+accept Boom goes the Bomb##50079 |goto 44.97,68.34
+stickystart "Heal_Zandalari_Soldiers"
+step
+use the Seaforium Smoke Grenade##156847
+|tip Use it on the barricade.
+Destroy the First Barricade |q 50079/1 |goto 44.45,66.80
+step
+use the Seaforium Smoke Grenade##156847
+|tip Use it on the barricade.
+Destroy the Second Barricade |q 50079/2 |goto 44.18,64.98
+step
+use the Seaforium Smoke Grenade##156847
+|tip Use it on the barricade.
+Destroy the Third Barricade |q 50079/3 |goto 44.16,63.59
+step
+label "Heal_Zandalari_Soldiers"
+clicknpc Zandalari Soldier##132985+
+|tip They look like injured trolls laying on the ground around this area.
+Heal #6# Zandalari Soldiers |q 50081/1 |goto 44.13,64.36
+step
+Watch the dialogue
+talk Princess Talanji##133125
+turnin The Road of Pain##50081 |goto 44.19,62.85
+turnin Boom goes the Bomb##50079 |goto 44.19,62.85
+accept Target of Opportunity##50082 |goto 44.19,62.85
+step
+Watch the dialogue
+talk Princess Talanji##133401
+Tell her _"I'm ready."_
+Meet with Talanji |q 50082/1 |goto 44.98,60.95
+step
+Watch the dialogue
+Kill the enemies that attack in waves
+kill Decaying Hulk##133400
+Confront Grand Ma'da Ateena |q 50082/2 |goto 45.58,59.85
+step
+talk Princess Talanji##133125
+turnin Target of Opportunity##50082 |goto 45.21,60.54
+step
+Watch the dialogue
+talk Princess Talanji##133125
+accept Petitioning Krag'wa##52073 |goto 45.21,60.54
+step
+talk Krag'wa the Huge##140283
+Tell him _"Krag'wa, the leader of the blood trolls has fled to the large structure in the distance. Please, lend us your assistance."_
+Petition Krag'wa for Aid |q 52073/1 |goto 45.14,60.79
+step
+talk Krag'wa the Huge##140283
+Tell him _"I am ready to go, Krag'wa."_
+Ride with Krag'wa |invehicle |goto 45.19,60.70 |q 52073
+step
+Watch the dialogue
+Ride Krag'wa |q 52073/2 |goto 48.85,56.54
+step
+talk Princess Talanji##133476
+turnin Petitioning Krag'wa##52073 |goto 49.39,57.18
+accept Ateena's Fall##50087 |goto 49.39,57.18
+step
+kill Grand Ma'da Ateena##133472 |q 50087/1 |goto 50.80,57.91
+|tip Follow her when she teleports around.
+|tip Avoid the pools of blood on the ground.
+step
+Watch the dialogue
+talk Princess Talanji##133480
+turnin Ateena's Fall##50087 |goto 50.60,58.47
+step
+_Congratulations!_
+You completed the Nazmir Loremaster (Story Quest Only) leveling guide.
+]])
+ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Zandalar\\Vol'dun Loremaster (Story Quest Only)",{
+author="support@zygorguides.com",
+description="\nThis guide will assist you in completing the following Voldun storylines:\n\nDangers in the Desert\nA City of Secrets\nStorming the Spire\nUnlikely Allies\nThe Warguard's Fate\nThe Three Keepers\nAtul'Aman",
+condition_suggested=function() return level >= 110 and not achieved(12478) and completedq(52131) end,
+condition_end=function() return achieved(12478) end,
+startlevel=110.0,
+endlevel=120.0,
+image=ZGV.DIR.."\\Guides\\Images\\Vol'dun",
+},[[
+leechsteps "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice" 62-77
+step
+click Scouting Map
+|tip Inside the building.
+accept Vol'dun##47513 |goto Dazar'alor/2 41.71,69.41
+step
+talk Princess Talanji##133050
+|tip Inside the building.
+turnin Vol'dun##47513 |goto 41.14,66.73
+accept Discreet Discussions##47313 |goto 41.14,66.73
+step
+Leave the building |goto Dazar'alor/0 49.96,42.14 < 10 |walk
+Run down the stairs |goto 51.01,40.31 < 15 |only if walking
+talk Enforcer Sekal##122229
+Ask her _"What can you tell me about General Jakra'zet?"_
+Question the Enforcer |q 47313/1 |goto Dazar'alor/0 50.09,37.45 |count 1
+step
+talk Enforcer Gortok##123243
+Ask him _"What can you tell me about General Jakra'zet?"_
+Question the Enforcer |q 47313/1 |goto 52.19,37.52 |count 2
+step
+talk Enforcer Dakanji##122231
+Ask him _"What can you tell me about General Jakra'zet?"_
+Question the Enforcer |q 47313/1 |goto 54.27,35.85 |count 3
+step
+Find Someone Willing to Talk |q 47313/2 |goto 51.58,31.82
+step
+talk Bladeguard Kaja##122817
+turnin Discreet Discussions##47313 |goto 51.58,31.82
+accept Rumors of Exile##47314 |goto 51.58,31.82
+step
+Watch the dialogue
+|tip Follow Bladeguard Kaja as she walks.
+talk Bladeguard Kaja##122320
+turnin Rumors of Exile##47314 |goto 49.92,31.65
+accept Into the Dunes##47315 |goto 49.92,31.65
+step
+clicknpc Pterrordax##122347
+Mount the Pterrordax |q 47315/1 |goto 50.03,31.67
+step
+Watch the dialogue
+Fly into Vol'dun |q 47315/2 |goto Vol'dun/0 66.08,36.43 |notravel
+step
+Watch the dialogue
+talk Nisha##130455
+|tip Inside the cave.
+turnin Into the Dunes##47315 |goto 65.98,36.65
+accept Armed and Ready##51357 |goto 65.98,36.65
+step
+click Sethrak Scythe
+|tip Inside the cave.
+Choose a Weapon |q 51357/1 |goto 65.95,36.65
+step
+talk Nisha##130455
+|tip Inside the cave.
+turnin Armed and Ready##51357 |goto 65.98,36.65
+step
+_Next to you:_
+talk Nisha
+accept Answering Their Attacks##47327
+accept Dressed for Battle##49676
+stickystart "Slay_Sethraks"
+step
+Follow the path up |goto 65.52,37.27 < 10 |walk
+Leave the cave |goto 64.90,36.23 < 10 |walk
+click Stolen Vulpera Banner##278686
+Find the Banner |q 49676/1 |goto 64.67,33.91
+step
+click Sethrak Skull##278685
+Find the Helmet |q 49676/2 |goto 63.63,32.70
+step
+click Explosives
+Find the Explosives |q 49676/3 |goto 61.88,33.78
+step
+_Next to you:_
+talk Nisha
+turnin Dressed for Battle##49676
+accept Plans for Attack##49677
+step
+label "Slay_Sethraks"
+Kill Sethrak enemies around this area
+Slay #12# Sethrak |q 47327/1 |goto 61.72,33.41
+step
+_Next to you:_
+talk Nisha
+turnin Answering Their Attacks##47327
+step
+kill Fangcaller Sraka##130466
+collect Nisha's Attack Plans##158651 |q 49677/1 |goto 60.88,32.66
+step
+_Next to you:_
+talk Nisha
+turnin Plans for Attack##49677
+accept An Explosive Exit##51364
+step
+Watch the dialogue
+Find Nisha's Wagon |q 51364/1 |goto 60.06,34.58
+step
+clicknpc Nisha's Wagon##137492
+Board Nisha's Wagon |q 51364/2 |goto 60.06,34.58
+step
+Watch the dialogue
+|tip Use the "Volatile Potion" ability on the enemies that attack.
+|tip It appears as a button on the screen.
+Defend Nisha's Wagon |q 51364/3 |goto 58.23,40.55
+step
+Watch the dialogue
+Ride to Vulpera Hideaway |q 51364/4 |goto 57.08,50.38 |notravel
+step
+talk Kiro##123586
+turnin An Explosive Exit##51364 |goto 56.79,50.54
+accept Restorative Venom##47319 |goto 56.79,50.54
+step
+talk Meerah##122583
+accept Freshly Squeezed##51574 |goto 56.76,50.52
+step
+talk Hagashi##124108
+home Vulpera Hideaway |goto 56.78,49.81 |q 48895 |future
+step
+talk Narishi##124107
+fpath Vulpera Hideaway |goto 56.96,49.25
+stickystart "Collect_Sandstinger_Venom_Glands"
+step
+Follow the path |goto 55.08,48.65 < 20 |only if walking
+clicknpc Vibrant Pricklevine##138107+
+|tip They look like small red plants with teeth and green leaves on the ground around this area.
+collect 8 Pricklevine Juice##160448 |q 51574/1 |goto 53.92,50.35
+step
+label "Collect_Sandstinger_Venom_Glands"
+Kill Sandstinger enemies around this area
+collect 15 Sandstinger Venom Gland##160441 |q 47319/1 |goto 53.92,50.35
+step
+Follow the path |goto 54.90,48.64 < 15 |only if walking
+talk Meerah##122583
+turnin Freshly Squeezed##51574 |goto 56.76,50.52
+step
+talk Kiro##123586
+turnin Restorative Venom##47319 |goto 56.79,50.54
+accept A Balm to Calm##47320 |goto 56.79,50.54
+step
+use the Restorative Balm##150759
+|tip Use it on Bladeguard Kaja.
+Apply the Restorative Balm |q 47320/1 |goto 56.83,50.53
+step
+Watch the dialogue
+talk Bladeguard Kaja##130341
+turnin A Balm to Calm##47320 |goto 56.83,50.52
+accept Searching for Survivors##47317 |goto 56.83,50.52
+step
+talk Kiro##123586
+accept Knickknack Takeback##47321 |goto 56.79,50.53
+step
+talk Meerah##122583
+accept Secrets in the Sand##47316 |goto 56.76,50.53
+step
+click Rakera's Journal Page##271844
+Recover the Journal Page |q 47316/1 |goto 55.78,48.68 |count 1
+step
+click Rakera's Journal Page##271844
+Recover the Journal Page |q 47316/1 |goto 56.33,43.90 |count 2
+step
+click Rakera's Journal Page##271844
+Recover the Journal Page |q 47316/1 |goto 52.80,46.41 |count 3
+step
+Follow the path |goto 51.62,43.03 < 15 |only if walking
+click Rakera's Journal Page##271844
+Recover the Journal Page |q 47316/1 |goto 52.78,41.80 |count 4
+step
+clicknpc Bladeguard Jorana##122729
+Find Jorana |q 47317/2 |goto 57.42,40.62
+stickystart "Collect_Knickknacks"
+step
+Enter the cave |goto 54.84,39.66 < 10 |walk
+click Tarkaj's Warblade##271014
+|tip Inside the cave.
+Find Tarkaj |q 47317/1 |goto 54.61,39.38
+step
+label "Collect_Knickknacks"
+Kill enemies around this area
+Collect #6# Knickknacks |q 47321/1 |goto 55.11,40.05
+step
+talk Kiro##123586
+turnin Knickknack Takeback##47321 |goto 56.79,50.54
+step
+talk Bladeguard Kaja##130341
+turnin Searching for Survivors##47317 |goto 56.83,50.52
+turnin Secrets in the Sand##47316 |goto 56.83,50.52
+accept The Warguard's Trail##47959 |goto 56.83,50.52
+step
+talk Meerah##122583
+Tell her _"We're ready to leave."_
+Speak to Meerah |q 47959/1 |goto 56.76,50.53
+step
+Watch the dialogue
+Ride Meerah's Caravan |q 47959/2 |goto 53.48,65.95 |notravel
+step
+talk Jorak##126696
+turnin The Warguard's Trail##47959 |goto 52.97,66.53
+accept Grozztok the Blackheart##48549 |goto 52.97,66.53
+accept Stolen Satchels##48550 |goto 52.97,66.53
+stickystart "Collect_Weathered_Satchels"
+step
+Follow the path up |goto 50.76,64.50 < 30 |only if walking
+Watch the dialogue
+kill Grozztok the Blackheart##126697 |q 48549/1 |goto 49.19,64.74
+step
+label "Collect_Weathered_Satchels"
+Kill Sandfury enemies around this area
+collect 5 Weathered Satchel##152660 |q 48550/1 |goto 49.45,65.34
+step
+talk Bladeguard Kaja##122289
+turnin Grozztok the Blackheart##48549 |goto 53.19,66.05
+step
+talk Jorak##126696
+turnin Stolen Satchels##48550 |goto 53.34,66.00
+step
+talk Bladeguard Kaja##122289
+accept On the Move##48684 |goto 53.19,66.06
+step
+talk Meerah##126235
+Tell her _"We're ready to leave."_
+Speak to Meerah |q 48684/1 |goto 53.22,66.04
+step
+Watch the dialogue
+Ride Meerah's Caravan |q 48684/2 |goto 52.88,89.12 |notravel
+step
+talk Jorak##127691
+turnin On the Move##48684 |goto 52.83,89.23
+accept The Perfect Offering##48895 |goto 52.83,89.23
+step
+talk Akunda the Exalted##127992
+turnin The Perfect Offering##48895 |goto 53.18,90.29
+accept Powerful Conductors##48993 |goto 53.18,90.29
+accept Sacred Remains##48992 |goto 53.18,90.29
+accept Vile Infestation##48991 |goto 53.18,90.29
+step
+talk Akunda the Bountiful##127431
+|tip Inside the building.
+home Temple of Akunda |goto 51.92,89.83 |q 50561 |future
+step
+talk Akunda the Tamer##127427
+fpath Temple of Akunda |goto 53.72,89.17
+stickystart "Collect_Sacred_Remains"
+stickystart "Kill_Ranishu_Gorgers"
+step
+Enter the cave |goto 55.01,86.20 < 10 |walk
+Follow the path down |goto 55.75,86.01 < 10 |walk
+kill Rorgog the Devourer##134052
+|tip Inside the cave.
+collect Rorgog's Antennae##153029 |q 48993/1 |goto 56.12,83.45
+step
+Follow the path up |goto 55.75,86.01 < 10 |walk
+Leave the cave |goto 55.04,86.20 < 10 |c |q 48992
+step
+label "Collect_Sacred_Remains"
+click Sacred Remains##277285+
+|tip They look like white bones on the ground around this area.
+collect 6 Sacred Remains##153028 |q 48992/1 |goto 54.60,86.07
+step
+label "Kill_Ranishu_Gorgers"
+kill 12 Ranishu Gorger##133565 |q 48991/1 |goto 54.60,86.07
+step
+talk Akunda the Exalted##127992
+turnin Powerful Conductors##48993 |goto 53.18,90.29
+turnin Sacred Remains##48992 |goto 53.18,90.29
+turnin Vile Infestation##48991 |goto 53.18,90.29
+accept Cleanse the Mind##48887 |goto 53.18,90.29
+accept It Springs Eternal##48888 |goto 53.18,90.29
+stickystart "Slay_Redrock_Scavenger"
+step
+Follow the path down |goto 53.11,84.99 < 15 |only if walking
+Enter the cave |goto 52.16,83.78 < 10 |walk
+click Shrine of Thunder##276460
+|tip Inside the cave.
+Meditate at the Shrine of Thunder |q 48887/1 |goto 52.17,83.36
+step
+kill Inner Demon##138292 |q 48887/2 |goto 52.17,83.36
+|tip Inside the cave.
+step
+label "Slay_Redrock_Scavenger"
+Kill Redrock enemies around this area
+Slay #8# Redrock Scavenger |q 48888/1 |goto 52.13,84.48
+step
+Follow the path up |goto 53.79,83.57 < 15 |only if walking
+talk Akunda the Exalted##127992
+turnin Cleanse the Mind##48887 |goto 53.18,90.30
+turnin It Springs Eternal##48888 |goto 53.18,90.30
+accept Trial of Truth##48894 |goto 53.18,90.30
+step
+talk Akunda the Exalted##127992
+Tell him "_My name is Akunda the Nimble."_
+|tip You can choose whichever Akunda name you like, it doesn't matter.
+|tip You cannot choose to have your name remain unchanged.
+Speak Your True Name to Akunda the Exalted |q 48894/1 |goto 53.18,90.29
+step
+talk Akunda the Exalted##127966
+turnin Trial of Truth##48894 |goto 53.18,90.29
+step
+talk Bladeguard Kaja##127570
+accept Akunda Awaits##48715 |goto 53.16,90.20
+step
+Watch the dialogue
+|tip Inside the building.
+Investigate the Temple of Akunda |q 48715/1 |goto 53.18,91.26
+step
+Watch the dialogue
+talk Bladeguard Kaja##135066
+|tip Inside the building.
+turnin Akunda Awaits##48715 |goto 53.58,91.65
+step
+talk Akunda the Sensible##127980
+|tip Inside the building.
+accept Valley of Sorrows##48987 |goto 53.58,91.34
+step
+Follow the path down |goto 53.12,85.01 < 20 |only if walking
+Follow the path down |goto 53.80,80.18 < 20 |only if walking
+talk Meijani##127989
+turnin Valley of Sorrows##48987 |goto 53.01,78.77
+accept Memory Breach##48988 |goto 53.01,78.77
+accept Shattered and Broken##49005 |goto 53.01,78.77
+stickystart "Kill_Distorted_Memories"
+stickystart "Kill_Fractured_Memories"
+step
+clicknpc Unwanted Memory##122683+
+|tip They look like grey vases on the ground around this area.
+Search #8# Unwanted Memories |q 48988/1 |goto 52.71,76.94
+You can find more around [54.43,76.24]
+step
+label "Kill_Distorted_Memories"
+kill 4 Distorted Memory##138198 |q 49005/1 |goto 53.49,76.85
+step
+label "Kill_Fractured_Memories"
+kill 8 Fractured Memory##138199 |q 49005/2 |goto 53.49,76.85
+step
+talk Meijani##127989
+turnin Memory Breach##48988 |goto 53.01,78.77
+turnin Shattered and Broken##49005 |goto 53.01,78.77
+accept Repairing the Past##48889 |goto 53.01,78.77
+step
+Enter the cave |goto 52.60,79.18 < 10 |walk
+Kill the enemies that attack in waves
+|tip Inside the cave.
+Watch the dialogue
+Protect Meijani |q 48889/1 |goto 52.31,79.74
+step
+talk Akunda##138382
+|tip Inside the cave.
+turnin Repairing the Past##48889 |goto 52.22,79.89
+accept Ending the Madness##48996 |goto 52.22,79.89
+step
+Follow the path |goto 53.12,89.65 < 15 |only if walking
+kill Akunda the Exalted##128147 |q 48996/1 |goto 53.18,91.25
+|tip Inside the building.
+|tip Use the "Tempest" ability.
+|tip It appears as a button on the screen.
+step
+Watch the dialogue
+talk Akunda##128152
+|tip Inside the building.
+turnin Ending the Madness##48996 |goto 53.19,91.65
+accept Akunda's Blessing##50913 |goto 53.19,91.65
+step
+click Altar of Akunda##290773
+|tip Inside the building.
+Visit the Altar of Akunda |q 50913/1 |goto 53.18,92.12
+step
+talk Akunda##128152
+|tip Inside the building.
+turnin Akunda's Blessing##50913 |goto 53.19,91.65
+step
+talk Warguard Rakera##130660
+|tip Inside the building.
+accept Clearing the Fog##47874 |goto 53.61,91.66
+step
+Watch the dialogue
+|tip Follow Warguard Rakera as she walks.
+talk Warguard Rakera##130667
+turnin Clearing the Fog##47874 |goto 52.81,89.24
+accept Knowledge of the Past##48896 |goto 52.81,89.24
+step
+talk Meerah##126235
+Tell her _"We're ready to leave."_
+Speak to Meerah |q 48896/1 |goto 52.70,89.30
+step
+Watch the dialogue
+Ride Meerah's Caravan |q 48896/2 |goto 47.91,82.38 |notravel
+step
+kill 3 Sandfury Assassin##128209 |q 48896/3 |goto 47.67,81.99
+step
+_Next to you:_
+talk Warguard Rakera
+turnin Knowledge of the Past##48896
+accept Searching the Ruins##47716
+step
+Watch the dialogue
+Search for Julwaba |q 47716/1 |goto 46.60,76.05
+step
+Enter the building |goto 46.77,75.72 < 20 |only if walking
+Watch the dialogue
+talk Julwaba##134162
+|tip Inside the building.
+turnin Searching the Ruins##47716 |goto 47.07,75.66
+step
+talk Kiro##135154
+|tip Inside the building.
+accept Creeping Death##48314 |goto 47.05,75.60
+accept Nature's Remedy##48313 |goto 47.05,75.60
+stickystart "Collect_Scorpashi_Stingers"
+step
+click Prickly Plum##273193
+|tip They look like green spiky plants on the ground around this area.
+collect 6 Prickly Plum Cactus##152393 |q 48313/1 |goto 46.00,73.43
+step
+label "Collect_Scorpashi_Stingers"
+Kill Scorpashi enemies around this area
+collect 7 Scorpashi Stinger##152397 |q 48314/1 |goto 46.00,73.43
+step
+talk Makaanji##135654
+fpath Scorched Sands Outpost |goto 43.90,75.92
+step
+Enter the building |goto 46.77,75.72 < 20 |only if walking
+talk Kiro##135154
+|tip Inside the building.
+turnin Creeping Death##48314 |goto 47.06,75.60
+turnin Nature's Remedy##48313 |goto 47.06,75.60
+accept Effective Antivenom##50770 |goto 47.06,75.60
+step
+use the Antivenom##158678
+|tip Use it on Serrik.
+|tip Inside the building.
+Apply the Restorative Balm |q 50770/1 |goto 47.06,75.72
+step
+Watch the dialogue
+talk Serrik##134533
+|tip Inside the building.
+turnin Effective Antivenom##50770 |goto 47.06,75.71
+accept The Secrets of Zul'Ahjin##50539 |goto 47.06,75.71
+step
+Run up the stairs |goto 46.87,74.21 < 15 |only if walking
+Follow the path |goto 47.90,73.85 < 20 |only if walking
+click Crumbling Statue##281639
+turnin The Secrets of Zul'Ahjin##50539 |goto 48.90,74.49
+accept Hollow, Empty Eyes##48315 |goto 48.90,74.49
+step
+click Glittering Sapphire##281558
+collect Glittering Sapphire##157864 |q 48315/1 |goto 49.85,73.19 |count 1
+step
+Run up the stairs |goto 50.46,71.81 < 15 |only if walking
+click Glittering Sapphire##281558
+collect Glittering Sapphire##157864 |q 48315/1 |goto 51.05,72.34 |count 2
+step
+click Crumbling Statue##281639
+turnin Hollow, Empty Eyes##48315 |goto 48.90,74.49
+step
+Watch the dialogue
+click Ancient Reliquary##281583
+accept Sulthis' Stone##50561 |goto 48.90,74.25
+step
+Jump down here |goto 47.02,73.97 < 15 |only if walking
+Enter the building |goto 46.73,75.70 < 20 |walk
+talk Serrik##134533
+|tip Inside the building.
+turnin Sulthis' Stone##50561 |goto 47.06,75.71
+accept Unlikely Allies##47324 |goto 47.06,75.71
+step
+clicknpc Serrik's Pterrordax##134544
+Mount the Pterrordax |q 47324/1 |goto 46.79,75.45
+step
+Watch the dialogue
+Fly to the Sanctuary of the Devoted |q 47324/2 |goto 27.24,54.09 |notravel
+step
+Watch the dialogue
+talk Serrik##128687
+turnin Unlikely Allies##47324 |goto 27.22,53.94
+accept A Powerful Prisoner##49334 |goto 27.22,53.94
+step
+talk Zissiah##128696
+accept Break Their Ranks##50641 |goto 27.20,53.86
+accept Push Them Back!##49327 |goto 27.20,53.86
+step
+talk Issik##128693
+|tip Inside the building.
+home Sanctuary of the Devoted |goto 26.87,52.22 |q 49327
+step
+talk Vethiss##128695
+fpath Sanctuary of the Devoted |goto 27.65,50.33
+stickystart "Burn_Sethrak_Banners"
+stickystart "Crush_Sethrak_Cannons"
+stickystart "Shatter_Sethrak_Spires"
+stickystart "Slay_Faithless"
+step
+click Sethrak Cage##277910
+Rescue Vorrik |q 49334/1 |goto 30.02,51.98
+step
+label "Burn_Sethrak_Banners"
+click Sethrak War Banner##277899+
+|tip They look like wooden poles with red flags on the ground around this area.
+Burn #4# Banners |q 49327/1 |goto 29.38,53.59
+step
+label "Crush_Sethrak_Cannons"
+clicknpc Sethrak Cannon##129076+
+|tip They look like stone cannons on the ground around this area.
+Crush #2# Cannons |q 49327/2 |goto 29.38,53.59
+step
+label "Shatter_Sethrak_Spires"
+click Sethrak Spire##278583+
+|tip They look like large stone towers with lighting striking them on the ground around this area.
+Shatter #2# Spires |q 49327/3 |goto 29.38,53.59
+step
+label "Slay_Faithless"
+Kill Faithless enemies around this area
+Slay #10# Faithless |q 50641/1 |goto 29.38,53.59
+step
+Run up the stairs |goto 28.83,54.05 < 15 |only if walking
+talk Zissiah##128696
+turnin Break Their Ranks##50641 |goto 27.20,53.85
+turnin Push Them Back!##49327 |goto 27.20,53.85
+step
+talk Vorrik##129519
+|tip Inside the building.
+turnin A Powerful Prisoner##49334 |goto 27.62,52.57
+accept The Keepers' Keys##49340 |goto 27.62,52.57
+step
+talk Vorrik##129519
+|tip Inside the building.
+Choose _<Give Vorrik Sulthis' Stone.>_
+Watch the dialogue
+Speak to Vorrik |q 49340/1 |goto 27.62,52.57
+step
+talk Vorrik##128694
+|tip Upstairs inside the building.
+turnin The Keepers' Keys##49340 |goto 27.12,52.56
+accept The Missing Key##49662 |goto 27.12,52.56
+step
+Cross the bridge |goto 30.71,50.12 < 20 |only if walking
+Follow the path |goto 35.68,45.14 < 30 |only if walking
+Follow the path |goto 40.26,44.74 < 30 |only if walking
+Cross the bridge |goto 42.95,39.14 < 20 |only if walking
+talk Vorrik##137970
+turnin The Missing Key##49662 |goto 42.92,35.75
+accept Infiltrating the Empire##50745 |goto 42.92,35.75
+step
+Run up the stairs |goto 42.91,33.89 < 15 |only if walking
+talk Lugo the Windrider##135385
+fpath Vorrik's Sanctum |goto 47.30,35.23
+step
+Enter the cave |goto 47.95,35.57 < 10 |walk
+talk Vorrik##135172
+|tip Inside the cave.
+turnin Infiltrating the Empire##50745 |goto 47.96,36.39
+accept Allies in Anarchy##49664 |goto 47.96,36.39
+step
+Leave the cave |goto 47.94,35.54 < 10 |walk
+talk Nisha##135090
+turnin Allies in Anarchy##49664 |goto 46.14,33.22
+accept Ready to Riot##49665 |goto 46.14,33.22
+accept Make Them Fear Us##49666 |goto 46.14,33.22
+stickystart "Arm_Slaves"
+step
+Kill Faithless enemies around this area
+use the Vulpera Banners##158884
+|tip Use it near their corpses.
+Plant #12# Vulpera Banners |q 49666/1 |goto 47.60,32.31
+step
+label "Arm_Slaves"
+click Faithless Weapon Rack##287006+
+|tip They look like wooden racks with weapons on them on the ground around this area.
+collect Faithless Scimitar##159470+ |n
+talk Vulpera Slave##130342+
+Choose _<Free the slave and give them a weapon to fight with.>_
+|tip They look like friendly fox NPCs around this area.
+|tip You must have a Faithless Scimitar to be able to arm them.
+Arm #8# Slaves |q 49665/1 |goto 47.60,32.31
+step
+Follow the path up |goto 47.17,33.86 < 15 |only if walking
+talk Nisha##135090
+turnin Ready to Riot##49665 |goto 46.15,33.22
+turnin Make Them Fear Us##49666 |goto 46.15,33.22
+accept Crater Conquered##50746 |goto 46.15,33.22
+step
+Follow the path up |goto 46.86,34.71 < 20 |only if walking
+Enter the cave |goto 47.95,35.61 < 10 |walk
+talk Vorrik##135172
+|tip Inside the cave.
+turnin Crater Conquered##50746 |goto 47.96,36.39
+accept Diplomacy and Dominance##49141 |goto 47.96,36.39
+accept Don't Drop It... Yet##50748 |goto 47.96,36.39
+stickystart "Collect_Volatile_Lightning_Bombs"
+step
+Leave the cave |goto 47.94,35.55 < 10 |walk
+Follow the path up |goto 49.68,34.95 < 15 |only if walking
+click Suppression Spire##290707+
+|tip They look like tall stone towers on the ground around this area.
+Drain #6# Suppression Spires |q 49141/1 |goto 47.80,36.98
+step
+label "Collect_Volatile_Lightning_Bombs"
+Kill Ridge enemies around this area
+collect 6 Volatile Lightning Bomb##154896 |q 50748/1 |goto 47.80,36.98
+step
+Follow the path up |goto 46.40,37.48 < 10 |only if walking
+talk Vorrik##135110
+|tip At the top of the mountain.
+turnin Diplomacy and Dominance##49141 |goto 47.20,39.15
+turnin Don't Drop It... Yet##50748 |goto 47.20,39.15
+accept Vengeance From Above##49003 |goto 47.20,39.15
+step
+clicknpc Rakjan the Unbroken##138547
+Mount Rakjan the Unbroken |q 49003/1 |goto 47.16,39.34
+step
+Kill Faithless enemies around this area
+|tip Use the "Lightning Bomb" ability on your action bar.
+|tip They are on the ground around this area as you fly.
+Slay #60# Faithless |q 49003/2 |goto 48.13,32.14
+step
+Destroy the Spire Barrier |q 49003/3 |goto 51.95,32.61
+|tip Use the "Vorrik's Barrage" ability on your action bar.
+step
+talk Vorrik##135111
+turnin Vengeance From Above##49003 |goto 51.95,28.69
+accept Infuriating the Emperor##50750 |goto 51.95,28.69
+accept Relics of Sethraliss##50752 |goto 51.95,28.69
+stickystart "Purge_Faithless"
+step
+click Rebirth Creed##282451
+collect Rebirth Creed##158722 |q 50752/1 |goto 49.89,28.50
+step
+click Skull of the First Skycaller##290755
+collect Skull of the First Skycaller##160526 |q 50752/2 |goto 50.25,26.69
+step
+click Sethraliss Sight Stone##290756
+collect Sethraliss Sight Stone##160527 |q 50752/3 |goto 48.24,26.15
+step
+click Blood of the Fallen Loa##290757
+collect Blood of the Fallen Loa##160528 |q 50752/4 |goto 49.56,24.36
+step
+label "Purge_Faithless"
+Kill Faithless enemies around this area
+|tip Run near them.
+|tip Run over the Lightning Orbs that appear on the ground to recharge the ability bar.
+Purge #75# Faithless |q 50750/1 |goto 49.66,25.28
+step
+talk Vorrik##135111
+turnin Infuriating the Emperor##50750 |goto 51.94,28.69
+turnin Relics of Sethraliss##50752 |goto 51.94,28.69
+step
+Watch the dialogue
+talk Vorrik##135111
+accept The Fall of Emperor Korthek##50550 |goto 51.94,28.69
+step
+talk Vorrik##138411
+Tell him _"Vorrik, I'm ready to face Emperor Korthek."_
+Watch the dialogue
+Speak with Vorrik |q 50550/1 |goto 51.95,28.69
+step
+kill Emperor Korthek##134601 |q 50550/2 |goto 51.96,27.25
+step
+Watch the dialogue
+talk Vorrik##135390
+turnin The Fall of Emperor Korthek##50550 |goto 51.98,27.72
+accept Sanctuary Under Siege##50751 |goto 51.98,27.72
+step
+talk Vorrik##129588
+|tip Upstairs inside the building.
+turnin Sanctuary Under Siege##50751 |goto 27.10,52.56
+accept Atul'Aman##50617 |goto 27.10,52.56
+step
+talk Vorrik##135625
+turnin Atul'Aman##50617 |goto 43.05,68.21
+accept The Abandoned Passage##50904 |goto 43.05,68.21
+step
+talk Vorrik##135625
+Tell him _"I'm ready. Let's go find the others."_
+Speak with Vorrik |q 50904/1 |goto 43.05,68.21
+step
+Enter the cave |goto Vol'dun/1 30.77,82.26 < 10 |walk
+Follow the path |goto Vol'dun/1 37.29,77.10 < 10 |walk
+clicknpc Entangling Tendrils##135695
+|tip Inside the cave.
+Find Kaja |q 50904/2 |goto Vol'dun/1 42.87,91.97
+step
+Follow the path |goto 46.61,79.79 < 10 |walk
+clicknpc Entangling Tendrils##135695
+|tip Inside the cave.
+Find Rakera |q 50904/3 |goto 51.65,67.31
+step
+talk Warguard Rakera##134803
+|tip Inside the cave.
+turnin The Abandoned Passage##50904 |goto 55.62,36.28
+accept Defeat Jakra'zet##50702 |goto 55.62,36.28
+step
+Watch the dialogue
+kill General Jakra'zet##134846 |q 50702/1 |goto 67.86,35.89
+|tip Inside the cave.
+step
+Watch the dialogue
+talk Warguard Rakera##135133
+|tip Upstairs inside the building.
+turnin Defeat Jakra'zet##50702 |goto Vol'dun/0 27.09,52.64
+step
+_Congratulations!_
+You completed the Vol'dun Loremaster (Story Quest Only) leveling guide.
+]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Death Knight Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -8622,11 +11362,6 @@ condition_valid_msg="You must be a Death Knight to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -8635,107 +11370,80 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Raise Dead ability
-|tip It is already on your action bar.
-Cast Raise Dead |scenariogoal Cast Raise Dead##2/30662
-|only if intutorial()
+Cast Raise Dead |scenariogoal 2/30662
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Outbreak ability on the Target Dummy
-|tip It appears on your action bar.
-Use Outbreak on the Target Dummy |scenariogoal Use Outbreak on the target dummy##3/30663
-|only if intutorial()
+Use Outbreak on the Target Dummy |scenariogoal 3/30663
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Use your Festering Strike ability on the Target Dummy
 |tip It appears on your action bar.
-Use Festering Strike on the Target Dummy #3# Times |scenariogoal Use Festering Strike on the target dummy##4/30664
-|only if intutorial()
+Use Festering Strike on the Target Dummy |scenariogoal 4/30664
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Scourge Strike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use Festering Strike on the Target Dummy, then use Scourge Strike on the Target Dummy.
-Use Festering Strike then Scourge Strike on the Target Dummy #3# Times |scenariogoal Use Festering Strike then Scourge Strike on the target dummy##5/30665
-|only if intutorial()
+Use Festering Strike then Scourge Strike on the Target Dummy |scenariogoal 5/30665
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Death Coil ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities to generate Runic Power, so you can use Death Coil.
-Use Death Coil on the Target Dummy #3# Times |scenariogoal Use Death Coil on the target dummy##6/30666
-|only if intutorial()
+Use Death Coil on the Target Dummy |scenariogoal 6/30666
+|tip Use your other abilities to generate Runic Power.
 step
 _On the Deck of the Airship:_
 Use your abilities on the Target Dummy
-Use Outbreak |scenariogoal Use Outbreak##7/30663
-Use Festering Strike #2# Times |scenariogoal Use Festering Strike##7/30664
-Use Scourge Strike #4# Times |scenariogoal Use Scourge Strike##7/30665
-Use Death Coil #4# Times |scenariogoal Use Death Coil##7/30666
-|only if intutorial()
+Use Outbreak |scenariogoal 7/30663
+Use Festering Strike |scenariogoal 7/30664
+Use Scourge Strike |scenariogoal 7/30665
+Use Death Coil |scenariogoal 7/30666
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Death Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Death Strike #2# Times |scenariogoal Use Death Strike##8/31703
-|only if intutorial()
+Use Death Strike |scenariogoal Use Death Strike##8/31703
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Death Grip ability on the Horde Grunt
-|tip It appears on your action bar.
-Use Death Grip |scenariogoal Use Death Grip##9/30667
-|only if intutorial()
+Use Death Grip |scenariogoal 9/30667
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Army of the Dead ability
-|tip It appears on your action bar.
-Use Army of the Dead |scenariogoal Use Army of the Dead##10/31018
-|only if intutorial()
+Use Army of the Dead |scenariogoal 10/31018
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##12/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 12/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 13
-|only if intutorial()
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial()
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Demon Hunter Intro",{
 author="support@zygorguides.com",
@@ -8747,110 +11455,75 @@ condition_valid_msg="You must be a Demon Hunter to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
-Talk to Warlord Zakgra |scenariogoal Talk to Warlord Zakgra##1/31011 |or |next "Start_Combat_Training"
+Talk to Warlord Zakgra |scenariostage 1 |or |next "Start_Combat_Training"
 _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fel Rush ability
-|tip It is already on your action bar.
-Cast Fel Rush |scenariogoal Use Fel Rush on the target dummy##2/38303
-|only if intutorial()
+Cast Fel Rush |scenariogoal 2/38303
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Demon's Bite ability on the Target Dummy
-|tip It appears on your action bar.
-Use Demon's Bite on the Target Dummy #3# Times |scenariogoal Use Demon's Bite on the target dummy##3/38304
-|only if intutorial()
+Use Demon's Bite on the Target Dummy #3# Times |scenariogoal 3/38304
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Chaos Strike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use Demon's Bite to build fury, then use Chaos Strike on the Target Dummy.
-Use Chaos Strike on the Target Dummy #3# Times |scenariogoal Use Chaos Strike on the target dummy##4/38305
-|only if intutorial()
+Use Chaos Strike on the Target Dummy |scenariogoal 4/38305
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Scourge Strike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use Demon's Bite to build fury, then use Eye Beam on the Target Dummy.
-Use Eye Beam on the Target Dummy #3# Times |scenariogoal Use Eye Beam on the Target Dummy##5/38308
-|only if intutorial()
+Use Eye Beam on the Target Dummy |scenariogoal 5/38308
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-|tip Use Demon's Bite to build fury, then use Chaos Strike and Eye Beam on the Target Dummy.
-Use Eye Beam #2# Times |scenariogoal Use Eye Beam##6/38308
-Use Chaos Strike #3# Times |scenariogoal Use Chaos Strike##6/38305
-Use Demon's Bite #6# Times |scenariogoal Use Demon's Bite##6/38304
-|only if intutorial()
+Use Eye Beam |scenariogoal 6/38308
+Use Chaos Strike |scenariogoal 6/38305
+Use Demon's Bite |scenariogoal 6/38304
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-|tip Use Demon's Bite to build fury, then use Blade Dance on the Arcane Constructs.
-Use Blade Dance #2# Times to Kill the Arcane Constructs |scenariogoal Use Blade Dance to kill the Arcane Constructs##7/38307
-|only if intutorial()
+kill Arcane Construct##101738+
+Destroy the Arcane Constructs |scenariogoal 7/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Use Metamorphasis ability
-|tip It appears on your action bar.
-Use Metamorphasis |scenariogoal Use Metamorphasis##8/38306
-|only if intutorial()
+Use Metamorphasis |scenariogoal 8/38306
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-|tip Use Demon's Bite to build fury, then use Chaos Strike and Eye Beam.
-Defeat the Soldier |scenariogoal Defeat the Soldier##9/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 9/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
-|tip Use Demon's Bite to build fury, then use Chaos Strike and Eye Beam.
-Defeat Both Attackers |scenariogoal Defeat Both Attackers##10/30919
-|only if intutorial()
+kill Alliance Infantry##102592+
+Defeat Both Attackers |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-|tip Cast Metamorphosis.
-|tip Use Demon's Bite to build fury, then use Chaos Strike, Eye Beam, and Blade Dance.
 Defend the Airship! |scenariostage Defend Against the Assault##11
-|only if intutorial()
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenariogoal Take the wind rider on the back of the airship and join the fleet##12/31027
-|only if intutorial()
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Druid Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -8861,11 +11534,6 @@ condition_valid_msg="You must be a Druid to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -8874,201 +11542,161 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Moonkin Form ability
-|tip It is already on your action bar.
-Cast Moonkin Form |scenariogoal Cast Moonkin Form##2/32840
-|only if intutorial() and Balance
+Cast Moonkin Form |scenariogoal 2/32840
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Moonfire ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Moonfire on the Target Dummy |scenariogoal Cast Moonfire on the target dummy##3/32841
-|only if intutorial() and Balance
+Cast Moonfire on the Target Dummy |scenariogoal 3/32841
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Sunfire ability on the Target Dummy
-|tip It is already on your action bar.
-Cast Sunfire on the Target Dummy |scenariogoal Cast Sunfire on the target dummy##3/32842
-|only if intutorial() and Balance
+Cast Sunfire on the Target Dummy |scenariogoal 3/32842
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Solar Wrath ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Solar Wrath on the Target Dummy #3# Times |scenariogoal Cast Solar Wrath on the target dummy##4/32843
-|only if intutorial() and Balance
+Cast Solar Wrath on the Target Dummy |scenariogoal 4/32843
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Starsurge ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilties on the Target Dummy to generate Astral Power, so you can cast Starsurge.
-Cast Starsurge on the Target Dummy #3# Times |scenariogoal Cast Starsurge on the target dummy##5/32844
-|only if intutorial() and Balance
+Cast Starsurge on the Target Dummy |scenariogoal 5/32844
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lunar Strike ability on Arcane Constructs
-|tip It appears on your action bar.
-Cast Lunar Strike on the Target Dummy #3# Times |scenariogoal Cast Lunar Strike on the target dummy##6/32845
-|only if intutorial() and Balance
+Cast Lunar Strike on the Target Dummy |scenariogoal 6/32845
+|only if Balance
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##6/29840
-|only if intutorial() and Balance
+Destroy the Arcane Constructs |scenariogoal 6/29840
+|only if Balance
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Moonfire #2# Times |scenariogoal Cast Moonfire##7/32841
-Cast Sunfire #2# Times |scenariogoal Cast Sunfire##7/32842
-Cast Solar Wrath #6# Times |scenariogoal Cast Solar Wrath##7/32843
-Cast Starsurge #3# Times |scenariogoal Cast Starsurge##7/32844
-Cast Lunar Strike #2# Times |scenariogoal Cast Lunar Strike##7/32845
-|only if intutorial() and Balance
-step
-_On the Deck of the Airship:_
-Watch the dialogue
-Use your Regrowth ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Use Regrowth to Heal Yourself #3# Times |scenariogoal Use Regrowth to heal yourself##8/30432
-|only if intutorial() and Balance
+Cast Moonfire |scenariogoal 7/32841
+Cast Sunfire |scenariogoal 7/32842
+Cast Solar Wrath |scenariogoal 7/32843
+Cast Starsurge |scenariogoal 7/32844
+Cast Lunar Strike |scenariogoal 7/32845
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Entangling Roots ability on the Horde Grunt
-|tip It appears on your action bar.
-Cast Entangling Roots |scenariogoal Cast Entangling Roots##9/32846
-|only if intutorial() and Balance
+Use Regrowth to Heal Yourself |scenariogoal 8/30432
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial() and Balance
+Cast Entangling Roots |scenariogoal 9/32846
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 10/30919
+|only if Balance
+step
+_On the Deck of the Airship:_
+Watch the dialogue
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial() and Balance
+Defeat Both Soldiers |scenariogoal 11/30919
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 11
-|only if intutorial() and Balance
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Cat Form ability
-|tip It is already on your action bar.
-Use Cat Form to Shapeshift into a Cat |scenariogoal Use Cat Form to shapeshift into a Cat##2/30425
-|only if intutorial() and Feral
+Use Cat Form to Shapeshift into a Cat |scenariogoal 2/30425
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Prowl ability on the Target Dummy
-|tip It is already on your action bar.
-Use Prowl to Enter Stealth |scenariogoal Use Prowl to enter stealth##3/30426
-|only if intutorial() and Feral
+Use Prowl to Enter Stealth |scenariogoal 3/30426
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rake ability on the Target Dummy
-|tip It appears on your action bar.
-Use Rake on the Target Dummy |scenariogoal Use Rake on the target dummy##4/30428
-|only if intutorial() and Feral
+Use Rake on the Target Dummy |scenariogoal 4/30428
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Shred ability on the Target Dummy
-|tip It appears on your action bar.
-Use Shred on the Target Dummy #3# Times |scenariogoal Use Shred on the target dummy##5/30427
-|only if intutorial() and Feral
+Use Shred on the Target Dummy |scenariogoal 5/30427
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Ferocious Bite ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generate Combo Points, so that you can use Ferocious Bite.
-Use Ferocious Bite with Combo Points on the Target Dummy #3# Times |scenariogoal Use Ferocious Bite with combo points on the target dummy##6/30430
-|only if intutorial() and Feral
+Use Ferocious Bite with Combo Points on the Target Dummy |scenariogoal 6/30430
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rip ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generate Combo Points, so that you can use Rip.
-Use Rip with Combo Points on the Target Dummy |scenariogoal Use Rip with combo points on the target dummy##7/30429
-|only if intutorial() and Feral
+Use Rip with Combo Points on the Target Dummy |scenariogoal 7/30429
+|only if Feral
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Rake |scenariogoal Use Rake##8/30428
-Use Shred #4# Times |scenariogoal Use Shred##8/30427
-Use Ferocious Bite |scenariogoal Use Ferocious Bite##8/30430
-Use Rip |scenariogoal Use Rip##8/30429
-|only if intutorial() and Feral
+Use Rake |scenariogoal 8/30428
+Use Shred |scenariogoal Use Shred##8/30427
+Use Ferocious Bite |scenariogoal 8/30430
+Use Rip |scenariogoal 8/30429
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Dash ability
-|tip It appears on your action bar.
-Use Dash to Move Faster in Cat Form |scenariogoal Use Dash to move faster in Cat Form##9/30431
-|only if intutorial() and Feral
+Use Dash to Move Faster in Cat Form |scenariogoal 9/30431
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Regrowth ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Use Regrowth to Heal Yourself #3# Times |scenariogoal Use Regrowth to heal yourself##10/30432
-|only if intutorial() and Feral
+Use Regrowth to Heal Yourself |scenariogoal 10/30432
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial() and Feral
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 11/30919
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
 Defeat Both Soldiers |scenariostage 12
-|only if intutorial() and Feral
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##13
-|only if intutorial() and Feral
+Defend the Airship! |scenariostage 13
+|only if Feral
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Hunter Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -9079,11 +11707,6 @@ condition_valid_msg="You must be a Hunter to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9092,180 +11715,149 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Call Pet ability
-|tip It is already on your action bar.
-Use Call Pet |scenariogoal Use Call Pet##2/29828
-|only if intutorial() and BeastMastery
+Use Call Pet |scenariogoal 2/29828
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Kill Command ability on the Target Dummy
-|tip It appears on your action bar.
-Use Kill Command to Command your Pet to Attack the Target Dummy #3# Times |scenariogoal Use Kill Command to command your pet to attack the target dummy##3/29829
-|only if intutorial() and BeastMastery
+Use Kill Command to Command your Pet to Attack the Target Dummy |scenariogoal 3/29829
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Barbed Shot ability on the Target Dummy
-|tip It appears on your action bar.
-Use Barbed Shot on the Target Dummy #3# Times |scenariogoal Use Barbed Shot on the target dummy##4/40240
-|only if intutorial() and BeastMastery
+Use Barbed Shot on the Target Dummy |scenariogoal 4/40240
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Cobra Shot ability on the Target Dummy
-|tip It appears on your action bar.
-Use Cobra Shot on the Target Dummy #3# Times |scenariogoal Use Cobra Shot on the target dummy##5/29831
-|only if intutorial() and BeastMastery
+Use Cobra Shot on the Target Dummy |scenariogoal 5/29831
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Bestial Wrath ability
-|tip It appears on your action bar.
-Use Bestial Wrath |scenariogoal Use Bestial Wrath##6/29832
-|only if intutorial() and BeastMastery
+Use Bestial Wrath |scenariogoal 6/29832
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Kill Command #2# Times |scenariogoal Use Kill Command##7/29829
-Use Barbed Shot #3# Times |scenariogoal Use Barbed Shot##7/40240
-Use Cobra Shot #5# Times |scenariogoal Use Cobra Shot##7/29831
-Use Beastial Wrath |scenariogoal Use Bestial Wrath##7/29832
-|only if intutorial() and BeastMastery
+Use Kill Command |scenariogoal 7/29829
+Use Barbed Shot |scenariogoal 7/40240
+Use Cobra Shot |scenariogoal 7/29831
+Use Beastial Wrath |scenariogoal 7/29832
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Multi-Shot ability on Arcane Constructs
-|tip It appears on your action bar.
-Use Multi-Shot on the Arcane Constructs |scenariogoal Use Multi-Shot on the Arcane Constructs##8/29839
-|only if intutorial() and BeastMastery
+Use Multi-Shot on the Arcane Constructs |scenariogoal 8/29839
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##8/29840
-|only if intutorial() and BeastMastery
+Destroy the Arcane Constructs |scenariogoal 8/29840
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Feign Death ability
-|tip It appears on your action bar.
-Use Feign Death |scenariogoal Use Feign Death##9/29835
-|only if intutorial() and BeastMastery
+Use Feign Death |scenariogoal 9/29835
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Attacker |scenariogoal Defeat the attacker##10/30919
-|only if intutorial() and BeastMastery
+kill Horde Grunt##112000
+Defeat the Attacker |scenariogoal 10/30919
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Horde Grunt##112000+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat both attackers##11/30919
-|only if intutorial() and BeastMastery
+Defeat Both Attackers |scenariogoal 11/30919
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 12
-|only if intutorial() and BeastMastery
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Call Pet ability
-|tip It is already on your action bar.
-Use Call Pet |scenariogoal Use Call Pet##2/29828
-|only if intutorial() and Survival
+Use Call Pet |scenariogoal 2/29828
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Harpoon ability on the Target Dummy
-|tip It appears on your action bar.
-|tip You must be at least 8 yards away to use this ability.
-Use Harpoon on the Target Dummy |scenariogoal Use Harpoon on the target dummy##3/34617
-|only if intutorial() and Survival
+Use Harpoon on the Target Dummy |scenariogoal 3/34617
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Raptor Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Raptor Strike on the Target Dummy #3# Times |scenariogoal Use Raptor Strike on the target dummy##4/34622
-|only if intutorial() and Survival
+Use Raptor Strike on the Target Dummy |scenariogoal 4/34622
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Kill Command ability on the Target Dummy
-|tip It appears on your action bar.
-Use Kill Command on the Target Dummy #2# Times |scenariogoal Use Kill Command on the target dummy##5/40249
-|only if intutorial() and Survival
+Use Kill Command on the Target Dummy |scenariogoal 5/40249
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Serpent Sting ability
-|tip It appears on your action bar.
-Use Serpent Sting on the Target Dummy #2# Times |scenariogoal Use Serpent Sting on the target dummy##6/40243
-|only if intutorial() and Survival
+Use Serpent Sting on the Target Dummy |scenariogoal 6/40243
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Wildfire Bomb ability
-|tip It appears on your action bar.
-Use Wildfire Bomb on the Target Dummy #2# Times |scenariogoal Use Wildfire Bomb on the Target Dummy##7/40244
-|only if intutorial() and Survival
+Use Wildfire Bomb on the Target Dummy |scenariogoal 7/40244
+|only if Survival
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Wildfire Bomb on the Target Dummy |scenariogoal Use Wildfire Bomb##8/40244
-Use Kill Command on the Target Dummy #2# Times |scenariogoal Use Kill Command##8/40249
-Use Serpent Sting on the Target Dummy #2# Times |scenariogoal Use Serpent Sting##8/40243
-Use Raptor Strike on the Target Dummy #4# Times |scenariogoal Use Raptor Strike##8/34622
-|only if intutorial() and Survival
+Use Wildfire Bomb on the Target Dummy |scenariogoal 8/40244
+Use Kill Command on the Target Dummy |scenariogoal 8/40249
+Use Serpent Sting on the Target Dummy |scenariogoal 8/40243
+Use Raptor Strike on the Target Dummy |scenariogoal 8/34622
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Feign Death ability
-|tip It appears on your action bar.
-Use Feign Death |scenariogoal Use Feign Death##9/29835
-|only if intutorial() and Survival
+Use Feign Death |scenariogoal 9/29835
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Attacker |scenariogoal Defeat the attacker##10/30919
-|only if intutorial() and Survival
+kill Alliance Infantry##102592
+Defeat the Attacker |scenariogoal 10/30919
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat both attackers##11/30919
-|only if intutorial() and Survival
+Defeat Both Attackers |scenariogoal 11/30919
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##12
-|only if intutorial() and Survival
+Defend the Airship! |scenariostage 12
+|only if Survival
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Mage Intro",{
 author="support@zygorguides.com",
@@ -9277,11 +11869,6 @@ condition_valid_msg="You must be a Mage to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9290,116 +11877,80 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Summon Water Elemental ability
-|tip It is already on your action bar.
-Cast Summon Water Elemental |scenariogoal Cast Summon Water Elemental##2/29591
-|only if intutorial()
+Cast Summon Water Elemental |scenariogoal 2/29591
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Frostbolt ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Frostbolt on the Target Dummy #3# Times |scenariogoal Cast Frostbolt on the target dummy##3/30560
-|only if intutorial()
+Cast Frostbolt on the Target Dummy |scenariogoal 3/30560
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Ice Lance ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Ice Lance on the Target Dummy #3# Times |scenariogoal Cast Ice Lance on the target dummy##4/30561
-|only if intutorial()
+Cast Ice Lance on the Target Dummy |scenariogoal 4/30561
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Ice Lance ability on the Target Dummy
-|tip Use your Frostbolt ability on the Target Dummy to gain the Fingers of Frost buff.
-|tip Fingers of Frost appears as a buff to your character at the top right of the screen.
-|tip The icon for Fingers of Frost is a blue hand.
-Cast Ice Lance with Fingers of Frost #2# Times |scenariogoal Cast Ice Lance with Fingers of Frost##5/30614
-|only if intutorial()
+Cast Ice Lance with Fingers of Frost |scenariogoal 5/30614
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flurry ability on the Target Dummy
-|tip Use your Frostbolt ability on the Target Dummy to gain the Brainfreeze buff.
-|tip Brainfreeze appears as a buff to your character at the top right of the screen.
-|tip The icon for Brainfreeze is a blue icy brain.
-Cast Flurry while under the Effects of Brainfreeze #2# Times |scenariogoal Cast Flurry while under the effects of Brainfreeze##6/34628
-|only if intutorial()
+Cast Flurry while under the Effects of Brainfreeze |scenariogoal 6/34628
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Frostbolt #6# Times |scenariogoal Cast Frostbolt##7/30560
-Cast Ice Lance #2# Times |scenariogoal Cast Ice Lance##7/30561
-Cast Flurry #2# Times |scenariogoal Cast Flurry##7/34687
-|only if intutorial()
+Cast Frostbolt |scenariogoal 7/30560
+Cast Ice Lance |scenariogoal 7/30561
+Cast Flurry |scenariogoal 7/34687
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blink ability
-|tip It appears on your action bar.
-Cast Blink |scenariogoal Cast Blink##8/29248
-|only if intutorial()
+Cast Blink |scenariogoal 8/29248
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Frost Nova ability
-|tip It appears on your action bar.
-|tip Wait until the enemy is next to you.
-Cast Frost Nova to Freeze the Enemy |scenariogoal Cast Frost Nova to freeze the enemy##9/30623
-|only if intutorial()
+Cast Frost Nova to Freeze the Enemy |scenariogoal 9/30623
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blizzard ability on the Arcane Constructs
-|tip It appears on your action bar.
-Cast Blizzard on the Arcane Constructs |scenariogoal Cast Blizzard on the Arcane Constructs##10/30622
-|only if intutorial()
+Cast Blizzard on the Arcane Constructs |scenariogoal 10/30622
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##10/29840
-|only if intutorial()
+Destroy the Arcane Constructs |scenariogoal 10/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##12/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 12/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##13
-|only if intutorial()
+Defend the Airship! |scenariostage 13
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Monk Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -9410,11 +11961,6 @@ condition_valid_msg="You must be a Monk to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9423,95 +11969,68 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Tiger Palm ability on the Target Dummy
-|tip It appears on your action bar.
-Use Tiger Palm on the Target Dummy #3# Times |scenariogoal Use Tiger Palm on the target dummy##2/30392
-|only if intutorial()
+Use Tiger Palm on the Target Dummy |scenariogoal 2/30392
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rising Sun Kick ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Tiger Palm ability to generate Chi, so you can use Rising Sun Kick.
-Use Rising Sun Kick on the Target Dummy #2# Times |scenariogoal Use Rising Sun Kick on the target dummy##3/30393
-|only if intutorial()
+Use Rising Sun Kick on the Target Dummy |scenariogoal 3/30393
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blackout Kick ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Tiger Palm ability to generate Chi, so you can use Blackout Kick.
-Use Blackout Kick on the Target Dummy #3# Times |scenariogoal Use Blackout Kick on the target dummy##4/30395
-|only if intutorial()
+Use Blackout Kick on the Target Dummy |scenariogoal 4/30395
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fists of Fury ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Tiger Palm ability to generate Chi, so you can use Fists of Fury.
-Use Fists of Fury on the Target Dummy |scenariogoal Use Fists of Fury on the target dummy##5/30396
-|only if intutorial()
+Use Fists of Fury on the Target Dummy |scenariogoal 5/30396
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Tiger Palm #5# Times |scenariogoal Use Tiger Palm##6/30392
-Use Rising Sun Kick #2# Times |scenariogoal Use Rising Sun Kick##6/30393
-Use Blackout Kick #3# Times |scenariogoal Use Blackout Kick##6/30395
-Use Fists of Fury |scenariogoal Use Fists of Fury##6/30396
-|only if intutorial()
+Use Tiger Palm |scenariogoal 6/30392
+Use Rising Sun Kick |scenariogoal 6/30393
+Use Blackout Kick |scenariogoal 6/30395
+Use Fists of Fury |scenariogoal 6/30396
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Roll ability
-|tip It appears on your action bar.
-Use Roll #2# Times |scenariogoal Use Roll##7/30397
-|only if intutorial()
+Use Roll |scenariogoal 7/30397
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Effuse ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Use Vivify to Heal Yourself #2# Times |scenariogoal Use Vivify to heal yourself##8/40572
-|only if intutorial()
+Use Vivify to Heal Yourself |scenariogoal 8/40572
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##9/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 9/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##10/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##11
-|only if intutorial()
+Defend the Airship! |scenariostage 11
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Paladin Intro",{
 author="support@zygorguides.com",
@@ -9523,11 +12042,6 @@ condition_valid_msg="You must be a Paladin to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9536,111 +12050,80 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Judgement ability on the Target Dummy
-|tip It appears on your action bar.
-Use Judgement on the Target Dummy #2# Times |scenariogoal Use Judgment on the target dummy##2/29793
-|only if intutorial()
+Use Judgement on the Target Dummy |scenariogoal 2/29793
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blade of Justice ability on the Target Dummy
-|tip It appears on your action bar.
-Use Blade of Justice on the Target Dummy #2# Times |scenariogoal Use Blade of Justice on the target dummy##3/29773
-|only if intutorial()
+Use Blade of Justice on the Target Dummy |scenariogoal 3/29773
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Crusader Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Crusader Strike on the Target Dummy #3# Times |scenariogoal Use Crusader Strike on the target dummy##4/29769
-|only if intutorial()
+Use Crusader Strike on the Target Dummy |scenariogoal 4/29769
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Templar's Verdict ability on the Target Dummy
-|tip It appears on your action bar.
-Use Templar's Verdict on the Target Dummy #3# Times |scenariogoal Use Templar's Verdict##5/29770
-|only if intutorial()
+Use Templar's Verdict on the Target Dummy |scenariogoal 5/29770
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Judgement #2# Times |scenariogoal Use Judgement##6/29793
-Use Blade of Justice #2# Times |scenariogoal Use Blade of Justice##6/29773
-Use Crusader Strike #2# Times |scenariogoal Use Crusader Strike##6/29769
-Use Templar's Verdict #2# Times |scenariogoal Use Templar's Verdict##6/29770
-|only if intutorial()
+Use Judgement |scenariogoal 6/29793
+Use Blade of Justice |scenariogoal 6/29773
+Use Crusader Strike |scenariogoal 6/29769
+Use Templar's Verdict |scenariogoal 6/29770
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Divine Storm ability on Arcane Constructs
-|tip It appears on your action bar.
-|tip Use your other abilities on the Arcane Constructs to earn 3 Holy Power so that you can use Divine Storm.
-|tip Stand in the middle of the group of Arcane Constructs.
-Earn 3 Holy Power and then Use Divine Storm |scenariogoal Earn 3 Holy Power and then use Divine Storm##7/32067
-|only if intutorial()
+Earn 3 Holy Power and then Use Divine Storm |scenariogoal 7/32067
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##7/29840
-|only if intutorial()
+Destroy the Arcane Constructs |scenariogoal 7/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Divine Shield ability
-|tip It appears on your action bar.
-Use Divine Shield |scenariogoal Use Divine Shield##8/29771
-|only if intutorial()
+Use Divine Shield |scenariogoal Use 8/29771
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Allow Fireball to be Cast on you #2# Times |scenariogoal Allow Fireball to be cast on you##8/29797
-|only if intutorial()
+Allow Fireball to be Cast on You |scenariogoal 8/29797
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flash of Light ability
-|tip It appears on your action bar.
-|tip Make sure you're not targeting an NPC.
-Use Flash of Light to Heal Yourself #3# Times |scenariogoal Use Flash of Light to heal yourself##9/29772
-|only if intutorial()
+Use Flash of Light to Heal Yourself |scenariogoal 9/29772
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##12
-|only if intutorial()
+Defend the Airship! |scenariostage 12
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Priest Intro",{
 author="support@zygorguides.com",
@@ -9652,11 +12135,6 @@ condition_valid_msg="You must be a Priest to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9665,99 +12143,74 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Shadow Word: Pain ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Shadow Word: Pain on the Target Dummy |scenariogoal Cast Shadow Word: Pain on the target dummy##2/30502
-|only if intutorial()
+Cast Shadow Word: Pain on the Target Dummy |scenariogoal 2/30502
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Penance ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Penance on the Target Dummy #2# Times |scenariogoal Cast Penance on the target dummy##3/30503
-|only if intutorial()
+Cast Penance on the Target Dummy |scenariogoal 3/30503
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Smite ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Smite on the Target Dummy #3# Times |scenariogoal Cast Smite on the target dummy##4/30504
-|only if intutorial()
+Cast Smite on the Target Dummy |scenariogoal 4/30504
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Shadow Word: Pain |scenariogoal Cast Shadow Word: Pain##5/30502
-Cast Penance #2# Times |scenariogoal Cast Penance##5/30503
-Cast Smite #4# Times |scenariogoal Cast Smite##5/30504
-|only if intutorial()
+Cast Shadow Word: Pain |scenariogoal 5/30502
+Cast Penance |scenariogoal 5/30503
+Cast Smite |scenariogoal 5/30504
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Psychic Scream ability
-|tip It appears on your action bar.
-Cast Psychic Scream to Fear the Enemies Around You |scenariogoal Cast Psychic Scream to fear enemies around you##6/30520
-|only if intutorial()
+Cast Psychic Scream to Fear the Enemies Around You |scenariogoal 6/30520
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Power Word: Shield ability
-|tip It appears on your action bar.
-Cast Power Word: Shield on Yourself |scenariogoal Cast Power Word: Shield##7/34732
-|only if intutorial()
+Cast Power Word: Shield on Yourself |scenariogoal 7/34732
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Allow Fireball to be Cast on you #2# Times |scenariogoal Allow Fireball to be cast on you##7/29797
-|only if intutorial()
+Allow Fireball to be Cast on You |scenariogoal 7/29797
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Power Word: Shield ability
-Cast Power Word: Shield on Yourself |scenariogoal Cast Power Word: Shield on yourself##8/34732
-|only if intutorial()
+Cast Power Word: Shield on Yourself |scenariogoal 8/34732
 step
 _On the Deck of the Airship:_
-|tip DPS the Target Dummy with your abilities while Power Word: Shield is active.
-Heal Yourself Through Atonement #10# Times |scenariogoal Heal yourself through Atonement##8/40714
-|only if intutorial()
+Heal Yourself Through Atonement |scenariogoal 8/40714
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##9/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 9/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##10/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##11
-|only if intutorial()
+Defend the Airship! |scenariostage 11
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Rogue Intro",{
 author="support@zygorguides.com",
@@ -9769,11 +12222,6 @@ condition_valid_msg="You must be a Rogue to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9782,101 +12230,73 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Deadly Poison ability
-|tip It is already on your action bar.
-Use Deadly Poison |scenariogoal Use Deadly Poison##2/30644
-|only if intutorial()
+Use Deadly Poison |scenariogoal 2/30644
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Stealth ability
-|tip It appears on your action bar.
-Use Stealth |scenariogoal Use Stealth##3/29617
-|only if intutorial()
+Use Stealth |scenariogoal 3/29617
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Garrote ability on the Target Dummy
-|tip It appears on your action bar.
-Use Garrote on the Target Dummy |scenariogoal Use Garrote on the target dummy##4/30645
-|only if intutorial()
+Use Garrote on the Target Dummy |scenariogoal 4/30645
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Mutilate ability on the Target Dummy
-|tip It appears on your action bar.
-Use Mutilate on the Target Dummy #3# Times |scenariogoal Use Mutilate on the target dummy##5/30646
-|only if intutorial()
+Use Mutilate on the Target Dummy |scenariogoal 5/30646
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rupture ability on the Target Dummy
-|tip It appears on your action bar.
-Use Rupture on the Target Dummy |scenariogoal Use Rupture on the target dummy##6/30647
-|only if intutorial()
+Use Rupture on the Target Dummy |scenariogoal 6/30647
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Envenom ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the target dummy to build combo points so that you can use Envenom.
-Use Envenom on the Target Dummy |scenariogoal Use Envenom on the target dummy##7/30648
-|only if intutorial()
+Use Envenom on the Target Dummy |scenariogoal 7/30648
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Garrote #2# Times |scenariogoal Use Rupture##8/30647
-Use Mutilate #4# Times |scenariogoal Use Mutilate##8/30646
-Use Rupture |scenariogoal Use Garrote##8/30645
-Use Envenom |scenariogoal Use Envenom##8/30648
-|only if intutorial()
+Use Garrote |scenariogoal 8/30647
+Use Mutilate |scenariogoal 8/30646
+Use Rupture |scenariogoal 8/30645
+Use Envenom |scenariogoal 8/30648
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Vanish ability
-|tip It appears on your action bar.
-Use Vanish |scenariogoal Use Vanish##9/29646
-|only if intutorial()
+Use Vanish |scenariogoal 9/29646
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 12
-|only if intutorial()
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Shaman Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -9887,11 +12307,6 @@ condition_valid_msg="You must be a Shaman to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -9900,192 +12315,155 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flame Shock ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Flame Shock on the Target Dummy |scenariogoal Cast Flame Shock on the target dummy##2/29959
-|only if intutorial() and Elemental
+Cast Flame Shock on the Target Dummy |scenariogoal 2/29959
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lava Burst ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Lava Burst on the Target Dummy #3# Times |scenariogoal Cast Lava Burst on the target dummy##3/29960
-|only if intutorial() and Elemental
+Cast Lava Burst on the Target Dummy |scenariogoal 3/29960
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lightning Bolt ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Lightning Bolt on the Target Dummy #3# Times |scenariogoal Cast Lightning Bolt on the target dummy##4/29961
-|only if intutorial() and Elemental
+Cast Lightning Bolt on the Target Dummy |scenariogoal 4/29961
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Earth Shock ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generat Maelstrom, so that you can use Earth Shock.
-Cast Earth Shock on the Target Dummy #2# Times |scenariogoal Cast Earth Shock on the target dummy##5/29962
-|only if intutorial() and Elemental
+Cast Earth Shock on the Target Dummy |scenariogoal 5/29962
+|only if Elemental
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Flame Shock |scenariogoal Cast Flame Shock##6/29959
-Cast Lava Burst #2# Times |scenariogoal Cast Lava Burst##6/29960
-Cast Lightning Bolt #4# Times |scenariogoal Cast Lightning Bolt##6/29961
-Cast Earth Shock #2# Times |scenariogoal Cast Earth Shock##6/29962
-|only if intutorial() and Elemental
+Cast Flame Shock |scenariogoal 6/29959
+Cast Lava Burst |scenariogoal 6/29960
+Cast Lightning Bolt |scenariogoal 6/29961
+Cast Earth Shock |scenariogoal 6/29962
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Hex ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Hex on the Soldier |scenariogoal Cast Hex on the soldier##7/29963
-|only if intutorial() and Elemental
+Cast Hex on the Soldier |scenariogoal 7/29963
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Chain Lightning ability on the Arcane Constructs
-|tip It appears on your action bar.
-Cast Chain Lightning on the Arcane Constructs |scenariogoal Cast Chain Lightning on the Arcane Constructs##8/29964
-|only if intutorial() and Elemental
+Cast Chain Lightning on the Arcane Constructs |scenariogoal 8/29964
+|only if Elemental
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##8/29840
-|only if intutorial() and Elemental
+Destroy the Arcane Constructs |scenariogoal 8/29840
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Healing Surge ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Cast Healing Surge to Heal Yourself #3# Times |scenariogoal Cast Healing Surge to heal yourself##9/32737
-|only if intutorial() and Elemental
+Cast Healing Surge to Heal Yourself |scenariogoal 9/32737
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fire Elemental ability
-|tip It appears on your action bar.
-Cast Fire Elemental |scenariogoal Cast Fire Elemental##10/31313
-|only if intutorial() and Elemental
+Cast Fire Elemental |scenariogoal 10/31313
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial() and Elemental
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 11/30919
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat the attacking soldiers##12/30919
-|only if intutorial() and Elemental
+Defeat Both Attackers |scenariogoal 12/30919
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 13
-|only if intutorial() and Elemental
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flametongue ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Flametongue on the Target Dummy #2# Times |scenariogoal Use Flametongue on the target dummy##2/32847
-|only if intutorial() and Enhancement
+Cast Flametongue on the Target Dummy |scenariogoal 2/32847
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rockbiter ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Rockbiter on the Target Dummy #4# Times |scenariogoal Use Rockbiter on the target dummy##3/32848
-|only if intutorial() and Enhancement
+Cast Rockbiter on the Target Dummy |scenariogoal 3/32848
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lava Lash ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Lava Lash on the Target Dummy #3# Times |scenariogoal Use Lava Lash on the target dummy##4/32849
-|only if intutorial() and Enhancement
+Cast Lava Lash on the Target Dummy |scenariogoal 4/32849
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Stormstrike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generat Maelstrom, so that you can use Earth Shock.
-Cast Stormstrike on the Target Dummy #2# Times |scenariogoal Use Stormstrike on the target dummy##5/32850
-|only if intutorial() and Enhancement
+Cast Stormstrike on the Target Dummy |scenariogoal 5/32850
+|only if Enhancement
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Lava Lash #4# Times |scenariogoal Use Lava Lash##6/32849
-Cast Flametongue #2# Times |scenariogoal Use Flametongue##6/32847
-Cast Rockbiter #4# Times |scenariogoal Use Rockbiter##6/32848
-Cast Stormstrike #2# Times |scenariogoal Use Stormstrike##6/32850
-|only if intutorial() and Enhancement
+Cast Lava Lash |scenariogoal 6/32849
+Cast Flametongue |scenariogoal 6/32847
+Cast Rockbiter |scenariogoal 6/32848
+Cast Stormstrike |scenariogoal 6/32850
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Hex ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Hex on the Soldier |scenariogoal Cast Hex on the attacker##7/29963
-|only if intutorial() and Enhancement
+Cast Hex on the Attacker |scenariogoal 7/29963
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Healing Surge ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Cast Healing Surge to Heal Yourself #3# Times |scenariogoal Cast Healing Surge to heal yourself##8/29965
-|only if intutorial() and Enhancement
+Cast Healing Surge to Heal Yourself |scenariogoal 8/29965
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Feral Spirit ability
-|tip It appears on your action bar.
-Use Feral Spirit |scenariogoal Use Feral Spirit on the target dummy##9/32851
-|only if intutorial() and Enhancement
+Use Feral Spirit |scenariogoal 9/32851
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial() and Enhancement
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 10/30919
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial() and Enhancement
+Defeat Both Attackers |scenariogoal 11/30919
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 13
-|only if intutorial() and Enhancement
+|only if Enhancement
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Warlock Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -10096,11 +12474,6 @@ condition_valid_msg="You must be a Warlock to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -10109,99 +12482,72 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Summon Voidwalker ability
-|tip It is already on your action bar.
-Cast Summon Voidwalker |scenariogoal Cast Summon Voidwalker##2/29810
-|only if intutorial()
+Cast Summon Voidwalker |scenariogoal 2/29810
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Agony ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Agony on the Target Dummy |scenariogoal Cast Agony on the target dummy##3/29811
-|only if intutorial()
+Cast Agony on the Target Dummy |scenariogoal 3/29811
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Corruption ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Corruption on the Target Dummy |scenariogoal Cast Corruption on the target dummy##4/29812
-|only if intutorial()
+Cast Corruption on the Target Dummy |scenariogoal 4/29812
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Shadow Bolt ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Shadow Bolt on the Target Dummy #3	ii# Times |scenariogoal Cast Shadow Bolt on the target dummy##5/40241
-|only if intutorial()
+Cast Shadow Bolt on the Target Dummy |scenariogoal 5/40241
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Unstable Affliction ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Agony ability on the Target Dummy to generate Soul Shards, so you can use Unstable Affliction.
-Cast Unstable Affliction on the Target Dummy #3# Times |scenariogoal Cast Unstable Affliction on the target dummy##6/29814
-|only if intutorial()
+Cast Unstable Affliction on the Target Dummy |scenariogoal 6/29814
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Agony |scenariogoal Cast Agony##7/29811
-Cast Corruption |scenariogoal Cast Corruption##7/29812
-Cast Unstable Affliction #2# Times |scenariogoal Cast Unstable Affliciton##7/29814
-Cast Shadow Bolt #3# Times |scenariogoal Cast Shadow Bolt##7/40241
-|only if intutorial()
+Cast Agony |scenariogoal 7/29811
+Cast Corruption |scenariogoal 7/29812
+Cast Unstable Affliction |scenariogoal 7/29814
+Cast Shadow Bolt |scenariogoal 7/40241
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Drain Life ability
-|tip It appears on your action bar.
-Cast Drain Life on the Target Dummy #2# Times |scenariogoal Cast Drain Life on the target dummy##8/40242
-|only if intutorial()
+Cast Drain Life on the Target Dummy |scenariogoal 8/40242
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fear ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Fear on the Soldier |scenariogoal Cast Fear on soldier##9/29815
-|only if intutorial()
+Cast Fear on the Soldier |scenariogoal 9/29815
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Attacker |scenariogoal Defeat the attacker##10/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Attacker |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat both attackers##11/30919
-|only if intutorial()
+Defeat Both Attackers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Attack##12
-|only if intutorial()
+Defend the Airship! |scenariostage 12
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Warrior Intro",{
 author="support@zygorguides.com",
@@ -10213,11 +12559,6 @@ condition_valid_msg="You must be a Warrior to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk Warlord Zakgra##105317
 Tell her _"I'm ready to begin."_
@@ -10226,105 +12567,74 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Orgrimmar/1 48.73,72.22 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Charge ability on the Target Dummy
-|tip It appears on your action bar.
-Use Charge on the Target Dummy |scenariogoal Use Charge on the target dummy##2/30115
-|only if intutorial()
+Use Charge on the Target Dummy |scenariogoal 2/30115
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Mortal Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Mortal Strike on the Target Dummy #3# Times |scenariogoal Use Mortal Strike on the target dummy##3/30116
-|only if intutorial()
+Use Mortal Strike on the Target Dummy |scenariogoal 3/30116
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Slam ability on the Target Dummy
-|tip It appears on your action bar.
-Use Slam on the Target Dummy #3# Times |scenariogoal Use Slam on the target dummy##4/30117
-|only if intutorial()
+Use Slam on the Target Dummy |scenariogoal 4/30117
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Overpower ability on the Target Dummy
-|tip It appears on your action bar.
-Use Overpower on the Target Dummy #2# Times |scenariogoal Use Overpower on the target dummy##5/40181
-|only if intutorial()
+Use Overpower on the Target Dummy |scenariogoal 5/40181
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Overpower #2# Times |scenariogoal Use Overpower##6/40181
-Use Mortal Strike #3# Times |scenariogoal Use Mortal Strike##6/30116
-Use Slam #6# Times |scenariogoal Use Slam##6/30117
-|only if intutorial()
+Use Overpower |scenariogoal 6/40181
+Use Mortal Strike |scenariogoal 6/30116
+Use Slam |scenariogoal 6/30117
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Arcane Construct##101738+
-Use your Victory Rush ability on Arcane Constructs
-|tip It appears on your action bar.
-|tip You can only use the Victory Rush ability after killing an enemy.
-Kill an Arcane Construct and then Use Victory Rush on the Others #2# Times |scenariogoal Kill an Arcane Construct and then use Victory Rush on the other##7/30119
-|only if intutorial()
+Kill an Arcane Construct and then Use Victory Rush on the Others |scenariogoal 7/30119
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Whirlwind ability on Arcane Constructs
-|tip It appears on your action bar.
-|tip Stand in the middle of the group of Arcane Constructs.
-Use Whirlwind on the Arcane Constructs |scenariogoal Use Whirlwind on the Arcane Constructs##8/30120
-|only if intutorial()
+Use Whirlwind on the Arcane Constructs |scenariogoal 8/30120
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##8/29840
-|only if intutorial()
+Destroy the Arcane Constructs |scenariogoal 8/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Heroic Leap ability
-|tip It appears on your action bar.
-|tip It doesn't matter where you leap to.
-Use Heroic Leap |scenariogoal Use Heroic Leap##9/30121
-|only if intutorial()
+Use Heroic Leap |scenariogoal 9/30121
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial()
+kill Alliance Infantry##102592
+Defeat the Soldier |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-kill Horde Grunt##111998+
+kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##12
-|only if intutorial()
+Defend the Airship! |scenariostage 12
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Wind Rider##112565
+|tip At the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Wind Rider on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51796
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Undercity BFA/0 84.53,16.74 < 50 |noway |c |q 51796
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETAEND()

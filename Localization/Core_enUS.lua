@@ -901,6 +901,10 @@ If you're new to the guides, or have only started using them on this character, 
 	['opt_gearimport'] = "Import",
 	['opt_gearexport'] = "Export",
 
+	['opt_gear_gems'] = "Gems",
+	['opt_gear_maxGem'] = "Socket empty sockets:",
+	['opt_gear_maxGem_desc'] = "Zygor will score empty sockets using best gem available. Select maximum gem quality you want to use.",
+
 	['opt_group_itemscore'] = "Item Scoring",
 	['opt_group_itemscore_warning'] = "You can make changes to the gear weights the gear advisor uses.|nDo not change these values unless you know what you are doing!",
 	["gear_score_class"] = "Class",
@@ -1358,6 +1362,7 @@ If you're new to the guides, or have only started using them on this character, 
 	["stepgoal_scenariostage_named"] = "Complete stage %d: %s",
 	["stepgoal_scenariostage_done"] = "Scenario stage %d completed",
 	["stepgoal_noquest"] = "Make sure %s offers no quests, or click here",
+	["stepgoal_title"] = "Earn '%s' title",
 
 	["stepgoal_perform_alchemy"] = "Create %s %s",
 	["stepgoal_perform_first aid"] = "Create %s %s",
@@ -1438,7 +1443,7 @@ If you're new to the guides, or have only started using them on this character, 
 	['stepcollapsed'] = "(step collapsed)",
 
 
-	['static_caption'] = "|TInterface\\Addons\\"..addonName.."\\Skins\\zygorlogo2:25:100|t\n \n",
+	['static_caption'] = "|TInterface\\Addons\\"..addonName.."\\Skins\\zygorlogo:25:100|t\n \n",
 	--['static_image'] = "\n\n|T%s:115:215|t",
 	['static_help'] = "Help and tutorial system|ncoming soon.",
 	--['static_sis'] = "|cffffff88Smart Injection System|r|n|nThis feature will attempt to find the best spot in the guides for you to start.|nIt will reset your dynamic progress settings, load the starting guide for level 1 of your race/class, and start skipping forward until it finds quests worth completing.|n|nIf your character is high-level, you'll mostly see the guide zip past |cff88ff88green|r (completed) or |cff88aaffblue|r (low-level) steps.|n|nIf it stops at a seemingly low-level quest, it's usually a good idea to trust the guide and complete the quest, as it might start a long chain reaching to your level.|n|nIt might stop at flight path pickups, it's up to you to verify if they're really unknown to your character.|n|nSo... Ready for the ride?",
@@ -1676,7 +1681,7 @@ If you're new to the guides, or have only started using them on this character, 
 	['notifcenter_loot_text'] = "Shopping List",
 	['notifcenter_spec_text'] = "Specialization Reminder",
 	['notifcenter_gear_text'] = "New Upgrade Available",
-	['notifcenter_gear_equipped'] = "|c%s%s|r equipped to the |cffffff00%s|r slot",
+	['notifcenter_gear_equipped'] = "%s equipped to the |cffffff00%s|r slot",
 	['notifcenter_gear_text_sl'] = "%d New Upgrade Available",
 	['notifcenter_gear_text_pl'] = "%d New Upgrades Available",
 	['notifcenter_quest_text'] = "Quest Item action required",
@@ -1885,11 +1890,15 @@ If you're new to the guides, or have only started using them on this character, 
 	['gold_xxxx_9_header']	= "",
 	['gold_xxxx_9_sum']	= "",
 
+
 	["gold_gathering_no_results"] = "You do not meet the requirements for this section.\nYou must have a Gathering profession: Skinning, Herbalism, and/or Mining.",
 	["gold_farming_no_results"] = "You do not meet the requirements for this section.",
 	["gold_goldrun_no_results"] = "You do not meet the requirements for any of the selected group of guides.",
 	["gold_crafting_no_results"] = "There are no results to display in this section.",
 	["gold_crafting_no_profession"] = "You do not meet the requirements for this section. You must have a Crafting profession:\nExamples: Alchemy, Blacksmithing, Engineering, Inscription, Jewelcrafting, Tailoring, or Leatherworking.",
+
+	["gold_general_open_window1"] = "\nIf you already know it, please open that skills Professions window",
+	["gold_general_open_window2"] = "\nIf you already know more, please open that skills Professions window",
 
 	["gold_expertmode_generictooltip"] = "Set investment mode.",
 	["gold_expertmode_easylabel"] = "Easy",
@@ -1905,10 +1914,11 @@ If you're new to the guides, or have only started using them on this character, 
 
 	["gold_gathering_error_all_noprofessions"] = "You have not learned any Gathering profession.\n\nYou need to learn Skinning, Herbalism, Fishing or Mining.",
 	["gold_gathering_error_all_lowskill"] = "Your skill in Gathering professions is insufficient:",
-	["gold_gathering_error_one_noskillin"] = "You have not learned %s.\n\nYour gathering professions are: %s",
+	["gold_gathering_error_one_noskillin"] = "You have not learned %s.",
+	["gold_gathering_error_one_noskillin_skills"] = "\n\nYour gathering professions are: %s",
 	["gold_gathering_error_one_lowskill"] = "Your skill in %s (%d) is too low.\nThere are no profitable routes for that skill level.",
-	["gold_gathering_error_one_noresults"] = "No gathering routes for %s were found to be profitable at this moment.",
-	["gold_gathering_error_one_nothing"] = "No gathering routes for your professions were found to be profitable at this moment.\n\nYour gathering professions are: %s",
+	["gold_gathering_error_one_noresults"] = "No gathering routes for %s were found to be profitable and in demand at this moment.",
+	["gold_gathering_error_one_nothing"] = "No gathering routes for your professions were found to be profitable and in demand at this moment.\n\nYour gathering professions are: %s",
 	["gold_gathering_error_prof"] = "%s (%d)",
 
 	["gold_farming_error_noresults"] = "No farmable items were found for your level.",
@@ -1947,6 +1957,7 @@ If you're new to the guides, or have only started using them on this character, 
 	['waypoint_tip_distance'] = "Distance: %s",
 
 	---- Item score effect filters
+	--[[
 	["effect1"] = "have a chance to gain $number $word for $number sec",			["effect1_returns"] = {"amount","stat","duration"},
 	["effect2"] = "have a chance to grant you $number $word for $number sec",		["effect2_returns"] = {"amount","stat","duration"},
 	["effect3"] = "have a chance to grant $number $word for $number sec",			["effect3_returns"] = {"amount","stat","duration"},
@@ -2051,6 +2062,7 @@ If you're new to the guides, or have only started using them on this character, 
 		["parry"] = "parry",
 		["mana"] = "mana",
 	},
+	--]]
 
 	-- pointer_floors_<map_from>_<map_to>
 	-- These are in use only if LibRover floor-to-floor connections are not used.

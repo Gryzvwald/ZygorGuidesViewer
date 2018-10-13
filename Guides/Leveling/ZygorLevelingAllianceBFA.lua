@@ -5917,6 +5917,8 @@ collect Energized Core##160595 |q 51720/1 |goto 50.00,37.89
 step
 label "Kill_Warfang_Lumberjacks"
 kill 10 Warfang Lumberjack##135981 |q 51723/1 |goto 50.00,37.89
+|tip Use the "Flamethrower" ability.
+|tip It appears as a button on the screen.
 step
 talk Felecia Gladstone##138735
 turnin Burn It All Down##51728 |goto 51.29,36.95
@@ -6636,7 +6638,6 @@ Run up the stairs |goto 65.17,60.93 < 10 |only if walking
 kill Sister Ava##130952 |q 49794/1 |goto 65.56,60.74
 |tip On the deck of the ship.
 step
-Follow the path |goto 66.40,59.53 < 15 |only if walking
 click Wavecaller's Mantle
 Recover the Wavecaller's Mantle |q 49793/3 |goto 66.87,60.61
 step
@@ -7149,7 +7150,7 @@ use the Dead Ringer##160056
 Watch the dialogue
 Open the Tempest Gate |q 51319/1 |goto 74.20,30.69
 step
-Enter the building |goto 74.34,30.61 < 10 |walk
+Enter the building |goto 74.59,30.44 < 10 |walk
 Leave the building |goto 74.43,28.32 < 10 |walk
 Follow the path up |goto 73.64,25.28 < 20 |only if walking
 talk Brother Pike##137506
@@ -9115,11 +9116,13 @@ You Unlocked the "Dark Iron Dwarf" Allied Race.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Kul Tiras\\Drustvar Loremaster (Story Quest Only)",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Drustvar storylines:\n\nThe Final Effigy\nAn Airtight Alibi\nA New Order\nStorming the Manor\nFighting With Fire\nThe Burden of Proof\nThe Order of Embers\nBreak on Through\nClear Victory\nStick It To 'Em!",
-condition_suggested=function() return level >= 110 and not completedq(50588) and completedq(47189) end,
+condition_suggested=function() return level >= 110 and not achieved(12497) and completedq(47189) end,
+condition_end=function() return achieved(12497) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\Drustvar",
 },[[
+leechsteps "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice" 45-76
 step
 click Scouting Map
 |tip Inside the building.
@@ -10088,11 +10091,13 @@ You completed the Drustvar storyline.
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Kul Tiras\\Stormsong Valley Loremaster (Story Quest Only)",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Stormsong Valley storylines:\n\nThe Tidesages of Stormsong\nThe Growing Tempest\nCycle of Hatred\nBriarback Kraul\nA House in Peril\nAt the Edge of Madness\nFrom the Depths They Come\nTreasure in Deadwash",
-condition_suggested=function() return level >= 110 and not completedq(50733) and completedq(47189) end,
+condition_suggested=function() return level >= 110 and not achieved(12496) and completedq(47189) end,
+condition_end=function() return achieved(12496) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\StormsongValley",
 },[[
+leechsteps "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice" 45-76
 step
 click Scouting Map
 |tip Inside the building.
@@ -10274,17 +10279,11 @@ step
 talk Mayor Roz##130694
 turnin Heavy Artillery##49755 |goto 57.63,66.49
 step
-Cross the bridge |goto 56.78,69.32 < 20 |only if walking
-Follow the road |goto 52.58,67.93 < 30 |only if walking
+Follow the road |goto 54.48,68.44 < 30 |only if walking
 talk Farmer Burton##132118
 accept Gadgets and Gizmos Aplenty##50134 |goto 51.58,65.96
 accept Stop Vining!##50135 |goto 51.58,65.96
-step
-accept Weed Whacking##50133 |goto 51.58,65.96
-|tip You will automatically accept this quest.
-|only if level < 120
 stickystart "Collect_Harvester_Gizmos"
-stickystart "Clear_The_Farmlands"
 step
 Follow the path down |goto 49.12,65.62 < 15 |only if walking
 Enter the cave |goto 48.06,65.79 < 10 |walk
@@ -10306,15 +10305,6 @@ clicknpc Malfunctioning Harvester##132123+
 |tip They look like broken down mechanical scarecrows on the ground around this area.
 Gather #10# Harvester Gizmos |q 50134/1 |goto 49.43,65.32
 step
-label "Clear_The_Farmlands"
-Kill enemies around this area
-clicknpc Vine-Wrapped Farmer##140629+
-|tip They look like humans wrapped in moving brown thorny vines on the ground around this area.
-click Bramble Pod+
-|tip They look like green plant balls on the ground around this area.
-Clear the Farmlands |q 50133/1 |goto 49.43,65.32
-|only if havequest(50133) or completedq(50133)
-step
 talk Farmer Burton##132118
 turnin Gadgets and Gizmos Aplenty##50134 |goto 51.58,65.96
 turnin Stop Vining!##50135 |goto 51.58,65.96
@@ -10333,6 +10323,9 @@ step
 talk Farmer Burton##132118
 turnin Farming Stimulator##50136 |goto 51.58,65.96
 step
+talk Karla Fairweather##134963
+fpath The Amber Waves |goto 50.75,70.21
+step
 Follow the path up |goto 51.70,70.20 < 20 |only if walking
 talk Farmer Goldfield##129808
 |tip On top of the building.
@@ -10348,9 +10341,6 @@ step
 click Tarnished Locket
 |tip Inside the building.
 Find the Keepsake |q 50065/1 |goto 48.88,71.23 |count 3
-step
-talk Karla Fairweather##134963
-fpath The Amber Waves |goto 50.75,70.21
 step
 label "Collect_Salvaged_Azerite_Ammunition"
 Kill enemies around this area
@@ -10389,21 +10379,25 @@ talk Mayor Roz##134752
 turnin Deal's Off##50622 |goto 58.64,70.43
 accept Look Out!##50354 |goto 58.64,70.43
 step
-Jump down here |goto 50.74,66.83 < 20 |only if walking
-Follow the path |goto 46.77,66.05 < 30 |only if walking
+Follow the road |goto 50.97,61.93 < 20 |only if walking
+Follow the path |goto 47.29,61.73 < 30 |only if walking
 talk Sergeant Calvin##133953
 |tip Inside the building.
 accept Boaring Company##50353 |goto 44.73,64.61
 stickystart "Collect_Foul_Smelling_Samples"
 stickystart "Kill_Briarback_Lookouts"
 step
+Follow the path up |goto 42.45,67.52 < 15 |only if walking
 Kill enemies around this area
 accept Anger in a Bottle##50367 |goto 43.90,72.05
 |tip You will eventually automatically accept this quest after looting.
+stickystart "Rescue_Farmers"
 step
+Follow the path |goto 44.19,72.01 < 20 |only if walking
 click Earthen Pillar
 Rescue Farmer Deal |q 50353/2 |goto 46.17,72.04
 step
+label "Rescue_Farmers"
 click Earthen Pillar+
 |tip They look like wooden spikes with squirming humans tied to them on the ground around this area.
 |tip They will appear on your minimap as yellow dots.
@@ -10807,6 +10801,8 @@ collect Energized Core##160595 |q 51720/1 |goto 50.00,37.89
 step
 label "Kill_Warfang_Lumberjacks"
 kill 10 Warfang Lumberjack##135981 |q 51723/1 |goto 50.00,37.89
+|tip Use the "Flamethrower" ability.
+|tip It appears as a button on the screen.
 step
 talk Felecia Gladstone##138735
 turnin Burn It All Down##51728 |goto 51.29,36.95
@@ -10852,8 +10848,11 @@ talk Mayor Roz##134752
 |tip Inside the building.
 turnin A Question of Quillpower##50640 |goto 58.63,70.43
 step
-Cross the bridge |goto 43.50,58.33 < 20 |only if walking
-Follow the road up |goto 38.98,62.79 < 30 |only if walking
+Follow the path |goto 40.53,48.69 < 30 |only if walking
+talk Scroll of Flight##137318
+fpath Seekers Vista |goto 40.02,37.32
+step
+Follow the road |goto 38.15,63.05 < 20 |only if walking
 talk Alexa Davenport##138180
 fpath Millstone Hamlet |goto 30.75,66.56
 step
@@ -11080,7 +11079,6 @@ Run up the stairs |goto 65.17,60.93 < 10 |only if walking
 kill Sister Ava##130952 |q 49794/1 |goto 65.56,60.74
 |tip On the deck of the ship.
 step
-Follow the path |goto 66.40,59.53 < 15 |only if walking
 click Wavecaller's Mantle
 Recover the Wavecaller's Mantle |q 49793/3 |goto 66.87,60.61
 step
@@ -11303,14 +11301,9 @@ accept The Storm Awakens##50777 |goto 63.16,43.15
 step
 talk Samuel Williams##136053
 accept Twisted Intentions##50778 |goto 63.10,43.16
-step
-accept A Clean Slate##50779 |goto 61.66,41.25
-|tip You will automatically accept this quest.
-|only if level < 120
 stickystart "Rally_Defectors"
-stickystart "Purge_The_Corruption"
 step
-Follow the path |goto 61.66,41.25 < 15 |only if walking
+Follow the path |goto 61.59,41.23 < 15 |only if walking
 talk Tideguard Victoria##135517
 accept Oathbound##50780 |goto 60.89,41.38
 step
@@ -11341,17 +11334,6 @@ Tell them _"The storm awakens."_
 Also tell them _"We can still stop Lord Stormsong."_
 Also tell them _"The Storm's Wake grows. Are you with us?"_
 Rally #12# Defectors |q 50777/1 |goto 60.72,38.15
-step
-label "Purge_The_Corruption"
-Kill enemies around this area
-click Lord Stormsong+
-|tip They look like large statues of a human raising his hands on the ground around this area.
-clicknpc Deep Terror##135670+
-|tip They look like huge blue squid tentacles reaching upward on the ground around this area.
-clicknpc Books+
-|tip They look like floating books with various names hovering close to the ground around this area.
-Purge the Corruption |q 50779/1 |goto 60.72,38.15
-|only if havequest(50779) or completedq(50779)
 step
 talk Taelia##136498
 turnin The Storm Awakens##50777 |goto 60.03,37.89
@@ -11434,7 +11416,7 @@ use the Dead Ringer##160056
 Watch the dialogue
 Open the Tempest Gate |q 51319/1 |goto 74.20,30.69
 step
-Enter the building |goto 74.34,30.61 < 10 |walk
+Enter the building |goto 74.59,30.44 < 10 |walk
 Leave the building |goto 74.43,28.32 < 10 |walk
 Follow the path up |goto 73.64,25.28 < 20 |only if walking
 talk Brother Pike##137506
@@ -11448,17 +11430,22 @@ Follow the path up |goto 77.99,27.70 < 15 |only if walking
 talk Brother Pike##137691
 turnin Storm's End##50824 |goto 78.33,28.77
 step
+talk Galeheart##137693
+fpath Shrine of the Storm |goto 78.32,29.00
+step
 _Congratulations!_
-You Completed the Stormsong Valley storyline.
+You completed the Stormsong Valley storyline.
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Kul Tiras\\Tiragarde Sound Loremaster (Story Quest Only)",{
 author="support@zygorguides.com",
 description="\nThis guide will assist you in completing the following Tiragarde Sound storylines:\n\nA Nation Divided\nCastaways and Cutouts\nDefenders of Daelin's Gate\nThe Norwington Estate\nThe Ashvane Trading Company\nFreehold\nThe Shadow Over Anglepoint",
-condition_suggested=function() return level >= 110 and not completedq(50972) and completedq(47189) end,
+condition_suggested=function() return level >= 110 and not achieved(12473) and completedq(47189) end,
+condition_end=function() return achieved(12473) end,
 startlevel=110.0,
 endlevel=120.0,
 image=ZGV.DIR.."\\Guides\\Images\\TiragardeSound",
 },[[
+leechsteps "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice" 45-76
 step
 click Scouting Map
 |tip Inside the building.
@@ -12489,7 +12476,6 @@ step
 _Congratulations!_
 You completed the Tiragarde Sound storyline.
 ]])
-ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Death Knight Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -12500,11 +12486,6 @@ condition_valid_msg="You must be a Death Knight to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -12513,110 +12494,81 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Raise Dead ability
-|tip It is already on your action bar.
-Cast Raise Dead |scenariogoal Cast Raise Dead##2/30662
-|only if intutorial()
+Cast Raise Dead |scenariogoal 2/30662
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Outbreak ability on the Target Dummy
-|tip It appears on your action bar.
-Use Outbreak on the Target Dummy |scenariogoal Use Outbreak on the target dummy##3/30663
-|only if intutorial()
+Use Outbreak on the Target Dummy |scenariogoal 3/30663
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Use your Festering Strike ability on the Target Dummy
 |tip It appears on your action bar.
-Use Festering Strike on the Target Dummy #3# Times |scenariogoal Use Festering Strike on the target dummy##4/30664
-|only if intutorial()
+Use Festering Strike on the Target Dummy |scenariogoal 4/30664
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Scourge Strike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use Festering Strike on the Target Dummy, then use Scourge Strike on the Target Dummy.
-Use Festering Strike then Scourge Strike on the Target Dummy #3# Times |scenariogoal Use Festering Strike then Scourge Strike on the target dummy##5/30665
-|only if intutorial()
+Use Festering Strike then Scourge Strike on the Target Dummy |scenariogoal 5/30665
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Death Coil ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities to generate Runic Power, so you can use Death Coil.
-Use Death Coil on the Target Dummy #3# Times |scenariogoal Use Death Coil on the target dummy##6/30666
-|only if intutorial()
+Use Death Coil on the Target Dummy |scenariogoal 6/30666
+|tip Use your other abilities to generate Runic Power.
 step
 _On the Deck of the Airship:_
 Use your abilities on the Target Dummy
-Use Outbreak |scenariogoal Use Outbreak##7/30663
-Use Festering Strike #2# Times |scenariogoal Use Festering Strike##7/30664
-Use Scourge Strike #4# Times |scenariogoal Use Scourge Strike##7/30665
-Use Death Coil #4# Times |scenariogoal Use Death Coil##7/30666
-|only if intutorial()
+Use Outbreak |scenariogoal 7/30663
+Use Festering Strike |scenariogoal 7/30664
+Use Scourge Strike |scenariogoal 7/30665
+Use Death Coil |scenariogoal 7/30666
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Death Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Death Strike #2# Times |scenariogoal Use Death Strike##8/31703
-|only if intutorial()
+Use Death Strike |scenariogoal Use Death Strike##8/31703
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Death Grip ability on the Alliance Infantry
-|tip It appears on your action bar.
-Use Death Grip |scenariogoal Use Death Grip##9/30667
-|only if intutorial()
+Use Death Grip |scenariogoal 9/30667
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Army of the Dead ability
-|tip It appears on your action bar.
-Use Army of the Dead |scenariogoal Use Army of the Dead##10/31018
-|only if intutorial()
+Use Army of the Dead |scenariogoal 10/31018
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##12/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 12/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 13
-|only if intutorial()
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Demon Hunter Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -12627,11 +12579,6 @@ condition_valid_msg="You must be a Demon Hunter to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -12640,93 +12587,66 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fel Rush ability
-|tip It is already on your action bar.
-Cast Fel Rush |scenariogoal Use Fel Rush on the target dummy##2/38303
-|only if intutorial()
+Cast Fel Rush |scenariogoal 2/38303
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Demon's Bite ability on the Target Dummy
-|tip It appears on your action bar.
-Use Demon's Bite on the Target Dummy #3# Times |scenariogoal Use Demon's Bite on the target dummy##3/38304
-|only if intutorial()
+Use Demon's Bite on the Target Dummy #3# Times |scenariogoal 3/38304
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Chaos Strike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use Demon's Bite to build fury, then use Chaos Strike on the Target Dummy.
-Use Chaos Strike on the Target Dummy #3# Times |scenariogoal Use Chaos Strike on the target dummy##4/38305
-|only if intutorial()
+Use Chaos Strike on the Target Dummy |scenariogoal 4/38305
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Scourge Strike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use Demon's Bite to build fury, then use Eye Beam on the Target Dummy.
-Use Eye Beam on the Target Dummy #3# Times |scenariogoal Use Eye Beam on the Target Dummy##5/38308
-|only if intutorial()
+Use Eye Beam on the Target Dummy |scenariogoal 5/38308
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-|tip Use Demon's Bite to build fury, then use Chaos Strike and Eye Beam on the Target Dummy.
-Use Eye Beam #2# Times |scenariogoal Use Eye Beam##6/38308
-Use Chaos Strike #3# Times |scenariogoal Use Chaos Strike##6/38305
-Use Demon's Bite #6# Times |scenariogoal Use Demon's Bite##6/38304
-|only if intutorial()
+Use Eye Beam |scenariogoal 6/38308
+Use Chaos Strike |scenariogoal 6/38305
+Use Demon's Bite |scenariogoal 6/38304
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-|tip Use Demon's Bite to build fury, then use Blade Dance on the Arcane Constructs.
-Use Blade Dance #2# Times to Kill the Arcane Constructs |scenariogoal Destroy Arcane Constructs##7/29840
-|only if intutorial()
+kill Arcane Construct##101738+
+Destroy the Arcane Constructs |scenariogoal 7/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Use Metamorphasis ability
-|tip It appears on your action bar.
-Use Metamorphasis |scenariogoal Use Metamorphasis##8/38306
-|only if intutorial()
+Use Metamorphasis |scenariogoal 8/38306
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-|tip Use Demon's Bite to build fury, then use Chaos Strike and Eye Beam.
-Defeat the Soldier |scenariogoal Defeat the Soldier##9/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 9/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
-|tip Use Demon's Bite to build fury, then use Chaos Strike and Eye Beam.
-Defeat Both Attackers |scenariogoal Defeat Both Attackers##10/30919
-|only if intutorial()
+Defeat Both Attackers |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-|tip Cast Metamorphosis.
-|tip Use Demon's Bite to build fury, then use Chaos Strike, Eye Beam, and Blade Dance.
 Defend the Airship! |scenariostage Defend Against the Assault##11
-|only if intutorial()
 step
 _On the Rear Deck of the Airship:_
-clicknpc Armored Snowy Gryphon##107543
-|tip Run up both flights of stairs.
+Prepare Your Character
+|tip Open your Talents panel (press N) and choose your talents.
+|tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
+clicknpc Armored Snowy Gryphon##32335
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenariogoal Take the gryphon on the back of the airship and join the fleet##12/31027
-|only if intutorial()
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Druid Intro",{
 author="support@zygorguides.com",
@@ -12738,11 +12658,6 @@ condition_valid_msg="You must be a Druid to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -12751,202 +12666,161 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Moonkin Form ability
-|tip It is already on your action bar.
-Cast Moonkin Form |scenariogoal Cast Moonkin Form##2/32840
-|only if intutorial() and Balance
+Cast Moonkin Form |scenariogoal 2/32840
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Moonfire ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Moonfire on the Target Dummy |scenariogoal Cast Moonfire on the target dummy##3/32841
-|only if intutorial() and Balance
+Cast Moonfire on the Target Dummy |scenariogoal 3/32841
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Sunfire ability on the Target Dummy
-|tip It is already on your action bar.
-Cast Sunfire on the Target Dummy |scenariogoal Cast Sunfire on the target dummy##3/32842
-|only if intutorial() and Balance
+Cast Sunfire on the Target Dummy |scenariogoal 3/32842
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Solar Wrath ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Solar Wrath on the Target Dummy #3# Times |scenariogoal Cast Solar Wrath on the target dummy##4/32843
-|only if intutorial() and Balance
+Cast Solar Wrath on the Target Dummy |scenariogoal 4/32843
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Starsurge ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilties on the Target Dummy to generate Astral Power, so you can cast Starsurge.
-Cast Starsurge on the Target Dummy #3# Times |scenariogoal Cast Starsurge on the target dummy##5/32844
-|only if intutorial() and Balance
+Cast Starsurge on the Target Dummy |scenariogoal 5/32844
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lunar Strike ability on Arcane Constructs
-|tip It appears on your action bar.
-Cast Lunar Strike on the Target Dummy #3# Times |scenariogoal Cast Lunar Strike on the target dummy##6/32845
-|only if intutorial() and Balance
+Cast Lunar Strike on the Target Dummy |scenariogoal 6/32845
+|only if Balance
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##6/29840
-|only if intutorial() and Balance
+Destroy the Arcane Constructs |scenariogoal 6/29840
+|only if Balance
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Moonfire #2# Times |scenariogoal Cast Moonfire##7/32841
-Cast Sunfire #2# Times |scenariogoal Cast Sunfire##7/32842
-Cast Solar Wrath #6# Times |scenariogoal Cast Solar Wrath##7/32843
-Cast Starsurge #3# Times |scenariogoal Cast Starsurge##7/32844
-Cast Lunar Strike #2# Times |scenariogoal Cast Lunar Strike##7/32845
-|only if intutorial() and Balance
-step
-_On the Deck of the Airship:_
-Watch the dialogue
-Use your Regrowth ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Use Regrowth to Heal Yourself #3# Times |scenariogoal Use Regrowth to heal yourself##8/30432
-|only if intutorial() and Balance
+Cast Moonfire |scenariogoal 7/32841
+Cast Sunfire |scenariogoal 7/32842
+Cast Solar Wrath |scenariogoal 7/32843
+Cast Starsurge |scenariogoal 7/32844
+Cast Lunar Strike |scenariogoal 7/32845
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Entangling Roots ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Entangling Roots |scenariogoal Cast Entangling Roots##9/32846
-|only if intutorial() and Balance
+Use Regrowth to Heal Yourself |scenariogoal 8/30432
+|only if Balance
+step
+_On the Deck of the Airship:_
+Watch the dialogue
+Cast Entangling Roots |scenariogoal 9/32846
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial() and Balance
+Defeat the Soldier |scenariogoal 10/30919
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial() and Balance
+Defeat Both Soldiers |scenariogoal 11/30919
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 11
-|only if intutorial() and Balance
+|only if Balance
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Cat Form ability
-|tip It is already on your action bar.
-Use Cat Form to Shapeshift into a Cat |scenariogoal Use Cat Form to shapeshift into a Cat##2/30425
-|only if intutorial() and Feral
+Use Cat Form to Shapeshift into a Cat |scenariogoal 2/30425
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Prowl ability on the Target Dummy
-|tip It is already on your action bar.
-Use Prowl to Enter Stealth |scenariogoal Use Prowl to enter stealth##3/30426
-|only if intutorial() and Feral
+Use Prowl to Enter Stealth |scenariogoal 3/30426
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rake ability on the Target Dummy
-|tip It appears on your action bar.
-Use Rake on the Target Dummy |scenariogoal Use Rake on the target dummy##4/30428
-|only if intutorial() and Feral
+Use Rake on the Target Dummy |scenariogoal 4/30428
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Shred ability on the Target Dummy
-|tip It appears on your action bar.
-Use Shred on the Target Dummy #3# Times |scenariogoal Use Shred on the target dummy##5/30427
-|only if intutorial() and Feral
+Use Shred on the Target Dummy |scenariogoal 5/30427
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Ferocious Bite ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generate Combo Points, so that you can use Ferocious Bite.
-Use Ferocious Bite with Combo Points on the Target Dummy #3# Times |scenariogoal Use Ferocious Bite with combo points on the target dummy##6/30430
-|only if intutorial() and Feral
+Use Ferocious Bite with Combo Points on the Target Dummy |scenariogoal 6/30430
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rip ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generate Combo Points, so that you can use Rip.
-Use Rip with Combo Points on the Target Dummy |scenariogoal Use Rip with combo points on the target dummy##7/30429
-|only if intutorial() and Feral
+Use Rip with Combo Points on the Target Dummy |scenariogoal 7/30429
+|only if Feral
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Rake |scenariogoal Use Rake##8/30428
-Use Shred #4# Times |scenariogoal Use Shred##8/30427
-Use Ferocious Bite |scenariogoal Use Ferocious Bite##8/30430
-Use Rip |scenariogoal Use Rip##8/30429
-|only if intutorial() and Feral
+Use Rake |scenariogoal 8/30428
+Use Shred |scenariogoal Use Shred##8/30427
+Use Ferocious Bite |scenariogoal 8/30430
+Use Rip |scenariogoal 8/30429
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Dash ability
-|tip It appears on your action bar.
-Use Dash to Move Faster in Cat Form |scenariogoal Use Dash to move faster in Cat Form##9/30431
-|only if intutorial() and Feral
+Use Dash to Move Faster in Cat Form |scenariogoal 9/30431
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Regrowth ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Use Regrowth to Heal Yourself #3# Times |scenariogoal Use Regrowth to heal yourself##10/30432
-|only if intutorial() and Feral
+Use Regrowth to Heal Yourself |scenariogoal 10/30432
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial() and Feral
+Defeat the Soldier |scenariogoal 11/30919
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
 Defeat Both Soldiers |scenariostage 12
-|only if intutorial() and Feral
+|only if Feral
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##13
-|only if intutorial() and Feral
+Defend the Airship! |scenariostage 13
+|only if Feral
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETASTART()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Hunter Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -12957,11 +12831,6 @@ condition_valid_msg="You must be a Hunter to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -12970,167 +12839,135 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Call Pet ability
-|tip It is already on your action bar.
-Use Call Pet |scenariogoal Use Call Pet##2/29828
-|only if intutorial() and BeastMastery
+Use Call Pet |scenariogoal 2/29828
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Kill Command ability on the Target Dummy
-|tip It appears on your action bar.
-Use Kill Command to Command your Pet to Attack the Target Dummy #3# Times |scenariogoal Use Kill Command to command your pet to attack the target dummy##3/29829
-|only if intutorial() and BeastMastery
+Use Kill Command to Command your Pet to Attack the Target Dummy |scenariogoal 3/29829
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Barbed Shot ability on the Target Dummy
-|tip It appears on your action bar.
-Use Barbed Shot on the Target Dummy #3# Times |scenariogoal Use Barbed Shot on the target dummy##4/40240
-|only if intutorial() and BeastMastery
+Use Barbed Shot on the Target Dummy |scenariogoal 4/40240
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Cobra Shot ability on the Target Dummy
-|tip It appears on your action bar.
-Use Cobra Shot on the Target Dummy #3# Times |scenariogoal Use Cobra Shot on the target dummy##5/29831
-|only if intutorial() and BeastMastery
+Use Cobra Shot on the Target Dummy |scenariogoal 5/29831
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Bestial Wrath ability
-|tip It appears on your action bar.
-Use Bestial Wrath |scenariogoal Use Bestial Wrath##6/29832
-|only if intutorial() and BeastMastery
+Use Bestial Wrath |scenariogoal 6/29832
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Kill Command #2# Times |scenariogoal Use Kill Command##7/29829
-Use Barbed Shot #3# Times |scenariogoal Use Barbed Shot##7/40240
-Use Cobra Shot #5# Times |scenariogoal Use Cobra Shot##7/29831
-Use Beastial Wrath |scenariogoal Use Bestial Wrath##7/29832
-|only if intutorial() and BeastMastery
+Use Kill Command |scenariogoal 7/29829
+Use Barbed Shot |scenariogoal 7/40240
+Use Cobra Shot |scenariogoal 7/29831
+Use Beastial Wrath |scenariogoal 7/29832
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Multi-Shot ability on Arcane Constructs
-|tip It appears on your action bar.
-Use Multi-Shot on the Arcane Constructs |scenariogoal Use Multi-Shot on the Arcane Constructs##8/29839
-|only if intutorial() and BeastMastery
+Use Multi-Shot on the Arcane Constructs |scenariogoal 8/29839
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##8/29840
-|only if intutorial() and BeastMastery
+Destroy the Arcane Constructs |scenariogoal 8/29840
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Feign Death ability
-|tip It appears on your action bar.
-Use Feign Death |scenariogoal Use Feign Death##9/29835
-|only if intutorial() and BeastMastery
+Use Feign Death |scenariogoal 9/29835
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Attacker |scenariogoal Defeat the attacker##10/30919
-|only if intutorial() and BeastMastery
+Defeat the Attacker |scenariogoal 10/30919
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat both attackers##11/30919
-|only if intutorial() and BeastMastery
+Defeat Both Attackers |scenariogoal 11/30919
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 12
-|only if intutorial() and BeastMastery
+|only if BeastMastery
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Call Pet ability
-|tip It is already on your action bar.
-Use Call Pet |scenariogoal Use Call Pet##2/29828
-|only if intutorial() and Survival
+Use Call Pet |scenariogoal 2/29828
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Harpoon ability on the Target Dummy
-|tip It appears on your action bar.
-|tip You must be at least 8 yards away to use this ability.
-Use Harpoon on the Target Dummy |scenariogoal Use Harpoon on the target dummy##3/34617
-|only if intutorial() and Survival
+Use Harpoon on the Target Dummy |scenariogoal 3/34617
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Raptor Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Raptor Strike on the Target Dummy #3# Times |scenariogoal Use Raptor Strike on the target dummy##4/34622
-|only if intutorial() and Survival
+Use Raptor Strike on the Target Dummy |scenariogoal 4/34622
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Kill Command ability on the Target Dummy
-|tip It appears on your action bar.
-Use Kill Command on the Target Dummy #2# Times |scenariogoal Use Kill Command on the target dummy##5/40249
-|only if intutorial() and Survival
+Use Kill Command on the Target Dummy |scenariogoal 5/40249
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Serpent Sting ability
-|tip It appears on your action bar.
-Use Serpent Sting on the Target Dummy #2# Times |scenariogoal Use Serpent Sting on the target dummy##6/40243
-|only if intutorial() and Survival
+Use Serpent Sting on the Target Dummy |scenariogoal 6/40243
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Wildfire Bomb ability
-|tip It appears on your action bar.
-Use Wildfire Bomb on the Target Dummy #2# Times |scenariogoal Use Wildfire Bomb on the Target Dummy##7/40244
-|only if intutorial() and Survival
+Use Wildfire Bomb on the Target Dummy |scenariogoal 7/40244
+|only if Survival
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Wildfire Bomb on the Target Dummy |scenariogoal Use Wildfire Bomb##8/40244
-Use Kill Command on the Target Dummy #2# Times |scenariogoal Use Kill Command##8/40249
-Use Serpent Sting on the Target Dummy #2# Times |scenariogoal Use Serpent Sting##8/40243
-Use Raptor Strike on the Target Dummy #4# Times |scenariogoal Use Raptor Strike##8/34622
-|only if intutorial() and Survival
+Use Wildfire Bomb on the Target Dummy |scenariogoal 8/40244
+Use Kill Command on the Target Dummy |scenariogoal 8/40249
+Use Serpent Sting on the Target Dummy |scenariogoal 8/40243
+Use Raptor Strike on the Target Dummy |scenariogoal 8/34622
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Feign Death ability
-|tip It appears on your action bar.
-Use Feign Death |scenariogoal Use Feign Death##9/29835
-|only if intutorial() and Survival
+Use Feign Death |scenariogoal 9/29835
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Attacker |scenariogoal Defeat the attacker##10/30919
-|only if intutorial() and Survival
+Defeat the Attacker |scenariogoal 10/30919
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat both attackers##11/30919
-|only if intutorial() and Survival
+Defeat Both Attackers |scenariogoal 11/30919
+|only if Survival
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##12
-|only if intutorial() and Survival
+Defend the Airship! |scenariostage 12
+|only if Survival
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
@@ -13139,14 +12976,13 @@ Prepare Your Character
 clicknpc Armored Snowy Gryphon##32335
 |tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the popup displayed.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
-ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Mage Intro",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the level 110 character boost introduction.",
@@ -13157,11 +12993,6 @@ condition_valid_msg="You must be a Mage to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13170,115 +13001,79 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Summon Water Elemental ability
-|tip It is already on your action bar.
-Cast Summon Water Elemental |scenariogoal Cast Summon Water Elemental##2/29591
-|only if intutorial()
+Cast Summon Water Elemental |scenariogoal 2/29591
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Frostbolt ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Frostbolt on the Target Dummy #3# Times |scenariogoal Cast Frostbolt on the target dummy##3/30560
-|only if intutorial()
+Cast Frostbolt on the Target Dummy |scenariogoal 3/30560
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Ice Lance ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Ice Lance on the Target Dummy #3# Times |scenariogoal Cast Ice Lance on the target dummy##4/30561
-|only if intutorial()
+Cast Ice Lance on the Target Dummy |scenariogoal 4/30561
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Ice Lance ability on the Target Dummy
-|tip Use your Frostbolt ability on the Target Dummy to gain the Fingers of Frost buff.
-|tip Fingers of Frost appears as a buff to your character at the top right of the screen.
-|tip The icon for Fingers of Frost is a blue hand.
-Cast Ice Lance with Fingers of Frost #2# Times |scenariogoal Cast Ice Lance with Fingers of Frost##5/30614
-|only if intutorial()
+Cast Ice Lance with Fingers of Frost |scenariogoal 5/30614
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flurry ability on the Target Dummy
-|tip Use your Frostbolt ability on the Target Dummy to gain the Brainfreeze buff.
-|tip Brainfreeze appears as a buff to your character at the top right of the screen.
-|tip The icon for Brainfreeze is a blue icy brain.
-Cast Flurry while under the Effects of Brainfreeze #2# Times |scenariogoal Cast Flurry while under the effects of Brainfreeze##6/34628
-|only if intutorial()
+Cast Flurry while under the Effects of Brainfreeze |scenariogoal 6/34628
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Frostbolt #6# Times |scenariogoal Cast Frostbolt##7/30560
-Cast Ice Lance #2# Times |scenariogoal Cast Ice Lance##7/30561
-Cast Flurry #2# Times |scenariogoal Cast Flurry##7/34687
-|only if intutorial()
+Cast Frostbolt |scenariogoal 7/30560
+Cast Ice Lance |scenariogoal 7/30561
+Cast Flurry |scenariogoal 7/34687
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blink ability
-|tip It appears on your action bar.
-Cast Blink |scenariogoal Cast Blink##8/29248
-|only if intutorial()
+Cast Blink |scenariogoal 8/29248
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Frost Nova ability
-|tip It appears on your action bar.
-|tip Wait until the enemy is next to you.
-Cast Frost Nova to Freeze the Enemy |scenariogoal Cast Frost Nova to freeze the enemy##9/30623
-|only if intutorial()
+Cast Frost Nova to Freeze the Enemy |scenariogoal 9/30623
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blizzard ability on the Arcane Constructs
-|tip It appears on your action bar.
-Cast Blizzard on the Arcane Constructs |scenariogoal Cast Blizzard on the Arcane Constructs##10/30622
-|only if intutorial()
+Cast Blizzard on the Arcane Constructs |scenariogoal 10/30622
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##10/29840
-|only if intutorial()
+Destroy the Arcane Constructs |scenariogoal 10/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##12/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 12/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##13
-|only if intutorial()
+Defend the Airship! |scenariostage 13
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Monk Intro",{
 author="support@zygorguides.com",
@@ -13290,11 +13085,6 @@ condition_valid_msg="You must be a Monk to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13303,96 +13093,68 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Tiger Palm ability on the Target Dummy
-|tip It appears on your action bar.
-Use Tiger Palm on the Target Dummy #3# Times |scenariogoal Use Tiger Palm on the target dummy##2/30392
-|only if intutorial()
+Use Tiger Palm on the Target Dummy |scenariogoal 2/30392
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rising Sun Kick ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Tiger Palm ability to generate Chi, so you can use Rising Sun Kick.
-Use Rising Sun Kick on the Target Dummy #2# Times |scenariogoal Use Rising Sun Kick on the target dummy##3/30393
-|only if intutorial()
+Use Rising Sun Kick on the Target Dummy |scenariogoal 3/30393
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blackout Kick ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Tiger Palm ability to generate Chi, so you can use Blackout Kick.
-Use Blackout Kick on the Target Dummy #3# Times |scenariogoal Use Blackout Kick on the target dummy##4/30395
-|only if intutorial()
+Use Blackout Kick on the Target Dummy |scenariogoal 4/30395
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fists of Fury ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Tiger Palm ability to generate Chi, so you can use Fists of Fury.
-Use Fists of Fury on the Target Dummy |scenariogoal Use Fists of Fury on the target dummy##5/30396
-|only if intutorial()
+Use Fists of Fury on the Target Dummy |scenariogoal 5/30396
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Tiger Palm #5# Times |scenariogoal Use Tiger Palm##6/30392
-Use Rising Sun Kick #2# Times |scenariogoal Use Rising Sun Kick##6/30393
-Use Blackout Kick #3# Times |scenariogoal Use Blackout Kick##6/30395
-Use Fists of Fury |scenariogoal Use Fists of Fury##6/30396
-|only if intutorial()
+Use Tiger Palm |scenariogoal 6/30392
+Use Rising Sun Kick |scenariogoal 6/30393
+Use Blackout Kick |scenariogoal 6/30395
+Use Fists of Fury |scenariogoal 6/30396
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Roll ability
-|tip It appears on your action bar.
-Use Roll #2# Times |scenariogoal Use Roll##7/30397
-|only if intutorial()
+Use Roll |scenariogoal 7/30397
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Effuse ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Use Vivify to Heal Yourself #2# Times |scenariogoal Use Vivify to heal yourself##8/40572
-|only if intutorial()
+Use Vivify to Heal Yourself |scenariogoal 8/40572
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##9/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 9/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##10/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##11
-|only if intutorial()
+Defend the Airship! |scenariostage 11
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Paladin Intro",{
 author="support@zygorguides.com",
@@ -13404,11 +13166,6 @@ condition_valid_msg="You must be a Paladin to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13417,112 +13174,80 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Judgement ability on the Target Dummy
-|tip It appears on your action bar.
-Use Judgement on the Target Dummy #2# Times |scenariogoal Use Judgment on the target dummy##2/29793
-|only if intutorial()
+Use Judgement on the Target Dummy |scenariogoal 2/29793
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Blade of Justice ability on the Target Dummy
-|tip It appears on your action bar.
-Use Blade of Justice on the Target Dummy #2# Times |scenariogoal Use Blade of Justice on the target dummy##3/29773
-|only if intutorial()
+Use Blade of Justice on the Target Dummy |scenariogoal 3/29773
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Crusader Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Crusader Strike on the Target Dummy #3# Times |scenariogoal Use Crusader Strike on the target dummy##4/29769
-|only if intutorial()
+Use Crusader Strike on the Target Dummy |scenariogoal 4/29769
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Templar's Verdict ability on the Target Dummy
-|tip It appears on your action bar.
-Use Templar's Verdict on the Target Dummy #3# Times |scenariogoal Use Templar's Verdict##5/29770
-|only if intutorial()
+Use Templar's Verdict on the Target Dummy |scenariogoal 5/29770
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Judgement #2# Times |scenariogoal Use Judgement##6/29793
-Use Blade of Justice #2# Times |scenariogoal Use Blade of Justice##6/29773
-Use Crusader Strike #2# Times |scenariogoal Use Crusader Strike##6/29769
-Use Templar's Verdict #2# Times |scenariogoal Use Templar's Verdict##6/29770
-|only if intutorial()
+Use Judgement |scenariogoal 6/29793
+Use Blade of Justice |scenariogoal 6/29773
+Use Crusader Strike |scenariogoal 6/29769
+Use Templar's Verdict |scenariogoal 6/29770
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Divine Storm ability on Arcane Constructs
-|tip It appears on your action bar.
-|tip Use your other abilities on the Arcane Constructs to earn 3 Holy Power so that you can use Divine Storm.
-|tip Stand in the middle of the group of Arcane Constructs.
-Earn 3 Holy Power and then Use Divine Storm |scenariogoal Earn 3 Holy Power and then use Divine Storm##7/32067
-|only if intutorial()
+Earn 3 Holy Power and then Use Divine Storm |scenariogoal 7/32067
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##7/29840
-|only if intutorial()
+Destroy the Arcane Constructs |scenariogoal 7/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Divine Shield ability
-|tip It appears on your action bar.
-Use Divine Shield |scenariogoal Use Divine Shield##8/29771
-|only if intutorial()
+Use Divine Shield |scenariogoal Use 8/29771
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Allow Fireball to be Cast on you #2# Times |scenariogoal Allow Fireball to be cast on you##8/29797
-|only if intutorial()
+Allow Fireball to be Cast on You |scenariogoal 8/29797
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flash of Light ability
-|tip It appears on your action bar.
-|tip Make sure you're not targeting an NPC.
-Use Flash of Light to Heal Yourself #3# Times |scenariogoal Use Flash of Light to heal yourself##9/29772
-|only if intutorial()
+Use Flash of Light to Heal Yourself |scenariogoal 9/29772
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##12
-|only if intutorial()
+Defend the Airship! |scenariostage 12
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Priest Intro",{
 author="support@zygorguides.com",
@@ -13534,11 +13259,6 @@ condition_valid_msg="You must be a Priest to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13547,100 +13267,74 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Shadow Word: Pain ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Shadow Word: Pain on the Target Dummy |scenariogoal Cast Shadow Word: Pain on the target dummy##2/30502
-|only if intutorial()
+Cast Shadow Word: Pain on the Target Dummy |scenariogoal 2/30502
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Penance ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Penance on the Target Dummy #2# Times |scenariogoal Cast Penance on the target dummy##3/30503
-|only if intutorial()
+Cast Penance on the Target Dummy |scenariogoal 3/30503
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Smite ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Smite on the Target Dummy #3# Times |scenariogoal Cast Smite on the target dummy##4/30504
-|only if intutorial()
+Cast Smite on the Target Dummy |scenariogoal 4/30504
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Shadow Word: Pain |scenariogoal Cast Shadow Word: Pain##5/30502
-Cast Penance #2# Times |scenariogoal Cast Penance##5/30503
-Cast Smite #4# Times |scenariogoal Cast Smite##5/30504
-|only if intutorial()
+Cast Shadow Word: Pain |scenariogoal 5/30502
+Cast Penance |scenariogoal 5/30503
+Cast Smite |scenariogoal 5/30504
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Psychic Scream ability
-|tip It appears on your action bar.
-Cast Psychic Scream to Fear the Enemies Around You |scenariogoal Cast Psychic Scream to fear enemies around you##6/30520
-|only if intutorial()
+Cast Psychic Scream to Fear the Enemies Around You |scenariogoal 6/30520
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Power Word: Shield ability
-|tip It appears on your action bar.
-Cast Power Word: Shield on Yourself |scenariogoal Cast Power Word: Shield##7/34732
-|only if intutorial()
+Cast Power Word: Shield on Yourself |scenariogoal 7/34732
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Allow Fireball to be Cast on you #2# Times |scenariogoal Allow Fireball to be cast on you##7/29797
-|only if intutorial()
+Allow Fireball to be Cast on You |scenariogoal 7/29797
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Power Word: Shield ability
-Cast Power Word: Shield on Yourself |scenariogoal Cast Power Word: Shield on yourself##8/34732
-|only if intutorial()
+Cast Power Word: Shield on Yourself |scenariogoal 8/34732
 step
 _On the Deck of the Airship:_
-|tip DPS the Target Dummy with your abilities while Power Word: Shield is active.
-Heal Yourself Through Atonement #10# Times |scenariogoal Heal yourself through Atonement##8/40714
-|only if intutorial()
+Heal Yourself Through Atonement |scenariogoal 8/40714
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##9/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 9/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##10/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##11
-|only if intutorial()
+Defend the Airship! |scenariostage 11
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Rogue Intro",{
 author="support@zygorguides.com",
@@ -13652,11 +13346,6 @@ condition_valid_msg="You must be a Rogue to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13665,100 +13354,72 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Deadly Poison ability
-|tip It is already on your action bar.
-Use Deadly Poison |scenariogoal Use Deadly Poison##2/30644
-|only if intutorial()
+Use Deadly Poison |scenariogoal 2/30644
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Stealth ability
-|tip It appears on your action bar.
-Use Stealth |scenariogoal Use Stealth##3/29617
-|only if intutorial()
+Use Stealth |scenariogoal 3/29617
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Garrote ability on the Target Dummy
-|tip It appears on your action bar.
-Use Garrote on the Target Dummy |scenariogoal Use Garrote on the target dummy##4/30645
-|only if intutorial()
+Use Garrote on the Target Dummy |scenariogoal 4/30645
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Mutilate ability on the Target Dummy
-|tip It appears on your action bar.
-Use Mutilate on the Target Dummy #3# Times |scenariogoal Use Mutilate on the target dummy##5/30646
-|only if intutorial()
+Use Mutilate on the Target Dummy |scenariogoal 5/30646
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rupture ability on the Target Dummy
-|tip It appears on your action bar.
-Use Rupture on the Target Dummy |scenariogoal Use Rupture on the target dummy##6/30647
-|only if intutorial()
+Use Rupture on the Target Dummy |scenariogoal 6/30647
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Envenom ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the target dummy to build combo points so that you can use Envenom.
-Use Envenom on the Target Dummy |scenariogoal Use Envenom on the target dummy##7/30648
-|only if intutorial()
+Use Envenom on the Target Dummy |scenariogoal 7/30648
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Garrote #2# Times |scenariogoal Use Rupture##8/30647
-Use Mutilate #4# Times |scenariogoal Use Mutilate##8/30646
-Use Rupture |scenariogoal Use Garrote##8/30645
-Use Envenom |scenariogoal Use Envenom##8/30648
-|only if intutorial()
+Use Garrote |scenariogoal 8/30647
+Use Mutilate |scenariogoal 8/30646
+Use Rupture |scenariogoal 8/30645
+Use Envenom |scenariogoal 8/30648
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Vanish ability
-|tip It appears on your action bar.
-Use Vanish |scenariogoal Use Vanish##9/29646
-|only if intutorial()
+Use Vanish |scenariogoal 9/29646
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 12
-|only if intutorial()
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Shaman Intro",{
 author="support@zygorguides.com",
@@ -13770,11 +13431,6 @@ condition_valid_msg="You must be a Shaman to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13783,191 +13439,154 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flame Shock ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Flame Shock on the Target Dummy |scenariogoal Cast Flame Shock on the target dummy##2/29959
-|only if intutorial() and Elemental
+Cast Flame Shock on the Target Dummy |scenariogoal 2/29959
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lava Burst ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Lava Burst on the Target Dummy #3# Times |scenariogoal Cast Lava Burst on the target dummy##3/29960
-|only if intutorial() and Elemental
+Cast Lava Burst on the Target Dummy |scenariogoal 3/29960
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lightning Bolt ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Lightning Bolt on the Target Dummy #3# Times |scenariogoal Cast Lightning Bolt on the target dummy##4/29961
-|only if intutorial() and Elemental
+Cast Lightning Bolt on the Target Dummy |scenariogoal 4/29961
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Earth Shock ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generat Maelstrom, so that you can use Earth Shock.
-Cast Earth Shock on the Target Dummy #2# Times |scenariogoal Cast Earth Shock on the target dummy##5/29962
-|only if intutorial() and Elemental
+Cast Earth Shock on the Target Dummy |scenariogoal 5/29962
+|only if Elemental
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Flame Shock |scenariogoal Cast Flame Shock##6/29959
-Cast Lava Burst #2# Times |scenariogoal Cast Lava Burst##6/29960
-Cast Lightning Bolt #4# Times |scenariogoal Cast Lightning Bolt##6/29961
-Cast Earth Shock #2# Times |scenariogoal Cast Earth Shock##6/29962
-|only if intutorial() and Elemental
+Cast Flame Shock |scenariogoal 6/29959
+Cast Lava Burst |scenariogoal 6/29960
+Cast Lightning Bolt |scenariogoal 6/29961
+Cast Earth Shock |scenariogoal 6/29962
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Hex ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Hex on the Soldier |scenariogoal Cast Hex on the soldier##7/29963
-|only if intutorial() and Elemental
+Cast Hex on the Soldier |scenariogoal 7/29963
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Chain Lightning ability on the Arcane Constructs
-|tip It appears on your action bar.
-Cast Chain Lightning on the Arcane Constructs |scenariogoal Cast Chain Lightning on the Arcane Constructs##8/29964
-|only if intutorial() and Elemental
+Cast Chain Lightning on the Arcane Constructs |scenariogoal 8/29964
+|only if Elemental
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##8/29840
-|only if intutorial() and Elemental
+Destroy the Arcane Constructs |scenariogoal 8/29840
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Healing Surge ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Cast Healing Surge to Heal Yourself #3# Times |scenariogoal Cast Healing Surge to heal yourself##9/32737
-|only if intutorial() and Elemental
+Cast Healing Surge to Heal Yourself |scenariogoal 9/32737
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fire Elemental ability
-|tip It appears on your action bar.
-Cast Fire Elemental |scenariogoal Cast Fire Elemental##10/31313
-|only if intutorial() and Elemental
+Cast Fire Elemental |scenariogoal 10/31313
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##11/30919
-|only if intutorial() and Elemental
+Defeat the Soldier |scenariogoal 11/30919
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat the attacking soldiers##12/30919
-|only if intutorial() and Elemental
+Defeat Both Attackers |scenariogoal 12/30919
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 13
-|only if intutorial() and Elemental
+|only if Elemental
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Flametongue ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Flametongue on the Target Dummy #2# Times |scenariogoal Use Flametongue on the target dummy##2/32847
-|only if intutorial() and Enhancement
+Cast Flametongue on the Target Dummy |scenariogoal 2/32847
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Rockbiter ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Rockbiter on the Target Dummy #4# Times |scenariogoal Use Rockbiter on the target dummy##3/32848
-|only if intutorial() and Enhancement
+Cast Rockbiter on the Target Dummy |scenariogoal 3/32848
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Lava Lash ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Lava Lash on the Target Dummy #3# Times |scenariogoal Use Lava Lash on the target dummy##4/32849
-|only if intutorial() and Enhancement
+Cast Lava Lash on the Target Dummy |scenariogoal 4/32849
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Stormstrike ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your other abilities on the Target Dummy to generat Maelstrom, so that you can use Earth Shock.
-Cast Stormstrike on the Target Dummy #2# Times |scenariogoal Use Stormstrike on the target dummy##5/32850
-|only if intutorial() and Enhancement
+Cast Stormstrike on the Target Dummy |scenariogoal 5/32850
+|only if Enhancement
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Lava Lash #4# Times |scenariogoal Use Lava Lash##6/32849
-Cast Flametongue #2# Times |scenariogoal Use Flametongue##6/32847
-Cast Rockbiter #4# Times |scenariogoal Use Rockbiter##6/32848
-Cast Stormstrike #2# Times |scenariogoal Use Stormstrike##6/32850
-|only if intutorial() and Enhancement
+Cast Lava Lash |scenariogoal 6/32849
+Cast Flametongue |scenariogoal 6/32847
+Cast Rockbiter |scenariogoal 6/32848
+Cast Stormstrike |scenariogoal 6/32850
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Hex ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Hex on the Soldier |scenariogoal Cast Hex on the attacker##7/29963
-|only if intutorial() and Enhancement
+Cast Hex on the Attacker |scenariogoal 7/29963
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Healing Surge ability
-|tip It appears on your action bar.
-|tip Make sure you are not targeting an NPC.
-Cast Healing Surge to Heal Yourself #3# Times |scenariogoal Cast Healing Surge to heal yourself##8/29965
-|only if intutorial() and Enhancement
+Cast Healing Surge to Heal Yourself |scenariogoal 8/29965
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Feral Spirit ability
-|tip It appears on your action bar.
-Use Feral Spirit |scenariogoal Use Feral Spirit on the target dummy##9/32851
-|only if intutorial() and Enhancement
+Use Feral Spirit |scenariogoal 9/32851
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial() and Enhancement
+Defeat the Soldier |scenariogoal 10/30919
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial() and Enhancement
+Defeat Both Attackers |scenariogoal 11/30919
+|only if Enhancement
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
 Defend the Airship! |scenariostage 13
-|only if intutorial() and Enhancement
+|only if Enhancement
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Warlock Intro",{
 author="support@zygorguides.com",
@@ -13979,11 +13598,6 @@ condition_valid_msg="You must be a Warlock to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -13992,100 +13606,72 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Summon Voidwalker ability
-|tip It is already on your action bar.
-Cast Summon Voidwalker |scenariogoal Cast Summon Voidwalker##2/29810
-|only if intutorial()
+Cast Summon Voidwalker |scenariogoal 2/29810
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Agony ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Agony on the Target Dummy |scenariogoal Cast Agony on the target dummy##3/29811
-|only if intutorial()
+Cast Agony on the Target Dummy |scenariogoal 3/29811
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Corruption ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Corruption on the Target Dummy |scenariogoal Cast Corruption on the target dummy##4/29812
-|only if intutorial()
+Cast Corruption on the Target Dummy |scenariogoal 4/29812
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Shadow Bolt ability on the Target Dummy
-|tip It appears on your action bar.
-Cast Shadow Bolt on the Target Dummy #3	ii# Times |scenariogoal Cast Shadow Bolt on the target dummy##5/40241
-|only if intutorial()
+Cast Shadow Bolt on the Target Dummy |scenariogoal 5/40241
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Unstable Affliction ability on the Target Dummy
-|tip It appears on your action bar.
-|tip Use your Agony ability on the Target Dummy to generate Soul Shards, so you can use Unstable Affliction.
-Cast Unstable Affliction on the Target Dummy #3# Times |scenariogoal Cast Unstable Affliction on the target dummy##6/29814
-|only if intutorial()
+Cast Unstable Affliction on the Target Dummy |scenariogoal 6/29814
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Cast Agony |scenariogoal Cast Agony##7/29811
-Cast Corruption |scenariogoal Cast Corruption##7/29812
-Cast Unstable Affliction #2# Times |scenariogoal Cast Unstable Affliciton##7/29814
-Cast Shadow Bolt #3# Times |scenariogoal Cast Shadow Bolt##7/40241
-|only if intutorial()
+Cast Agony |scenariogoal 7/29811
+Cast Corruption |scenariogoal 7/29812
+Cast Unstable Affliction |scenariogoal 7/29814
+Cast Shadow Bolt |scenariogoal 7/40241
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Drain Life ability
-|tip It appears on your action bar.
-Cast Drain Life on the Target Dummy #2# Times |scenariogoal Cast Drain Life on the target dummy##8/40242
-|only if intutorial()
+Cast Drain Life on the Target Dummy |scenariogoal 8/40242
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Fear ability on the Alliance Infantry
-|tip It appears on your action bar.
-Cast Fear on the Soldier |scenariogoal Cast Fear on soldier##9/29815
-|only if intutorial()
+Cast Fear on the Soldier |scenariogoal 9/29815
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Attacker |scenariogoal Defeat the attacker##10/30919
-|only if intutorial()
+Defeat the Attacker |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Attackers |scenariogoal Defeat both attackers##11/30919
-|only if intutorial()
+Defeat Both Attackers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Attack##12
-|only if intutorial()
+Defend the Airship! |scenariostage 12
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])
 ZygorGuidesViewer:RegisterGuide("Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Boosted Characters\\Boosted Character Warrior Intro",{
 author="support@zygorguides.com",
@@ -14097,11 +13683,6 @@ condition_valid_msg="You must be a Warrior to complete this guide!",
 startlevel=110.0,
 },[[
 step
-_Checking for Boosted Character..._
-|next "Boosted_Start" |only if intutorial
-|next "Non_Boosted_Start" |only if not intutorial
-step
-label "Boosted_Start"
 _On the Deck of the Airship:_
 talk General Bret Hughes##100448
 Tell him _"I'm ready to begin."_
@@ -14110,105 +13691,74 @@ _Or_
 You Can Skip the Combat Training Scenario
 |tip Use your Hearthstone now if you want to skip the Combat Training scenario.
 |tip You can complete it or skip it, it doesn't matter, and is purely personal preference.
-Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Non_Boosted_Start"
-|only if intutorial
+Use Your Hearthstone |goto Stormwind City/0 22.33,32.80 < 1000 |c |noway |or |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 step
 label "Start_Combat_Training"
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Charge ability on the Target Dummy
-|tip It appears on your action bar.
-Use Charge on the Target Dummy |scenariogoal Use Charge on the target dummy##2/30115
-|only if intutorial()
+Use Charge on the Target Dummy |scenariogoal 2/30115
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Mortal Strike ability on the Target Dummy
-|tip It appears on your action bar.
-Use Mortal Strike on the Target Dummy #3# Times |scenariogoal Use Mortal Strike on the target dummy##3/30116
-|only if intutorial()
+Use Mortal Strike on the Target Dummy |scenariogoal 3/30116
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Slam ability on the Target Dummy
-|tip It appears on your action bar.
-Use Slam on the Target Dummy #3# Times |scenariogoal Use Slam on the target dummy##4/30117
-|only if intutorial()
+Use Slam on the Target Dummy |scenariogoal 4/30117
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Overpower ability on the Target Dummy
-|tip It appears on your action bar.
-Use Overpower on the Target Dummy #2# Times |scenariogoal Use Overpower on the target dummy##5/40181
-|only if intutorial()
+Use Overpower on the Target Dummy |scenariogoal 5/40181
 step
 _On the Deck of the Airship:_
-Use your abilities on the Target Dummy
-Use Overpower #2# Times |scenariogoal Use Overpower##6/40181
-Use Mortal Strike #3# Times |scenariogoal Use Mortal Strike##6/30116
-Use Slam #6# Times |scenariogoal Use Slam##6/30117
-|only if intutorial()
+Use Overpower |scenariogoal 6/40181
+Use Mortal Strike |scenariogoal 6/30116
+Use Slam |scenariogoal 6/30117
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Arcane Construct##101738+
-Use your Victory Rush ability on Arcane Constructs
-|tip It appears on your action bar.
-|tip You can only use the Victory Rush ability after killing an enemy.
-Kill an Arcane Construct and then Use Victory Rush on the Others #2# Times |scenariogoal Kill an Arcane Construct and then use Victory Rush on the other##7/30119
-|only if intutorial()
+Kill an Arcane Construct and then Use Victory Rush on the Others |scenariogoal 7/30119
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Whirlwind ability on Arcane Constructs
-|tip It appears on your action bar.
-|tip Stand in the middle of the group of Arcane Constructs.
-Use Whirlwind on the Arcane Constructs |scenariogoal Use Whirlwind on the Arcane Constructs##8/30120
-|only if intutorial()
+Use Whirlwind on the Arcane Constructs |scenariogoal 8/30120
 step
 _On the Deck of the Airship:_
 kill Arcane Construct##101738+
-Destroy the Arcane Constructs |scenariogoal Destroy Arcane Constructs##8/29840
-|only if intutorial()
+Destroy the Arcane Constructs |scenariogoal 8/29840
 step
 _On the Deck of the Airship:_
 Watch the dialogue
-Use your Heroic Leap ability
-|tip It appears on your action bar.
-|tip It doesn't matter where you leap to.
-Use Heroic Leap |scenariogoal Use Heroic Leap##9/30121
-|only if intutorial()
+Use Heroic Leap |scenariogoal 9/30121
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592
-Defeat the Soldier |scenariogoal Defeat the soldier##10/30919
-|only if intutorial()
+Defeat the Soldier |scenariogoal 10/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 kill Alliance Infantry##102592+
 |tip Two of them will attack you.
-Defeat Both Soldiers |scenariogoal Defeat the attacking soldiers##11/30919
-|only if intutorial()
+Defeat Both Soldiers |scenariogoal 11/30919
 step
 _On the Deck of the Airship:_
 Watch the dialogue
 Kill enemies around this area
-Defend the Airship! |scenariostage Defend Against the Assault##12
-|only if intutorial()
+Defend the Airship! |scenariostage 12
 step
 _On the Rear Deck of the Airship:_
 Prepare Your Character
 |tip Open your Talents panel (press N) and choose your talents.
 |tip Open your Spellbook (press P) and move the rest of your abilities to your action bars.
 clicknpc Armored Snowy Gryphon##32335
-|tip Run up both flights of stairs.
+|tip At the top of the back of the ship.
 Choose _<Leave and join the assault on Lordaeron>_
-|tip Click "Enter Scenario" when the group forms.
-Take the Gryphon on the Back of the Airship and Join the Fleet |scenarioend
-|only if intutorial
+accept The Battle for Lordaeron##51795
 step
-label "Non_Boosted_Start"
-Loading Next Guide |next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
+Join the Battle for Lordaeron |goto Ruins of Lordaeron/0 51.54,16.29 < 50 |noway |c |q 51795
+|tip Click "Enter Scenario" when the popup appears on the screen.
+|tip It may take a bit.
+|next "Zygor's Leveling Guides\\Battle for Azeroth (110-120)\\Intro & Quest Zone Choice"
 ]])

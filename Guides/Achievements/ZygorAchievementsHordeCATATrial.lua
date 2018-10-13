@@ -2079,5 +2079,3 @@ Eat #91# Chocolate Cookies in a row to feel 1000% better |use Chocolate Cookie##
 step
 Congratulations, you have earned the You'll Feel Right as Rain achievement!
 ]])
-ZGV.BETASTART()
-ZGV.BETAEND()

@@ -1402,6 +1402,9 @@ function ZGV:FocusStep(num,forcefocus)
 
 	ZGV:SetActionButtons()
 	ZGV.Tabs:UpdateCurrentTab()
+
+	-- if user changed guide/step, he may need to equip/dequip quest gear
+	ZGV.ItemScore.Upgrades:ScanBagsForUpgrades()
 end
 
 function ZGV:SetActionButtons()
@@ -3878,7 +3881,7 @@ local eventtex = {
 
 function ZGV:FindEvent(eventName)
 	eventName=eventName:upper()
-	local dateobject = C_Calendar.GetDate()
+	local dateobject = (C_Calendar.GetDate and C_Calendar.GetDate()) or (C_DateAndTime.GetCurrentCalendarTime and C_DateAndTime.GetCurrentCalendarTime())
 	local month,day,year = dateobject.month,dateobject.monthDay,dateobject.year
 
 	local numEvents = C_Calendar.GetNumDayEvents(0, day);

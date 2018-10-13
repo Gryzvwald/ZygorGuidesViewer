@@ -2228,6 +2228,95 @@ step
 _Congratulations!_
 You Reached 75 Northrend Engineering Skill.
 ]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Cataclysm Engineering 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Cataclysm Engineering skill from 1-75.",
+condition_end=function() return skill('Cataclysm Engineering') >= 75 end,
+condition_suggested=function() return skill('Cataclysm Engineering') > 0 and skill('Cataclysm Engineering') < 75 end,
+},[[
+step
+talk Lilliam Sparkspindle##5518
+Train Cataclysm Engineering |skillmax Cataclysm Engineering,75 |goto Stormwind City/0 62.84,31.97
+|tip You must be at least level 78.
+step
+collect 40 Obsidium Bar##54849
+|tip Use the "Ore" farming guide to gather and smelt obsidium, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 20 Handful of Obsidium Bolts>_
+Reach Level 15 Cataclysm Engineering |skill Cataclysm Engineering,15 |goto 63.66,36.64
+step
+talk Lilliam Sparkspindle##5518
+Train Electrified Ether |learn Electrified Ether##94748 |goto 62.84,31.97
+step
+collect 30 Volatile Air##52328
+|tip Use the "Volatile Air" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 15 Electrified Ether>_
+Reach Level 30 Cataclysm Engineering |skill Cataclysm Engineering,30 |goto 63.66,36.64
+step
+talk Lilliam Sparkspindle##5518
+Train Volatile Seaforium Blastpack |learn Volatile Seaforium Blastpack##84409 |goto 62.84,31.97
+step
+Open Your Engineering Crafting Panel:
+_<Create 13 Volatile Seaforium Blastpack>_
+Reach Level 42 Cataclysm Engineering |skill Cataclysm Engineering,42 |goto 63.66,36.64
+step
+talk Lilliam Sparkspindle##5518
+Train Safety Catch Removal Kit |learn Safety Catch Removal Kit##84410 |goto 62.84,31.97
+step
+collect 30 Handful of Obsidium Bolts##60224
+|tip These were crafted in a previous step, you should have enough leftover.
+|tip You may have to make more if you don't have any.
+step
+collect 30 Obsidium Bar##54849
+|tip Use the "Ore" farming guide to gather and smelt obsidium, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 3 Safety Catch Removal Kit>_
+Reach Level 45 Cataclysm Engineering |skill Cataclysm Engineering,45 |goto 63.66,36.64
+step
+talk Lilliam Sparkspindle##5518
+Train Lure Master Tackle Box |learn Lure Master Tackle Box##84415 |goto 62.84,31.97
+step
+collect 60 Handful of Obsidium Bolts##60224
+|tip These were crafted in a previous step, you should have enough leftover.
+|tip You may have to make more if you don't have any.
+step
+collect 300 Elementium Bar##52186
+|tip Use the "Ore" farming guide to gather and smelt elementium, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 15 Lure Master Tackle Box>_
+Reach Level 60 Cataclysm Engineering |skill Cataclysm Engineering,60 |goto 63.66,36.64
+step
+talk Lilliam Sparkspindle##5518
+Train Heat-Treated Spinning Lure |learn Heat-Treated Spinning Lure##84430 |goto 62.84,31.97
+step
+collect 15 Handful of Obsidium Bolts##60224
+|tip These were crafted in a previous step, you should have enough leftover.
+|tip You may have to make more if you don't have any.
+step
+collect 60 Elementium Bar##52186
+|tip Use the "Ore" farming guide to gather and smelt elementium, if you have Mining.
+|tip You can also purchase them from the Auction House.
+step
+collect 15 Volatile Fire##52325
+|tip Use the "Volatile Fire" farming guide to gather these.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Engineering Crafting Panel:
+_<Create 15 Heat-Treated Spinning Lure>_
+Reach Level 75 Cataclysm Engineering |skill Cataclysm Engineering,75 |goto 63.66,36.64
+step
+_Congratulations!_
+You Reached 75 Cataclysm Engineering Skill.
+]])
 ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Fishing\\Leveling Guides\\Fishing 1-600 Leveling Guide",{
 author="support@zygorguides.com",
@@ -2537,263 +2626,562 @@ step
 confirm |next "Profession Guides\\Herbalism\\Leveling Guides\\Herbalism 525-600 Leveling Guide"
 |tip This will take you to the Herbalism 525 - 600 guides.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 1-600 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Inscription 1-300 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Inscription skill from 1-300.",
+condition_end=function() return skill('Inscription') >= 300 end,
+condition_suggested=function() return skill('Inscription') > 0 and skill('Inscription') < 300 end,
 },[[
 step
-#include "trainer_Inscription"
-skillmax Inscription,75
+Enter the building |goto Stormwind City/0 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Inscription |skillmax Inscription,300 |goto 49.83,74.82
 |tip You must be at least level 5.
 step
-#include "vendor_Inscription"
-buy 1 Virtuoso Inking Set##39505 |condition itemcount(39505) >= 1 or skill("Inscription")>=75
-buy 30 Light Parchment##39354 |condition itemcount(39354) >= 30 or skill("Inscription")>=75
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy Virtuoso Inking Set##39505 |goto 49.57,74.95
 step
-map Elwynn Forest
-path follow loose;loop;ants straight
-path	43.4,58.9	48.7,62.6	58.0,65.6
-path	64.9,63.5	78.6,63.0	79.6,80.4
-path	79.6,80.4	59.1,78.3	50.8,85.2
-path	46.8,81.1	37.3,87.6	26.2,89.0
-path	30.1,76.1	33.2,66.5
-#include "follow_path_herbs"
-You need about 120 herbs total
-collect Silverleaf##765 |n
-collect Peacebloom##2447 |n
-collect Earthroot##2449 |n
-Gather around _{_G.max(0 , (170-itemcount(765,2447,2449,22710)))}_ herbs
-Mill the herbs you gathered
-collect 84 Alabaster Pigment##39151 |condition skill("Inscription")>=75
-|tip You can also buy these materials from the Auction House.
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 300 Light Parchment##39354 |goto 49.57,74.95
 step
-label "ins_1-50_skill"
-create 42 Moonglow Ink##52843,Inscription,60
+collect 88 Alabaster Pigment##39151
+|tip Use the "Alabaster Pigment (Alliance)" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-create Research: Moonglow Ink##165564,Inscription,75
+Open Your Inscription Crafting Panel:
+_<Create 44 Moonglow Ink>_
+Reach Level 45 Inscription |skill Inscription,45
 step
-#include "trainer_Inscription"
-skillmax Inscription,150
-|tip You must be at least level 10.
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Recall |learn Scroll of Recall##48248 |goto 49.83,74.82
 step
-map Hillsbrad Foothills
-path	31.8,62.6	33.9,54.0	29.7,44.1
-path	35.5,37.8	34.5,28.2	39.5,21.0
-path	44.2,8.3	51.3,14.0	57.5,20.9
-path	56.1,34.3	49.9,46.2	41.2,46.6
-path	40.1,55.0	41.3,67.4	31.8,71.9
-#include "follow_path_herbs"
-You will need {_G.max(0 , (80-itemcount(2450,2453,785,3820,2452)))} herbs
-collect Mageroyal##785 |n
-collect Bruiseweed##2453 |n
-collect Briarthorn##2450 |n
-Mill the 80 herbs you gathered into Dusky Pigment
-collect 42 Dusky Pigment##39334 |condition skill("Inscription")>=128
-|tip You can also buy these materials from the Auction House.
+Open Your Inscription Crafting Panel:
+_<Create 30 Scroll of Recall>_
+Reach Level 75 Inscription |skill Inscription,75
 step
-#include "trainer_Inscription"
-learn Midnight Ink##53462 |condition skill("Inscription")>=128
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Midnight Ink |learn Midnight Ink##53462 |goto 49.83,74.82
 step
-create 21 Midnight Ink##53462,Inscription,21 total |condition skill("Inscription")>=128
+collect 72 Dusky Pigment##39334
+|tip Use the "Dusky Pigment/Verdant Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-#include "vendor_Inscription"
-buy 59 Light Parchment##39354 |condition itemcount(39354) >= 59 or skill("Inscription")>=128
+Open Your Inscription Crafting Panel:
+_<Create 36 Midnight Ink>_
+Reach Level 80 Inscription |skill Inscription,80
 step
-create Research: Moonglow Ink##165564,Inscription,107
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Vanishing Powder |learn Vanishing Powder##92026 |goto 49.83,74.82
 step
-create Research: Midnight Ink##165304,Inscription,128
+Open Your Inscription Crafting Panel:
+_<Create 25 Vanishing Powder>_
+Reach Level 100 Inscription |skill Inscription,100
 step
-#include "trainer_Inscription"
-learn Lions Ink##57704 |condition skill("Inscription")>=200
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Lion's Ink |learn Lion's Ink##57704 |goto 49.83,74.82
 step
-#include "vendor_Inscription"
-buy 13 Common Parchment##39354 |condition itemcount(39354) >= 13 or skill("Inscription")>=200
+collect 532 Golden Pigment##39338
+|tip Use the "Golden Pigment/Burnt Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-map Northern Stranglethorn
-path follow loose;loop;ants straight;dist 70
-path 64.2,25.4		63.9,39.4		56.2,43.2
-path 42.5,43.9		35.9,32.9		31.5,37.2
-path 23.1,32.3		17.4,24.1
-#include "follow_path_herbs"
-You need about 240 Golden giving herbs total
-collect Grave Moss##3369 |n
-collect Kingsblood##3356 |n
-collect Liferoot##3357 |n
-collect Wild Steelbloom##3355 |n
-You'll need about {_G.max(0 , (240-itemcount(3369,3356,3357,3355)))} more herbs.
-Mill the 240 herbs you gathered into Golden Pigment |cast Milling##51005
-collect 72 Golden Pigment##39338 |condition skill("Inscription")>=200
-|tip You can also buy these materials from the Auction House.
+Open Your Inscription Crafting Panel:
+_<Create 216 Lion's Ink>_
+|tip Make all of these, you'll need them later.
+Reach Level 105 Inscription |skill Inscription,105
 step
-create Lions Ink##57704,Inscription,45 total |n
-collect 45 Lions Ink##43116 |condition skill("Inscription")>=200
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Research: Moonglow Ink |learn Research: Moonglow Ink##165564 |goto 49.83,74.82
 step
-#include "vendor_Inscription"
-buy 25 Light Parchment##39354 |condition itemcount(39354) >= 25 or skill("Inscription")>=200
+Open Your Inscription Crafting Panel:
+_<Create 4 Research: Moonglow Ink>_
+Reach Level 109 Inscription |skill Inscription,109
 step
-create Research: Midnight Ink##165304,Inscription,149
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Research: Midnight Ink |learn Research: Midnight Ink##165304 |goto 49.83,74.82
 step
-#include "trainer_Inscription"
-skillmax Inscription,225
-|tip You must be at least level 20.
+Open Your Inscription Crafting Panel:
+_<Create 3 Research: Midnight Ink>_
+Reach Level 112 Inscription |skill Inscription,112
 step
-#include "vendor_Inscription"
-buy 50 Light Parchment##39354 |condition itemcount(39354) >= 50 or skill("Inscription")>=200
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Research: Lion's Ink |learn Research: Lion's Ink##165456 |goto 49.83,74.82
 step
-create Research: Lion's Ink##165456,Inscription,200
+Open Your Inscription Crafting Panel:
+_<Create 4 Research: Lion's Ink>_
+Reach Level 116 Inscription |skill Inscription,116
 step
-#include "trainer_Inscription"
-skillmax Inscription,300
-|tip You must be at least level 35.
+Open Your Inscription Crafting Panel:
+_<Create 34 Newly Discovered Lion's Ink Glyphs>_
+|tip Create 34 of whatever glyph was discovered during Research: Lion's Ink from the previous step.
+Reach Level 150 Inscription |skill Inscription,150
 step
-map Feralas
-path follow loose;loop;ants straight;dist 60
-path 73.0,42.0		72.9,37.3		70.5,37.1
-path 69.2,42.3		67.3,45.9		63.9,48.1
-path 59.4,46.6		59.8,54.2		56.0,60.1		55.2,66.6
-path 58.6,64.7		61.3,61.9		62.8,58.0
-path 68.8,50.3		69.0,60.1		71.4,60.0
-path 72.1,55.5		75.9,56.6
-path 73.3,50.2
-#include "follow_path_herbs"
-You will need {_G.max(0 , (210-itemcount(3819,3818,3821,3358)))} herbs
-collect Fadeleaf##3818 |n
-collect Goldthorn##3821 |n
-collect Khadgar's Whisker##3358 |n
-Mill the 210 herbs you gathered, into Emerald Pigment and Indigo Pigment |cast Milling##51005
-collect 102 Emerald Pigment##39339 |condition skill("Inscription")>=251
-|tip You can also buy these materials from the Auction House.
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Jadefire Ink |learn Jadefire Ink##57707 |goto 49.83,74.82
 step
-#include "trainer_Inscription"
-learn Celestial Ink##57709 |condition skill("Inscription")>=251
+collect 80 Emerald Pigment##39339
+|tip Use the "Emerald Pigment/Indigo Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Inscription"
-learn Shimmering Ink##57711 |condition skill("Inscription")>=251
+Open Your Inscription Crafting Panel:
+_<Create 40 Jadefire Ink>_
+|tip Make all of these, you'll need them later.
+Reach Level 155 Inscription |skill Inscription,155
 step
-#include "vendor_Inscription"
-buy 70 Light Parchment##39354 |condition itemcount(39354) >= 70 or skill("Inscription")>=251
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Stamina III |learn Scroll of Stamina III##50614 |goto 49.83,74.82
 step
-#include "trainer_Inscription"
-learn Jadefire Ink##57707 |condition skill("Inscription")>=251
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Stamina III>_
+Reach Level 160 Inscription |skill Inscription,160
 step
-create Jadefire Ink##57707,Inscription,41 total |n
-skill Inscription,200
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Versatility III |learn Scroll of Versatility III##50606 |goto 49.83,74.82
 step
-create Research: Jadefire Ink##165460,Inscription,251
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Versatility III>_
+Reach Level 165 Inscription |skill Inscription,165
 step
-map Swamp of Sorrows
-path follow loose;loop;ants straight;dist 60
-path 18.8,60.4		23.9,55.3		27.3,62.0
-path 37.5,53.6		57.5,59.1		77.4,79.5
-path 80.9,60.1		88.6,63.4		79.9,42.4
-path 75.1,23.5		50.7,31.3		24.6,45.3
-path 14.1,33.2		21.5,45.0
-#include "follow_path_herbs"
-You need about 140 Silvery-giving herbs total
-collect Golden Sansam##13464 |n
-collect Sorrowmoss##13466 |n
-You'll need about {_G.max(0 , (140-itemcount(13463,13464,13467,13465,13466)))} more herbs.
-Mill the 140 herbs you gathered into Silvery Pigment. |cast Milling##51005
-collect 90 Silvery Pigment##39341 |condition skill("Inscription")>=300
-|tip You can also buy these materials from the Auction House.
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Intellect III |learn Scroll of Intellect III##50599 |goto 49.83,74.82
 step
-#include "vendor_Inscription"
-buy 36 Light Parchment##39354 |condition itemcount(39354) >= 36 or skill("Inscription")>=300
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Intellect III>_
+Reach Level 170 Inscription |skill Inscription,170
 step
-create 36 Shimmering Ink##57711,Inscription,36 total |n
-skill Inscription,255
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Strength III |learn Scroll of Strength III##58486 |goto 49.83,74.82
 step
-create 16 Research: Shimmering Ink##165463,Inscription,300
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Strength III>_
+Reach Level 175 Inscription |skill Inscription,175
 step
-#include "trainer_Inscription"
-skillmax Inscription,375
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Agility III |learn Scroll of Agility III##58476 |goto 49.83,74.82
 step
-#include "FW_DG_Path"
-#include "follow_path_herbs"
-collect Felweed##22785 |n
-collect Dreaming Glory##22786 |n
-Gather around _{_G.max(0 , (180-itemcount(22790,22786,22785,22793,22787,22789,22792,22791)))}_ more herbs in stacks of 5
-Mill the herbs you have gathered |cast Milling##51005
-collect 90 Nether Pigment##39342 |condition skill("Inscription")>=350
-|tip You can also buy these materials from the Auction House.
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Agility III>_
+Reach Level 180 Inscription |skill Inscription,180
 step
-#include "vendor_Inscription"
-buy 30 Light Parchment##39354 |condition itemcount(39354) >= 30 or skill("Inscription")>=350
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Research: Jadefire Ink |learn Research: Jadefire Ink##165460 |goto 49.83,74.82
 step
-#include "vendor_Inscription"
-buy 45 Light Parchment##39354 |condition itemcount(39354) >= 45 or skill("Inscription")>=350
+Open Your Inscription Crafting Panel:
+_<Create 5 Research: Jadefire Ink>_
+Reach Level 185 Inscription |skill Inscription,185
 step
-#include "trainer_Inscription"
-learn Ethereal Ink##57713 |condition skill("Inscription")>=350
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Arcane Tarot |learn Arcane Tarot##59487 |goto 49.83,74.82
 step
-create 45 Ethereal Ink##57713,Inscription,305
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Royal Ink |learn Royal Ink##57708 |goto 49.83,74.82
 step
-create 15 Research: Ethereal Ink##165464,Inscription,350
+collect 30 Indigo Pigment##43105
+|tip Use the "Emerald Pigment/Indigo Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-#include "trainer_Inscription"
-skillmax Inscription,450
-|tip You must be at least level 65.
+Open Your Inscription Crafting Panel:
+_<Create 30 Royal Ink>_
+collect 30 Royal Ink##43119
 step
-#include "GC_TL_Path"
-#include "follow_path_herbs"
-collect Goldclover##36901 |n
-collect Tiger Lily##36904 |n
-collect Deadnettle##37921 |n
-Gather around _{_G.max(0 , (400-itemcount(36903,37921,39970,39969,36901,36907,36904,36906,36905)))}_ more herbs in stacks of 5
-Mill the herbs you gathered |cast Milling##51005
-collect 204 Azure Pigment##39343 |condition skill("Inscription")>=450 |or
-|tip You can also buy these materials from the Auction House.
-Click here to farm in a different spot |confirm |or
+Open Your Inscription Crafting Panel:
+_<Create 15 Arcane Tarot>_
+Reach Level 200 Inscription |skill Inscription,200
 step
-#include "GC_TL_AT_Path"
-#include "follow_path_herbs"
-collect Goldclover##36901 |n
-collect Tiger Lily##36904 |n
-collect Adder's Tongue##36903 |n
-collect Deadnettle##37921 |n
-You'll need about {_G.max(0 , (400-itemcount(36903,37921,39970,39969,36901,36907,36904,36906,36905)))} more herbs in stacks of 5.
-Mill the herbs you gathered |cast Milling##51005
-collect 204 Azure Pigment##39343 |condition skill("Inscription")>=450
-|tip You can also buy these materials from the Auction House.
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Celestial Ink |learn Celestial Ink##57709 |goto 49.83,74.82
 step
-#include "trainer_Inscription"
-learn Ink of Sea##57715 |condition skill("Inscription")>=450
+collect 68 Violet Pigment##39340
+|tip Use the "Violet Pigment/Ruby Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
 step
-create 102 Ink of Sea##57715,Inscription,103 total |n
-skill Inscription,355
+Open Your Inscription Crafting Panel:
+_<Create 34 Celestial Ink>_
+|tip Make all of these, you'll need them later.
+Reach Level 205 Inscription |skill Inscription,205
 step
-#include "vendor_Inscription"
-buy 102 Light Parchment##39354 |condition itemcount(39354) >= 102 or skill("Inscription")>=450
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Recall II |learn Scroll of Recall II##60336 |goto 49.83,74.82
 step
-create 32 Research: Ink of the Sea##165465,Inscription,450
+Open Your Inscription Crafting Panel:
+_<Create 10 Scroll of Recall II>_
+Reach Level 215 Inscription |skill Inscription,215
 step
-#include "trainer_Inscription"
-skillmax Inscription,525
-|tip You must be at least level 75.
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Intellect IV |learn Scroll of Intellect IV##50600 |goto 49.83,74.82
 step
-#include "SV_CB_Path"
-#include "follow_path_herbs"
-collect Cinderbloom##52983 |n
-collect Stormvine##52984 |n
-Gather around _{_G.max(0 , (180-itemcount(52985,52983,52989,52984,52987,52988)))}_ herbs in stacks of 5
-Mill the 205 herbs you purchased into Ashen Pigment |cast Milling##51005
-collect 102 Ashen Pigment##61979 |condition skill("Inscription")>=500
-|tip You can also buy these materials from the Auction House.
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Intellect IV>_
+Reach Level 220 Inscription |skill Inscription,220
 step
-#include "trainer_Inscription"
-learn Blackfallow Ink##86004 |condition skill("Inscription")>=500
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Strength IV |learn Scroll of Strength IV##58487 |goto 49.83,74.82
 step
-create Blackfallow Ink##86004,Inscription,51 total |n
-skill Inscription,450
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Strength IV>_
+Reach Level 225 Inscription |skill Inscription,225
 step
-#include "vendor_Inscription"
-buy 51 Light Parchment##39354 |condition itemcount(39354) >= 51 or skill("Inscription")>=500
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Agility IV |learn Scroll of Agility IV##58478 |goto 49.83,74.82
 step
-create 17 Research: Blackfallow Ink##165466,Inscription,501
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Agility IV>_
+Reach Level 230 Inscription |skill Inscription,230
 step
-confirm |next "Profession Guides\\Inscription\\Leveling Guides\\Inscription 500-600 Leveling Guide"
-|tip This will take you to the Inscription 500 - 600 guides.
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Research: Celestial Ink |learn Research: Celestial Ink##165461 |goto 49.83,74.82
+step
+Open Your Inscription Crafting Panel:
+_<Create 3 Research: Celestial Ink>_
+Reach Level 233 Inscription |skill Inscription,233
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Fiery Ink |learn Fiery Ink##57710 |goto 49.83,74.82
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Shadowy Tarot |learn Shadowy Tarot##59491 |goto 49.83,74.82
+step
+collect 34 Ruby Pigment##39340
+|tip Use the "Violet Pigment/Ruby Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 34 Fiery Ink>_
+collect 34 Fiery Ink##43121
+step
+Open Your Inscription Crafting Panel:
+_<Create 17 Shadowy Tarot>_
+Reach Level 250 Inscription |skill Inscription,250
+step
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Shimmering Ink |learn Shimmering Ink##57711 |goto 49.83,74.82
+step
+collect 84 Silvery Pigment##39341
+|tip Use the "Silvery Pigment/Sapphire Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 42 Shimmering Ink>_
+|tip Make all of these, you'll need them later.
+Reach Level 255 Inscription |skill Inscription,255
+step
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Versatility V |learn Scroll of Versatility V##50608 |goto 49.83,74.82
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Versatility V>_
+Reach Level 260 Inscription |skill Inscription,260
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Intellect V |learn Scroll of Intellect V##50601 |goto 49.83,74.82
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Intellect V>_
+Reach Level 265 Inscription |skill Inscription,265
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Strength V |learn Scroll of Strength V##58488 |goto 49.83,74.82
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Strength V>_
+Reach Level 270 Inscription |skill Inscription,270
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Agility V |learn Scroll of Agility V##58480 |goto 49.83,74.82
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Agility V>_
+Reach Level 275 Inscription |skill Inscription,275
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Research: Shimmering Ink |learn Research: Shimmering Ink##165463 |goto 49.83,74.82
+step
+collect 90 Silvery Pigment##39341
+|tip Use the "Silvery Pigment/Sapphire Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 15 Research: Shimmering Ink>_
+Reach Level 290 Inscription |skill Inscription,290
+step
+Enter the building |goto 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Scroll of Stamina VI |learn Scroll of Stamina VI##50618 |goto 49.83,74.82
+step
+collect 20 Silvery Pigment##39341
+|tip Use the "Silvery Pigment/Sapphire Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 10 Shimmering Ink>_
+collect 10 Shimmering Ink##43122
+step
+Open Your Inscription Crafting Panel:
+_<Create 10 Scroll of Stamina VI>_
+Reach Level 300 Inscription |skill Inscription,300
+step
+_Congratulations!_
+You Reached 300 Inscription Skill.
 ]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Outland Inscription 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Outland Inscription skill from 1-75.",
+condition_end=function() return skill('Outland Inscription') >= 75 end,
+condition_suggested=function() return skill('Outland Inscription') > 0 and skill('Outland Inscription') < 75 end,
+},[[
+step
+Enter the building |goto Shattrath City/0 45.21,84.06 < 5 |walk
+clicknpc Inscription##33615
+|tip Inside the building.
+Train Outland Inscription |skillmax Outland Inscription,75 |goto 43.44,90.54
+|tip You must be at least level 58.
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 35.81,46.17 < 5 |walk
+talk Recorder Lidio##33679
+|tip Inside the building.
+Train Outland Inscription |skillmax Outland Inscription,75 |goto 36.13,43.69
+|tip You must be at least level 58.
+only if rep ('The Aldor') >= Neutral
+step
+talk Eral##19197
+buy Virtuoso Inking Set##39505 |n
+collect 1 Virtuoso Inking Set##39505 |goto 61.70,71.00
+step
+talk Eral##19197
+buy 200 Light Parchment##39354 |n
+collect 200 Light Parchment##39354 |goto 61.70,71.00
+step
+collect 346 Nether Pigment##39342
+|tip Use the "Nether Pigment/Ebon Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 173 Ethereal Ink>_
+|tip Make all of these, you'll need them later.
+Reach Level 5 Outland Inscription |skill Outland Inscription,5
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Inscription##33615
+|tip Inside the building.
+Train Scroll of Strength VI |learn Scroll of Strength VI##58489 |goto 43.44,90.54
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 35.81,46.17 < 5 |walk
+talk Recorder Lidio##33679
+|tip Inside the building.
+Train Scroll of Strength VI |learn Scroll of Strength VI##58489 |goto 36.13,43.69
+only if rep ('The Aldor') >= Neutral
+step
+Open Your Inscription Crafting Panel:
+_<Create 10 Scroll of Strength VI>_
+Reach Level 15 Outland Inscription |skill Outland Inscription,15
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Inscription##33615
+|tip Inside the building.
+Train Scroll of Agility VI |learn Scroll of Agility VI##58481 |goto 43.44,90.54
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 35.81,46.17 < 5 |walk
+talk Recorder Lidio##33679
+|tip Inside the building.
+Train Scroll of Agility VI |learn Scroll of Agility VI##58481 |goto 36.13,43.69
+only if rep ('The Aldor') >= Neutral
+step
+Open Your Inscription Crafting Panel:
+_<Create 13 Scroll of Agility VI>_
+Reach Level 25 Outland Inscription |skill Outland Inscription,25
+step
+Enter the building |goto 45.21,84.06 < 5 |walk
+clicknpc Inscription##33615
+|tip Inside the building.
+Train Research: Ethereal Ink |learn Research: Ethereal Ink##165464 |goto 43.44,90.54
+only if rep ('The Scryers') >= Neutral
+step
+Enter the building |goto 35.81,46.17 < 5 |walk
+talk Recorder Lidio##33679
+|tip Inside the building.
+Train Research: Ethereal Ink |learn Research: Ethereal Ink##165464 |goto 36.13,43.69
+only if rep ('The Aldor') >= Neutral
+step
+Open Your Inscription Crafting Panel:
+_<Create 50 Research: Ethereal Ink>_
+Reach Level 75 Outland Inscription |skill Outland Inscription,75
+step
+_Congratulations!_
+You Reached 75 Outland Inscription Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Northrend Inscription 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Northrend Inscription skill from 1-75.",
+condition_end=function() return skill('Northrend Inscription') >= 75 end,
+condition_suggested=function() return skill('Northrend Inscription') > 0 and skill('Northrend Inscription') < 75 end,
+},[[
+step
+talk Tink Brightbolt##26995
+Train Northrend Inscription |skillmax Northrend Inscription,75 |goto Borean Tundra/0 57.59,71.63
+|tip You must be at least level 58.
+step
+collect 214 Azure Pigment##39343
+|tip Use the "Azure Pigment/Icy Pigment" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 107 Ink of the Sea>_
+|tip Make all of these, you'll need them later.
+Reach Level 20 Northrend Inscription |skill Northrend Inscription,20
+step
+talk Tink Brightbolt##26995
+Train Research: Ink of the Sea |learn Research: Ink of the Sea##165465 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Research: Ink of the Sea>_
+Reach Level 25 Northrend Inscription |skill Northrend Inscription,25
+step
+talk Tink Brightbolt##26995
+Train Scroll of Stamina VIII |learn Scroll of Stamina VIII##50620 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Stamina VIII>_
+Reach Level 30 Northrend Inscription |skill Northrend Inscription,30
+step
+talk Tink Brightbolt##26995
+Train Scroll of Versatility VIII |learn Scroll of Versatility VIII##50611 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Versatility VIII>_
+Reach Level 35 Northrend Inscription |skill Northrend Inscription,35
+step
+talk Tink Brightbolt##26995
+Train Scroll of Intellect VIII |learn Scroll of Intellect VIII##50604 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Intellect VIII>_
+Reach Level 40 Northrend Inscription |skill Northrend Inscription,40
+step
+talk Tink Brightbolt##26995
+Train Scroll of Strength VIII |learn Scroll of Strength VIII##58491 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 5 Scroll of Strength VIII>_
+Reach Level 45 Northrend Inscription |skill Northrend Inscription,45
+step
+talk Tink Brightbolt##26995
+Train Scroll of Agility VIII |learn Scroll of Agility VIII##58483 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 12 Scroll of Agility VIII>_
+Reach Level 55 Northrend Inscription |skill Northrend Inscription,55
+step
+talk Tink Brightbolt##26995
+Train Research: Ink of the Sea |learn Research: Ink of the Sea##165465 |goto 57.59,71.63
+step
+Open Your Inscription Crafting Panel:
+_<Create 20 Research: Ink of the Sea>_
+Reach Level 75 Northrend Inscription |skill Northrend Inscription,75
+step
+_Congratulations!_
+You Reached 75 Northrend Inscription Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Inscription\\Leveling Guides\\Cataclysm Inscription 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Cataclysm Inscription skill from 1-75.",
+condition_end=function() return skill('Cataclysm Inscription') >= 75 end,
+condition_suggested=function() return skill('Cataclysm Inscription') > 0 and skill('Cataclysm Inscription') < 75 end,
+},[[
+step
+Enter the building |goto Stormwind City/0 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Cataclysm Inscription |skillmax Cataclysm Inscription,75 |goto 49.83,74.82
+|tip You must be at least level 78.
+step
+talk Stanly McCormick##30730
+|tip Inside the building.
+buy 350 Light Parchment##39354 |goto 49.57,74.95
+step
+kill Schnottz Infantryman##48629+
+collect Technique: Origami Beetle##65651 |n
+use the Technique: Origami Beetle##65651
+Train Origami Beetle |learn Origami Beetle##86646 |goto Uldum/0 39.01,13.53
+step
+Open Your Inscription Crafting Panel:
+_<Create 100 Origami Beetle>_
+Reach Level 60 Cataclysm Inscription |skill Cataclysm Inscription,60
+step
+Enter the building |goto Stormwind City/0 50.05,73.58 < 5 |walk
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Blackfallow Ink |learn Blackfallow Ink##86004 |goto 49.83,74.82
+step
+talk Catarina Stanford##30713
+|tip Inside the building.
+Train Forged Documents |learn Forged Documents##89244 |goto 49.83,74.82
+step
+collect 86 Ashen Pigment##61979
+|tip Use the "Ashen Pigment/Burning Embers" farming guide to gather and mill herbs, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Open Your Inscription Crafting Panel:
+_<Create 43 Blackfallow Ink>_
+collect 43 Blackfallow Ink##61978
+step
+Open Your Inscription Crafting Panel:
+_<Create 1 Forged Documents>_
+Reach Level 61 Cataclysm Inscription |skill Cataclysm Inscription,61
+step
+Open Your Inscription Crafting Panel:
+_<Create 14 Research: Blackfallow Ink>_
+Reach Level 75 Cataclysm Inscription |skill Cataclysm Inscription,75
+step
+_Congratulations!_
+You Reached 75 Cataclysm Inscription Skill.
+]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Jewelcrafting\\Leveling Guides\\Jewelcrafting 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Jewelcrafting skill from 1-300.",

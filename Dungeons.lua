@@ -21,16 +21,6 @@ local DungeonNamesToMapNames = {
 setmetatable(DungeonNamesToMapNames,{__index=function(t,map) return map end})  -- return the same name if no alias is found
 Dungeons.DungeonNamesToMapNames  = DungeonNamesToMapNames
 
-local function UpdateDungeonItemlevels(dungeon)
-	-- get item requirements - if they're low enough, we just won't know it, but we won't care
-	local _,code,a,b = GetLFDLockInfo(dungeon.id,1)
-	if code==4 then
-		dungeon.min_ilevel = a
-	else
-		dungeon.min_ilevel = 0
-	end
-end
-
 Dungeons.ExpansionsLimits = {
 	[0] = 60,
 	[1] = 80,
@@ -97,6 +87,16 @@ local attunements = {
 	[1488] = {attunement_queston=46244}, -- Cathedral of Eternal Night HC
 }
 
+local override_min_levels = { -- bfa dungeons have different min levels per faction
+	[1672] = { Alliance=110, Horde=120 }, -- Freehold
+	[1774] = { Alliance=110, Horde=120 }, -- Shrine of the Storm
+	[1705] = { Alliance=110, Horde=120 }, -- Waycrest Manor
+	[1778] = { Alliance=115, Horde=120 }, -- Tol Dagor
+	[1668] = { Alliance=120, Horde=110 }, -- Atal´dazar
+	[1694] = { Alliance=120, Horde=110 }, -- Temple of Sethraliss
+	[1777] = { Alliance=120, Horde=110 }, -- The Underrot
+	[1707] = { Alliance=120, Horde=115 }, -- The Motherlode!!
+}
 
 setmetatable(Dungeons,{
 	__index=function(t,id)
@@ -110,7 +110,7 @@ setmetatable(Dungeons,{
 			local d=hardcoded_dungeons[id]
 			name,expansionLevel,minLevel,min_ilevel,difficulty = d.name,d.expansionLevel,d.minLevel,d.min_ilevel,d.difficulty
 		else
-			name, typeID, subtypeID, minLevel, maxLevel, recLevel, minRecLevel, maxRecLevel, expansionLevel, groupID, textureFilename, difficulty, maxPlayers, description, isHoliday = GetLFGDungeonInfo(id)
+			name, typeID, subtypeID, minLevel, maxLevel, recLevel, minRecLevel, maxRecLevel, expansionLevel, groupID, textureFilename, difficulty, maxPlayers, description, isHoliday, bonusRepAmount, minPlayers, isTimeWalker, name2, min_ilevel  = GetLFGDungeonInfo(id)
 		end
 
 		if name and typeID~=4 then
@@ -120,9 +120,14 @@ setmetatable(Dungeons,{
 			dungeon.name = name
 			dungeon.difficulty = difficulty
 			dungeon.isHoliday = isHoliday
-			dungeon.minLevel = minLevel
+			if override_min_levels[id] then
+				dungeon.minLevel = override_min_levels[id][Dungeons.Faction]
+			else
+				dungeon.minLevel = minLevel
+			end
 			dungeon.expansionLevel = expansionLevel
 			dungeon.maxScaleLevel = Dungeons.ExpansionsLimits[expansionLevel]
+			dungeon.min_ilevel = min_ilevel
 
 			if attunements[id] then
 				dungeon.attunement_achieve = attunements[id].attunement_achieve
@@ -141,33 +146,19 @@ setmetatable(Dungeons,{
 })
 
 function Dungeons:Get(id)
-	local dungeon = self[id]
-	UpdateDungeonItemlevels(dungeon)
-	return dungeon
+	return self[id]
 end
 
 
 function Dungeons:Init()
 	--if not LFDDungeonList then return end
+	Dungeons.Faction = UnitFactionGroup("player")
 	for id=1,2000 do
 		local cache_wasted = self[id]
 	end
 end
 
 Dungeons:Init()
-
--- Set up listening for lock info.
-local FRAME = CreateFrame("FRAME","ZGVDungeonsUpdateFrame")
-FRAME:RegisterEvent("LFG_LOCK_INFO_RECEIVED")
-FRAME:SetScript("OnEvent",function(self,event)
-	if event=="LFG_LOCK_INFO_RECEIVED" then
-		for id=1,2000 do
-			local dungeon = Dungeons[id]
-			if dungeon then  UpdateDungeonItemlevels(dungeon)  end
-		end
-	end
-end)
-
 
 ZGV.UTILS.Dungeons = {
 	GetDungeonsByName = function()

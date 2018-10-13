@@ -3381,17 +3381,162 @@ step
 _Congratulations!_
 You completed the Enchanting questline.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Leveling Guides\\Engineering 700-800 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Leveling Guides\\Legion Engineering 1-100 Leveling Guide",{
 author="support@zygorguides.com",
-description="This guide will walk you through leveling your Engineering profession from 700-800.",
+description="This guide will walk you through leveling your Legion Engineering skill from 1-100.",
 startlevel=100.0,
 condition_end=function() return skill('Legion Engineering') >= 100 end,
 condition_suggested=function() return skill('Legion Engineering') > 0 and skill('Legion Engineering') < 100 and level >= 100 end,
 },[[
 step
-_Before Starting This Guide:_
-Complete the "Engineering Quest Line" Guide
-Click Here to Continue |confirm
+Enter the building |goto Dalaran L/10 38.52,27.18 < 5 |walk
+talk Timofey Oshenko##92194
+|tip Inside the building.
+Learn the Engineering Profession |condition skill("Engineering")>=1 |goto Dalaran L/10 37.89,26.10
+step
+talk Hobart Grapplehammer##93539
+|tip Inside the building.
+accept Aww Scrap!##40545 |goto Dalaran L/10 38.35,24.53
+step
+Leave the building |goto 38.52,27.15 < 5 |walk
+talk Filgo Scrapbottom##102193
+turnin Aww Scrap!##40545 |goto Dalaran L/11 65.96,52.82
+accept Endless Possibilities##40854 |goto Dalaran L/11 65.96,52.82
+step
+click Fel Reaver Husk##246519
+collect Fel Reaver Husk##133752 |q 40854/1 |goto 66.36,51.98
+step
+Enter the building |goto 38.53,27.23 < 5 |walk
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+turnin Endless Possibilities##40854 |goto Dalaran L/10 38.83,24.70
+accept Our Man in Azsuna##40855 |goto Dalaran L/10 38.83,24.70
+step
+Leave the building |goto 38.53,27.23 < 5 |walk
+talk Fargo Flintlocke##102195
+turnin Our Man in Azsuna##40855 |goto Azsuna/0 65.22,24.91
+accept It'll Cost You##40856 |goto Azsuna/0 65.22,24.91
+accept The Latest Fashion: Headguns!##40859 |goto Azsuna/0 65.22,24.91
+stickystart "Test_Headgun_On_Fel_Critters_Engineering"
+step
+click Fel Reaver Arm##246522
+collect Fel Reaver Arm##133753 |q 40856/1 |goto 66.87,27.02
+step
+click Fel Reaver Leg##246523
+collect Fel Reaver Leg##133754 |q 40856/2 |goto 68.35,25.81
+step
+label "Test_Headgun_On_Fel_Critters_Engineering"
+Use Flinlocke's Headgun Prototype on Felspiders and Fel-Tainted Squirrels |use Flintlocke's Headgun Prototype##133761
+|tip They look like small spiders and squirrels running around on the ground around this area.
+Test the Headgun on #10# Fel Critters |q 40859/1 |goto 66.87,25.83
+step
+Follow the path up |goto 65.80,25.43 < 20 |only if walking
+talk Fargo Flintlocke##102195
+turnin It'll Cost You##40856 |goto 65.22,24.91
+accept The Missing Pieces##40858 |goto 65.22,24.91
+turnin The Latest Fashion: Headguns!##40859 |goto 65.22,24.91
+step
+Enter the building |goto 38.53,27.23 < 5 |walk
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+turnin The Missing Pieces##40858 |goto Dalaran L/10 38.83,24.70
+step
+Reach Level 102 |ding 102
+|tip Use the Leveling guides to accomplish this.
+step
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+accept Always the Last Thing##40863 |goto Dalaran L/10 38.83,24.70
+step
+talk Hobart Grapplehammer##93539
+|tip Inside the building.
+accept Resupplying the Line##40860 |goto 38.35,24.53
+step
+Enter the building |goto 38.97,35.15 < 5 |walk
+talk Tiffany Cartier##93526
+|tip Inside the building.
+Tell her _"Didi sent me to retrieve a Prismatic Felslate Diamond."_
+Get the Prismatic Felslate Diamond |q 40863/1 |goto 40.27,34.68
+step
+Enter the building |goto 38.53,27.23 < 5 |walk
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+Tell her _"Here's the diamond you requested."_
+Watch the dialogue
+Have Didi Test the Diamond |q 40863/2 |goto 38.83,24.70
+step
+Enter the building |goto 41.27,31.56 < 5 |walk
+talk Deucus Valdera##92458
+|tip Inside the building.
+Tell him _"Didi sent me to retrieve a Volatile Leytorrent Potion."_
+Get the Volatile Leytorrent Potion |q 40863/3 |goto 41.33,33.41
+step
+Enter the building |goto 38.53,27.23 < 5 |walk
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+Tell her _"Here's the potion you requested."_
+Watch the dialogue
+Have Didi Test the Potion |q 40863/4 |goto 38.83,24.70
+step
+Enter the building |goto 46.32,38.41 < 5 |walk
+talk Bonegrim##97863
+|tip Inside the building.
+Ask him _"Would you happen to have a Fel-infused Core?"_
+Watch the dialogue
+Find a Fel-Infused Core |q 40863/5 |goto 47.96,38.49
+step
+Run up the stairs |goto 50.53,40.11 < 5 |walk
+talk Catriona Macrae##96198
+|tip Talk to Catriona Macrae to get her to leave the room.
+click Catriona's Jewel##246701
+|tip Upstairs inside the building.
+collect Catriona's Jewel##133895 |q 40863/6 |goto 49.51,38.18
+step
+Run down the stairs |goto 49.65,41.27 < 5 |walk
+talk Bonegrim##97863
+|tip Downstairs inside the building.
+Tell him _"Here's the jewel, now give me the core."_
+collect Fel-Infused Core##133881 |q 40863/7 |goto 47.96,38.49
+step
+Enter the building |goto 38.53,27.23 < 5 |walk
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+Tell her _"Here's the core you requested."_
+Watch the dialogue
+Have Didi Test the Core |q 40863/8 |goto 38.83,24.70
+step
+talk Didi the Wrench##93520
+|tip She walks around inside the building.
+turnin Always the Last Thing##40863 |goto 38.83,24.70
+accept Modular Modifications##40864 |goto 38.83,24.70
+step
+Follow the road |goto Val'sharah/0 59.12,59.65 < 30 |only if walking
+talk Fargo Flintlocke##102197
+turnin Resupplying the Line##40860 |goto Val'sharah/0 59.82,62.26
+accept All Charged Up##40862 |goto Val'sharah/0 59.82,62.26
+accept In My Sights##40861 |goto Val'sharah/0 59.82,62.26
+stickystart "Deployable_Bullet_Dispenser_Parts_Engineering"
+step
+Cross the bridge |goto 61.56,61.61 < 20 |only if walking
+Follow the path |goto 63.32,61.09 < 30 |only if walking
+Follow the path |goto 63.78,59.64 < 30 |only if walking
+Follow the path up |goto 63.14,58.36 < 30 |only if walking
+Use the Gunpowder Charges on Shimmering Oleanders |use Gunpowder Charges##133775
+|tip They look like wilted red-glowing plants around this area.
+Explode #15# Shimmering Oleanders |q 40862/1 |goto 62.99,56.01
+step
+label "Deployable_Bullet_Dispenser_Parts_Engineering"
+click Destroyed Deployable Bullet Dispensers##246875
+|tip They look like large metal objects on the ground around this area.
+collect 10 Deployable Bullet Dispenser Parts##133978 |q 40861/1 |goto 62.99,56.01
+step
+Follow the path down |goto 62.90,57.66 < 20 |only if walking
+Follow the path up |goto 63.64,59.67 < 30 |only if walking
+Cross the bridge |goto 62.33,61.64 < 20 |only if walking
+talk Fargo Flintlocke##102197
+turnin All Charged Up##40862 |goto 59.82,62.26
+turnin In My Sights##40861 |goto 59.82,62.26
 step
 talk Raethan##97359
 |tip For 5 gold, you can hire a bodyguard that will prevent you from attacking, or being attacked by, other players.
@@ -3404,99 +3549,35 @@ Kill enemies around this area
 |tip When the guards are present, the named PvE enemies will appear.
 collect 750 Sightless Eyes |condition curcount(1149) >= 750 |goto Dalaran L/11 68.95,58.41
 step
-Follow the path |goto 59.77,39.31 < 20 |walk
 talk The Widow##97366
 buy Schematic: Gunpowder Charge##137706 |n
-Use the Schematic: Gunpowder Charge |use Schematic: Gunpowder Charge##137706
-Learn the Rank 2 Schematic for Gunpowder Charge |learn Gunpowder Charge##199000
+|tip It costs 250 Sightless Eyes.
+use the Schematic: Gunpowder Charge##137706
+Train Gunpowder Charge (Rank 2) |learn Gunpowder Charge##199000 |goto 72.19,24.44
 step
 talk The Widow##97366
 buy Schematic: Gunpowder Charge##137720 |n
-Use the Schematic: Gunpowder Charge |use Schematic: Gunpowder Charge##137720
-Learn the Rank 3 Schematic for Gunpowder Charge |learn Gunpowder Charge##199014
+|tip It costs 500 Sightless Eyes and 1,500 gold.
+use the Schematic: Gunpowder Charge##137720
+Train Gunpowder Charge (Rank 3) |learn Gunpowder Charge##199014 |goto 72.19,24.44
 step
-collect 95 Leystone Ore##123918 |c
-|tip Use the "Leystone Ore & Felslate (Mining Route)" guide to gather them, if you have Mining.
-|tip You can also purchase them from the Auction House.
-|only if skill("Engineering") < 779
-step
+Enter the building |goto Dalaran L/10 38.53,27.33 < 5 |walk
 talk Hobart Grapplehammer##93539
-buy 400 Oversized Blasting Cap##136637 |n
-collect 1900 Oversized Blasting Cap##136637 |c
-|only if skill("Engineering") < 779
+|tip Inside the building.
+buy 2800 Oversized Blasting Cap##136637	|goto 38.36,24.58
+step
+collect 140 Leystone Ore##123918
+|tip Use the "Leystone Ore & Felslate (Mining Route)" farming guide to gather leystone, if you have Mining.
+|tip You can also purchase them from the Auction House.
 step
 Open Your Engineering Crafting Panel:
-|tip You may have to make a few more or less, depending on your luck.
-|tip The recipe will turn green and stop giving a guaranteed skill up each time you make it.
-_<Create 95 Gunpowder Charge>_
-|tip NOTE: Make sure to stop crafting when you reach level 779 Engineering.
-|tip This will save you a lot of gold later.
-Reach Level 779 Engineering |skill Engineering,779
-step
-Cross the bridge |goto Azsuna/0 43.06,45.38 < 30 |only if walking
-Follow the road |goto Azsuna/0 40.63,48.63 < 30 |only if walking
-Continue following the road |goto Azsuna/0 39.32,51.64 |only if walking
-Follow the path |goto Azsuna/0 38.79,55.36 < 30 |only if walking
-Continue following the path |goto Azsuna/0 38.99,57.96 |only if walking
-Follow the path |goto Azsuna/0 40.11,58.80 < 30 |only if walking
-Cross the water |goto Azsuna/0 41.60,60.71 < 30 |only if walking
-talk Fargo Flintlocke##102196
-buy 1 Schematic: Double-Barreled Cranial Cannon##137703 |n
-Use the Schematic: Double-Barreled Cranial Cannon |use Schematic: Double-Barreled Cranial Cannon##137703
-Learn the Rank 2 Schematic for Double-Barreled Cranial Cannon |learn Double-Barreled Cranial Cannon##198997 |goto Azsuna/0 42.99,62.84
-step
-Enter the Halls of Valor Dungeon:
-|tip Use the Group Finder to enter the dungeon.
-Kill enemies inside the Halls of Valor Dungeon
-|tip Use the "Halls of Valor" dungeon guide to accomplish this.
-collect Schematic: Double-Barreled Cranial Cannon##137717 |n
-|tip This recipe seems to drop most commonly from trash mobs inside the Halls of Valor dungeon.
-|tip Run the dungeon repeatedly until the schematic drops for you.
-|tip This may take a while.
-Use the Schematic: Double-Barreled Cranial Cannon |use Schematic: Double-Barreled Cranial Cannon##137717
-Learn the Rank 3 Schematic for Double-Barreled Cranial Cannon |learn Double-Barreled Cranial Cannon##199011
-step
-collect 390 Stormscale##124115 |c
-|tip Use the "Stormscale" farming guide to gather these, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-|only if skill("Engineering") < 800
-step
-collect 26 Felhide##124116 |c
-|tip Use the "World Quests" guide to complete Felhide world quests, if you have Skinning.
-|tip You can also purchase them from the Auction House.
-|only if skill("Engineering") < 800
-step
-collect 26 Blood of Sargeras##124124 |c
-|tip You can get these as rewards for certain world quests or killing dungeon bosses.
-|tip Use the "World Quests" guide and dungeon guides to accomplish this.
-|tip You can also get them by gathering with gathering professions at rank 2 or higher.
-|tip Use the Farming guides for to accomplish this.
-|only if skill("Engineering") < 800
-step
-talk Hobart Grapplehammer##93539
-buy 26 Sniping Scope##136636 |n
-collect 26 Sniping Scope##136636 |c
-|only if skill("Engineering") < 800
-step
-talk Hobart Grapplehammer##93539
-buy 26 Loose Trigger##136633 |n
-collect 26 Loose Trigger##136633 |c
-|only if skill("Engineering") < 800
-step
-talk Hobart Grapplehammer##93539
-buy 13 Surface-to-Infernal Rocket Launcher##136631 |n
-collect 13 Surface-to-Infernal Rocket Launcher##136631 |c
-|only if skill("Engineering") < 800
-step
-Open Your Engineering Crafting Panel:
-|tip You may have to make a few more or less, depending on your luck.
-|tip The recipe will turn green and stop giving a guaranteed skill up each time you make it.
-_<Create 13 Double-Barreled Cranial Cannon>_
-Reach Level 800 Engineering |skill Engineering,800
+_<Create 140 Gunpowder Charge>_
+Reach Level 100 Legion Engineering |skill Legion Engineering,100
 step
 _Congratulations!_
-You reached level 800 with the Engineering profession.
+You Reached 100 Legion Engineering Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Engineering\\Quest Guides\\Legion Engineering Quest Line",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Engineering quest line.",
@@ -5377,65 +5458,110 @@ step
 _Congratulations!_
 You completed the Argus Herbalism questline.
 ]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Inscription\\Leveling Guides\\Inscription 700-800 Leveling Guide",{
+ZGV.BETASTART()
+ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Inscription\\Leveling Guides\\Legion Inscription 1-100 Leveling Guide",{
 author="support@zygorguides.com",
-description="This guide will walk you through leveling your Inscription profession from 700-800.",
+description="This guide will walk you through leveling your Legion Inscription skill from 1-100.",
 startlevel=100.0,
 condition_end=function() return skill('Legion Inscription') >= 100 end,
 condition_suggested=function() return skill('Legion Inscription') > 0 and skill('Legion Inscription') < 100 and level >= 100 end,
 },[[
 step
-_Before Starting This Guide:_
-Complete the "Inscription Quest Line" Guide
-Click Here to Continue |confirm
+Enter the building |goto Dalaran L/10 41.99,37.85 < 5 |walk
+talk Professor Pallin##92195
+|tip Inside the building.
+Train the Inscription Profession |condition skill("Inscription")>=1 |goto 41.27,37.02
+step
+talk Professor Pallin##92195
+|tip Inside the building.
+accept Sign This##39847 |goto 41.26,37.01
+step
+use the Unsigned Contract##129047
+Sign the Contract |q 39847/1
+step
+talk Professor Pallin##92195
+|tip Inside the building.
+turnin Sign This##39847 |goto 41.26,37.01
+accept Smashing Herbs##39931 |goto 41.26,37.01
+step
+collect 20 Roseate Pigment##129032
+|tip Use the "Aethril" farming guide to gather and Mill Aethril, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+collect 2 Sallow Pigment##129034
+|tip Use the "Aethril" farming guide to gather and Mill Aethril, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+step
+Enter the building |goto 41.99,37.85 < 5 |walk
+talk Professor Pallin##92195
+|tip Inside the building.
+turnin Smashing Herbs##39931 |goto 41.26,37.01
+step
+click Technique: Tome of the Tranquil Mind##257999
+|tip Inside the building.
+use the Technique: Tome of the Tranquil Mind##141447
+Train Technique: Tome of the Tranquil Mind |learn Technique: Tome of the Tranquil Mind##227043 |goto 41.25,35.74
 step
 talk Jang Quillpaw##93544
-buy 500 Light Parchment##39354 |n
-collect 500 Light Parchment##39354 |goto Dalaran L/10 41.08,36.40
-|only if skill("Inscription") < 719
+|tip Inside the building.
+buy 880 Light Parchment##39354 |n
+collect 880 Light Parchment##39354 |goto 41.09,36.38
 step
-collect 25 Sallow Pigment##129034 |c
-collect 250 Roseate Pigment##129032 |c
-|tip You get these by gathering and milling any herb in Legion, if you have Herbalism.
-|tip Use the farming guides for Aethril, Dreamleaf, Foxflower, Fjarnskaggl, or Starlight Rose to accomplish this.
+collect 44 Sallow Pigment##129034
+|tip Use the "Aethril" farming guide to gather and Mill Aethril, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
-|tip Use your Milling ability on Legion herbs to accomplish this.
-|only if skill("Inscription") < 719
 step
 Open Your Inscription Crafting Panel:
-_<Create 25 Tome of the Tranquil Mind>_
-Reach Level 719 Inscription |skill Inscription,719
+_<Create 44 Tome of the Tranquil Mind>_
+Reach Level 40 Legion Inscription |skill Legion Inscription,40
 step
-collect 35 Darkmoon Prize Tickets |condition curcount(515) >= 35
-|tip Use the Darkmoon Faire guide to accomplish this.
+Press _I_ and queue for the Arcing Aquaducts wing of The Nighthold raid, or enter it normally
+Enter the Nighthold |goto The Nighthold/1 24.0,91.1 |c
+only if skill('Legion Inscription') <= 75
 step
-talk Professor Thaddeus Paleo##14847
-|tip The Darkmoon Faire event must be active in order to reach him.
-buy Technique: Prophecy Tarot##137746 |n
-Use the Technique: Prophecy Tarot |use Technique: Prophecy Tarot##137746
-Learn the Rank 3 Technique for Prophecy Tarot |learn Prophecy Tarot##192856 |goto Darkmoon Island/0 51.9,60.9
+kill Skorpyron##102263
+|tip Use the "Nighthold - Arcing Aquaducts (LFR)" raid guide to accomplish this.
+collect 1 Vantus Rune Technique: Skorpyron##139642 |n
+use the Vantus Rune Technique: Skorpyron##139642
+Train Vantus Rune Technique: Skorpyron |learn Vantus Rune Technique: Skorpyron##192815
 step
-talk Jang Quillpaw##93544
-buy 48 Light Parchment##39354 |n
-collect 48 Light Parchment##39354 |goto Dalaran L/10 41.08,36.40
-|only if skill("Inscription") < 800
+kill Skorpyron##102263
+|tip Use the "Nighthold - Arcing Aquaducts (LFR)" raid guide to accomplish this.
+|tip You will need to kill Skorpyron twice.
+|tip The first kill can be from LFR, but then the second kill will need to be from Normal or Heroic difficulty, or just wait until the following week to get another LFR kill.
+collect 1 Vantus Rune Technique: Skorpyron##137754 |n
+use the Vantus Rune Technique: Skorpyron##137754
+Train Vantus Rune Technique: Skorpyron |learn Vantus Rune Technique: Skorpyron##192867
 step
-collect 192 Sallow Pigment##129034 |c
-collect 1920 Roseate Pigment##129032 |c
-|tip You get these by gathering and milling any herb in Legion, if you have Herbalism.
-|tip Use the farming guides for Aethril, Dreamleaf, Foxflower, Fjarnskaggl, or Starlight Rose to accomplish this.
+talk Veridis Fallon##107376
+buy 1 Vantus Rune Technique: Skorpyron##137774 |n
+|tip It costs around 1,700 gold.
+use the Vantus Rune Technique: Skorpyron##137774
+Train Vantus Rune Technique: Skorpyron |learn Vantus Rune Technique: Skorpyron##192898 |goto Azsuna/0 46.90,41.43
+only if rep("Court of Farondis")>=Revered
+step
+collect 180 Sallow Pigment##129034
+|tip Use the "Aethril" farming guide to gather and Mill Aethril, if you have Herbalism.
 |tip You can also purchase them from the Auction House.
-|tip Use your Milling ability on Legion herbs to accomplish this.
+step
+collect 900 Roseate Pigment##129032
+|tip Use the "Aethril" farming guide to gather and Mill Aethril, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+only if rep("Court of Farondis")>=Revered
+step
+collect 1200 Roseate Pigment##129032
+|tip Use the "Aethril" farming guide to gather and Mill Aethril, if you have Herbalism.
+|tip You can also purchase them from the Auction House.
+only if rep("Court of Farondis")<=Honored
 step
 Open Your Inscription Crafting Panel:
-|tip You may have to make a few more or less, depending on your luck.
-|tip The recipe will turn green and stop giving a guaranteed skill up each time you make it.
-_<Create 48 Prophecy Tarot>_
-Reach Level 800 Inscription |skill Inscription,800
+_<Create 60 Vantus Rune Technique: Skorpyron>_
+Reach Level 100 Legion Inscription |skill Legion Inscription,100
 step
 _Congratulations!_
-You reached level 800 with the Inscription profession.
+You Reached 100 Legion Inscription Skill.
 ]])
+ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Profession Guides\\Inscription\\Quest Guides\\Legion Inscription Quest Line",{
 author="support@zygorguides.com",
 description="This guide will walk you through completing the Legion Inscription quest line.",

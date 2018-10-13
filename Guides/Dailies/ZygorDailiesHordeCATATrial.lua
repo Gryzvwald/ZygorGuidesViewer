@@ -3,8 +3,6 @@ if not ZygorGuidesViewer then return end
 if UnitFactionGroup("player")~="Horde" then return end
 if ZGV:DoMutex("DailiesHCATA") then return end
 ZygorGuidesViewer.GuideMenuTier = "TRI"
-ZGV.BETASTART()
-ZGV.BETAEND()
 ZygorGuidesViewer:RegisterGuide("Zygor's Dailies Guides\\Wrath of the Lich King Dailies\\Grizzly Hills\\Blackriver Logging Camp Dailies",{
 author="support@zygorguides.com",
 description="This guide section will walk you through completing the daily quest in the Blackriver Logging Camp region of Grizzly Hills. There are no pre-quests needed to unlock the daily quest offered in this guide section.",
@@ -420,17 +418,4 @@ step
 You have completed this daily guide today. You can do more dailies tomorrow
 Click here to return to the beginning of the guide |confirm
 |next "dailies"
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Quests",{
-author="support@zygorguides.com",
-condition_suggested=function() return isevent("Pilgrim's Bounty") end,
-description="This guide section will walk you through completing the quests for the Pilgrim's Bounty event, as well as getting your Cooking skill from 1-300.",
-},[[
-#include "Pilgrim's_Bounty_Quests"
-]])
-ZygorGuidesViewer:RegisterGuide("Zygor's Events Guides\\Pilgrim's Bounty\\Pilgrim's Bounty Achievements and Dailies",{
-condition_suggested=function() return isevent("Pilgrim's Bounty") end,
-},[[
-#include "Pilgrim's_Bounty_Achievements"
-#include "Pilgrim's_Bounty_Dailies"
 ]])

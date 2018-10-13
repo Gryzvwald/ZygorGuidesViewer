@@ -375,7 +375,8 @@ do
 	end
 
 	function Lib:GetTaxiDataBySlot()
-		local taxidata = C_TaxiMap.GetAllTaxiNodes()
+		local continent = ZGV:GetCurrentMapContinent()
+		local taxidata = C_TaxiMap.GetAllTaxiNodes(continent)
 		local taxidata_by_slot = {}
 		for i,taxi in ipairs(taxidata) do taxidata_by_slot[taxi.slotIndex]=taxi end
 		return taxidata,taxidata_by_slot
@@ -578,7 +579,7 @@ do
 
 		self:Debug("Scanning map for continent %d...",cont)
 
-		local taxidata = C_TaxiMap.GetAllTaxiNodes()
+		local taxidata = C_TaxiMap.GetAllTaxiNodes(cont)
 
 		-- switch to a specific operator
 		local current_operator
@@ -904,8 +905,8 @@ do
 	end
 
 	function Lib:DEV_FindNodeIDs(operator)
-		local taxidata = C_TaxiMap:GetAllTaxiNodes()
 		local continent = ZGV:GetCurrentMapContinent()
+		local taxidata = C_TaxiMap:GetAllTaxiNodes(continent)
 		local count_ided=0
 		local count_alreadyided=0
 		local count_failed=0

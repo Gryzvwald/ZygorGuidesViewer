@@ -3,1192 +3,740 @@ if not ZGV then return end
 
 local L = ZGV.L
 local G = _G
-local CHAIN = ZGV.ChainCall
 
 local tinsert,tremove,print,ipairs,pairs,wipe=tinsert,tremove,print,ipairs,pairs,wipe
-
-local ItemScore = ZGV.ItemScore
-
-local Logs = {}
-ItemScore.Logs = Logs
-
 local Gratuity = LibStub("LibGratuity-3.0")
 
-local FONT=ZGV.Font
-local FONTBOLD=ZGV.FontBold
+local ItemScore = ZGV.ItemScore
+LibStub("AceHook-3.0"):Embed(ItemScore)
 
-local function flip_array(arr)
-	local flipped = {}
-	for i,name in ipairs(arr) do flipped[name]=i end
-	return flipped
+local item_weapon_types = ItemScore.Item_Weapon_Types
+local item_armor_types = ItemScore.Item_Armor_Types
+local item_gem_types = ItemScore.Item_Gem_Types
+
+local ItemCache = {}
+ItemScore.ItemCache = ItemCache
+
+local function strip_link(itemlink)
+	local _,itemstring,_ = itemlink:match("(.*)item:([0-9-:]*)(.*)")
+	if itemstring then 	
+		return "item:"..itemstring:gsub(":0:","::")
+	end
+	return false
+end
+ItemScore.strip_link = strip_link
+	
+function ItemScore:Initialise()
+	-- apply lower armor types as viable
+	for class,classrules in pairs(ItemScore.rules) do
+		for spec,rule in pairs(classrules) do
+			local stats = rule["stats"]
+			local types = rule["itemtypes"]
+
+			stats.DAMAGE_PER_SECOND = stats.DPS stats.DPS = nil -- Switch DPS to the full string.
+
+			-- You can always wear lower tier items. Just not higher.
+			if types["PLATE"] then types["MAIL"] = types["MAIL"] or -1 end
+			if types["MAIL"] then types["LEATHER"] = types["LEATHER"] or -1 end
+			if types["LEATHER"] then types["CLOTH"] = types["CLOTH"] or -1 end
+			types["JEWELERY"] = 1 -- rings, trinkets, necklaces
+		end
+	end
+
+	-- register all needed events
+	self.eventFrame=CreateFrame("Frame")
+	ZGV.ChainCall(self.eventFrame)
+		:RegisterEvent("LOADING_SCREEN_DISABLED")
+
+		:RegisterEvent("PLAYER_LEVEL_UP")
+		:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
+		:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
+
+		:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
+		:RegisterEvent("BAG_UPDATE_DELAYED")
+
+		:RegisterEvent("PLAYER_REGEN_DISABLED")
+		:RegisterEvent("PLAYER_REGEN_ENABLED")
+
+		:SetScript("OnEvent",function(self,event,...) ItemScore:OnEvent(event,...) end)
+		:Show()
+
+	-- create item popup
+	ItemScore.Upgrades:CreatePopup()
+
+	-- trim gem database, only keep those from expansions user owns
+	ItemScore:TrimGemsDatabase()
+
+	-- set up initial data
+	ItemScore:RefreshUserData()
 end
 
--- Blizzard will NOT play nice... Items only return localized data, how fun. Delocalize everything into numbers, then...
--- Classes last updated for MoP
-local itemclasses = {
-	[GetItemClassInfo(LE_ITEM_CLASS_WEAPON)]=1,
-	[GetItemClassInfo(LE_ITEM_CLASS_ARMOR)]=2,
-	[GetItemClassInfo(LE_ITEM_CLASS_CONTAINER)]=3,
-	-- LEGION TEMP FIX, GICI returns nil
-	--[GetItemClassInfo(LE_ITEM_CLASS_CONSUMABLE)]=4,
-	[GetItemClassInfo(LE_ITEM_CLASS_GLYPH)]=5,
-	[GetItemClassInfo(LE_ITEM_CLASS_TRADEGOODS)]=6,
-	[GetItemClassInfo(LE_ITEM_CLASS_RECIPE)]=7,
-	[GetItemClassInfo(LE_ITEM_CLASS_GEM)]=8,
-	[GetItemClassInfo(LE_ITEM_CLASS_MISCELLANEOUS)]=9,
-	[GetItemClassInfo(LE_ITEM_CLASS_QUESTITEM)]=10,
-	[GetItemClassInfo(LE_ITEM_CLASS_BATTLEPET)]=11,
-	}
-
-local itemweapsubclasses = {
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_AXE1H)] = 1,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_AXE2H)] = 2,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_BOWS)] = 3,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_GUNS)] = 4,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_MACE1H)] = 5,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_MACE2H)] = 6,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_POLEARM)] = 7,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_SWORD1H)] = 8,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_SWORD2H)] = 9,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_STAFF)] = 10,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_UNARMED)] = 11,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_GENERIC)] = 12,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_DAGGER)] = 13,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_THROWN)] = 14,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_CROSSBOW)] = 15,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_WAND)] = 16,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_FISHINGPOLE)] = 17,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_WEAPON,LE_ITEM_WEAPON_WARGLAIVE)] = 18
-	}
-
-local itemarmsubclasses = {
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_GENERIC)] = 1,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_CLOTH)] = 2,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_LEATHER)] = 3,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_MAIL)] = 4,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_PLATE)] = 5,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_COSMETIC)] = 6,
-	[GetItemSubClassInfo(LE_ITEM_CLASS_ARMOR,LE_ITEM_ARMOR_SHIELD)] = 7
-	}
-
-local class_ids = {"WEAPON","ARMOR"}
-local weap_ids = {
-	[0] = "AXE",
-	[1] = "TH_AXE",
-	[2] = "BOW",
-	[3] = "GUN",
-	[4] = "MACE",
-	[5] = "TH_MACE",
-	[6] = "TH_POLE",
-	[7] = "SWORD",
-	[8] = "TH_SWORD",
-	[9] = "WARGLAIVE",
-	[10] = "TH_STAFF",
-	[11] = "DRUID_BEAR",
-	[12] = "DRUID_CAT",
-	[13] = "FIST",
-	[14] = "MISCWEAP",
-	[15] = "DAGGER",
-	[16] = "THROWN",
-	[17] = "SPEAR",
-	[18] = "CROSSBOW",
-	[19] = "WAND",
-	[20] = "FISHPOLE",
-	}
-
-
-local arm_ids = {
-	[1] = "CLOTH",
-	[2] = "LEATHER",
-	[3] = "MAIL",
-	[4] = "PLATE",
-	[5] = "COSMETIC",
-	[6] = "SHIELD",
-	-- "MISCARM" ?	
-	} --Relics are out.
-
-ItemScore.ItemClassData={itemclasses,itemweapsubclasses,itemarmsubclasses,class_ids,weap_ids,arm_ids}
-
--- Offhands are MISCARM.
--- Twohanders are "TH" and not "2H".
--- Last stat update. 06/30/2013
--- TODO add speed weights if desired. WEAPONSPEED = {ohweight = #, mhweight = #} Add DAMAGE?
-
--- Build simpler defaults table for use in options
-ZGV.ItemScore.Defaults = {}
-for class,specs in pairs(ItemScore.rules) do
-    ZGV.ItemScore.Defaults[class] = {}
-    for spec,data in pairs(specs) do
-        ZGV.ItemScore.Defaults[class][spec] = {}
-
-        for name,v in pairs(data.stats) do
-		table.insert(ZGV.ItemScore.Defaults[class][spec],{name=name,weight=v})
+function ItemScore:OnEvent(event,arg1,arg2,...)
+	if event == "PLAYER_LEVEL_UP" or event == "ACTIVE_TALENT_GROUP_CHANGED" or event == "PLAYER_SPECIALIZATION_CHANGED" then
+		-- using timer as delay, since in the same frame PLAYER_LEVEL_UP player is still on previous level
+		-- and to run it only once, as both PLU and PSC can fire more than once
+		ItemScore:DelayedRefreshUserData()
+	elseif event == "LOADING_SCREEN_DISABLED" then -- user logged in, see what upgrades we have
+		ItemScore.EquipTimer = ItemScore.EquipTimer or ZGV:ScheduleTimer(function() 
+			ItemScore.Upgrades:ScoreEquippedItems()
+			ItemScore.Upgrades:ScanBagsForUpgrades()
+		end,0.5)
+	elseif event == "PLAYER_EQUIPMENT_CHANGED" or event == "BAG_UPDATE_DELAYED" then -- bags or equipment changed, see what upgrades we have
+		-- on timer to run it only once, since equip/unequip fires both events, and we would get spammed
+		ItemScore.EquipTimer = ItemScore.EquipTimer or ZGV:ScheduleTimer(function() 
+			ItemScore.Upgrades:ScoreEquippedItems()
+			ItemScore.Upgrades:ScanBagsForUpgrades()
+		end,0.5)
+	elseif event == "PLAYER_REGEN_DISABLED" then -- combat started, kill all upgrade popups
+		if ItemScore.Upgrades.EquipPopup then ItemScore.Upgrades.EquipPopup:Hide() end
+	elseif event == "PLAYER_REGEN_ENABLED" then -- combat ended, check if anything is waiting for equip
+		ItemScore.Upgrades:ProcessPossibleUpgrades()
 	end
-	sort(ZGV.ItemScore.Defaults[class][spec],function(a,b) return a.name<b.name end)
-    end
-end 
 
--- Fix rules for any common rules
-for class,classrules in pairs(ItemScore.rules) do
-	for spec,rule in pairs(classrules) do
-		local stats = rule["stats"]
-		local types = rule["itemtypes"]
-
-		stats.DAMAGE_PER_SECOND = stats.DPS stats.DPS = nil -- Switch DPS to the full string.
-
-		-- You can always wear lower tier items. Just not higher.
-		if types["PLATE"] then types["MAIL"] = types["MAIL"] or -1 end
-		if types["MAIL"] then types["LEATHER"] = types["LEATHER"] or -1 end
-		if types["LEATHER"] then types["CLOTH"] = types["CLOTH"] or -1 end
+	if event == "PLAYER_EQUIPMENT_CHANGED" then
+		ItemScore.GearFinder:ClearResults()
 	end
 end
 
-ItemScore.SC_NORULES = "no rules"
-ItemScore.SC_BADSLOT = "bad slot"
-ItemScore.SC_NOTYET = "not ready"
-ItemScore.SC_BADITEM = "bad item"
-ItemScore.SC_NOTFORU = "not for you"
-ItemScore.SC_LEVELREQ = "level req"
-ItemScore.SC_BADSTAT = "bad stat"
-ItemScore.SC_LOWLEVEL = "low level"
-ItemScore.SC_BADPARAM = "bad param"
-ItemScore.SC_OK = "scored ok"
+function ItemScore:DelayedRefreshUserData()
+	ItemScore.RefreshTimer = ItemScore.RefreshTimer or ZGV:ScheduleTimer(function() 
+		ItemScore:RefreshUserData()
+		-- TODO: outleveled heirloom popup
+	end,0.5)
+end
 
-function ItemScore:SetFilters(playerclass,playerspec,playerlevel)
+function ItemScore:RefreshUserData()
+	ItemScore.RefreshTimer = nil
+	ItemScore:SetStatWeights()
+	ItemScore.Upgrades:ScoreEquippedItems()
+	ItemScore.Upgrades:ScanBagsForUpgrades()
+end
+
+function ItemScore:SetStatWeights(playerclass,playerspec,playerlevel)
 	self.playerclass = playerclass or (select(2,UnitClass("player")))
 	self.playerclassName = (select(1,UnitClass("player")))
-	self.playerspec = playerspec or GetSpecialization() or 1 -- Returns nil if < level 10
+	self.playerspec = playerspec or GetSpecialization() or 1 -- fallback if something goes wrong. spec is now set at level 1, even if hidden from player
 	self.playerspecName = (select(2,GetSpecializationInfo(self.playerspec)))
-
 	self.playerlevel = playerlevel or UnitLevel("player")
+	self.playerfaction = UnitFactionGroup("player")
 
+	ZGV.db.profile.gear_selected_class = select(3,UnitClass("player"))
+	ZGV.db.profile.gear_selected_spec = self.playerspec
 
-	self.orgRuleSet = ItemScore.rules[self.playerclass][self.playerspec]
+	ZGV.db.char.badupgrade[self.playerspec] = ZGV.db.char.badupgrade[self.playerspec] or {}
+	ItemScore.Upgrades.BadUpgrades = ZGV.db.char.badupgrade[self.playerspec]
 
-	self.curRuleSet = {}
-	self.curRuleSet.itemtypes = {}
-	self.curRuleSet.stats = {}
+	-- create a copy so that the arrays in datatables are left untouched, as we will need them to handle custom weights resets
+	self.ActiveRuleSet = {
+		itemtypes = {},
+		stats = {},
+		primary = {},
+	}
 
-	-- Copy itemtypes as they are
-	for i,v in pairs(ItemScore.rules[self.playerclass][self.playerspec].itemtypes) do self.curRuleSet.itemtypes[i]=v end
-
-	-- Copy stats as they are
-	for i,v in pairs(ItemScore.rules[self.playerclass][self.playerspec].stats) do self.curRuleSet.stats[i]=v end
+	-- Copy values from our rules
+	for i,v in pairs(ItemScore.rules[self.playerclass][self.playerspec].itemtypes) do self.ActiveRuleSet.itemtypes[i]=v end
+	for i,v in pairs(ItemScore.rules[self.playerclass][self.playerspec].stats) do self.ActiveRuleSet.stats[i]=v end
+	for i,v in pairs(ItemScore.rules[self.playerclass][self.playerspec].primary) do self.ActiveRuleSet.primary[i]=v end
 
 	-- Update stats with users profile
-	local playermask = "gear_"..self.playerclass.."_"..tostring(self.playerspec).."_"
+	local saved_vars_prefix = "gear_"..self.playerclass.."_"..tostring(self.playerspec).."_"
 	for index,stat in pairs(ZGV.ItemScore.Keywords) do
-		if ZGV.db.profile[playermask..(stat.blizz)] then
-			self.curRuleSet.stats[(stat.blizz)]= tonumber(ZGV.db.profile[playermask..(stat.blizz)] or 0)
+		if ZGV.db.profile[saved_vars_prefix..(stat.blizz)] then
+			self.ActiveRuleSet.stats[(stat.blizz)]= tonumber(ZGV.db.profile[saved_vars_prefix..(stat.blizz)] or 0)
 		end
 	end
 
-	self:SetDualWield()
-	self:GetBestGemPerIlvl()
-	ItemScore.ProcScore:PreparePatterns()
-	ItemScore.ProcScore:GetPlayerStats()
-end
-
-function ItemScore:SetDualWield()
-	self.playerdualwield=nil
-	self.playerdual2h=nil
-
-	if not self.playerspec or self.playerspec==0 then return end
-
-	if self.playerclass=="DEATHKNIGHT" and self.playerspec==2 -- Frost DKs
-	or self.playerclass=="ROGUE" -- any DHs
-	or self.playerclass=="DEMONHUNTER" -- any DHs
-
-	or self.playerclass=="WARRIOR" and self.playerspec==2 and self.playerlevel>=10-- Fury Warriors
-	or self.playerclass=="MONK" and self.playerspec==3 and self.playerlevel>=10 -- Windwalker Monks
-	or self.playerclass=="SHAMAN" and self.playerspec==2 and self.playerlevel>=10 -- Enhancement Shaman
-	or self.playerclass=="DRUID" and (self.playerspec==2 or self.playerspec==3)  and self.playerlevel>=10 -- Feral/Guardian Druid
-	then
-		self.playerdualwield=true
-	end
-
-	-- Dual Wielding 2hs for warriors.
-	if IsSpellKnown(46917) then self.playerdual2h=true end
-end
-
-function ItemScore:IsGoodEquipSlot(equipslot)
-	if not equipslot then return end
-	return not not self.possEquipSlots[equipslot]
-end
-
-function ItemScore:IsValidClass(itemlink)
-	Gratuity:SetHyperlink(itemlink)
-	for num=1,Gratuity:NumLines() do
-		local line=Gratuity:GetLine(num)
-		if not line then return -1, ItemScore.SC_NOTYET, "item not ready yet" end
-		if line:match( gsub(ITEM_CLASSES_ALLOWED,"%%s","(.*)")) then
-			if not line:match(self.playerclassName) then
-				return false,ItemScore.SC_NOTFORU,"wrong class"
-			end
-		end
-
-		if line:match( gsub(ITEM_REQ_SPECIALIZATION,"%%s","(.*)")) then
-			if not line:match(self.playerclassName) then
-				return false,ItemScore.SC_NOTFORU,"wrong spec"
-			end
+	-- Set dual wield 
+	self.playerDualWield = false
+	self.playerDualTwohanders = false
+	if self.playerlevel>=10 then
+		if self.playerclass=="DEATHKNIGHT" and self.playerspec==2 then-- Frost DK
+			self.playerDualWield = true
+		elseif self.playerclass=="ROGUE" then -- Rogue
+			self.playerDualWield = true
+		elseif self.playerclass=="DEMONHUNTER" then -- Demon Hunter
+			self.playerDualWield = true
+		elseif self.playerclass=="WARRIOR" and self.playerspec==2 then -- Fury Warriors
+			self.playerDualWield = true
+			self.playerDualTwohanders = true -- titans grip is baseline now
+		elseif self.playerclass=="MONK" and self.playerspec==3 then -- Windwalker Monks
+			self.playerDualWield = true
+		elseif self.playerclass=="SHAMAN" and self.playerspec==2 then -- Enhancement Shaman
+			self.playerDualWield = true
+		elseif self.playerclass=="DRUID" and (self.playerspec==2 or self.playerspec==3) then -- Feral/Guardian Druid
+			self.playerDualWield = true
 		end
 	end
-	return true,ItemScore.SC_OK
+
+	-- Recalculate gem scores
+	ItemScore:ScoreGems()
+
+	-- if anything in user info has changed, all cached scores are no longer valid, and item stats could have changed due to level scaling
+	-- wipe cached data, we are starting anew
+	table.wipe(ItemCache)
+
+	ItemScore.GearFinder:ClearResults()
 end
 
--- EVIL ASSUMPTION: Let's use a different slot, INVTYPE_2HWEAPON, for two-handers. And INVTYPE_SHIELD for shields.
+-- converts ITEM_MOD_CRIT_RATING_SHORT to CRIT
+local name_cache = {}
+function ItemScore:NormaliseStatName(statname)
+	if name_cache[statname] then return name_cache[statname] end
 
---[[
-  Basic scoring function that also makes sure the user is able to equip the item.
-	Parameters:
-		itemlink - Blizzard hyperlink for the item. Needed for percise stat values. [Item] and [Item of the Bear] have the same id but different stats.
-		invslot - Slot this item is going to be tested for.
-		allowbad - used for the GearFinder to find the next upgrade. Skips returning due to level restrictions
-		verbose - Extra debug messages.
-		hack - Only used in ZGV.Testing to make the specialization popup show up.
-	Return
-		value - Score of the item.
-		code - string for reason why this item is rejected
-		reason - more detailed breakdown of reason why rejected.
---]]
+	-- primary and secondary stats
+	statname = statname:gsub("_RATING_SHORT$","")
+	statname = statname:gsub("_SHORT$","")
+	statname = statname:gsub("^ITEM_MOD_","")
 
-function ItemScore:GetItemScore(itemlink, invslot, allowbad, verbose)
-	-- Player information not available
-	if not self.curRuleSet then return -1, ItemScore.SC_NOTYET, "rules not set yet." end
+	-- tertiary stats
+	statname = statname:gsub("^CR_","")
 
-	if not ZGV.db.profile.autogear then return -1,ItemScore.SC_NOTYET,"autogear disabled" end
-
-	if not itemlink then self:Debug("No itemlink given! %s",debugstack(1)) end
-
-	-- Player is over 10 and does not have a specialization. No scores until they choose a spec.
-	if self.playerlevel >= 10 and not GetSpecialization() then
-
-		if ZGV.DEV and hack then error("no spec? hack!!") end
+	-- element resist gear
+	statname = statname:gsub("_NAME$","")
 	
-		if not self.SpecPopup then
-			self.SpecPopup = ZGV.PopupHandler:NewPopup("ZygorSpecPopup","default")
-			self.SpecPopup:SetText(L['itemscore_ae_nospec'])
-			self.SpecPopup.OnAccept = function(self)
-				 -- Show specialization window when accept is clicked.
-				if not PlayerTalentFrame:IsVisible() then
-					TalentMicroButton:Click()
-				end
-			end
+	-- specific case: armor
+	if statname=="RESISTANCE0" then statname="ARMOR" end
 
-			self.SpecPopup.returnMinimizeSettings = function(self)
-				local notificationText = L['notifcenter_spec_text']
-				local tooltipText = L['notifcenter_gen_popup_tooltip']
-
-				local function OnOpen() -- TODO doesn't this return 1 at > 15?
-					if GetSpecialization() and not ZGV.Testing.DontHidePopups then
-						ZGV.NotificationCenter.RemoveButton(self:GetName())
-					end
-				end
-
-				return notificationText,L['notifcenter_gear_title'],tooltipText,nil,nil,nil,nil,OnOpen
-			end
-		end
-
-		-- Show if no .time set yet. Otherwise show every hour.
-		if not self.SpecPopup.time or (GetTime() - self.SpecPopup.time) > 3600 then
-			self.SpecPopup:Show()
-			self.SpecPopup.time = GetTime()
-		end
-
-		--[[
-		TODO: [Andrew]
-		I feel like it should do 3 things,
-		Accept - opens their talent panel, awaits a spec, 
-		Decline - doesn't ask again about this (maybe for the play session),
-		Hit X - sends to Notification Center, doesn't ask again as long as it's in the NC
-		--]]
-
-		self:Debug("Not giving a score because a spec is not picked.")
-		return -1, ItemScore.SC_NOTYET, "spec not picked"
-	end
-
-	-- INVTYPE_WEAPON is not a slot option. Should use INVTYPE_WEAPONMAINHAND or INVTYPE_WEAPONOFFHAND or one of the specific types.
-	if invslot == "INVTYPE_WEAPON" then return -1,ItemScore.SC_BADPARAM,"invslot should not be "..invslot end
-
-	local rule = self.curRuleSet
-	local subScore, code, reason
-
-	local value=0 -- returns with the ItemScore if nothing is returned before.
-	local item = self:GetItemStatsWithTooltip(itemlink)
-	if not item then return -1, ItemScore.SC_NOTYET, "item not found (yet)"end
-
-	local itemid = ZGV.ItemLink.GetItemID(itemlink)
-
-	if type(verbose)~="table" then verbose=nil end
-	local function do_verbose(s,...)
-		--self:Debug("&_SUB2 "..s,...)
-		tinsert(verbose,s:format(...))
-	end
-
-	local function _with_debug(code,reason)
-		if verbose then do_verbose("Item dropped because... |cffff0000[%s] |cffff8800%s|r",code,reason) end
-		return -1,code,reason
-	end
-
-	local itemslot = item.info.equipslot
-
-	if verbose then do_verbose("ItemScore calculating: |cff88ffff%s|r (%s)  type: %s  slot: %s  in slot: %s",item.info.prettylink,item.info.itemlink,item.info.subclass,item.info.equipslot,tostring(invslot)) end
-
-	if verbose then do_verbose("Tooltip: %s",item.tooltip and table.concat(item.tooltip,"; ") or "unknown?") end
-	
-	-- We have a set slot we are testing this item for. If it doesn't go in that slot then return -1
-	if invslot then
-		if ( invslot == "INVTYPE_WEAPONMAINHAND" and ( itemslot == "INVTYPE_WEAPON"		-- If we only want MH then WEAPON is okay too.
-							       or itemslot == "INVTYPE_RANGEDRIGHT"	-- Casters use wands
-							       or itemslot == "INVTYPE_RANGED"		-- Hunters used bows.
-							     )
-		    )
-		or ( invslot == "INVTYPE_WEAPONOFFHAND" and itemslot == "INVTYPE_WEAPON" )		-- Only want OH so WEAPON is okay too.
-		or ( invslot == "INVTYPE_CHEST" and itemslot == "INVTYPE_ROBE" ) then
-			-- it's OK!
-		elseif invslot ~= itemslot then
-			return _with_debug(ItemScore.SC_BADSLOT,"|cffff8888 item for "..itemslot.." doesn't match slot "..invslot)
-		end
-	end
-
-	-- Score for being able to equip the item
-	subScore, code, reason = self:CanEquipItem(item,allowbad,verbose)
-	if subScore == "REJECT" then return _with_debug(code, reason) end
-	local multiplier = subScore or 1	-- Save this to use after the whole score is calculated
-	if verbose then do_verbose("  MULTIPLER %.1f",multiplier) end
-
-	-- Score Item level -- with wod new item model (same id for all versions), itemlevel can be undervalued on upgraded items, breaking the score
-	--[[
-	if self.playerlevel<GetMaxPlayerLevel() then
-		-- Item level is always weighted. Pre Max level it isn't very important so assign it minimum value so that items CAN NOT get scored 0
-		value = value + item.info.ilevel * .01
-		if verbose then  self:Debug("&_SUB0   + ILEVEL %.1f, sub weighted",item.info.ilevel * .01)  end
-	else
-		-- Item level is a pretty good indicator. Weight it heavily.
-		value = value + item.info.ilevel * 20
-		if verbose then  self:Debug("&_SUB0   + ILEVEL %.1f, over weighted",item.info.ilevel * 20)  end
-	end
-	--]]
-
-	-- Check if class can use it
-	local vc_valid,vc_code,vc_comment = ItemScore:IsValidClass(itemlink)
-	if not vc_valid then return 0,vc_code,vc_comment end
-
-
-	-- Score on stats
-	subScore, code, reason = self:ScoreItemStats(item, invslot, itemlink, verbose)
-	if subScore < 0 then return _with_debug(code, reason) end
-	value = value + subScore
-
-	value = value * multiplier
-
-	-- Add bonus weights for heirlooms
-	local hscore, hcode, hdesc = ItemScore:UsableHeirloomItem(itemlink,self.verbose)
-	value = value + (hscore or 0)
-
-	-- Add score of item effect, if it exists
-	if ZGV.db.profile.geareffects then
-		local rule = self.curRuleSet
-		if item.effect then
-			item.debug.old_weight = value
-			for statname,statvalue in pairs(item.effect) do
-				local rulevalue = rule.stats[statname]
-				if statrule then
-					if verbose then do_verbose("Effect: %s %s, = %s",statname,statvalue,(statvalue*rulevalue)) end
-					value = value + statvalue*(rulevalue or 1)
-				end
-			end
-		end
-	end
-
-	--[[ -- disabled, all artefacts are now just stat sticks, and can be replaced at any time. GG Blizz
-	if item.info.quality==6 and (not ZGV.InPhase("bfa")) then
-		if verbose then do_verbose("Artefact pre-bfa: *100") end
-		value = value * 100
-	end
-	--]]
-
-
-	if verbose then  do_verbose("  = |cffccff88%d",value) end
-	return math.floor(value),ItemScore.SC_OK,"no comment"
+	name_cache[statname] = statname
+	return statname
 end
 
---[[
-	Scores an item based on only the stats. Not worried about if the item is usable or not.
-
-	Parameters:
-		item - item table or itemid
-		invslot - Slot this item is going to be tested for.
-		itemlink - Blizzard hyperlink for the item. Needed for precise stat values. [Item] and [Item of the Bear] have the same id but different stats.
-		verbose - Give it a table to get extra debug messages.
-	Return
-		value - Score of the item.
-		code - string for reason why this item is rejected
-		reason - more detailed breakdown of reason why rejected.
---]]
-
-function ItemScore:ScoreItemStats(item, invslot, itemlink, verbose)
-	-- Player information not available
-	if not self.curRuleSet then return -1, ItemScore.SC_NOTYET, "rules not set yet." end
-
-	local rule = self.curRuleSet
-
-	-- If not a table already then it is itemid/itemlink
-	if type(item) ~= "table" then
-		item = self:GetItemStatsWithTooltip(item)
-		if not item then return -1, ItemScore.SC_NOTYET, "item not ready yet" end
-	end
-
-	local value = 0
-
-	if type(verbose)~="table" then verbose=nil end
-	local function do_verbose(s,...)
-		--self:Debug("&_SUB2 "..s,...)
-		tinsert(verbose,s:format(...))
-	end
-
-	-- if not max level
-	if self.playerlevel<GetMaxPlayerLevel() then
-		-- If below level 20 then we will assign a value to Armor because a lot of items have no stats at that low level.
-		if self.playerlevel <= 20 and item.stats.RESISTANCE0_NAME then
-			value = value + (item.stats.RESISTANCE0_NAME)
-			if verbose then  do_verbose("  + ARMOR weighted at %.1f",(item.stats.RESISTANCE0_NAME))  end
-		end
-	--else
-		-- prevent level 1 item from being suggested over a lvl 90 item with 1 badstat
-		--if item.info.ilevel < GetMaxPlayerLevel()*3 then return -1, ItemScore.SC_LOWLEVEL, "itemlevel is below maxlevel*3." end
-	end
-
-	for statname,statvalue in pairs(item.stats) do
-		if statname:find("^ITEM_MOD_") or statname:find("^RESISTANCE%d") then
-			statname = statname:gsub("^ITEM_MOD_",""):gsub("^CR_","") :gsub("_SHORT$","") :gsub("_NAME$","") :gsub("_RATING$","")
-			if statname=="RESISTANCE0" then statname="ARMOR" end
-
-			local rulevalue = rule.stats[statname]
-			value = value + statvalue*(rulevalue or 0)
-			if verbose then do_verbose("  + |cff00ff00%.1f %s|r: |cffaaaaaa * %.1f = |cffffffff%.1f|r",statvalue,statname, rulevalue or 0, statvalue*(rulevalue or 0))  end
-		--[[
-		elseif statname:find("^EMPTY_SOCKET") then
-			local socketname = statname:gsub("^EMPTY_SOCKET_","")
-			--local statweight = (rule.sockets and rule.sockets[socketname]) or SOCKET_WEIGHT
-
-			local statweight = ItemScore:GetSocketWeight(socketname,item.info.ilevel)
-
-			-- Gems below max level are not very important. They probably won't get value so weight them lightly.
-			if self.playerlevel < GetMaxPlayerLevel() then
-				statweight = statweight*0.3
-			end
-		
-
-			value = value + statvalue*statweight
-
-			if verbose then do_verbose("  + |cff00ff00%.1f %s|r: |cffaaaaaa * %.1f = |cffffffff%.1f|r",statvalue,statname, statweight or 1, statvalue*(statweight or 1))  end
-		--]]
-		end
-	end
-
-	if value==0 and item.stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT then -- statless weapons are scored among themselves using fraction of their dps
-		value=item.stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT/100
-	end
-
-	return value
-end
-
---[[
-	Parameters:
-		item - item table or itemid
-		allowbad - used for the GearFinder to find the next upgrade. Skips returning due to level restrictions
-		verbose - Extra debug messages.
-	Return
-		value - -1 for false, 1 for true
-		code - string for reason why this item is rejected
-		reason - more detailed breakdown of reason why rejected.
---]]
-
-function ItemScore:CanEquipItem(item,allowbad,verbose)
-	local rule = self.curRuleSet
-	-- Player information not available
-	if not rule then return "REJECT", ItemScore.SC_NOTYET, "rules not set yet." end
-
-	if type(verbose)~="table" then verbose=nil end
-	local function do_verbose(verbose,s,...)
-		--self:Debug("&_SUB2 "..s,...)
-		tinsert(verbose,s:format(...))
-	end
-
-	-- If not a table already then it is itemid/itemlink
-	if type(item) ~= "table" then
-		item = self:GetItemStatsWithTooltip(item)
-		if not item then return "REJECT", ItemScore.SC_NOTYET, "item not ready yet" end
-	end
-
-	local itemslot = item.info.equipslot
-	if not itemslot then return "REJECT", ItemScore.SC_BADPARAM, "no equipslot?!" end --Shouldn't happen
-
-	if allowbad then return 1 end  -- at your own risk.
-
-	-- Check level requirements
-	if item.info.reqlevel > self.playerlevel then return "REJECT", ItemScore.SC_LEVELREQ, "|cffff4400 level req "..item.info.reqlevel,"level",item.info.reqlevel end
-	
-	if itemslot == "INVTYPE_FINGER"
-	 or itemslot == "INVTYPE_TRINKET"
-	 or itemslot == "INVTYPE_NECK"
-	 or itemslot == "INVTYPE_CLOAK" then
-		-- Rings, trinkets, necklaces and cloaks are good for everyone.
-		return 1
-	else
-		-- Determine item class
-		local class = class_ids[itemclasses[item.info.class] or 0] or item.info.class
-		local subclass = item.info.subclass
-
-		-- Delocalize item class into a string that we set so we know what kind of item this is.
-		if class == "WEAPON" then
-			local cl = weap_ids[item.info.subclassid or 0]
-			if not cl then return "REJECT", ItemScore.SC_BADITEM,("Unknown weapon subclass %s"):format(item.info.subclass) end
-			subclass = cl
-		elseif class == "ARMOR" then
-			local cl = arm_ids[item.info.subclassid or 0]
-			if not cl then return "REJECT", ItemScore.SC_BADITEM,("Unknown armor subclass %s"):format(item.info.subclass) end
-			subclass = cl
-		else
-			return "REJECT",ItemScore.SC_BADITEM,("Unknown item class %s"):format(class)
-		end
-
-		-- Okay, type ascertained. Is it proper for the player at all?
-		local uselevel = rule.itemtypes[subclass]
-
-		-- Heirloom support. If it is a heirloom and can be used then never rule it out for being used.
-		-- If they can equip it at any level then they will be able to use it.
-		if item.info.quality == 7 and uselevel then uselevel = 1 end
-
-		if not uselevel then
-			-- Can never use this type
-			return "REJECT", ItemScore.SC_NOTFORU, ("|cffcc0000 type "..subclass.." bad for ".. self.playerclass.. self.playerspec)
-		elseif ( uselevel > 0 and self.playerlevel < uselevel ) then
-			-- Player too low level
-			return "REJECT", ItemScore.SC_LEVELREQ,("|cffff88aa not usable at level ".. self.playerlevel),"level",uselevel
-		elseif ( uselevel < 0 and self.playerlevel >= -uselevel ) then	-- Player too high level
-			return 0.5  -- just give it a bad score
-		elseif uselevel==40 and self.playerlevel<50 and self.playerlevel>39 then
-			-- allows hunter/pally/warr/sham to transition armor type from level 40 to 50
-			-- But favors the correct type of item by giving it an extra 10% score
-			if verbose then do_verbose("  + |cff00ff00100 GOOD TYPE|r: MAIL->PLATE |cffffffff100|r")  end
-			return 1.1
-		else
-			return 1
-		end
-	end
-end
-
-function ItemScore:GetHeirloomMaxLevelBonus(itemlink)
-	-- returns:
-	-- (int) max stats scale level, (bool) if it gives bonus exp
-	-- false,false if not hloom
-	local itemName, itemLink, itemRarity, _, _, _, _, _, itemEquipLoc = ZGV:GetItemInfo(itemlink)
-
-	if itemRarity~=7 then return false,false end -- whatever we got, it is not a hloom
-
-	local hasBonusExp = true
-	
-	if ItemScore.HeirloomNoExpBonusSlot[itemEquipLoc] then hasBonusExp = false end -- it is a hloom that does not give exp bonus
-
-	local itemid = itemlink:match("item:(%d+)")
-
-	if ItemScore.FixedLevelHeirloom[tonumber(itemid)] then 
-		return ItemScore.FixedLevelHeirloom[tonumber(itemid)],false
-	end
-
-	local max_bonus = 60 -- default for all looms
-
-	for bonus,_ in pairs(ZGV.ItemLink.GetItemBonuses(itemlink)) do
-		max_bonus = math.max(max_bonus,ItemScore.HeirloomBonuses[tonumber(bonus)])
-	end
-	
-	return max_bonus,hasBonusExp
-end
-
---[[
-	Tests whether or not the item is a heirloom and in our system.
-	If in our system then sees if level is appropriate to get the bonus.
-
-	Parameters:
-		item - item table or itemid
-		verbose - Extra debug messages.
-	Return
-		value - Score of the item.
---]]
-
-function ItemScore:UsableHeirloomItem(item, verbose)
-	if not self.curRuleSet then return -1, ItemScore.SC_NOTYET, "rules not set yet." end
-
-	-- If not a table already then it is itemid
-	if type(item) ~= "table" then
-		item = self:GetItemStatsWithTooltip(item)
-		if not item then return -1, ItemScore.SC_NOTYET, "item not ready yet" end
-	end
-
-	if type(verbose)~="table" then verbose=nil end
-	local function do_verbose(verbose,s,...)
-		--self:Debug("&_SUB2 "..s,...)
-		tinsert(verbose,s:format(...))
-	end
-
-	if item.info.quality==7 then
-		local value,comment = 0,"Not protected"
-		local maxhlevel,hasbonus = ItemScore:GetHeirloomMaxLevelBonus(item.info.itemlink)
-		if maxhlevel then
-			if self.playerlevel < maxhlevel then
-			-- it is within valid level range
-				if (hasbonus and ZGV.db.profile.autogear_protectheirlooms) -- protect exp looms
-				   or (not hasbonus and ZGV.db.profile.autogear_protectheirlooms_all) -- protect non-exp looms   
-				then
-					value = 15000
-					comment="Protected"
-				end
-			end
-			if verbose then  do_verbose("  + HEIRLOOM! +%.1f|r",value)  end
-			return value,ItemScore.SC_OK,comment
-		else
-			if verbose then  do_verbose(" Heirloom:%d not in our system.",itemid )  end
-		end
-	end
-
-	-- Okay so item isn't a heirloom, no big deal
-	return 0,ItemScore.SC_BADITEM,"Not heirloom"
-end
-
---[[
-	Pretty clear... Is it a fishing pole?
-
-	Parameters:
-		itemid - itemid
-	Return
-		yes/no
---]]
-
-function ItemScore:IsFishingPole(itemid)
-	if not itemid then return end
-	
-	local item = self:GetItemStatsWithTooltip(itemid)  
-	if not item then return false end
-	local cl = weap_ids[itemweapsubclasses[item.info.subclass] or 0]
-	
-	return cl == "FISHPOLE"
-end
-
-function ItemScore:ClearCachedHeirlooms()
-	-- Wipe existing heirloom score after level up, so we can get updated score
-	for itemlink,itemdata in pairs(ItemScore.__ItemCache) do
-		if itemdata.info and itemdata.info.quality==7 then
-			ItemScore.__ItemCache[itemlink]=nil
-		end
-	end
-end
-
--- Helper Functions
-
-do
-	local ZGVI_DAMAGE_TEMPLATE = DAMAGE_TEMPLATE :gsub("%%d","(%%d+)") :gsub(" %- "," %%- ")
-	local ZGVI_DAMAGE_TEMPLATE_WITH_SCHOOL = DAMAGE_TEMPLATE_WITH_SCHOOL :gsub("%%d","(%%d+)") :gsub(" %- "," %%- ")
-	local ZGVI_WEAPON_SPEED_TEMPLATE = WEAPON_SPEED.." ([0-9%.]+)"
-
-	local ItemCache = {}
-	ItemScore.__ItemCache = ItemCache
-
-	--[[
-	  Returns an item object with all the information you might need.
-	  Also caches this item for future use.
-	  Note: If a itemlink is provided then before returning the cached item, it gathers the stats from the itemlink.
-
-		Parameters:
-			item - item itemid
-			itemlink - Blizzard hyperlink for the item. Needed for precise stat values. [Item] and [Item of the Bear] have the same id but different stats.
-
-		Return
-			item - Item Object with ZGV:GetItemInfo(), stats, and tooltip
-	--]]
-
-	function ItemScore:GetItemStatsWithTooltip(itemlink)
-		if not itemlink then return nil,"no param" end
-
-		-- Early cache optimization!
-			if ItemCache[itemlink] then  return ItemCache[itemlink]  end
-
-		-- Make sure we have both itemid and itemlink, whatever was given in parameters.
-			--need:
-			local itemid  -- 12345
-
-			local numlink=tonumber(itemlink)
-			if numlink then -- it's a plain itemid
-				itemid=numlink
-				itemlink="item:"..numlink
-			else  -- check for link contents. Optimized, just one :match!
-				itemlink,itemid = tostring(itemlink):match("(item:(%d+)[%-%d:]+)")
-				itemid=tonumber(itemid)
-			end
-
-			if not itemid or not itemlink then return nil,"param not an itemlink" end  -- itemlink must've been malformed.
-
-		-- heirloom items will return the wrong stats if you are above the max level for them.
-		-- Changing the itemlink is needed to get the right stats.
-		if ItemScore:GetHeirloomMaxLevelBonus(itemlink) then
-			itemlink=ZGV.ItemLink.SetLevel(itemlink,ItemScore:GetHeirloomMaxLevelBonus(itemlink))
-		end
-
-		-- TODO: Make sure that heirlooms are REMOVED FROM CACHE (and thus recalculated) when we level up.
-		
-		if ItemCache[itemlink] then  return ItemCache[itemlink]  end
-		
-		--itemlink = ZGV.ItemLink.SetLevel(itemlink)
-
-		-- itemid and itemlink are set.
-
-		--if ItemCache[itemlink] then  return ItemCache[itemlink]  end
-		
-
-
-		-- Okay, it's definitely not cached, let's do the hard work.
-
-		local name,link,quality,ilevel, reqlevel, class, subclass, maxstack, equipslot, texture, vendorprice, classid, subclassid = ZGV:GetItemInfo(itemlink)
-		if not name then return nil,"no iteminfo (yet?)" end
-
-		-- Loads stats into item.stats
-		local stats = GetItemStats(itemlink)
-		if not stats then return nil,"no stats (yet?)" end
-
+function ItemScore:GetItemDetails(itemlink)
+	if not itemlink then return false end
+	local itemlinkfull = itemlink
+	itemlink = strip_link(itemlink)
+	if not itemlink then return false end
+
+	-- if item is not yet cached, grab its data
+	if not ItemCache[itemlink] then
+		-- that is a new one
+		stats = GetItemStats(itemlink)
+		local itemName,_,itemRarity,_,itemMinLevel,_,_,_,itemEquipLoc,texture,_,itemClassID,itemSubClassID = ZGV:GetItemInfo(itemlink) 
+		local itemlvl,_,baseitemlvl = GetDetailedItemLevelInfo(itemlink) 
+		if not (stats and itemName) then return false end
+
+		-- class, spec check, and level check. we need to scan tooltip for those. meh.
+		local playerclass, playerspec
 		Gratuity:SetHyperlink(itemlink)
-		local n = Gratuity:NumLines()
-		if n <= 1 then return nil,"tooltip too short" end
+		for num=1,Gratuity:NumLines() do
+			local line=Gratuity:GetLine(num)
 
-		-- WE HAVE THE ITEM DATA AND THE TOOLTIP! Let's store it.
-		local item = {
-			info={itemid=itemid,name=name,itemlink=itemlink,prettylink=link,quality=quality,ilevel=ilevel,reqlevel=reqlevel,class=class:upper(),subclass=subclass,equipslot=equipslot,vendorprice=vendorprice,classid=classid,subclassid=subclassid},
-			stats = stats,
-			--tooltip={}, -- filled below
+			if not line then break end
+			local found_class = line:match( gsub(ITEM_CLASSES_ALLOWED,"%%s","(.*)")) 
+			if found_class then playerclass = found_class end
+
+			local found_spec = line:match( gsub(ITEM_REQ_SPECIALIZATION,"%%s","(.*)"))
+			if found_spec then playerspec = found_spec end
+			
+			-- gg blizz. some of itemlink from encounter journal report min level 120, even if tooltips states 110. 
+			local found_level = line:match( gsub(ITEM_MIN_LEVEL,"%%d","(.*)"))
+			if found_level then itemMinLevel = tonumber(found_level) end
+		end
+
+		-- ok, got everything, cache it
+		ItemCache[itemlink] = { 
+			stats = stats, 
+			itemlink = itemlink,
+			itemid = ZGV.ItemLink.GetItemID(itemlink),
+			itemlinkfull = itemlinkfull,
+			minlevel = itemMinLevel,
+			type = itemEquipLoc,
+			class = itemClassID,
+			subclass = itemSubClassID,
+			quality = itemRarity,
+			validated = false,
+			texture = texture,
+			itemlvl = itemlvl,
+			playerclass = playerclass,
+			playerspec = playerspec,
 		}
 
-		local function addLine(num,leftright)
-			--local line=Gratuity:GetLine(num,bool)
-			local line=(leftright and Gratuity.vars.Rlines or Gratuity.vars.Llines)[num]
-			if line then line=line:GetText() end
-			if not line then return end
+		local slot_1, slot_2, twohander = ItemScore:GetValidSlots(ItemCache[itemlink])
+		ItemCache[itemlink].slot = slot_1
+		ItemCache[itemlink].slot_2 = slot_2
+		ItemCache[itemlink].twohander = twohander
 
-			local d1,d2 = line:match(ZGVI_DAMAGE_TEMPLATE)
-			if d1 and d2 then item.stats.DAMAGE1,item.stats.DAMAGE2,item.stats.DAMAGE = tonumber(d1),tonumber(d2),(tonumber(d1)+tonumber(d2))/2 end
+	end
+	return ItemCache[itemlink]
+end
 
-			local s1 = line:match(ZGVI_WEAPON_SPEED_TEMPLATE)
-			if s1 then item.stats.WEAPONSPEED = tonumber(s1) end
+-- checks what slots can this item be equipped to. automatically called as part of GetItemDetails, but may be called as standalone
+-- params:
+--	item - array - item object
+-- returns:
+--	first slot - int/false - main slot for this item
+--	second slot - int/false - optional second slot for the item (offhand, rings, trinkets)
+--	twohander - bool - is item twohander
+local function get_slots_by_type(type)
+	if type=="INVTYPE_WEAPON" then return INVSLOT_MAINHAND,INVSLOT_OFFHAND end
+	if type=="INVTYPE_2HWEAPON" then return INVSLOT_MAINHAND,INVSLOT_OFFHAND end
+	if type=="INVTYPE_FINGER" then return INVSLOT_FINGER1,INVSLOT_FINGER2 end
+	if type=="INVTYPE_TRINKET" then return INVSLOT_TRINKET1,INVSLOT_TRINKET2 end
+	if type=="INVTYPE_RANGED" then return INVSLOT_MAINHAND,false end
+	if type=="INVTYPE_RANGEDRIGHT" then return INVSLOT_MAINHAND,false end
+	return ItemScore.TypeToSlot[type], false
+end
 
-			--tinsert(item.tooltip,line)
-			return line
+local rogue_offhand_only = {
+	[0] = "AXE",
+	[4] = "MACE",
+	[7] = "SWORD",
+	[13] = "FIST",
+	}
+
+function ItemScore:GetValidSlots(item)
+	if not item then return end
+	local s1, s2 = get_slots_by_type(item.type)
+
+	if (self.playerclass=="ROGUE" and self.playerspec==3) and item.type=="INVTYPE_WEAPON" and rogue_offhand_only[item.subclass] then -- dual wield, 1 handed weapons are valid in offhand
+		return s2, false, false
+	end
+
+	if item.type=="INVTYPE_WEAPON" and ItemScore.playerDualWield then -- dual wield, 1 handed weapons are valid in offhand
+		return s1, s2, false
+	end
+	if item.type=="INVTYPE_2HWEAPON" and ItemScore.playerDualTwohanders then -- titans grip, 2 handed weapons are valid in offhand
+		return s1, s2, true
+	end
+	if item.type=="INVTYPE_FINGER" then -- rings valid in both ring slots
+		return s1, s2, false
+	end
+	if item.type=="INVTYPE_TRINKET" then -- trinkets valid in both trinket slots
+		return s1, s2, false
+	end
+	if item.type=="INVTYPE_2HWEAPON" or item.type=="INVTYPE_RANGED" or item.type=="INVTYPE_RANGEDRIGHT" then -- two handed items go into main hand slot
+		return s1, false, true
+	end
+	if item.type=="INVTYPE_WEAPON" and not ItemScore.playerDualWield then -- no dual wield, 1 handed weapons are valid only in mainhand
+		return s1, false, false
+	end
+
+	-- rest valid in proper slots
+	return s1, s2, false
+end
+
+-- calculates item score based on item stats and current weights. result is cached
+-- params:
+--	itemlink - string - item that we are checking
+-- return:
+--	score - int - -1 or score of given item
+--	whitescore - int - -1 or score of given item if item is statless poor or common quality
+--	success - bool - was item scored at all
+--	comment - string - description
+function ItemScore:GetItemScore(itemlink,verbose)
+	local item = ItemScore:GetItemDetails(itemlink)
+	if not item then return -1, -1, false, "no info yet" end
+
+	local stats = item.stats
+	local score,whitescore = 0, 0
+	local statweights = self.ActiveRuleSet.stats
+
+	-- calculate score based on stats
+	for statname,statvalue in pairs(stats) do
+		statname = ItemScore:NormaliseStatName(statname)
+		local statweight = statweights[statname] or 0
+		score = score + statvalue*statweight
+
+		if verbose then table.insert(verbose,("  + |cff00ff00%.1f %s|r: |cffaaaaaa * %.1f = |cffffffff%.1f|r"):format(statvalue,statname, statweight, statvalue*statweight))  end
+		
+		if statname=="EMPTY_SOCKET_PRISMATIC" then
+			local gemscore, gemstat, gemvalue = ItemScore:ScoreSocket(item.itemlvl)
+			score = score + gemscore
 		end
+	end
 
-		--[[
-		local function procLine(num)
-			local line=Gratuity:GetLine(num,false)
-			if line then
-				return ItemScore.ProcScore:ParseEffect(line)
-			else
-				return false,"no line"
+	-- use separate score for gray/white statless items, it will only be used to compare between those types
+	if score==0 and item.quality < 2 then
+		whitescore = whitescore + (item.stats.RESISTANCE0_NAME or 0) -- add armor at value 1
+		whitescore = whitescore + (item.stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0) -- add dps at value 1
+		if verbose then 
+			table.insert(verbose,("  + |cff00ff00%.1f %s|r: |cffaaaaaa * %.1f = |cffffffff%.1f|r"):format(statvalue,"ARMOR", 1, item.stats.RESISTANCE0_NAME))
+			table.insert(verbose,("  + |cff00ff00%.1f %s|r: |cffaaaaaa * %.1f = |cffffffff%.1f|r"):format(statvalue,"DPS", 1, item.stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT))  
+		end
+	end
+
+	if item.quality==7 then
+		local has_bonus, max_level = ItemScore:GetHeirloomInfo(itemlink)
+		if has_bonus then score = score + 10000 end
+	end
+
+	-- record scores
+	item.score = score
+	item.whitescore = whitescore
+
+	return score, whitescore, true, "scored ok"
+end
+
+-- checks if given item is a heirloom that should be protected
+-- params:
+--	itemlink - string - item that we are checking
+-- return:
+--	is_protected - bool - whenever item is heirloom not outleveled by user
+--	max_level - int - up to what level this item is valid heirloom
+function ItemScore:GetHeirloomInfo(itemlink)
+	local item = ItemScore:GetItemDetails(itemlink)
+	if not item then return false,0 end
+	if item.quality ~= 7 then return false,0 end
+
+	local itemid = item.itemid
+	local max_level = 60 -- default for all looms
+
+	-- if it is one of items with hardcoded max levels
+	max_level =  ItemScore.FixedLevelHeirloom[itemid] or max_level
+		
+	for bonus,_ in pairs(ZGV.ItemLink.GetItemBonuses(itemlink)) do
+		max_level = math.max(max_level,ItemScore.HeirloomBonuses[tonumber(bonus)])
+	end
+	
+	return self.playerlevel < max_level, max_level
+end
+
+
+-- checks if item can be equipped by player at the moment. result is cached
+-- params:
+--	itemlink - string
+--	future - anything - for checks for future upgrades. if set, level restriction is not checked
+-- returns: 
+--	is valid - bool - is item valid for current player
+--	is final - bool - was validity really checked (and not skipped due to no gii info)
+--	comment - string - verbose description of result
+function ItemScore:IsValidItem(itemlink, future)
+	if not itemlink then return false, false, "No itemlink" end
+
+	local item = ItemScore:GetItemDetails(itemlink)
+	if not item then return false, false, "No info" end
+
+	if item.validated then return item.valid, true, item.validstatus end
+
+	if not item.slot then 
+		item.validated = true
+		item.valid = false
+		item.validstatus = "not equipment"
+		return false, true, "not equipment"
+	end
+
+	local types = self.ActiveRuleSet.itemtypes
+	if not types then return false, false, "No info" end
+
+	-- is something that can be equipped
+	local subclass
+	if item.class == LE_ITEM_CLASS_ARMOR then
+		subclass = item_armor_types[item.subclass]
+	elseif item.class == LE_ITEM_CLASS_WEAPON then
+		subclass = item_weapon_types[item.subclass]
+	else
+		item.validated = true
+		item.valid = false
+		item.validstatus = "not equipment"
+		return false, true, "not equipment"
+	end
+
+	-- can equip at current level, cloaks are cloth, but valid for all classes
+	local useble_since_level = types[subclass] or (item.type=="INVTYPE_CLOAK" and 1)
+
+	if not useble_since_level then
+		item.validated = true
+		item.valid = false
+		item.validstatus = ("%s is not valid for %s %s"):format(subclass,self.playerclassName,self.playerspecName)
+		return false, true, item.validstatus
+	elseif not future and self.playerlevel < useble_since_level then
+		item.validated = true
+		item.valid = false
+		item.validstatus = ("required level %d to use"):format(useble_since_level)
+		return false, true, item.validstatus
+	end
+	
+	-- player class
+	if item.playerclass and item.playerclass ~= self.playerclassName then
+		item.validated = true
+		item.valid = false
+		item.validstatus = "wrong class"
+		return false, true, item.validstatus
+	end
+
+	-- player spec
+	if item.playerspec and item.playerspec ~= self.playerspecName then
+		item.validated = true
+		item.valid = false
+		item.validstatus = "wrong spec"
+		return false, true, item.validstatus
+	end
+
+	-- player level
+	if not future and item.minlevel and item.minlevel > self.playerlevel then 
+		item.validated = true
+		item.valid = false
+		item.validstatus = ("required level %d to equip"):format(item.minlevel)
+		return false, true, item.validstatus
+	end
+
+	-- if we are here, it means that none of conditions forced early exit. wheeee have an upgrade
+	item.validated = true
+	item.valid = true
+	item.validstatus = "ok"
+	return true, true, "ok"
+end
+
+-- removes data from gem database that will not be valid for player based on owned expansions
+-- executed once, during startup
+-- no params
+-- no returns
+function ItemScore:TrimGemsDatabase()
+	local expansion = GetExpansionLevel()
+
+	-- remove gems from expansions user does not own
+	for expnum,_ in pairs(ItemScore.GemStatsByExp) do
+		if expnum>expansion then ItemScore.GemStatsByExp[expnum]=nil end
+	end
+
+	for gemrarity,expansions in pairs(ItemScore.GemData) do
+		for expnum,_ in pairs(expansions) do
+			if expnum>expansion then expansions[expnum]=nil end
+		end
+	end
+end
+
+-- checks gems for best stats (tbc-mop have primary and secondary stats, wod+ only secondary) 
+-- then calculates gem budgets scaled to player level and scores them using best stats weight
+-- no params
+-- no returns
+local best_stats = {}
+function ItemScore:ScoreGems()
+	table.wipe(best_stats)
+
+	local statweights = ItemScore.ActiveRuleSet.stats
+	local playerlevel = ItemScore.playerlevel
+
+	-- get bests stats for gems per expansion
+	for expnum,gemstats in pairs(ItemScore.GemStatsByExp) do
+		local best_stat, best_weight = nil, 0
+		for _,stat in pairs(gemstats) do
+			local statweight = statweights[stat] or 0
+			if statweight > best_weight then
+				best_weight = statweight
+				best_stat = stat
 			end
 		end
-		--]]
+		if best_stat then best_stats[expnum] = best_stat end
+	end
 
-		for i=1,n do
-			local leftline = addLine(i,false)		-- left line
-			addLine(i,true)			-- right line
-			if ZGV.db.profile.geareffects and leftline then
-				local procresult,procdata = ItemScore.ProcScore:ParseEffect(leftline)
-				if procresult then
-					item.effect = item.effect or {} 
-					item.effect[procdata.stat]=procdata.amount
-					item.debug = procdata
+	-- with known best stat, score gems
+	for gemrarity,expansions in pairs(ItemScore.GemData) do
+		for expnum,gemdata in pairs(expansions) do
+			local point_value
+			for lvl,point in pairs(gemdata.points) do
+				if playerlevel>=lvl then point_value=point end
+			end
+			gemdata.gemValue = point_value
+			gemdata.gemStat = best_stats[expnum]
+			gemdata.gemScore = (statweights[best_stats[expnum]] or 0)*point_value
+		end
+	end
+end
+
+-- checks what the best gem can be socketed into item of given itemlevel
+-- params
+--	ilvl - int - item level we are checking for
+-- returns
+--	score - int - score of found gem
+--	stat - string - name of stat we suggest
+--	value - int - how many points gem gives
+local stat_display_names = {
+	STAMINA = _G.ITEM_MOD_STAMINA_SHORT, 
+	MASTERY = _G.ITEM_MOD_MASTERY_RATING_SHORT,  
+	VERSATILITY = _G.ITEM_MOD_VERSATILITY,
+	HASTE = _G.ITEM_MOD_HASTE_RATING_SHORT, 
+	CRIT = _G.ITEM_MOD_CRIT_RATING_SHORT,
+	STRENGTH = _G.ITEM_MOD_STRENGTH_SHORT, 
+	AGILITY = _G.ITEM_MOD_AGILITY_SHORT, 
+	INTELLECT = _G.ITEM_MOD_INTELLECT_SHORT, 
+}
+
+function ItemScore:ScoreSocket(itemlevel)
+	local bestValue, bestStat, bestScore = 0,"",0
+	for gemrarity,expansions in pairs(ItemScore.GemData) do
+		if ZGV.db.profile.gear_maxGem>=gemrarity then
+			for expnum,gemdata in pairs(expansions) do
+				if itemlevel>=gemdata.ilvl then
+					if gemdata.gemScore > bestScore then
+						bestValue = gemdata.gemValue
+						bestStat = stat_display_names[gemdata.gemStat]
+						bestScore = gemdata.gemScore
+					end
 				end
 			end
 		end
-
-		ItemCache[itemlink]=item
-		return item
 	end
 
+	return  bestScore, bestStat, bestValue
 end
 
---[[
-	Converts INVTYPE_... into one of the usable inventory slots.
---]]
-
-function ItemScore:GetItemSlot(itemslot)
-	if not itemslot or itemslot=="" then return end --empty or nothing then return
-	itemslot = itemslot:gsub("^INVTYPE_","")
-	itemslot = itemslot:sub(1,1) .. itemslot:sub(2):lower()
-
-	local itemslot2
-
-	if itemslot=="Hand" then itemslot="Hands"
-	elseif itemslot == "Cloak" then itemslot = "Back"
-	elseif itemslot == "Robe" then itemslot = "Chest"
-	elseif itemslot == "Shield" or itemslot == "Weaponoffhand" or itemslot == "Holdable" then itemslot = "SecondaryHand"
-	elseif itemslot == "Weaponmainhand" or itemslot == "Rangedright" or itemslot == "Ranged" then itemslot="MainHand"
-	elseif itemslot == "Weapon" then
-		itemslot = "MainHand"
-		if self.playerdualwield then itemslot2 = "SecondaryHand" end
-	elseif itemslot == "2hweapon" then
-		itemslot = "MainHand"
-		if self.playerdual2h then itemslot2 = "SecondaryHand" end
-	elseif itemslot == "Trinket" then itemslot = "Trinket0" itemslot2 = "Trinket1"
-	elseif itemslot == "Finger" then itemslot = "Finger0" itemslot2 = "Finger1"
-	end
-
-	if itemslot then itemslot=itemslot.."Slot" end
-	if itemslot2 then itemslot2=itemslot2.."Slot" end
-
-	return itemslot,itemslot2
-end
-
---[[
-	Returns the id for the items in the itemslot.
---]]
-
--- ZGV.ItemScore:GetItemInSlot("INVTYPE_WRIST")
-
+-- returns items equipped in requested slots, used by pointer
+-- params:
+--	slot - int - numeric identificator of slot to check
+-- returns
+--	itemlink - string - itemlink of item in first possible slot
+--	itemlink2 - string, optional - itemlink of item in second possible slot
 function ItemScore:GetItemInSlot(itemslot)
-	local itemslot1,itemslot2 = ItemScore:GetItemSlot(itemslot)
-
-	local slot1,slot2
-	if itemslot1 then slot1 = GetInventorySlotInfo(itemslot1) end
-	if itemslot2 then slot2 = GetInventorySlotInfo(itemslot2) end
+	local s1, s2 = get_slots_by_type(itemslot)
 
 	local itemlink1,itemlink2
-	if slot1 then itemlink1 = GetInventoryItemLink("player",slot1) end
-	if slot2 then itemlink2 = GetInventoryItemLink("player",slot2) end
-
-	-- These links are PRETTY. Sadly, we don't want that.
-
-	-- Return: item:11111:0:0, item:22222:0:0, [Item1], [Item2]
+	if s1 then itemlink1 = GetInventoryItemLink("player",s1) end
+	if s2 then itemlink2 = GetInventoryItemLink("player",s2) end
 
 	return itemlink1 and itemlink1:match("item[:%d]+"),itemlink2 and itemlink2:match("item[:%d]+"), itemlink1,itemlink2
 end
 
---[[
-	Get rid of the strange invtypes and convert them to a common one.
 
-	Parameters:
-		equipslot - item.equipslot
-	Return
-		equipslot - Common INVTYPE for that item.
-		equipslot2 - 2nd INVTYPE in Weapons case.
---]]
-
-function ItemScore:GetCommonInvType(equipslot)
-	if not (equipslot and self:IsGoodEquipSlot(equipslot)) then return end
-
-	local equipslot2
-
-	if equipslot == "INVTYPE_ROBE" then equipslot = "INVTYPE_CHEST"
-	elseif equipslot == "INVTYPE_RANGEDRIGHT" or equipslot == "INVTYPE_RANGED" then equipslot = "INVTYPE_WEAPONMAINHAND"
-	elseif equipslot == "INVTYPE_WEAPON" then equipslot = "INVTYPE_WEAPONMAINHAND" equipslot2 = "INVTYPE_WEAPONOFFHAND"
-	end
-
-	return equipslot,equipslot2
-end
-
-function ItemScore:Debug(str,...)
-	ZGV:Debug("&itemscore &_SUB "..str, ... )
-end
-
-function ItemScore:ScoreCursor(quiet)
-	local ret=""
-	local itemlink
-	if GetCursorInfo()=="item" then itemlink=select(3,GetCursorInfo()) end
-	if not itemlink and GameTooltip and GameTooltip:GetItem() then itemlink = select(2,GameTooltip:GetItem()) end
-	if not itemlink then ret="No item in or under cursor." if not quiet then print(ret) end  return ret  end
-	ret="Scoring "..tostring(itemlink).."\n"
-	local verbose={}
-	local score,code,comment = ZGV.ItemScore:GetItemScore(itemlink,nil,false,verbose)
-	ret=ret.."SCORE: "..tostring(score).."\n"
-	ret=ret.."WHY: "..tostring(code).."\n"
-	ret=ret.."COMMENT: "..tostring(comment).."\n"
-	ret=ret.."DETAILS:\n"
-	ret=ret..table.concat(verbose,"\n").."\n"
-	if code==ItemScore.SC_LEVELREQ or code==ItemScore.SC_NOTFORU or code==ItemScore.SC_BADITEM then
-		table.wipe(verbose)
-		ret=ret.."Trying to force it...\n"
-		local score,code,comment = ZGV.ItemScore:GetItemScore(itemlink,nil,true,verbose)
-		ret=ret.."SCORE: "..tostring(score).."\n"
-		ret=ret.."WHY: "..tostring(code).."\n"
-		ret=ret.."COMMENT: "..tostring(comment).."\n"
-		ret=ret.."DETAILS:\n"
-		ret=ret..table.concat(verbose,"\n").."\n"
-	end
-	if not quiet then print(ret) end
-	return ret
-end
-
-function ItemScore:CheckOutleveledHeirlooms()
-	if ZGV.ItemScore.HloomPopup and ZGV.ItemScore.HloomPopup.killed then return end
-	local pMaxLevel = GetMaxPlayerLevel()
-
-	if ItemScore.playerlevel==pMaxLevel then return end -- Already on max level, don't bother with upgrading hlooms
-
-	local upgradables = {}
-
-	for num,slot in ipairs(ItemScore.AutoEquip.slots) do
-		local slotId = GetInventorySlotInfo(slot)
-		local itemLink = GetInventoryItemLink("player", slotId)
-		if itemLink then
-			local iMaxLevel = ItemScore:GetHeirloomMaxLevelBonus(itemLink)
-			if iMaxLevel and iMaxLevel>0 then
-				if (ItemScore.playerlevel>iMaxLevel) and (iMaxLevel<pMaxLevel) then
-					table.insert(upgradables,itemLink)
-				end
-			end
-		end
-	end
-
-	if #upgradables>0 then
-		ZGV.NotificationCenter.AddButton(
-			"GearOutdatedHloom",
-			"Outdated Heirlooms",
-			"Some of your heirlooms can be upgraded.",
-			ZGV.DIR.."\\Skins\\guideicons-big",
-			{0,1/4,3/4,1},
-			function() ItemScore:ShowHloomPopup(upgradables) end,
-			function() --[[print("NC OnEnter")--]] end,
-			1,
-			nil,		-- nil atm
-			nil,		-- nil atm
-			false,			-- nil atm
-			OnOpen,			-- nil atm
-			"hloom")
-
-	end
-end
-
-function ItemScore:ShowHloomPopup(data)
-	if not ItemScore.HloomPopup then
-		ItemScore.HloomPopup = ZGV.PopupHandler:NewPopup("ZygorItemPopup","default","stealth")
-
-		ItemScore.HloomPopup.text:SetFont(FONTBOLD,ZGV.db.profile.fontsecsize+2)
-		ItemScore.HloomPopup.text2:SetFont(FONT,ZGV.db.profile.fontsize)
-
-		--[[ Until we have proper guide --]]
-		ItemScore.HloomPopup.declinebutton:SetText("Close")
-		ItemScore.HloomPopup.acceptbutton:Hide()
-		ItemScore.HloomPopup.declinebutton:ClearAllPoints()
-		ItemScore.HloomPopup.declinebutton:SetPoint("BOTTOM",ItemScore.HloomPopup,"BOTTOM",0,5)
-		--[[ Until we have proper guide --]]
-
-		ItemScore.HloomPopup.OnAccept = function(self) end
-
-		ItemScore.HloomPopup.OnEscape = function(self)
-			ZGV.ItemScore:CheckOutleveledHeirlooms()
-		end
-	end
-
-	local popupText = ""
-	for i,v in pairs(data) do
-		popupText = popupText..v.."\n"
-	end
-
-	ItemScore.HloomPopup:SetText("The following heirlooms can be\n upgraded to higher levels:",popupText)
-	ZGV.PopupHandler:QueuePush(ItemScore.HloomPopup)
-end
-
-function ItemScore:ScoreGem(gemdata)
-	local ruleSetStats = ItemScore.curRuleSet.stats
-	local score = 0
-
-	for stat,statvalue in pairs(gemdata) do
-		score = score + ((ruleSetStats[stat] or 0)*statvalue)
-	end
-
-	return score
-end   
-
-local returntable
-function ItemScore:GetBestGemPerIlvl()
-	
-	if not returntable then returntable = {} end
-	wipe(returntable)
-
-	for ilvl,sockets in pairs(ItemScore.GemData) do
-		returntable[ilvl] = {}
-		for color,gems in pairs(sockets) do
-			for socketcolor,_ in pairs(ItemScore.GemMatchesSocket[color]) do
-				returntable[ilvl][socketcolor] = returntable[ilvl][socketcolor] or {id=0,score=0}
-			end
-			for gemid,stats in pairs(gems) do
-				local tempscore = ItemScore:ScoreGem(stats)
-				for socketcolor,_ in pairs(ItemScore.GemMatchesSocket[color]) do
-					if tempscore > returntable[ilvl][socketcolor].score then
-						returntable[ilvl][socketcolor].score=tempscore
-						returntable[ilvl][socketcolor].id=gemid
-					end
-				end
-			end
-		end
-	end
-
-	ItemScore.curRuleSet.sockets = returntable
-end 
-
-function ItemScore:ListSuggestedGems()
-    local s = ""
-    for ilvl,sockets in pairs(ItemScore.curRuleSet.sockets) do
-        s = s.."Item level: "..ilvl..":\n"
-        for color,data in pairs(sockets) do
-            local name = ZGV:GetItemInfo(data.id)
-            s = s..color.." - "..(name or "").." "..data.id .."\n"
-        end
-    s = s.."\n"
-    end
-    ZGV:ShowDump(s)
-end
-
-
-function ItemScore:GetSocketWeight(type,ilvl)
-	local score,id = 0,0
-	for level,sockets in pairs(ItemScore.curRuleSet.sockets) do
-		if level>ilvl then return score end
-		if (sockets[type] and sockets[type].score or 0)>score then
-			score = sockets[type].score
-			id = sockets[type].id
-		end
-	end
-	return score,id
+-- set of functions to add zygor item info to tooltip
+local function get_change(old,new) 
+	if old and old>0 then 
+		return math.floor(((new*100/old)-100)*100)/100
+	else 
+		return 100 
+	end 
 end
 
 local function ItemScore_SetTooltipData(tooltip, tooltipobj)
-	tooltipobj=tooltipobj or GameTooltip
+	if not ZGV.db.profile.autogear then return end
+	tooltipobj=tooltipobj or GameTooltip -- we patch either gametooltip or itemreftooltip
+
 	if not ItemScore.TooltipPatched then
-		local itemName,itemLink = tooltipobj:GetItem()
-		if not itemLink then
-			ItemScore.TooltipPatched  = true
-			return
-		end
+		local itemName,itemlink = tooltipobj:GetItem()
+		if not itemlink then ItemScore.TooltipPatched  = true return end
 
-		local cleanlink = ZGV.ItemLink.ProcessItemLink(itemLink,false)
+		local item = ItemScore:GetItemDetails(itemlink,"temporary") -- temporary item data will be purged 60 seconds after we are done with tooltip
+		if not item then ItemScore.TooltipPatched  = true return end
 
-		local verbose = {}
-		local score,code,comment = ZGV.ItemScore:GetItemScore(itemLink,nil,false,verbose)
-		local subscore,cancode,cancomment = ZGV.ItemScore:CanEquipItem(itemLink,false,true)
+		local fulllink = itemlink
+		local itemlink = item.itemlink
 
+		local score, white, success, scorecomment = ItemScore:GetItemScore(itemlink)
+		if not success then ItemScore.TooltipPatched  = true return end
+
+		local valid, final, validcomment = ItemScore:IsValidItem(itemlink)
+		if not final then ItemScore.TooltipPatched  = true return end
+
+		local heirloom_protected,heirloom_max = ItemScore:GetHeirloomInfo(itemlink)
+		
 		if ZGV.db.profile.debug_display then
-			tooltip:AddLine("|cfffe6100Zygor debug:|r ")
-			tooltip:AddLine("score "..score)
-			tooltip:AddLine("code "..code)
-			tooltip:AddLine("reason "..comment)
-			tooltip:AddDoubleLine("  ITEMID:",ZGV.ItemLink.GetItemID(cleanlink))
-			for _,line in pairs(verbose) do
-				tooltip:AddLine(line)
-			end
-		end
-
-
-		local item = ItemScore:GetItemStatsWithTooltip(itemLink)
-		if not item then 
-			ItemScore.TooltipPatched  = true
-			return
-		end
-		local itemslot = item.info.equipslot
-		local equippedscore,equippedscore2 = 0,0
-		local equippeditem,equippeditem2 
-
-		local ecode,ereason
-
-		if ItemScore.possEquipSlots[itemslot] then
-			equippeditem,equippeditem2,equippeditemfull,equippeditem2full = ItemScore:GetItemInSlot(itemslot)
-			if equippeditem then 
-				equippeditem = ZGV.ItemLink.ProcessItemLink(equippeditemfull,false)
-				equippedscore,ecode,ereason = ItemScore:GetItemScore(equippeditem,nil,false,verbose) 
-			end
-			if equippeditem2 then 
-				equippeditem2 = ZGV.ItemLink.ProcessItemLink(equippeditem2full,false)
-				equippedscore2,ecode,ereason = ItemScore:GetItemScore(equippeditem2,nil,false,verbose) 
-			end
-		end
-
-		local diffscore,diffscore2 = math.round((score-equippedscore)*100)*0.01, math.round((score-equippedscore2)*100)*0.01
-		if diffscore > 0 then color = "|cff00ff00+" else color = "|cffff0000" end
-
-		tooltip:AddLine("|r")
-		if score>0 and (equippedscore>0 or equippedscore2>0) then
-			-- Item being previewed
-			if ZGV.db.profile.debug then
-				tooltip:AddLine("|cfffe6100Zygor ItemScore:|r "..score)
+			tooltip:AddLine(" ")
+			tooltip:AddLine("|r|cfffe6100Zygor debug:|r ")
+			tooltip:AddLine("link "..fulllink)
+			tooltip:AddLine("stripped "..itemlink)
+			if white>0 then
+				tooltip:AddLine("white score "..white)
 			else
-				tooltip:AddLine("|cfffe6100Zygor ItemScore:|r ")
+				tooltip:AddLine("score "..score)
 			end
-
-			local twoslots = (itemslot=="INVTYPE_TRINKET") or (itemslot=="INVTYPE_FINGER")
-
-			local comment
-			local slotinfo1 = twoslots and "Slot 1: " or ""
-			local slotinfo2 = twoslots and "Slot 2: " or ""
-
-			-- item in slot 1
-			if equippedscore>0 then
-				if cleanlink~=equippeditem then
-					local comment = "|r "..slotinfo1.."Upgrade |cff00ff00"
-					if diffscore <= 0 then 
-						comment = "|r "..slotinfo1.."Downgrade |cffff0000"
-					end
-					if ZGV.db.profile.debug then comment = comment..(score-equippedscore).." " end
-					local change=math.floor(((score*100/equippedscore)-100)*100)/100
-					tooltip:AddLine(comment..change.."% ")
-				else
-					tooltip:AddLine("|r "..slotinfo1.."Equipped")
-				end
-			else
-				tooltip:AddLine("|r "..slotinfo1.."Upgrade |cff00ff00100% ")
+			tooltip:AddLine("valid "..(valid and "yes " or "no ")..validcomment)
+			tooltip:AddLine("protected heirloom "..(heirloom_protected and "yes " or "no ")..heirloom_max)
+			tooltip:AddLine("stats:")
+			for i,v in pairs(item.stats) do
+				tooltip:AddLine(i.." "..v)
 			end
-
-			-- item in slot 2 only if it is ring or trinket
-			if twoslots and equippedscore2>0 then
-				if cleanlink~=equippeditem2 and equippedscore2>0 then
-					local comment = "|r "..slotinfo2.."Upgrade |cff00ff00"
-					if diffscore2 <= 0 then 
-						comment = "|r "..slotinfo2.."Downgrade |cffff0000"
-					end
-					if ZGV.db.profile.debug then comment = comment..(score-equippedscore2).." " end
-					local change=math.floor(((score*100/equippedscore2)-100)*100)/100
-					tooltip:AddLine(comment..change.."% ")
-				else
-					tooltip:AddLine("|r "..slotinfo2.."Equipped")
-				end
-			elseif twoslots then
-				tooltip:AddLine("|r "..slotinfo2.."Upgrade |cff00ff00100% ")
-			end
-		elseif score>0 then
-			tooltip:AddLine("|cfffe6100Zygor ItemScore:|r "..score)
-			tooltip:AddLine("|r  Upgrade |cff00ff00100% ")
+		end
+		
+		local slot_1,slot_2 = item.slot, item.slot_2
+		local equipped_item_1, equipped_item_2, change_1, change_2
+		if slot_1 then 
+			equipped_item_1 = ItemScore.Upgrades.EquippedItems[slot_1]
+			change_1 = get_change(equipped_item_1.artifactscore or equipped_item_1.score,score)
+		end
+		if slot_2 then 
+			equipped_item_2 = ItemScore.Upgrades.EquippedItems[slot_2] 
+			change_2 = get_change(equipped_item_2.artifactscore or equipped_item_2.score,score)
 		end
 
-		if ZGV.db.profile.debug_display then
-			if item.effect then
-				for i,v in pairs(item.effect) do
-					local rulevalue = ZGV.ItemScore.curRuleSet.stats[i]
-					tooltip:AddLine("|rEffect parsed: ")
-					tooltip:AddLine("|r  "..i.." "..v.." ("..(v*(rulevalue or 0))..")")
+		if valid then
+			if (equipped_item_1 and equipped_item_1.score) or (equipped_item_2 and equipped_item_2.score) then -- item can replace something
+				local mh, oh, th
+				if item.class == LE_ITEM_CLASS_WEAPON then
+					ItemScore.Upgrades:ResetWeaponQueue("onlytemp")
+					ItemScore.Upgrades:QueueWeapon(itemlink)
+					mh, oh, th = ItemScore.Upgrades:ProcessWeaponQueue()
+				end
+
+				tooltip:AddLine(" ")
+				tooltip:AddLine("|cfffe6100Zygor ItemScore:|r")
+				local slotinfo1 = slot_2 and "Slot 1: " or ""
+				local slotinfo2 = slot_2 and "Slot 2: " or ""
+
+				-- item in slot 1
+				if equipped_item_1.score then
+					if itemlink~=equipped_item_1.itemlink then
+						local comment = "|r "..slotinfo1..((change_1 > 0) and "Upgrade |cff00ff00" or "Downgrade |cffff0000")
+						if ZGV.db.profile.debug then comment = comment..(score-equipped_item_1.score).." " end
+						tooltip:AddLine(comment..change_1.."% ")
+						if change_1<0 and (mh and mh.itemlink==itemlink) and (oh and oh.itemlink) then
+							tooltip:AddLine("       Upgrade with "..oh.itemlinkfull)
+						end
+					else
+						tooltip:AddLine("|r "..slotinfo1.."Equipped")
+					end
+				else
+					tooltip:AddLine("|r "..slotinfo1.."Upgrade |cff00ff00100% ")
+				end
+
+				if slot_2 and equipped_item_2.score then
+					if itemlink~=equipped_item_2.itemlink then
+						local comment = "|r "..slotinfo2..((change_2 > 0) and "Upgrade |cff00ff00" or "Downgrade |cffff0000")
+						if ZGV.db.profile.debug then comment = comment..(score-equipped_item_2.score).." " end
+						tooltip:AddLine(comment..change_2.."% ")
+						if change_2<0 and (mh and mh.itemlink) and (oh and oh.itemlink==itemlink) then
+							tooltip:AddLine("       Upgrade with "..mh.itemlinkfull)
+						end
+					else
+						tooltip:AddLine("|r "..slotinfo2.."Equipped")
+					end
+				elseif slot_2 then
+					tooltip:AddLine("|r "..slotinfo2.."Upgrade |cff00ff00100% ")
+				end
+			elseif score>0 then
+				tooltip:AddLine(" ")
+				tooltip:AddLine("|cfffe6100Zygor ItemScore:|r")
+				tooltip:AddLine("|r  Upgrade |cff00ff00100% ")
+			end
+			for statname,statvalue in pairs(item.stats) do
+				if statname=="EMPTY_SOCKET_PRISMATIC" then
+					local gemscore, gemstat, gemvalue = ItemScore:ScoreSocket(item.itemlvl)
+					if gemscore>0 then
+						tooltip:AddLine("|cfffe6100Suggested gem: |r"..gemvalue.." "..gemstat)
+					end
+					break
 				end
 			end
-		end				
+		else
+			tooltip:AddLine(" ")
+			tooltip:AddLine("|cfffe6100Zygor ItemScore:|r")
+			tooltip:AddLine("|r  Not a valid item")
+		end
 
 		ItemScore.TooltipPatched  = true
 	end
 	if tooltipobj==ItemRefTooltip then ItemRefTooltip:Show() end -- update to new height, have to do it by hand since IRT is called just once
 end
+local function ItemScore_ClearTooltipData(tooltip, ...) ItemScore.TooltipPatched = false end
 
-local function ItemScore_ClearTooltipData(tooltip, ...)
-	ItemScore.TooltipPatched = false
+-- functions that support itemscore/gearfinder options panel
+function ItemScore:UsesCustomWeights(class,spec)
+	local statset = ZGV.ItemScore.rules[class][spec].stats
+	local prefix = 'gear_'..class..'_'..spec..'_'
+	local profile = ZGV.db.profile
+
+	for index=1,#ZGV.ItemScore.Keywords do
+		local statname = ZGV.ItemScore.Keywords[index].blizz
+
+		if not profile[prefix..statname] and statset[statname] then
+		
+		elseif tonumber(profile[prefix..statname]) and not statset[statname] then
+			return true
+		elseif tonumber(profile[prefix..statname]) and tonumber(statset[statname])~=tonumber(profile[prefix..statname]) then
+			return true
+		end
+	end
+	return false
 end
-
-GameTooltip:HookScript("OnTooltipSetItem", ItemScore_SetTooltipData)
-GameTooltip:HookScript("OnTooltipCleared", ItemScore_ClearTooltipData)
-ItemRefTooltip:HookScript("OnTooltipCleared", ItemScore_ClearTooltipData)
-hooksecurefunc (GameTooltip, "SetHyperlink", function(tip) ItemScore_SetTooltipData(tip,GameTooltip) end)
-hooksecurefunc (ItemRefTooltip, "SetHyperlink", function(tip) ItemScore_SetTooltipData(tip,ItemRefTooltip) end)
-
 
 function ItemScore:ImportPawn(datastring)
 	if not datastring then return end
@@ -1205,7 +753,7 @@ function ItemScore:ImportPawn(datastring)
 	for statstring in string.gmatch(datastring, "([^,]+)") do
 		local statname,statval = statstring:match("(%w+)=([-0-9%.]+)")
 		if statname and statval then
-			stattable[statname] = statval
+			stattable[statname] = (tonumber(statval)~=0 and statval or nil)
 		end
 	end
 
@@ -1246,18 +794,17 @@ function ItemScore:ExportPawn(datastring)
 
 	local data = {}
 
-
 	for namez,namep in pairs(ItemScore.Gear_ZygorToPawn) do
 		if not ruleset.itemtypes[namez] then
 			table.insert(data,namep.."=-1000000")
-		elseif ruleset.itemtypes[namez]<0 then
+		else
 			table.insert(data,namep.."="..ruleset.itemtypes[namez])
 		end
 	end
 
 	local playermask = "gear_"..tag.."_"..spec.."_"
 	for index,stat in pairs(ZGV.ItemScore.Keywords) do
-		table.insert(data,stat.pawn.."="..(ZGV.db.profile[playermask..(stat.blizz)] or 0))
+		table.insert(data,stat.pawn.."="..(ZGV.db.profile[playermask..(stat.blizz)] or ruleset.stats[stat.blizz] or 0))
 	end
 	
 	returnstring = returnstring.." "..table.concat(data, ", ") 
@@ -1266,30 +813,14 @@ function ItemScore:ExportPawn(datastring)
 	ZGV.ItemScore.lastPawnString = returnstring
 end
 
-function ItemScore:InitGearFinderOptions()
-	if UnitClass("player") then
-		ZGV.db.profile.gear_selected_class = select(3,UnitClass("player"))
-		ZGV.db.profile.gear_selected_spec = GetSpecialization() or 1
-	else
-		ZGV:ScheduleTimer(function() ItemScore:InitGearFinderOptions() end, 1)
-	end
-end
+tinsert(ZGV.startups,{"ItemScore",function(self)
+	ZGV.db.char.badupgrade = ZGV.db.char.badupgrade or {}
+	ItemScore:Initialise()
+	ItemScore.GearFinder:Initialise()
 
-function ItemScore:UsesCustomWeights(class,spec)
-	local statset = ZGV.ItemScore.rules[class][spec].stats
-	local prefix = 'gear_'..class..'_'..spec..'_'
-	local profile = ZGV.db.profile
-
-	for index=1,#ZGV.ItemScore.Keywords do
-		local statname = ZGV.ItemScore.Keywords[index].blizz
-
-		if not profile[prefix..statname] and statset[statname] then
-		
-		elseif tonumber(profile[prefix..statname]) and not statset[statname] then
-			return true
-		elseif tonumber(profile[prefix..statname]) and tonumber(statset[statname])~=tonumber(profile[prefix..statname]) then
-			return true
-		end
-	end
-	return false
-end
+	GameTooltip:HookScript("OnTooltipSetItem", ItemScore_SetTooltipData)
+	GameTooltip:HookScript("OnTooltipCleared", ItemScore_ClearTooltipData)
+	ItemRefTooltip:HookScript("OnTooltipCleared", ItemScore_ClearTooltipData)
+	hooksecurefunc (GameTooltip, "SetHyperlink", function(tip) ItemScore_SetTooltipData(tip,GameTooltip) end)
+	hooksecurefunc (ItemRefTooltip, "SetHyperlink", function(tip) ItemScore_SetTooltipData(tip,ItemRefTooltip) end)
+end})

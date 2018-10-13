@@ -1054,48 +1054,45 @@ end
 
 -- Returns items deemed to be unusable.
 function IM:GetUnusableItems()
-	ZGV.ItemScore.AutoEquip:ScoreCurrentEquippedItems() -- This eventually runs IsItemUpgrade.
-	ZGV.ItemScore.AutoEquip:ScanBagsForUpgrades()
-	ZGV.ItemScore:SetFilters()
-
-	if not ZGV.ItemScore.AutoEquip.PossibleUpgrades then return end -- too early?
-	
 	local itemsList = {}
-	
+	ZGV.ItemScore.Upgrades:ScanBagsForUpgrades(onlyscan)
+
 	for bagID=0, NUM_BAG_SLOTS do
 		for bagSlotID=1,GetContainerNumSlots(bagID) do
 			if not GetContainerItemEquipmentSetInfo(bagID,bagSlotID) then -- don't sell equipment sets
-			itemLink = GetContainerItemLink(bagID,bagSlotID)
-			if itemLink then
-				local _, _, Color, Ltype, Id, Enchant, Gem1, Gem2, Gem3, Gem4, Suffix, Unique, LinkLvl, Name = string.find(itemLink,"|?c?f?f?(%x*)|?H?([^:]*):?(%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*):?(%d*):?(%-?%d*)|?h?%[?([^%[%]]*)%]?|?h?|?r?") -- Blame WoWWiki
-				itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = ZGV:GetItemInfo(itemLink)
-				isSoulbound = ZGV.IsItemBound(bagID, bagSlotID)
-				id = tonumber(Id)
+				itemLink = GetContainerItemLink(bagID,bagSlotID)
+				if itemLink then
+					local itemdetails = ZGV.ItemScore:GetItemDetails(itemLink)
+					local stripped_itemlink = ZGV.ItemScore.strip_link(itemLink)
+					itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = ZGV:GetItemInfo(itemLink)
 
-				local isUpgrade = false
-				for i, v in pairs(ZGV.ItemScore.AutoEquip.PossibleUpgrades) do
-					if v.itemid == id then
-						isUpgrade = true
+					isSoulbound = ZGV.IsItemBound(bagID, bagSlotID)
+					id = ZGV.ItemLink.GetItemID(itemLink)
+
+					local isUpgrade = false
+					for slot, option in pairs(ZGV.ItemScore.Upgrades.UpgradeQueue) do
+						if option.itemlink == stripped_itemlink then
+							isUpgrade = true
+						end
+					end
+					
+					if 	((isSoulbound  and not isUpgrade) or (itemRarity==1 and not isUpgrade))			-- sell non-upgrades that are bound or white
+						and (itemSellPrice or 0) > 0								-- that have sell price
+						and (itemdetails.class==LE_ITEM_CLASS_WEAPON or itemdetails.class==LE_ITEM_CLASS_ARMOR) -- are weapon/armor
+						and ((not db.keptItems) or db.keptItems[id]==nil)					-- not blacklisted
+						and itemRarity<5									-- and don't even look at legendaries...
+					then
+						local item = {}
+						item.ID=id
+						item.bagID=bagID
+						item.bagSlotID=bagSlotID
+						item.itemName=itemName
+						item.itemLink=itemLink
+						item.itemQuality=itemRarity
+						table.insert(itemsList, item)
 					end
 				end
-				
-				if 	((isSoulbound  and not isUpgrade) or (itemRarity==1 and not isUpgrade)) 
-					and itemSellPrice > 0
-					and (itemType==_G["WEAPON"] or itemType==_G["ARMOR"])
-					and ((not db.keptItems) or db.keptItems[id]==nil)
-					and itemRarity<5 -- don't even look at legendaries...
-				then
-					local item = {}
-					item.ID=id
-					item.bagID=bagID
-					item.bagSlotID=bagSlotID
-					item.itemName=itemName
-					item.itemLink=itemLink
-					item.itemQuality=itemRarity
-					table.insert(itemsList, item)
-				end
 			end
-			end -- don't sell equipment sets
 		end
 	end
 	

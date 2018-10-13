@@ -60,88 +60,59 @@ function QuestItem:IsQuestItemsReady()
 end
 
 function QuestItem:GetQuestRewardIndex()
-	local totalrewards=GetNumQuestChoices()
+	local totalrewards = GetNumQuestChoices()
 	if totalrewards < 1 then return nil,"No items to pick" end
 	if totalrewards == 1 then return 1,"Only one item" end
 
 	if not self:IsQuestItemsReady() then return -5,"Items not ready" end
 
-	local highSellValue, highSellIndex, upgradeScore,upgradeQuestIndex = 0,nil,0,nil
+	local best_upgrade_change, best_upgrade_index = 0, 0
+	local best_sell_value, best_sell_index = 0, 0
 
-	local function newPossQuestUpgrade(increasedScore,questindex)
-		if upgradeScore < increasedScore then --We found a upgrade, see if it is the best one
-			upgradeScore,upgradeQuestIndex = increasedScore,questindex
+	local weapons_found = false
+	ItemScore.Upgrades:ResetWeaponQueue("onlytemp")
+
+	for index=1, totalrewards do 
+		local itemlink = GetQuestItemLink("choice",index)
+
+		local price = select(11,ZGV:GetItemInfo(itemlink))
+
+		local is_upgrade, _, change = ItemScore.Upgrades:IsUpgrade(itemlink)
+
+		if is_upgrade then 
+			if change > best_upgrade_change then
+				best_upgrade_change = change
+				best_upgrade_index = index
+			end
+		end
+
+		if price > best_sell_value then
+			best_sell_value = price
+			best_sell_index = index
+		end
+
+		if ItemScore.Upgrades:QueueWeapon(itemlink) then weapons_found = true end
+		
+	end
+
+	if weapons_found then
+		local mh, oh, th = ItemScore.Upgrades:ProcessWeaponQueue()
+		if (mh or oh or th) then
+			for index=1, totalrewards do 
+				local itemlink = GetQuestItemLink("choice",index)
+				itemlink = ItemScore.strip_link(itemlink)
+				if (mh and mh.itemlink) == itemlink or (oh and oh.itemlink) == itemlink or (th and th.itemlink) == itemlink then
+					best_upgrade_index = index
+				end
+			end
 		end
 	end
 
-	AutoEquip:ScoreCurrentEquippedItems(1) --Call this so we have an updated list of our current items.
-	if not AutoEquip.CurrentItemsReady then return -5,"Cur Items not ready" end
 
-	local curGear = AutoEquip.CurrentGear
-	local index
-
-	for index=1, totalrewards do while(1) do -- Now that we are sure the info is there. Do work!
-		local name,texture,numItems,quality,isUsable=GetQuestItemInfo("choice",index)
-		local link= GetQuestItemLink("choice",index)
-		if not (link and name) then break end --WTF check
-
-		local equipslot,_,price = select(9,ZGV:GetItemInfo(link))
-		local itemid = ZGV.ItemLink.GetItemID(link)
-		local price =  select(11,ZGV:GetItemInfo(itemid))
-
-		--TODO CONSUMABLES!
-
-		local slot1, slot2 = ItemScore:GetItemSlot(equipslot)
-		if not slot1 then break end --Some kind of item we don't deal with. Food or something.
-
-		if price > highSellValue then --Test all items for this to find which item is worth the most.
-			highSellValue,highSellIndex = price,index
-		end
-
-		if not isUsable then break end -- Already got the price so if it is not usable then stop
-
-		self:Debug("Testing quest reward %s",link)
-
-		local questItemScore,info = ItemScore:GetItemScore(link,nil)
-		if questItemScore < 0 then break end
-
-		self:Debug("%s scored |cffff0000%d",link,questItemScore)
-		
-		if not curGear[slot1] then -- no item in slot, upgrade is total item.
-			if slot1 == "SecondaryHandSlot" --OH weapon or holdable item
-			and curGear["MainHandSlot"] and curGear["MainHandSlot"].equipslot=="INVTYPE_2HWEAPON" then
-				--We have a staff equipped so a holdable item is not an upgrade.
-				break
-			end
-
-			newPossQuestUpgrade(questItemScore,index)
-		elseif slot1 == "MainHandSlot" and curGear[slot1] and curGear["SecondaryHandSlot"] and equipslot=="INVTYPE_2HWEAPON"
-		and not (ItemScore.playerdualwield or ItemScore.playerdual2h) then
-			-- Trying to equip a 2h over a MH and OH combo. See if it is better than the stats combined before suggesting.
-			local ohscore = ItemScore:ScoreItemStats(curGear["SecondaryHandSlot"].link, nil, curGear["SecondaryHandSlot"].link)
-			local combinedScore = curGear[slot1].score + ohscore
-
-			if combinedScore < questItemScore then
-				newPossQuestUpgrade((questItemScore-combinedScore),index)
-			end
-		elseif curGear[slot1].score < questItemScore then -- already have an item, upgrade is the difference
-			newPossQuestUpgrade((questItemScore-curGear[slot1].score),index)
-		end
-
-		if slot2 then
-			if not curGear[slot2] then -- no item in slot, upgrade is total item.
-				newPossQuestUpgrade(questItemScore,index)
-			elseif curGear[slot2].score < questItemScore then -- already have an item, upgrade is the difference
-				newPossQuestUpgrade((questItemScore-curGear[slot2].score),index)
-			end
-		end
-
-	break end end
-
-	if upgradeQuestIndex then
-		return upgradeQuestIndex,"New Upgrade found"
-	elseif highSellIndex then
-		return highSellIndex,"Item picked because it is worth money"
+	if best_upgrade_index > 0 then
+		return best_upgrade_index,"New upgrade found"
+	elseif best_sell_index > 0 then
+		return best_sell_index,"Item picked because it is worth most money"
 	end
 
 	return nil,"Error"
@@ -171,25 +142,34 @@ function QuestItem:TestCurStepForQuestItem()
 	local cur = ZGV.CurrentStep
 	if not cur then return end
 
+	local itemid, questid
+
 	for i,goal in ipairs(cur.goals) do
-		if goal.action == "equipped" then
-			for questid,itemid in pairs(ZGV.db.profile.questitemcache) do
-				if ZGV.completedQuests[questid] then
-					ZGV.db.profile.questitemcache[questid] = nil--If the quest is done, we don't need to know the item for it anymore.
-				else
-					if itemid == goal.itemid and GetItemCount(goal.itemid) then --found item. and user has the item.
-						self:Debug(("Current step has a quest item available. Item: %s Quest: %s"):format(itemid,questid))
-						return questid,itemid
-					end
-				end
-			end
-		elseif goal.questid then
-			if ZGV.completedQuests[goal.questid] then ZGV.db.profile.questitemcache[goal.questid] = nil end --If the quest is done, we don't need to know the item for it anymore.
-			if ZGV.db.profile.questitemcache[goal.questid] and GetItemCount(ZGV.db.profile.questitemcache[goal.questid]) > 0  then --found item and the user definately has it.
-				self:Debug(("Current step has a quest item available. Item: %s Quest: %s"):format(ZGV.db.profile.questitemcache[goal.questid],goal.questid))
-				return goal.questid,ZGV.db.profile.questitemcache[goal.questid]
-			end
+		if goal.action == "equipped" then itemid = goal.targetid or goal.itemid end
+		if goal.questid then questid = goal.questid end
+
+		if itemid and questid then 
+			ZGV.db.profile.questitemcache[questid]=itemid
+			return questid, itemid 
 		end
+	end
+	if questid then
+		return questid, ZGV.db.profile.questitemcache[questid] 
+	end		
+end
+
+local ItemCache = ItemScore.ItemCache
+function QuestItem:IsProtectedQuestItem(itemlink)
+	local item = ItemScore:GetItemDetails(itemlink)
+	if not item then return false,false end
+
+	local questid, questitemid = QuestItem:TestCurStepForQuestItem()
+	if not (questid and questitemid) then return false,false end
+
+	if item.itemid == questitemid then
+		return true, item.slot
+	else
+		return false, false
 	end
 end
 

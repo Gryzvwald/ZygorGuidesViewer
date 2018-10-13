@@ -256,7 +256,3 @@ talk Anduin Wrynn##107574
 |tip Inside the building.
 turnin From the Ashes...##53310 |goto 85.90,31.57
 ]])
-ZGV.BETASTART()
-ZGV.BETAEND()
-ZGV.BETASTART()
-ZGV.BETAEND()

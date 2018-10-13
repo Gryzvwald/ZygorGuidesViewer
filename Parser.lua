@@ -270,7 +270,7 @@ function ZGV:NeedsAnimatedPopup(variablesArray)
 	local faction_color = UnitFactionGroup("player")=="Alliance" and "A" or "H" -- blue/red
 	local function get_seasonal_decorations()
 	-- get server date, and use it to check if we need to apply any special features
-		local a = C_Calendar.GetDate()
+		local a = (C_Calendar.GetDate and C_Calendar.GetDate()) or (C_DateAndTime.GetCurrentCalendarTime and C_DateAndTime.GetCurrentCalendarTime())
 		local season_base = {"year","month","day"}
 		return decorate({[season_base[1]]=a.year,[season_base[2]]=a.month,[season_base[3]]=a.monthDay})
 	end
@@ -588,6 +588,9 @@ local ConditionEnv = {
 	end,
 	poiactive = function(poiid)
 		return ZGV:IsPOIActive(poiid)
+	end,
+	hastitle = function(id)
+		return IsTitleKnown(id)
 	end,
 }
 setmetatable(ConditionEnv,{__index=function(t,k) return k and rawget(t,k:lower()) end})

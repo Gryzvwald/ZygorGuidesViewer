@@ -630,580 +630,6 @@ step
 confirm |next "Profession Guides\\Blacksmithing\\Leveling Guides\\Blacksmithing 500-600 Leveling Guide"
 |tip This will take you to the Blacksmithing 500 - 600 guides.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Cooking 1-520 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Cooking skill from 1-300.",
-achieveid={121,122,123,124,125,4916,6365},
-},[[
-step
-talk Marogg##42506
-skillmax Cooking,75 |goto Orgrimmar/1 56.5,62.5
-step
-map Durotar
-path loop on; follow loose; dist 30
-path	43.8,12.8	47.6,12.2	50.8,13.4
-path	50.6,16.2	49.2,18.4	47.0,16.6
-path	43.0,16.0	41.6,14.6
-kill Wild Mature Swine##42859+, Mature Swine##42504+, Dire Mottled Boar##3099+
-collect 55 Chunk of Boar Meat##769 |condition skill("Cooking")>=45
-|tip You can also buy these materials from the Auction House.
-step
-Create a cooking fire |cast Cooking fire##818
-create Roasted Boar Meat,Cooking,50 |goto 43.8,12.8
-step
-talk Marogg##42506
-skillmax Cooking,150 |goto Orgrimmar/1 56.5,62.5
-step
-talk Suja##46708
-buy 25 Refreshing Spring Water##159 |goto Orgrimmar/1 56.4,61.0 |condition itemcount(159) >= 25 or skill("Cooking")>=90
-step
-map Ashenvale/0
-path loop off; follow strict; dist 30
-path	12.4,26.1	14.9,23.8	15.1,19.5
-path	14.2,15.9	11.3,14.1	7.5,13.3
-kill Wrathtail Sorceress##3717+, Spined Crawler##3814+, Clattering Crawler##3812+, Wrathtail Wave Rider##3713+
-use Small Barnacled Clam##5523
-|tip The Small Barnacled Clams drop from Murlocs and contain Clam Meat.
-collect 25 Clam Meat##5503 |goto Ashenvale/0 14.0,20.1 |condition skill("Cooking")>=150
-collect 50 Crawler Meat##2674 |goto Ashenvale/0 14.0,20.1 |condition skill("Cooking")>=125
-step
-talk Marogg##42506
-learn Boiled Clams##6499 |goto Orgrimmar/1 56.5,62.5 |condition _G.IsSpellKnown(6499) or skill("Cooking")>=75
-step
-create Boiled Clams##6499,Cooking,75 |goto Orgrimmar/1 56.5,62.5
-step
-talk Marogg##42506
-learn Crab Cake##2544 |goto Orgrimmar/1 56.5,62.5 |condition _G.IsSpellKnown(2544) or skill("Cooking")>=125
-step
-create Crab Cake##2544,Cooking,125 |goto Orgrimmar/1 56.5,62.5
-step
-talk Marogg##42506
-skillmax Cooking,225 |goto Orgrimmar/1 56.5,62.5
-step
-talk Zargh##3489
-buy Recipe: Hot Lion Chops##3735 |goto Northern Barrens 50.6,57.8 |condition _G.IsSpellKnown(3398) or itemcount(3735) >= 1 or skill("Cooking")>=150
-step
-use Recipe: Hot Lion Chops##3735
-learn Hot Lion Chops##3398 |condition _G.IsSpellKnown(3398) or skill("Cooking")>=150
-step
-map Southern Barrens
-path loop on; follow strict; dist 70
-path	51.2,46.4	49.0,48.1	45.8,45.0
-path	43.5,42.7	42.8,46.9	42.0,53.3
-path	44.5,58.4	49.0,59.6	51.9,53.2
-path	53.6,50.2
-kill Plains Pridemane##37207+, Plains Prowler##Plains Prowler+
-collect 50 Lion Meat##3731 |condition skill("Cooking")>=175
-step
-kill Stranded Sparkleshell##48128 |goto Thousand Needles 64.41,51.53
-collect 55 Turtle Meat##3712  |condition skill("Cooking")>=225
-step
-create Hot Lion Chops##3398,Cooking,175 |goto Orgrimmar/1 56.5,62.5
-step
-talk Marogg##42506
-learn Soothing Turtle Bisque##3400 |goto Orgrimmar/1 56.5,62.5 |condition _G.IsSpellKnown(3400) or skill("Cooking")>=225
-step
-create Soothing Turtle Bisque##3400,Cooking,225 |goto Orgrimmar/1 56.5,62.5
-step
-talk Marogg##42506
-skillmax Cooking,300 |goto Orgrimmar/1 56.5,62.5
-step
-talk Himmik##11187
-buy Recipe: Monster Omelet##16110 |goto Winterspring 59.8,51.6 |condition _G.IsSpellKnown(15933) or itemcount(16110) >= 1 or skill("Cooking")>=250
-step
-use Recipe: Monster Omelet##16110
-learn Monster Omelet##15933 |condition _G.IsSpellKnown(15933) or skill("Cooking")>=250
-step
-Fish from the Lake here |cast Fishing##7620
-|tip You can fish from any water in the Tainted Forest
-collect 15 Raw Whitescale Salmon##13889 |goto Blasted Lands 43.0,72.3 |condition skill("Cooking")>=300
-step
-map Winterspring
-path loop on; follow strict; dist 40
-path	55.4,36.6	52.4,30.8	58.8,31.2
-path	60.0,34.2	65.0,39.6	67.2,43.6
-path	65.0,75.8	64.6,80.8	54.8,40.1
-collect 25 Giant Egg##12207 |condition skill("Cooking")>=250
-collect 40 Bear Flank##35562 |condition skill("Cooking")>=275
-step
-Stand next to a fire, or create one yourself |cast Cooking fire##818
-create Monster Omelet##15933,Cooking,250
-step
-talk Marogg##42506
-learn Charred Bear Kabob##46684 |goto Orgrimmar/1 56.5,62.5 |condition _G.IsSpellKnown(46684) or skill("Cooking")>=285
-step
-create Charred Bear Kabob##46684,Cooking,285 |goto Orgrimmar/1 56.5,62.5
-step
-talk Sheendra Tallgrass##8145
-learn Baked Salmon##18247 |goto Feralas 74.6,42.8 |condition _G.IsSpellKnown(46688) or skill("Cooking")>=300
-step
-create Baked Salmon##18247,Cooking,300 |goto Orgrimmar/1 56.5,62.5
-step
-talk Marogg##42506
-skillmax Cooking,375 |goto Orgrimmar/1 56.5,62.5
-step
-talk Marogg##42506
-learn Ravager Dog##33284 |goto Orgrimmar/1 56.5,62.5 |condition _G.IsSpellKnown(46688) or skill("Cooking")>=325
-step
-talk Nula the Butcher##20097
-buy Recipe: Talbuk Steak##27693 |goto Nagrand 58.0,25.6 |condition _G.IsSpellKnown(33289) or itemcount(27693) >= 1 or skill("Cooking")>=350
-step
-map Terokkar Forest
-path	60.7,11.3	58.1,13.1	55.5,13.0
-path	52.7,12.4	50.3,10.1	46.6,5.3
-kill Razorthorn Ravager##24922+
-collect 30 Ravager Flesh##27674 |condition skill("Cooking")>=330
-step
-map Nagrand
-path	48.8,47.6	52.0,48.6	56.8,45.8
-path	51.6,39.0	52.2,29.6	54.8,24.6
-path	57.6,23.2	51.4,23.6	45.4,27.4
-path	47.6,42.2	48.2,47.4	52.2,52.6
-collect 30 Talbuk Venison##27682 |condition skill("Cooking")>=345
-step
-Stand next to a fire, or create one yourself |cast Cooking fire##818
-create Ravager Dog##33284,Cooking,325
-step
-use Recipe: Talbuk Steak##27693
-learn Talbuk Steak##33289 |condition _G.IsSpellKnown(46688) or skill("Cooking")>=350
-step
-Stand next to a fire, or create one yourself |cast Cooking fire##818
-create Talbuk Steak##33289,Cooking,350
-step
-talk Jack Trapper##19185
-skillmax Cooking,450 |goto Shattrath City 63.1,68.0
-Note that for this section, you will need to do _Dalaran Cooking Dailies_ in order to reach 425 Cooking skill
-step
-talk Jack Trapper##19185
-learn Rhino Dogs##45553 |goto Shattrath City 63.1,68.0 |condition _G.IsSpellKnown(45553) or skill("Cooking")>=380
-step
-map Sholazar Basin
-path	32.4,56.9	29.4,53.9	30.4,47.9
-path	32.6,42.2	31.1,39.0	28.4,44.7
-path	24.6,51.4	29.8,57.1
-kill Shardhorn Rhino##28009+
-collect 60 Rhino Meat##43012 |condition skill("Cooking")>=375
-collect 50 Chilled Meat##43013 |n
-|tip Save any Chilled Meat you gather
-step
-map Zul'Drak
-path	75.3,40.5	74.7,42.3	73.2,41.1
-path	71.2,42.0	70.8,44.1	69.1,43.5
-path	70.5,40.3	72.4,38.8	73.8,38.5
-kill Enraged Mammoth##28851+
-collect 25 Chunk o' Mammoth##34736 |condition skill("Cooking")>=400
-collect 50 Chilled Meat##43013 |n
-|tip Save any Chilled Meat you gather
-step
-map Howling Fjord
-path	70.2,67.6	71.7,66.7	75.3,63.7
-path	75.1,59.9	73.4,58.1	70.3,63.2
-path	67.8,64.7	65.1,68.5	65.2,71.6
-path	67.9,71.9
-kill Shoveltusk Calf##24791+, Shoveltusk##23690+, Shoveltusk Stag##23691+
-collect 25 Shoveltusk Flank##43009 |condition skill("Cooking")>=400
-collect 50 Chilled Meat##43013 |n
-|tip Save any Chilled Meat you gather
-step
-kill Ice Heart Jormungar Feeder##26358+, Ice Heart Jormungar Spawn##26359+ |goto Dragonblight 56.5,12.0
-Clear out the Jourmungar in the cave
-collect 25 Worm Meat##43010 |condition skill("Cooking")>=400
-collect 50 Chilled Meat##43013 |condition skill("Cooking")>=425
-step
-create Rhino Dogs##45553,Cooking,380 |goto Dalaran 40.3,66.3
-step
-talk Awilo Lon'gomba##29631
-learn Great Feast##45554 |goto Dalaran/1 70.0,39.0 |condition _G.IsSpellKnown(45554) or skill("Cooking")>=400
-step
-create Great Feast##45554,Cooking,400 |goto Dalaran/1 70.0,39.0
-step
-talk Misensi##31031
-buy 30 Northern Spices##43007 |goto Dalaran/1 69.9,38.4 |condition itemcount(43007) >= 30 or skill("Cooking")>=425
-step
-talk Misensi##31031
-buy Recipe: Hearty Rhino##43030 |goto Dalaran/1 69.9,38.4 |condition _G.IsSpellKnown(57436) or itemcount(43030) >= 1 or skill("Cooking")>=350
-step
-use Recipe: Hearty Rhino##43030
-learn Hearty Rhino Soup##57436 |goto Dalaran/1 70.0,39.0 |condition _G.IsSpellKnown(57436) or skill("Cooking")>=425
-step
-create learn Hearty Rhino Soup##57436 ,Cooking,425 |goto Dalaran/1 70.0,39.0
-step
-talk Awilo Lon'gomba##29631
-skillmax Cooking,525 |goto Dalaran/1 70.0,39.0
-Note that you will need to do _Cooking Dailies_ in order to advance to 500 cooking
-step
-talk Katherine Lee##28705
-learn Blackened Surprise##88006 |goto Dalaran 40.8,65.4 |condition _G.IsSpellKnown(88006) or skill("Cooking")>=475
-step
-map Shimmering Expanse/0
-path	57.7,82.2	55.8,81.6	53.2,80.0
-path	50.4,78.5	49.5,84.2	51.7,85.6
-path	54.7,86.6	58.3,88.1	59.9,84.6
-path	58.1,82.1
-kill Silversand Burrower##41609+
-collect 30 Monstrous Claw##62779 |condition skill("Cooking")>=475
-step
-map Kelp'thar Forest/0
-path loop off; follow loose; dist 30
-path	49.6,40.8	51.8,41.2	51.8,44.6
-path	53.0,46.8	53.8,51.0	55.8,48.0
-kill Speckled Sea Turtle##40223+
-|tip They are floated above the ground.
-collect 15 Giant Turtle Tongue##62781 |condition skill("Cooking")>=490
-step
-map Uldum/0
-path	58.9,67.7	58.6,72.6	59.0,80.2
-path	59.4,85.0	60.8,84.4	62.1,81.5
-path	63.4,77.1	65.3,77.5	68.7,76.4
-path	68.8,72.8	66.8,71.9	65.4,69.0
-path	63.8,66.6	61.3,63.2	60.5,59.0
-path	59.4,53.0	57.7,46.9	57.2,44.1
-path	54.4,46.5	55.9,50.0	58.1,55.2
-kill Longstrider Gazelle##51713+, Neferset Crocolisk##46317+, Marsh Serpent##51676+
-collect 25 Toughened Flesh##62778 |condition skill("Cooking")>=450
-collect 25 Crocolisk Tail##62784 |condition skill("Cooking")>=520
-step
-cast Fishing##131474
-collect 48 Sharptooth##53062 |goto Uldum/0 54.3,37.7 |condition skill("Cooking")>=500
-step
-create Blackened Surprise##88006,Cooking,450
-step
-talk Shazdar##49737
-buy Recipe: Seasoned Crab##65413 |goto Orgrimmar 56.8,62.6 |condition _G.IsSpellKnown(88037) or itemcount(65413) >= 1 or skill("Cooking")>=475
-Remember to do _Cooking dailies_ in order to buy these Recipes
-step
-use Recipe: Seasoned Crab##65413
-learn Seasoned Crab##88037 |condition _G.IsSpellKnown(88037) or skill("Cooking")>=475
-step
-create Seasoned Crab##88037,Cooking,475
-step
-talk Shazdar##49737
-buy Recipe: Tender Baked Turtle##65419 |goto Orgrimmar 56.8,62.6 |condition _G.IsSpellKnown(88046) or itemcount(65419) >= 1 or skill("Cooking")>=490
-Remember to do _Cooking dailies_ in order to buy these Recipes
-step
-use Recipe: Tender Baked Turtle##65419
-learn Tender Baked Turtle##88046 |condition _G.IsSpellKnown(88046) or skill("Cooking")>=490
-step
-create Tender Baked Turtle##88046,Cooking,490
-step
-talk Shazdar##49737
-buy Recipe: Fish Fry##65423 |goto Orgrimmar 56.8,62.6 |condition _G.IsSpellKnown(88018) or itemcount(65423) >= 1 or skill("Cooking")>=500
-Remember to do _Cooking dailies_ in order to buy these Recipes
-step
-use Recipe: Fish Fry##65423
-learn Fish Fry##88018 |condition _G.IsSpellKnown(88018) or skill("Cooking")>=500
-step
-create Fish Fry##88018,Cooking,500
-step
-talk Shazdar##49737
-buy Recipe: Beer-Basted Crocolisk##65429 |goto Orgrimmar 56.8,62.6 |condition _G.IsSpellKnown(88018) or itemcount(65429) >= 1 or skill("Cooking")>=500
-Remember to do _Cooking dailies_ in order to buy these Recipes
-step
-use Recipe: Beer-Basted Crocolisk##65429
-create Beer-Basted Crocolisk##88005,Cooking,520 |condition _G.IsSpellKnown(88005) or skill("Cooking")>=520
-step
-confirm |next "Profession Guides\\Cooking\\Leveling Guides\\Cooking 520-600 Leveling Guide"
-|tip This will take you to the 500 - 600 portion of the Cooking Guides.
-]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 1-600 Leveling Guide",{
-author="support@zygorguides.com",
-description="This guide will walk you through leveling your Enchanting skill from 1-300.",
-},[[
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,75
-step
-talk Kithas##3346
-buy 1 Copper Rod##6217 |goto Orgrimmar 53.3,48.9 |condition itemcount(6217) >= 1 or skill("Enchanting")>=75
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 1-25_ |cast Disenchant##13262
-collect 112 Strange Dust##10940 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=75
-|tip Keep any extra Greater Magic Essences you get, you will need them later.
-collect 1 Lesser Magic Essence##10938 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=75
-|tip You can also buy these materials from the Auction House.
-When you reach _25 Enchanting_ you can also farm _Shadowfang Keep_ |goto Shadowfang Keep/1 69.5,61.0
-step
-create 25 Enchant Bracer - Minor Health##7418,Enchanting,75
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,150
-step
-create 15 Enchant Bracer - Minor Health##7418,Enchanting,90
-|tip You can keep enchanting the same item repeatedly.
-step
-create Runed Copper Rod##7421,Enchanting,1 total |condition skill("Enchanting")>=75
-Keep the _Runed Copper Rod_
-step
-create Enchant Bracer - Minor Health##7418,Enchanting,75
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 16-25_ |cast Disenchant##13262
-collect 9 Greater Magic Essence##10939 |goto Wailing Caverns 45.8,59.7 |condition skill("Enchanting")>=135
-|tip You can also buy these materials from the Auction House.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 21-25_ |cast Disenchant##13262
-collect 25 Lesser Eternal Essence##16202 |goto Blackfathom Deeps 44.29,10.66 |condition skill("Enchanting")>=135
-|tip You can also buy these materials from the Auction House.
-step
-talk Kithas##3346
-buy 9 Simple Wood##4470 |goto Orgrimmar 53.3,48.9 |condition itemcount(4470) >= 9 or skill("Enchanting")>=135
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Minor Stamina##7457 |condition skill("Enchanting")>=135
-step
-create 10 Enchant Bracer - Minor Stamina##7457,Enchanting,101
-step
-#include "trainer_Enchanting"
-learn Greater Magic Wand##14807 |condition skill("Enchanting")>=135
-step
-create 9 Greater Magic Wand##14807,Enchanting,110
-step
-talk Kulwia##12043
-buy 1 Formula: Enchant Bracer - Lesser Strength##11101 |goto Stonetalon Mountains 48.6,61.6 |condition _G.IsSpellKnown(13536) or itemcount(11101) >= 1 or skill("Enchanting")>=135
-step
-talk Kulwia##12043
-buy 1 Formula: Enchant Cloak - Minor Agility##11039 |goto Stonetalon Mountains 48.6,61.6 |condition _G.IsSpellKnown(11039) or itemcount(11039) >= 1 or skill("Enchanting")>=135
-step
-use Formula: Enchant Cloak - Minor Agility##11039
-learn Enchant Cloak - Minor Agility##11039 |condition skill("Enchanting")>=135
-step
-create 25 Enchant Cloak - Minor Agility##13419,Enchanting,135
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,225 |tip You must be at least level 20.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 26-45_ |cast Disenchant##13262
-collect 60 Illusion Dust##16204 |goto Razorfen Kraul 69.89,82.97 |condition skill("Enchanting")>=205
-collect 80 Lesser Eternal Essence##16202 |n
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Lesser Stamina##13501 |condition skill("Enchanting")>=220
-step
-create 20 Enchant Bracer - Lesser Stamina##13501,Enchanting,155
-step
-use Formula: Enchant Bracer - Lesser Strength##11101
-learn Enchant Bracer - Lesser Strength##13536 |condition skill("Enchanting")>=220
-step
-create 10 Enchant Bracer - Lesser Strength##13536,Enchanting,165
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Versatility##13642 |condition skill("Enchanting")>=220
-step
-create 20 Enchant Bracer - Versatility##13642,Enchanting,185
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Strength##13661 |condition skill("Enchanting")>=220
-step
-create 35 Enchant Bracer - Strength##13661,Enchanting,220
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,300
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 56-65_ |cast Disenchant##13262
-collect 305 Rich Illusion Dust##156930 |condition skill("Enchanting")>=300 |goto Razorfen Downs 23.79,18.80
-collect 100 Greater Eternal Essence##16203 |condition skill("Enchanting")>=300 |goto Razorfen Downs 23.79,18.80
-|tip Greater Eternal Essence come from Uncommon drops with an item level of 56 - 65.
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Greater Defense##13746 |condition skill("Enchanting")>=300
-step
-talk Kor'geld##3348
-buy 20 Crystal Vial##3371 |goto Orgrimmar 55.3,46.1 |condition itemcount(3371) >= 20 or skill("Enchanting")>=300
-step
-create 5 Enchant Cloak - Greater Defense##13746,Enchanting,225
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Agility##13815 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Gloves - Agility##13815,Enchanting,230
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Stamina##13836 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Boots - Stamina##13836,Enchanting,235
-step
-#include "trainer_Enchanting"
-learn Enchant Chest: Superior Health##13858 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Chest: Superior Health##13858,Enchanting,240
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Lesser Accuracy##63746 |condition skill("Enchanting")>=300
-step
-create 10 Enchant Boots - Lesser Accuracy##63746,Enchanting,250
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Greater Strength##13939 |condition skill("Enchanting")>=300
-step
-create 5 Enchant Bracer - Greater Strength##13939,Enchanting,255
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Greater Intellect##20008 |condition skill("Enchanting")>=300
-step
-create 20 Enchant Bracer - Greater Intellect##20008,Enchanting,265
-step
-talk Daniel Bartlett##4561
-buy 1 Formula: Enchant Shield - Greater Stamina##16217 |goto Undercity 64.8,38.2 |condition _G.IsSpellKnown(20017) or itemcount(16217) >= 1 or skill("Enchanting")>=300
-step
-use Formula: Enchant Shield - Greater Stamina##16217
-learn Enchant Shield - Greater Stamina##20017 |condition skill("Enchanting")>=300
-step
-create 40 Enchant Shield - Greater Stamina##20017,Enchanting,300
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,375
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 79-120_ |cast Disenchant##13262
-collect 195 Arcane Dust##22445 |goto The Shattered Halls/1 61.14,92.81 |condition skill("Enchanting")>=351
-collect 40 Lesser Planar Essence##22447 |goto The Shattered Halls/1 61.14,92.81 |condition skill("Enchanting")>=351
-collect 20 Greater Planar Essence##22446 |goto The Shattered Halls/1 61.14,92.81 |condition skill("Enchanting")>=351
-collect 10 Large Prismatic Shard##22449 |goto The Shattered Halls/1 61.14,92.81 |condition skill("Enchanting")>=351
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Lesser Assault##34002 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Bracer - Lesser Assault##34002,Enchanting,310
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Brawn##27899 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Bracer - Brawn##27899,Enchanting,320
-step
-#include "trainer_Enchanting"
-learn Enchant Chest - Major Versatility##33990 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Chest - Major Versatility##33990,Enchanting,330
-step
-#include "trainer_Enchanting"
-learn Enchant Shield - Resilience##44383 |condition skill("Enchanting")>=351
-step
-create 10 Enchant Shield - Resilience##44383,Enchanting,340
-step
-talk Madame Ruby##19663
-buy 1 Formula: Superior Wizard Oil##22563 |goto Shattrath City,63.6,70.0 |condition _G.IsSpellKnown(28019) or itemcount(22563) >= 1 or skill("Enchanting")>=351
-step
-use Formula: Superior Wizard Oil##22563
-learn Superior Wizard Oil##28019 |condition skill("Enchanting")>=351
-step
-create 15 Superior Wizard Oil##28019,Enchanting,350
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,450
-|tip You must be at least level 65.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 130-200_ |cast Disenchant##13262
-collect 220 Infinite Dust##34054 |goto Halls of Lightning 7.38,53.81 |condition skill("Enchanting")>=426
-collect 11 Greater Cosmic Essence##34055 |goto Halls of Lightning 7.38,53.81 |condition skill("Enchanting")>=426
-|tip You can also buy these materials from the Auction House.
-step
-kill Ice Revenant##26283+
-collect 5 Crystallized Water##37705 |goto Dragonblight 67.2,52.2 |condition skill("Enchanting")>=426
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Speed##60609 |condition skill("Enchanting")>=426
-step
-create 25 Enchant Cloak - Speed##60609,Enchanting,375
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Assault##60616 |condition skill("Enchanting")>=426
-step
-create 5 Enchant Bracer - Assault##60616,Enchanting,380
-step
-#include "trainer_Enchanting"
-learn Enchant Bracers - Exceptional Intellect##44555 |condition skill("Enchanting")>=426
-step
-create 3 Enchant Bracers - Exceptional Intellect##44555,Enchanting,386
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Icewalker##60623 |condition skill("Enchanting")>=426
-step
-create 5 Enchant Boots - Icewalker##60623,Enchanting,396
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Superior Agility##44500 |condition skill("Enchanting")>=426
-step
-create 3 Enchant Cloak - Superior Agility##44500,Enchanting,405
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Haste##44484 |condition skill("Enchanting")>=426
-step
-create 4 Enchant Gloves - Expertise##44484,Enchanting,417
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Precision##44488 |condition skill("Enchanting")>=426
-step
-create 2 Enchant Gloves - Precision##44488,Enchanting,425
-step
-#include "trainer_Enchanting"
-skillmax Enchanting,525
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 272-333_ |cast Disenchant##13262
-collect 342 Hypnotic Dust##52555 |goto The Vortex Pinnacle 54.12,16.81 |condition skill("Enchanting")>=525
-collect 5 Lesser Celestial Essence##52718 |n
-collect 41 Greater Celestial Essence##52719 |n
-|tip You can also buy these materials from the Auction House.
-step
-Disenchant any _Uncommon Quality (Green)_ gear with an _Item Level of 272-333_ |cast Disenchant##13262
-collect 5 Lesser Celestial Essence##52718 |goto The Stonecore 54.27,93.90 |condition skill("Enchanting")>=525
-collect 41 Greater Celestial Essence##52719 |goto The Stonecore 54.27,93.90 |condition skill("Enchanting")>=525
-|tip You can also buy these materials from the Auction House.
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Earthen Vitality##74189 |condition skill("Enchanting")>=525
-step
-create 15 Enchant Boots - Earthen Vitality##74189,Enchanting,440
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Lesser Power##74192 |condition skill("Enchanting")>=525
-step
-create 10 Enchant Cloak - Lesser Power##74192,Enchanting,450
-step
-#include "trainer_Enchanting"
-learn Enchant Weapon - Mending##74195 |condition skill("Enchanting")>=525
-step
-create 2 Enchant Weapon - Mending##74195,Enchanting,460
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Haste##74198 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Gloves - Haste##74198,Enchanting,465
-step
-#include "trainer_Enchanting"
-learn Enchant Cloak - Intellect##74202 |condition skill("Enchanting")>=525
-step
-create 10 Enchant Cloak - Intellect##74202,Enchanting,475
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Exceptional Strength##74212 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Gloves - Exceptional Strength##74212,Enchanting,480
-step
-#include "trainer_Enchanting"
-learn Enchant Boots - Major Agility##74213 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Boots - Major Agility##74213,Enchanting,485
-step
-#include "trainer_Enchanting"
-learn Enchant Gloves - Greater Haste##74220 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Gloves - Greater Haste##74220,Enchanting,490
-step
-#include "trainer_Enchanting"
-learn Enchant Shield - Mastery##74226 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Shield - Mastery##74226,Enchanting,495
-step
-#include "trainer_Enchanting"
-learn Enchant Bracer - Precision##74232 |condition skill("Enchanting")>=525
-step
-create 5 Enchant Bracer - Precision##74232,Enchanting,500
-step
-Click here to proceed |next "Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 500-600 Leveling Guide"
-|tip This will take you to the Enchanting 500 - 600 guides.
-]])
 ZygorGuidesViewer:RegisterGuide("Profession Guides\\Engineering\\Leveling Guides\\Engineering 1-600 Leveling Guide",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Engineering skill from 1-300.",
@@ -5226,7 +4652,7 @@ step
 _Congratulations!_
 You Reached Level 300 Tailoring Skill.
 ]])
-ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Outland Tailoring 1-75",{
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Tailoring\\Leveling Guides\\Outland Tailoring 1-75",{
 author="support@zygorguides.com",
 description="This guide will walk you through leveling your Outland Tailoring skill from 1-75.",
 condition_end=function() return skill('Outland Tailoring') >= 75 end,
@@ -5649,5 +5075,2045 @@ Reach Level 75 Northrend Cooking |skill Northrend Cooking,75 |goto 70.41,39.52
 step
 _Congratulations!_
 You Reached Level 75 Northrend Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Cataclysm Cooking 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Cataclysm Cooking skill from 1-75.",
+condition_end=function() return skill('Cataclysm Cooking') >= 75 end,
+condition_suggested=function() return skill('Cataclysm Cooking') > 0 and skill('Cataclysm Cooking') < 75 end,
+},[[
+step
+talk Arugi##46709
+|tip She walks around inside the building.
+Train Cataclysm Cooking |skillmax Cataclysm Cooking,75 |goto Orgrimmar/1 56.16,61.69
+step
+talk Arugi##46709
+|tip She walks around inside the building.
+learn Darkbrew Lager##88015 |goto 56.16,61.69
+|only if skill("Cataclysm Cooking") < 10
+step
+Enter the building |goto The Cape of Stranglethorn/0 40.93,74.26
+talk Nixxrax Fillamug##2832
+|tip Inside the building.
+buy 30 Skin of Dwarven Stout##2596 |goto 40.88,73.53
+|only if skill("Cataclysm Cooking") < 10
+step
+talk Nixxrax Fillamug##2832
+|tip Inside the building.
+buy 15 Jug of Badlands Bourbon##2595 |goto 40.88,73.53
+|only if skill("Cataclysm Cooking") < 10
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 9 Darkbrew Lager>_
+Reach Level 10 Cataclysm Cooking |skill Cataclysm Cooking,10
+step
+zLoad the "Dalaran Cooking Daily Guide" |confirm |next "Zygor's Dailies Guides\\Cooking\\Dalaran Cooking Daily Guide"
+|tip Click the line above to load the guide.
+Load the "Main City Cooking Daily Guide" |confirm |next "Zygor's Dailies Guides\\Classic Dailies\\Main Cities\\Main City Cooking Dailies"
+|tip Click the line above to load the guide.
+earn 9 Epicurean's Award##81
+|tip You need 9 Epicurean's Award before continuing.
+|tip You will generally obtain 3 to 6 a day.
+step
+kill Brinescale Serpent##39948
+|tip The swarm around the sunken boat here.
+collect 25 Snake Eye##62780 |goto Kelp'thar Forest/0 57.85,37.51
+|only if skill("Cataclysm Cooking") < 25
+step
+talk Shazdar##49737
+buy Recipe: Salted Eye##65410 |n
+use the Recipe: Salted Eye##65410
+learn Salted Eye##88035 |goto Orgrimmar/1 56.80,62.35
+|only if skill("Cataclysm Cooking") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 15 Salted Eyes>_
+|tip You may need to create more, as this recipe becomes yellow at 15.
+Reach Level 25 Cataclysm Cooking |skill Cataclysm Cooking,25
+step
+kill Speckled Sea Turtle##40223
+collect 40 Giant Turtle Tongue##62781 |goto Kelp'thar Forest/0 49.6,40.8
+You can find more around here [53.8,51.0]
+|only if skill("Cataclysm Cooking") < 50
+step
+talk Shazdar##49737
+buy Recipe: Tender Baked Turtle##65419 |n
+use the Recipe: Tender Baked Turtle##65419
+learn Tender Baked Turtle##88046 |goto Orgrimmar/1 56.80,62.35
+|only if skill("Cataclysm Cooking") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Tender Baked Turtle>_
+|tip You may need to create more, as this recipe becomes green at 47.
+Reach Level 50 Cataclysm Cooking |skill Cataclysm Cooking,50
+step
+kill Baradin Crocolisk##47591
+collect 35 Crocolisk Tail##62784 |goto Tol Barad/0 39.0,47.6
+|only if skill("Cataclysm Cooking") < 75
+step
+talk Shazdar##49737
+buy Recipe: Beer-Basted Crocolisk##65429 |n
+use the Recipe: Beer-Basted Crocolisk##65429
+learn Beer-Basted Crocolisk##88005 |goto Orgrimmar/1 56.80,62.35
+|only if skill("Cataclysm Cooking") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Beer-Basted Crocolisk>_
+|tip You may need to create more to reach 75.
+Reach Level 75 Cataclysm Cooking |skill Cataclysm Cooking,75
+step
+_Congratulations!_
+You Reached Level 75 Cataclysm Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Alchemy\\Leveling Guides\\Pandaria Cooking 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Pandaria Cooking skill from 1-75.",
+condition_end=function() return skill('Pandaria Cooking') >= 75 end,
+condition_suggested=function() return skill('Pandaria Cooking') > 0 and skill('Pandaria Cooking') < 75 end,
+},[[
+leechsteps "Profession Guides\\Cooking\\Leveling Guides\\Way of the Grill 1-75" 1-32
+step
+_Congratulations!_
+You Reached Level 75 Pandaria Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Way of the Brew 1-75",{
+achieveid={7305},
+author="support@zygorguides.com",
+startlevel=85,
+endlevel=90,
+keywords={"Cooking","Way","of","the","Brew"},
+description="This guide will walk you through completing the \"Way of the Brew\" Cooking path.",
+},[[
+step
+Load "The Tillers Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"
+|tip Click the line above to load the guide.
+|tip You will need to unlock the Farm through The Tillers dailies guide before continuing.
+Click Here To Continue |confirm
+step
+talk Sungshin Ironpaw##64231
+accept So You Want to Be a Chef...##31281 |goto Valley of the Four Winds/0 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Silced Peaches##125117 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Pandaren Peach##74660 |q 31281 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sliced Peaches>_
+Make #5# Sliced Peaches |q 31281/1
+step
+collect 5 Sliced Peaches##86057 |q 31281/2
+step
+talk Sungshin Ironpaw##64231
+turnin So You Want to Be a Chef...##31281 |goto 53.58,51.23
+accept Ready for Greatness##31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Rice Pudding##125122 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Rice##74851 |q 31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Yak Milk##74852 |q 31302 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Rice Puddings>_
+Make #5# Rice Pudding |q 31302/1
+step
+collect 5 Rice Pudding##86069 |q 31302/2
+step
+talk Sungshin Ironpaw##64231
+turnin Ready for Greatness##31302 |goto 53.58,51.23
+accept Way of the Brew##31479 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 1 Ginseng##74845 |q 31480 |goto 53.58,51.23
+step
+talk Bobo Ironpaw##58717
+turnin Way of the Brew##31479 |goto 53.17,52.23
+accept Have a Drink##31480 |goto 53.17,52.23
+step
+talk Bobo Ironpaw##58717
+learn Ginseng Tea##124052 |q 31480/1 |goto 53.17,52.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 1 Ginseng Tea>_
+collect 1 Ginseng Tea##75026 |q 31480/2 |goto 52.91,51.44
+step
+talk Bobo Ironpaw##58717
+turnin Have a Drink##31480 |goto 53.17,52.23
+step
+talk Sungshin Ironpaw##64231
+buy 40 Ginseng##74845 |goto 53.58,51.23
+|only if skill("Way of the Brew") < 30
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 20 Ginseng Tea>_
+Reach 30 Way of the Brew Cooking |skill Way of the Brew,30
+step
+talk Bobo Ironpaw##58717
+learn Jade Witch Brew##124053 |goto 53.17,52.23
+step
+collect 100 Jade Squash##74847
+|tip These can be looted from Hozen enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Brew") < 50
+step
+collect 100 Witchberries##74846
+|tip These can be looted from Saurok and Sprite enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Brew") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 20 Jade Witch Brew>_
+Reach 50 Way of the Brew Cooking |skill Way of the Brew,50
+step
+talk Bobo Ironpaw##58717
+learn Banquet of the Brew##125602 |goto 53.17,52.23
+step
+Load the "Pandaria Cooking Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\Pandaria Cooking Dailies"
+|tip Click the line above to load the guide.
+|tip You need 5 Ironpaw Tokens to continue.
+|tip They come from completing Pandaria Cooking Dailies.
+earn 5 Ironpaw Tokens##402
+|only if skill("Way of the Brew") < 75
+step
+collect 250 Green Cabbage##74840
+|tip These can be looted from Virmen enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Brew") < 75
+step
+collect 250 Witchberries##74846
+|tip These can be looted from Saurok and Sprite enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Brew") < 75
+step
+talk Nam Ironpaw##64395
+buy 5 100 Year Soy Sauce##74853 |goto 53.53,51.25
+|only if skill("Way of the Brew") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Banquet of the Brew>_
+Reach 75 Way of the Brew Cooking |skill Way of the Brew,75
+step
+_Congratulations!_
+You Reached Level 75 Way of the Brew Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Way of the Grill 1-75",{
+achieveid={7300},
+author="support@zygorguides.com",
+startlevel=85,
+endlevel=90,
+keywords={"Cooking","Way","of","the","Grill"},
+description="This guide will walk you through completing the \"Way of the Grill\" Cooking path.",
+},[[
+step
+talk Sungshin Ironpaw##64231
+Train Pandaria Cooking |skillmax Pandaria Cooking,75 |goto Valley of the Four Winds/0 53.58,51.24
+step
+Load "The Tillers Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"
+|tip Click the line above to load the guide.
+|tip You will need to unlock the Farm through The Tillers dailies guide before continuing.
+Click Here To Continue |confirm
+step
+talk Sungshin Ironpaw##64231
+accept So You Want to Be a Chef...##31281 |goto Valley of the Four Winds/0 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Silced Peaches##125117 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Pandaren Peach##74660 |q 31281 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sliced Peaches>_
+Make #5# Sliced Peaches |q 31281/1
+step
+collect 5 Sliced Peaches##86057 |q 31281/2
+step
+talk Sungshin Ironpaw##64231
+turnin So You Want to Be a Chef...##31281 |goto 53.58,51.23
+accept Ready for Greatness##31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Rice Pudding##125122 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Rice##74851 |q 31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Yak Milk##74852 |q 31302 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Rice Puddings>_
+Make #5# Rice Pudding |q 31302/1
+step
+collect 5 Rice Pudding##86069 |q 31302/2
+step
+talk Sungshin Ironpaw##64231
+turnin Ready for Greatness##31302 |goto 53.58,51.23
+accept Way of the Grill##31311 |goto 53.58,51.23
+step
+collect 5 Raw Tiger Steak##74833 |q 31311/1
+|tip These can be farmed from Tigers in the Jade Forest.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+talk Kol Ironpaw##58712
+turnin Way of the Grill##31311 |goto 52.98,51.33
+accept Strong as a Tiger##31467 |goto 52.98,51.33
+step
+talk Kol Ironpaw##58712
+learn Charbroiled Tiger Steak##104298 |q 31467/1 |goto 52.97,51.31
+step
+collect 20 Raw Tiger Steak##74833 |q 31467
+|tip These can be farmed from Tigers in the Jade Forest.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Charbroiled Tiger Steak>_
+collect 5 Charbroiled Tiger Steak##74642 |q 31467/2
+step
+talk Kol Ironpaw##58712
+turnin Strong as a Tiger##31467 |goto 52.97,51.31
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 15 Charbroiled Tiger Steak>_
+Reach Level 25 Way of the Grill Cooking |skill Way of the Grill,25
+step
+talk Kol Ironpaw##58712
+Learn Eternal Blossom Fish |learn Eternal Blossom Fish##104299 |goto 52.97,51.31
+step
+collect 25 Jade Lungfish##74856
+|tip These can be fished in rivers in Valley of the Four Winds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Grill") < 50
+step
+collect 125 Striped Melon##74848
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Grill") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Eternal Blossom Fish>_
+Reach Level 50 Way of the Grill Cooking |skill Way of the Grill,50
+step
+talk Kol Ironpaw##58712
+learn Banquet of the Grill##126492 |goto 52.98,51.34
+step
+Load the "Pandaria Cooking Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\Pandaria Cooking Dailies"
+|tip Click the line above to load the guide.
+|tip You need 5 Ironpaw Tokens to continue.
+|tip They come from completing Pandaria Cooking Dailies.
+earn 5 Ironpaw Tokens##402
+|only if skill("Way of the Grill") < 75
+step
+collect 50 Redbelly Mandarin##74860
+|tip These can be fished in Townlong Steppes near the Fields of Niuzao.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Grill") < 75
+step
+collect 50 Raw Crab Meat##74838
+|tip These can be farming from Much Sifters in the Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Grill") < 75
+step
+collect 250 White Turnip##74850
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Grill") < 75
+step
+talk Nam Ironpaw##64395
+buy 5 100 Year Soy Sauce##74853 |condition itemcount(74853)>=5 |goto 53.53,51.25
+|only if skill("Way of the Grill") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Banquet of the Grill>_
+Reach Level 75 Way of the Grill Cooking |skill Way of the Grill,75
+step
+_Congratulations!_
+You Reached Level 75 Way of the Grill Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Way of the Oven 1-75",{
+achieveid={7304},
+author="support@zygorguides.com",
+startlevel=85,
+endlevel=90,
+keywords={"Cooking","Way","of","the","Oven"},
+description="This guide will walk you through completing the \"Way of the Oven\" Cooking path.",
+},[[
+step
+Load "The Tillers Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"
+|tip Click the line above to load the guide.
+|tip You will need to unlock the Farm through The Tillers dailies guide before continuing.
+Click Here To Continue |confirm
+step
+talk Sungshin Ironpaw##64231
+accept So You Want to Be a Chef...##31281 |goto Valley of the Four Winds/0 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Silced Peaches##125117 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Pandaren Peach##74660 |q 31281 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sliced Peaches>_
+Make #5# Sliced Peaches |q 31281/1
+step
+collect 5 Sliced Peaches##86057 |q 31281/2
+step
+talk Sungshin Ironpaw##64231
+turnin So You Want to Be a Chef...##31281 |goto 53.58,51.23
+accept Ready for Greatness##31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Rice Pudding##125122 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Rice##74851 |q 31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Yak Milk##74852 |q 31302 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Rice Puddings>_
+Make #5# Rice Pudding |q 31302/1
+step
+collect 5 Rice Pudding##86069 |q 31302/2
+step
+talk Sungshin Ironpaw##64231
+turnin Ready for Greatness##31302 |goto 53.58,51.23
+accept Way of the Oven##31478 |goto 53.58,51.23
+step
+collect 5 Wildfowl Breast##74839 |q 31478/1
+|tip These can be looted from Whitefisher Cranes in Valley of the Four Winds.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+talk Jian Ironpaw##58716
+turnin Way of the Oven##31478 |goto 53.40,51.60
+accept Endurance##31477 |goto 53.40,51.60
+step
+talk Jian Ironpaw##58716
+learn Wildfowl Roast##104310 |q 31477/1 |goto 53.40,51.60
+step
+collect 5 Wildfowl Breast##74839 |q 31477
+|tip These can be looted from Whitefisher Cranes in Valley of the Four Winds.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Wildfowl Roast>_
+collect 5 Wildfowl Roast##74654 |q 31477/2
+step
+talk Jian Ironpaw##58716
+turnin Endurance##31477 |goto 53.40,51.60
+step
+collect 15 Wildfowl Breast##74839
+|tip These can be looted from Whitefisher Cranes in Valley of the Four Winds.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Oven") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create Wildfowl Roast>_
+Reach 25 Way of the Oven Cooking |skill Way of the Oven,25
+step
+talk Jian Ironpaw##58716
+learn Twin Fish Platter##104311 |goto 53.40,51.60
+step
+collect 50 Krasarang Paddlefish##74865
+|tip These can be fished from rivers in Krasarang Wilds.
+|tip These can also be fished from schools in the Yan-Zhe River, in Valley of the Four Winds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Oven") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create Twin Fish Platter>_
+Reach 50 Way of the Oven Cooking |skill Way of the Oven,50
+step
+talk Jian Ironpaw##58716
+learn Banquet of the Oven##126501 |goto 53.40,51.60
+step
+Load the "Pandaria Cooking Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\Pandaria Cooking Dailies"
+|tip Click the line above to load the guide.
+|tip You need 5 Ironpaw Tokens to continue.
+|tip They come from completing Pandaria Cooking Dailies.
+earn 5 Ironpaw Tokens##402
+|only if skill("Way of the Oven") < 75
+step
+collect 50 Krasarang Paddlefish##74865
+|tip These can be fished from rivers in Krasarang Wilds.
+|tip These can also be fished from schools in the Yan-Zhe River, in Valley of the Four Winds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Oven") < 75
+step
+collect 250 Raw Turtle Meat##74837
+|tip These can be farmed from Young Turtles in the Jade Forest.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Oven") < 75
+step
+collect 250 Mogu Pumpkin##74842
+|tip These can be looted from Vermin enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Oven") < 75
+step
+talk Nam Ironpaw##64395
+buy 5 100 Year Soy Sauce##74853 |goto 53.53,51.25
+|only if skill("Way of the Oven") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Banquet of the Pot>_
+Reach 75 Way of the Oven Cooking |skill Way of the Oven,75
+step
+_Congratulations!_
+You Reached Level 75 Way of the Oven Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Way of the Pot 1-75",{
+achieveid={7302},
+author="support@zygorguides.com",
+startlevel=85,
+endlevel=90,
+keywords={"Cooking","Way","of","the","Pot"},
+description="This guide will walk you through completing the \"Way of the Pot\" Cooking path.",
+},[[
+step
+Load "The Tillers Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"
+|tip Click the line above to load the guide.
+|tip You will need to unlock the Farm through The Tillers dailies guide before continuing.
+Click Here To Continue |confirm
+step
+talk Sungshin Ironpaw##64231
+accept So You Want to Be a Chef...##31281 |goto Valley of the Four Winds/0 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Silced Peaches##125117 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Pandaren Peach##74660 |q 31281 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sliced Peaches>_
+Make #5# Sliced Peaches |q 31281/1
+step
+collect 5 Sliced Peaches##86057 |q 31281/2
+step
+talk Sungshin Ironpaw##64231
+turnin So You Want to Be a Chef...##31281 |goto 53.58,51.23
+accept Ready for Greatness##31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Rice Pudding##125122 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Rice##74851 |q 31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Yak Milk##74852 |q 31302 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Rice Puddings>_
+Make #5# Rice Pudding |q 31302/1
+step
+collect 5 Rice Pudding##86069 |q 31302/2
+step
+talk Sungshin Ironpaw##64231
+turnin Ready for Greatness##31302 |goto 53.58,51.23
+accept Way of the Pot##31472 |goto 53.58,51.23
+step
+collect 5 Jade Lungfish##74856 |q 31472/1
+|tip These can be fished in rivers in Valley of the Four Winds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+talk Mei Mei Ironpaw##58714
+turnin Way of the Pot##31472 |goto 52.54,51.59
+accept The Soup of Contemplation##31474 |goto 52.54,51.59
+step
+talk Mei Mei Ironpaw##58714
+learn Swirling Mist Soup##104304 |q 31474/1 |goto 52.63,51.51
+step
+collect 5 Jade Lungfish##74856 |q 31474
+|tip These can be fished in rivers in Valley of the Four Winds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Swirling Mist Soup>_
+collect 5 Swirling Mist Soup##74644 |q 31474/2 |goto 52.91,51.44
+step
+talk Mei Mei Ironpaw##58714
+turnin The Soup of Contemplation##31474 |goto 52.63,51.51
+step
+collect 15 Jade Lungfish##74856
+|tip These can be fished in rivers in Valley of the Four Winds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Pot") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 15 Swirling Mist Soup>_
+Reach 25 Way of the Pot Cooking |skill Way of the Pot,25
+step
+talk Mei Mei Ironpaw##58714
+learn Braised Turtle##104305 |goto 52.63,51.51
+step
+collect 25 Raw Turtle Meat##74837
+|tip These can be fished from rivers in Krasarang Wilds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Pot") < 50
+step
+collect 250 Juicycrunch Carrot##74841
+|tip These can be looted from Saurok enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Pot") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Braised Turtle>_
+Reach 50 Way of the Pot Cooking |skill Way of the Pot,50
+step
+talk Mei Mei Ironpaw##58714
+learn Banquet of the Pot##126497 |goto 52.63,51.51
+step
+Load the "Pandaria Cooking Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\Pandaria Cooking Dailies"
+|tip Click the line above to load the guide.
+|tip You need 5 Ironpaw Tokens to continue.
+|tip They come from completing Pandaria Cooking Dailies.
+earn 5 Ironpaw Tokens##402
+|only if skill("Way of the Pot") < 75
+step
+collect 50 Reef Octopus##74864
+|tip These can be fished from pools in the Jade Forest.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Pot") < 75
+step
+collect 50 Mushan Ribs##74834
+|tip These can be farmed from Mushan in the Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Pot") < 75
+step
+collect 250 Juicycruch Carrot##74841
+|tip These can be looted from Zandalari Troll enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Pot") < 75
+step
+talk Nam Ironpaw##64395
+buy 5 100 Year Soy Sauce##74853 |goto 53.53,51.25
+|only if skill("Way of the Pot") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Banquet of the Pot>_
+Reach 75 Way of the Pot style cooking |skill Way of the Pot,75 |goto 52.94,51.41
+step
+_Congratulations!_
+You Reached Level 75 Way of the Pot Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Way of the Steamer 1-75",{
+achieveid={7303},
+author="support@zygorguides.com",
+startlevel=85,
+endlevel=90,
+keywords={"Cooking","Way","of","the","Steamer"},
+description="This guide will walk you through completing the \"Way of the Steamer\" Cooking path.",
+},[[
+step
+Load "The Tillers Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"
+|tip Click the line above to load the guide.
+|tip You will need to unlock the Farm through The Tillers dailies guide before continuing.
+Click Here To Continue |confirm
+step
+talk Sungshin Ironpaw##64231
+accept So You Want to Be a Chef...##31281 |goto Valley of the Four Winds/0 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Silced Peaches##125117 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Pandaren Peach##74660 |q 31281 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sliced Peaches>_
+Make #5# Sliced Peaches |q 31281/1
+step
+collect 5 Sliced Peaches##86057 |q 31281/2
+step
+talk Sungshin Ironpaw##64231
+turnin So You Want to Be a Chef...##31281 |goto 53.58,51.23
+accept Ready for Greatness##31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Rice Pudding##125122 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Rice##74851 |q 31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Yak Milk##74852 |q 31302 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Rice Puddings>_
+Make #5# Rice Pudding |q 31302/1
+step
+collect 5 Rice Pudding##86069 |q 31302/2
+step
+talk Sungshin Ironpaw##64231
+turnin Ready for Greatness##31302 |goto 53.58,51.23
+accept Way of the Steamer##31475 |goto 53.58,51.23
+step
+collect 5 Giant Mantis Shrimp##74857 |q 31475/1
+|tip These can be fished along the coast of The Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+talk Yan Ironpaw##58715
+turnin Way of the Steamer##31475 |goto 52.54,51.75
+accept The Spirit of Cooking##31476 |goto 52.54,51.75
+step
+talk Yan Ironpaw##58715
+learn Shrimp Dumplings##104307 |q 31476/1 |goto 52.54,51.75
+step
+collect 5 Giant Mantis Shrimp##74857 |q 31476
+|tip These can be fished along the coast of The Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Shrimp Dumplings>_
+collect 5 Shrimp Dumplings##74651 |q 31476/2
+step
+talk Yan Ironpaw##58715
+turnin The Spirit of Cooking##31476 |goto 52.54,51.75
+step
+collect 15 Giant Mantis Shrimp##74857
+|tip These can be fished along the coast of The Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Steamer") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 15 Shrimp Dumplings>_
+|tip Create campfire if there isn't one nearby.
+Reach 25 Way of the Steamer Cooking |skill Way of the Steamer,25
+step
+talk Yan Ironpaw##58715
+learn Fire Spirit Salmon##104308 |goto 52.55,51.75
+step
+collect 25 Emperor Salmon##74859
+|tip These can be fished from rivers in Krasarang Wilds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Steamer") < 50
+step
+collect 250 Scallions##74843
+|tip These can be looted from Saurok enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Steamer") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Fire Spirit Salmon>_
+Reach 50 Way of the Steamer Cooking |skill Way of the Steamer,50
+step
+talk Yan Ironpaw##58715
+learn Banquet of the Steamer##126499 |goto 52.54,51.75
+step
+Load the "Pandaria Cooking Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\Pandaria Cooking Dailies"
+|tip Click the line above to load the guide.
+|tip You need 5 Ironpaw Tokens to continue.
+|tip They come from completing Pandaria Cooking Dailies.
+earn 5 Ironpaw Tokens##402
+|only if skill("Way of the Steamer") < 75
+step
+collect 50 Wildfowl Breast##74839
+|tip These can be looted from Whitefisher Cranes in Valley of the Four Winds.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Steamer") < 75
+step
+collect 50 Emperor Salmon##74859
+|tip These can be fished from rivers in Krasarang Wilds.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Steamer") < 75
+step
+collect 250 Jade Squash##74847
+|tip These can be looted from Hozen enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Steamer") < 75
+step
+talk Nam Ironpaw##64395
+buy 5 100 Year Soy Sauce##74853 |goto 53.53,51.25
+|only if skill("Way of the Steamer") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Banquet of the Steamer>_
+Reach 75 Way of the Steamer Cooking |skill Way of the Steamer,75
+step
+_Congratulations!_
+You Reached Level 75 Way of the Steamer Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Way of the Wok 1-75",{
+achieveid={7301},
+author="support@zygorguides.com",
+startlevel=85,
+endlevel=90,
+keywords={"Cooking","Way","of","the","Wok"},
+description="This guide will walk you through completing the \"Way of the Wok\" Cooking path.",
+},[[
+step
+Load "The Tillers Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\The Tillers Dailies"
+|tip Click the line above to load the guide.
+|tip You will need to unlock the Farm through The Tillers dailies guide before continuing.
+Click Here To Continue |confirm
+step
+talk Sungshin Ironpaw##64231
+accept So You Want to Be a Chef...##31281 |goto Valley of the Four Winds/0 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Silced Peaches##125117 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Pandaren Peach##74660 |q 31281 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sliced Peaches>_
+Make #5# Sliced Peaches |q 31281/1
+step
+collect 5 Sliced Peaches##86057 |q 31281/2
+step
+talk Sungshin Ironpaw##64231
+turnin So You Want to Be a Chef...##31281 |goto 53.58,51.23
+accept Ready for Greatness##31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+learn Rice Pudding##125122 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Rice##74851 |q 31302 |goto 53.58,51.23
+step
+talk Sungshin Ironpaw##64231
+buy 5 Yak Milk##74852 |q 31302 |goto 53.58,51.23
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Rice Puddings>_
+Make #5# Rice Pudding |q 31302/1
+step
+collect 5 Rice Pudding##86069 |q 31302/2
+step
+talk Sungshin Ironpaw##64231
+turnin Ready for Greatness##31302 |goto 53.58,51.23
+accept Way of the Wok##31470 |goto 53.58,51.23
+step
+collect 5 Juicycruch Carrot##74841 |q 31470/1
+|tip These can be looted from Zandalari Troll enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+talk Anthea Ironpaw##58713
+turnin Way of the Wok##31470 |goto 52.68,52.01
+accept Agile as a Tiger##31471 |goto 52.68,52.01
+step
+talk Anthea Ironpaw##58713
+learn Sauteed Carrots##104301 |q 31471/1 |goto 52.68,52.01
+step
+collect 10 Juicycruch Carrot##74841 |q 31471
+|tip These can be looted from Zandalari Troll enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Sauteed Carrots>_
+collect 5 Sauteed Carrots##74643 |q 31471/2 |goto 52.91,51.44
+step
+talk Anthea Ironpaw##58713
+turnin Agile as a Tiger##31471 |goto 52.68,52.01
+step
+collect 30 Juicycruch Carrot##74841
+|tip These can be looted from Zandalari Troll enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Wok") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 15 Sauteed Carrots>_
+Reach 25 Way of the Wok Cooking |skill Way of the Wok,25
+step
+talk Anthea Ironpaw##58713
+learn Valley Stirfry##104302 |goto 52.69,51.99
+step
+collect 25 Reef Octopus##74864
+|tip These can be fished from pools in the Jade Forest.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Wok") < 50
+step
+collect 25 Wildfowl Breast##74839
+|tip These can be looted from Whitefisher Cranes in Valley of the Four Winds.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Wok") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Valley Stir Fry>_
+Reach 50 Way of the Wok style cooking |skill Way of the Wok,50
+step
+talk Anthea Ironpaw##58713
+learn Banquet of the Wok##125594 |goto 52.68,51.99
+step
+Load the "Pandaria Cooking Dailies" Guide |confirm |next "Zygor's Dailies Guides\\Mists of Pandaria Dailies\\Pandaria Cooking Dailies"
+|tip Click the line above to load the guide.
+|tip You need 5 Ironpaw Tokens to continue.
+|tip They come from completing Pandaria Cooking Dailies.
+earn 5 Ironpaw Tokens##402
+|only if skill("Way of the Wok") < 75
+step
+collect 50 Giant Mantis Shrimp##74857
+|tip These can be fished along the coast of The Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Wok") < 75
+step
+collect 50 Raw Crocolisk Belly##75014
+|tip These can be looted from Coldbite Crocolisks in the Dread Wastes.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Wok") < 75
+step
+collect 250 Red Blossom Leek##74844
+|tip These can be looted from Jinyu, Sprites and Zandalari enemies.
+|tip You can use your farm in Halfhill to grow these.
+|tip You can also trade "Ironpaw Tokens" for bags of them.
+|tip You can also buy these from the Auction House.
+|only if skill("Way of the Wok") < 75
+step
+talk Nam Ironpaw##64395
+buy 5 100 Year Soy Sauce##74853 |goto 53.53,51.25
+|only if skill("Way of the Wok") < 75
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 5 Banquet of the Wok>_
+Reach 75 Way of the Wok Cooking |skill Way of the Wok,75
+step
+_Congratulations!_
+You Reached Level 75 Way of the Wok Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Cooking\\Leveling Guides\\Draenor Cooking 1-100",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Cooking skill from 1-100.",
+condition_end=function() return skill('Draenor Cooking') >= 100 end,
+condition_suggested=function() return skill('Draenor Cooking') > 0 and skill('Draenor Cooking') < 100 and level >= 90 end,
+},[[
+step
+talk Guy Fireeye##86029
+|tip Downstairs inside the building.
+Train Draenor Cooking |skillmax Draenor Cooking,100 |goto Warspear/0 45.62,44.81
+step
+Fish in the Water Here
+|tip You will need 5 Enormous Crescent Saberfish, Crescent Saberfish or Small Crescent Saberfish to collect flesh.
+|tip You can also purchase them from the Auction House.
+collect 200 Crescent Saberfish Flesh##109137 |goto Frostwall/0 37.81,79.39
+|only if skill("Draenor Cooking") < 25
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Valley Stir Fry>_
+|tip Keep all recipes you gather from crafting these.
+Reach 25 Draenor Cooking |skill Draenor Cooking,25
+step
+use the Recipe Idea: Pan-Seared Talbuk##118312
+|tip You should have gotten this from Cooking the last recipe.
+learn Pan-Seared Talbuk##160966
+|only if skill("Draenor Cooking") < 50
+step
+use the Recipe Idea: Sturgeon Stew##118318
+|tip You should have gotten this from Cooking the last recipe.
+learn Sturgeon Stew##160979
+|only if skill("Draenor Cooking") < 50
+step
+Fish in the Water Here
+|tip You will need 5 Enormous Blind Lake Sturgeon, Blind Lake Sturgeon or Small Blind Lake Sturgeon to collect flesh.
+|tip You can also purchase them from the Auction House.
+use Blind Lake Sturgeon Bait##110290
+|tip These are gathered from fishing here.
+|tip They will increase your chances of catching Blind Lake Sturgeon.
+collect 260 Blind Lake Sturgeon Flesh##109140 |goto Shadowmoon Valley D/0 34.21,35.31
+|only if skill("Draenor Cooking") < 50
+step
+map Nagrand D/0
+path loop off; follow loose; dist 50
+path	74.12,31.23	71.99,34.13	71.84,35.81	72.20,37.87	71.65,39.63
+path	72.87,41.62	74.88,42.01	77.61,42.20	79.21,40.15	80.10,38.14
+path	80.23,35.81	81.52,33.94	83.13,32.56	84.98,31.39
+Kill Breezestrider enemies along this path
+collect 160 Raw Talbuk Meat##109132
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 50
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 10 Pan-Seared Talbuk>_
+|tip Keep all of these for later.
+collect 20 Pan-Seared Talbuk##111434
+Reach 35 Draenor Cooking |skill Draenor Cooking,40
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 20 Sturgeon Stew>_
+|tip Keep all of these for later.
+Reach 60 Draenor Cooking |skill Draenor Cooking,60
+step
+use the Recipe Idea: Frosty Stew##118324
+|tip You should have gotten this from Cooking the last recipe.
+learn Frosty Stew##160987
+|only if skill("Draenor Cooking") < 90
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create Pan-Seared Talbuk>_
+|tip Keep all of these for later.
+collect 150 Pan-Seared Talbuk##111434
+|only if skill("Draenor Cooking") < 90
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 20 Sturgeon Stew>_
+|tip Keep all of these for later.
+collect 150 Sturgeon Stew##111442
+|only if skill("Draenor Cooking") < 90
+step
+Reach 65 Draenor Cooking |skill Draenor Cooking,65
+step
+collect 40 Frostweed##109124
+|tip These are gathered from the Herbalism Profession.
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 90
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 25 Frosty Stew>_
+|tip If you don't reach 90, you will need to create more Pan-Seared Talbuk and Sturgeon Stew.
+|tip The extra material farmed should cover this.
+Reach 90 Draenor Cooking |skill Draenor Cooking,90
+step
+use the Recipe Idea: Feast of Blood##118328
+|tip This comes from crafting Draenor Cooking recipes.
+learn Feast of Blood##173978
+|only if skill("Draenor Cooking") < 100
+step
+map Frostfire Ridge/0
+path loop off; follow loose; dist 20
+path	39.03,18.98	37.44,18.76	37.99,17.13	39.33,16.15
+kill Bloodmaul Dire Boar##77994+
+|tip Check inside the buildings.
+collect 100 Raw Boar Meat##109136
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 100
+step
+map Frostfire Ridge/0
+path loop on; follow loose; dist 50
+path	46.16,55.01	45.31,57.51	43.36,57.89	41.42,57.90	39.25,57.30
+path	38.33,56.05	38.32,58.42	42.34,65.50	43.23,67.04	44.24,63.63
+map Frostwall/0
+path	23.54,28.39	34.33,9.83	42.65,4.96
+map Frostfire Ridge/0
+path	47.45,55.63
+Kill enemies around this area
+|tip Blazing Pyreclaws and Glacial Icemaws are on edges and fly around the area.
+|tip You will need a flying mount to reach most of these.
+collect 100 Rylak Egg##109133
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 100
+step
+map Shadowmoon Valley D/0
+path loop off; follow loose; dist 50
+path	55.51,37.91	58.92,34.43	62.34,34.81	63.36,33.06	64.70,33.23
+path	64.64,35.68	63.69,36.45	62.83,39.02	62.76,41.56	62.75,43.32
+path	61.43,44.33	59.61,42.98	58.88,43.51	58.62,47.04	60.55,49.04
+path	62.30,50.09	62.34,52.89	62.78,55.21	63.17,56.81	60.99,57.85
+path	59.87,56.30	58.03,52.95	56.98,53.12	57.33,50.06	56.55,46.62
+path	56.75,43.65	56.17,40.08
+Kill Rockhide enemies around this area
+collect 100 Raw Elekk Meat##109134
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 100
+step
+map Nagrand D/0
+path loop off; follow loose; dist 50
+path	74.12,31.23	71.99,34.13	71.84,35.81	72.20,37.87	71.65,39.63
+path	72.87,41.62	74.88,42.01	77.61,42.20	79.21,40.15	80.10,38.14
+path	80.23,35.81	81.52,33.94	83.13,32.56	84.98,31.39
+Kill Breezestrider enemies along this path
+collect 100 Raw Talbuk Meat##109132
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 100
+step
+map Talador/0
+path loop off; follow loose; dist 50
+path	54.37,82.87	55.69,79.40	58.68,77.58	58.42,75.20	57.46,73.41
+Kill Riverwallow enemies along this path
+collect 100 Raw Riverbeast Meat##109135
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 100
+step
+kill Tamed Clefthoof##79034
+|tip These have a quick spawn timer.
+collect 100 Raw Clefthoof Meat |goto Nagrand D/0 78.66,72.26
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Cooking") < 100
+step
+_<Create a Cooking Fire>_
+Open Your Cooking Crafting Panel:
+_<Create 10 Feasts of Blood>_
+Reach 100 Draenor Cooking |skill Draenor Cooking,100
+step
+_Congratulations!_
+You Reached Level 100 Draenor Cooking Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Enchanting 1-300",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Enchanting skill from 1-300.",
+condition_end=function() return skill('Enchanting') >= 300 end,
+condition_suggested=function() return skill('Enchanting') > 0 and skill('Enchanting') < 300 end,
+},[[
+step
+talk Godan##3345
+|tip Inside the building.
+Train Enchanting |skillmax Enchanting,75 |goto Orgrimmar/1 53.49,49.55
+step
+talk Kithas##3346
+|tip Inside the building.
+buy Copper Rod##6217 |goto 53.35,48.93
+|only if skill("Enchanting") < 2
+step
+talk Kithas##3346
+|tip Inside the building.
+buy 1 Strange Dust##10940 |goto 53.35,48.93
+|tip These are in limited supply from this vendor, so it may not be available.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 2
+step
+talk Kithas##3346
+|tip Inside the building.
+buy 1 Lesser Magic Essence##10938 |goto 53.35,48.93
+|tip These are in limited supply from this vendor, so it may not be available.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 2
+step
+Open Your Enchanting Crafting Panel:
+_<Create 1 Runed Copper Rod>_
+Reach Level 2 Enchanting |skill Enchanting,2
+step
+collect 50 Strange Dust##10940
+|tip You can get these by disenchanting item level 1 to 25 uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 50
+step
+talk Kithas##3346
+|tip Inside the building.
+buy 300 Enchanting Vellum##38682 |goto 53.35,48.93
+|only if skill("Enchanting") < 50
+step
+Open Your Enchanting Crafting Panel:
+_<Create 58 Enchant Bracer: Minor Health>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip The recipe turns yellow at 70, so additional materials may be required.
+Reach Level 90 Enchanting |skill Enchanting,90
+step
+talk Godan##3345
+|tip Inside the building.
+learn Bracers: Minor Stamina##7457 |goto 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Enchant Bracers: Minor Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 100 Enchanting |skill Enchanting,100
+step
+talk Kithas##3346
+|tip Inside the building.
+buy 10 Simple Wood##4470 |goto 53.35,48.93
+|only if skill("Enchanting") < 110
+step
+collect 10 Greater Magic Essence##10939
+|tip You can get these by disenchanting item level 10 to 25 uncommon (green) armor and weapons.
+|tip They are also created by combining 3 Lesser Magic Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 110
+step
+talk Godan##3345
+|tip Inside the building.
+learn Greater Magic Wand##14807  |goto 53.49,49.55
+|only if skill("Enchanting") < 110
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Greater Magic Wands>_
+Reach Level 110 Enchanting |skill Enchanting,110
+step
+talk Kulwia##12043
+buy Formula: Enchant Cloak - Minor Agility##11039 |n
+use the Formula: Enchant Cloak - Minor Agility##11039
+learn Cloak: Minor Agility##13419 |goto Stonetalon Mountains/0 48.69,61.52
+|only if skill("Enchanting") < 135
+step
+talk Kulwia##12043
+buy Formula: Enchant Bracer - Lesser Strength##11101 |goto Stonetalon Mountains/0 48.69,61.52
+|only if skill("Enchanting") < 220
+step
+collect 25 Lesser Eternal Essence##16202
+|tip You can get these by disenchanting item level 50 to 55 armor and weapons.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 135
+step
+Open Your Enchanting Crafting Panel:
+_<Create 25 Enchant Cloak: Minor Agility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 135 Enchanting |skill Enchanting,135
+step
+collect 170 Light Illusion Dust##16204
+|tip You can get these by disenchanting item level 56 to 65 uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 220
+step
+Open Your Enchanting Crafting Panel:
+_<Create 20 Enchant Bracers: Lesser Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 155 Enchanting |skill Enchanting,155
+step
+use the Formula: Enchant Bracer - Lesser Strength##11101
+learn Bracer: Lesser Strength##13536
+step
+Open Your Enchanting Crafting Panel:
+_<Create 20 Enchant Bracers: Lesser Strength>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 180 Enchanting |skill Enchanting,180
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Bracers: Strength##13661 |goto Orgrimmar/1 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 50 Enchant Bracers: Strength>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 220 Enchanting |skill Enchanting,220
+step
+collect 50 Rich Illusion Dust##156930
+|tip You can get these by disenchanting item level 50-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 245
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Cloak: Greater Defense##13646 |goto 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 50 Enchant Cloak: Greater Defense>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 225 Enchanting |skill Enchanting,225
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Boots: Stamina##13836 |goto 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Enchant Boots: Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 235 Enchanting |skill Enchanting,235
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Chest: Superior Health##13858 |goto 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Enchant Chest: Superior Health>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 245 Enchanting |skill Enchanting,245
+step
+collect 45 Greater Eternal Essence##16203
+|tip You can get these by disenchanting item level 56-65 Uncommon (green) armor and weapons.
+|tip Combine 3 Lesser Eternal Essence to create a Greater Eternal Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 265
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Boots: Agility##13935 |goto 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Enchant Boots: Agility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 255 Enchanting |skill Enchanting,255
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Bracer: Greater Strength##13935 |goto 53.49,49.55
+step
+collect 170 Rich Illusion Dust##156930
+|tip You can get these by disenchanting item level 50-60 Uncommon (green) armor and weapons.
+|tip You can also purchase them from the Auction House.
+|only if skill("Enchanting") < 300
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Bracer: Greater Strength>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 260 Enchanting |skill Enchanting,260
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Bracer: Greater Intellect##20008 |goto 53.49,49.55
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Bracer: Greater Intellect>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 265 Enchanting |skill Enchanting,265
+step
+talk Daniel Bartlett##4561
+buy Formula: Enchant Shield - Greater Stamina##16217 |n
+use the Formula: Enchant Shield - Greater Stamina##16217
+learn Enchant Shield: Greater Stamina##20017 |goto Undercity/0 64.04,37.41
+step
+Open Your Enchanting Crafting Panel:
+_<Create 40 Enchant Shield: Greater Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 300 Enchanting |skill Enchanting,300
+step
+_Congratulations!_
+You Reached Level 300 Enchanting Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Outland Enchanting 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Outland Enchanting skill from 1-75.",
+condition_end=function() return skill('Outland Enchanting') >= 75 end,
+condition_suggested=function() return skill('Outland Enchanting') > 0 and skill('Outland Enchanting') < 75 end,
+},[[
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+Train Outland Enchanting |skillmax Outland Enchanting,75 |goto Hellfire Peninsula/0 52.34,35.97
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+buy 75 Enchanting Vellum##38682 |goto 52.34,35.97
+|only if skill("Outland Enchanting") < 75
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Enchant Bracer: Lesser Assault##34002 |goto 52.34,35.97
+step
+collect 338 Arcane Dust##22445
+|tip You can get these by disenchanting uncommon (green) items from any Outland zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 50
+step
+Open Your Enchanting Crafting Panel:
+_<Create 9 Enchant Bracer: Lesser Assault>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 10 Outland Enchanting |skill Outland Enchanting,10
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Enchant Bracer: Brawn##27899 |goto 52.34,35.97
+step
+Open Your Enchanting Crafting Panel:
+_<Create 6 Enchant Bracer: Brawn>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 16 Outland Enchanting |skill Outland Enchanting,16
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Enchant Cloak: Major Armor##27961 |goto 52.34,35.97
+step
+Open Your Enchanting Crafting Panel:
+_<Create 16 Enchant Cloak: Major Armor>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 30 Outland Enchanting |skill Outland Enchanting,30
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Enchant Shield: Major Stamina##34009 |goto 52.34,35.97
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Shield: Major Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 35 Outland Enchanting |skill Outland Enchanting,35
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Small Prismatic Shard##42615 |goto 52.34,35.97
+step
+talk Apothecary Antonivich##16588
+|tip Upstairs inside the building.
+buy 20 Crystal Vial##3371 |goto 52.28,36.46
+|only if skill("Outland Enchanting") < 50
+step
+talk Madame Ruby##19663
+buy Formula: Large Prismatic Shard##22565 |n
+use the Formula: Large Prismatic Shard##22565
+learn Large Prismatic Shard##28022  |goto Shattrath City/0 63.28,71.09
+step
+collect 5 Large Prismatic Shard##22449
+|tip You can get these by disenchanting rare (blue) items from any Outland zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 40
+step
+collect 25 Lesser Planar Essence##22447
+|tip You can get these by disenchanting uncommon (green) items from any Outland zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 40
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Shield: Resilience>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 40 Outland Enchanting |skill Outland Enchanting,40
+step
+talk Madame Ruby##19663
+buy Formula: Superior Wizard Oil##22563 |n
+use the Formula: Superior Wizard Oil##22563
+learn Superior Wizard Oil##28019 |goto Shattrath City/0 63.28,71.09
+step
+collect 15 Nightmare Vine##22792
+|tip These are gathered by the Herbalism Profession.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 50
+step
+Open Your Enchanting Crafting Panel:
+_<Create 10 Superior Wizard Oil>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 50 Outland Enchanting |skill Outland Enchanting,50
+step
+collect 250 Arcane Dust##22445
+|tip You can get these by disenchanting uncommon (green) items from any Outland zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 69
+step
+collect 25 Greater Planar Essence##22446
+|tip You can get these by disenchanting uncommon (green) items from any Outland zone.
+|tip YOu can combine 3 Lesser Planar Essence for 1 Greater Planar Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 69
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Enchant Gloves: Major Strength##33995 |goto Hellfire Peninsula/0 52.34,35.97
+step
+Open Your Enchanting Crafting Panel:
+_<Create 29 Enchant Gloves: Major Strength>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 69 Outland Enchanting |skill Outland Enchanting,69
+step
+collect 2 Void Crystal##22450
+|tip You can get these by disenchanting epic (purple) items from any Outland raids.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 70
+step
+talk Felannia##18753
+|tip Upstairs inside the building.
+learn Void Sphere##28028 |goto 52.34,35.97
+step
+Open Your Enchanting Crafting Panel:
+_<Create 1 Void Sphere>_
+Reach Level 70 Outland Enchanting |skill Outland Enchanting,70
+step
+kill Eredar Deathbringer##20880
+collect Formula: Enchant 2H Weapon - Major Agility##22556 |n
+|tip This comes from the dungeon "The Arcatraz".
+use the Formula: Enchant 2H Weapon - Major Agility##22556
+learn Enchant Weapon: Major Agility##27977
+step
+collect 40 Large Prismatic Shard##22449
+|tip You can get these by disenchanting rare (blue) items from any Outland dungeons.
+|tip You can combine Small Prismatic Shards to make a Large Prismatic Shard.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 75
+step
+collect 30 Greater Planar Essence##22446
+|tip You can get these by disenchanting uncommon (green) items from any Outland zone.
+|tip YOu can combine 3 Lesser Planar Essence for 1 Greater Planar Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 75
+step
+collect 100 Arcane Dust##22445
+|tip You can get these by disenchanting uncommon (green) items from any Outland zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Outland Enchanting") < 75
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Weapon: Major Agility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 75 Outland Enchanting |skill Outland Enchanting,75
+step
+_Congratulations!_
+You Reached Level 75 Outland Enchanting Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Northrend Enchanting 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Northrend Enchanting skill from 1-75.",
+condition_end=function() return skill('Northrend Enchanting') >= 75 end,
+condition_suggested=function() return skill('Northrend Enchanting') > 0 and skill('Northrend Enchanting') < 75 end,
+},[[
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+Train Northrend Enchanting |skillmax Northrend Enchanting,75 |goto Dalaran/1 39.03,39.78
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+learn Enchant Gloves: Gatherer##44506 |goto 39.03,39.78
+step
+talk Ildine Sorrowspear##28714
+|tip Inside the building.
+buy 75 Enchanting Vellum##38682 |goto 38.79,41.52
+|only if skill("Northrend Enchanting") < 75
+step
+collect 15 Greater Cosmic Essence##34055
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 15
+step
+Open Your Enchanting Crafting Panel:
+_<Create 14 Enchant Gloves: Gatherer>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 15 Northrend Enchanting |skill Northrend Enchanting,15
+step
+collect 20 Abyss Crystal##34057
+|tip You can get these by disenchanting epic (purple) items from any Northrend Raids.
+|tip 25-Man Naxxramas will provide up to 4 Epic drops per boss.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 30
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+learn Abyss Shatter##69412 |goto 39.04,39.76
+|only if skill("Northrend Enchanting") < 30
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 20 Abyssal Shatters>_
+|tip Save any material you collect.
+Reach Level 30 Northrend Enchanting |skill Northrend Enchanting,30
+step
+collect 120 Infinite Dust##34054
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 40
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+learn Enchant Gloves: Haste##44484 |goto 39.04,39.76
+|only if skill("Northrend Enchanting") < 40
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 10 Enchant Gloves: Haste>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip Save any material you collect.
+Reach Level 40 Northrend Enchanting |skill Northrend Enchanting,40
+step
+collect 20 Greater Cosmic Essence##34055
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 45
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+learn Enchant Gloves: Precision##44488 |goto 39.04,39.76
+|only if skill("Northrend Enchanting") < 45
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 5 Enchant Gloves: Precision>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip Save any material you collect.
+Reach Level 45 Northrend Enchanting |skill Northrend Enchanting,45
+step
+collect 40 Infinite Dust##34054
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 55
+step
+collect 40 Lesser Cosmic Essence##34056
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 55
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+learn Enchant Chest: Greater Versatility##44509 |goto 39.04,39.76
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 10 Enchant Chest: Versatility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip Save any material you collect.
+Reach Level 55 Northrend Enchanting |skill Northrend Enchanting,55
+step
+collect 75 Infinite Dust##34054
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 60
+step
+talk Enchanter Nalthanis##28693
+|tip Inside the building.
+learn Enchant Gloves: Crusher##60668 |goto 39.04,39.76
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 5 Enchant Gloves: Crusher>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip Save any material you collect.
+Reach Level 60 Northrend Enchanting |skill Northrend Enchanting,60
+step
+collect 8 Dream Shard##34052
+|tip You can get these by disenchanting rare (blue) items from any Northrend zones or dungeons.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 75
+step
+collect 75 Infinite Dust##34054
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 65
+step
+collect 20 Greater Cosmic Essence##34055
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 65
+step
+talk Vanessa Sellers##32514
+|tip Inside the building.
+buy Formula: Enchant Cloak - Mighty Stamina##44471 |n
+use the Formula: Enchant Cloak - Mighty Stamina##44471
+learn Enchant Cloak: Mighty Stamina##47672 |goto 38.41,41.09
+|only if skill("Northrend Enchanting") < 65
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 5 Enchant Cloak: Mighty Stamina>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 65 Northrend Enchanting |skill Northrend Enchanting,65
+step
+collect 120 Infinite Dust##34054
+|tip You can get these by disenchanting uncommon (green) items from any Northrend zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 75
+step
+collect 10 Abyss Crystal##34057
+|tip You can get these by disenchanting epic (purple) items from any Northrend Raids.
+|tip 25-Man Naxxramas will provide up to 4 Epic drops per boss.
+|tip You can also purchase them from the Auction House.
+|only if skill("Northrend Enchanting") < 75
+step
+talk Vanessa Sellers##32514
+|tip Inside the building.
+buy Formula: Enchant Cloak - Shadow Armor##37349 |n
+use the Formula: Enchant Cloak - Shadow Armor##37349
+learn Formula: Enchant Cloak - Shadow Armor##44631 |goto 38.41,41.09
+|only if skill("Northrend Enchanting") < 75
+step
+Open Your Enchanting Crafting Panel:
+_<Cast 5 Enchant Cloak: Shadow Armor>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 75 Northrend Enchanting |skill Northrend Enchanting,75
+step
+_Congratulations!_
+You Reached Level 75 Northrend Enchanting Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Cataclysm Enchanting 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Cataclysm Enchanting skill from 1-75.",
+condition_end=function() return skill('Cataclysm Enchanting') >= 75 end,
+condition_suggested=function() return skill('Cataclysm Enchanting') > 0 and skill('Cataclysm Enchanting') < 75 end,
+},[[
+step
+talk Godan##3345
+|tip Inside the building.
+Train Cataclysm Enchanting |skillmax Cataclysm Enchanting,75 |goto Orgrimmar/1 53.49,49.58
+step
+talk Kithas##3346
+|tip Inside the building.
+buy 75 Enchanting Vellum##38682 |goto 53.35,48.93
+|only if skill("Cataclysm Enchanting") < 75
+step
+collect 10 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 5
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Boots: Earthen Vitality>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip You may neeed to make more than 5 as this recipe is yellow.
+Reach Level 5 Cataclysm Enchanting |skill Cataclysm Enchanting,5
+step
+collect 20 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 10
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Cloak: Lesser Power##74192 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Cloak: Lesser Power>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip You may neeed to make more than 5 as this recipe is yellow.
+Reach Level 10 Cataclysm Enchanting |skill Cataclysm Enchanting,10
+step
+collect 20 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 15
+step
+collect 5 Lesser Celestial Essence##52718
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 15
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Gloves: Haste##74198 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Gloves: Haste>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 15 Cataclysm Enchanting |skill Cataclysm Enchanting,15
+step
+collect 60 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 25
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Cloak: Intellect##74202 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Cloak: Intellect>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 25 Cataclysm Enchanting |skill Cataclysm Enchanting,25
+step
+collect 15 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 30
+step
+collect 10 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 30
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Gloves: Exceptional Strength##74212 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Gloves: Exceptional Strength>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 30 Cataclysm Enchanting |skill Cataclysm Enchanting,30
+step
+collect 20 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 35
+step
+collect 10 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 35
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Boots: Major Agility##74213 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Boots: Major Agility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 35 Cataclysm Enchanting |skill Cataclysm Enchanting,35
+step
+collect 25 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 40
+step
+collect 10 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 40
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Gloves: Greater Haste##74220 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Gloves: Greater Haste>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 40 Cataclysm Enchanting |skill Cataclysm Enchanting,40
+step
+collect 60 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 45
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Shield: Mastery##74226 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Shield: Mastery>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 45 Cataclysm Enchanting |skill Cataclysm Enchanting,45
+step
+collect 120 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 55
+step
+collect 10 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 55
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Bracer: Precision##74232 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Bracer: Precision>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 55 Cataclysm Enchanting |skill Cataclysm Enchanting,55
+step
+collect 30 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 60
+step
+collect 20 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 60
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Shield: Superior Intellect##74235 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Shield: Superior Intellect>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 60 Cataclysm Enchanting |skill Cataclysm Enchanting,60
+step
+collect 45 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 65
+step
+collect 15 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 65
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Bracers: Exceptional Versatility##74237 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 5 Enchant Bracers: Exceptional Versatility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 65 Cataclysm Enchanting |skill Cataclysm Enchanting,65
+step
+collect 200 Hypnotic Dust##52555
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 75
+step
+collect 60 Greater Celestial Essence##52719
+|tip You can get these by disenchanting uncommon (green) items from any Cataclysm zone.
+|tip You can combine 3 Lesser Celestial Essence to create a Greater Celestial Essence.
+|tip You can also purchase them from the Auction House.
+|only if skill("Cataclysm Enchanting") < 75
+step
+talk Godan##3345
+|tip Inside the building.
+learn Enchant Boots: Mastery##74238 |goto 53.49,49.58
+step
+Open Your Enchanting Crafting Panel:
+_<Create 20 Enchant Boots: Mastery>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip This recipe will be green aroudn the 70s, so you may need to create more.
+Reach Level 75 Cataclysm Enchanting |skill Cataclysm Enchanting,75
+step
+_Congratulations!_
+You Reached Level 75 Cataclysm Enchanting Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Pandaria Enchanting 1-75",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Pandaria Enchanting skill from 1-75.",
+condition_end=function() return skill('Pandaria Enchanting') >= 75 end,
+condition_suggested=function() return skill('Pandaria Enchanting') > 0 and skill('Pandaria Enchanting') < 75 end,
+},[[
+step
+talk Derenda##64050
+buy 100 Enchanting Vellum##38682 |goto Shrine of Two Moons/1 31.10,36.83
+step
+talk Lai the Spellpaw##65127
+|tip Inside the building.
+Train Pandaria Enchanting |skillmax Pandaria Enchanting,75 |goto The Jade Forest/0 46.85,42.94
+step
+talk Lai the Spellpaw##65127
+|tip Inside the building.
+learn Enchant Chest: Mighty Versatility##104393 |goto 46.85,42.94
+step
+collect 180 Spirit Dust##74249
+|tip You can get these by disenchanting uncommon (green) items from any Pandaria zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Pandaria Enchanting") < 40
+step
+Open Your Enchanting Crafting Panel:
+_<Create 40 Enchant Chest: Mighty Versatility>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip You may neeed to make more than 40 as this recipe will turn yellow.
+Reach Level 40 Pandaria Enchanting |skill Pandaria Enchanting,40
+step
+collect 32 Spirit Dust##74249
+|tip You can get these by disenchanting uncommon (green) items from any Pandaria zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Pandaria Enchanting") < 55
+step
+collect 16 Mysterious Essence##74250
+|tip You can get these by disenchanting uncommon (green) items from any Pandaria zone.
+|tip You can combine 5 Spirit Dust to create 1 Mysterious Essence with enchanting.
+|tip You can also purchase them from the Auction House.
+|only if skill("Pandaria Enchanting") < 55
+step
+talk Lai the Spellpaw##65127
+|tip Inside the building.
+learn Enchant Boots: Greater Haste##104407 |goto 46.85,42.94
+step
+Open Your Enchanting Crafting Panel:
+_<Create 15 Enchant Boots: Greater Haste>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+|tip You may neeed to make more than 15as this recipe will turn yellow.
+Reach Level 55 Pandaria Enchanting |skill Pandaria Enchanting,55
+step
+collect 60 Mysterious Essence##74250
+|tip You can get these by disenchanting uncommon (green) items from any Pandaria zone.
+|tip You can combine 5 Spirit Dust to create 1 Mysterious Essence with enchanting.
+|tip You can also purchase them from the Auction House.
+|only if skill("Pandaria Enchanting") < 75
+step
+talk Lai the Spellpaw##65127
+|tip Inside the building.
+learn Enchant Gloves: Superior Mastery##104420 |goto 46.85,42.94
+step
+Open Your Enchanting Crafting Panel:
+_<Create 15 Enchant Gloves: Superior Mastery>_
+|tip Click the Enchanting Vellum in your bags to place the selected enchantment on them.
+Reach Level 75 Pandaria Enchanting |skill Pandaria Enchanting,75
+step
+_Congratulations!_
+You Reached Level 75 Pandaria Enchanting Skill.
+]])
+ZygorGuidesViewer:RegisterGuide("Profession Guides\\Enchanting\\Leveling Guides\\Draenor Enchanting 1-100",{
+author="support@zygorguides.com",
+description="This guide will walk you through leveling your Draenor Enchanting skill from 1-100.",
+condition_end=function() return skill('Draenor Enchanting') >= 100 end,
+condition_suggested=function() return skill('Draenor Enchanting') > 0 and skill('Draenor Enchanting') < 100 and level >= 90 end,
+},[[
+step
+talk Ged'kah##86045
+|tip Inside the building.
+buy Draenor Enchanting##111922 |n
+use the Draenor Enchanting##111922
+Train Draenor Enchanting |skillmax Draenor Enchanting,100 |goto Warspear/0 77.98,53.74
+step
+collect 200 Draenic Dust##109693
+|tip You can get these by disenchanting uncommon (green) items from any Draenor zone.
+|tip You can also purchase them from the Auction House.
+|only if skill("Draenor Enchanting") < 40
+step
+Open Your Enchanting Crafting Panel:
+_<Create 160 Enchanted Dust>_
+|tip This recipe will be yellow by level 50 Draenor Enchanting and green at 75 Draenor Enchanting.
+Reach Level 100 Draenor Enchanting |skill Draenor Enchanting,100
+step
+_Congratulations!_
+You Reached Level 100 Draenor Enchanting Skill.
 ]])
 ZGV.BETAEND()

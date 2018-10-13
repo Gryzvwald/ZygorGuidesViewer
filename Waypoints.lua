@@ -593,7 +593,6 @@ ZGV.WaypointFunctions['internal'] = {
 
 		local waypath = step and step.waypath
 		
-		local goals_converted_to_path=false
 		--[[  -- DISABLED temporarily. TODO!!!  Or not; one can now "use goto" in paths to import gotos.
 			... or not. Needed to have gotos automatically converted after all.
 			--]]
@@ -612,9 +611,11 @@ ZGV.WaypointFunctions['internal'] = {
 					break
 				end
 			end
-			if #waypath.coords<2 then waypath=nil end
+			if #waypath.coords<2 then 
+				waypath=nil 
+				for gi,goal in ipairs(step.goals) do goal.waypoint_moved_to_waypath=nil end
+			end
 			--step.waypath=waypath
-			goals_converted_to_path = not not waypath
 		end
 
 		if waypath then
@@ -804,7 +805,8 @@ ZGV.WaypointFunctions['internal'] = {
 				if waypath then
 					if waypath.loop then
 						-- EXPERIMENTAL: travel to path's general area.
-						local _,_,currentmapid,currentmapfloor=LibRover:GetPlayerPosition()
+						local _,_,currentmapid = LibRover:GetPlayerPosition()
+						local currentmapfloor = LibRover:GetFloorByMapID(currentmapid)
 						if currentmapid ~= waypath.coords[1].map or currentmapfloor ~= waypath.coords[1].floor then
 							self:Debug("&waypoints Pointing to a looped path! We're not in the farm path's zone, let's travel.")
 							ZGV.Pointer:FindTravelPath("farm")
